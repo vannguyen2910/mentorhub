@@ -17,7 +17,7 @@
 ```
 Using the outline in this file, create an HTML slide deck for Desk Research.
 
-Follow the rules in _system/rules/SLIDE_DECK_RULES.md exactly.
+Follow the rules in _system/rules/slide-deck-rules.md exactly.
 Save the file to library/lessons/01-discover/desk-research/materials/deck.html.
 
 VISUAL DESIGN DIRECTION: apply globally to every slide:

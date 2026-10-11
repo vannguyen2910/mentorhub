@@ -231,7 +231,7 @@ Output của mục này là `00-context/data-rules.md`: ba dòng bằng lời c�
 ├── 02-define/           problem-brief.md
 ├── 03-develop/          options, alignment check, prototype/
 ├── 04-deliver/          test plan, findings, handoff
-├── hub/                 Experience Hub: một trang HTML cho mỗi activity
+├── hub/                 Knowledge Hub: một trang HTML cho mỗi activity
 └── case-log.md          mỗi quyết định một dòng, kèm lý do
 ```
 
@@ -244,9 +244,9 @@ Mỗi activity điền vào một file Markdown, từng section một. Hai quy t
 1. **AI chỉ trả về section của nó;** designer tự dán vào, để AI không âm thầm viết lại phần đã chốt.
 2. **Bản nháp của AI và bản đã kiểm tra nằm ở hai section riêng.** Khoảng cách giữa hai bản chính là tỷ lệ lỗi của AI.
 
-### 6.4 Experience Hub and sharing
+### 6.4 Knowledge Hub and sharing
 
-Mọi output đi vào **Experience Hub**: một website nhỏ gồm các page liên kết, nằm trong case folder. Hub hoàn chỉnh là báo cáo cuối của chương trình; người đọc có thể bắt đầu từ bất kỳ quyết định thiết kế nào và lần ra nhu cầu, hypothesis, principle và test đứng sau nó. Mỗi module thêm một page.
+Mọi output đi vào **Knowledge Hub**: một website nhỏ gồm các page liên kết, nằm trong case folder. Hub hoàn chỉnh là báo cáo cuối của chương trình; người đọc có thể bắt đầu từ bất kỳ quyết định thiết kế nào và lần ra nhu cầu, hypothesis, principle và test đứng sau nó. Mỗi module thêm một page.
 
 **Hub mặc định là private.** Nó nằm trong case folder và không ai thấy được nếu người dùng không gửi. Để cho stakeholder xem, export trang Overview và các trang chính ra PDF, hoặc gửi folder hub dưới dạng file nén. Chỉ khi case được phép chia sẻ (case của chương trình, hoặc phiên bản đã làm sạch từ công việc thật) mới publish thành link trực tuyến trên GitHub. Người publish là người host và chịu trách nhiệm; GitHub Pages miễn phí cần repository public, đó là lý do công việc thật được giữ private. Hướng dẫn nằm trong `publish-guide.md`.
 

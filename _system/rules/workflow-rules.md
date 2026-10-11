@@ -38,7 +38,7 @@ If only 1 or 2 apply — leave it in `source/`. Don't migrate content just becau
 3. **Update structure** — apply the current lesson or slide template (see `_system/templates/`)
 4. **Modernize content:**
    - Replace outdated examples with current ones
-   - Add the "AI in Practice" section (Rule LP-4 in `MENTORING_RULES.md`)
+   - Add the "AI in Practice" section (Rule LP-4 in `mentoring-rules.md`)
    - Update metadata frontmatter (`date`, `level`, `tags`, `draft: true`)
 5. **Tag the Source original** — add this line at the top of the Source file:
 

@@ -12,9 +12,9 @@ This command has two stages with a hard gate between them. Stage A produces a br
 New lessons are written in **Vietnamese**. Existing lessons written in English stay as they are until the user asks for a rewrite.
 
 - **Vietnamese:** the brief, the lesson body, the slide outline's on-slide text and speaker notes, activity instructions, homework text.
-- **English:** file and folder names, slugs, front matter keys and tags (WF-4), section headings and slide titles/kickers (VI_VOICE rule 1), and professional terms kept in English per VI_VOICE rule 4.
+- **English:** file and folder names, slugs, front matter keys and tags (WF-4), section headings and slide titles/kickers (vi-voice rule 1), and professional terms kept in English per vi-voice rule 4.
 - **Skills to use, in this order:**
-  1. `vi-voice`: load before drafting anything. It sets voice, term list and phrases to avoid. Where it conflicts with the writing style guide, VI_VOICE.md wins.
+  1. `vi-voice`: load before drafting anything. It sets voice, term list and phrases to avoid. Where it conflicts with the writing style guide, vi-voice.md wins.
   2. `vietnamese-voice-dictionary`: when the user's own words (a brief, a correction, a note) look like speech-to-text errors, resolve them with it before using them. Ask once if a word is ambiguous.
   3. `vietnamese-transcript-cleaner`: when the source material in A1 is a raw transcript or caption file.
   4. `vietnamese-copy-polish`: after drafting, run it over the on-slide text and any text a learner reads: missing diacritics, long sentences, filler, en and em dashes, weak hooks. It is a final check, not a rewrite of the teaching content.
@@ -49,7 +49,7 @@ duration: "90 min"
 One sentence: what the learner can do after this session that they could not before.
 
 ## Structure
-1. Block name, minutes: what it covers (one line each)
+1. Block name, minutes: what it covers (one line each). For a class lesson use the theory-first shape: Open, Theory (3 to 4 parts, 40 minutes or less), Bridge, Practice (30 minutes or more), Close
 ...
 (timings sum to the duration with a stated buffer)
 
@@ -79,8 +79,8 @@ Create `library/lessons/<stage>/<slug>/{materials,slides,assets,_archive}` if mi
 
 Follow the structure the existing lessons use (Overview, Learning Objectives, Success Check, Materials Needed, Pre-Class Preparation, Session Plan, Core Content, Activities, AI in Practice, Assessment, Further Resources). Rules that always apply:
 
-- **Vietnamese paper style:** objective, third person, no "bạn" or "mình" in the lesson file (speaker notes in the outline use "mình"), no imperatives, a Limitations note, numbered references [n] for every figure (VI_VOICE.md). Sources can stay in their original language; the claim is written in Vietnamese.
-- **No spoken filler and no translated-sounding phrases:** check the "Bỏ khỏi văn bản chính thức" and "Cụm dịch từ tiếng Anh cần tránh" tables in VI_VOICE.md before saving.
+- **Vietnamese paper style:** objective, third person, no "bạn" or "mình" in the lesson file (speaker notes in the outline use "mình"), no imperatives, a Limitations note, numbered references [n] for every figure (vi-voice.md). Sources can stay in their original language; the claim is written in Vietnamese.
+- **No spoken filler and no translated-sounding phrases:** check the "Bỏ khỏi văn bản chính thức" and "Cụm dịch từ tiếng Anh cần tránh" tables in vi-voice.md before saving.
 - **No tool names:** write "AI chat tool", "AI coding tool", "your AI tool". Never introduce Claude, ChatGPT, Cursor, Copilot or similar.
 - **No mentee or student names**, no cohort or identifying detail.
 - **Manual before AI:** the learner does the thinking before AI helps. AI assists, the learner decides.
@@ -90,12 +90,12 @@ Follow the structure the existing lessons use (Overview, Learning Objectives, Su
 
 ### B3. Write the slide outline (`<slug>-slide-outline.md`) in the same response
 
-Apply the sync rule in CLAUDE.md: both files are written together and never left out of sync. Use the layout catalogue in `_system/rules/SLIDE_DECK_RULES.md`. Never invent a layout type. Every slide has the standard fields (Kicker, Title, On-slide, Speaker notes as 3 to 6 bullets, Visual hint). The COVER slide follows the locked block in the template. Update the slide count in the `## Slide structure` line and the MILESTONE `Num:` values to match the lesson's phase timings.
+Apply the sync rule in CLAUDE.md: both files are written together and never left out of sync. Use the layout catalogue in `_system/rules/slide-deck-rules.md`. Never invent a layout type. Every slide has the standard fields (Kicker, Title, On-slide, Speaker notes as 3 to 6 bullets, Visual hint). The COVER slide follows the locked block in the template. Update the slide count in the `## Slide structure` line and the MILESTONE `Num:` values to match the lesson's phase timings.
 
 ### B4. Review before reporting
 
-Run the `review-mentoring` skill's checks on the pair, or apply its checklist inline: objectives match activities, timings sum, handoffs from and to neighbouring lessons are consistent, outline matches lesson, QA-2 checklist (MENTORING_RULES.md). Then run the language pass from the Language section: `vietnamese-copy-polish` on on-slide text, and the VI_VOICE.md tables on the lesson body. Fix what is wrong, and list what you could not fix.
-When Winnie corrects a Vietnamese line, add the before and after to `VI_VOICE.md` so the fix applies next time (that rule is in CLAUDE.md).
+Run the `review-mentoring` skill's checks on the pair, or apply its checklist inline: the session is theory first then practice (Theory block 40 minutes or less with no activity inside, Bridge and cheat sheet present, Practice at least 30 minutes and unbroken, every theory concept used by an activity; mentoring-rules.md Rule LP-3), objectives match activities, timings sum, handoffs from and to neighbouring lessons are consistent, outline matches lesson, QA-2 checklist (mentoring-rules.md). Then run the language pass from the Language section: `vietnamese-copy-polish` on on-slide text, and the vi-voice.md tables on the lesson body. Fix what is wrong, and list what you could not fix.
+When Winnie corrects a Vietnamese line, add the before and after to `vi-voice.md` so the fix applies next time (that rule is in CLAUDE.md).
 
 ### B5. Deck
 

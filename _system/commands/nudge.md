@@ -7,7 +7,7 @@ Run the follow-up scan: $ARGUMENTS (default: all)
 
 This command reads files and drafts text. It never sends a message, changes a calendar event, edits the lead tracker, or writes outside the files named in step 4. Today's date comes from the system, never from memory.
 
-**Vietnamese skills:** load `vi-voice` and follow `_system/rules/VI_VOICE.md` before drafting any Vietnamese. Run `vietnamese-copy-polish` over every nudge and follow-up draft before saving it (diacritics, sentence length, filler, dashes, one clear next step). Run `vietnamese-voice-dictionary` only on the user's own words when they look like speech-to-text errors; never on a lead's or mentee's words.
+**Vietnamese skills:** load `vi-voice` and follow `_system/rules/vi-voice.md` before drafting any Vietnamese. Run `vietnamese-copy-polish` over every nudge and follow-up draft before saving it (diacritics, sentence length, filler, dashes, one clear next step). Run `vietnamese-voice-dictionary` only on the user's own words when they look like speech-to-text errors; never on a lead's or mentee's words.
 
 ## 1. Mentee scan (skip if the argument is `leads`)
 
@@ -38,7 +38,7 @@ Never write to the spreadsheet. The user updates it.
 
 ## 3. Draft the nudges
 
-One draft per flag, in Vietnamese unless the contact wrote in English, in Winnie's voice (VI_VOICE.md):
+One draft per flag, in Vietnamese unless the contact wrote in English, in Winnie's voice (vi-voice.md):
 
 - **Mentee nudge:** warm, short, no guilt. Name the specific thing (one task, one date), make the next step easy, and offer a way out if they are stuck ("nếu đang kẹt ở bước nào, nhắn mình"). Never mention scores or the baseline.
 - **Lead follow-up:** acknowledge what they asked about, give one clear next step, no pressure. Use the "Suggested track" and "Enquired about" columns. Do not quote a price in a follow-up: tuition is worked out after the discovery call (see `/lead`). Same voice and proof rules as `/lead`.

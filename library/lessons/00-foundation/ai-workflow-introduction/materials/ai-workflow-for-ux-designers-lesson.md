@@ -27,6 +27,8 @@ The lesson also sets the stance for the series: **designers are partners who hel
 
 **The core distinction: AI-assisted vs AI-generated.** AI-generated means the AI made the decision. AI-assisted means you decided and the AI did the assembly. AI drafts. You verify. You decide.
 
+**How each session is shaped.** Every class lesson teaches all the theory first, in one block, and then gives you one unbroken block of practice on your own case. You get a continuous stretch of working time instead of several short ones.
+
 **How each week works (the whole series).** One online session a week with 7–8 students. Each week: **up to 15 minutes of preparation** (a little more in week 1, because you set up your tool), **a 90-minute live working session** where you apply the step to your own case with coaching, and **up to 60 minutes of homework**. About 2.5 to 2.75 hours in total. The live session never depends on homework having been done.
 
 > **Where this sits:** it comes before the first step of the workflow. It assumes you already do research, UX design and prototyping, and teaches the AI layer on top.
@@ -51,7 +53,8 @@ By the end of this session, students will be able to:
 - **At least one AI chat tool on the student's own laptop** that the student's company allows (or the course case card, below, if none is allowed). Recommended examples are in the tools handout (`tools-to-bring.md`)
 - A laptop with a file explorer open
 - The Week 1 brief (the one-page pre-read at the end of this file)
-- The case card for the demo (Phase 1), ten terminology cards, and six material cards for the sorting exercise
+- The case card for the demo (Theory, Part 1), ten terminology cards, and six material cards for the sorting exercise
+- The cheat sheet: one screen (or printed page) with the terms, the three kinds of material, the folder layout and the demo instruction, kept open during the Practice block
 - The series case folder template and the empty hub template folder
 - The student publishing guide (`publish-guide.md`), for the optional homework
 - One case to use through the series. **Default: the student's own case** (real or realistic). Fallback: the course case card, or a product the student knows from outside
@@ -68,35 +71,48 @@ By the end of this session, students will be able to:
 4. **Find out your company's rules on AI tools,** if you work somewhere: is there a written policy, and which tools are approved? If you do not know, ask.
 
 **For the instructor:**
-- Prepare the case card and the two demo instructions (Phase 1), and run both once beforehand.
+- Prepare the case card and the two demo instructions (Theory, Part 1), and run both once beforehand.
 - Have your own case folder open to screen-share, with the `hub/` folder opened in a browser.
 - Print or share the ten terminology cards and the six material cards.
-- Set the cohort ground rules (Phase 1).
+- Set the cohort ground rules (Open).
 - Prepare two breakout rooms of 3 to 4 students for the activities, and plan where you will coach.
 
 ---
 
 ## Session Structure
 
-| Phase | Activity | Time |
-|---|---|---|
-| 1 | The partner mindset, and one task done twice | 12 min |
-| 2 | Terms in action, Activity 1, data safety | 21 min |
-| 3 | Files and folders an AI tool can work with | 10 min |
-| 4 | Build your case folder (Activity 2) | 25 min |
-| 5 | What comes next, the hub, sharing, close | 8 min |
-| | **Content total** | **76 min** |
-| | Buffer for questions, setup trouble and a short break | 14 min |
+Theory first, then practice: all concepts are taught in one Theory block, then students work on their own case in one Practice block. The Theory block stays at 40 minutes or less, and every concept in it is used by an activity in the Practice block.
 
-Total: 90 minutes live. Preparation up to 15 minutes before; homework up to 60 minutes after. *(If the session runs short, shorten Phase 5 and the Activity 1 sharing; do not cut the data safety block.)*
+| Block | Part | Content | Time |
+|---|---|---|---|
+| Open | | Cohort ground rules, pair question | 3 min |
+| Theory | 1 | The numbers and the stance, one task done twice | 9 min |
+| Theory | 2 | Terms in action | 6 min |
+| Theory | 3 | What you put in: data safety | 10 min |
+| Theory | 4 | Files and folders an AI tool can work with | 10 min |
+| Bridge | | Short break, quick knowledge check, the task card | 5 min |
+| Practice | | Activity 1 (5 min), then Activity 2: build your case folder (25 min) | 30 min |
+| Close | | The series map, the hub, sharing, closing thought | 8 min |
+| | | **Content total** | **81 min** |
+| | | Buffer for questions and setup trouble | 9 min |
+
+Total: 90 minutes live. Preparation up to 15 minutes before; homework up to 60 minutes after. *(If the session runs short, shorten the Close and the Activity 1 sharing; do not cut the data safety part. Keep the Practice block whole.)*
 
 ---
 
-### Phase 1 — The Partner Mindset, and One Task Done Twice (12 min)
+### Open (3 min)
 
 **Ground rules for the cohort (1 min).** This is a room of working designers with real cases. What is shared in class stays in class. Share only what you are comfortable showing, and anonymise first. Nobody has to show confidential material; the course case card is always available.
 
 **Open with a pair question (2 min).** Each person names one time AI genuinely helped their work, and one time it quietly made the work worse without them noticing at first. The usual pattern: the helpful moments had a clear ask and a review step; the bad ones trusted the output.
+
+---
+
+### Theory block (35 min)
+
+Teach all the concepts in this block and run no activity inside it. Each part ends with one 30-second question, asked aloud, so attention stays up; these are not exercises. The students will not use the terms until the Practice block, so the cheat sheet (see Bridge) carries what they need.
+
+#### Part 1 — The Numbers, the Stance, and One Task Done Twice (9 min)
 
 **The numbers and the stance (3 min).** About 9 in 10 designers now use AI at least weekly, using seven tools on average (Designer Fund and Foundation Capital, AI + Design 2026). But in Figma's State of the Designer 2026, 36% said design got better with AI, 35% said worse, 29% saw no change. The difference is the way of working. And a designer who waits for a PRD and turns it into screens is the one most exposed, because that step is the one AI compresses. A designer who helps define the requirement with the business is doing the work AI cannot: choosing which problem is worth solving and agreeing what success means. Some of you can be in the room where requirements are shaped, some can only message the PO, some have no access. The series works in all three cases, and the next lesson teaches how.
 
@@ -108,17 +124,19 @@ Total: 90 minutes live. Preparation up to 15 minutes before; homework up to 60 m
 
 *Instruction 2, structured (attach the case card):* "Use only the case card. List the five most important things you would need to know that are NOT in it, and say why each matters. Do not guess or fill gaps from general knowledge. If something is unclear, say 'unknown'. Return only the list."
 
-Show both outputs. The vague one usually gives confident, generic advice and may state things about the product as fact. The structured one usually asks for what only research or the business can answer. Ask: which would you trust, and why? Do not explain yet; the next phase names what they just saw.
+Show both outputs. The vague one usually gives confident, generic advice and may state things about the product as fact. The structured one usually asks for what only research or the business can answer. Ask: which would you trust, and why? Do not explain yet; the next part names what they just saw.
 
----
+**Check (30 seconds).** Ask: what did the structured instruction do that the vague one did not?
 
-### Phase 2 — Terms in Action, and Data Safety (21 min)
+#### Part 2 — Terms in Action (6 min)
 
 **Terms in action (6 min).** The definitions are in the Week 1 brief. Do not read them out. Link each to the demo: the case card was the **context**; "use only the case card" was **grounding**; the confident advice from the vague instruction was a **hallucination** risk; "unknown" is why the structured answer helped. Then two quick points that students rarely read: the **context window** (give only the sections a step needs, because long and messy material blurs) and the **agent** (an AI coding tool takes several steps itself, so check the files it changed, not only its reply). **An AI that is allowed to say "unknown" invents less than one that feels obliged to fill every gap.**
 
-**Activity 1 (5 min)** follows; see Activities.
+**Check (30 seconds).** Ask: which term is what you give the AI, and which is its limit?
 
-**What you put in: data safety (10 min).** Everything so far was about what comes out. This is about what goes in. This is practical guidance, not legal advice; your company's policy and local law decide.
+#### Part 3 — What You Put In: Data Safety (10 min)
+
+Everything so far was about what comes out. This is about what goes in. This is practical guidance, not legal advice; your company's policy and local law decide.
 
 **Why it matters.** PRDs, unreleased designs, user research with names in it, client files and financial figures are often confidential or under an NDA. Many companies restrict which AI tools staff may use. In Vietnam, personal data is governed by the Law on Personal Data Protection (Law 91/2025/QH15, in force since 1 January 2026), guided by Decree 356/2025/ND-CP (law-firm summaries, for example [KPMG Vietnam](https://kpmg.com/vn/en/home/insights/2025/06/vietnam-new-personal-data-protection-law.html); check the current text or ask your company). Names, emails, phone numbers and recordings of users are personal data.
 
@@ -134,13 +152,11 @@ Show both outputs. The vague one usually gives confident, generic advice and may
 
 **Four habits before you paste:** (1) check the policy; if there is none, ask, and when in doubt do not paste; (2) sort the material; (3) remove identifiers first, with find and replace on your own computer, not by asking the AI, because that already sends the data (anonymising is not foolproof); (4) keep confidential files out of the tool's folder, because an AI coding tool or agent reads the whole project folder. Also: whether AI output can be used in client work, and who owns it, depends on your company and country; say where AI was used in the case log.
 
-**Sorting exercise (pairs, 3 min).** Six cards: (1) a competitor's public pricing page, (2) an interview transcript with participant names, (3) your notes on a public app you use, (4) an unreleased feature spec, (5) a customer email list, (6) a screenshot of your company's admin dashboard. Expected: 1 and 3 safe; 2, 4, 5 and 6 never in a public tool (2 can become safe after anonymising; 6 depends on what is visible). Discuss any disagreement.
+**Sorting exercise (pairs, 3 min).** Six cards: (1) a competitor's public pricing page, (2) an interview transcript with participant names, (3) your notes on a public app you use, (4) an unreleased feature spec, (5) a customer email list, (6) a screenshot of your company's admin dashboard. Expected: 1 and 3 safe; 2, 4, 5 and 6 never in a public tool (2 can become safe after anonymising; 6 depends on what is visible). Discuss any disagreement. This is the check for this part.
 
-**Output:** a first version of `00-context/data-rules.md`, three lines in the student's own words: what I may paste, what I will not paste, which tool I use for what.
+**Carried into the Practice block:** students write their own `00-context/data-rules.md` in Activity 2, step 2: three lines in their own words on what I may paste, what I will not paste, and which tool I use for what.
 
----
-
-### Phase 3 — Files and Folders an AI Tool Can Work With (10 min)
+#### Part 4 — Files and Folders an AI Tool Can Work With (10 min)
 
 The detail is in the Week 1 brief; use class time on what students get wrong.
 
@@ -161,29 +177,48 @@ The detail is in the Week 1 brief; use class time on what students get wrong.
 ├── 02-define/           problem-brief.md
 ├── 03-develop/          options, alignment check, prototype/
 ├── 04-deliver/          test plan, findings, handoff
-├── hub/                 the Experience Hub: one HTML page per activity
+├── hub/                 the Knowledge Hub: one HTML page per activity
 └── case-log.md          one line per decision, and why
 ```
 
 **One working file per activity (3 min).** Each activity fills one Markdown file, section by section. Two rules keep it safe: (1) **the AI returns only its own section,** and you paste it in, so it cannot silently rewrite settled work; (2) **keep the AI's draft and your checked version as separate sections,** because the gap is your error rate. And one habit: **before you retype your project from memory, find the saved file and attach it.**
 
----
-
-### Phase 4 — Build Your Case Folder (25 min)
-
-This is Activity 2. Students work in breakout rooms of 3 to 4 while the instructor circulates and coaches.
+**Check (30 seconds).** Ask: why does a plain local folder matter when an AI tool reads your files?
 
 ---
 
-### Phase 5 — What Comes Next, the Hub, and Sharing (8 min)
+### Bridge (5 min)
+
+The step between the ideas and the work. Run it in this order:
+
+1. **Break (2 min).** Stretch; cameras off is fine.
+2. **Quick knowledge check (2 min).** Ask three of questions 1 to 5 from the Assessment, aloud, no scoring. Note which term or rule people hesitate on, and point to it on the cheat sheet.
+3. **The task card (1 min).** Show Activity 1 and Activity 2, how long each takes, and where the cheat sheet is.
+
+**The cheat sheet** is one screen that stays open during the Practice block: the terms (context, grounding, hallucination, agent), the three kinds of material, the case folder layout, and the demo instruction. It is not new teaching; it points back to the Theory parts so students do not have to remember 35 minutes of ideas.
+
+---
+
+### Practice block (30 min)
+
+Students work on their own case, in breakout rooms of 3 to 4, while the instructor circulates and coaches. Run the two activities back to back, without returning to teaching in between.
+
+1. **Activity 1 (5 min).** Explain It to a Teammate. It warms the room up and checks the terms from Part 2.
+2. **Activity 2 (25 min).** Build Your Case Folder.
+
+See Activities for setup, steps and facilitator watch-fors. If someone is stuck, send them to the cheat sheet first and the Week 1 brief second, and teach again only when several people share the same gap.
+
+---
+
+### Close (8 min)
 
 **The series in one picture (2 min).** Show the stage map: Discover, Define, Develop, Deliver. Each stage's output is the next stage's input. A gate decides whether the work moves on, and at each stage there is something to agree with the PO and the business. We start from a business question, not a received brief.
 
-**The Experience Hub (2 min).** Every output goes into one hub, a small website of linked pages on your own computer, and the finished hub is the final report of the series. Show the empty hub in a browser. Each lesson adds a page. At the end, a reader can start from any design decision and reach the need, hypothesis, principle and test behind it.
+**The Knowledge Hub (2 min).** Every output goes into one hub, a small website of linked pages on your own computer, and the finished hub is the final report of the series. Show the empty hub in a browser. Each lesson adds a page. At the end, a reader can start from any design decision and reach the need, hypothesis, principle and test behind it.
 
 **Sharing it (2 min).** **The hub is private by default:** it lives in your case folder and nobody can see it unless you send it. To show a stakeholder, export the Overview and key pages to PDF, or send the hub folder zipped. Only if your case is free to share (a course case, or a cleaned-up version of your work) can you publish it as a live link on GitHub: the optional homework and the publishing guide cover it. **If you publish, you host it and you are responsible for it.** Free GitHub Pages needs a public repository, which is why real work stays private.
 
-**Close (2 min).** Ask two or three students: which term will you now explain differently? Then the closing thought:
+**Closing thought (2 min).** Ask question 6 of the Assessment (why is your hub private by default, and when can you publish it?), then two or three students: which term will you now explain differently? Then the closing thought:
 
 > The tools will keep changing. The way of working does not: give the AI a clear input, make it show where each claim comes from, check it, and decide yourself.
 
@@ -194,6 +229,7 @@ This is Activity 2. Students work in breakout rooms of 3 to 4 while the instruct
 ### 🗣️ Activity 1 — Explain It to a Teammate
 **Type:** In-class · Pairs
 **Time:** 5 min
+**When:** First activity of the Practice block, after the Bridge
 **Format:** Pairs, terminology cards
 
 **What it is:**
@@ -227,8 +263,8 @@ Students set up the infrastructure the whole series runs on, for their own case,
 
 **Instructions for students:**
 
-1. **(4 min) Create the case folder.** One folder for your case with the layout from Phase 3. Build the subfolders. Name it after your case, lowercase with hyphens.
-2. **(8 min) Start the context pack.** In `00-context/`, write a first version of `product-and-users.md` (what the product is, who uses it, their main job; half a page, anonymised) and `accessibility-rules.md` (the requirements you must meet; a few lines). Bring in `data-rules.md` from the data safety exercise.
+1. **(4 min) Create the case folder.** One folder for your case with the layout from Theory Part 4. Build the subfolders. Name it after your case, lowercase with hyphens.
+2. **(8 min) Start the context pack.** In `00-context/`, write a first version of `product-and-users.md` (what the product is, who uses it, their main job; half a page, anonymised) and `accessibility-rules.md` (the requirements you must meet; a few lines). Write `data-rules.md` as well, three lines from the data safety part: what I may paste, what I will not paste, which tool I use for what.
 3. **(3 min) Add the hub.** Copy the empty hub template folder into `hub/`. Open its `index.html` in a browser. You should see the Overview page with example data. Do not edit it yet.
 4. **(10 min) Run one instruction against a saved file.** Attach `product-and-users.md` to your AI chat tool and use:
 
@@ -261,7 +297,7 @@ AI tools reflect the patterns in their training data, which skews Western and En
 
 ### Quick knowledge check
 
-Run verbally at the end of Phase 3 (2 min):
+Run verbally during the Bridge (2 min); ask three of questions 1 to 5, and ask question 6 in the Close:
 
 1. What is the difference between AI-assisted and AI-generated?
 2. What is a context window, and what should you do when your material is long?
@@ -345,7 +381,7 @@ In passing: a **model** is the engine behind a tool, a **prompt** is what you gi
 
 **Files in three lines.** Markdown (`.md`) is plain text with simple marks (`## Heading`, `**bold**`, `-` lists, `|` tables); AI tools read and write it best. HTML is what a browser draws; prototypes and the hub are HTML. A plain local folder is a folder on your own computer, not a cloud document; keep your case there while an AI tool writes files.
 
-**The case folder** is the layout in Phase 3: a `00-context` folder first, one folder per stage, a `hub/` folder, and a `case-log.md`.
+**The case folder** is the layout in Theory Part 4: a `00-context` folder first, one folder per stage, a `hub/` folder, and a `case-log.md`.
 
 **Reuse, don't retype.** A new AI conversation knows nothing about your project. Before you describe it from memory, attach the saved file. A good instruction names the material to use, asks for one task, says "use only this, give a source for each claim, answer 'unknown' if it does not say, return only your section", and shows the format you want back.
 

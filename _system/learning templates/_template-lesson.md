@@ -43,19 +43,43 @@ By the end of this session, students will be able to:
 
 ## Run-of-Show
 
-### [00:00] Open & Frame (X min)
+<!-- Class lessons are theory first, then practice (mentoring-rules.md, Rule LP-3).
+     Design backwards: write the Practice block first, then keep only the theory its activities use. -->
 
-<!-- Hook, warm-up question, or provocation to open the session. -->
+### [00:00] Open (3–5 min)
 
----
-
-### [00:XX] Core Concept (X min)
-
-<!-- Main teaching content. Break into sub-sections if needed. -->
+<!-- Ground rules, hook, warm-up question or provocation. -->
 
 ---
 
-### [00:XX] Activity (X min)
+### [00:XX] Theory block (≤ 40 min)
+
+<!-- All concepts and the worked example. No activity inside this block.
+     3 to 4 parts; end each part with a 30-second check asked aloud (not an exercise). -->
+
+#### Part 1 — [Title] (X min)
+
+**Check (30 seconds).** ...
+
+#### Part 2 — [Title] (X min)
+
+**Check (30 seconds).** ...
+
+---
+
+### [00:XX] Bridge (5 min)
+
+1. **Break (2 min).**
+2. **Quick knowledge check (2 min).** Three questions aloud from the Assessment.
+3. **The task card (1 min).** Show the activities, how long each takes, and the cheat sheet.
+
+**Cheat sheet:** <!-- one screen with what the activities need: terms, rules, layout, the instruction. Points back to the theory parts; it is not new teaching. -->
+
+---
+
+### [00:XX] Practice block (30–35 min)
+
+<!-- Activities run back to back on the student's own case. Practice stays unbroken. -->
 
 **Setup:** ...
 
@@ -68,13 +92,9 @@ By the end of this session, students will be able to:
 
 ---
 
-### [00:XX] Debrief & Takeaways (X min)
+### [00:XX] Close (5–8 min)
 
-<!-- Key points to land. Closing thought to leave students with. -->
-
----
-
-### [00:XX] Q&A + Close (X min)
+<!-- Debrief, key points to land, closing thought, homework, Q&A. -->
 
 ---
 

@@ -1,4 +1,4 @@
-# VI_VOICE: Quy tắc viết tiếng Việt của Winnie
+# vi-voice: Quy tắc viết tiếng Việt của Winnie
 
 File chuẩn cho mọi nội dung tiếng Việt trong thư mục này: lesson, slide outline, teleprompter, method card, recap session, tài liệu gửi mentee và học viên. Quy tắc được rút ra từ transcript các buổi mentoring của Winnie và từ chính những chỗ Winnie sửa khi review (2026-10-06).
 
@@ -29,6 +29,9 @@ Viết như một đồng nghiệp có kinh nghiệm chia sẻ cách làm với 
 
 - Ví dụ cụ thể trước, khái niệm sau.
 - Câu ngắn, mỗi câu một ý. Hai câu đã tự nối ý thì không cần từ nối.
+- **Mỗi dòng một thông điệp, viết thành một câu liền mạch.** Không liệt kê các mảnh bằng dấu phẩy ("Một case, một workflow, một hub") và không chỉ đổi dấu phẩy thành dấu chấm ("Một case. Một workflow. Một hub."). Hỏi: dòng này muốn người đọc nhớ điều gì? Rồi viết đúng điều đó thành một câu. Quy tắc này áp dụng cho Title, Subtitle, On-slide và từng bullet của speaker notes.
+- Bullet có hai ý thì tách thành hai bullet, mỗi bullet một thông điệp.
+- Dùng "chứ không phải", "còn", "để", "rồi", "và" để nối vế thay cho dấu phẩy hoặc dấu chấm phẩy.
 - Cần nối ý thì dùng "vì vậy", "do đó".
 - Ví von đời thường khi giải thích khái niệm khó. Ví dụ đã dùng: MCP giống một cái USB, cắm giữa file design và AI tool.
 - Ngôi xưng: "mình" cho cả nhóm và trong speaker notes; "bạn" khi nói trực tiếp với học viên. Không trộn hai ngôi trong cùng một câu.
@@ -75,6 +78,8 @@ Từ 2026-10-07, file `*-lesson.md` được viết như một paper hoặc bả
 | rút gọn mạnh nhất | thu hẹp nhanh nhất |
 | tránh tốn | không uổng phí |
 | show (chiếu) | chiếu, trình bày |
+| lặp lại được (repeatable) | có thể dùng lại |
+| đường viết, sĩ số (dịch word-by-word) | bộ câu hỏi viết sẵn, lớp nhỏ |
 
 ## Quy ước ngôn ngữ
 
@@ -85,7 +90,7 @@ Từ 2026-10-07, file `*-lesson.md` được viết như một paper hoặc bả
 | 3 | **Không ghi thời lượng trên slide.** Section divider không có dòng Sub chứa số phút. Thời gian chỉ nằm trong speaker notes và trên slide `MILESTONE` của activity | |
 | 4 | **Giữ thuật ngữ nghề bằng tiếng Anh**, không dịch | business question, constraints, assumptions, support tickets, data analytics, existing research, user need, opportunity statement, live traffic, shortlist, sticky note, topic, item, group, cluster, interview guide, desk research, stakeholder interview, insight, deliver, context, folder, prototype, design system, handoff |
 | 5 | **Dùng "group", "topic", "item", "sticky note"** thay vì dịch | "group các câu trả lời thành các topic" |
-| 6 | **Mỗi dòng trên slide là một cụm ngắn,** đọc được trong một cái nhìn. Không câu nào quá khoảng 15 từ | "Không uổng phí buổi phỏng vấn cho những điều team đã biết" |
+| 6 | **Mỗi dòng trên slide là một thông điệp, viết thành một câu ngắn,** đọc được trong một cái nhìn. Không câu nào quá khoảng 15 từ (nguồn trong ngoặc không tính) | "Không uổng phí buổi phỏng vấn cho những điều team đã biết" |
 | 7 | **Why mở đầu bằng lợi ích cụ thể** (không uổng phí, thấy, biết, tránh) | Why: "Không uổng phí…" |
 | 8 | **When ghi thời điểm hành động** | When: "Thực hiện sớm, trước primary research" |
 | 9 | **Where AI helps nêu việc AI làm cụ thể**, không nêu chung chung | "Soạn nháp các item cần quan sát, và giúp sắp xếp lại sticky note" |
@@ -130,12 +135,19 @@ Từ 2026-10-07, file `*-lesson.md` được viết như một paper hoặc bả
 | Where AI helps (Questionnaire) | Soạn nháp câu hỏi trung lập; nhóm câu trả lời mở thành theme | Soạn nháp câu hỏi và group các câu trả lời thành các topic |
 | What (User interviews) | Trò chuyện một-một bằng câu hỏi mở | Trò chuyện một-một với các câu hỏi mở và đi sâu vào các vấn đề |
 | Where AI helps (Observation) | Soạn nháp bảng quan sát; dọn field notes | Soạn nháp các item cần quan sát, và giúp sắp xếp lại sticky note từ những gì bạn ghi nhận |
+| Title (Pitch deck, slide 2) | Designer dùng AI mỗi tuần, công việc đang dịch chuyển | Designer dùng AI mỗi tuần, các cơ hội công việc đang thay đổi |
+| Subtitle (Cover) | Một case thật, một workflow lặp lại được, từ business question đến prototype | Học viên làm một case thật với AI để ra một prototype đã test |
+| Title (slide 5) | Một case, một workflow, một Knowledge Hub | Một case thật đi qua một workflow và để lại output trong Knowledge Hub |
+| Title (slide 3) | Đào tạo hiện tại dạy tool, không dạy hệ thống | Đào tạo hiện tại mới dạy tool chứ chưa dạy hệ thống |
+| On-slide | Mỗi bước: AI soạn nháp, bạn kiểm tra, bạn quyết định | Ở mỗi bước, AI soạn nháp còn bạn kiểm tra và quyết định |
+| On-slide | 7 tuần, 14 session 90 phút, 7 đến 8 người mỗi lớp | Lớp 7 đến 8 người học 14 session 90 phút trong 7 tuần |
+| Speaker notes | Quote được ẩn danh trước khi AI đọc; AI chỉ làm việc trên quote thật, trả lại nguyên văn kèm ID | (hai bullet) Quote được ẩn danh trước khi AI đọc / AI chỉ làm việc trên quote thật và trả lại nguyên văn kèm ID |
 
 ## Kiểm tra trước khi giao
 
 1. Tìm các chữ đệm trong bảng "Bỏ khỏi văn bản chính thức". Không còn chữ nào.
 2. Tìm các cụm trong bảng "Cụm dịch từ tiếng Anh cần tránh". Không còn cụm nào.
-3. Đọc to vài câu. Một designer Việt Nam có nói câu này khi làm việc không, hay nó chỉ đúng khi dịch ngược sang tiếng Anh? Nếu là vế sau, viết lại quanh ý chính.
+3. Mỗi dòng trên slide và mỗi bullet notes là một thông điệp. Không còn chuỗi mảnh nối bằng dấu phẩy, không còn các câu cụt chỉ tách bằng dấu chấm. Đọc to vài câu: một designer Việt Nam có nói câu này khi làm việc không, hay nó chỉ đúng khi dịch ngược sang tiếng Anh? Nếu là vế sau, viết lại quanh ý chính.
 4. Tiêu đề, Kicker và nhãn đúng quy ước ngôn ngữ ở trên; không còn số phút trên slide.
 5. Slide và card (hoặc lesson và slide outline) đã khớp nhau.
 6. Không có tên tool AI cụ thể, không có tên mentee (theo `CLAUDE.md`).

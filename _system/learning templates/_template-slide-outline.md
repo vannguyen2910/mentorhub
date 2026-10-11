@@ -15,7 +15,7 @@ last_synced: 2026-00-00      # date lesson.md and this file were last confirmed 
 > See `CLAUDE.md` → Lesson file sync rule for what triggers an update on which side.
 
 > **Layout vocabulary is fixed.** Every `###` slide header below must use one of the 15 types
-> documented in `_system/rules/SLIDE_DECK_RULES.md` (Cover, Section divider, Statement, Numbered,
+> documented in `_system/rules/slide-deck-rules.md` (Cover, Section divider, Statement, Numbered,
 > Compare, Process, Quote, Milestone, Practice, End, Diagram, Formula, Image, plus the two
 > remaining reserved slots). If a slide genuinely needs something none of these cover, add the
 > type to `RULES.md` first — do not invent a one-off name here. `SECTION`, `COMPARISON`, and
@@ -38,7 +38,15 @@ last_synced: 2026-00-00      # date lesson.md and this file were last confirmed 
 
 ## Slide structure — [N] slides
 
-<!-- One line per section, mirroring the lesson.md Run-of-Show blocks in the same order. -->
+<!-- One line per block, mirroring the lesson.md Run-of-Show in the same order.
+     Class lessons are theory first, then practice (mentoring-rules.md, Rule LP-3):
+     Open → Theory (3–4 parts) → Bridge → Practice → Close. -->
+
+- Arc: **Open** → **Theory** → **Bridge** → **Practice** → **Close**.
+- Section dividers mark the big shifts only: **Theory** and **Practice** (and the Close if it changes topic). Parts inside Theory are marked by the kicker, not a divider.
+- Bridge = one `MILESTONE` slide (`Num:` = 5, break and check) and one `DIAGRAM` **Cheat sheet** slide that stays on screen during Practice.
+- Practice slides: `MILESTONE` for each activity (`Num:` = minutes) and `PROCESS` or `PRACTICE` for the task card.
+- Timing on screen lives only on `MILESTONE` slides. Theory ≤ 40 minutes in total.
 
 ---
 

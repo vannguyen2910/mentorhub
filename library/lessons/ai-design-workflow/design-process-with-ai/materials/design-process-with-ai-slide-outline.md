@@ -14,7 +14,7 @@ last_synced: 2026-10-07
 > File này chỉ chứa những gì thuộc về slide: layout type, text trên slide, visual hint, kicker và speaker notes.
 > Xem `CLAUDE.md` → Lesson file sync rule để biết thay đổi nào kéo theo cập nhật bên nào.
 
-> **Layout vocabulary cố định.** Mỗi header `###` bên dưới dùng một trong các type trong `_system/rules/SLIDE_DECK_RULES.md`: Cover, Section divider, Statement, Numbered, Compare, Process, Quote, Milestone, Practice, End, Diagram, Formula, Image. `SECTION`, `COMPARISON` và `ACTIVITY` là drift, không phải type hợp lệ: dùng `SECTION DIVIDER`, `COMPARE`, `MILESTONE`. Tên field (Kicker, Title, On-slide, Speaker notes, Visual hint) giữ nguyên tiếng Anh; nội dung bên trong là tiếng Việt.
+> **Layout vocabulary cố định.** Mỗi header `###` bên dưới dùng một trong các type trong `_system/rules/slide-deck-rules.md`: Cover, Section divider, Statement, Numbered, Compare, Process, Quote, Milestone, Practice, End, Diagram, Formula, Image. `SECTION`, `COMPARISON` và `ACTIVITY` là drift, không phải type hợp lệ: dùng `SECTION DIVIDER`, `COMPARE`, `MILESTONE`. Tên field (Kicker, Title, On-slide, Speaker notes, Visual hint) giữ nguyên tiếng Anh; nội dung bên trong là tiếng Việt.
 
 > **Copy standard:** mọi Kicker, Title và dòng On-slide phải đọc được trong một cái nhìn. Không câu nào trên slide dài quá khoảng 15 từ. Phần giải thích thêm hoặc ví dụ nằm trong speaker notes hoặc file lesson, không nằm trên slide. Speaker notes dùng ngôi "mình".
 
@@ -494,11 +494,11 @@ last_synced: 2026-10-07
   - Ở mỗi stage có điều cần thống nhất với product và business
   - Chúng ta bắt đầu từ câu hỏi của business, không phải một brief được giao
   - Phần nền bên dưới là thứ bạn dựng trong buổi 2
-- 🎨 Visual hint: SCHEMATIC. Stage map từ asset của series: bốn cột stage kèm tên lesson bên dưới, hàng partner moves, dải alignment, thanh foundation, thanh experience hub. Cùng hình với slide stage map trước, thêm tên lesson.
+- 🎨 Visual hint: SCHEMATIC. Stage map từ asset của series: bốn cột stage kèm tên lesson bên dưới, hàng partner moves, dải alignment, thanh foundation, thanh knowledge hub. Cùng hình với slide stage map trước, thêm tên lesson.
 
 ---
 
-### DIAGRAM · The Experience Hub
+### DIAGRAM · The Knowledge Hub
 - Kicker: The final report
 - Title: Every output.\n*One connected place.*
 - On-slide: Bắt đầu từ bất kỳ quyết định nào. Lần ra nhu cầu, hypothesis, principle và test của nó.

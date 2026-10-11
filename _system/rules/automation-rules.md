@@ -59,7 +59,7 @@ When creating slide decks, Claude will reference the **Templates folder** to ens
 ## Rule 3: Updating These Rules ✏️
 **How to modify this file:**
 
-1. **Location:** `/Users/winnie.nguyen/library/CloudStorage/GoogleDrive-nguyenphuctuongvan@gmail.com/My Drive/03_Mentoring/AUTOMATION_RULES.md`
+1. **Location:** `/Users/winnie.nguyen/library/CloudStorage/GoogleDrive-nguyenphuctuongvan@gmail.com/My Drive/03_Mentoring/automation-rules.md`
 
 2. **To request changes:** Just tell Claude:
    - "Update Rule 1 to..."
@@ -201,13 +201,13 @@ When you share an artifact without a clear destination folder, Claude will **sto
 | Check before finalizing | Reference Templates folder | `_system/templates/` |
 | "Process my inbox" / "Process [file]" | Read → triage → brief (if build needed) → move source → create artifact → report | Source to permanent folder; artifact to Library |
 | "Not sure where this goes" | Triage with options + recommendation | Confirmed by you |
-| Need to adjust rules | Edit this file | `_Rules/AUTOMATION_RULES.md` |
+| Need to adjust rules | Edit this file | `_Rules/automation-rules.md` |
 
 ---
 
 **📍 How to find this file:**
-- In your Mentoring folder: `03_Mentoring/AUTOMATION_RULES.md`
-- Or search: "AUTOMATION_RULES.md"
+- In your Mentoring folder: `03_Mentoring/automation-rules.md`
+- Or search: "automation-rules.md"
 - It's always in the root of your 03_Mentoring folder
 
 **💡 Pro tip:** This file is your source of truth. Claude will check it before creating slides, so keeping it updated ensures consistent behavior!

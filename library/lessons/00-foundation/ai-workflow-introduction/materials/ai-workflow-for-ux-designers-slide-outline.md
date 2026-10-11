@@ -6,7 +6,7 @@ slide_count: 30
 duration: "90 min"
 status: draft
 built_deck: ""
-last_synced: 2026-10-05
+last_synced: 2026-10-11
 ---
 
 > **Source of truth:** `ai-workflow-for-ux-designers-lesson.md`
@@ -14,7 +14,7 @@ last_synced: 2026-10-05
 > This file contains only slide-specific concerns: layout types, on-slide text, visual hints, kickers, and speaker notes.
 > See `CLAUDE.md` → Lesson file sync rule for what triggers an update on which side.
 
-> **Layout vocabulary is fixed.** Every `###` slide header below uses one of the types documented in `_system/rules/SLIDE_DECK_RULES.md`: Cover, Section divider, Statement, Numbered, Compare, Process, Quote, Milestone, Practice, End, Diagram, Formula, Image. `SECTION`, `COMPARISON` and `ACTIVITY` are drift, not valid types: use `SECTION DIVIDER`, `COMPARE`, `MILESTONE`.
+> **Layout vocabulary is fixed.** Every `###` slide header below uses one of the types documented in `_system/rules/slide-deck-rules.md`: Cover, Section divider, Statement, Numbered, Compare, Process, Quote, Milestone, Practice, End, Diagram, Formula, Image. `SECTION`, `COMPARISON` and `ACTIVITY` are drift, not valid types: use `SECTION DIVIDER`, `COMPARE`, `MILESTONE`.
 
 > **Copy standard:** every Kicker, Title and On-slide line should read in one glance. No sentence over about 15 words on a slide. A qualifier or example goes in speaker notes or the lesson file, not on the slide.
 
@@ -37,14 +37,21 @@ last_synced: 2026-10-05
 
 ## Slide structure — 30 slides
 
-- Arc: **Partner mindset and one task done twice** (7, including the cover) → **Vocabulary and data safety** (8) → **Files and folders** (4) → **Build your case folder** (4) → **What comes next, the hub, sharing, close** (7).
-- Maps 1:1 onto the lesson's five phases. Phase 1 = slides 2–7. Phase 2 = slides 8–15. Phase 3 = slides 16–19. Phase 4 = slides 20–23. Phase 5 = slides 24–30.
-- Timing on screen lives only on `MILESTONE` slides (`Num:` = minutes). Phase timings: Phase 1 12, Phase 2 21, Phase 3 10, Phase 4 25, Phase 5 8 (76 of 90 minutes; 14 minutes buffer). Phase 2 split: terms in action 6, Activity 1 5, data safety 10. Phase 5 split: series map 2, hub 2, sharing 2, close 2.
-- The terms and the folder detail are in the Week 1 brief (pre-read), so the deck has no slide that reads definitions aloud.
+- Arc: **Open** (2, including the cover) → **Theory** (14: the stance and the demo, the terms, data safety, files and folders) → **Bridge** (2) → **Practice** (5) → **Close** (7).
+- Maps onto the lesson's blocks. Open = slides 1–2. Theory = slides 3–16 (Part 1 = 4–7, Part 2 = 8–11, Part 3 = 12–13, Part 4 = 14–16). Bridge = slides 17–18 (the bridge and the cheat sheet). Practice = slides 19–23. Close = slides 24–30.
+- Timing on screen lives only on `MILESTONE` slides (`Num:` = minutes). Block timings: Open 3, Theory 35 (Part 1: 9, Part 2: 6, Part 3: 10, Part 4: 10), Bridge 5, Practice 30 (Activity 1: 5, Activity 2: 25), Close 8 (81 of 90 minutes; 9 minutes buffer). Close split: series map 2, hub 2, sharing 2, closing thought 2.
+- Section dividers mark the three big shifts only: Theory (01), Practice (02) and What comes next (03). Parts inside Theory are marked by the kicker, not a divider.
+- The terms and the folder detail are in the Week 1 brief (pre-read), so the deck has no slide that reads definitions aloud. The cheat sheet slide is not teaching; it points back to the theory.
 
 ---
 
 ## Slides
+
+---
+
+## Open and Theory
+
+---
 
 ### COVER
 - Year: 2026 · Winnie Nguyen
@@ -66,34 +73,34 @@ last_synced: 2026-10-05
 
 ---
 
-## 1. The partner mindset
-
----
-
-### SECTION DIVIDER · The partner mindset
-- Num: 01
-- Kicker: Why a deliberate workflow
-- Title: Same tools.\n*Different results.*
-- Sub: Twelve minutes, including one demo
-- Speaker notes:
-  - Short divider, no slide content to read
-  - Say the cohort ground rules in one breath: what is shared in class stays in class; anonymise first; nobody has to show confidential work
-  - The course case card is always available if your case is too sensitive
-- 🎨 Visual hint: TYPOGRAPHIC. Light lavender paper-deeper background, large part number, title with accent on line 2.
-
----
-
 ### MILESTONE · Opening question
 - Num: 2
-- Kicker: Pairs
+- Kicker: Pairs, open the session
 - Title: One time AI helped.\nOne time it quietly hurt.
 - Sub: What was different about the two?
 - Speaker notes:
+  - Say the ground rules in one breath: what is shared in class stays in class; anonymise first; nobody has to show confidential work
+  - The course case card is always available if your case is too sensitive
   - Two minutes, in pairs: one example each way
   - Collect two or three answers from the room
   - **Listen for the pattern:** the helpful moments had a clear ask and a review step; the bad ones trusted the output
   - Do not explain yet; the next slides answer it
 - 🎨 Visual hint: TYPOGRAPHIC. Milestone layout on the purple background, the minute value large, the question as the title. No timer shown beyond the number.
+
+---
+
+### SECTION DIVIDER · Theory first
+- Num: 01
+- Kicker: The ideas you will use
+- Title: First the ideas.\n*Then you build.*
+- Sub: Thirty-five minutes in four parts, then all hands-on
+- Speaker notes:
+  - Say the shape of the session: all the ideas now, then one unbroken block of working on your own case
+  - Say why: you get one continuous stretch of practice, not many short ones
+  - **A cheat sheet comes before the practice, so nobody has to memorise**
+  - Name the four parts: the stance and the demo, the terms, data safety, files and folders
+  - Each part ends with one quick question, answered aloud
+- 🎨 Visual hint: TYPOGRAPHIC. Light lavender paper-deeper background, large part number, title with accent on line 2.
 
 ---
 
@@ -159,23 +166,6 @@ last_synced: 2026-10-05
 
 ---
 
-## 2. The vocabulary and data safety
-
----
-
-### SECTION DIVIDER · The vocabulary
-- Num: 02
-- Kicker: Terms in action, then data safety
-- Title: Words you will\n*meet every day*
-- Sub: Ten terms from your pre-read, then what is safe to paste
-- Speaker notes:
-  - The definitions are in the Week 1 brief; do not read them out
-  - Link each term to what they just saw in the demo
-  - Tell them there is a short pair activity, then a block on data safety
-- 🎨 Visual hint: TYPOGRAPHIC. Paper-deeper background, large part number, accent on line 2.
-
----
-
 ### NUMBERED · Ten terms, five groups
 - Kicker: The map
 - Title: Ten terms.\n*Five groups.*
@@ -186,10 +176,11 @@ last_synced: 2026-10-05
   - 4. How some tools act: agent, connector (MCP)
   - 5. Carrying your standards: reusable instructions
 - Speaker notes:
-  - Recap only: they have read these; ask two quick questions to check, for example "which one is what you give it, and which is its limit?"
+  - The definitions are in the Week 1 brief; do not read them out
+  - Recap only: they have read these; end with one quick question, for example "which one is what you give it, and which is its limit?"
   - Link to the demo: the case card was the context; "use only" was grounding
   - AI-assisted vs AI-generated is the tenth term, already covered
-  - Six minutes for this and the next two slides together
+  - Six minutes for this and the next three slides together; no activity yet, the first one comes after the break
 - 🎨 Visual hint: TYPOGRAPHIC. Numbered grid, five items, purple numerals.
 
 ---
@@ -234,21 +225,6 @@ last_synced: 2026-10-05
 
 ---
 
-### MILESTONE · Activity 1
-- Num: 5
-- Kicker: Pairs
-- Title: Explain it\nto a teammate
-- Sub: Three terms. Your own example. What will you do differently?
-- Speaker notes:
-  - Hand out the ten cards; three per person
-  - One-sentence explanation with an example from your own case
-  - Partner asks one question: "What would you do differently because of that?"
-  - **Listen for behaviour change, not definitions**
-  - Optional output: a draft glossary file for the context pack
-- 🎨 Visual hint: TYPOGRAPHIC. Milestone layout on purple, large minute number, no diagram.
-
----
-
 ### NUMBERED · Three kinds of material
 - Kicker: What you put in
 - Title: Before you paste,\n*sort it*
@@ -284,23 +260,6 @@ last_synced: 2026-10-05
 
 ---
 
-## 3. Files and folders
-
----
-
-### SECTION DIVIDER · Files and folders
-- Num: 03
-- Kicker: What the AI works with
-- Title: A folder\n*it can work with*
-- Sub: Ten minutes: Markdown, HTML, and one clear structure
-- Speaker notes:
-  - The detail is in the Week 1 brief; use the time on what people get wrong
-  - Most designers never needed a text editor; design tools hid it
-  - Recognition is the goal, not mastery
-- 🎨 Visual hint: TYPOGRAPHIC. Paper-deeper background, large part number, accent on line 2.
-
----
-
 ### COMPARE · Markdown or HTML?
 - Kicker: Two file types
 - Title: One to work in.\n*One to show.*
@@ -308,6 +267,8 @@ last_synced: 2026-10-05
   - Left, Markdown (.md): plain text with simple marks; what AI reads and writes best
   - Right, HTML: what a browser draws; prototypes and the hub are HTML
 - Speaker notes:
+  - The detail is in the Week 1 brief; use the time on what people get wrong
+  - Most designers never needed a text editor, because design tools hid it; recognition is the goal, not mastery
   - Markdown: `##` for headings, `**` for bold, `-` for lists, `|` for tables
   - You only need to recognise it and know you can paste it back into an AI chat
   - You keep the Markdown; the AI builds the page when a stakeholder needs to read it
@@ -343,24 +304,80 @@ last_synced: 2026-10-05
   - **The AI returns only its own section**, so it cannot rewrite what you settled
   - Keeping the draft and your version separate shows your error rate
   - One habit: before you retype your project from memory, find the saved file and attach it
+  - End the Theory block with one quick question: why does a plain local folder matter when an AI tool reads your files?
 - 🎨 Visual hint: SCHEMATIC. Four-step process track, the third step highlighted in purple.
 
 ---
 
-## 4. Build your case folder
+## Bridge
 
 ---
 
-### SECTION DIVIDER · Build your case folder
-- Num: 04
+### MILESTONE · Bridge
+- Num: 5
+- Kicker: Break and check
+- Title: Five minutes.\n*Then you build.*
+- Sub: Stretch, answer three questions, read the task card
+- Speaker notes:
+  - Two minutes of break; cameras off is fine
+  - Run the quick knowledge check from the lesson: three questions aloud, no scoring
+  - **Listen for the term or rule people hesitate on, and point to it on the cheat sheet**
+  - Show the two activities and how long each takes
+  - Tell them the cheat sheet stays on screen for the whole practice block
+- 🎨 Visual hint: TYPOGRAPHIC. Milestone layout on the purple background, the minute value large, no diagram.
+
+---
+
+### DIAGRAM · Cheat sheet
+- Kicker: Keep this open while you build
+- Title: Everything you need\non *one screen*
+- On-slide:
+  - Terms: context, grounding, hallucination, agent
+  - Before you paste: safe, ask first, never in a public tool
+  - Folder: 00-context, one folder per stage, hub, case-log
+  - Instruction: use only this file, say 'unknown', return only the list
+- Speaker notes:
+  - Leave this on the shared screen from the start of the practice block
+  - Each quadrant points back to one theory part: the terms, data safety, files and folders, the demo instruction
+  - The Week 1 brief holds the same content in full
+  - **Do not teach again; point to the quadrant**
+- 🎨 Visual hint: SCHEMATIC. Four quadrants, one per theory part; a purple heading in each quadrant; no colour beyond purple and ink.
+
+---
+
+## Practice
+
+---
+
+### SECTION DIVIDER · Practice
+- Num: 02
 - Kicker: Hands-on
-- Title: Make it\n*real*
-- Sub: Your folder, your case, one instruction
+- Title: Now you\n*build*
+- Sub: Thirty minutes on your own case, with coaching
 - Speaker notes:
   - Everyone works on their own laptop, in breakout rooms of three or four
   - Have the instructor's own case folder open to show
   - Circulate; check people are building real subfolders
-- 🎨 Visual hint: TYPOGRAPHIC. Paper-deeper background, large part number.
+  - Two activities back to back: Activity 1, then Activity 2
+- 🎨 Visual hint: TYPOGRAPHIC. Paper-deeper background, large part number, accent on line 2.
+
+---
+
+### MILESTONE · Activity 1
+- Num: 5
+- Kicker: Pairs, first activity of the practice block
+- Title: Explain it\nto a teammate
+- Sub: Three terms. Your own example. What will you do differently?
+- Speaker notes:
+  - This is the first activity after the break; it also checks the terms from the theory
+  - Hand out the ten cards; three per person
+  - If anyone is stuck, send them to the cheat sheet slide
+  - One-sentence explanation with an example from your own case
+  - Partner asks one question: "What would you do differently because of that?"
+  - **Listen for behaviour change, not definitions**
+  - Optional output: a draft glossary file for the context pack
+  - Go straight into Activity 2 afterwards; do not teach again in between
+- 🎨 Visual hint: TYPOGRAPHIC. Milestone layout on purple, large minute number, no diagram.
 
 ---
 
@@ -388,7 +405,7 @@ last_synced: 2026-10-05
   - 04 · Run one instruction against a saved file
 - Speaker notes:
   - 01: four minutes, the standard layout
-  - 02: eight minutes, product-and-users and accessibility-rules, anonymised, plus the data-rules from earlier
+  - 02: eight minutes, product-and-users and accessibility-rules, anonymised, plus three lines of data-rules from the data safety part
   - 03: three minutes, copy the hub template into `hub/` and open the index page in a browser
   - 04: ten minutes, attach the product file and ask what is missing
   - The instruction is on the next slide
@@ -410,12 +427,12 @@ last_synced: 2026-10-05
 
 ---
 
-## 5. What comes next
+## Close
 
 ---
 
 ### SECTION DIVIDER · What comes next
-- Num: 05
+- Num: 03
 - Kicker: The series and your hub
 - Title: Where this\n*is going*
 - Sub: Eight minutes: the map, the hub, sharing it
@@ -437,11 +454,11 @@ last_synced: 2026-10-05
   - At each stage there is something to agree with the PO and the business
   - We start from the business question, not a received brief
   - The foundation underneath is what you set up today
-- 🎨 Visual hint: SCHEMATIC. The stage map from the series assets: four stage columns, partner moves row, alignment band, foundation bar, experience hub bar.
+- 🎨 Visual hint: SCHEMATIC. The stage map from the series assets: four stage columns, partner moves row, alignment band, foundation bar, knowledge hub bar.
 
 ---
 
-### DIAGRAM · The Experience Hub
+### DIAGRAM · The Knowledge Hub
 - Kicker: The final report
 - Title: Every output.\n*One connected place.*
 - On-slide: Start from any decision. Reach its need, hypothesis, principle and test.
@@ -488,6 +505,7 @@ last_synced: 2026-10-05
 - Title: The tools will change.\n*The way of working won't.*
 - On-slide: Give clear input. Ask for sources. Check it. Decide yourself.
 - Speaker notes:
+  - Ask why the hub is private by default, and when it can be published
   - Ask two or three students which term they will now explain differently
   - Land the closing line, then stop
   - Point to the next lesson: starting from the business question

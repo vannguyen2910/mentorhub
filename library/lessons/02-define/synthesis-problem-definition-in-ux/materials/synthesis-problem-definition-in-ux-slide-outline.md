@@ -6,7 +6,7 @@
 
 > **How to use this file**
 > Paste both this file and `synthesis-problem-definition-lesson.md` into Claude with the instruction below to generate a new slide deck.
-> Claude will read `CLAUDE.md` and `_system/rules/SLIDE_DECK_RULES.md` automatically and follow Winnie's design system.
+> Claude will read `CLAUDE.md` and `_system/rules/slide-deck-rules.md` automatically and follow Winnie's design system.
 
 ---
 

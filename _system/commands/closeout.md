@@ -5,7 +5,7 @@ argument-hint: <mentee> [reassessment results: paste numbers or name the file]
 
 Close out a programme: $ARGUMENTS
 
-Everything below is a draft until the user approves it. Nothing is sent or published. Chat in Vietnamese; read `_system/rules/VI_VOICE.md` before writing any Vietnamese. Follow the "Programme kickoff & close-out rule" and the testimonial capture rule in CLAUDE.md.
+Everything below is a draft until the user approves it. Nothing is sent or published. Chat in Vietnamese; read `_system/rules/vi-voice.md` before writing any Vietnamese. Follow the "Programme kickoff & close-out rule" and the testimonial capture rule in CLAUDE.md.
 
 **Language and skills:** write the close-out recap and every draft in Vietnamese (decided 2026-10-11): body text in Vietnamese, section headings and professional terms in English, file names and front matter keys in English. Apply the Vietnamese skills in this order:
 
@@ -61,7 +61,7 @@ If no testimonial surfaced, say so in one line. Offer a draft request (step 8) i
 
 Append an entry to `mentees/training-log.md` using its entry template: type `private-training`, participants `1`, duration from `start` to `end`, topics from `sessions.md`, one short note. Do not edit `business/profile/pitch-deck-content.md`. Instead print the one stat line that would change (for example the session count) and ask the user whether to apply it.
 
-## 8. Follow-up drafts (Vietnamese, per VI_VOICE.md; the user sends them)
+## 8. Follow-up drafts (Vietnamese, per vi-voice.md; the user sends them)
 
 Save under `## Follow-up drafts` in the close-out recap:
 

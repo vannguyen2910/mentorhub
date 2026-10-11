@@ -5,13 +5,13 @@ argument-hint: <mentee> <topic> [date] [transcript path, or paste the transcript
 
 Log a session: $ARGUMENTS
 
-Everything below is a draft until the user approves it. Nothing is sent, posted or published by this command. Read `_system/rules/VI_VOICE.md` before writing any Vietnamese.
+Everything below is a draft until the user approves it. Nothing is sent, posted or published by this command. Read `_system/rules/vi-voice.md` before writing any Vietnamese.
 
 **Language and skills:** write private notes and everything the mentee reads in Vietnamese (decided 2026-10-11): body text in Vietnamese, section headings and professional terms in English, file names and front matter keys in English. Apply the Vietnamese skills in this order:
 
 1. `vietnamese-voice-dictionary`: first, on the user's own words in `$ARGUMENTS` and chat when they look like speech-to-text errors. Ask once if a word is ambiguous. Do not run it on the mentee's words in the transcript (the cleaner handles those).
 2. `vietnamese-transcript-cleaner`: on any Zoom/Meet transcript or caption file (step 3).
-3. `vi-voice`: load before drafting the playback, the recap and the Zalo message, and follow `_system/rules/VI_VOICE.md`.
+3. `vi-voice`: load before drafting the playback, the recap and the Zalo message, and follow `_system/rules/vi-voice.md`.
 4. `vietnamese-copy-polish`: last, on the playback and the Zalo message (the two texts the mentee sees): diacritics, sentence length, filler, dashes, a clear next step. On private notes use it as a check only and do not restructure them.
 
 
@@ -55,7 +55,7 @@ Fill the recap the script created from step 3, in Vietnamese per the Language no
 ## 7. Follow-up drafts (append to the recap under `## Follow-up drafts`)
 
 - **Homework**: one clear task, expected output, due date, and the lesson or template it relates to. If the lesson has a homework section, reuse it rather than inventing a new task.
-- **Zalo message** to the mentee: short, warm, in Vietnamese per VI_VOICE.md. Thanks, 2 to 3 takeaways, the homework and due date, next session date if known. The user copies and sends it. Never claim it was sent.
+- **Zalo message** to the mentee: short, warm, in Vietnamese per vi-voice.md. Thanks, 2 to 3 takeaways, the homework and due date, next session date if known. The user copies and sends it. Never claim it was sent.
 - **Next-session seed**: 3 bullets for `/prep` to pick up (open questions, what to check on the homework, what to teach next). Put the same bullets in the recap's Next Session Plan.
 
 ## 8. Testimonial capture

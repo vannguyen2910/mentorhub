@@ -44,7 +44,7 @@ library/slides/[slide-name]/
 ### Rule SD-2: Design System Compliance
 **Status:** Active | **Priority:** High
 
-**ALWAYS follow the design rules in `_system/rules/SLIDE_DECK_RULES.md`**
+**ALWAYS follow the design rules in `_system/rules/slide-deck-rules.md`**
 
 Key requirements:
 - Link `tokens.css` from the lesson's own `slides/` folder (copy it from the nearest built lesson)
@@ -151,12 +151,12 @@ slides: [Google Slides URL - optional]
 2. Learning Objectives (3-5 verbs: explain, apply, critique, analyze)
 3. Materials Needed
 4. Pre-Class Preparation
-5. Run-of-Show (timeline breakdown)
-   - Open & Frame (hook/provocation)
-   - Core Concept (main teaching)
-   - Activity (hands-on practice)
-   - Debrief & Takeaways
-   - Q&A + Close
+5. Run-of-Show (timeline breakdown, theory first then practice, see Rule LP-3)
+   - Open (ground rules, hook, goals)
+   - Theory block (all concepts and the demo, 3 to 4 parts, each ending with a 30-second check)
+   - Bridge (short break, quick knowledge check, task card, cheat sheet)
+   - Practice block (activities back to back on the student's own case)
+   - Close (debrief, takeaways, Q&A)
 6. Practice Dataset (optional for self-study)
 7. AI in Practice (new section - always include!)
 8. Assessment (knowledge check + reflection)
@@ -195,17 +195,27 @@ Good: "Apply design thinking to identify problem statements in their own project
 ### Rule LP-3: Run-of-Show (Timing)
 **Status:** Active | **Priority:** High
 
-Always include a **minute-by-minute breakdown**:
+Always include a **minute-by-minute breakdown**, and use the **theory first, then practice** shape by default for every class lesson (decided 2026-10-11, after a trial class found the continuous practice block more effective than alternating short theory and practice).
 
 ```
-[00:00] Open & Frame (5 min) — Hook or warm-up question
-[00:05] Core Concept (25 min) — Main teaching content
-[00:30] Activity (30 min) — Hands-on practice + facilitator watch-fors
-[01:00] Debrief (10 min) — Key takeaways
-[01:10] Q&A + Close (5 min) — Final thoughts
+[00:00] Open (3–5 min) — Ground rules, hook or warm-up question
+[00:05] Theory block (≤ 40 min) — All concepts and the worked example, in 3–4 parts
+[00:40] Bridge (5 min) — Short break, quick knowledge check, task card, cheat sheet
+[00:45] Practice block (30–35 min) — Activities back to back on the student's own case, with coaching
+[01:20] Close (5–8 min) — Debrief, takeaways, homework
 ```
 
-**Rules:**
+**Shape rules:**
+- **Theory block ≤ 40 minutes.** Split it into 3 to 4 parts and end each with a 30-second question asked aloud (a check, not an exercise). No activity runs inside the block.
+- **Design backwards from practice.** Write the Practice block first, then keep only the theory an activity uses. A concept no activity uses moves to further reading.
+- **Every theory concept is used by an activity.** If it is not, cut it or give it one.
+- **The worked example (demo) belongs to the Theory block**, not to Practice.
+- **Bridge, always.** The cheat sheet (one screen with what the activities need) stays visible during Practice, so students do not rely on remembering 40 minutes of ideas.
+- **Practice is at least 30 minutes and unbroken.** Do not return to teaching between activities unless several students share the same gap.
+- **Scope:** class lessons. 1:1 private training may interleave when coaching needs it.
+- Existing lessons convert when they are next taught, not in bulk.
+
+**General rules:**
 - Total must match `duration` field in metadata
 - Mark activities with setup → task → facilitator watch-fors
 - Include contingency time (if running long, what can flex?)
@@ -350,7 +360,7 @@ This helps you:
 │   └── [mentee-name]/  plan/ sessions/ slides/ transcripts/ assessments/ homework/
 ├── showcase/                ← SHOW: public/, private/, testimonials.md
 ├── business/                ← services/ (pricing, leads), profile/ (CV, bios), content/ (social)
-└── _system/                 ← rules/ (incl. SLIDE_DECK_RULES.md), templates/, scripts/
+└── _system/                 ← rules/ (incl. slide-deck-rules.md), templates/, scripts/
 ```
 
 ---
@@ -444,6 +454,8 @@ Before marking a lesson `draft: false`:
 - [ ] All required sections filled in (see Rule LP-1)
 - [ ] Learning objectives use Bloom's verbs
 - [ ] Run-of-show timing matches total duration
+- [ ] Theory block is 40 minutes or less, ends each part with a quick check, and has no activity inside it (Rule LP-3)
+- [ ] Every theory concept is used by an activity in the Practice block; Bridge and cheat sheet present
 - [ ] Activities have clear setup + task + watch-fors
 - [ ] "AI in Practice" section included & complete
 
@@ -492,7 +504,7 @@ Before finalizing a session recap, check:
 
 **Priority order:**
 
-1. **Design first** → Review `_system/rules/SLIDE_DECK_RULES.md`
+1. **Design first** → Review `_system/rules/slide-deck-rules.md`
 2. **Structure second** → Create folder & link template files
 3. **Content third** → Write slides using preset layouts
 4. **Polish fourth** → Animate, test, fix spacing

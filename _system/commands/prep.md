@@ -5,12 +5,12 @@ argument-hint: <mentee> [session number or date]
 
 Prepare a session: $ARGUMENTS
 
-Output is a private one-page prep note. This command reads and drafts only. It does not send messages, change the calendar, or build lessons or slides. Read `_system/rules/VI_VOICE.md` before writing any Vietnamese.
+Output is a private one-page prep note. This command reads and drafts only. It does not send messages, change the calendar, or build lessons or slides. Read `_system/rules/vi-voice.md` before writing any Vietnamese.
 
 **Language and skills:** write the prep note in Vietnamese (decided 2026-10-11): body text in Vietnamese, section headings and professional terms in English, file names and front matter keys in English. Apply the Vietnamese skills in this order:
 
 1. `vietnamese-voice-dictionary`: on the user's own words when they look like speech-to-text errors. Ask once if a word is ambiguous.
-2. `vi-voice`: load before drafting, and follow `_system/rules/VI_VOICE.md`.
+2. `vi-voice`: load before drafting, and follow `_system/rules/vi-voice.md`.
 3. `vietnamese-copy-polish`: on the optional Zalo reminder and the Calendar description (texts others read). On the prep note itself use it as a check only: diacritics, sentence length, filler, dashes. Do not restructure the note.
 
 
@@ -37,7 +37,7 @@ Save to `mentees/<slug>/sessions/prep-NN-YYYY-MM-DD.md` (private, `draft: true`)
 4. **Proposed agenda**: timed blocks that add up to the session length in `cadence`. Reuse the lesson's own phases and timings. Add a 10 minute check-in on homework at the start unless the plan says otherwise.
 5. **Questions to ask**: 3 to 5, aimed at the blockers and patterns in the last recap.
 6. **Things to watch**: from the recap's trainer notes and assessment gaps. Candid wording is fine here, since the note is private.
-7. **Gaps**: lesson file missing or still `draft: true`, slides missing, homework not submitted, no recap, no baseline, no date.
+7. **Gaps**: lesson file missing or still `draft: true`, slides missing, homework not submitted, no recap, no baseline, no date. For a class lesson, also check the shape (Rule LP-3 in mentoring-rules.md): Theory block 40 minutes or less with no activity inside it, a Bridge with a cheat sheet, an unbroken Practice block of at least 30 minutes, and every theory concept used by an activity. Report any miss as a gap; do not rewrite the lesson.
 
 ## 4. Gap handling (WF-5)
 
