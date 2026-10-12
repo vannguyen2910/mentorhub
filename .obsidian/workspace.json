@@ -1,0 +1,233 @@
+{
+  "main": {
+    "id": "28786a7c8922b7d8",
+    "type": "split",
+    "children": [
+      {
+        "id": "f7d42465e9712d65",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "25adccba9a08e5cd",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "170d5dbf6e4b0785",
+    "type": "split",
+    "children": [
+      {
+        "id": "d423ecdc25d1ebc2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ff1036ff0d9fda65",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "76e9b3d0cf0aa9d5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "4b6f1c91557ee8b8",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6b0b7764ebe0885f",
+    "type": "split",
+    "children": [
+      {
+        "id": "41e11dd450452cb8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6425a546b03f7c86",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "91e78ab86560cd01",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "fcb5b5201a8c073e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "c49faea324e5090a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "b7ada650b7ac30c2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "ff1036ff0d9fda65",
+  "lastOpenFiles": [
+    "programs/ai-design-workflow/workspace-template/demo-case/work/learning.md",
+    "programs/ai-design-workflow/workspace-template/my-case/work/learning.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/insights/decisions/D1.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/insights/hypotheses/H1.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/index.html",
+    "programs/ai-design-workflow/workspace-template/zz-check/insights/opportunities/O1.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/insights/metrics/M1.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/sources/anonymised/README.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/sources/_raw-private/README.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/prototype/design-system/components.html",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/prototype/design-system/tokens.css",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/prototype/design-system/components.css",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/prototype/design-system/README.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/sources/anonymised",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/sources/_raw-private",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/sources/README.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/prototype/project-rules.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/prototype/index.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/prototype/design-system",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/_templates/user-flow.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/_templates/survey-results.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/_templates/test-report.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/_templates/interview-synthesis.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/_templates/ia-sitemap.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/_templates/prototype.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/_templates/persona.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/_templates/competitor-analysis.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/_templates/generic.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/insights/_templates/_template-opportunity.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/insights/_templates/_template-metric.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/insights/_templates/_template-hypothesis.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/insights/_templates/_template-finding.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/insights/_templates/_template-evidence.md",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/sources",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/prototype",
+    "programs/ai-design-workflow/workspace-template/zz-check/work/_templates",
+    "programs/ai-design-workflow/workspace-template/demo-case/work/wireframes/5-journal.png",
+    "programs/ai-design-workflow/workspace-template/demo-case/work/wireframes/4-connect.png",
+    "programs/ai-design-workflow/workspace-template/demo-case/work/wireframes/3-plan.png",
+    "programs/ai-design-workflow/workspace-template/demo-case/work/wireframes/2-discover.png",
+    "programs/ai-design-workflow/workspace-template/demo-case/work/wireframes/1-onboarding.png",
+    "programs/ai-design-workflow/workspace-template/demo-case/work/ia-sitemap/Card_Sort_Board.png",
+    "programs/ai-design-workflow/workspace-template/demo-case/work/ia-sitemap/IA_Sitemap.png",
+    "programs/ai-design-workflow/workspace-template/demo-case/hub/documents/wireframes/4-connect.png",
+    "programs/ai-design-workflow/workspace-template/demo-case/hub/documents/wireframes/5-journal.png",
+    "programs/ai-design-workflow/workspace-template/demo-case/hub/documents/wireframes/3-plan.png"
+  ]
+}

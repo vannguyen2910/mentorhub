@@ -15,7 +15,7 @@
 Dùng outline trong file này, build slide deck HTML cho Section 2 Phần A - Tư Duy Pattern-First
 (khóa Systematic AI Prototyping for Product Designers, bản tiếng Việt).
 
-Theo đúng rule trong _system/rules/SLIDE_DECK_RULES.md.
+Theo đúng rule trong _system/rules/slide-deck-rules.md.
 Copy tokens.css và deck-stage.js vào thư mục module này (`Phần A - Tư Duy Pattern-First`) để deck tự chứa (self-contained).
 
 HƯỚNG DẪN THIẾT KẾ - áp dụng cho toàn bộ slide:
@@ -33,7 +33,7 @@ HƯỚNG DẪN THIẾT KẾ - áp dụng cho toàn bộ slide:
 - Slide PRACTICE (bài tập) và STATEMENT tổng kết cuối module dùng layout .practice / .end.
 - Giữ tiếng Anh cho thuật ngữ chuyên môn ngay trong câu tiếng Việt.
 - Dòng "Ghi chú thuyết trình" đưa vào phần speaker notes của HTML deck (không hiển thị trên
-  slide chính), dùng đúng framework speaker-notes có sẵn trong SLIDE_DECK_RULES.md nếu có.
+  slide chính), dùng đúng framework speaker-notes có sẵn trong slide-deck-rules.md nếu có.
 ```
 
 ---

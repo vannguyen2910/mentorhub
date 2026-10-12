@@ -184,7 +184,7 @@ last_synced: 2026-10-07
 - Sub: Nói với bạn cặp, 30 giây mỗi người. Viết ra file ở buổi sau.
 - Speaker notes:
   - Ba phút, theo cặp: hướng bạn đang nghiêng về, và vì sao?
-  - Chưa ghi gì; mọi người viết `my-direction.md` ở đầu buổi 2
+  - Chưa ghi gì; mọi người viết `_personal/my-direction.md` ở đầu buổi 2
   - Không ai phải chọn dứt khoát; file này được xem lại ở tuần 7 và được phép đổi
   - Đi quanh và ghi lại phân bố hướng của lớp để chọn ví dụ cho các tuần sau
   - Nếu ai bí, hỏi: "Nếu chỉ chọn một kỹ năng để xây trong bảy tuần, bạn chọn gì?"
@@ -223,7 +223,7 @@ last_synced: 2026-10-07
   - Nhấn mạnh ngay bây giờ để các lesson sau không phải dạy lại
   - Nói rõ nó loại trừ điều gì: dán output sang bước tiếp theo mà chưa đọc, và để AI đưa ra quyết định
   - **Mọi stage tiếp theo đều lặp lại dòng này**
-  - Hỏi: trong công việc của bạn, điều gì phải luôn là quyết định của bạn?
+  - Hỏi: trong công việc của bạn, điều gì phải luôn là decision của bạn?
 - 🎨 Visual hint: TYPOGRAPHIC. Ba dòng, mỗi dòng dài hơn và đậm hơn dòng trước, màu ink rồi ochre rồi purple, kết ở "Bạn quyết định."
 
 ---
@@ -301,9 +301,9 @@ last_synced: 2026-10-07
   - Brainstorm: Crazy 8s · How Might We ideation · brainwriting
   - Select: impact vs effort · concept sketching · storyboarding
   - Prototype: wireframes · interactive prototype · proof of concept
-  - AI: mở rộng ý tưởng, dựng bản đầu. Bạn: chọn hướng, kiểm tra với nhu cầu người dùng và principle
+  - AI: mở rộng ý tưởng, dựng bản đầu. Bạn: chọn hướng, kiểm tra với user need và principle
 - Speaker notes:
-  - Một quyết định không có lý do được ghi lại sẽ không thể truy ngược về nhu cầu của user sau này
+  - Một decision không có lý do được ghi lại sẽ không thể truy ngược về user need sau này
   - Hỏi: lần trước bạn khám phá được bao nhiêu hướng thật sự khác nhau, và lý do chọn một hướng được ghi ở đâu?
   - Hai phút
 - 🎨 Visual hint: SCHEMATIC. Cùng stage card; ba nhóm chip (brainstorm, select, prototype) ở phía trên.
@@ -427,7 +427,7 @@ last_synced: 2026-10-07
   - Giải thích trong một câu, kèm ví dụ từ case của bạn
   - Bạn cặp hỏi một câu: "Từ điều đó, bạn sẽ làm khác đi điều gì?"
   - **Lắng nghe sự thay đổi hành vi, không phải định nghĩa**
-  - Không có output; `glossary.md` là tuỳ chọn ở homework
+  - Không có output; `glossary.md` là tuỳ chọn, làm khi tiếp tục dự án
 - 🎨 Visual hint: TYPOGRAPHIC. Milestone layout nền purple, số phút lớn, không có diagram.
 
 ---
@@ -461,6 +461,7 @@ last_synced: 2026-10-07
   - Nếu chưa có chính sách thì hỏi; còn phân vân thì đừng dán
   - **Xoá thông tin định danh bằng find and replace trên máy của bạn**, không nhờ AI làm, vì như vậy dữ liệu đã bị gửi đi rồi
   - AI coding tool hoặc agent đọc toàn bộ project folder, nên hãy giữ file riêng tư ở chỗ khác
+  - Dữ liệu gốc cần ẩn danh nằm trong `_raw-private/`: không lên GitHub, và file luật bảo tool không đọc; đó là quy tắc chứ không phải rào chắn, nên file thật sự confidential vẫn để ngoài folder
   - Output của AI có được dùng cho công việc với client hay không, và ai sở hữu nó, tuỳ công ty và quốc gia của bạn; hãy ghi lại trong case log chỗ nào đã dùng AI
   - Bạn sẽ viết data rules của riêng mình ở đầu buổi 2, trên tài liệu thật của case; cho đến lúc đó đừng dán tài liệu thật vào AI tool
 - 🎨 Visual hint: SCHEMATIC. Process track bốn bước, bước ba được tô purple.
@@ -501,27 +502,29 @@ last_synced: 2026-10-07
 ### DIAGRAM · The Knowledge Hub
 - Kicker: The final report
 - Title: Every output.\n*One connected place.*
-- On-slide: Bắt đầu từ bất kỳ quyết định nào. Lần ra nhu cầu, hypothesis, principle và test của nó.
+- On-slide: Bắt đầu từ bất kỳ decision nào. Lần ra user need, hypothesis, principle và test của nó.
 - Speaker notes:
-  - Hub là một website nhỏ gồm các page liên kết trong case folder của bạn; mỗi lesson thêm một page
+  - Hub là một folder Markdown gồm các page theo tuần và mỗi item một file, liên kết với nhau trong case folder của bạn
   - Báo cáo cuối của series là hub hoàn chỉnh, không phải một tài liệu
-  - Cho xem hub trống mở trong browser, với dữ liệu mẫu; buổi 2 mọi người sẽ copy hub vào case folder của mình
-  - Trang Overview tự tính các khoảng trống cho bạn: quyết định không có nhu cầu user phía sau, hypothesis không có test
+  - Cho xem hub của template, với dữ liệu mẫu, mở trong một công cụ xem Markdown (ví dụ Obsidian với Graph view và khung Backlinks); buổi 2 mọi người đã có sẵn hub này trong case folder của mình
+  - Từ mỗi decision, bấm sang tài liệu làm bằng chứng cho nó (phân tích đối thủ, persona, flow, prototype) ở mục Documents
+  - Mỗi item (opportunity, decision, test) là một file và là nguồn duy nhất; AI dựng lại bảng alignment và warning từ các file đó: decision không có user need phía sau, hypothesis không có test
   - **Hub làm cho lập luận của bạn có thể được người khác kiểm chứng**
-- 🎨 Visual hint: REAL. Screenshot trang Overview của template: menu bên trái, gate, bảng và cảnh báo bên phải.
+- 🎨 Visual hint: REAL. Screenshot Obsidian: Graph view của hub (item được tô màu theo loại) cạnh trang `hub/README.md` với bảng alignment và các warning.
 
 ---
 
 ### DIAGRAM · Private by default, public if you choose
 - Kicker: Sharing your hub
 - Title: Your hub is\n*yours to share*
-- On-slide: Private: PDF hoặc folder nén. Public: GitHub, chỉ khi case được phép chia sẻ.
+- On-slide: Private: file HTML hoặc PDF, file nén, hoặc mời vào repo private. Public: chỉ khi cả case được phép chia sẻ.
 - Speaker notes:
   - **Hub mặc định là private**: nó nằm trong case folder của bạn và không ai thấy trừ khi bạn gửi
-  - Để cho stakeholder xem, export các page chính ra PDF, hoặc gửi folder đã nén
-  - Chỉ một case được phép chia sẻ (case của khoá, hoặc bản đã làm sạch từ công việc của bạn) mới có thể publish thành link trực tuyến trên GitHub; guide và homework tuỳ chọn có hướng dẫn
-  - **Nếu bạn publish, bạn là người host và chịu trách nhiệm**; GitHub Pages miễn phí cần repository public, đó là lý do công việc thật được giữ private
-- 🎨 Visual hint: SCHEMATIC. Hai cột. Trái, "Private (mặc định)": một folder có khoá, mũi tên tới một PDF và một file nén. Phải, "Public (tuỳ chọn)": một folder, mũi tên "upload" vào một repository, và mũi tên "Pages" tới khung browser.
+  - Để cho stakeholder xem, chạy script `tools/export-hub.py` để ra một file HTML mở được bằng trình duyệt, hoặc export các page chính ra PDF; hoặc gửi file nén của cả case folder, vì các page hub link ra ngoài folder `hub/`
+  - Muốn một người xem trực tiếp, mời họ vào repository private trên GitHub
+  - Chỉ khi toàn bộ case được phép chia sẻ (case của khoá, hoặc bản đã làm sạch từ công việc của bạn) mới công khai cả case folder trong một repository public mới; GitHub hiển thị Markdown nên không cần dựng website; guide và homework tuỳ chọn có hướng dẫn
+  - **Nếu bạn công khai, bạn là người host và chịu trách nhiệm**; công việc thật được giữ private
+- 🎨 Visual hint: SCHEMATIC. Hai cột. Trái, "Private (mặc định)": một folder có khoá, mũi tên tới một PDF, một file nén và một người được mời. Phải, "Public (tuỳ chọn)": một bản case đã làm sạch, mũi tên "upload" vào một repository public mới.
 
 ---
 ### STATEMENT · Questions
@@ -565,7 +568,7 @@ last_synced: 2026-10-07
 - Sub: Học layout, rồi dựng case folder của bạn
 - Speaker notes:
   - Đây là buổi 2, buổi thực hành: mở bằng check-in ba phút (ai chưa chạy được AI tool, chưa chọn được case, còn băn khoăn về data rules?)
-  - Rồi ba phút để mỗi người viết hai đến ba dòng vào `my-direction.md`: hướng nghiêng về, lý do, một kỹ năng muốn xây; file xem lại ở tuần 7
+  - Rồi ba phút để mỗi người viết hai đến ba dòng vào `_personal/my-direction.md`: hướng nghiêng về, lý do, một kỹ năng muốn xây; file xem lại ở tuần 7
   - Sau đó là Activity 2 (data rules), rồi mới đến file và folder
   - Chi tiết file và folder nằm trong pre-read brief; dùng thời gian cho những chỗ mọi người hay hiểu sai
   - Hầu hết designer chưa bao giờ cần dùng text editor; design tool đã che nó đi
@@ -596,16 +599,18 @@ last_synced: 2026-10-07
 ### DIAGRAM · The case folder
 - Kicker: One plain local folder
 - Title: Every lesson points\nto *this folder*
-- On-slide: 00-context · 01-discover · 02-define · 03-develop · 04-deliver · hub · case-log
+- On-slide: AGENTS · learnings (context · discover · define · develop · deliver · sources · prototype) · hub · tools · case-log
 - Speaker notes:
   - Folder local nằm trên máy của bạn, không phải file design trên server hay tài liệu cloud
   - AI coding tool mở cả folder làm project của nó và đọc mọi thứ bên trong; folder đồng bộ cloud có thể gặp lỗi giữa chừng khi đang ghi
-  - Đi qua cây folder: context pack trước, rồi mỗi stage một folder
-  - Folder đánh số giữ đúng thứ tự; một file cho mỗi activity cho mỗi bước AI một input có tên
+  - Đi qua cây folder: trang chủ `index.html` của hub (bấm đúp là mở bằng trình duyệt), file luật `AGENTS.md` và context pack trước, rồi folder `learnings/` với file làm việc đặt tên theo giai đoạn
+  - `AGENTS.md` là file tool tự đọc khi mở folder, nên các quy tắc không phụ thuộc vào việc bạn nhớ dán lại; `tools/` (step card) ghi rõ mỗi bước ai làm, đọc file nào, ghi vào đâu
+  - Dữ liệu gốc nằm trong `_raw-private/`, không lên GitHub; AI chỉ đọc bản đã ẩn danh trong `anonymised/`. Ghi chú riêng nằm trong `_personal/`, ngoài context pack
+  - Ít folder: tiền tố giai đoạn trong tên file giữ đúng thứ tự; một file cho mỗi activity cho mỗi bước AI một input có tên
   - Layout khác vẫn ổn cho project riêng của bạn; ở đây mình dùng layout này
-  - Hai loại file, trong một hơi: Markdown (`.md`) là plain text bạn làm việc trong đó và AI tool xử lý ổn định; HTML là thứ browser vẽ ra, prototype và hub đều là HTML. Bạn giữ Markdown; AI dựng page khi stakeholder cần đọc
+  - Hai loại file, trong một hơi: Markdown (`.md`) là plain text bạn làm việc trong đó và AI tool xử lý ổn định, hub cũng là Markdown và xem được trên GitHub hoặc VS Code; HTML chỉ còn ở prototype
   - Sáu phút cho slide này; ba phút cho slide kế tiếp
-- 🎨 Visual hint: SCHEMATIC. Một cây folder gọn, folder context được tô purple và folder hub màu ink.
+- 🎨 Visual hint: SCHEMATIC. Một cây folder gọn, `AGENTS.md` và folder context được tô purple, folder hub màu ink; `_raw-private` và `_personal` có biểu tượng khoá.
 
 ---
 
@@ -622,6 +627,8 @@ last_synced: 2026-10-07
   - **AI chỉ trả về section của nó**, nên AI không viết lại được phần bạn đã chốt
   - Giữ bản nháp và bản của bạn tách nhau để thấy tỷ lệ lỗi của AI
   - Một thói quen: trước khi gõ lại project từ trí nhớ, hãy tìm file đã lưu và đính kèm nó
+  - Trong hub, mỗi item (opportunity, decision, test) là một file riêng và là nguồn duy nhất; các bảng tổng hợp do AI dựng lại, bạn không điền tay
+  - Lưu một mốc (commit hoặc bản sao) trước mỗi bước AI ghi file, để quay lại được
 - 🎨 Visual hint: SCHEMATIC. Process track bốn bước, bước ba được tô purple.
 
 ---
@@ -630,12 +637,12 @@ last_synced: 2026-10-07
 - Num: 40
 - Kicker: Breakout rooms
 - Title: Build your\ncase folder
-- Sub: Folder. File context. Hub trống. Một instruction.
+- Sub: Folder. File context. Hub mẫu. Một instruction.
 - Speaker notes:
   - Bốn mươi phút; bốn bước ở slide kế tiếp
   - Học viên mà công ty cấm AI tool, hoặc case quá nhạy cảm, dùng case card của khoá cho bước bốn
   - **Ai gõ lại tóm tắt project từ trí nhớ: chỉ họ về file**
-  - Để ý hub trống: thường do các page bị chuyển đi mà không kèm CSS và script; hub hiện một hộp thông báo chỉ ra hầu hết lỗi setup
+  - Ai thấy bảng và link hiển thị thô: mở cả folder case trong công cụ đang dùng, không mở từng file lẻ; link giữa các page chỉ hoạt động khi mở cả folder
 - 🎨 Visual hint: TYPOGRAPHIC. Milestone layout nền purple, số phút lớn.
 
 ---
@@ -644,14 +651,14 @@ last_synced: 2026-10-07
 - Kicker: Activity 3
 - Title: Build, write,\n*add, test*
 - On-slide:
-  - 01 · Tạo case folder và các subfolder
+  - 01 · Lấy case folder từ template và đặt tên
   - 02 · Viết product-and-users
-  - 03 · Thêm hub trống và mở nó
+  - 03 · Mở hub và đọc AGENTS.md
   - 04 · Chạy một instruction với một file đã lưu
 - Speaker notes:
-  - 01: năm phút, layout chuẩn
-  - 02: mười phút, product-and-users đã ẩn danh, cộng với data-rules từ Activity 2; accessibility-rules làm ở homework
-  - 03: năm phút, copy template hub vào `hub/` và mở trang index trong browser
+  - 01: năm phút, lấy folder `my-case` từ template, đổi tên theo case và đối chiếu với layout chuẩn
+  - 02: mười phút, product-and-users đã ẩn danh, cộng với data-rules từ Activity 2; accessibility-rules làm khi tiếp tục dự án (Việc 1)
+  - 03: năm phút, mở cả folder case bằng công cụ quen thuộc (AI coding tool, VS Code hoặc Obsidian), mở `hub/README.md` để thấy dữ liệu mẫu và đọc `AGENTS.md`; chưa chỉnh gì
   - 04: hai mươi phút, đính kèm file product, hỏi còn thiếu gì, rồi đọc câu trả lời có phản biện
   - Instruction nằm ở slide kế tiếp
 - 🎨 Visual hint: SCHEMATIC. Process track bốn bước, bước bốn được tô purple.
@@ -666,7 +673,7 @@ last_synced: 2026-10-07
   - Đính kèm file product-and-users rồi dán instruction; đây là instruction của demo, áp dụng trên case của chính họ
   - Đọc câu trả lời có phản biện: câu nào hữu ích, câu nào chung chung, câu nào bạn tự tìm ra được?
   - **Câu hỏi coaching: "Bạn sẽ sửa gì trước khi dùng nó?"**
-  - Lưu những câu hữu ích vào file open-questions trong `00-context`
+  - Lưu những câu hữu ích vào file `context-open-questions.md` trong `learnings/`
   - Nếu ai nhận được câu trả lời bịa, đó chính là demo hallucination trên công việc của họ
 - 🎨 Visual hint: TYPOGRAPHIC. Title lớn; instruction nằm trong một card nhạt, font monospace.
 
@@ -690,18 +697,18 @@ last_synced: 2026-10-07
 ---
 
 
-### PRACTICE · Assignments
+### PRACTICE · Keep the project going
 - Kicker: Before the next lesson
 - Title: Your folder,\n*your hub*
 - On-slide:
-  - Assignment 1 · Case folder (bắt buộc): layout, product-and-users, accessibility-rules, data-rules
-  - Assignment 2 · Chia sẻ hub (tuỳ chọn): export ra PDF, hoặc publish nếu case được phép chia sẻ
+  - Việc 1 · Nền của dự án (cần có): layout, product-and-users, accessibility-rules, data-rules
+  - Việc 2 · Chia sẻ hub (tuỳ chọn): xuất trang chủ hoặc PDF, hoặc công khai nếu cả dự án được phép chia sẻ
 - Speaker notes:
-  - Assignment 1 khoảng hai mươi lăm phút: bổ sung ba điều từ Activity 4, viết accessibility-rules và hoàn thiện Activity 3; gửi cây folder và file product để nhận feedback, đã ẩn danh
-  - Assignment 2 khoảng hai mươi phút và là tuỳ chọn; buổi tiếp theo không phụ thuộc vào nó
-  - **Nếu bạn publish, bạn là người host và chịu trách nhiệm**
-  - Tổng homework tối đa bốn mươi lăm phút, chỉ làm tiếp phần đã bắt đầu trên lớp
-- 🎨 Visual hint: TYPOGRAPHIC. Practice layout, hai card: "Assignment 1 · Case folder" và "Assignment 2 · Chia sẻ hub".
+  - Việc 1 khoảng hai mươi lăm phút: bổ sung ba điều từ Activity 4, viết accessibility-rules và hoàn thiện Activity 3; gửi cây folder và file product để nhận feedback, đã ẩn danh
+  - Việc 2 khoảng hai mươi phút và là tuỳ chọn; buổi tiếp theo không phụ thuộc vào nó
+  - **Nếu bạn công khai, bạn là người host và chịu trách nhiệm**
+  - Tổng cộng tối đa bốn mươi lăm phút, chỉ làm tiếp phần đã bắt đầu trên lớp; đây là folder dự án của bạn, không phải bài nộp
+- 🎨 Visual hint: TYPOGRAPHIC. Practice layout, hai card: "Việc 1 · Nền của dự án" và "Việc 2 · Chia sẻ hub".
 
 ---
 
@@ -1051,7 +1058,7 @@ last_synced: 2026-10-07
   - Where AI helps: Soạn nháp danh sách screen và các phương án layout
 - Speaker notes:
   - Slide tham khảo: chiếu khi dạy method này hoặc khi học viên hỏi
-  - **Phần bạn tự làm:** Cấu trúc; kiểm tra với nhu cầu user và principle
+  - **Phần bạn tự làm:** Cấu trúc; kiểm tra với user need và principle
   - **Lưu ý:** Pattern phổ biến, bỏ qua design system của bạn
   - Card đầy đủ: `programs/ai-design-workflow/assets/method-cards/03-develop/03-prototype/wireframes.md`
 - 🎨 Visual hint: TYPOGRAPHIC. Numbered grid, bốn mục, số purple; mục "Where AI helps" nằm trên một card tint nhạt để tách biệt. Bốn dòng ngắn, không thêm gì khác.

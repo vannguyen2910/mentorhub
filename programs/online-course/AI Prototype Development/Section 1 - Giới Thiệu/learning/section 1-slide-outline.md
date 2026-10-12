@@ -33,7 +33,7 @@ Dùng outline trong file này, build slide deck HTML cho Section 1 - Giới Thi�
 (khóa Systematic AI Prototyping for Product Designers, bản tiếng Việt).
 Deck chỉ cần cho Lesson 2 và Lesson 3 (Lesson 1 là video riêng, không có slide).
 
-Theo đúng rule trong _system/rules/SLIDE_DECK_RULES.md.
+Theo đúng rule trong _system/rules/slide-deck-rules.md.
 Copy tokens.css và deck-stage.js vào thư mục "Section 1 - Giới Thiệu" để deck tự chứa (self-contained).
 
 HƯỚNG DẪN THIẾT KẾ - áp dụng cho toàn bộ slide:
@@ -50,7 +50,7 @@ HƯỚNG DẪN THIẾT KẾ - áp dụng cho toàn bộ slide:
 - Giữ tiếng Anh cho thuật ngữ chuyên môn ngay trong câu tiếng Việt.
 - Không nêu tên AI tool cụ thể trên bất kỳ slide nào — chỉ dùng "AI chat tool" / "AI coding tool".
 - Dòng "Ghi chú thuyết trình" đưa vào phần speaker notes của HTML deck (không hiển thị trên
-  slide chính), dùng đúng framework speaker-notes có sẵn trong SLIDE_DECK_RULES.md nếu có.
+  slide chính), dùng đúng framework speaker-notes có sẵn trong slide-deck-rules.md nếu có.
 ```
 
 ---
