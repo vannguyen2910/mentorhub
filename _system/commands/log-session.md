@@ -42,6 +42,8 @@ Mark anything you are unsure of as `[to confirm]` rather than guessing.
 
 Write 2 to 3 plain sentences on what was covered and what the mentee did or will do next. Public-safe only: no company names, no third parties, no candid assessment or weaknesses, no scores, nothing from the private recap. Strengths-framed and neutral. Show the draft and wait for the user to approve or edit it.
 
+**Keep every mentee-facing playback generic** (the `--playback` text, and the session page in the mentee's Notion Coaching Program hub): no first person for Winnie ("mình", "tôi"), no mentee name, address the mentee as "bạn" only where needed. Write "Buổi học có demo…", "sẽ được gửi riêng", "Hướng dẫn sẽ được gửi sau", not "Mình demo…" or "Mình sẽ gửi…". Winnie appears by name only in the ADPList "Questions Between Sessions" footer. Before/after examples are in `_system/rules/vi-voice.md`.
+
 ## 5. Run the log script (after playback approval)
 
 `python3 _system/scripts/mentee.py log <mentee> --topic "<topic>" --date YYYY-MM-DD --playback "<approved text>" --build`

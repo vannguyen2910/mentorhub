@@ -118,6 +118,20 @@ Từ 2026-10-07, file `*-lesson.md` được viết như một paper hoặc bả
 - Trước: "Đánh trọng số cho findings theo mức độ quan trọng, không theo tần suất."
 - Sau: "Xếp findings theo mức độ quan trọng, không theo số lần được nhắc. Một vấn đề chỉ một người gặp nhưng khiến họ bỏ dở task vẫn quan trọng hơn một lỗi nhỏ có năm người cùng phàn nàn."
 
+**Playback gửi mentee (sessions.md và trang Notion của mentee), bỏ "mình" và "tôi"**
+
+Playback viết trung tính, không có ngôi thứ nhất của Winnie và không có tên mentee. Gọi mentee là "bạn" khi cần. Winnie chỉ xuất hiện bằng tên ở dòng ADPList cuối trang. Quy tắc này áp dụng cho `--playback` của `mentee.py log` và cho trang session trên Notion (2026-10-14).
+
+| Trước | Sau |
+|---|---|
+| Mình xem lại design process bạn dựng trên FigJam. Mình góp ý ba chỗ còn thiếu | Design process dựng trên FigJam đã có đầy đủ method ở phần Discovery và Define. Ba chỗ còn thiếu |
+| Mình làm mẫu hai finding trên màn hình của bạn | Hai finding làm mẫu trên màn hình của bạn |
+| Mình demo template… nên mình sẽ gửi hướng dẫn riêng | Buổi học có demo template… nên sẽ có hướng dẫn riêng được gửi sau |
+| Mình xem bản đánh giá của bạn, đối chiếu với bản AI | Buổi này xem bản đánh giá của bạn, đối chiếu với bản AI |
+| Mình sẽ gửi hướng dẫn và vào xem bài làm tay của bạn | Hướng dẫn sẽ được gửi riêng, và bài làm tay của bạn sẽ được xem lại |
+| bạn chưa biết mình sai ở đâu | bạn chưa biết bản thân sai ở đâu |
+| muốn mình trả lời (dòng ADPList) | muốn Winnie trả lời |
+
 **Điểm chung của cả series**
 - Trước: "Sợi chỉ đỏ ở mọi stage là AI-assisted, không phải AI-generated."
 - Sau: "Điểm xuyên suốt ở mọi stage là AI-assisted, không phải AI-generated."
