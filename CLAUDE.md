@@ -74,6 +74,12 @@ Specifically:
 
 ---
 
+## Diagram rule
+
+For any user flow, process map, journey, flowchart, swimlane, sequence or architecture diagram, use the `diagram-design` skill (`_system/skills/diagram-design/`). Do not hand-draw SVG or invent another style. Mermaid, draw.io and Excalidraw inputs go through `/import-mermaid`, `/import-drawio`, `/import-excalidraw`; PNG/SVG export goes through `/export-diagram`. Save the diagram next to the file it supports (a lesson's `assets/`, or the student's folder). Diagram labels follow the same language and generic-label rules as the surrounding file.
+
+---
+
 ## General lesson conventions
 
 - All specific AI tool names (Claude, Cursor, ChatGPT, Copilot, etc.) should be replaced with generic labels: "AI chat tool", "AI coding tool", "your AI tool". Do not introduce tool names when editing lesson content.
