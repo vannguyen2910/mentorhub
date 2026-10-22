@@ -8,6 +8,7 @@ Run from anywhere:
 
 Reads
   - Programs  : <WEBSITE>/src/pages/training/programs/*.sessions.js + *.jsx   (live program pages)
+  - Programs  : programs/<folder>/                                           (working programs, one folder = one program)
   - Lessons   : library/lessons/**/<topic>-lesson.md                          (+ EXTRA_LESSONS below)
   - Mentees   : <MENTEES>/<name>/plan|sessions|assessments                    (public: card + detail page)
   - Design    : <WEBSITE>/design-system/css + fonts  (copied, so the output is standalone)
@@ -28,6 +29,7 @@ import os
 import re
 import shutil
 import sys
+import unicodedata
 from pathlib import Path
 from urllib.parse import quote, unquote
 
@@ -48,6 +50,7 @@ if not MENTEES.exists():
 
 DESIGN_SYSTEM = WEBSITE / "design-system"
 PROGRAMS_SRC = WEBSITE / "src/pages/training/programs"
+PROGRAMS_DIR = ROOT / "programs"   # working folders: every sub-folder is one program
 LESSONS_DIR = Path(os.environ.get("LESSONS_DIR", GDRIVE / "03_Mentoring/library/lessons"))
 if not LESSONS_DIR.exists():
     LESSONS_DIR = ROOT / "library/lessons"
@@ -251,6 +254,104 @@ def load_programs():
                        "phases": phases, "sessions": sessions}
     order = [s for s in PROGRAM_ORDER if s in progs] + [s for s in progs if s not in PROGRAM_ORDER]
     return [progs[s] for s in order]
+
+
+# Folder programs: every sub-folder of programs/ is one program. A SUMMARY.md in the folder lists the pages that
+# appear on the site (## = group, "- [Title](path.md)" = page); anything not listed stays off the site.
+SUMMARY_LINK = re.compile(r"^\s*[-*]\s+\[([^\]]+)\]\(([^)]+)\)")
+
+
+def ascii_slug(s):
+    s = unicodedata.normalize("NFKD", s.replace("đ", "d").replace("Đ", "D"))
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    return slugify(s)
+
+
+def _first_para(body):
+    body = re.sub(r"^#.*$", "", body, flags=re.M)
+    for blk in re.split(r"\n\s*\n", body):
+        t = blk.strip()
+        if t and not t.startswith(("|", "-", "*", ">", "`", "---", "<", "!")) and not re.match(r"^\*\*[^*]+:\*\*", t):
+            return re.sub(r"[*_`]", "", t).replace("\n", " ")[:240]
+    return ""
+
+
+def _md_entry(path, base, group, slug_prefix, title=""):
+    meta, body = parse_front_matter(path.read_text(encoding="utf-8", errors="replace"))
+    m = re.search(r"^#\s+(.+)$", body, re.M)
+    title = (title or meta.get("title") or (m.group(1).strip() if m else re.sub(r"^\d+[-_]", "", path.stem).replace("-", " ").replace("_", " ").title())).strip()
+    rel = path.relative_to(base).as_posix()
+    return {"path": path, "rel": rel, "group": group, "title": title, "sum": _first_para(body),
+            "slug": ascii_slug(f"{slug_prefix}-{rel[:-3]}")}
+
+
+def _summary_groups(root, prefix, intro):
+    """[{name, md:[entry]}] from root/SUMMARY.md. No SUMMARY.md: only the README / plan is shown."""
+    f = root / "SUMMARY.md"
+    if not f.exists():
+        return [{"name": "Documents", "md": [_md_entry(intro, root, "Documents", prefix)]}] if intro else []
+    text = re.sub(r"<!--.*?-->", "", f.read_text(encoding="utf-8", errors="replace"), flags=re.S)
+    groups, cur = [], None
+    for line in text.splitlines():
+        h = re.match(r"^##\s+(.+)$", line)
+        if h:
+            cur = {"name": h.group(1).strip(), "md": []}
+            groups.append(cur)
+            continue
+        m = SUMMARY_LINK.match(line)
+        if not m:
+            continue
+        path = root / unquote(m.group(2).strip())
+        if not path.is_relative_to(root):
+            continue
+        if path.suffix != ".md" or not path.is_file():
+            print(f"  ! {root.name}/SUMMARY.md: skipped {m.group(2)} (not an existing .md file)")
+            continue
+        if path.relative_to(root).parts[0] == "learning":
+            continue                              # <program>/learning/ is the private working folder: never published
+        if intro and path.resolve() == intro.resolve():
+            continue                              # the Overview page already is the README / plan
+        if cur is None:
+            cur = {"name": "Documents", "md": []}
+            groups.append(cur)
+        cur["md"].append(_md_entry(path, root, cur["name"], prefix, m.group(1)))
+    return [g for g in groups if g["md"]]
+
+
+def load_folder_programs(taken):
+    if not PROGRAMS_DIR.exists():
+        return []
+    out = []
+    for d in sorted(PROGRAMS_DIR.iterdir()):
+        if not d.is_dir() or not visible(d):
+            continue
+        root = d
+        subs = [x for x in d.iterdir() if x.is_dir() and visible(x)]
+        has_intro = any((d / n).exists() for n in ("README.md", "plan.md", "SUMMARY.md"))
+        if not has_intro and len(subs) == 1 and subs[0].name.lower() not in ("assets", "learning", "templates", "examples"):
+            root = subs[0]                       # wrapper folder (online-course/<course>): the program is inside
+        slug = ascii_slug(root.name)
+        if slug in taken:
+            slug += "-folder"
+        intro = next((root / n for n in ("README.md", "plan.md") if (root / n).exists()), None)
+        meta, body = ({}, "")
+        if intro:
+            meta, body = parse_front_matter(intro.read_text(encoding="utf-8", errors="replace"))
+        h1 = re.search(r"^#\s+(.+)$", body, re.M)
+        title = meta.get("title") or (h1.group(1).strip() if h1 else root.name)
+        desc = meta.get("description") or _first_para(body)
+        groups = _summary_groups(root, slug, intro)
+        status = meta.get("status") or meta.get("type") or ""
+        low = " ".join(x.lower() for x in (d.name, root.name))
+        tag = status or ("Online course" if "course" in low else "Tool" if "tool" in low else "In design")
+        n = sum(len(g["md"]) for g in groups)
+        out.append({"slug": slug, "title": title, "desc": desc, "stat": f"{n} pages", "phases": [], "sessions": [],
+                    "kind": "folder", "tag": tag, "root": root, "intro": intro, "groups": groups, "doc_count": n})
+    return out
+
+
+def prog_tag(p):
+    return p.get("tag") or PROGRAM_TAG.get(p["slug"], "Program")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -858,11 +959,12 @@ def footer():
 def program_card(p, lesson_count):
     sessions = len(p["sessions"])
     stat = p["stat"] or f"{sessions} sessions"
+    cta = "Open the pages →" if p.get("kind") == "folder" else f"{lesson_count} of {sessions} sessions have a lesson page →"
     return f"""<a class="cl-mini prog-mini" href="programs/{p['slug']}.html">
-  <div class="cl-mini__top">{chip(PROGRAM_TAG.get(p['slug'], 'Program'), 'default')}<span>{esc(stat)}</span></div>
+  <div class="cl-mini__top">{chip(prog_tag(p), 'default')}<span>{esc(stat)}</span></div>
   <h3 class="cl-mini__title">{esc(p['title'])}</h3>
   <p class="cl-mini__desc">{esc(p['desc'])}</p>
-  <span class="cl-mini__cta">{lesson_count} of {sessions} sessions have a lesson page →</span>
+  <span class="cl-mini__cta">{cta}</span>
 </a>"""
 
 
@@ -975,7 +1077,7 @@ def build_lessons_index(lessons):
 
 
 def build_programs_index(programs, counts):
-    body = f"""{page_header("", "Programs", "Read from the live program pages, so titles and curriculum stay in sync.")}
+    body = f"""{page_header("", "Programs", "Live programs are read from the website; working programs are read from the programs/ folder, one card per folder.")}
 <section class="section section--tight">
   <div class="cl-grid prog-grid">{''.join(program_card(p, counts['by_program'].get(p['slug'], 0)) for p in programs)}</div>
 </section>"""
@@ -1270,7 +1372,9 @@ def build_mentee_page(m, lessons, programs=()):
     return page(f"{m['name']} — Private Training", body, 1, m["program"], body_cls="tp-white", active="mentees")
 
 
-def build_program_page(p, lessons_by_slug):
+def build_program_page(p, lessons_by_slug, mentees=()):
+    if p.get("kind") == "folder":
+        return build_folder_program_page(p, lessons_by_slug, mentees)
     rows, cur = [], None
     for s in p["sessions"]:
         if s["phase"] != cur:
@@ -1298,6 +1402,164 @@ def build_program_page(p, lessons_by_slug):
   <div class="sess-list">{''.join(rows)}</div>
 </div>"""
     return page(f"{p['title']} — Training Hub", body, 1, p["desc"], active="programs")
+
+
+def _all_entries(p):
+    return [e for g in p["groups"] for e in g["md"]]
+
+
+def _prog_nav(p, current, prefix, home):
+    """Material-style drawer: Overview, then one labelled list per SUMMARY.md group (long groups collapse)."""
+    def li(e):
+        on = ' class="is-active" aria-current="page"' if e is current else ""
+        return f'<li><a{on} href="{prefix}{e["slug"]}.html">{esc(e["title"])}</a></li>'
+
+    parts = [f'<a class="pg-nav__home{" is-active" if current is None else ""}" href="{home}">Overview</a>']
+    for g in p["groups"]:
+        items = f'<ul>{"".join(li(e) for e in g["md"])}</ul>'
+        if len(g["md"]) > 12:
+            is_open = any(e is current for e in g["md"])
+            parts.append(f'<details class="pg-nav__grp"{" open" if is_open else ""}><summary>{esc(g["name"])} <span>{len(g["md"])}</span></summary>{items}</details>')
+        else:
+            parts.append(f'<p class="pg-nav__label">{esc(g["name"])}</p>{items}')
+    return f'<div class="pg-nav" role="navigation" aria-label="Program pages">{"".join(parts)}</div>'
+
+
+PG_NAV_JS = """<script>
+(function () {
+  var side = document.querySelector('.pg-side'), main = document.querySelector('.pg-main');
+  if (!side || !main) return;
+  var slug = side.dataset.prog, K = 'pgnav:' + slug, back = document.querySelector('.tp-back');
+  // Absolute hrefs, so the tree keeps working after the address changes without a reload.
+  [].forEach.call(side.querySelectorAll('a'), function (a) { a.setAttribute('href', a.href); });
+  if (back) back.setAttribute('href', back.href);
+  var groups = [].slice.call(side.querySelectorAll('details.pg-nav__grp'));
+  var saved = {}, top = null;
+  try { saved = JSON.parse(sessionStorage.getItem(K + ':open') || '{}'); top = sessionStorage.getItem(K + ':top'); } catch (e) {}
+  groups.forEach(function (d, i) { if (saved[i]) d.open = true; });
+  function save() {
+    var o = {}; groups.forEach(function (d, i) { if (d.open) o[i] = 1; });
+    try { sessionStorage.setItem(K + ':open', JSON.stringify(o)); sessionStorage.setItem(K + ':top', side.scrollTop); } catch (e) {}
+  }
+  groups.forEach(function (d) { d.addEventListener('toggle', save); });
+  side.addEventListener('scroll', save, { passive: true });
+  window.addEventListener('pagehide', save);
+
+  function reveal(a) {
+    var r = a.getBoundingClientRect(), s = side.getBoundingClientRect();
+    if (r.top < s.top + 8 || r.bottom > s.bottom - 8) side.scrollTop += r.top - s.top - side.clientHeight / 3;
+  }
+  function setActive(url) {
+    var found = null;
+    [].forEach.call(side.querySelectorAll('a'), function (a) {
+      var on = a.href === url;
+      a.classList.toggle('is-active', on);
+      if (on) { a.setAttribute('aria-current', 'page'); found = a; } else a.removeAttribute('aria-current');
+    });
+    if (found) { var d = found.closest('details'); if (d) d.open = true; reveal(found); }
+  }
+  if (top !== null) side.scrollTop = +top;
+  var cur = side.querySelector('a.is-active'); if (cur) { var dd = cur.closest('details'); if (dd) dd.open = true; if (top === null) reveal(cur); }
+
+  var ctl = null;
+  function load(url, push) {
+    if (ctl) ctl.abort();
+    ctl = window.AbortController ? new AbortController() : null;
+    fetch(url, ctl ? { signal: ctl.signal } : {}).then(function (r) { if (!r.ok) throw 0; return r.text(); }).then(function (t) {
+      var doc = new DOMParser().parseFromString(t, 'text/html'), nm = doc.querySelector('.pg-main');
+      if (!nm) throw 0;
+      [].forEach.call(nm.querySelectorAll('[href],[src]'), function (el) {
+        ['href', 'src'].forEach(function (k) {
+          var v = el.getAttribute(k);
+          if (v && !/^(#|[a-z]+:)/i.test(v)) el.setAttribute(k, new URL(v, url).href);
+        });
+      });
+      main.innerHTML = nm.innerHTML;
+      document.title = doc.title;
+      if (push) history.pushState(null, '', url);
+      setActive(url);
+      main.classList.remove('is-in'); void main.offsetWidth; main.classList.add('is-in');
+      window.scrollTo(0, 0);
+    }).catch(function (e) { if (e && e.name === 'AbortError') return; location.href = url; });
+  }
+  function inProgram(p) { return p.endsWith('/programs/' + slug + '.html') || p.indexOf('/programs/' + slug + '/') > -1; }
+  document.addEventListener('click', function (e) {
+    if (e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target.closest && e.target.closest('a');
+    if (!a || a.target || !(side.contains(a) || main.contains(a))) return;
+    var u = new URL(a.href, location.href);
+    if (u.origin !== location.origin || !u.pathname.endsWith('.html') || !inProgram(u.pathname)) return;
+    if (u.hash && u.pathname === location.pathname) return;
+    e.preventDefault();
+    var clean = u.origin + u.pathname + u.search;
+    if (clean === location.origin + location.pathname + location.search) { window.scrollTo(0, 0); return; }
+    load(clean, true);
+  });
+  window.addEventListener('popstate', function () { load(location.origin + location.pathname + location.search, false); });
+})();
+</script>"""
+
+
+def _pg_shell(p, nav, main, back_href):
+    return f"""<div class="tp">
+  <a class="tp-back" href="{back_href}">← All programs</a>
+  <div class="pg"><aside class="pg-side" data-prog="{p['slug']}">{nav}</aside><div class="pg-main">{main}</div></div>
+</div>{PG_NAV_JS}"""
+
+
+def build_folder_program_page(p, lessons_by_slug, mentees):
+    for e in _all_entries(p):
+        e["prog"] = p["slug"]
+    intro_html = ""
+    if p["intro"]:
+        _, body = parse_front_matter(p["intro"].read_text(encoding="utf-8", errors="replace"))
+        intro_html, _ = render_markdown(re.sub(r"^#\s+.*\n", "", body.lstrip(), count=1))
+    cards = "".join(f"""<a class="cl-mini" href="{p['slug']}/{g['md'][0]['slug']}.html">
+  <div class="cl-mini__top">{chip(g['name'], 'default')}<span>{len(g['md'])} pages</span></div>
+  <h3 class="cl-mini__title">{esc(g['md'][0]['title'])}</h3>
+  <p class="cl-mini__desc">{esc(' · '.join(x['title'] for x in g['md'][1:4]))}</p>
+  <span class="cl-mini__cta">Open {esc(g['name'])} →</span></a>""" for g in p["groups"])
+    extra = []
+    lessons = [l for l in lessons_by_slug.values() if any(ps == p["slug"] for ps, _ in l["programs"])]
+    people = [m for m in mentees if m.get("prog_slug") == p["slug"]]
+    if lessons or people:
+        chips = "".join(
+            (f'<a class="sess__lesson" href="../lessons/{l["slug"]}.html">{esc(l["title"])} →</a>' if l["has_page"] else f'<span class="sess__none">{esc(l["title"])}</span>')
+            for l in lessons) + "".join(f'<a class="sess__lesson" href="../mentees/{m["slug"]}.html">{esc(m["name"])} →</a>' for m in people)
+        extra.append(f'<h2>Lessons &amp; mentees</h2><div class="sess__links">{chips}</div>')
+    hint = '' if p["groups"] else '<p class="sess__none">No pages published yet. Add a SUMMARY.md to this folder to choose what appears here.</p>'
+    main = f"""<header class="tp-head">
+    <div class="page-eyebrow">{esc(p['tag'])}</div>
+    <h1 class="page-title">{esc(p['title'])}</h1>
+    <p class="page-desc">{esc(p['desc'])}</p>
+    <p class="prog-stat">{p['doc_count']} pages</p>
+  </header>
+  {'<article class="tp-body">' + intro_html + '</article>' if intro_html else ''}
+  {('<h2 class="pg-h">Sections</h2><div class="cl-grid pg-cards">' + cards + '</div>') if cards else hint}
+  {''.join(extra)}"""
+    nav = _prog_nav(p, None, f"{p['slug']}/", f"{p['slug']}.html")
+    return page(f"{p['title']} — Training Hub", _pg_shell(p, nav, main, "../programs.html"), 1, p["desc"], active="programs")
+
+
+def build_folder_doc_page(p, e):
+    meta, body = parse_front_matter(e["path"].read_text(encoding="utf-8", errors="replace"))
+    body = re.sub(r"^#\s+.*\n", "", body.lstrip(), count=1)
+    html_body, _ = render_markdown(body)
+    order = _all_entries(p)
+    i = next(k for k, x in enumerate(order) if x is e)
+    prev_e = order[i - 1] if i > 0 else None
+    next_e = order[i + 1] if i + 1 < len(order) else None
+    pn = "".join(
+        f'<a class="pg-pn pg-pn--{cls}" href="{x["slug"]}.html"><span>{label}</span>{esc(x["title"])}</a>' if x else f'<span class="pg-pn pg-pn--{cls}"></span>'
+        for cls, label, x in (("prev", "← Previous", prev_e), ("next", "Next →", next_e)))
+    main = f"""<header class="tp-head">
+    <div class="page-eyebrow">{esc(e['group'])}</div>
+    <h1 class="page-title">{esc(e['title'])}</h1>
+  </header>
+  <article class="tp-body">{html_body}</article>
+  <div class="pg-pns">{pn}</div>"""
+    nav = _prog_nav(p, e, "", f"../{p['slug']}.html")
+    return page(f"{e['title']} — {p['title']}", _pg_shell(p, nav, main, "../../programs.html"), 2, e["sum"], active="programs")
 
 
 FILE_ICON = {"pdf": "PDF", "md": "MD", "html": "HTML", "fig": "FIG", "pptx": "PPT", "docx": "DOC", "key": "KEY"}
@@ -1686,6 +1948,7 @@ def build():
     copy_design_system()
 
     programs = load_programs()
+    programs += load_folder_programs({p["slug"] for p in programs})
     lessons = load_lessons()
     MENTEE_PUBLISHED.clear()
     mentees = load_mentees()
@@ -1719,7 +1982,19 @@ def build():
     for m in mentees:
         (OUT / "mentees" / f"{m['slug']}.html").write_text(build_mentee_page(m, lessons, programs), encoding="utf-8")
     for p in programs:
-        (OUT / "programs" / f"{p['slug']}.html").write_text(build_program_page(p, by_slug), encoding="utf-8")
+        (OUT / "programs" / f"{p['slug']}.html").write_text(build_program_page(p, by_slug, mentees), encoding="utf-8")
+        if p.get("kind") == "folder":
+            sub = OUT / "programs" / p["slug"]
+            shutil.rmtree(sub, ignore_errors=True)
+            entries = _all_entries(p)
+            if entries:
+                sub.mkdir(parents=True)
+            for e in entries:
+                (sub / f"{e['slug']}.html").write_text(build_folder_doc_page(p, e), encoding="utf-8")
+    keep_dirs = {p["slug"] for p in programs if p.get("kind") == "folder"}
+    for old in (OUT / "programs").iterdir():
+        if old.is_dir() and old.name not in keep_dirs:
+            shutil.rmtree(old, ignore_errors=True)
     for l in lessons:
         if l["has_page"]:
             (OUT / "lessons" / f"{l['slug']}.html").write_text(build_lesson_page(l, lessons, programs, by_stem), encoding="utf-8")
@@ -1753,7 +2028,7 @@ def build():
 def signature():
     """Cheap fingerprint of everything the site is built from."""
     sig = []
-    roots = [LESSONS_DIR, MENTEES, PROGRAMS_SRC]
+    roots = [LESSONS_DIR, MENTEES, PROGRAMS_SRC, PROGRAMS_DIR]
     for root in roots:
         if not root.exists():
             continue

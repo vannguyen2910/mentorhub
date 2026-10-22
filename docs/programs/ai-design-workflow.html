@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="noindex"/>
+<meta name="description" content="Chương trình 12 buổi trong 6 tuần (mỗi tuần hai buổi 90 phút; 9 buổi học nội dung và 3 buổi Check point ở buổi 5, 10, 12) dành cho designer mid và senior: một case, một workflow AI lặp lại được, một Knowledge Hub dựng dần theo từng trang. L"/>
+<title>AI Design Workflow (program) — Training Hub</title>
+<link rel="stylesheet" href="../assets/css/tokens.css"/>
+<link rel="stylesheet" href="../assets/css/components.css"/>
+<link rel="stylesheet" href="../assets/css/site.css"/>
+<link rel="stylesheet" href="../assets/css/card-list.css"/>
+<link rel="stylesheet" href="../assets/css/text-page.css"/>
+<link rel="stylesheet" href="../assets/css/home.css"/>
+
+</head>
+<body class="">
+<nav>
+  <a class="nav-logo" href="../index.html"><img src="../assets/images/logo-nav.svg" alt="Winnie Nguyen — Training Hub"/></a>
+  <div class="nav-links">
+    <a href="../lessons.html" data-text="Lesson Library">Lesson Library</a>
+    <a href="../private-training.html" data-text="Private Training">Private Training</a>
+    <a href="../programs.html" data-text="Programs" class=active>Programs</a>
+  </div>
+</nav>
+<div class="tp">
+  <a class="tp-back" href="../programs.html">← All programs</a>
+  <div class="pg"><aside class="pg-side" data-prog="ai-design-workflow"><div class="pg-nav" role="navigation" aria-label="Program pages"><a class="pg-nav__home is-active" href="ai-design-workflow.html">Overview</a><p class="pg-nav__label">Examples</p><ul><li><a href="ai-design-workflow/ai-design-workflow-examples-competitor-analysis-readme.html">Example: Competitor Analysis</a></li><li><a href="ai-design-workflow/ai-design-workflow-examples-user-flow-process-map-readme.html">Example: User Flow and Process Map with AI</a></li><li><a href="ai-design-workflow/ai-design-workflow-examples-user-voice-synthesis-readme.html">Example: User-Voice Synthesis</a></li></ul></div></aside><div class="pg-main"><header class="tp-head">
+    <div class="page-eyebrow">In design</div>
+    <h1 class="page-title">AI Design Workflow (program)</h1>
+    <p class="page-desc">Chương trình 12 buổi trong 6 tuần (mỗi tuần hai buổi 90 phút; 9 buổi học nội dung và 3 buổi Check point ở buổi 5, 10, 12) dành cho designer mid và senior: một case, một workflow AI lặp lại được, một Knowledge Hub dựng dần theo từng trang. L</p>
+    <p class="prog-stat">3 pages</p>
+  </header>
+  <article class="tp-body"><p>Chương trình 12 buổi trong 6 tuần (mỗi tuần hai buổi 90 phút; 9 buổi học nội dung và 3 buổi Check point ở buổi 5, 10, 12) dành cho designer mid và senior: một case, một workflow AI lặp lại được, một Knowledge Hub dựng dần theo từng trang. Lộ trình đi theo trang Notion "AI Design Workflow cho Product Designer". Đọc <code>plan.md</code> trước.</p>
+<p><strong>Program và lesson nằm ở hai chỗ</strong> (từ 2026-10-07):</p>
+<ul>
+<li><strong>Program</strong> (thư mục này): kế hoạch, research, method, pitch deck, tài nguyên dùng chung.</li>
+<li><strong>Lesson</strong> (<code>library/lessons/ai-design-workflow/&lt;slug&gt;/</code>): <code>*-lesson.md</code>, <code>*-slide-outline.md</code>, slide, asset của từng lesson. Lesson ở lại thư viện để site dựng trang như các lesson khác và để dùng lại cho program khác.</li>
+</ul>
+<h2 id="layout">Layout</h2>
+<pre><code>programs/ai-design-workflow/                  (thư mục này)
+  README.md                 file này: thứ tự lesson, trạng thái, cách thêm lesson
+  plan.md                kế hoạch một trang: trọng tâm, lịch, quyết định chính (đọc trước)
+  research.md  method.md  quality-and-measurement.md
+  pitch-deck-plan.md                             kế hoạch pitch deck
+  lesson-details.md         learning objective, activity và output của từng lesson (có mục workflow lab tuỳ chọn)
+  workflow-design-log.md quyết định thiết kế và các sự cố của workspace phía sau khoá, cho giảng viên và pitch
+  voice-sample-vi.md        bản thử giọng tiếng Việt
+  assets/                   starter-files, hub và doc template, diagram, ảnh tham khảo
+    method-cards/           card tham khảo cho từng design method, theo stage
+    templates/workflow-kit/ bộ mẫu cho buổi tuỳ chọn &quot;Build your own AI workflow&quot; (step card, luật cho AI tool, propose first…)
+  workspace-template/       repo mẫu cho học viên (GitHub: ai-product-workflow): my-case (trống), demo-case (Travel Buddy), toolkit/
+  examples/                 ví dụ làm sẵn (step card)
+  _archive/                 bản nháp đã thay thế
+
+library/lessons/ai-design-workflow/           (các lesson)
+  README.md                 trỏ về file này
+  &lt;lesson-slug&gt;/
+    materials/              &lt;slug&gt;-lesson.md + &lt;slug&gt;-slide-outline.md (source of truth)
+    slides/                 chỉ chứa deck đã build (.html nằm trực tiếp trong slides/, không trong _archive/)
+    assets/                 ảnh chỉ dùng cho lesson này
+    _archive/               bản nháp đã thay thế
+</code></pre>
+<p>Quy ước:</p>
+<ul>
+<li><strong>File chỉ dùng cho một lesson</strong> để trong <code>assets/</code> của lesson. <strong>File dùng cho từ hai lesson trở lên</strong> (starter file, hub template, diagram) để trong <code>assets/</code> của program.</li>
+<li><strong>Thư mục lesson là slug không đánh số</strong> (URL của site là slug). Thứ tự nằm ở bảng dưới và trong <code>plan.md</code>, nên đổi thứ tự không cần đổi tên thư mục.</li>
+<li>File chính phải là <code>&lt;slug&gt;-lesson.md</code>. Lesson và slide outline luôn sync với nhau (xem <code>CLAUDE.md</code> ở thư mục gốc).</li>
+<li>Các đường dẫn tới lesson trong file của program (ví dụ <code>design-process-with-ai/materials/</code>) tính từ <code>library/lessons/ai-design-workflow/</code>.</li>
+</ul>
+<h2 id="lessons">Lessons</h2>
+<p>Mỗi buổi nội dung là một lesson. Ba Check point không có lesson hay deck riêng; Check point là buổi làm việc trên case của học viên (xem <code>plan.md</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Tuần</th>
+<th>Buổi</th>
+<th>Slug</th>
+<th>Nội dung</th>
+<th>Trạng thái</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td><a href="../../library/lessons/ai-design-workflow/design-process-with-ai/materials/design-process-with-ai-lesson.md"><code>design-process-with-ai</code></a></td>
+<td>Your design process, with AI (tương lai nghề và ba hướng đi, bốn stage, bốn khái niệm AI cốt lõi, data safety, case folder)</td>
+<td>🚧 Draft (đang dành cho 2 buổi, cần gộp thành 1)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td><code>discover-the-problem</code></td>
+<td>Discover the problem (business question, trao đổi với PO và business, success metric và baseline, scope chung, heuristic evaluation)</td>
+<td>⬜ Planned</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td><code>research-you-can-trust</code></td>
+<td>Turn research into insights you can trust (competitor, desk research, user-voice synthesis, kiểm theme về quote gốc)</td>
+<td>⬜ Planned</td>
+</tr>
+<tr>
+<td>2</td>
+<td>4</td>
+<td><code>frame-the-problem</code></td>
+<td>Frame the problem worth solving (opportunity, principle check, hypothesis, Goals/Signals/Metrics)</td>
+<td>⬜ Planned</td>
+</tr>
+<tr>
+<td>3</td>
+<td>5</td>
+<td>không có</td>
+<td><strong>Check point 1</strong>: chạy Discover đến Define, ra problem brief</td>
+<td>⬜ Planned</td>
+</tr>
+<tr>
+<td>3</td>
+<td>6</td>
+<td><code>explore-ideas</code></td>
+<td>Explore ideas and pick a direction (ba hướng, chọn hướng, user flow, nội dung)</td>
+<td>⬜ Planned</td>
+</tr>
+<tr>
+<td>4</td>
+<td>7</td>
+<td><code>build-your-first-prototype</code></td>
+<td>Build your first prototype (pattern-first, design system notes, rules file; điểm "Win to market" của khoá)</td>
+<td>⬜ Planned</td>
+</tr>
+<tr>
+<td>4</td>
+<td>8</td>
+<td><code>refine-and-check</code></td>
+<td>Refine and check your design (state, edge case, responsive, kiểm tra AI với design system và accessibility)</td>
+<td>⬜ Planned</td>
+</tr>
+<tr>
+<td>5</td>
+<td>9</td>
+<td><code>test-with-real-users</code></td>
+<td>Test with real users (test plan, usability test, SUS)</td>
+<td>⬜ Planned</td>
+</tr>
+<tr>
+<td>5</td>
+<td>10</td>
+<td>không có</td>
+<td><strong>Check point 2</strong>: dựng main flow, refine, peer test, sửa finding</td>
+<td>⬜ Planned</td>
+</tr>
+<tr>
+<td>6</td>
+<td>11</td>
+<td><code>hand-off-and-measure</code></td>
+<td>Hand off and measure success (handoff pack, measurement plan, số đếm về workflow)</td>
+<td>⬜ Planned</td>
+</tr>
+<tr>
+<td>6</td>
+<td>12</td>
+<td>không có</td>
+<td><strong>Check point 3</strong>: trình bày case, hoàn thiện Knowledge Hub</td>
+<td>⬜ Planned</td>
+</tr>
+</tbody>
+</table>
+<p>Slug của buổi 2 đến 11 lấy từ <code>lesson-details.md</code> (đã bỏ slug gộp <code>refine-and-test</code> và <code>hand-off-and-present</code> của bản 7 module). Chi tiết từng lesson nằm trong <code>lesson-details.md</code>, chưa đồng bộ với 12 buổi. Thư mục chỉ được tạo khi bắt đầu lesson, không tạo trước: build site liệt kê mọi thư mục tìm thấy, nên thư mục rỗng sẽ hiện thành lesson trống.</p>
+<h2 id="thêm-một-lesson">Thêm một lesson</h2>
+<ol>
+<li><code>mkdir -p library/lessons/ai-design-workflow/&lt;slug&gt;/{materials,slides,assets,_archive}</code></li>
+<li>Copy <code>_system/learning templates/_template-lesson.md</code> thành <code>&lt;slug&gt;/materials/&lt;slug&gt;-lesson.md</code>; copy <code>_system/learning templates/_template-slide-outline.md</code> thành <code>&lt;slug&gt;/materials/&lt;slug&gt;-slide-outline.md</code>. Đặt <code>program: ai-design-workflow</code> và <code>draft: true</code> trong front matter.</li>
+<li>Cập nhật bảng ở trên và dòng tương ứng trong <code>library/lessons/README.md</code>.</li>
+<li>Chạy <code>python3 _system/scripts/build-home.py</code>.</li>
+</ol>
+<p>Lesson 1 thay cho bản nháp "Set up your AI workspace" trước đó. Module ngắn dành cho các program có sẵn nằm ở <code>library/lessons/00-foundation/ai-workflow-introduction/</code>; giữ phần dùng chung (thuật ngữ, data safety, folder) đồng bộ với module đó, hoặc coi lesson 1 là nguồn duy nhất.</p>
+<p>Bài tập về nhà của mentee không lưu ở đây: <code>mentees/&lt;tên&gt;/homework/&lt;slug&gt;/</code>.</p>
+<h2 id="workspace-cho-học-viên">Workspace cho học viên</h2>
+<p><code>workspace/</code> là một folder độc lập, dùng làm repo mẫu: học viên tải ZIP hoặc bấm Use this template, không cần biết Git. Phần lớn được copy từ <code>assets/</code>; riêng hub được viết trực tiếp ở đây (xem bảng).</p>
+<table>
+<thead>
+<tr>
+<th>Trong <code>workspace/</code></th>
+<th>Nguồn trong <code>assets/</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>my-case/</code> (trừ <code>hub/</code> và <code>learnings/prototype/</code>)</td>
+<td><code>starter-files/case-folder-template/</code></td>
+</tr>
+<tr>
+<td><code>my-case/hub/</code> (và <code>demo-case/hub/</code>)</td>
+<td><strong>viết trực tiếp ở <code>workspace/</code>, dạng markdown</strong> (README.md, gates.md, trang theo tuần, item theo folder). <code>templates/hub/</code> là bản HTML cũ, không còn đồng bộ</td>
+</tr>
+<tr>
+<td><code>my-case/learnings/prototype/</code></td>
+<td><code>starter-files/prototype-starter/</code></td>
+</tr>
+<tr>
+<td><code>demo-case/</code></td>
+<td><strong>Travel Buddy</strong> (dự án thật của giảng viên, từ <code>05_Learning/SRH/.../Travel Buddy</code>), viết trực tiếp ở <code>workspace/</code>. Bản Kitchen Crate cũ nằm ở <code>_archive/demo-case-kitchen-crate/</code></td>
+</tr>
+<tr>
+<td><code>AGENTS.md</code>, <code>tools/step-*.md</code></td>
+<td><code>assets/starter-files/case-folder-template/</code> (bản gốc) và <code>examples/*/step-cards.md</code> (nguồn của card, đã chuyển sang tiếng Việt và đổi đường dẫn)</td>
+</tr>
+<tr>
+<td><code>README.md</code>, <code>toolkit/</code>, README của <code>my-case/</code>, <code>demo-case/</code></td>
+<td>viết trực tiếp ở <code>workspace/</code> (tiếng Việt)</td>
+</tr>
+</tbody>
+</table>
+<p>Đưa lên GitHub: tạo repo riêng chỉ chứa nội dung <code>workspace/</code> (copy hoặc <code>git subtree split</code>), bật <strong>Settings, Template repository</strong> để học viên có nút Use this template, và để repo Public. Học viên tạo bản Private của họ từ template.</p>
+<p><strong>Bản đã đăng lên GitHub</strong> nằm ở <code>workspace-template/</code> (repo <code>vannguyen2910/ai-design-workspace-template</code>). Folder này là một repo Git riêng: phần <code>.git</code> của nó nằm ngoài Google Drive, ở <code>~/.git-workspace-template</code> (cùng cách với repo Mentorship), và repo Mentorship bỏ qua nó qua <code>.git/info/exclude</code>. <code>workspace/</code> vẫn là nơi soạn nội dung; muốn cập nhật bản đã đăng, copy nội dung đã sửa sang <code>workspace-template/</code>, rồi commit và push ở đó. Đừng sửa trực tiếp trong <code>workspace-template/</code> để tránh hai bản lệch nhau.</p>
+<p>Trong <code>workspace/</code> còn có <code>site/</code> (website Astro + Starlight dựng từ hub) và <code>.github/workflows/publish-hub.yml</code> (đăng site lên GitHub Pages, mặc định tắt, bật bằng repo variable <code>PUBLISH_HUB=true</code>). <code>astro-prototype/</code> là bản thử nghiệm gốc của <code>site/</code>; khi sửa một bên, đồng bộ bên kia.</p>
+<h2 id="trang-program-trên-site">Trang program trên site</h2>
+<p>Trang program trên site được dựng từ repo website (<code>src/pages/training/programs/*.sessions.js</code>), không phải từ thư mục này. Khoá này chưa có file <code>*.sessions.js</code> ở đó, nên chưa có trang program và dòng <code>programs:</code> trong front matter của lesson chưa có tác dụng. Khi thêm file đó, thêm <code>programs: [ai-design-workflow:01]</code> (và tương tự cho các buổi khác) vào front matter của từng lesson.</p></article>
+  <h2 class="pg-h">Sections</h2><div class="cl-grid pg-cards"><a class="cl-mini" href="ai-design-workflow/ai-design-workflow-examples-competitor-analysis-readme.html">
+  <div class="cl-mini__top"><span class="chip chip--sm chip--soft chip--default ">Examples</span><span>3 pages</span></div>
+  <h3 class="cl-mini__title">Example: Competitor Analysis</h3>
+  <p class="cl-mini__desc">Example: User Flow and Process Map with AI · Example: User-Voice Synthesis</p>
+  <span class="cl-mini__cta">Open Examples →</span></a></div>
+  </div></div>
+</div><script>
+(function () {
+  var side = document.querySelector('.pg-side'), main = document.querySelector('.pg-main');
+  if (!side || !main) return;
+  var slug = side.dataset.prog, K = 'pgnav:' + slug, back = document.querySelector('.tp-back');
+  // Absolute hrefs, so the tree keeps working after the address changes without a reload.
+  [].forEach.call(side.querySelectorAll('a'), function (a) { a.setAttribute('href', a.href); });
+  if (back) back.setAttribute('href', back.href);
+  var groups = [].slice.call(side.querySelectorAll('details.pg-nav__grp'));
+  var saved = {}, top = null;
+  try { saved = JSON.parse(sessionStorage.getItem(K + ':open') || '{}'); top = sessionStorage.getItem(K + ':top'); } catch (e) {}
+  groups.forEach(function (d, i) { if (saved[i]) d.open = true; });
+  function save() {
+    var o = {}; groups.forEach(function (d, i) { if (d.open) o[i] = 1; });
+    try { sessionStorage.setItem(K + ':open', JSON.stringify(o)); sessionStorage.setItem(K + ':top', side.scrollTop); } catch (e) {}
+  }
+  groups.forEach(function (d) { d.addEventListener('toggle', save); });
+  side.addEventListener('scroll', save, { passive: true });
+  window.addEventListener('pagehide', save);
+
+  function reveal(a) {
+    var r = a.getBoundingClientRect(), s = side.getBoundingClientRect();
+    if (r.top < s.top + 8 || r.bottom > s.bottom - 8) side.scrollTop += r.top - s.top - side.clientHeight / 3;
+  }
+  function setActive(url) {
+    var found = null;
+    [].forEach.call(side.querySelectorAll('a'), function (a) {
+      var on = a.href === url;
+      a.classList.toggle('is-active', on);
+      if (on) { a.setAttribute('aria-current', 'page'); found = a; } else a.removeAttribute('aria-current');
+    });
+    if (found) { var d = found.closest('details'); if (d) d.open = true; reveal(found); }
+  }
+  if (top !== null) side.scrollTop = +top;
+  var cur = side.querySelector('a.is-active'); if (cur) { var dd = cur.closest('details'); if (dd) dd.open = true; if (top === null) reveal(cur); }
+
+  var ctl = null;
+  function load(url, push) {
+    if (ctl) ctl.abort();
+    ctl = window.AbortController ? new AbortController() : null;
+    fetch(url, ctl ? { signal: ctl.signal } : {}).then(function (r) { if (!r.ok) throw 0; return r.text(); }).then(function (t) {
+      var doc = new DOMParser().parseFromString(t, 'text/html'), nm = doc.querySelector('.pg-main');
+      if (!nm) throw 0;
+      [].forEach.call(nm.querySelectorAll('[href],[src]'), function (el) {
+        ['href', 'src'].forEach(function (k) {
+          var v = el.getAttribute(k);
+          if (v && !/^(#|[a-z]+:)/i.test(v)) el.setAttribute(k, new URL(v, url).href);
+        });
+      });
+      main.innerHTML = nm.innerHTML;
+      document.title = doc.title;
+      if (push) history.pushState(null, '', url);
+      setActive(url);
+      main.classList.remove('is-in'); void main.offsetWidth; main.classList.add('is-in');
+      window.scrollTo(0, 0);
+    }).catch(function (e) { if (e && e.name === 'AbortError') return; location.href = url; });
+  }
+  function inProgram(p) { return p.endsWith('/programs/' + slug + '.html') || p.indexOf('/programs/' + slug + '/') > -1; }
+  document.addEventListener('click', function (e) {
+    if (e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target.closest && e.target.closest('a');
+    if (!a || a.target || !(side.contains(a) || main.contains(a))) return;
+    var u = new URL(a.href, location.href);
+    if (u.origin !== location.origin || !u.pathname.endsWith('.html') || !inProgram(u.pathname)) return;
+    if (u.hash && u.pathname === location.pathname) return;
+    e.preventDefault();
+    var clean = u.origin + u.pathname + u.search;
+    if (clean === location.origin + location.pathname + location.search) { window.scrollTo(0, 0); return; }
+    load(clean, true);
+  });
+  window.addEventListener('popstate', function () { load(location.origin + location.pathname + location.search, false); });
+})();
+</script>
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Winnie Nguyen · Senior Product Designer</p>
+    <div class="footer-links">
+      <a href="mailto:nguyenphuctuongvan@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/winnienguyen2910" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+<script>(function(){if(location.protocol.indexOf('http')!==0)return;var u='../assets/build-stamp.txt',last=null;function c(){fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.text():null}).then(function(t){if(t===null)return;if(last!==null&&t!==last)location.reload();last=t}).catch(function(){})}c();setInterval(c,1500)})();</script>
+</body>
+</html>

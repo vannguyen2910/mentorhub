@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="noindex"/>
+<meta name="description" content=""/>
+<title>AI Prototype Development — Training Hub</title>
+<link rel="stylesheet" href="../assets/css/tokens.css"/>
+<link rel="stylesheet" href="../assets/css/components.css"/>
+<link rel="stylesheet" href="../assets/css/site.css"/>
+<link rel="stylesheet" href="../assets/css/card-list.css"/>
+<link rel="stylesheet" href="../assets/css/text-page.css"/>
+<link rel="stylesheet" href="../assets/css/home.css"/>
+
+</head>
+<body class="">
+<nav>
+  <a class="nav-logo" href="../index.html"><img src="../assets/images/logo-nav.svg" alt="Winnie Nguyen — Training Hub"/></a>
+  <div class="nav-links">
+    <a href="../lessons.html" data-text="Lesson Library">Lesson Library</a>
+    <a href="../private-training.html" data-text="Private Training">Private Training</a>
+    <a href="../programs.html" data-text="Programs" class=active>Programs</a>
+  </div>
+</nav>
+<div class="tp">
+  <a class="tp-back" href="../programs.html">← All programs</a>
+  <div class="pg"><aside class="pg-side" data-prog="ai-prototype-development"><div class="pg-nav" role="navigation" aria-label="Program pages"><a class="pg-nav__home is-active" href="ai-prototype-development.html">Overview</a><p class="pg-nav__label">Course sections</p><ul><li><a href="ai-prototype-development/ai-prototype-development-practice-xay-dung-prototype-bang-ai-practice-lesson.html">Practice: Xây Dựng Prototype Bằng AI</a></li><li><a href="ai-prototype-development/ai-prototype-development-section-1-gioi-thieu-learning-section-1-lesson.html">Section 1 · Giới Thiệu</a></li><li><a href="ai-prototype-development/ai-prototype-development-section-2-thay-doi-tu-duy-phat-trien-ai-prototype-section-2-lesson.html">Section 2 · Phần A: Tư Duy Pattern-First</a></li><li><a href="ai-prototype-development/ai-prototype-development-section-3-xay-dung-ai-prototype-bang-claude-design-section-3-lesson.html">Section 3: Xây Dựng AI Prototype bằng Claude Design</a></li><li><a href="ai-prototype-development/ai-prototype-development-section-4-xay-dung-ai-prototype-bang-figma-make-section-4-lesson.html">Section 4: Xây Dựng AI Prototype bằng Figma Make</a></li><li><a href="ai-prototype-development/ai-prototype-development-section-5-xay-dung-ai-prototype-bang-claude-code-section-5-lesson.html">Section 5: Xây Dựng AI Prototype bằng Claude Code</a></li><li><a href="ai-prototype-development/ai-prototype-development-section-6-stitching-prototype-section-6-lesson.html">Section 6: Stitching Prototype</a></li></ul><p class="pg-nav__label">Course docs</p><ul><li><a href="ai-prototype-development/ai-prototype-development-course-02-outline-brief.html">Course 02 — Systematic AI Prototyping for Product Designers: Toàn Bộ Outline Khóa Học</a></li><li><a href="ai-prototype-development/ai-prototype-development-landing-page-copy.html">Landing Page Copy: Systematic AI Prototyping for Product Designers</a></li><li><a href="ai-prototype-development/ai-prototype-development-writing-style-guide.html">Voice &amp; Writing Style Guide — AI Prototype Development Course</a></li></ul></div></aside><div class="pg-main"><header class="tp-head">
+    <div class="page-eyebrow">Online course</div>
+    <h1 class="page-title">AI Prototype Development</h1>
+    <p class="page-desc"></p>
+    <p class="prog-stat">10 pages</p>
+  </header>
+  
+  <h2 class="pg-h">Sections</h2><div class="cl-grid pg-cards"><a class="cl-mini" href="ai-prototype-development/ai-prototype-development-practice-xay-dung-prototype-bang-ai-practice-lesson.html">
+  <div class="cl-mini__top"><span class="chip chip--sm chip--soft chip--default ">Course sections</span><span>7 pages</span></div>
+  <h3 class="cl-mini__title">Practice: Xây Dựng Prototype Bằng AI</h3>
+  <p class="cl-mini__desc">Section 1 · Giới Thiệu · Section 2 · Phần A: Tư Duy Pattern-First · Section 3: Xây Dựng AI Prototype bằng Claude Design</p>
+  <span class="cl-mini__cta">Open Course sections →</span></a><a class="cl-mini" href="ai-prototype-development/ai-prototype-development-course-02-outline-brief.html">
+  <div class="cl-mini__top"><span class="chip chip--sm chip--soft chip--default ">Course docs</span><span>3 pages</span></div>
+  <h3 class="cl-mini__title">Course 02 — Systematic AI Prototyping for Product Designers: Toàn Bộ Outline Khóa Học</h3>
+  <p class="cl-mini__desc">Landing Page Copy: Systematic AI Prototyping for Product Designers · Voice &amp; Writing Style Guide — AI Prototype Development Course</p>
+  <span class="cl-mini__cta">Open Course docs →</span></a></div>
+  </div></div>
+</div><script>
+(function () {
+  var side = document.querySelector('.pg-side'), main = document.querySelector('.pg-main');
+  if (!side || !main) return;
+  var slug = side.dataset.prog, K = 'pgnav:' + slug, back = document.querySelector('.tp-back');
+  // Absolute hrefs, so the tree keeps working after the address changes without a reload.
+  [].forEach.call(side.querySelectorAll('a'), function (a) { a.setAttribute('href', a.href); });
+  if (back) back.setAttribute('href', back.href);
+  var groups = [].slice.call(side.querySelectorAll('details.pg-nav__grp'));
+  var saved = {}, top = null;
+  try { saved = JSON.parse(sessionStorage.getItem(K + ':open') || '{}'); top = sessionStorage.getItem(K + ':top'); } catch (e) {}
+  groups.forEach(function (d, i) { if (saved[i]) d.open = true; });
+  function save() {
+    var o = {}; groups.forEach(function (d, i) { if (d.open) o[i] = 1; });
+    try { sessionStorage.setItem(K + ':open', JSON.stringify(o)); sessionStorage.setItem(K + ':top', side.scrollTop); } catch (e) {}
+  }
+  groups.forEach(function (d) { d.addEventListener('toggle', save); });
+  side.addEventListener('scroll', save, { passive: true });
+  window.addEventListener('pagehide', save);
+
+  function reveal(a) {
+    var r = a.getBoundingClientRect(), s = side.getBoundingClientRect();
+    if (r.top < s.top + 8 || r.bottom > s.bottom - 8) side.scrollTop += r.top - s.top - side.clientHeight / 3;
+  }
+  function setActive(url) {
+    var found = null;
+    [].forEach.call(side.querySelectorAll('a'), function (a) {
+      var on = a.href === url;
+      a.classList.toggle('is-active', on);
+      if (on) { a.setAttribute('aria-current', 'page'); found = a; } else a.removeAttribute('aria-current');
+    });
+    if (found) { var d = found.closest('details'); if (d) d.open = true; reveal(found); }
+  }
+  if (top !== null) side.scrollTop = +top;
+  var cur = side.querySelector('a.is-active'); if (cur) { var dd = cur.closest('details'); if (dd) dd.open = true; if (top === null) reveal(cur); }
+
+  var ctl = null;
+  function load(url, push) {
+    if (ctl) ctl.abort();
+    ctl = window.AbortController ? new AbortController() : null;
+    fetch(url, ctl ? { signal: ctl.signal } : {}).then(function (r) { if (!r.ok) throw 0; return r.text(); }).then(function (t) {
+      var doc = new DOMParser().parseFromString(t, 'text/html'), nm = doc.querySelector('.pg-main');
+      if (!nm) throw 0;
+      [].forEach.call(nm.querySelectorAll('[href],[src]'), function (el) {
+        ['href', 'src'].forEach(function (k) {
+          var v = el.getAttribute(k);
+          if (v && !/^(#|[a-z]+:)/i.test(v)) el.setAttribute(k, new URL(v, url).href);
+        });
+      });
+      main.innerHTML = nm.innerHTML;
+      document.title = doc.title;
+      if (push) history.pushState(null, '', url);
+      setActive(url);
+      main.classList.remove('is-in'); void main.offsetWidth; main.classList.add('is-in');
+      window.scrollTo(0, 0);
+    }).catch(function (e) { if (e && e.name === 'AbortError') return; location.href = url; });
+  }
+  function inProgram(p) { return p.endsWith('/programs/' + slug + '.html') || p.indexOf('/programs/' + slug + '/') > -1; }
+  document.addEventListener('click', function (e) {
+    if (e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target.closest && e.target.closest('a');
+    if (!a || a.target || !(side.contains(a) || main.contains(a))) return;
+    var u = new URL(a.href, location.href);
+    if (u.origin !== location.origin || !u.pathname.endsWith('.html') || !inProgram(u.pathname)) return;
+    if (u.hash && u.pathname === location.pathname) return;
+    e.preventDefault();
+    var clean = u.origin + u.pathname + u.search;
+    if (clean === location.origin + location.pathname + location.search) { window.scrollTo(0, 0); return; }
+    load(clean, true);
+  });
+  window.addEventListener('popstate', function () { load(location.origin + location.pathname + location.search, false); });
+})();
+</script>
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Winnie Nguyen · Senior Product Designer</p>
+    <div class="footer-links">
+      <a href="mailto:nguyenphuctuongvan@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/winnienguyen2910" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+<script>(function(){if(location.protocol.indexOf('http')!==0)return;var u='../assets/build-stamp.txt',last=null;function c(){fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.text():null}).then(function(t){if(t===null)return;if(last!==null&&t!==last)location.reload();last=t}).catch(function(){})}c();setInterval(c,1500)})();</script>
+</body>
+</html>

@@ -6,7 +6,7 @@ slide_count: 25
 duration: "100 min"
 status: deck-built
 built_deck: "../slides/AI Prototyping - Lesson 4.html"
-last_synced: 2026-10-03
+last_synced: 2026-10-17
 ---
 
 > **Reverse-synced from the built deck on 2026-10-03 (third pass).** The deck was reworked again in the design tool: the team-collaboration section became a **solo "Try Ideas Safely" section on the mentee's own repo** (branch, self-reviewed pull request, merge), a localhost-preview slide was added before the first commit, and a **Homework** slide was added before the close. The sandbox repo and Clone slide are gone from the deck. The lesson file (`lesson-3-4-stub.md`) was re-synced the same day.
@@ -24,7 +24,7 @@ last_synced: 2026-10-03
 | Track / session | Lesson 4 |
 | Stage | Develop |
 | Prior session | Lesson 3: Scaling the Prototype |
-| Next session | Lesson 5: Beyond the Pattern (optional bonus) |
+| Next session | Lesson 5: Reuse What Others Built (optional bonus) |
 | Running example | The mentee's own anchor project and its live site |
 | Deck file | `slides/AI Prototyping - Lesson 4.html` |
 
@@ -213,6 +213,8 @@ last_synced: 2026-10-03
   - Nói rõ chữ 'tự cập nhật': đây là mục tiêu thật của bài, rất dễ bị bỏ qua như một chú thích nhỏ
   - Ví dụ: như link prototype Figma tự hiện thiết kế mới khi file được sửa, không cần gửi link khác
   - Kiểm tra: link đang mở trên trình duyệt và hiện đúng sản phẩm thật, không phải danh sách file
+  - Nếu link mở sai trang, nhờ công cụ AI cho trang chủ của site mở đúng file của prototype (nói rõ tên file), hoặc kéo đúng file HTML vào chat và nói file nào cần mở. Sau đó push, chờ một hai phút rồi tải lại
+  - Ví dụ: như gửi link Figma mà người nhận mở ra đúng trang bìa thay vì đúng màn hình đầu tiên, mình chỉnh lại trang bắt đầu rồi gửi lại
 
 ---
 
@@ -267,12 +269,15 @@ last_synced: 2026-10-03
 ### TWO-CARD · Your Rules Ship With the Repo
 - Kicker: Your one-page rulebook
 - Title: Your rules\nship with the repo.
-- Left card — CONTRIBUTING.md: never work directly on main, one branch per idea · pull before you start each session · branch names `area/short-description` · commit notes say what changed and why
+- Left card — CONTRIBUTING.md: never work directly on main, one branch per idea · pull before you start each session · branch names `area/short-description` · commit notes say what changed and why · change folders and files by prompt, not by hand
 - Right card — Pull requests & staying safe: every pull request has a short summary, a screenshot if the UI changed, and which tokens or components you touched · read your own changes before you merge · something broke? delete the branch, main is untouched · public repo: never add passwords, keys or `.env` files
 - Speaker notes:
   - Bản rulebook chỉ dài một trang, nằm ngay trong dự án với tên CONTRIBUTING.md, cả mình và công cụ AI đều đọc được
   - Nói to: đây lại là ý tưởng rules file, một tài liệu viết ra chứ không phải nhớ trong đầu. Ví dụ: design guideline được ghi lại để lần sau làm theo mà không phải nghĩ lại
   - Mở file CONTRIBUTING.md mẫu trên màn hình, không đọc lại slide
+  - Chỉ vào một quy tắc: tạo, đổi tên folder và file bằng prompt, không sửa tay. Thay đổi qua prompt được ghi vào lịch sử nên quay lại được. Sửa tay thì không còn dấu vết ai đã đổi gì
+  - Ví dụ: như đổi tên một layer trong Figma mà không có version history, sau này không ai biết nó từng tên gì
+  - Đây là mặc định có lý do, không phải luật cứng. Nếu bắt buộc sửa tay thì commit ngay kèm ghi chú `[to confirm]`
   - Câu hỏi cuối phần: nếu hỏng thì làm gì? Trả lời: xóa branch, main vẫn nguyên
 - 🎨 Visual: Lavender background; two white cards with mono labels.
 
@@ -367,7 +372,8 @@ Where the deck and the lesson file (`lesson-3-4-stub.md`) may still disagree aft
 - **No "simulate a mistake and recover" beat, no teach-back, no presentation coaching.** Recovery survives only as the "Go back one step" prompt card and the "delete the branch, main is untouched" line.
 - **The "unaided second commit" promised on the closing checklist is now Homework task 1**, so the checklist is satisfied after the session, not during it.
 - **Setup slide wording.** Slide 6 step 2 says "Create a new Repo" while its notes warn against the "Create New" habit and say to use Add.
-- **Closing notes call Lesson 5 an optional bonus** — confirm against the Lesson 5 outline.
+- **Closing notes call Lesson 5 an optional bonus** — confirmed against `lesson-5-slide-outline.md` (2026-10-17).
+- **Added 2026-10-17, not in the built deck:** the "wrong page" fix on the Make It Live slides (notes only) and the "prompt, not by hand" rule on the rulebook slide (on-slide line and notes). Update the deck or keep them as spoken points; the lesson file and `contributing-template.md` already carry them.
 - **Team collaboration is no longer taught here.** Clone, a shared repo and teammates' review appear only in the glossary and the "Set up on another laptop" prompt. If Lesson 5 is meant to pick that up, check its outline expects it.
 
 ---
