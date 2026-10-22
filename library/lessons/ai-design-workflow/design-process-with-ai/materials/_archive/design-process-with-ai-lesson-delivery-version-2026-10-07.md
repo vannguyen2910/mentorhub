@@ -62,7 +62,7 @@ Sau hai buổi học, học viên có thể:
 - Pre-read brief (bản pre-read một trang ở cuối file này)
 - Case card của khoá (`course-case/case-card.md`) cho phần demo ở Phase 3
 - Mười thẻ thuật ngữ, và sáu thẻ tài liệu cho bài tập phân loại
-- Bản research tương lai nghề (`programs/ai-design-workflow/04-future-of-design-careers.md`) cho giảng viên: số liệu, nguồn và giới hạn của từng con số. Trước khi dạy, tải báo cáo State of the Designer 2026 của Figma (cần điền form, miễn phí) để xác nhận con số 36/35/29
+- Bản research tương lai nghề (`programs/ai-design-workflow/learning/future-of-design-careers.md`) cho giảng viên: số liệu, nguồn và giới hạn của từng con số. Trước khi dạy, tải báo cáo State of the Designer 2026 của Figma (cần điền form, miễn phí) để xác nhận con số 36/35/29
 - Template case folder của series và folder template hub trống
 - Các method card (`programs/ai-design-workflow/assets/method-cards/`), có link từ pre-read brief. Các card này chưa được publish lên site, nên hãy chia sẻ cho học viên dưới dạng file hoặc folder
 - Hướng dẫn publish dành cho học viên (`publish-guide.md`), dùng cho homework tuỳ chọn

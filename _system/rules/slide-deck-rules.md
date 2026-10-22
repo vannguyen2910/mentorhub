@@ -167,8 +167,14 @@ Use the **alias names** from `tokens.css`, not raw hex values:
 
 ### Speaker notes rule
 
-- Speaker notes are **always bullet points**, one point per line, glanceable. Never a prose paragraph.
-- Applies to every layout, in outlines and in the deck's notes (3–6 bullets per slide is the norm).
+- Speaker notes are **always bullet points**, one point per line. Never a prose paragraph.
+- Applies to every layout, in outlines and in the deck's notes (4–8 bullets per slide is the norm; section dividers and pure transition slides may stay shorter).
+- **Written in Vietnamese** (follow `vi-voice.md`: natural, professional, no spoken filler; terms kept in English stay in English).
+- **Detailed enough to teach from, not just to glance at.** Each content slide's notes cover: what to say to explain the idea, why it matters, and what to ask or check with the mentee before moving on.
+- **Every concept slide carries at least one real example** the mentee can picture in their own work: a concrete situation from a designer's day (a handoff to dev, a stakeholder review, a messy research folder, a Figma file with 40 frames), with realistic numbers, names of artifacts or moments, and the outcome. Not an abstract illustration.
+- Make the transfer explicit: end the example with a bullet that links it to the mentee's work (e.g. "Ví dụ: ... Trong dự án của bạn, thử áp dụng ở bước ...") or a question they answer from their own project.
+- Examples stay generic: no mentee, company or cohort names (see `CLAUDE.md` General lesson conventions). Use role labels such as "một designer ở team product".
+- The example originates in `*-lesson.md`; the outline's notes must stay in sync with it, per the lesson sync rule.
 
 ---
 

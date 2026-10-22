@@ -9,7 +9,7 @@ date: 2026-09-19
 draft: true
 slides: "../slides/AI Prototyping - Lesson 4.html"
 previous-session: "Lesson 3: Scaling the Prototype"
-next-session: "Lesson 5: Beyond the Pattern (optional bonus)"
+next-session: "Lesson 5: Reuse What Others Built (optional bonus)"
 ---
 
 > **Updated 2026-10-03 (third pass) to match the built deck.** `AI Prototyping - Lesson 4.html` is presentation reality; this file and `lesson-4-slide-outline.md` were re-synced from it. The deck moved from a team-collaboration section to a **solo "Try Ideas Safely" section on the mentee's own repo**, added a localhost-preview step and a Homework slide. The filename `lesson-3-4-stub.md` is stale (it holds Lesson 4 only) — renaming it to `lesson-4-publish-it.md` means updating the README table and the outline's `lesson_file` in the same pass, recorded here and deliberately not done piecemeal.
@@ -94,6 +94,7 @@ A clear commit note is the same discipline as a clear layer name — vague eithe
 - The first deploy takes a minute or two — use the wait to preview what's next.
 - **Name "self-updating" explicitly.** It is the actual objective of the lesson and easy to let pass as a footnote: push again, same URL, new content.
 - **Checkpoint:** a working URL is open in the browser, showing the real prototype, not a file listing.
+- **If the URL opens the wrong page** (a file listing, or a page that is not the prototype): the folder Pages publishes has no `index.html`, or its `index.html` points at the wrong page. Ask the AI coding tool to make the live site open the prototype's main page, naming the file. If it still opens the wrong one, drag the right HTML file into the chat and say which file should open. Then push and reload after a minute or two, since Pages needs a short wait after every change.
 
 ### 5. Try Ideas Safely (25 min)
 
@@ -105,7 +106,7 @@ Until now every change went straight to the live site. This section teaches the 
    - *Why a pull request when you are alone:* it is the moment to read your own changes as if someone else wrote them — like reviewing a screen before handoff. AI tools can edit many files at once, so this step catches errors.
    - Merging updates the live site automatically — the payoff of the loop.
    - **Checkpoint:** the pull request is open on GitHub, was read through, and is merged.
-4. **Your rules ship with the repo.** The rulebook is one page, lives in the repo as `CONTRIBUTING.md`, and is read by the mentee and their AI tool alike. **This is the rules-file idea again** — written down, not remembered. Show the template on screen rather than reading the slide aloud. Closing question: *if something breaks, what do you do?* → Delete the branch; main is untouched. Template: `contributing-template.md`.
+4. **Your rules ship with the repo.** The rulebook is one page, lives in the repo as `CONTRIBUTING.md`, and is read by the mentee and their AI tool alike. One rule to point at: **change folders and files by prompt, not by hand.** A prompted change is recorded in the history and can be reverted; a hand edit leaves no record of who changed what. **This is the rules-file idea again** — written down, not remembered. Show the template on screen rather than reading the slide aloud. Closing question: *if something breaks, what do you do?* → Delete the branch; main is untouched. Template: `contributing-template.md`.
 
 ### 6. The AI-Tool Shortcut (10 min)
 
@@ -145,6 +146,9 @@ Prompts shown on slides, kept short and plain — no CARE breakdown, same decisi
 **Everyday publish**
 > Commit these changes with a short message describing what changed, and push them to GitHub.
 
+**When the live URL opens the wrong page**
+> Make the live site open <file> as its main page, then tell me what you changed.
+
 **Six more things to ask for** (two to try live, four for reference)
 
 | Goal | Prompt |
@@ -166,6 +170,7 @@ Lesson 3's prompts live in `lesson-3-scaling-the-prototype.md`; Lesson 2's in `l
 - **This lesson points to the existing guide for method content instead of restating it** — `library/guides/publish-your-work-git-github-for-non-technical-designers`. Rewriting its steps here creates two sources of truth. The guide has no coverage of branches or pull requests, so Section 5 is genuinely new content.
 - **Hold the line on scope.** The safe loop teaches one clean path for a solo designer. Team collaboration and merge conflicts are no longer taught here — each gets at most a sentence.
 - **The rules/context file from Lessons 1 and 3 is the thread the whole arc hangs on** — artifacts over prompts, this arc's application of the Feed Forward habit from `ai-workflow-for-ux-designers`. The `CONTRIBUTING.md` slide makes the point for the mentee's own rulebook, and Homework 2 has them write it. The deck does not currently say that the mentee's own rules file ships in the repo they just published — worth saying aloud in the close.
+- **"Prompt, don't hand-edit" is a default, not a law.** The instructor's own experience: hand edits made out of laziness left no history to revert. Say it as a default with a reason; a mentee who must hand-edit commits straight away with a note. `[to confirm]` whether to present it as a hard rule.
 - **Main is the live site, and the repo is public.** Anything pushed is visible to everyone and goes live on merge. No keys, tokens or `.env` files, ever.
 
 ---
@@ -179,6 +184,7 @@ Places where the deck dropped something the earlier plan promised. Decide before
 3. **Team collaboration.** Clone, shared repos and teammate review are no longer taught. Confirm whether Lesson 5 should pick them up.
 4. **Add vs. Create on the Setup slide.** Slide step 2 reads "Create a new Repo" while the notes warn against Create New. Fix the slide copy.
 5. **Agenda minutes.** The slide totals 90 minutes under a "One hundred minutes" title.
+6. **Additions after the deck was built (2026-10-17).** The "wrong page" fix (Section 4) and the "prompt, not by hand" rule (Section 5, rulebook) are in this file, the outline and `contributing-template.md` but not in the built deck. Add them to the deck, or leave them as spoken points.
 
 ---
 

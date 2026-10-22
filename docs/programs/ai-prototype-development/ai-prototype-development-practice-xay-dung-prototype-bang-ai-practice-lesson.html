@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="noindex"/>
+<meta name="description" content="Phần trước để lại cho bạn một main journey đã chạy được — chưa hoàn hảo, nhưng đã có nền tảng: một component inventory và một bộ token dùng chung, và bạn đã biết cách chia sẻ nó ra ngoài."/>
+<title>Practice: Xây Dựng Prototype Bằng AI — AI Prototype Development</title>
+<link rel="stylesheet" href="../../assets/css/tokens.css"/>
+<link rel="stylesheet" href="../../assets/css/components.css"/>
+<link rel="stylesheet" href="../../assets/css/site.css"/>
+<link rel="stylesheet" href="../../assets/css/card-list.css"/>
+<link rel="stylesheet" href="../../assets/css/text-page.css"/>
+<link rel="stylesheet" href="../../assets/css/home.css"/>
+
+</head>
+<body class="">
+<nav>
+  <a class="nav-logo" href="../../index.html"><img src="../../assets/images/logo-nav.svg" alt="Winnie Nguyen — Training Hub"/></a>
+  <div class="nav-links">
+    <a href="../../lessons.html" data-text="Lesson Library">Lesson Library</a>
+    <a href="../../private-training.html" data-text="Private Training">Private Training</a>
+    <a href="../../programs.html" data-text="Programs" class=active>Programs</a>
+  </div>
+</nav>
+<div class="tp">
+  <a class="tp-back" href="../../programs.html">← All programs</a>
+  <div class="pg"><aside class="pg-side" data-prog="ai-prototype-development"><div class="pg-nav" role="navigation" aria-label="Program pages"><a class="pg-nav__home" href="../ai-prototype-development.html">Overview</a><p class="pg-nav__label">Course sections</p><ul><li><a class="is-active" aria-current="page" href="ai-prototype-development-practice-xay-dung-prototype-bang-ai-practice-lesson.html">Practice: Xây Dựng Prototype Bằng AI</a></li><li><a href="ai-prototype-development-section-1-gioi-thieu-learning-section-1-lesson.html">Section 1 · Giới Thiệu</a></li><li><a href="ai-prototype-development-section-2-thay-doi-tu-duy-phat-trien-ai-prototype-section-2-lesson.html">Section 2 · Phần A: Tư Duy Pattern-First</a></li><li><a href="ai-prototype-development-section-3-xay-dung-ai-prototype-bang-claude-design-section-3-lesson.html">Section 3: Xây Dựng AI Prototype bằng Claude Design</a></li><li><a href="ai-prototype-development-section-4-xay-dung-ai-prototype-bang-figma-make-section-4-lesson.html">Section 4: Xây Dựng AI Prototype bằng Figma Make</a></li><li><a href="ai-prototype-development-section-5-xay-dung-ai-prototype-bang-claude-code-section-5-lesson.html">Section 5: Xây Dựng AI Prototype bằng Claude Code</a></li><li><a href="ai-prototype-development-section-6-stitching-prototype-section-6-lesson.html">Section 6: Stitching Prototype</a></li></ul><p class="pg-nav__label">Course docs</p><ul><li><a href="ai-prototype-development-course-02-outline-brief.html">Course 02 — Systematic AI Prototyping for Product Designers: Toàn Bộ Outline Khóa Học</a></li><li><a href="ai-prototype-development-landing-page-copy.html">Landing Page Copy: Systematic AI Prototyping for Product Designers</a></li><li><a href="ai-prototype-development-writing-style-guide.html">Voice &amp; Writing Style Guide — AI Prototype Development Course</a></li></ul></div></aside><div class="pg-main"><header class="tp-head">
+    <div class="page-eyebrow">Course sections</div>
+    <h1 class="page-title">Practice: Xây Dựng Prototype Bằng AI</h1>
+  </header>
+  <article class="tp-body"><h2 id="tổng-quan">Tổng Quan</h2>
+<blockquote>
+<p><strong>Nguồn:</strong> Gộp từ Section 4 cũ ("Mở Rộng Quy Mô Prototype") + Section 5 cũ Lesson 2-3 ("Đóng Gói &amp; Chia Sẻ Prototype"), theo quyết định restructure khóa học tháng 8/2026. Lesson chia sẻ prototype (Section 5 cũ, Lesson 1) đã chuyển sang cuối Section 3. Phần này áp dụng được cho prototype build từ Section 3 (Claude Design) hoặc Section 4 (Figma Make), tuỳ bạn chọn tool nào.</p>
+</blockquote>
+<p>Phần trước để lại cho bạn một main journey đã chạy được — chưa hoàn hảo, nhưng đã có nền tảng: một component inventory và một bộ token dùng chung, và bạn đã biết cách chia sẻ nó ra ngoài.</p>
+<p>Đây là lúc mở rộng từ đó, rồi dừng lại nhìn lại toàn bộ quá trình trước khi bước sang phần Stitching.</p>
+<p>Bạn sẽ build các journey còn lại, học cách nhận ra khi nào system thật sự cần được mở rộng, rồi nhìn lại quá trình cộng tác với AI bằng câu hỏi cụ thể, không chỉ "thấy hay".</p>
+<p><strong>Kết thúc phần này, bạn sẽ có thể:</strong></p>
+<ol>
+<li>Build các journey còn lại mà vẫn giữ được sự nhất quán với main journey</li>
+<li>Nhận biết khi nào nên reuse, khi nào nên tạo variant, và khi nào thật sự cần thêm component hoặc template mới</li>
+<li>Nhìn lại quá trình cộng tác với AI bằng 3 câu hỏi cụ thể, không chỉ nhận xét chung chung</li>
+<li>Mở rộng prototype qua bài tập, nộp bài, và biết nơi tra cứu lại toàn bộ prompt đã học</li>
+</ol>
+<p><strong>Nội dung phần:</strong></p>
+<ul>
+<li>4 lesson ngắn: 3 lesson nội dung và 1 bài tập tổng</li>
+<li>Cần có: prototype đã build và tinh chỉnh xong ở Section 3 hoặc Section 4, Build &amp; Journey Worksheet</li>
+</ul>
+<hr />
+<h2 id="nội-dung-lesson">Nội Dung Lesson</h2>
+<h3 id="lesson-1-build-các-journey-còn-lại">Lesson 1: Build Các Journey Còn Lại</h3>
+<p><em>Lặp lại quy trình. Nhưng lần này, bạn đã biết mình đang làm gì.</em></p>
+<p>Không có kỹ thuật mới nào ở đây.</p>
+<p>Bạn chỉ cần lặp lại quy trình build và review đã học trước đó cho các user goal còn lại.</p>
+<p>Điểm khác biệt là: lần này bạn đã có kinh nghiệm từ main journey đầu tiên.</p>
+<p>Bạn đã biết AI thường build sai ở đâu. Bạn đã biết cách review. Và bạn cũng đã biết những vấn đề nào cần sửa ở source thay vì sửa từng màn hình một.</p>
+<p><strong>Lỗi lặp lại? Fix một lần ở source.</strong></p>
+<p>Ví dụ, nếu bạn phát hiện spacing hoặc màu sắc đang sai trong main journey, hãy kiểm tra xem lỗi đó có xuất hiện ở những journey tiếp theo không.</p>
+<p>Vì tất cả đều đang build từ cùng một component inventory và token system, một lỗi có thể xuất hiện ở nhiều nơi.</p>
+<p>Nếu đúng là lỗi của component hoặc token, hãy sửa ở đó.</p>
+<p><strong>Fix một chỗ. Mọi nơi dùng nó sẽ được hưởng lợi.</strong></p>
+<p>Đó chính là lợi ích thực tế của pattern-first approach mà bạn đã xây dựng từ trước.</p>
+<p><strong>Với mỗi journey, hãy đi theo đúng quy trình:</strong></p>
+<ol>
+<li>Viết một build prompt đầy đủ 5 thành phần, bao gồm cả flow context nối với journey trước</li>
+<li>Build từng màn hình và review cạnh file Figma gốc</li>
+<li>Fix những gì cần fix trước khi chuyển sang màn hình tiếp theo</li>
+</ol>
+<p><strong>Build. Review. Rồi mới tiếp tục.</strong></p>
+<p>Đừng build tất cả các journey cùng một lúc.</p>
+<p>Hoàn thành một journey trước. Review nó. Fix những gì cần fix. Sau đó mới chuyển sang journey tiếp theo.</p>
+<p>Đây vẫn là nguyên tắc bạn đã áp dụng khi build main journey đầu tiên — chỉ là bây giờ áp dụng nó ở quy mô lớn hơn.</p>
+<p><strong>Đừng dồn tất cả vào một prompt.</strong></p>
+<p>Đến thời điểm này, bạn đã có khá nhiều thứ để đưa cho AI:</p>
+<ul>
+<li>Design Tokens</li>
+<li>Components</li>
+<li>Templates</li>
+<li>PRD</li>
+<li>Wireframes</li>
+<li>Main journey đã build làm reference</li>
+</ul>
+<p>Và chính vì có quá nhiều thứ sẵn có, bạn rất dễ nghĩ: "Hay là đưa hết vào một prompt và build luôn tất cả các journey?"</p>
+<p>Nghe có vẻ nhanh hơn.</p>
+<p>Nhưng input càng lớn, AI càng dễ bỏ sót những chi tiết quan trọng. Đó chính là vấn đề về context rot.</p>
+<p>Vì vậy, vẫn cứ đi từng bước.</p>
+<p><strong>Một journey. Một màn hình. Một lần review.</strong></p>
+<p>Đó thường là cách nhanh hơn để đi đến một kết quả đúng.</p>
+<p><strong>Review lại bằng 6 câu hỏi</strong></p>
+<p>Sau mỗi lần build, hãy quay lại đúng 6 câu hỏi đã dùng ở main journey đầu tiên:</p>
+<ul>
+<li>Màn hình này có đúng mục tiêu không?</li>
+<li>Người dùng có biết mình đang ở đâu không?</li>
+<li>Thông tin đã được ưu tiên đúng chưa?</li>
+<li>Components và patterns có nhất quán không?</li>
+<li>Next action có rõ ràng không?</li>
+<li>Màn hình này có kết nối đúng với journey không?</li>
+</ul>
+<p><strong>Đẹp không có nghĩa là đúng.</strong></p>
+<p>Ngay cả khi bạn đã build đến journey thứ 2 hoặc thứ 3.</p>
+<p>Đừng để việc một màn hình trông đẹp khiến bạn bỏ qua việc kiểm tra xem nó có thật sự phục vụ đúng user goal hay không.</p>
+<p><strong>Trước khi kết thúc, kiểm tra consistency</strong></p>
+<p>Mở các journey cạnh nhau.</p>
+<p>Nhìn vào những thứ dễ bị lệch:</p>
+<ul>
+<li>Buttons</li>
+<li>Colors</li>
+<li>Spacing</li>
+<li>Typography</li>
+<li>Components</li>
+<li>Interaction patterns</li>
+</ul>
+<p>Chúng có còn nhất quán không?</p>
+<p>Nếu có, đó là bằng chứng cho thấy pattern-first approach đang thực sự hoạt động.</p>
+<p>Không phải vì bạn tình cờ làm mọi thứ giống nhau.</p>
+<p>Mà vì tất cả các journey đều được build dựa trên cùng một source of truth.</p>
+<p>Bạn cũng có thể mở <code>design_system.html</code> cạnh các journey để đối chiếu trực tiếp.</p>
+<p><strong>Đừng cố nhớ design system. Mở nó lên và kiểm tra.</strong></p>
+<p><strong>Kết quả tối thiểu:</strong></p>
+<p>Toàn bộ journey đã chọn:</p>
+<ul>
+<li>Chạy được trong browser</li>
+<li>Có navigation kết nối giữa các journey</li>
+<li>Dùng nhất quán components và tokens từ cùng một system</li>
+</ul>
+<hr />
+<h3 id="lesson-2-mở-rộng-design-system-đúng-cách">Lesson 2: Mở Rộng Design System Đúng Cách</h3>
+<p><em>Không phải màn hình mới nào cũng cần một component mới.</em></p>
+<p>Càng build nhiều màn hình, bạn càng dễ rơi vào một trong hai tình huống.</p>
+<p>Một là ép mọi màn hình dùng lại component cũ — ngay cả khi nó không còn phù hợp.</p>
+<p>Hai là tạo một component mới cho mỗi biến thể nhỏ.</p>
+<p>Cả hai đều có vấn đề.</p>
+<p>Một bên làm UI trở nên gượng ép.</p>
+<p>Một bên khiến component inventory nhanh chóng phình to và khó maintain.</p>
+<p>Lesson này giúp bạn biết khi nào nên reuse, khi nào nên tạo variant, và khi nào thật sự cần mở rộng system.</p>
+<p><strong>Trước khi tạo bất cứ thứ gì mới, hãy hỏi:</strong></p>
+<ol>
+<li>Component tương tự đã có trong inventory chưa?</li>
+<li>Sự khác biệt chỉ nằm ở state, size, content hoặc một vài properties khác?</li>
+<li>Nếu có sự khác biệt, đây nên là một variant của component cũ hay thật sự là một component riêng?</li>
+<li>Nếu cần một template mới, template đó có thể reuse các components hiện có không?</li>
+<li>Hay nó thật sự cần một layout và structure hoàn toàn khác?</li>
+</ol>
+<p><strong>Đừng tạo mới chỉ vì nó nhanh hơn</strong></p>
+<p>Default choice nên là reuse.</p>
+<p>Chỉ tạo mới khi bạn đã kiểm tra và xác nhận rằng những gì đang có thật sự không đáp ứng được nhu cầu mới.</p>
+<p>Đừng tạo một component mới chỉ vì việc tìm lại component cũ mất thêm vài phút.</p>
+<p>Vài phút đó có thể giúp bạn tránh một component mới mà sau này phải maintain mãi mãi.</p>
+<p><strong>Đừng dùng trí nhớ. Mở <code>design_system.html</code> lên.</strong></p>
+<p>Bạn đã có <code>design_system.html</code> từ trước.</p>
+<p>Đây là nơi visualise các tokens, components và templates hiện có.</p>
+<p>Khi gặp một màn hình mới, hãy mở file lên và đối chiếu trực tiếp.</p>
+<p>Sau đó mới quyết định: Reuse → Create a variant → Create something completely new.</p>
+<p>Nếu không chắc, bạn cũng có thể prompt AI để kiểm tra.</p>
+<p><strong>Prompt kiểm tra trước khi mở rộng:</strong></p>
+<blockquote>
+<p>"Đây là <code>design_system.html</code> hiện tại của tôi: [đính kèm file hoặc cung cấp link]. Tôi cần build màn hình [mô tả màn hình]. Hãy kiểm tra design system hiện tại và cho tôi biết:</p>
+<ul>
+<li>Component nào có thể reuse?</li>
+<li>Có component nào cần thêm variant không?</li>
+<li>Hay tôi thật sự cần tạo một component mới?</li>
+</ul>
+<p>Hãy giải thích lý do cho từng recommendation."</p>
+</blockquote>
+<p>Điểm quan trọng là AI cần được đối chiếu với source thật.</p>
+<p>Không phải đoán dựa trên những gì bạn mô tả trong chat.</p>
+<p><strong>Mở rộng system xong → cập nhật lại ngay</strong></p>
+<p>Thêm component hoặc template mới? Cập nhật lại <code>design_system.html</code>.</p>
+<p>Mỗi lần system được mở rộng, hãy generate lại file để nó phản ánh đúng system hiện tại.</p>
+<p>Nếu không, file sẽ nhanh chóng trở nên outdated.</p>
+<p>Và một file outdated thì không còn đáng tin để làm reference cho lần build tiếp theo.</p>
+<p><strong>Kết quả tối thiểu:</strong></p>
+<ul>
+<li>Mọi màn hình mới đều được đối chiếu với <code>design_system.html</code> trước khi build</li>
+<li>Inventory chỉ tăng khi thật sự cần</li>
+<li>Mỗi lần mở rộng system đều được cập nhật lại vào <code>design_system.html</code></li>
+</ul>
+<hr />
+<h3 id="lesson-3-nhìn-lại-quá-trình-cộng-tác-với-ai">Lesson 3: Nhìn Lại Quá Trình Cộng Tác Với AI</h3>
+<p><em>"Tôi thấy nó hay" không phải một lần nhìn lại quá trình. Đây là câu hỏi cụ thể hơn thế.</em></p>
+<p>Nhìn lại quá trình không phải bước làm cho có. Đây là bước biến kinh nghiệm build vừa xong thành hiểu biết bạn mang theo sang những prototype tiếp theo, kể cả những prototype không nằm trong khoá học này.</p>
+<p><strong>Dùng lại nhật ký review trong Build &amp; Journey Worksheet của bạn</strong> (đã ghi lại trong lúc build) để trả lời 3 câu hỏi sau bằng ví dụ cụ thể, không phải cảm nhận chung chung:</p>
+<ol>
+<li>
+<p><strong>AI đã làm đúng điều gì nhanh hơn nếu bạn tự làm bằng tay?</strong> Ví dụ: lắp ráp đúng component theo inventory, tạo nhiều biến thể bố cục để so sánh.</p>
+</li>
+<li>
+<p><strong>AI đã bỏ sót điều gì mà bạn phải tự sửa?</strong> Đây chính là dữ liệu trong nhật ký review. Mở lại worksheet, chọn ra 1 ví dụ điển hình nhất về lỗi bạn phát hiện và cách bạn sửa nó.</p>
+</li>
+<li>
+<p><strong>Nếu không có prototype pattern, tức component inventory và template bạn đã chuẩn bị từ đầu, việc build hôm nay sẽ khác thế nào?</strong> Câu hỏi này không có câu trả lời "đúng" cố định. Mục đích là buộc bạn tự nhận ra giá trị cụ thể mà việc chuẩn bị prototype pattern từ đầu mang lại cho cả quá trình build, thay vì chỉ nghe giảng viên nói điều đó.</p>
+</li>
+</ol>
+<p><strong>Một nghịch lý đáng nhớ:</strong> nghiên cứu năm 2025 của NN/g chỉ ra một điều nghe có vẻ ngược đời. AI hứa hẹn thu hẹp khoảng cách kỹ năng, nhưng lại hoạt động tốt nhất trong tay người <em>đã</em> hiểu rõ nghề. Để ra lệnh chính xác cho AI, bạn cần hiểu bố cục, kiểu chữ, cách đặt tên component, và luồng người dùng, đúng những kiến thức bạn đã học trước khi tới khoá học này. AI không thay thế kiến thức thiết kế. Nó khuếch đại khoảng cách giữa một kết quả tạm ổn và một kết quả thực sự tốt, và con mắt tinh tế, gu thẩm mỹ, khả năng tinh chỉnh có chủ đích chính là thứ tạo ra khoảng cách đó.</p>
+<hr />
+<h3 id="lesson-4-bài-tập-prompt-library">Lesson 4: Bài Tập &amp; Prompt Library</h3>
+<p><em>Mở rộng prototype của bạn, và biết nơi tra cứu lại mọi prompt đã học khi build.</em></p>
+<p><strong>Bài tập: Mở rộng prototype pattern-first</strong></p>
+<p>Mở rộng prototype bạn đã build:</p>
+<ul>
+<li>Thêm ít nhất 2 màn hình nữa vào template của bạn</li>
+<li>Đảm bảo mọi component ở 2 màn hình mới đều lấy từ component inventory đã có, không thêm component mới mà không cập nhật lại inventory trước</li>
+<li>Ghi lại 1 điều AI đã làm sai, và cách bạn đã sửa nó</li>
+</ul>
+<p><strong>Nộp bài:</strong> 1 đường link (live link hoặc repo code, đã học cách tạo ở cuối Section 3) + 1 đoạn nhìn lại quá trình 3 câu về trải nghiệm cộng tác với AI, dựa trên khung 3 câu hỏi ở Lesson 3.</p>
+<p><strong>Prompt Library: tra cứu lại khi cần</strong></p>
+<p>Toàn bộ prompt đã dùng xuyên suốt phần build, từ dọn dẹp, setup MCP hoặc Make kit, generate token/inventory/template, build màn hình, review, đến sửa lỗi, đều nằm trong 1 tài liệu tham chiếu duy nhất mà bạn có thể quay lại bất cứ lúc nào, không cần nhớ thuộc lòng:</p>
+<table>
+<thead>
+<tr>
+<th>Mục đích</th>
+<th>Khi nào dùng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Generate token, component inventory + template từ file thật</td>
+<td>Ngay khi bắt đầu build, hoặc bất cứ khi nào file Figma của bạn thay đổi</td>
+</tr>
+<tr>
+<td>Build 1 màn hình (khung 5 thành phần)</td>
+<td>Mỗi lần build màn hình mới</td>
+</tr>
+<tr>
+<td>Review output</td>
+<td>Ngay sau khi build, trước khi tinh chỉnh</td>
+</tr>
+<tr>
+<td>Chọn chế độ tinh chỉnh (chat / targeted feedback / direct adjustment)</td>
+<td>Khi đã có danh sách điểm cần sửa</td>
+</tr>
+<tr>
+<td>Sửa lỗi có cấu trúc</td>
+<td>Khi đã biết rõ điều gì cần khác đi</td>
+</tr>
+</tbody>
+</table>
+<p>Prompt Library không phải nội dung học mới, nó là công cụ tra cứu. Giữ nó lại, vì bạn sẽ dùng lại chính những prompt này ở phần tiếp theo, khi nối nhiều prototype thành một hành trình hoàn chỉnh.</p>
+<hr />
+<h2 id="bài-tập-build-journey-còn-lại-nhìn-lại-quá-trình-nộp-bài">Bài Tập: Build Journey Còn Lại, Nhìn Lại Quá Trình &amp; Nộp Bài</h2>
+<p><em>Lần này, không có ai build mẫu cho bạn. Không phải bài nộp giữa chừng — đây là bài tập khép lại phần này.</em></p>
+<p>Bạn tự chọn một user goal khác. Tự viết prompt. Tự build. Rồi tự review. Đây là lúc kiểm tra xem quy trình đã thực sự trở thành một workflow của bạn chưa — từ việc viết prompt, build màn hình, review kết quả, đến việc biết mình cần fix gì.</p>
+<p><strong>Việc cần làm:</strong></p>
+<ol>
+<li>Chọn một user goal khác với main journey</li>
+<li>Tự viết build prompt, đính kèm design files bạn có hoặc mô tả những gì AI cần biết</li>
+<li>Build journey, đối chiếu với main journey</li>
+<li>Review bằng 6 câu hỏi (Lesson 1), fix những gì cần thiết</li>
+<li>Mở rộng: thêm ít nhất 2 màn hình vào template, dùng đúng component inventory đã có — nếu cần component/template mới, áp dụng quy trình ở Lesson 2 trước khi tạo</li>
+<li>Ghi lại 1 điều AI làm sai ở các màn hình mới, và cách bạn đã sửa</li>
+<li>Nhìn lại quá trình: trả lời 3 câu hỏi ở Lesson 3 bằng ví dụ cụ thể</li>
+<li>Nộp bài: 1 link (live link hoặc repo) + đoạn nhìn lại quá trình</li>
+</ol>
+<p><strong>Kết quả tối thiểu:</strong></p>
+<ul>
+<li>Một journey mới chạy được, đã đi qua đủ 6 câu hỏi review</li>
+<li>Components và tokens nhất quán với main journey</li>
+<li>1 link + 1 đoạn nhìn lại quá trình 3 câu, dựa trên khung ở Lesson 3</li>
+</ul>
+<p>Phần tiếp theo (Section 5 — Stitching Prototype) sẽ dùng chính prototype này, cùng với prototype của những người khác nếu học trong nhóm, để học cách nối nhiều mảnh rời rạc thành một hành trình người dùng hoàn chỉnh.</p>
+<hr />
+<p><em>Khóa học: Systematic AI Prototyping for Product Designers · Practice (giữa Section 4 và Section 5)</em>
+<em>Thực hiện bởi Winnie Nguyen · Cập nhật lần cuối tháng 8/2026</em></p></article>
+  <div class="pg-pns"><span class="pg-pn pg-pn--prev"></span><a class="pg-pn pg-pn--next" href="ai-prototype-development-section-1-gioi-thieu-learning-section-1-lesson.html"><span>Next →</span>Section 1 · Giới Thiệu</a></div></div></div>
+</div><script>
+(function () {
+  var side = document.querySelector('.pg-side'), main = document.querySelector('.pg-main');
+  if (!side || !main) return;
+  var slug = side.dataset.prog, K = 'pgnav:' + slug, back = document.querySelector('.tp-back');
+  // Absolute hrefs, so the tree keeps working after the address changes without a reload.
+  [].forEach.call(side.querySelectorAll('a'), function (a) { a.setAttribute('href', a.href); });
+  if (back) back.setAttribute('href', back.href);
+  var groups = [].slice.call(side.querySelectorAll('details.pg-nav__grp'));
+  var saved = {}, top = null;
+  try { saved = JSON.parse(sessionStorage.getItem(K + ':open') || '{}'); top = sessionStorage.getItem(K + ':top'); } catch (e) {}
+  groups.forEach(function (d, i) { if (saved[i]) d.open = true; });
+  function save() {
+    var o = {}; groups.forEach(function (d, i) { if (d.open) o[i] = 1; });
+    try { sessionStorage.setItem(K + ':open', JSON.stringify(o)); sessionStorage.setItem(K + ':top', side.scrollTop); } catch (e) {}
+  }
+  groups.forEach(function (d) { d.addEventListener('toggle', save); });
+  side.addEventListener('scroll', save, { passive: true });
+  window.addEventListener('pagehide', save);
+
+  function reveal(a) {
+    var r = a.getBoundingClientRect(), s = side.getBoundingClientRect();
+    if (r.top < s.top + 8 || r.bottom > s.bottom - 8) side.scrollTop += r.top - s.top - side.clientHeight / 3;
+  }
+  function setActive(url) {
+    var found = null;
+    [].forEach.call(side.querySelectorAll('a'), function (a) {
+      var on = a.href === url;
+      a.classList.toggle('is-active', on);
+      if (on) { a.setAttribute('aria-current', 'page'); found = a; } else a.removeAttribute('aria-current');
+    });
+    if (found) { var d = found.closest('details'); if (d) d.open = true; reveal(found); }
+  }
+  if (top !== null) side.scrollTop = +top;
+  var cur = side.querySelector('a.is-active'); if (cur) { var dd = cur.closest('details'); if (dd) dd.open = true; if (top === null) reveal(cur); }
+
+  var ctl = null;
+  function load(url, push) {
+    if (ctl) ctl.abort();
+    ctl = window.AbortController ? new AbortController() : null;
+    fetch(url, ctl ? { signal: ctl.signal } : {}).then(function (r) { if (!r.ok) throw 0; return r.text(); }).then(function (t) {
+      var doc = new DOMParser().parseFromString(t, 'text/html'), nm = doc.querySelector('.pg-main');
+      if (!nm) throw 0;
+      [].forEach.call(nm.querySelectorAll('[href],[src]'), function (el) {
+        ['href', 'src'].forEach(function (k) {
+          var v = el.getAttribute(k);
+          if (v && !/^(#|[a-z]+:)/i.test(v)) el.setAttribute(k, new URL(v, url).href);
+        });
+      });
+      main.innerHTML = nm.innerHTML;
+      document.title = doc.title;
+      if (push) history.pushState(null, '', url);
+      setActive(url);
+      main.classList.remove('is-in'); void main.offsetWidth; main.classList.add('is-in');
+      window.scrollTo(0, 0);
+    }).catch(function (e) { if (e && e.name === 'AbortError') return; location.href = url; });
+  }
+  function inProgram(p) { return p.endsWith('/programs/' + slug + '.html') || p.indexOf('/programs/' + slug + '/') > -1; }
+  document.addEventListener('click', function (e) {
+    if (e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target.closest && e.target.closest('a');
+    if (!a || a.target || !(side.contains(a) || main.contains(a))) return;
+    var u = new URL(a.href, location.href);
+    if (u.origin !== location.origin || !u.pathname.endsWith('.html') || !inProgram(u.pathname)) return;
+    if (u.hash && u.pathname === location.pathname) return;
+    e.preventDefault();
+    var clean = u.origin + u.pathname + u.search;
+    if (clean === location.origin + location.pathname + location.search) { window.scrollTo(0, 0); return; }
+    load(clean, true);
+  });
+  window.addEventListener('popstate', function () { load(location.origin + location.pathname + location.search, false); });
+})();
+</script>
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Winnie Nguyen · Senior Product Designer</p>
+    <div class="footer-links">
+      <a href="mailto:nguyenphuctuongvan@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/winnienguyen2910" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+<script>(function(){if(location.protocol.indexOf('http')!==0)return;var u='../../assets/build-stamp.txt',last=null;function c(){fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.text():null}).then(function(t){if(t===null)return;if(last!==null&&t!==last)location.reload();last=t}).catch(function(){})}c();setInterval(c,1500)})();</script>
+</body>
+</html>

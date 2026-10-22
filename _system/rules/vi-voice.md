@@ -2,7 +2,7 @@
 
 File chuẩn cho mọi nội dung tiếng Việt trong thư mục này: lesson, slide outline, teleprompter, method card, recap session, tài liệu gửi mentee và học viên. Quy tắc được rút ra từ transcript các buổi mentoring của Winnie và từ chính những chỗ Winnie sửa khi review (2026-10-06).
 
-Ví dụ áp dụng thực tế: `programs/ai-design-workflow/voice-sample-vi.md` (bản thử, bảng trước và sau, một method card hoàn chỉnh).
+Ví dụ áp dụng thực tế: `programs/ai-design-workflow/learning/voice-sample-vi.md` (bản thử, bảng trước và sau, một method card hoàn chỉnh).
 
 ## Thứ tự ưu tiên khi có mâu thuẫn
 

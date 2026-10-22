@@ -139,7 +139,9 @@ def cmd_log(a):
     # private recap from the template (never published)
     if not list((d / "sessions").glob(f"session-{n:02d}-*.md")):
         t = (TEMPLATES / "_template-session.md").read_text(encoding="utf-8")
-        first = d.name.split("-")[0].title()
+        profile = d / "mentee.md"
+        m = re.search(r'^name:\s*"?([^"\n]+?)"?\s*$', profile.read_text(encoding="utf-8"), re.M) if profile.exists() else None
+        first = m.group(1) if m else d.name.split("-")[0].title()
         t = t.replace('title: ""', f'title: "Session {n} — {topic}"', 1).replace('student: ""', f'student: "{first}"', 1)
         t = t.replace("session_number: 1", f"session_number: {n}", 1).replace("date: 2026-00-00", f"date: {row[2]}", 1)
         (d / "sessions").mkdir(exist_ok=True)

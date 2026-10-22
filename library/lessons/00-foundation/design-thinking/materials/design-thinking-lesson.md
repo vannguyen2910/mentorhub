@@ -67,7 +67,7 @@ Ask students to do the following before the session:
 | 1 · Hook | Opening activity | What's one moment you struggled when starting a new initiative? | 10 min |
 | 2 · Problem | Context | Issues we're facing as UX designers + why design fails without process | 10 min |
 | 3 · Mindset | Teaching | Design Thinking definition + Product Designer capability pyramid | 10 min |
-| 4 · Framework | Teaching | The 5-Stage Cycle + the pattern most teams actually follow | 10 min |
+| 4 · Framework | Teaching | The 5-Stage Cycle + the pattern most teams actually follow + making space for discovery (2 min of the 10) | 10 min |
 | 5 · Empathise | Teaching | Stage 1: discovery activities + synthesis activities | 10 min |
 | 6 · Define | Teaching | Stage 2: Define tools (JTBD, HMW, Lean UX Canvas, journey mapping) | 10 min |
 | 7 · Ideate–Test | Teaching | Stages 3–5: Ideate, Prototype, and Test — activities overview | 10 min |
@@ -164,6 +164,18 @@ This session creates the vocabulary and tools for students to advocate for that 
 
 ---
 
+### Making Space: Delivery and Discovery in Parallel
+
+In a team that ships every sprint, the answer is rarely to stop delivering. A workable pattern is to run two tracks side by side: keep delivering the screens the team expects, and set aside a small, fixed share of time for discovery on a larger end-to-end improvement. The screens shipped each sprint then sit inside that bigger flow instead of standing alone.
+
+**How to ask.** Frame it as an addition to delivery, not a swap: *"I'll keep delivering, and I'd like to use a small part of my time to look at the bigger direction."* Asking to move most of the week to strategy usually fails.
+
+**What it produces.** One end-to-end flow, improved and documented, that the sprint work can point back to.
+
+> **Source and limits.** This is the author's own working method, not a published standard. The author's rule of thumb is about 30% of time for the strategy track `[to confirm: Winnie's own figure, present it as one example, not a rule]`. The right share depends on the team, the cycle length and who has to approve the time.
+
+---
+
 ### What Good Process Looks Like
 
 A good Design Thinking process, applied to a real project, produces these outputs at each stage:
@@ -235,7 +247,7 @@ The Prototype stage is about making ideas testable as quickly as possible. Not b
 **Activities:**
 - **Wireframes** — Structural layout showing content hierarchy and interaction patterns. No colour, no brand, no distraction.
 - **Interactive prototype** — States, transitions, navigation demos. Cover key interaction states: default, loading, empty, error, success.
-- **Proof of Concept (POC)** — Answers one question: does this idea actually work? Keep it rough and fast.
+- **Proof of Concept (POC)** — Answers one question: does this idea actually work? Keep it rough and fast. A prototype tests the *experience* with users. A POC tests a new business or technical *idea* in the real world, and mainly serves the product and engineering team. Example: a new financial product would take six months to a year to build in full, so the team builds a rough working version first to see whether there is demand, may skip the usual design standards for it, then decides to stop or to build it properly `[to confirm: the point about skipping design standards is the author's description of industry practice, find a source before it goes on a slide]`.
 
 ---
 

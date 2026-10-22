@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="noindex"/>
+<meta name="description" content="Second worked example of the activity flow standard (../../learning/method.md Part 1). Main in-class activity of the Discover lesson."/>
+<title>Example: User-Voice Synthesis — AI Design Workflow (program)</title>
+<link rel="stylesheet" href="../../assets/css/tokens.css"/>
+<link rel="stylesheet" href="../../assets/css/components.css"/>
+<link rel="stylesheet" href="../../assets/css/site.css"/>
+<link rel="stylesheet" href="../../assets/css/card-list.css"/>
+<link rel="stylesheet" href="../../assets/css/text-page.css"/>
+<link rel="stylesheet" href="../../assets/css/home.css"/>
+
+</head>
+<body class="">
+<nav>
+  <a class="nav-logo" href="../../index.html"><img src="../../assets/images/logo-nav.svg" alt="Winnie Nguyen — Training Hub"/></a>
+  <div class="nav-links">
+    <a href="../../lessons.html" data-text="Lesson Library">Lesson Library</a>
+    <a href="../../private-training.html" data-text="Private Training">Private Training</a>
+    <a href="../../programs.html" data-text="Programs" class=active>Programs</a>
+  </div>
+</nav>
+<div class="tp">
+  <a class="tp-back" href="../../programs.html">← All programs</a>
+  <div class="pg"><aside class="pg-side" data-prog="ai-design-workflow"><div class="pg-nav" role="navigation" aria-label="Program pages"><a class="pg-nav__home" href="../ai-design-workflow.html">Overview</a><p class="pg-nav__label">Examples</p><ul><li><a href="ai-design-workflow-examples-competitor-analysis-readme.html">Example: Competitor Analysis</a></li><li><a href="ai-design-workflow-examples-user-flow-process-map-readme.html">Example: User Flow and Process Map with AI</a></li><li><a class="is-active" aria-current="page" href="ai-design-workflow-examples-user-voice-synthesis-readme.html">Example: User-Voice Synthesis</a></li></ul></div></aside><div class="pg-main"><header class="tp-head">
+    <div class="page-eyebrow">Examples</div>
+    <h1 class="page-title">Example: User-Voice Synthesis</h1>
+  </header>
+  <article class="tp-body"><p>Second worked example of the activity flow standard (<code>../../learning/method.md</code> Part 1). Main in-class activity of the Discover lesson.</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>activity flow diagram</td>
+<td><code>../../assets/diagrams/user-voice-synthesis-activity-flow.svg</code></td>
+</tr>
+<tr>
+<td>step cards</td>
+<td><code>step-cards.md</code> (this folder)</td>
+</tr>
+<tr>
+<td>Hub page</td>
+<td>Evidence page of <code>../../assets/templates/hub/</code> ("What users said")</td>
+</tr>
+</tbody>
+</table>
+<p>Pattern: A Investigate · 8 steps · 3 gates (A right voices, B word for word and traceable, C weighed, not counted). Pair it with the competitor analysis (<code>../competitor-analysis/</code>) so every evidence pack covers both what others do and what users say or do.</p></article>
+  <div class="pg-pns"><a class="pg-pn pg-pn--prev" href="ai-design-workflow-examples-user-flow-process-map-readme.html"><span>← Previous</span>Example: User Flow and Process Map with AI</a><span class="pg-pn pg-pn--next"></span></div></div></div>
+</div><script>
+(function () {
+  var side = document.querySelector('.pg-side'), main = document.querySelector('.pg-main');
+  if (!side || !main) return;
+  var slug = side.dataset.prog, K = 'pgnav:' + slug, back = document.querySelector('.tp-back');
+  // Absolute hrefs, so the tree keeps working after the address changes without a reload.
+  [].forEach.call(side.querySelectorAll('a'), function (a) { a.setAttribute('href', a.href); });
+  if (back) back.setAttribute('href', back.href);
+  var groups = [].slice.call(side.querySelectorAll('details.pg-nav__grp'));
+  var saved = {}, top = null;
+  try { saved = JSON.parse(sessionStorage.getItem(K + ':open') || '{}'); top = sessionStorage.getItem(K + ':top'); } catch (e) {}
+  groups.forEach(function (d, i) { if (saved[i]) d.open = true; });
+  function save() {
+    var o = {}; groups.forEach(function (d, i) { if (d.open) o[i] = 1; });
+    try { sessionStorage.setItem(K + ':open', JSON.stringify(o)); sessionStorage.setItem(K + ':top', side.scrollTop); } catch (e) {}
+  }
+  groups.forEach(function (d) { d.addEventListener('toggle', save); });
+  side.addEventListener('scroll', save, { passive: true });
+  window.addEventListener('pagehide', save);
+
+  function reveal(a) {
+    var r = a.getBoundingClientRect(), s = side.getBoundingClientRect();
+    if (r.top < s.top + 8 || r.bottom > s.bottom - 8) side.scrollTop += r.top - s.top - side.clientHeight / 3;
+  }
+  function setActive(url) {
+    var found = null;
+    [].forEach.call(side.querySelectorAll('a'), function (a) {
+      var on = a.href === url;
+      a.classList.toggle('is-active', on);
+      if (on) { a.setAttribute('aria-current', 'page'); found = a; } else a.removeAttribute('aria-current');
+    });
+    if (found) { var d = found.closest('details'); if (d) d.open = true; reveal(found); }
+  }
+  if (top !== null) side.scrollTop = +top;
+  var cur = side.querySelector('a.is-active'); if (cur) { var dd = cur.closest('details'); if (dd) dd.open = true; if (top === null) reveal(cur); }
+
+  var ctl = null;
+  function load(url, push) {
+    if (ctl) ctl.abort();
+    ctl = window.AbortController ? new AbortController() : null;
+    fetch(url, ctl ? { signal: ctl.signal } : {}).then(function (r) { if (!r.ok) throw 0; return r.text(); }).then(function (t) {
+      var doc = new DOMParser().parseFromString(t, 'text/html'), nm = doc.querySelector('.pg-main');
+      if (!nm) throw 0;
+      [].forEach.call(nm.querySelectorAll('[href],[src]'), function (el) {
+        ['href', 'src'].forEach(function (k) {
+          var v = el.getAttribute(k);
+          if (v && !/^(#|[a-z]+:)/i.test(v)) el.setAttribute(k, new URL(v, url).href);
+        });
+      });
+      main.innerHTML = nm.innerHTML;
+      document.title = doc.title;
+      if (push) history.pushState(null, '', url);
+      setActive(url);
+      main.classList.remove('is-in'); void main.offsetWidth; main.classList.add('is-in');
+      window.scrollTo(0, 0);
+    }).catch(function (e) { if (e && e.name === 'AbortError') return; location.href = url; });
+  }
+  function inProgram(p) { return p.endsWith('/programs/' + slug + '.html') || p.indexOf('/programs/' + slug + '/') > -1; }
+  document.addEventListener('click', function (e) {
+    if (e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target.closest && e.target.closest('a');
+    if (!a || a.target || !(side.contains(a) || main.contains(a))) return;
+    var u = new URL(a.href, location.href);
+    if (u.origin !== location.origin || !u.pathname.endsWith('.html') || !inProgram(u.pathname)) return;
+    if (u.hash && u.pathname === location.pathname) return;
+    e.preventDefault();
+    var clean = u.origin + u.pathname + u.search;
+    if (clean === location.origin + location.pathname + location.search) { window.scrollTo(0, 0); return; }
+    load(clean, true);
+  });
+  window.addEventListener('popstate', function () { load(location.origin + location.pathname + location.search, false); });
+})();
+</script>
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Winnie Nguyen · Senior Product Designer</p>
+    <div class="footer-links">
+      <a href="mailto:nguyenphuctuongvan@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/winnienguyen2910" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+<script>(function(){if(location.protocol.indexOf('http')!==0)return;var u='../../assets/build-stamp.txt',last=null;function c(){fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.text():null}).then(function(t){if(t===null)return;if(last!==null&&t!==last)location.reload();last=t}).catch(function(){})}c();setInterval(c,1500)})();</script>
+</body>
+</html>

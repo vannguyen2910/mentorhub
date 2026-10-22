@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="noindex"/>
+<meta name="description" content="Tới đây, bạn đã có ít nhất 1 prototype chạy được, dựng bằng Claude Design hoặc Figma Make. Nó đủ tốt để demo, đủ tốt để test flow. Nhưng nó vẫn sống trong đúng 1 tool: đóng tài khoản, hết hạn dùng thử, hay tool ngừng hỗ trợ, prototype cũng "/>
+<title>Section 5: Xây Dựng AI Prototype bằng Claude Code — AI Prototype Development</title>
+<link rel="stylesheet" href="../../assets/css/tokens.css"/>
+<link rel="stylesheet" href="../../assets/css/components.css"/>
+<link rel="stylesheet" href="../../assets/css/site.css"/>
+<link rel="stylesheet" href="../../assets/css/card-list.css"/>
+<link rel="stylesheet" href="../../assets/css/text-page.css"/>
+<link rel="stylesheet" href="../../assets/css/home.css"/>
+
+</head>
+<body class="">
+<nav>
+  <a class="nav-logo" href="../../index.html"><img src="../../assets/images/logo-nav.svg" alt="Winnie Nguyen — Training Hub"/></a>
+  <div class="nav-links">
+    <a href="../../lessons.html" data-text="Lesson Library">Lesson Library</a>
+    <a href="../../private-training.html" data-text="Private Training">Private Training</a>
+    <a href="../../programs.html" data-text="Programs" class=active>Programs</a>
+  </div>
+</nav>
+<div class="tp">
+  <a class="tp-back" href="../../programs.html">← All programs</a>
+  <div class="pg"><aside class="pg-side" data-prog="ai-prototype-development"><div class="pg-nav" role="navigation" aria-label="Program pages"><a class="pg-nav__home" href="../ai-prototype-development.html">Overview</a><p class="pg-nav__label">Course sections</p><ul><li><a href="ai-prototype-development-practice-xay-dung-prototype-bang-ai-practice-lesson.html">Practice: Xây Dựng Prototype Bằng AI</a></li><li><a href="ai-prototype-development-section-1-gioi-thieu-learning-section-1-lesson.html">Section 1 · Giới Thiệu</a></li><li><a href="ai-prototype-development-section-2-thay-doi-tu-duy-phat-trien-ai-prototype-section-2-lesson.html">Section 2 · Phần A: Tư Duy Pattern-First</a></li><li><a href="ai-prototype-development-section-3-xay-dung-ai-prototype-bang-claude-design-section-3-lesson.html">Section 3: Xây Dựng AI Prototype bằng Claude Design</a></li><li><a href="ai-prototype-development-section-4-xay-dung-ai-prototype-bang-figma-make-section-4-lesson.html">Section 4: Xây Dựng AI Prototype bằng Figma Make</a></li><li><a class="is-active" aria-current="page" href="ai-prototype-development-section-5-xay-dung-ai-prototype-bang-claude-code-section-5-lesson.html">Section 5: Xây Dựng AI Prototype bằng Claude Code</a></li><li><a href="ai-prototype-development-section-6-stitching-prototype-section-6-lesson.html">Section 6: Stitching Prototype</a></li></ul><p class="pg-nav__label">Course docs</p><ul><li><a href="ai-prototype-development-course-02-outline-brief.html">Course 02 — Systematic AI Prototyping for Product Designers: Toàn Bộ Outline Khóa Học</a></li><li><a href="ai-prototype-development-landing-page-copy.html">Landing Page Copy: Systematic AI Prototyping for Product Designers</a></li><li><a href="ai-prototype-development-writing-style-guide.html">Voice &amp; Writing Style Guide — AI Prototype Development Course</a></li></ul></div></aside><div class="pg-main"><header class="tp-head">
+    <div class="page-eyebrow">Course sections</div>
+    <h1 class="page-title">Section 5: Xây Dựng AI Prototype bằng Claude Code</h1>
+  </header>
+  <article class="tp-body"><h2 id="tổng-quan-section">Tổng Quan Section</h2>
+<blockquote>
+<p><strong>Section mới (2026-08-19):</strong> Section này dùng Claude Code làm ví dụ chính xuyên suốt, giống cách track Claude Design đã làm trước đó. Cursor hoạt động theo đúng logic tương tự (MCP, rules file, prompt để build và publish), chỉ khác tên gọi ở vài chỗ, sẽ được ghi chú riêng khi cần. Đây là ngoại lệ có chủ đích với quy tắc gọi tên tool chung chung của khoá học.</p>
+</blockquote>
+<p>Tới đây, bạn đã có ít nhất 1 prototype chạy được, dựng bằng Claude Design hoặc Figma Make. Nó đủ tốt để demo, đủ tốt để test flow. Nhưng nó vẫn sống trong đúng 1 tool: đóng tài khoản, hết hạn dùng thử, hay tool ngừng hỗ trợ, prototype cũng biến mất theo.</p>
+<p>Section này đưa design system và prototype pattern đã có qua một bước khác: build bằng 1 AI coding tool thật, ra code thật, rồi publish thành 1 link thật, độc lập với bất kỳ tool AI nào, ai cũng mở được, tự cập nhật mỗi lần bạn sửa.</p>
+<p>Đây cũng là lựa chọn khó hơn, và đòi hỏi nhiều kỹ năng hơn, so với việc dừng lại ở Claude Design hay Figma Make. Bạn cần thêm một số kỹ năng: đọc hiểu code ở mức cơ bản, làm quen với MCP, và biết cách publish qua GitHub. Cân nhắc kỹ trước khi chọn đi tiếp.</p>
+<p><strong>Kết thúc section này, bạn sẽ có thể:</strong></p>
+<ol>
+<li>Nhận biết khi nào bước build bằng code thật đáng làm, và khi nào prototype trong Claude Design hay Figma Make đã đủ</li>
+<li>Nối AI coding tool với Figma qua MCP, đọc đúng token và component đang có</li>
+<li>Đưa design system vào codebase, dù bạn bắt đầu từ 1 repo có sẵn hay từ đúng file Figma</li>
+<li>Build và refine main journey bằng prompt, ngay trong code thật</li>
+<li>Publish prototype lên GitHub và có 1 link thật, tự cập nhật mỗi lần sửa code</li>
+</ol>
+<p><strong>Nội dung section:</strong></p>
+<ul>
+<li>4 lesson</li>
+<li>Cần có: design system đã chuẩn bị từ trước (token, component, template), 1 AI coding tool (Claude Code hoặc Cursor), 1 tài khoản GitHub</li>
+</ul>
+<hr />
+<h2 id="nội-dung-lesson">Nội Dung Lesson</h2>
+<h3 id="lesson-1-vì-sao-khi-nào-cần-bước-này">Lesson 1: Vì Sao &amp; Khi Nào Cần Bước Này</h3>
+<p><em>Prototype chạy được và prototype có thể sống lâu hơn không phải lúc nào cũng là một.</em></p>
+<p>Claude Design và Figma Make tạo prototype chạy được ngay trong trình duyệt, đủ để demo, đủ để test flow. Nhưng cả 2 đều sống trong đúng 1 tool: prototype nằm trên server của tool đó, không phải 1 thứ bạn cầm trong tay và mang đi đâu cũng được.</p>
+<p>Build bằng AI coding tool khác ở chỗ: kết quả là code thật, nằm trong 1 repo, chạy được ở bất kỳ đâu hỗ trợ web, không phụ thuộc 1 tài khoản hay 1 tool duy nhất còn sống hay không.</p>
+<p><strong>Bước này đáng làm khi:</strong></p>
+<ul>
+<li>Bạn cần gửi prototype cho dev, để họ tiếp tục code thật từ đó, không phải build lại từ đầu</li>
+<li>Bạn cần test trên thiết bị thật, ngoài môi trường preview có sẵn trong tool</li>
+<li>Bạn muốn giữ 1 link portfolio sống lâu dài, không phụ thuộc tài khoản của tool AI đang dùng</li>
+</ul>
+<p><strong>Không cần thiết khi:</strong> bạn chỉ demo nội bộ nhanh, hoặc prototype đã hoàn thành đúng mục đích của nó rồi. Cách publish có sẵn trong tool bạn đang dùng vẫn đủ cho phần lớn trường hợp.</p>
+<p><strong>Đây cũng là lựa chọn khó hơn, và đòi hỏi nhiều kỹ năng hơn 2 track trước.</strong> Claude Design hay Figma Make vẫn là thao tác trong 1 tool thiết kế. Đi tiếp sang code thật, bạn cần thêm một số kỹ năng: đọc hiểu code ở mức cơ bản, làm quen với MCP, và biết cách publish qua GitHub. Cân nhắc kỹ trước khi chọn đi tiếp, đây không phải bước "nâng cấp" mặc định ai cũng nên làm.</p>
+<p><strong>Một khái niệm mới ở đây: MCP.</strong> Claude Design và Figma Make tự đọc được file Figma, vì cơ chế đó được xây sẵn bên trong tool. AI coding tool như Claude Code hay Cursor không có sẵn cơ chế đó, vì bản thân nó không phải tool thiết kế. MCP, viết tắt của Model Context Protocol, là cầu nối bạn tự bắc, để AI coding tool đọc được token, component, và layout từ đúng file Figma của bạn, thay vì bạn phải gõ lại toàn bộ design system thành lời mỗi lần.</p>
+<p><strong>Một điều cần nói rõ trước khi bắt đầu:</strong> kết quả ở section này vẫn là 1 prototype, không phải sản phẩm production. Có link chạy thật không có nghĩa là sẵn sàng cho user thật dùng. Bảo mật, xử lý lỗi, hay khả năng chịu tải chưa nằm trong phạm vi của bước này.</p>
+<p><strong>Kết quả tối thiểu:</strong> xác định được lý do bạn cần bước này, và AI coding tool bạn sẽ dùng, Claude Code hoặc Cursor.</p>
+<hr />
+<h3 id="lesson-2-đưa-design-system-vào-chọn-đúng-nhánh">Lesson 2: Đưa Design System Vào: Chọn Đúng Nhánh</h3>
+<p><em>Có sẵn code trên GitHub hay chỉ có Figma, quyết định bạn bắt đầu từ đâu.</em></p>
+<p>Trước khi build màn hình nào, AI coding tool cần biết token, component, và rule của bạn, giống cách track Claude Design cần 1 Design System file trước khi build. Cách đưa design system vào tuỳ thuộc bạn đang có gì sẵn.</p>
+<p><strong>Nhánh A · Đã có design system dạng code trên GitHub</strong></p>
+<p>Nếu team bạn đã có sẵn 1 component library hay token repo, do dev build từ trước, việc của bạn đơn giản hơn: trỏ AI coding tool vào đúng repo đó, để nó đọc convention đang có. Không cần dựng lại từ đầu, không cần MCP.</p>
+<p><strong>Nhánh B · Chỉ có Figma, chưa có code</strong></p>
+<p>Đây là trường hợp phổ biến hơn với Product Designer: design system chỉ tồn tại trong Figma, chưa từng thành code. Lúc này bạn cần MCP, làm 1 lần duy nhất:</p>
+<ol>
+<li>Nối AI coding tool với Figma qua MCP. Với Claude Code, cài qua plugin có sẵn rồi xác thực quyền truy cập. Với Cursor, bật Dev Mode MCP Server ngay trong Figma desktop app, rồi thêm vào danh sách MCP tool của Cursor.</li>
+<li>Xác nhận kết nối thành công, thường có dấu hiệu rõ như trạng thái "connected" hoặc số lượng tool hiển thị đúng.</li>
+<li>Từ đây, AI coding tool đọc được component, variable (token), và layout trực tiếp từ file Figma bạn chỉ định, không cần bạn mô tả lại bằng lời.</li>
+</ol>
+<p><strong>Dù đi nhánh nào, kết thúc bằng 1 rules file cho project.</strong> File này có thể giữ: Design System (dùng system nào), Component (ưu tiên reuse component có sẵn), Code (cấu trúc code và cách đặt tên), Pattern (những pattern cần giữ nhất quán), và Rules (những điều AI phải luôn tuân theo). Nếu có một rule bạn phải nhắc lại nhiều lần khi prompt, đưa nó vào rules file, để AI đọc lại mỗi lần làm việc với project, không phải đoán lại từ đầu mỗi lần.</p>
+<p><strong>Kết quả tối thiểu:</strong> AI coding tool đã đọc được đúng design system của bạn, qua repo có sẵn hoặc qua MCP, và có 1 rules file phản ánh đúng token, component, và rule cần giữ.</p>
+<hr />
+<h3 id="lesson-3-build-refine-prototype-bằng-prompt">Lesson 3: Build &amp; Refine Prototype Bằng Prompt</h3>
+<p><em>Code thật, nhưng cách mình làm vẫn quen thuộc.</em></p>
+<p>Khung 5 thành phần đã học trước đó áp dụng y hệt ở đây: Goal, Layout, Content, Audience, Flow context. AI coding tool không cần 1 cú pháp prompt khác, nó cần cùng lượng thông tin cụ thể để không phải đoán.</p>
+<p><strong>Prompt build 1 màn hình, ví dụ:</strong></p>
+<blockquote>
+<p>"Build màn hình Explore Feed. Goal: User đang khám phá các địa điểm được gợi ý. Layout: Header, mode switcher, search, filter, feed và bottom navigation. Content: Dùng sample content thật, không dùng lorem ipsum. Audience: Guest user chưa đăng ký. Flow context: User đến từ Onboarding và có thể đi tới Tip Detail. Dùng component và token từ Figma, reuse component có sẵn trước khi tạo mới. Tuân theo CLAUDE.md."</p>
+</blockquote>
+<p>Không có gì magic ở đây. Đây là brief cho AI giống như brief cho một designer hoặc developer khác: user là ai, màn hình cần làm gì, có những gì, nằm ở đâu trong flow, và dùng system nào.</p>
+<p><strong>Khác biệt khi build:</strong> AI coding tool sửa trực tiếp trong file code, không có canvas riêng để xem trước như bạn đã quen. Cách review: chạy thử ngay trên máy, thường chỉ cần 1 lệnh khởi động mà AI coding tool có thể tự chạy giúp nếu bạn yêu cầu, mở trình duyệt, rồi so với file Figma gốc.</p>
+<p><strong>Đừng mong lần đầu đã giống Figma 100%.</strong> Có thể spacing lệch, typography chưa đúng, một component bị tạo mới dù đã có component tương tự, hoặc interaction còn thiếu. Không sao. Việc đầu tiên cần biết là nó đang đi đúng hướng chưa. Nếu đúng hướng thì sửa tiếp, nếu sai hướng thì quay lại prompt hoặc context. Đừng ngồi soi từng pixel ngay từ giây đầu, nhưng cũng đừng thấy nó "trông khá ổn" rồi bấm build tiếp cả 10 màn hình.</p>
+<p><strong>Một lỗi lặp lại nhiều lần thì đừng sửa từng màn hình.</strong> Component sai thì sửa component. Token sai thì sửa token. Rule sai thì sửa CLAUDE.md. Chỉ khi đúng 1 màn hình sai thì mới sửa riêng màn hình đó. Trước khi sửa, hỏi một câu: lỗi này bắt đầu từ đâu. Tìm đúng nguồn sẽ nhẹ hơn rất nhiều so với prompt lại từng màn hình mỗi lần gặp lỗi.</p>
+<p><strong>Kết quả tối thiểu:</strong> main journey 2-4 màn hình, chạy được trên máy bạn, dùng đúng component và token từ rules file.</p>
+<hr />
+<h3 id="lesson-4-github-là-gì-publish-bằng-prompt">Lesson 4: GitHub Là Gì &amp; Publish Bằng Prompt</h3>
+<p><em>Code xong rồi. Giờ cho nó một chỗ để sống.</em></p>
+<p>Không cần biến mình thành developer. Workflow cơ bản chỉ có vậy: code, GitHub, hosting, link.</p>
+<p><strong>GitHub là gì:</strong> code đang nằm trên máy bạn. GitHub giúp giữ nó ở một chỗ có thể tiếp tục làm việc. Claude Code có thể giúp bạn làm hết phần command: tạo Git repository, commit, tạo GitHub repository, push code. Sau đó hosting lấy code từ GitHub để build website. Nếu bạn chưa dùng GitHub bao giờ thì đừng lo, khoá này không học Git, chỉ cần hiểu nó nằm ở đâu trong workflow.</p>
+<p><strong>Publish:</strong> sau khi nối GitHub với 1 dịch vụ hosting như Vercel hoặc Netlify, phần còn lại khá đơn giản. Mỗi lần code được push lên GitHub, hosting sẽ build lại, bạn vẫn dùng một link đó. Code thay đổi thì website thay đổi theo.</p>
+<p><strong>Trước khi đẩy code lên GitHub, luôn kiểm tra 1 điều:</strong> không có API key, password, secret, hay dữ liệu thật nào bị viết cứng trong code. GitHub repo mặc định có thể công khai, và đây vẫn là prototype để demo, không phải nơi lưu thông tin thật.</p>
+<p><strong>Trước khi gửi link, check thêm 2 việc:</strong></p>
+<ul>
+<li>Mở thử bằng incognito, thiết bị khác, hoặc account khác nếu cần</li>
+<li>Cho người nhận biết prototype này dùng để làm gì</li>
+</ul>
+<p>Có URL nhìn rất "real" không có nghĩa là production-ready. Prototype chạy trên web vẫn là prototype.</p>
+<p><strong>Kết quả tối thiểu:</strong> code đã đẩy lên GitHub, nối với 1 dịch vụ hosting, có 1 link thật đã xác nhận mở được, sẵn sàng gửi cho stakeholder hoặc dev.</p>
+<hr />
+<h2 id="nguồn-tham-khảo">Nguồn Tham Khảo</h2>
+<ul>
+<li>Figma Help Center — <a href="https://help.figma.com/hc/en-us/articles/39888612464151-Claude-Code-and-Figma-Set-up-the-MCP-server">Claude Code and Figma: Set up the MCP server</a></li>
+<li>Figma Developers — <a href="https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/">Set up the remote server (recommended)</a></li>
+<li>Figma Developers — <a href="https://developers.figma.com/docs/figma-mcp-server/code-connect-integration">Code Connect integration with the Figma MCP server</a></li>
+<li>Builder.io — <a href="https://www.builder.io/blog/cursor-figma-mcp-server">Cursor + Figma MCP Server</a></li>
+<li>Claude Code Docs — <a href="https://code.claude.com/docs/en/memory">How Claude remembers your project</a></li>
+<li>Design Systems Collective — <a href="https://www.designsystemscollective.com/from-prompt-to-production-a-designers-step-by-step-workflow-with-claude-design-claude-code-a7705daad026">From Prompt to Production: A Designer's Step-by-Step Workflow</a></li>
+<li>MindStudio — <a href="https://www.mindstudio.ai/blog/deploy-claude-code-project-github-vercel">How to Deploy a Claude Code Project to GitHub and Vercel</a></li>
+<li>Vercel — <a href="https://vercel.com/i/deploy-to-vercel-without-git">4 ways to put a website on Vercel without Git or a CLI</a></li>
+</ul>
+<hr />
+<p><em>Khóa học: Systematic AI Prototyping for Product Designers · Section 5 — Xây Dựng AI Prototype bằng Claude Code</em>
+<em>Thực hiện bởi Winnie Nguyen · Cập nhật lần cuối tháng 8/2026</em></p></article>
+  <div class="pg-pns"><a class="pg-pn pg-pn--prev" href="ai-prototype-development-section-4-xay-dung-ai-prototype-bang-figma-make-section-4-lesson.html"><span>← Previous</span>Section 4: Xây Dựng AI Prototype bằng Figma Make</a><a class="pg-pn pg-pn--next" href="ai-prototype-development-section-6-stitching-prototype-section-6-lesson.html"><span>Next →</span>Section 6: Stitching Prototype</a></div></div></div>
+</div><script>
+(function () {
+  var side = document.querySelector('.pg-side'), main = document.querySelector('.pg-main');
+  if (!side || !main) return;
+  var slug = side.dataset.prog, K = 'pgnav:' + slug, back = document.querySelector('.tp-back');
+  // Absolute hrefs, so the tree keeps working after the address changes without a reload.
+  [].forEach.call(side.querySelectorAll('a'), function (a) { a.setAttribute('href', a.href); });
+  if (back) back.setAttribute('href', back.href);
+  var groups = [].slice.call(side.querySelectorAll('details.pg-nav__grp'));
+  var saved = {}, top = null;
+  try { saved = JSON.parse(sessionStorage.getItem(K + ':open') || '{}'); top = sessionStorage.getItem(K + ':top'); } catch (e) {}
+  groups.forEach(function (d, i) { if (saved[i]) d.open = true; });
+  function save() {
+    var o = {}; groups.forEach(function (d, i) { if (d.open) o[i] = 1; });
+    try { sessionStorage.setItem(K + ':open', JSON.stringify(o)); sessionStorage.setItem(K + ':top', side.scrollTop); } catch (e) {}
+  }
+  groups.forEach(function (d) { d.addEventListener('toggle', save); });
+  side.addEventListener('scroll', save, { passive: true });
+  window.addEventListener('pagehide', save);
+
+  function reveal(a) {
+    var r = a.getBoundingClientRect(), s = side.getBoundingClientRect();
+    if (r.top < s.top + 8 || r.bottom > s.bottom - 8) side.scrollTop += r.top - s.top - side.clientHeight / 3;
+  }
+  function setActive(url) {
+    var found = null;
+    [].forEach.call(side.querySelectorAll('a'), function (a) {
+      var on = a.href === url;
+      a.classList.toggle('is-active', on);
+      if (on) { a.setAttribute('aria-current', 'page'); found = a; } else a.removeAttribute('aria-current');
+    });
+    if (found) { var d = found.closest('details'); if (d) d.open = true; reveal(found); }
+  }
+  if (top !== null) side.scrollTop = +top;
+  var cur = side.querySelector('a.is-active'); if (cur) { var dd = cur.closest('details'); if (dd) dd.open = true; if (top === null) reveal(cur); }
+
+  var ctl = null;
+  function load(url, push) {
+    if (ctl) ctl.abort();
+    ctl = window.AbortController ? new AbortController() : null;
+    fetch(url, ctl ? { signal: ctl.signal } : {}).then(function (r) { if (!r.ok) throw 0; return r.text(); }).then(function (t) {
+      var doc = new DOMParser().parseFromString(t, 'text/html'), nm = doc.querySelector('.pg-main');
+      if (!nm) throw 0;
+      [].forEach.call(nm.querySelectorAll('[href],[src]'), function (el) {
+        ['href', 'src'].forEach(function (k) {
+          var v = el.getAttribute(k);
+          if (v && !/^(#|[a-z]+:)/i.test(v)) el.setAttribute(k, new URL(v, url).href);
+        });
+      });
+      main.innerHTML = nm.innerHTML;
+      document.title = doc.title;
+      if (push) history.pushState(null, '', url);
+      setActive(url);
+      main.classList.remove('is-in'); void main.offsetWidth; main.classList.add('is-in');
+      window.scrollTo(0, 0);
+    }).catch(function (e) { if (e && e.name === 'AbortError') return; location.href = url; });
+  }
+  function inProgram(p) { return p.endsWith('/programs/' + slug + '.html') || p.indexOf('/programs/' + slug + '/') > -1; }
+  document.addEventListener('click', function (e) {
+    if (e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target.closest && e.target.closest('a');
+    if (!a || a.target || !(side.contains(a) || main.contains(a))) return;
+    var u = new URL(a.href, location.href);
+    if (u.origin !== location.origin || !u.pathname.endsWith('.html') || !inProgram(u.pathname)) return;
+    if (u.hash && u.pathname === location.pathname) return;
+    e.preventDefault();
+    var clean = u.origin + u.pathname + u.search;
+    if (clean === location.origin + location.pathname + location.search) { window.scrollTo(0, 0); return; }
+    load(clean, true);
+  });
+  window.addEventListener('popstate', function () { load(location.origin + location.pathname + location.search, false); });
+})();
+</script>
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Winnie Nguyen · Senior Product Designer</p>
+    <div class="footer-links">
+      <a href="mailto:nguyenphuctuongvan@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/winnienguyen2910" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+<script>(function(){if(location.protocol.indexOf('http')!==0)return;var u='../../assets/build-stamp.txt',last=null;function c(){fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.text():null}).then(function(t){if(t===null)return;if(last!==null&&t!==last)location.reload();last=t}).catch(function(){})}c();setInterval(c,1500)})();</script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # 🔄 Workflow Rules
 
-**Last Updated:** 2026-05-08
+**Last Updated:** 2026-10-22 (folder and template paths corrected, rules unchanged)
 **Author:** Winnie Nguyen
 **Purpose:** Rules for recurring workflow situations that sit between content creation — sourcing old material, adapting private work, handling ambiguity, and keeping content findable.
 
@@ -35,7 +35,7 @@ If only 1 or 2 apply — leave it in `source/`. Don't migrate content just becau
 
 1. **Copy, don't move** — always leave the original in `source/` untouched
 2. **Rename to current convention** — lowercase-hyphens, clear title (e.g. `how-might-we-framing.md`)
-3. **Update structure** — apply the current lesson or slide template (see `_system/templates/`)
+3. **Update structure** — apply the current lesson or slide template (see `_system/learning templates/`)
 4. **Modernize content:**
    - Replace outdated examples with current ones
    - Add the "AI in Practice" section (Rule LP-4 in `mentoring-rules.md`)
@@ -65,7 +65,7 @@ If only 1 or 2 apply — leave it in `source/`. Don't migrate content just becau
 
 ### When this applies
 
-Any time content from a private mentee session (Anh Truong, Vy Duong, or any future private student) is used as the basis for a class lesson, slide deck, or guide.
+Any time content from a private mentee session (any private student) is used as the basis for a class lesson, slide deck, or guide.
 
 ### Adaptation checklist
 
@@ -303,15 +303,15 @@ Saved alongside the planned artifact with a `-brief.md` suffix (e.g. `design-thi
 
 **Status:** Active | **Priority:** High
 
-`Inbox/` is a **temporary processing zone**. Nothing stays there permanently. When you ask Claude to process inbox items, it routes each one to its permanent home and creates any structured artifacts in the correct folder.
+`_inbox/` is a **temporary processing zone**. Nothing stays there permanently. When you ask Claude to process inbox items, it routes each one to its permanent home and creates any structured artifacts in the correct folder.
 
 ### The rule in one sentence
 
-Move the source to where it belongs, build the artifact where it will live, leave nothing in Inbox.
+Move the source to where it belongs, build the artifact where it will live, leave nothing in `_inbox/`.
 
 ### Processing sequence
 
-For each item in `Inbox/`, Claude:
+For each item in `_inbox/`, Claude:
 
 1. **Reads the item** — identifies content type and intended audience
 2. **Triages** — determines destination using the routing table below (applies WF-3 if ambiguous)
@@ -328,8 +328,8 @@ For each item in `Inbox/`, Claude:
 | Rough slide content | `source/` | Brief → `library/slides/[name]/` |
 | Private session notes | `mentees/[mentee]/sessions/` | — (private, no published artifact) |
 | Framework or guide draft | `source/` | `library/guides/` or `library/frameworks/` |
-| Reusable template | `_system/templates/` | — |
-| Asset (image, export) | `Assets/` | — |
+| Reusable template | `_system/learning templates/` | — |
+| Asset (image, export) | The lesson's own `assets/` folder | — |
 | Ambiguous | Stop and triage (WF-3) | Confirmed by you before moving |
 
 ### Triggers
@@ -340,10 +340,10 @@ For each item in `Inbox/`, Claude:
 
 ### What Claude never does
 
-- Leave a processed item in `Inbox/` after routing
+- Leave a processed item in `_inbox/` after routing
 - Move a file without telling you where it went
 - Skip the WF-5 brief step if the item requires a build
-- Delete anything from `Inbox/` — items are always moved, never deleted
+- Delete anything from `_inbox/` — items are always moved, never deleted
 
 ---
 
@@ -356,7 +356,7 @@ For each item in `Inbox/`, Claude:
 | **WF-3** | How Claude handles ambiguous situations | Every time Claude faces uncertainty |
 | **WF-4** | Consistent tag vocabulary for all content | When writing frontmatter in any file |
 | **WF-5** | Content brief gate before any build | Every HTML, slide deck, or design request |
-| **WF-6** | Inbox processing — route source, build artifact, clear inbox | When processing items from `Inbox/` |
+| **WF-6** | Inbox processing — route source, build artifact, clear inbox | When processing items from `_inbox/` |
 
 ---
 

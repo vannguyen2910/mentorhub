@@ -8,6 +8,7 @@ One page. Your rules for this project — for you and for your AI tool. Copy it 
 3. **Branch names:** `area/short-description` — e.g. `tokens/update-spacing`, `components/button-states`.
 4. **Commit notes** say what changed and why, in one line.
 5. **This project is public.** Never add passwords, keys or `.env` files. Git history is permanent.
+6. **Change folders and files by prompt, not by hand.** Ask your AI tool to create, move or rename them, so the history records what changed and you can revert it. If you do edit by hand, commit that change straight away with a note.
 
 ## Opening a pull request
 Every pull request has:
@@ -29,6 +30,7 @@ Point it at the rules file and this file first. It must follow the tokens and co
 
 Useful prompts (from the Lesson 4 deck):
 - Check if GitHub has anything new for this project, and bring it into my folder.
+- Make the live site open <file> as its main page. *(When the live URL shows the wrong page.)*
 - Run localhost so I can preview my work.
 - Create a new branch called area/short-description and switch to it. Don't touch main.
 - Show me what I've changed since my last commit, in plain language.

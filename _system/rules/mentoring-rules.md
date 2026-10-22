@@ -1,6 +1,6 @@
 # 📚 Complete Mentoring Rules System
 
-**Last Updated:** 2026-04-30  
+**Last Updated:** 2026-10-22 (folder and template paths corrected, rules unchanged)  
 **Author:** Winnie Nguyen  
 **Purpose:** Central rulebook for efficient mentoring content preparation, lesson planning, and session management
 
@@ -130,7 +130,7 @@ If including AI examples or prompts in slides:
 ### Rule LP-1: Lesson Structure & Template
 **Status:** Active | **Priority:** High
 
-**Always use `_system/templates/learning/_template-lesson.md` as starting point**
+**Always use `_system/learning templates/_template-lesson.md` as starting point**
 
 Required sections in every lesson:
 
