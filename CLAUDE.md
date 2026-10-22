@@ -8,7 +8,7 @@ Every lesson in `library/lessons/` has two paired files:
 
 **When either file is updated, always check and update the other.**
 
-New `*-slide-outline.md` files start from `_system/templates/_template-slide-outline.md`, not a blank page — it fixes the session metadata table, the standard slide-entry fields, and the speaker-notes-as-bullets rule. Layout types come from the catalogue in `_system/rules/slide-deck-rules.md` (canonical — other paths to a rules file are pointers to it).
+New `*-slide-outline.md` files start from `_system/learning templates/_template-slide-outline.md`, not a blank page — it fixes the session metadata table, the standard slide-entry fields, and the speaker-notes-as-bullets rule. Layout types come from the catalogue in `_system/rules/slide-deck-rules.md` (canonical — other paths to a rules file are pointers to it).
 
 Specifically:
 
@@ -42,6 +42,21 @@ The website (`docs/`) is generated, not live. Lesson pages, slide-deck links and
 
 ---
 
+## Deck edit rule
+
+The built deck (`slides/*.html`) is the version that gets taught, so it drifts from the lesson and outline whenever it is edited by hand after a session. Treat a deck edit like a lesson edit.
+
+| When | Do this, in the same response |
+|---|---|
+| A deck in `library/lessons/**/slides/` is edited, or a session is taught from a deck that differs from its outline | Reverse-sync: update `*-slide-outline.md` first (slide list, order, MILESTONE `Num:` values, slide count), then `*-lesson.md` (Session Plan, timings, activity placement). For what was delivered, the deck wins. Mark anything in the lesson you would rather keep as `[to confirm]` |
+| Reverse-sync changes the structure | Copy the old lesson and outline to `materials/_archive/` first, named with `-pre-<reason>-YYYY-MM-DD`, and add a short sync note at the top of the lesson |
+| A lesson has more than one deck (for example EN and VI) | Every variant keeps the same slide order. Language may differ, structure may not. Fix the odd one out, not the outline |
+| A deck is new or has been taught | It is committed to git. An untracked deck has no history to recover from |
+
+This rule sits beside the lesson file sync rule above. That rule keeps lesson and outline together. This one keeps both together with the deck.
+
+---
+
 ## Testimonial capture rule
 
 Whenever a prompt includes feedback from a student or mentee about Winnie's teaching/mentoring — praise, a reaction, a quote, however casually mentioned — automatically add it to the central quote bank at `showcase/testimonials.md`, in the same response, without being asked.
@@ -61,7 +76,7 @@ If `showcase/testimonials.md` doesn't exist yet, create it using the same struct
 
 ## Programme kickoff & close-out rule
 
-Every private-training student should get two artifacts from `_system/templates/`: a coaching plan at kickoff (`_template-coaching-plan.md`) and a close-out recap on their final session (`_template-programme-closeout.md`). This makes every future close-out able to show real before/after growth instead of a single snapshot.
+Every private-training student should get two artifacts from `_system/learning templates/`: a coaching plan at kickoff (`_template-coaching-plan.md`) and a close-out recap on their final session (`_template-programme-closeout.md`). This makes every future close-out able to show real before/after growth instead of a single snapshot.
 
 Specifically:
 

@@ -99,7 +99,7 @@ When Winnie corrects a Vietnamese line, add the before and after to `vi-voice.md
 
 ### B5. Deck
 
-A deck is a separate step. Do not generate deck HTML in this command. State exactly what is needed: the outline path, the slide count, and the nearest existing deck folder to copy support files from (`slides/deck-stage.js` and `slides/tokens.css` live in each lesson's own `slides/` folder; there is no shared theme folder). The built deck, once it exists, goes directly in `slides/` as an `.html` file (not `_archive/`, not nested), per CLAUDE.md.
+A deck is a separate step. Do not generate deck HTML in this command. State exactly what is needed: the outline path, the slide count, and the nearest existing deck folder to copy support files from (`deck-stage.js`, `image-slot.js` and `support.js` live in each lesson's own `slides/` folder, with the design tokens in `slides/_ds/`; a few older lessons have a `tokens.css` there instead; there is no shared theme folder). The built deck, once it exists, goes directly in `slides/` as an `.html` file (not `_archive/`, not nested), per CLAUDE.md.
 
 ### B6. Rebuild and report
 

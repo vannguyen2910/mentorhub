@@ -1,6 +1,6 @@
 # 📋 Automation Rules & Folder Organization
 
-**Last Updated:** 2026-05-08  
+**Last Updated:** 2026-10-22 (folder and template paths corrected, rules unchanged)  
 **Purpose:** Central reference for how Claude should organize and handle content creation
 
 ---
@@ -73,7 +73,7 @@ When creating slide decks, Claude will reference the **Templates folder** to ens
 ## Rule 6: Inbox Processing 📥
 **Status:** Active
 
-The `Inbox/` folder is a **temporary processing zone**. Nothing stays there permanently.
+The `_inbox/` folder is a **temporary processing zone**. Nothing stays there permanently.
 
 **What triggers this:** Any request like:
 - "Process my inbox"
@@ -97,15 +97,15 @@ The `Inbox/` folder is a **temporary processing zone**. Nothing stays there perm
 | Rough slide content | `source/` | Brief → `library/slides/[name]/` |
 | Private session notes | `mentees/[mentee]/sessions/` | — (private, no published artifact) |
 | Framework or guide draft | `source/` | `library/guides/` or `library/frameworks/` |
-| Reusable template | `_system/templates/` | — |
-| Asset (image, export) | `Assets/` | — |
+| Reusable template | `_system/learning templates/` | — |
+| Asset (image, export) | The lesson's own `assets/` folder | — |
 | Ambiguous item | Stop and triage (Rule 4) | Confirmed by you before moving |
 
 **What Claude never does:**
-- Leave a processed item in `Inbox/` after it has been routed
+- Leave a processed item in `_inbox/` after it has been routed
 - Move a file without telling you where it went
 - Build an artifact without a brief if the item requires one (Rule 5 still applies)
-- Delete anything from `Inbox/` — items are always moved, never deleted
+- Delete anything from `_inbox/` — items are always moved, never deleted
 
 ---
 
@@ -185,8 +185,8 @@ When you share an artifact without a clear destination folder, Claude will **sto
 | Reusable across students | `library/` (lessons, slides, guides, or frameworks subfolder) |
 | Specific to one private mentee | `mentees/[mentee-name]/sessions/` |
 | Raw / unprocessed / incomplete | `source/` |
-| Visual template or design file | `_system/templates/` |
-| Finished asset (image, export) | `Assets/` |
+| Visual template or design file | `_system/learning templates/` |
+| Finished asset (image, export) | The lesson's own `assets/` folder |
 
 **Speed tip:** Include the artifact type in your message (slide deck, lesson plan, guide, session recap, template) — it eliminates most ambiguity immediately.
 
@@ -198,10 +198,10 @@ When you share an artifact without a clear destination folder, Claude will **sto
 |---------|--------|---------------|
 | "Create slide deck / HTML / lesson / design" | Generate brief first, wait for approval, then build | Brief saved alongside artifact with `-brief.md` suffix |
 | "Create slide deck" (after brief approved) | Generate and organize | `library/slides/[name]/learning/` |
-| Check before finalizing | Reference Templates folder | `_system/templates/` |
+| Check before finalizing | Reference Templates folder | `_system/learning templates/` |
 | "Process my inbox" / "Process [file]" | Read → triage → brief (if build needed) → move source → create artifact → report | Source to permanent folder; artifact to Library |
 | "Not sure where this goes" | Triage with options + recommendation | Confirmed by you |
-| Need to adjust rules | Edit this file | `_Rules/automation-rules.md` |
+| Need to adjust rules | Edit this file | `_system/rules/automation-rules.md` |
 
 ---
 
