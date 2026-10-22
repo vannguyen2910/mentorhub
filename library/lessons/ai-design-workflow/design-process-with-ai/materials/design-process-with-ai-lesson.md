@@ -5,7 +5,7 @@ type: lesson
 program: ai-design-workflow
 tags: [ai, design-process, double-diamond, terminology, context, folder, data-safety, hub, foundational]
 level: foundational
-duration: "2 x 90 min (buổi 1 dạy, buổi 2 thực hành)"
+duration: "90 min (buổi 1) + bài tập về nhà"
 date: 2026-10-06
 draft: true
 slides: ""
@@ -15,39 +15,41 @@ next-session: "Discover the Problem"
 
 ## Abstract
 
-Tài liệu này mô tả module đầu tiên của chương trình AI Design Workflow, dành cho Product Designer và UI/UX Designer ở cấp mid và senior. Module gồm hai buổi 90 phút: buổi 1 trình bày bối cảnh và khung kiến thức, buổi 2 là buổi thực hành trên case của chính người học.
+Tài liệu này mô tả buổi đầu tiên của chương trình AI Design Workflow, dành cho Product Designer và UI/UX Designer ở cấp mid và senior. Module là buổi 1 của chương trình, một buổi 90 phút trình bày bối cảnh, khung kiến thức và hai activity ngắn trên lớp. Phần dựng case folder trên case của chính người học chuyển thành bài tập về nhà ngay sau buổi.
 
-Module giải quyết năm vấn đề, theo thứ tự trình bày:
+Buổi này giải quyết năm vấn đề, theo thứ tự trình bày:
 
 1. **Định hướng nghề nghiệp.** AI đang thay đổi nghề UI/UX và product design như thế nào, dựa trên các nguồn có thể kiểm chứng, và ba hướng đi mà một designer có thể cân nhắc.
-2. **Quy trình thiết kế khi có AI.** Bốn stage của Double Diamond (Discover, Define, Develop, Deliver), các method quen thuộc trong từng stage, và việc phân chia giữa phần AI hỗ trợ với phần designer vẫn phải tự thực hiện.
-3. **Bộ khái niệm chung** để làm việc với AI tool, gồm mười thuật ngữ.
+2. **Quy trình thiết kế khi có AI.** Bốn stage của Double Diamond (Discover, Define, Develop, Deliver), các method quen thuộc trong từng stage, việc phân chia giữa phần AI hỗ trợ với phần designer vẫn phải tự thực hiện, những gì AI làm tốt và còn yếu theo bằng chứng, và ba câu hỏi cần trả lời trước khi automate một workflow.
+3. **Bộ khái niệm chung** để làm việc với AI tool, gồm bốn khái niệm dạy trên lớp và sáu thuật ngữ tham khảo.
 4. **Quy tắc về dữ liệu** an toàn để đưa cho AI tool.
-5. **Một project folder** làm nền cho toàn bộ chương trình: mỗi module sau thêm một file hoặc một item vào cùng một case.
+5. **Một project folder** làm nền cho toàn bộ chương trình: mỗi buổi sau thêm một file hoặc một item vào cùng một case.
 
 Điểm xuyên suốt ở mọi stage là **AI-assisted, không phải AI-generated**. AI-generated nghĩa là AI đưa ra quyết định. AI-assisted nghĩa là designer quyết định, AI hỗ trợ phần soạn nháp và lắp ráp. Nguyên tắc vận hành ở mọi stage là: **AI soạn nháp. Designer kiểm tra. Designer quyết định.**
 
 Chương trình đặt ra một lập trường: **designer là partner cùng định nghĩa requirement với business và product.** Product, business và design cùng chọn vấn đề đáng giải trước khi build.
 
-**Đối tượng.** Chương trình thiết kế cho Product Designer và UI/UX Designer. Product Owner, Product Manager và Business Analyst có thể học cùng trọn vẹn: cùng stage, cùng case folder, cùng hub. Họ không cần kỹ năng design và không phải build prototype từ đầu; ở phần prototype, họ dùng một design system có sẵn và để AI tạo template từ đó. Ở các module sau, những khác biệt theo vai trò được ghi trong mục "Nếu bạn là PO, PM hoặc BA".
+**Đối tượng.** Chương trình thiết kế cho Product Designer và UI/UX Designer. Product Owner, Product Manager và Business Analyst có thể học cùng trọn vẹn: cùng stage, cùng case folder, cùng hub. Họ không cần kỹ năng design và không phải build prototype từ đầu; ở phần prototype, họ dùng một design system có sẵn và để AI tạo template từ đó. Ở các buổi sau, những khác biệt theo vai trò được ghi trong mục "Nếu bạn là PO, PM hoặc BA".
 
-**Nhịp học của cả chương trình.** Hai buổi online mỗi tuần, mỗi buổi 90 phút, 7 đến 8 học viên, hai buổi cách nhau khoảng ba ngày. Buổi đầu dạy một chủ đề và tương tác bằng câu hỏi; buổi thứ hai là thực hành trên case của học viên, có coaching, và là nơi tạo ra mọi output. Chuẩn bị tối đa 10 phút trước buổi dạy (khoảng 20 phút ở tuần đầu để kiểm tra tool); homework tối đa khoảng 45 phút và chỉ nối tiếp phần đã bắt đầu trên lớp. Buổi live không phụ thuộc vào việc homework đã hoàn thành hay chưa.
+**Nhịp học của cả chương trình.** 12 buổi trong 6 tuần, hai buổi online mỗi tuần, mỗi buổi 90 phút, 7 đến 8 học viên. Chín buổi học nội dung (mỗi buổi một lesson) và ba buổi Check point (buổi 5, 10, 12) là buổi làm việc trên case của học viên, có coaching. Chuẩn bị tối đa 10 phút trước mỗi buổi (khoảng 20 phút ở buổi 1 để kiểm tra tool); bài tập về nhà tối đa khoảng 45 phút và chỉ nối tiếp phần đã bắt đầu trên lớp. Buổi live không phụ thuộc vào việc bài tập về nhà đã hoàn thành hay chưa.
 
-**Vị trí của module.** Module nằm trước bước đầu tiên của workflow. Module giả định người học đã có kinh nghiệm research, UX design và prototyping, và bổ sung lớp AI lên trên những kỹ năng đó.
+**Vị trí của buổi.** Buổi 1 nằm trước bước đầu tiên của workflow. Buổi này giả định người học đã có kinh nghiệm research, UX design và prototyping, và bổ sung lớp AI lên trên những kỹ năng đó.
 
 ---
 
 ## Learning Objectives
 
-Sau hai buổi, học viên có thể:
+Sau buổi 1 và phần bài tập về nhà, học viên có thể:
 
 1. **Mô tả** ba hướng đi nghề nghiệp (strategic designer, design builder, AI product designer), nêu bằng chứng hiện có và giới hạn của bằng chứng đó, và chọn hướng mình nghiêng về để định hướng cho cả chương trình
 2. **Kể tên** các method chính trong từng stage của bốn stage, và nêu được AI hỗ trợ ở đâu, phần nào designer vẫn phải tự thực hiện
-3. **Giải thích** mười thuật ngữ AI cốt lõi bằng lời của mình: AI chat tool, AI coding tool, context, context window, grounding, hallucination, agent, connector (MCP), reusable instructions (skills, rules file, project memory), và AI-assisted so với AI-generated
+3. **Giải thích** bốn khái niệm AI cốt lõi bằng lời của mình: context, grounding, hallucination, và AI-assisted so với AI-generated; và nhận ra sáu thuật ngữ tham khảo (AI chat tool, AI coding tool, context window, agent, connector (MCP), reusable instructions) khi gặp ở các buổi sau
 4. **Quyết định** dữ liệu nào an toàn để đưa cho AI tool: phân loại tài liệu thành ba nhóm (safe, ask first, never in a public tool), ẩn danh trước khi dán, và viết data rules của riêng mình
 5. **Cài đặt** case folder của chương trình cho case của chính mình, gồm layout chuẩn, file luật cho AI tool (`AGENTS.md`), context pack đã bắt đầu và một hub Markdown mẫu
 6. **Dùng lại** một file đã lưu làm context thay vì mô tả lại project, và yêu cầu AI chỉ rõ nguồn cho từng ý, kèm câu trả lời "unknown" khi không có thông tin
 7. **Giải thích** cách chia sẻ hub với stakeholder: mặc định private (PDF, folder nén hoặc mời vào repository private), chỉ công khai cả case folder khi toàn bộ case được phép chia sẻ
+8. **Nêu** hai loại task AI làm tốt và hai loại AI còn yếu, kèm một bằng chứng cho mỗi bên, để quyết định việc nào giao cho AI và việc nào giữ lại
+9. **Đánh giá** một workflow có đáng automate hay chưa bằng ba câu hỏi: mục tiêu có rõ không, kết quả khi làm tay có ổn định không, và ai kiểm tra đầu ra
 
 ---
 
@@ -59,12 +61,11 @@ Nhiều designer đặt câu hỏi: khi AI phổ biến, UI/UX và product desig
 
 | # | Phát hiện | Nguồn |
 |---|---|---|
-| 1 | **Mức dùng AI rất cao.** Trong khảo sát 906 designer tại hơn 60 quốc gia (2026), 91% dùng AI cho công việc design ít nhất mỗi tuần, tăng từ 54% một năm trước; 75% dùng mỗi ngày; trung bình mỗi người thường xuyên dùng 7 AI tool, tăng từ 3 | [1] |
+| 1 | **Mức dùng AI rất cao.** Trong khảo sát hơn 900 designer tại hơn 60 quốc gia (2026), 91% dùng AI cho công việc design ít nhất mỗi tuần, tăng từ 54% một năm trước; 75% dùng mỗi ngày; trung bình mỗi người thường xuyên dùng 7 AI tool, tăng từ 3 | [1] |
 | 2 | **Ranh giới giữa các vai trò mờ đi.** Một nửa số người trả lời đã đưa code do AI tạo ra lên production; 65% làm nhiều việc product hoặc engineering hơn; 40% cho biết PM và engineer làm nhiều việc design hơn | [1] |
-| 3 | **Nghề chưa co lại trên số liệu dự báo.** Cục Thống kê Lao động Mỹ (BLS) dự báo số việc làm của web và digital interface designer tăng 7,0% trong giai đoạn 2024 đến 2034 (từ 128.900 lên 137.900), so với 3,1% của mọi ngành. Bảng mới hơn (2025 đến 2035) gộp web developer và digital designer, cho ra 5%, và ghi rằng việc dùng AI trong phát triển web "may soften" mức tăng. Hai con số dùng cách gộp nghề và năm gốc khác nhau, nên không so sánh trực tiếp | [4], [5] |
+| 3 | **Nghề chưa co lại trên số liệu dự báo.** Cục Thống kê Lao động Mỹ (BLS) dự báo số việc làm của web và digital interface designer tăng 7,0% trong giai đoạn 2024 đến 2034 (từ 128.900 lên 137.900), so với 3,1% của mọi ngành. Bảng mới hơn (2025 đến 2035) gộp web developer và digital designer, cho ra 5% (riêng web và digital interface designer: 6%, từ 132.700 lên 140.800, so với 3% của mọi ngành), và ghi rằng việc dùng AI trong phát triển web "may soften" mức tăng. Hai con số dùng cách gộp nghề và năm gốc khác nhau, nên không so sánh trực tiếp | [4], [5] |
 | 4 | **Áp lực lộ ra ở entry level.** Nielsen Norman Group (NN/g) nhận định thị trường UX đang ổn định sau giai đoạn 2023 đến 2024, nhưng vị trí entry-level vẫn "scarce and highly competitive" trong khi vị trí senior phục hồi nhanh hơn | [3] |
-| 5 | **Cơ chế tác động.** Nghiên cứu của Stanford trên dữ liệu bảng lương ADP cho thấy người đi làm sớm (22 đến 25 tuổi) trong các nghề chịu tác động mạnh nhất của AI có việc làm giảm 16% tương đối, trong khi nhóm có kinh nghiệm ổn định; mức giảm tập trung ở nơi AI thay thế thay vì hỗ trợ công việc. Nghiên cứu xét mọi nghề, không tách riêng designer | [6] |
-| 6 | **Cảm nhận phân hóa.** Theo một nguồn thứ cấp trích báo cáo State of the Designer 2026 của Figma, 36% designer cho rằng ngành đã tốt hơn, 35% cho rằng tệ hơn, 29% cho rằng không đổi | [2], qua nguồn thứ cấp; chưa đối chiếu với báo cáo gốc |
+| 5 | **Cơ chế tác động.** Nghiên cứu của Stanford trên dữ liệu bảng lương ADP cho thấy người đi làm sớm (22 đến 25 tuổi) trong các nghề chịu tác động mạnh nhất của AI có việc làm thấp hơn khoảng 19% so với mức lẽ ra có nếu theo kịp nhóm cùng tuổi ở các nghề ít chịu tác động (dữ liệu ADP đến 06/2026, bản cập nhật 08/2026). Nhóm có kinh nghiệm không có khoảng cách tương tự; mức giảm tập trung ở nơi AI thay thế thay vì hỗ trợ công việc. Nghiên cứu xét mọi nghề, không tách riêng designer | [6] |
 
 ### 1.2 Interpretation
 
@@ -73,11 +74,9 @@ Từ các phát hiện trên, tài liệu rút ra hai nhận định. Cả hai l
 - **Phần việc bị nén nhanh nhất là từ brief sang screen.** Vị trí thiên về execution ở entry level (wireframe, sản xuất asset) là nơi áp lực rõ nhất [3], [6]. Không có nguồn nào đo trực tiếp nhóm "designer nhận brief rồi làm screen"; nhận định này suy ra từ cơ chế ở phát hiện 4 và 5.
 - **Phần còn lại là phần AI chưa làm thay được:** chọn vấn đề đáng giải, thống nhất thế nào là thành công, và kiểm tra những gì AI soạn nháp. NN/g mô tả những practitioner thành công là "adaptable generalists", coi UX là việc giải quyết vấn đề mang tính chiến lược, không phải sản xuất deliverable [3].
 
-Cùng một thời điểm và cùng những tool, cảm nhận của designer đi ngược chiều nhau (phát hiện 6). Tài liệu đọc điều này như một dấu hiệu rằng khác biệt nằm ở cách làm việc, không nằm ở tool. Đây là cách đọc của tác giả, không phải kết luận của báo cáo.
-
 ### 1.3 Limitations of the evidence
 
-- Các khảo sát designer ([1], [2]) là tự khai báo và không dùng mẫu ngẫu nhiên; "91% designer" nên được hiểu là 91% những designer đã trả lời. Cả hai do bên có lợi ích trong lĩnh vực design và AI tooling thực hiện.
+- Khảo sát designer [1] là tự khai báo và không dùng mẫu ngẫu nhiên; "91% designer" nên được hiểu là 91% những designer đã trả lời. Khảo sát do bên có lợi ích trong lĩnh vực design và AI tooling thực hiện.
 - Dự báo của BLS tính tác động của AI còn hạn chế và bản 2024 đến 2034 có trước phần lớn những thay đổi gần đây.
 - Chưa có nguồn nào cho thị trường Việt Nam ở cấp độ designer. Số liệu ở trên chủ yếu về thị trường Mỹ và toàn cầu.
 - Một số số liệu thường thấy trong các bài viết nghề nghiệp (ví dụ mức giảm tin tuyển junior theo phần trăm, hay mức tăng của từng chức danh) không truy ngược được nguồn và không được dùng ở đây.
@@ -90,13 +89,13 @@ Ba hướng đi dưới đây không loại trừ nhau, và chúng mô tả xu h
 
 | Hướng | Công việc chính | Kỹ năng trọng tâm | Bằng chứng và giới hạn | Chương trình này hỗ trợ |
 |---|---|---|---|---|
-| **Strategic designer** (senior generalist) | Cùng product và business chọn vấn đề đáng giải; research, framing, ra quyết định | Research, framing, stakeholder management, judgment | NN/g 2026: vị trí senior và generalist phục hồi nhanh hơn [3]; nghiên cứu Stanford cho thấy nhóm có kinh nghiệm ổn định [6]. **Mức vừa:** một bài phân tích có thẩm quyền cộng một nghiên cứu gián tiếp | Tuần 2 đến 4 (Discover, Frame); hub làm bằng chứng cho lập luận |
-| **Design builder** (design engineer) | Dựng prototype chạy được và đưa lên production bằng AI coding tool | Design system, kiểm tra các file mà AI coding tool đã sửa, đọc output | Một nửa designer được khảo sát đã đưa code do AI tạo lên production [1]. **Mức vừa** về xu hướng; số liệu tuyển dụng thì yếu | Tuần 5 đến 6 (prototype, refine) |
+| **Strategic designer** (senior generalist) | Cùng product và business chọn vấn đề đáng giải; research, framing, ra quyết định | Research, framing, stakeholder management, judgment | NN/g 2026: vị trí senior và generalist phục hồi nhanh hơn [3]; nghiên cứu Stanford cho thấy nhóm có kinh nghiệm ổn định [6]. **Mức vừa:** một bài phân tích có thẩm quyền cộng một nghiên cứu gián tiếp | Buổi 2 đến 5 (Discover, Define, Check point 1); hub làm bằng chứng cho lập luận |
+| **Design builder** (design engineer) | Dựng prototype chạy được và đưa lên production bằng AI coding tool | Design system, kiểm tra các file mà AI coding tool đã sửa, đọc output | Một nửa designer được khảo sát đã đưa code do AI tạo lên production [1]. **Mức vừa** về xu hướng; số liệu tuyển dụng thì yếu | Buổi 7 đến 10 (prototype, refine, Check point 2) |
 | **AI product designer** | Thiết kế sản phẩm có AI bên trong: hành vi, ranh giới, lỗi và niềm tin của người dùng | Hiểu hallucination và grounding, đánh giá output, conversation design | NN/g và các nguồn nghề nghiệp nêu đây là chuyên môn đang lên [3]; số liệu tăng trưởng chưa đáng tin. **Mức yếu** | **Chỉ có nền tảng.** Chương trình dạy cách dùng AI để làm việc, không dạy thiết kế sản phẩm AI |
 
 UX research là một hướng liên quan: NN/g nêu research và stakeholder management là những kỹ năng tạo khác biệt [3]. Hướng thiên về execution ở entry level (wireframe, sản xuất asset) là hướng chịu áp lực nhiều nhất theo các nguồn trên, và là lý do để chọn hướng sớm.
 
-Ở buổi 1, học viên trao đổi theo cặp về hướng mình nghiêng về. Ở buổi 2, học viên ghi hai đến ba dòng vào `_personal/my-direction.md` (hướng nghiêng về, lý do, một kỹ năng muốn xây trong chương trình). File được xem lại ở tuần 7 và có thể thay đổi. File nằm ngoài context pack vì là ghi chú riêng của học viên, không đưa cho AI tool.
+Sau buổi 1, ở bài tập về nhà, học viên ghi hai đến ba dòng vào `_personal/my-direction.md` (hướng nghiêng về, lý do, một kỹ năng muốn xây trong chương trình). File được xem lại ở buổi 12 và có thể thay đổi. File nằm ngoài context pack vì là ghi chú riêng của học viên, không đưa cho AI tool.
 
 ---
 
@@ -113,7 +112,7 @@ Double Diamond gồm bốn stage; output của stage này là input của stage 
 | **Develop** | Mở rộng rồi thu hẹp: brainstorm, select, prototype | Một hướng đã chọn và một prototype |
 | **Deliver** | Thu hẹp: test và bàn giao | Findings, handoff pack, measurement plan |
 
-Mỗi stage kết thúc bằng một checklist ngắn gọi là **gate** trước khi công việc đi tiếp. Chi tiết từng method và từng gate nằm ở module dành cho stage đó. Ở buổi 1, phần này chỉ trình bày mỗi stage gồm gì và AI hỗ trợ ở đâu; từng method được đọc trước trong pre-read brief và có method card riêng.
+Mỗi stage kết thúc bằng một checklist ngắn gọi là **gate** trước khi công việc đi tiếp. Chi tiết từng method và từng gate nằm ở các buổi dành cho stage đó. Ở buổi 1, phần này chỉ trình bày mỗi stage gồm gì và AI hỗ trợ ở đâu; từng method được đọc trước trong pre-read brief và có method card riêng.
 
 ### 3.2 Methods and the division of work
 
@@ -132,26 +131,78 @@ Câu hỏi áp dụng cho mọi stage: **AI hỗ trợ được ở đâu, và p
 
 Một brief tốt từ product là điểm xuất phát tốt. Phần AI làm nhanh nhất là biến brief thành screen. Phần AI không làm thay được là cùng product và business chọn vấn đề đáng giải và thống nhất thế nào là thành công. Việc này cần cả hai phía: design tham gia sớm với evidence; product và business chia sẻ những gì họ biết về vấn đề, outcome và ràng buộc. Mục tiêu là hai cách nhìn gặp nhau trước khi build, không phải sửa lại công việc của bất kỳ bên nào.
 
-Mức độ làm việc chung với product khác nhau giữa các học viên: có người làm sát product mỗi ngày, có người chỉ liên lạc qua trung gian, có người chưa có cơ hội trao đổi. Chương trình vận hành được trong cả ba trường hợp; module Discover the Problem trình bày cách làm.
+Mức độ làm việc chung với product khác nhau giữa các học viên: có người làm sát product mỗi ngày, có người chỉ liên lạc qua trung gian, có người chưa có cơ hội trao đổi. Chương trình vận hành được trong cả ba trường hợp; buổi 2 (Discover the Problem) trình bày cách làm.
+
+### 3.4 What AI is good at, and where it falls short
+
+Mục 3.2 trả lời AI hỗ trợ được ở đâu. Mục này cho biết giới hạn của câu trả lời đó, dựa trên các nghiên cứu có đối chứng và benchmark.
+
+**Phát hiện từ nguồn.**
+
+| Loại việc | Phát hiện | Nguồn, năm, cỡ mẫu |
+|---|---|---|
+| Tác vụ viết chuyên nghiệp | Thời gian giảm khoảng 40%, chất lượng tăng khoảng 18% | Noy và Zhang, Science, 2023, 453 người [13] |
+| Task nằm trong khả năng của mô hình | Nhanh hơn khoảng 25%, chất lượng cao hơn khoảng 40%. Task nằm ngoài khả năng cho kết quả tệ hơn nhóm không dùng AI | Harvard và BCG, 2023, 758 consultant [14] |
+| Một task code độc lập | Hoàn thành nhanh hơn khoảng 55% (khoảng tin cậy 21 đến 89%) | GitHub, 2022, 95 developer [15] |
+| Developer giàu kinh nghiệm trên codebase quen thuộc | Chậm hơn 19% | METR, 2025, 16 developer [16] |
+| Một công việc freelance trọn vẹn | Agent tốt nhất tự hoàn thành khoảng 2,5% dự án khi ra mắt; các cập nhật sau đó cao hơn nhiều: bảng xếp hạng ngày 22/10/2026 có mô hình đứng đầu trên 21% | Scale AI và CAIS, Remote Labor Index, 2025 và 2026 [17] |
+| Tổng hợp nghiên cứu UX | Phiên âm và tóm tắt hữu ích nhưng cần kiểm lại; phần code và nhóm dữ liệu do AI tạo chỉ nên coi là bản đầu, vì có thể bỏ sót và nhóm hời hợt | Nielsen Norman Group, 2024 (xem lại 01/2026) [18] |
+
+**Suy luận của tác giả.** AI mạnh ở task có giới hạn rõ, đầu ra kiểm tra được nhanh và gần với viết, tóm tắt hoặc dựng bản đầu. AI yếu hơn ở task dài, nhiều bước, cần phán đoán hoặc bối cảnh mà chỉ người trong team biết. Hai điểm đáng nhấn:
+
+- **Kết quả yếu thường trông ổn.** Một khảo sát 1.150 desk worker (nhân viên làm việc văn phòng) toàn thời gian ở Mỹ ghi nhận 40% nhận sản phẩm AI trông như đã xong nhưng thiếu nội dung trong tháng qua, và mỗi lần mất trung bình khoảng hai giờ để xử lý [19].
+- **Người có kinh nghiệm không tự động nhanh hơn.** Developer ở nghiên cứu METR chậm hơn 19% dù tự cảm thấy nhanh hơn khoảng 20% [16]. Đây là kết quả của đầu 2025; METR nay ghi các kết quả này đã cũ, và bản cập nhật 02/2026 cho rằng công cụ mới nhiều khả năng giúp nhiều hơn, nhưng chưa có số đo đáng tin.
+
+Các số liệu về agent thay đổi theo từng phiên bản mô hình, nên nhận định "AI mạnh hay yếu" chỉ đúng với một loại task và một thời điểm.
+
+### 3.5 Before automating a workflow
+
+Các mục trên cho biết AI hỗ trợ được ở đâu và còn yếu ở đâu. Câu hỏi cần trả lời trước đó là workflow này có đáng được tăng tốc hay không.
+
+**Phát hiện từ nguồn.**
+
+- Báo cáo DORA 2025 (khảo sát gần 5.000 người làm công nghệ) mô tả AI như một bộ khuếch đại. Throughput tăng, độ bất ổn cũng tăng, và AI phóng đại cả điểm mạnh lẫn điểm yếu của team [20]. Số liệu này đến từ phát triển phần mềm.
+- Từ năm 1990, Michael Hammer đã lập luận rằng dùng công nghệ để làm nhanh quy trình cũ không tạo ra bước nhảy; phần việc không tạo giá trị nên được bỏ [21].
+
+**Suy luận của tác giả.** Khi AI làm đầu ra rẻ đi, chi phí chuyển sang bước kiểm tra. Một workflow thiếu mục tiêu rõ hoặc thiếu gate sẽ chuyển lỗi sang stage sau nhanh hơn. Với designer, đây là suy luận từ hai nguồn trên chứ không phải kết quả đo trên công việc design.
+
+**Quy tắc của chương trình:** sửa hoặc bỏ workflow trước, rồi mới dùng AI.
+
+Ba câu hỏi trước khi automate:
+
+1. Workflow này nhằm đạt điều gì, và thế nào là kết quả tốt, trong một câu?
+2. Khi làm tay, workflow cho kết quả ổn định không?
+3. Ai kiểm tra đầu ra, và dựa trên cái gì?
+
+Câu trả lời "không" ở câu 1 hoặc 2: sửa hoặc bỏ workflow trước. Câu trả lời "không" ở câu 3: thêm một gate và một người chịu trách nhiệm. Checklist đầy đủ tám câu nằm ở handout `before-you-automate.md`, gửi riêng cho học viên.
 
 ---
 
 ## 4. Working with AI: core concepts
 
-### 4.1 Ten terms
+### 4.1 Four concepts
 
-| Nhóm | Thuật ngữ | Định nghĩa | Hệ quả thực hành |
+Chỉ bốn khái niệm được dạy trên lớp, gắn vào demo ở 4.2. Học viên là designer mid và senior, đã dùng AI hằng tuần, nên buổi không đọc định nghĩa; chỉ gọi tên những gì họ vừa thấy trong demo.
+
+| Khái niệm | Định nghĩa | Hệ quả thực hành |
+|---|---|---|
+| **Context** | Mọi thứ AI nhìn thấy tại thời điểm đó: instruction, text đã dán, file đính kèm, các tin nhắn trước. Tài liệu dài và lộn xộn làm kết quả kém chính xác | Đưa đúng tài liệu vào, chỉ những phần một bước cần; AI không biết gì khác về project |
+| **Grounding** | Gắn câu trả lời với tài liệu được cung cấp, không dựa vào kiến thức chung của AI | "Chỉ dùng tài liệu bên dưới. Mỗi ý lấy từ đâu?" |
+| **Hallucination** | Câu trả lời tự tin nhưng bịa: một đối thủ không tồn tại, một câu quote chưa ai nói | Yêu cầu nguồn cho từng ý; cho phép AI trả lời "unknown" |
+| **AI-assisted so với AI-generated** | AI-generated: AI quyết định. AI-assisted: designer quyết định, AI lắp ráp | AI soạn nháp. Designer kiểm tra. Designer quyết định |
+
+### 4.1b Sáu thuật ngữ tham khảo (pre-read, dạy khi cần)
+
+Không dạy trên lớp ở buổi 1. Học viên đọc trong pre-read; mỗi thuật ngữ được dạy lại đúng buổi cần nó.
+
+| Thuật ngữ | Định nghĩa | Hệ quả thực hành | Dạy sâu ở |
 |---|---|---|---|
-| Các tool | **AI chat tool** | Người dùng viết, AI trả lời. Phù hợp cho tổng hợp, lên ý tưởng, viết | Dùng sâu một tool trước khi thử nhiều tool |
-| Các tool | **AI coding tool** | Đọc và ghi file trong project folder; dựng prototype chạy được | Cung cấp flow và design system |
-| Nói chuyện với AI | **Context** | Mọi thứ AI nhìn thấy tại thời điểm đó: instruction, text đã dán, file đính kèm, các tin nhắn trước | Đưa đúng tài liệu vào; AI không biết gì khác về project |
-| Nói chuyện với AI | **Context window** | Giới hạn lượng thông tin AI giữ được cùng lúc; tài liệu dài và lộn xộn làm kết quả kém chính xác | Chỉ đưa những phần mà một bước cần |
-| Nói chuyện với AI | **Grounding** | Gắn câu trả lời với tài liệu được cung cấp, không dựa vào kiến thức chung của AI | "Chỉ dùng tài liệu bên dưới. Mỗi ý lấy từ đâu?" |
-| Khi nó làm sai | **Hallucination** | Câu trả lời tự tin nhưng bịa: một đối thủ không tồn tại, một câu quote chưa ai nói | Yêu cầu nguồn cho từng ý; cho phép AI trả lời "unknown" |
-| Cách một số tool hành động | **Agent** | Tool tự thực hiện nhiều bước: đọc file, sửa, chạy lệnh, rồi báo lại | Kiểm tra các file đã bị sửa, không chỉ câu trả lời |
-| Cách một số tool hành động | **Connector (MCP)** | Giống một cái USB: cắm giữa file design và AI tool để AI đọc được thứ đang làm [7] | Trước khi kết nối, xác định nó đọc và sửa được những gì |
-| Mang theo chuẩn của mình | **Reusable instructions** (skills, rules file, project memory) | Instruction đã lưu, bộ quy tắc chung của project, hoặc context project đã lưu [7] | Viết một lần, dùng lại nhiều lần |
-| Lập trường (thuật ngữ thứ mười) | **AI-assisted so với AI-generated** | AI-generated: AI quyết định. AI-assisted: designer quyết định, AI lắp ráp | AI soạn nháp. Designer kiểm tra. Designer quyết định |
+| **AI chat tool** | Người dùng viết, AI trả lời. Phù hợp cho tổng hợp, lên ý tưởng, viết | Dùng sâu một tool trước khi thử nhiều tool | Dùng từ buổi 1 |
+| **AI coding tool** | Đọc và ghi file trong project folder; dựng prototype chạy được | Cung cấp flow và design system | Buổi 7 |
+| **Context window** | Giới hạn lượng thông tin AI giữ được cùng lúc | Chỉ đưa những phần mà một bước cần | Nhắc trong 4.1 (context) |
+| **Agent** | Tool tự thực hiện nhiều bước: đọc file, sửa, chạy lệnh, rồi báo lại | Kiểm tra các file đã bị sửa, không chỉ câu trả lời | Buổi 7 |
+| **Connector (MCP)** | Giống một cái USB: cắm giữa file design hoặc tài liệu và AI tool để AI đọc được thứ đang làm [7] | Trước khi kết nối, xác định nó đọc và sửa được những gì | Buổi 7; nhắc một dòng ở data safety (5.3) |
+| **Reusable instructions** (skills, rules file, project memory) | Instruction đã lưu, bộ quy tắc chung của project, hoặc context project đã lưu [7] | Viết một lần, dùng lại nhiều lần | Buổi 7 (`AGENTS.md` ở 6.2 là ví dụ đầu tiên) |
 
 Ba khái niệm phụ không đưa vào bảng: **model** là phần lõi phía sau một tool, **prompt** là thứ người dùng đưa cho AI, và **in-tool AI features** là các tính năng AI có sẵn trong design tool.
 
@@ -166,13 +217,13 @@ Ví dụ minh hoạ dùng một case hư cấu của chương trình.
 
 **Quan sát điển hình.** Instruction 1 thường cho lời khuyên tự tin nhưng chung chung, và có thể nói về sản phẩm như thể đó là sự thật. Instruction 2 thường hỏi đúng những điều chỉ research hoặc business mới trả lời được.
 
-**Diễn giải theo thuật ngữ.** Case card là **context**; "chỉ dùng case card" là **grounding**; lời khuyên tự tin của instruction 1 là rủi ro **hallucination**; câu trả lời "unknown" là lý do instruction 2 hữu ích. Cho phép AI trả lời "unknown" thường giúp giảm việc lấp chỗ trống bằng nội dung bịa; đây là giả định thực hành được kiểm nghiệm lại ở Activity 3 và 4, không phải kết quả đã được đo trong tài liệu này. Về **context window**: chỉ đưa những phần mà một bước cần. Về **agent**: AI coding tool tự thực hiện nhiều bước, nên cần kiểm tra các file đã bị sửa thay vì chỉ đọc câu trả lời.
+**Diễn giải theo thuật ngữ.** Case card là **context**; "chỉ dùng case card" là **grounding**; lời khuyên tự tin của instruction 1 là rủi ro **hallucination**; câu trả lời "unknown" là lý do instruction 2 hữu ích. Cho phép AI trả lời "unknown" thường giúp giảm việc lấp chỗ trống bằng nội dung bịa; đây là giả định thực hành được kiểm nghiệm lại ở bài tập về nhà (bước 4), không phải kết quả đã được đo trong tài liệu này. Khái niệm thứ tư, **AI-assisted so với AI-generated**, là lập trường đã nói ở đầu buổi: ở demo, designer là người chọn bản nào đáng tin.
 
 ### 4.3 Reuse rather than retype
 
 Một cuộc hội thoại AI mới không biết gì về project. Trước khi mô tả project từ trí nhớ, cần đính kèm file đã lưu. Một instruction tốt gồm các thành phần: nêu rõ tài liệu cần dùng; yêu cầu một task duy nhất; quy định "chỉ dùng tài liệu này, nêu nguồn cho từng ý, trả lời 'unknown' nếu tài liệu không nói, chỉ trả về section của mình"; và nêu định dạng mong muốn. Cấu trúc này tương ứng với khung CARE của NN/g [8]; tổng quan rộng hơn về dùng AI trong UX có ở [9].
 
-**Mẫu instruction:** "Tôi là UX designer đang làm [case trong một hoặc hai câu]. Đây là context file: [đính kèm product-and-users.md]. Chỉ dùng file này, hãy viết instruction nên dùng để nhờ bạn [task cụ thể]. Sau đó phản biện chính instruction đó: chỗ nào còn mơ hồ, chỗ nào có thể trả lời bằng cách đoán, và cần thêm gì để có thể nói 'unknown' thay vì đoán."
+**Mẫu instruction:** "Tôi là UX designer đang làm [case trong một hoặc hai câu]. Đây là context file: [đính kèm context-product-and-users.md]. Chỉ dùng file này, hãy viết instruction nên dùng để nhờ bạn [task cụ thể]. Sau đó phản biện chính instruction đó: chỗ nào còn mơ hồ, chỗ nào có thể trả lời bằng cách đoán, và cần thêm gì để có thể nói 'unknown' thay vì đoán."
 
 ---
 
@@ -199,11 +250,11 @@ Dữ liệu đưa vào AI tool được xử lý thế nào còn tuỳ tool và 
 1. **Kiểm tra chính sách.** Nếu chưa có thì hỏi; còn phân vân thì không dán.
 2. **Phân loại tài liệu** theo ba nhóm trên.
 3. **Xoá thông tin định danh trước**, bằng find and replace trên máy của mình chứ không nhờ AI làm, vì khi đó dữ liệu đã được gửi đi. Ẩn danh không phải lúc nào cũng hoàn hảo.
-4. **Giữ file confidential ngoài folder của tool**, vì AI coding tool hoặc agent đọc toàn bộ project folder. Dữ liệu gốc cần ẩn danh nằm trong `sources/_raw-private/`: folder này không lên GitHub và file luật bảo tool không đọc, nhưng đó là quy tắc chứ không phải rào chắn kỹ thuật; file thật sự confidential vẫn để ngoài folder.
+4. **Giữ file confidential ngoài folder của tool**, vì AI coding tool hoặc agent đọc toàn bộ project folder. Dữ liệu gốc cần ẩn danh nằm trong `sources/_raw-private/`: folder này không lên GitHub và file luật bảo tool không đọc, nhưng đó là quy tắc chứ không phải rào chắn kỹ thuật; file thật sự confidential vẫn để ngoài folder. Cùng nguyên tắc với **connector** (cho AI tool đọc thẳng file design hoặc tài liệu trong Figma, Notion...): trước khi kết nối, xác định nó đọc và sửa được những gì, và áp data rules như khi dán.
 
 Việc output của AI có được dùng cho công việc với client hay không, và quyền sở hữu thuộc về ai, tuỳ thuộc công ty và quốc gia. Nên ghi lại trong `case-log.md` những chỗ đã dùng AI.
 
-Output của mục này là `learnings/context-data-rules.md`: ba dòng bằng lời của chính học viên (được dán gì, sẽ không dán gì, dùng tool nào cho việc gì), được viết trong Activity 2 ở buổi 2.
+Output của mục này là `learnings/context-data-rules.md`: ba dòng bằng lời của chính học viên (được dán gì, sẽ không dán gì, dùng tool nào cho việc gì), được viết trong Activity 2 ngay trên lớp ở buổi 1.
 
 ---
 
@@ -224,8 +275,8 @@ Output của mục này là `learnings/context-data-rules.md`: ba dòng bằng l
 ├── case-log.md          mỗi decision một dòng, kèm lý do
 ├── learnings/           mọi file làm việc, để phẳng; tên file bắt đầu bằng giai đoạn
 │   ├── context-product-and-users.md
-│   ├── context-principle-checks.md          (viết ở module sau)
-│   ├── context-design-system-notes.md       (thêm ở module sau)
+│   ├── context-principle-checks.md          (viết ở buổi 4)
+│   ├── context-design-system-notes.md       (thêm ở buổi 7)
 │   ├── context-accessibility-rules.md
 │   ├── context-data-rules.md
 │   ├── context-glossary.md                  (tuỳ chọn)
@@ -234,13 +285,13 @@ Output của mục này là `learnings/context-data-rules.md`: ba dòng bằng l
 │   └── prototype/       code prototype
 ├── hub/                 Knowledge Hub: folder Markdown, mỗi item (O, H, D, T, M) một file
 ├── tools/               export-hub.py và các step card: quy trình AI-assisted dưới dạng file
-└── _personal/           my-direction.md (viết ở buổi 2, xem lại ở tuần 7); không đưa cho AI tool
+└── _personal/           my-direction.md (viết sau buổi 1, xem lại ở buổi 12); không đưa cho AI tool
 ```
 
 Layout này phục vụ làm việc với AI vì:
 
 - Ít folder, nhiều file có tên rõ: tiền tố giai đoạn (`context-`, `discover-`...) giữ đúng thứ tự; mỗi activity một file cho mỗi bước AI một input có tên; các file `context-*` là thứ đưa vào đầu tiên ở mọi bước; file Markdown ngắn dễ cung cấp có chọn lọc.
-- `AGENTS.md` là một reusable instruction (thuật ngữ 9): tool tự đọc file này khi mở folder, nên các quy tắc không phụ thuộc vào việc học viên nhớ dán lại. Tên file tuỳ tool; tool đọc tên khác thì copy nội dung sang tên đó.
+- `AGENTS.md` là một reusable instruction (xem 4.1b): tool tự đọc file này khi mở folder, nên các quy tắc không phụ thuộc vào việc học viên nhớ dán lại. Tên file tuỳ tool; tool đọc tên khác thì copy nội dung sang tên đó.
 - Các step card trong `tools/` ghi rõ mỗi bước do ai làm, đọc file nào và ghi vào đâu, nên quy trình được lưu cùng case thay vì nằm trong trí nhớ.
 - `learnings/sources/` tách `_raw-private/` khỏi `anonymised/`, nên dữ liệu chưa ẩn danh không lên GitHub và không nằm trong thứ AI được phép đọc.
 - `_personal/` nằm ngoài context pack vì ghi chú nghề nghiệp cá nhân không phải ngữ cảnh của case, và không nên đi vào mỗi bước AI.
@@ -259,7 +310,7 @@ Mỗi activity điền vào một file Markdown, từng section một. Năm quy 
 
 ### 6.4 Knowledge Hub and sharing
 
-Mọi output đi vào **Knowledge Hub**: một folder Markdown nằm trong case folder, gồm các page theo tuần, và mỗi item một file riêng ngay trong `hub/` (O1, H1, M1, D1, T1...; chữ cái đầu của mã cho biết loại). Các file liên kết với nhau qua properties, nên người đọc có thể bắt đầu từ bất kỳ design decision nào và lần ra user need, hypothesis, principle và test đứng sau nó. Hub hoàn chỉnh là báo cáo cuối của chương trình; mỗi module thêm các item và một page. Công cụ nào mở được folder đều dùng được. Obsidian thêm Graph view, Backlinks và bảng theo loại item (Bases, file `hub/traceability.base`); wikilink trong properties chỉ bấm được trong Obsidian, nhưng các công cụ khác vẫn đọc và sửa được vì đó là text. Để chia sẻ cho người khác thì xuất báo cáo HTML.
+Mọi output đi vào **Knowledge Hub**: một folder Markdown nằm trong case folder, gồm các page theo tuần, và mỗi item một file riêng ngay trong `hub/` (O1, H1, M1, D1, T1...; chữ cái đầu của mã cho biết loại). Các file liên kết với nhau qua properties, nên người đọc có thể bắt đầu từ bất kỳ design decision nào và lần ra user need, hypothesis, principle và test đứng sau nó. Hub hoàn chỉnh là báo cáo cuối của chương trình; mỗi buổi thêm các item và một page. Công cụ nào mở được folder đều dùng được. Obsidian thêm Graph view, Backlinks và bảng theo loại item (Bases, file `hub/traceability.base`); wikilink trong properties chỉ bấm được trong Obsidian, nhưng các công cụ khác vẫn đọc và sửa được vì đó là text. Để chia sẻ cho người khác thì xuất báo cáo HTML.
 
 Bên cạnh item, mỗi tài liệu làm ra trong dự án (phân tích đối thủ, persona, khảo sát, user flow, prototype) là một **artifact** có trang riêng, nối với các item nó hỗ trợ; tệp ảnh, PDF, HTML thả vào folder của artifact được tự nhận diện, và link Figma được mở ở tab ngoài. File item là nguồn duy nhất. Bảng alignment, danh sách warnings (decision không có user need phía sau, hypothesis không có test) và trạng thái gate do AI dựng lại bằng bước `tools/step-refresh-hub.md`, vào các khối đánh dấu `generated`. Bước này chưa được thử với một lớp thật; sau mỗi lần dựng, học viên đối chiếu vài dòng với file item.
 
@@ -278,68 +329,48 @@ Người công khai là người host và chịu trách nhiệm. GitHub hiển t
 
 ### 7.1 Structure
 
-**Buổi 1 (teaching session, 90 phút).** Buổi dạy: trình bày ngắn, xen câu hỏi và trao đổi theo cặp. Không có file hay output mới; mọi output nằm ở buổi 2.
+**Buổi 1 (90 phút).** Trình bày ngắn, xen câu hỏi và trao đổi theo cặp, kèm ice breaker và một activity trên lớp (Activity 2, viết data rules). Việc dựng case folder là bài tập về nhà (mục 8.2). *Gộp từ hai buổi (dạy và thực hành) của bản 14 session, 2026-10-22, theo lộ trình Notion.*
 
 | Phase | Nội dung | Mục của tài liệu | Thời gian |
 |---|---|---|---|
-| 1 | Tương lai của nghề, ba hướng đi, trao đổi về hướng của mình, lập trường partner | 1, 2, 3.3 | 20 phút |
-| 2 | Quy trình thiết kế cùng AI: mỗi stage gồm gì và AI hỗ trợ ở đâu (không đi vào từng method) | 3.1, 3.2 | 10 phút |
-| 3 | Một task làm hai lần; thuật ngữ trong thực tế; Activity 1 | 4 | 19 phút |
-| 4 | Data safety (trình bày và bài phân loại) | 5 | 12 phút |
-| 5 | Tiếp theo là gì, hub, kết thúc phần trình bày (6 phút); hỏi đáp (15 phút) | 6.4, 10 | 21 phút |
+| 1 | Ice breaker: giới thiệu và một lần AI làm bạn bất ngờ hoặc bực | 7.2 | 7 phút |
+| 2 | Tương lai của nghề, ba hướng đi, lập trường partner | 1, 2, 3.3 | 14 phút |
+| 3 | Quy trình thiết kế cùng AI: mỗi stage gồm gì và AI hỗ trợ ở đâu (không đi vào từng method); AI làm tốt và còn yếu ở đâu; ba câu hỏi trước khi automate | 3.1 đến 3.5 | 14 phút |
+| 4 | Một task làm hai lần; bốn khái niệm gắn vào demo | 4 | 11 phút |
+| 5 | Data safety | 5 | 8 phút |
+| 6 | Activity 2: viết data rules trên tài liệu thật của case | 5, 7.2 | 8 phút |
+| 7 | Case folder và working file: xem layout, hub mẫu, cách chia sẻ hub; giao bài tập về nhà | 6 | 12 phút |
+| 8 | Hỏi đáp | 7.3 | 8 phút |
 | | **Tổng nội dung** | | **82 phút** |
-| | Buffer, gồm phần nhắc chuẩn bị cho buổi 2 sau hỏi đáp | | 8 phút |
+| | Kết thúc và buffer | | 8 phút |
 
-**Buổi 2 (practice session, 90 phút, khoảng ba ngày sau buổi 1).** Không có nội dung mới. Học viên làm việc trên case của chính mình trong breakout room 3 đến 4 người, có coaching.
-
-| Phase | Nội dung | Mục của tài liệu | Thời gian |
-|---|---|---|---|
-| 6 | Check-in; viết hướng của mình; Activity 2 (data rules) | 2, 5 | 14 phút |
-| 7 | File, folder và case folder | 6.1 đến 6.3 | 9 phút |
-| 8 | Activity 3: dựng case folder | 6 | 40 phút |
-| 9 | Activity 4: đọc chéo; xem một case folder trực tiếp | 4.3 | 16 phút |
-| 10 | Kết thúc buổi và việc tiếp theo của dự án | 8 | 6 phút |
-| | **Tổng nội dung** | | **85 phút** |
-| | Buffer | | 5 phút |
-
-Timing chưa được thử với một lớp thật.
+Timing chưa được thử với một lớp thật. Buổi chỉ có một activity trên lớp (Activity 2) và một bài tập về nhà; ice breaker không tính là activity. **Thứ tự cắt khi quá giờ (đề xuất, chưa thử):** slide ba câu hỏi trước khi automate, rồi slide "trông đúng chưa chắc đúng", rồi phần chia sẻ hub ở Phase 7, rồi rút hỏi đáp còn 4 phút, rồi rút ice breaker còn 5 phút. Data safety và Activity 2 không bao giờ bị cắt.
 
 ### 7.2 Activities
 
-**Warm-up: trao đổi về hướng của mình** (buổi 1, 3 phút, theo cặp, không có output). Mỗi người nói 30 giây: hướng đang nghiêng về và lý do. Không ai phải chọn dứt khoát.
+**Ice breaker: ai đang ở trong phòng** (7 phút, cả lớp, đầu buổi, không có output). *Mục đích:* làm lớp bớt ngượng trước khi vào nội dung, và lấy chất liệu thật cho phần sau. *Quy trình:* giảng viên nói trước (20 giây, làm mẫu), rồi mỗi người nói khoảng 40 giây: (1) tên và công việc hiện tại, (2) một lần dùng AI trong công việc khiến bạn bất ngờ, hoặc một lần nó làm bạn bực. Giảng viên ghi nhanh các ý vào một bảng hai cột "bất ngờ" và "bực" cho cả lớp thấy. Không ai phải kể điều mình chưa dùng; ai chưa dùng AI thì kể điều mình kỳ vọng hoặc lo ngại. *Dùng lại:* quay lại bảng này ở phần AI làm tốt và còn yếu (Phase 3) và ở ba câu hỏi trước khi automate. Lớp nhỏ (dưới 6 người) có thể giảm còn 5 phút.
 
-**Activity 1: giải thích cho đồng nghiệp** (buổi 1, 4 phút, theo cặp, không có output). Mỗi người lấy hai thẻ thuật ngữ, giải thích từng thuật ngữ trong một câu kèm ví dụ từ case của mình; bạn cặp hỏi: "Từ điều đó, bạn sẽ làm khác đi điều gì?" `glossary.md` là tuỳ chọn, thực hiện ở homework.
+**Activity 2: viết data rules** (8 phút, cá nhân, ngay sau phần data safety). *Mục đích:* áp dụng ba nhóm dữ liệu vào tài liệu thật của case. *Quy trình:* (1) 3 phút: liệt kê ba tài liệu thật của case (ví dụ một bản research, một feature spec, một transcript phỏng vấn) và xếp mỗi cái vào safe, ask first hoặc never in a public tool; (2) 5 phút: viết ba dòng vào một file `context-data-rules.md` (tạo tạm, sau đó chuyển vào case folder ở bài tập về nhà); chỗ nào chưa biết chính sách của công ty thì ghi "cần hỏi". Học viên dùng case card của chương trình thì viết cho case card và viết lại cho case thật sau. *Output:* bản đầu của `context-data-rules.md`.
 
-**Bài phân loại dữ liệu** (buổi 1, 4 phút, theo cặp). Sáu thẻ: (1) trang giá công khai của một đối thủ, (2) transcript phỏng vấn có tên người tham gia, (3) ghi chú về một app công khai đang dùng, (4) một feature spec chưa phát hành, (5) danh sách email khách hàng, (6) ảnh chụp admin dashboard của công ty. Kết quả mong đợi: 1 và 3 là safe; 2, 4, 5 và 6 là never in a public tool (2 có thể thành safe sau khi ẩn danh; 6 tuỳ nội dung nhìn thấy được). Thảo luận khi có bất đồng.
-
-**Activity 2: viết data rules** (buổi 2, 8 phút, cá nhân). *Mục đích:* áp dụng ba nhóm dữ liệu vào tài liệu thật của case. *Quy trình:* (1) 3 phút: liệt kê ba tài liệu thật của case (ví dụ một bản research, một feature spec, một transcript phỏng vấn) và xếp mỗi cái vào safe, ask first hoặc never in a public tool; (2) 5 phút: viết ba dòng vào `data-rules.md`; chỗ nào chưa biết chính sách của công ty thì ghi "cần hỏi". Học viên dùng case card của chương trình thì viết cho case card và viết lại cho case thật sau. *Output:* bản đầu của `data-rules.md`.
-
-**Activity 3: dựng case folder** (buổi 2, 40 phút, cá nhân trong breakout room). *Mục đích:* dựng nền tảng mà cả chương trình chạy trên đó, và kiểm tra nó bằng một instruction giống instruction ở ví dụ 4.2. *Quy trình:*
-1. (5 phút) Lấy case folder từ workspace template (folder `my-case`, tải bằng ZIP, không cần tài khoản GitHub) và đổi tên theo case, chữ thường, nối bằng dấu gạch ngang; đối chiếu cây folder với layout ở 6.2.
-2. (10 phút) Bắt đầu context pack: viết phiên bản đầu của `context-product-and-users.md` (sản phẩm là gì, ai dùng, job chính của họ; nửa trang, đã ẩn danh); đưa `context-data-rules.md` từ Activity 2 vào. `context-accessibility-rules.md` được viết ở Việc 1 của phần tiếp tục dự án (8.2).
-3. (5 phút) Mở cả folder case bằng công cụ mình quen (AI coding tool, VS Code hoặc Obsidian), rồi mở `hub/README.md`: trang Overview hiển thị dữ liệu mẫu. Đọc `AGENTS.md` để biết AI tool sẽ được dặn những gì. Chưa chỉnh sửa gì.
-4. (20 phút) Chạy một instruction với một file đã lưu. Đính kèm `context-product-and-users.md` vào AI chat tool và dùng: "Đây là context cho design case của tôi. Chỉ dùng file này. Liệt kê năm điều quan trọng nhất bạn cần biết về sản phẩm và người dùng mà KHÔNG có trong file, và nói vì sao mỗi điều quan trọng. Không đoán, không dùng kiến thức chung để lấp chỗ trống. Nếu chỗ nào chưa rõ, trả lời 'unknown'. Chỉ trả về danh sách." Đọc câu trả lời có phản biện: câu nào hữu ích, câu nào chung chung, câu nào tự tìm ra được; lưu những câu hữu ích vào `00-context/open-questions.md`.
-
-*Output:* case folder, context pack đã bắt đầu, hub mẫu đã mở, `context-open-questions.md`. Học viên có công ty không cho phép AI tool, hoặc case quá nhạy cảm, dùng case card của chương trình cho bước 4.
-
-**Activity 4: đọc chéo với bạn cặp** (buổi 2, 10 phút, theo cặp). *Mục đích:* nhìn file của mình qua mắt người không biết case, và dùng AI để chỉ ra chỗ còn thiếu. *Quy trình:* (1) 4 phút: đổi `product-and-users.md` đã ẩn danh; mỗi người đính kèm file của bạn cặp vào AI chat tool và chạy instruction ở bước 4 của Activity 3; (2) 4 phút: trao đổi với bạn cặp xem trong năm điều AI nói còn thiếu, điều nào thật sự thiếu và điều nào người viết trả lời được ngay trong một câu; (3) 2 phút: mỗi người ghi ba điều cần bổ sung. *Quy tắc dữ liệu:* chỉ đổi file đã ẩn danh và chỉ khi cả hai đồng ý; mỗi người dùng file của bạn cặp trong một cuộc hội thoại mới, không dán sang nơi khác, và đóng hoặc xoá cuộc hội thoại sau khi xong; học viên có case nhạy cảm dùng case card của chương trình cho activity này. *Ghi chú:* điều AI nói thiếu mà người viết trả lời được trong một câu cho thấy file còn chưa đủ chi tiết. *Output:* ba điều cần bổ sung vào `product-and-users.md`.
+**Bài tập về nhà.** Dựng case folder (Activity 3 của bản hai buổi) không còn chạy trên lớp; quy trình nằm ở mục 8.2. Activity 1 (giải thích thuật ngữ theo cặp), bài phân loại sáu thẻ và Activity 4 (đọc chéo) đã bỏ để buổi gọn hơn; Activity 2 đã phân loại tài liệu thật của case nên thay được bài phân loại.
 
 ### 7.3 Participation
 
-Học viên được khuyến khích ghi câu hỏi vào chat trong suốt buổi 1. Mười lăm phút cuối buổi 1 dành để trả lời các câu hỏi đó, ưu tiên những câu được nhiều người quan tâm; câu nào cần số liệu hoặc cần cân nhắc thêm được trả lời bằng văn bản sau buổi. Sau phần hỏi đáp là lời nhắc chuẩn bị cho buổi 2 (chọn và ẩn danh tài liệu của case, kiểm tra AI tool, giữa hai buổi chỉ dùng case card nếu muốn thử AI tool).
+Học viên được khuyến khích ghi câu hỏi vào chat trong suốt buổi. Tám phút hỏi đáp ở cuối buổi dành cho các câu hỏi đó, ưu tiên những câu được nhiều người quan tâm; câu nào cần số liệu hoặc cần cân nhắc thêm được trả lời bằng văn bản sau buổi. Phần hỏi đáp kết thúc bằng lời nhắc về bài tập về nhà và việc chuẩn bị cho buổi 2.
 
 ### 7.4 Preparation and materials
 
 **Trước buổi 1** (khoảng 20 phút):
-1. Mang một AI tool đã được công ty cho phép. Đọc handout về tool (`tools-to-bring.md`, khoảng 5 phút) và làm bài kiểm tra 5 phút trong đó. Cần một chat tool ngay, và một coding tool trước buổi 9 (tuần 5).
+1. Mang một AI tool đã được công ty cho phép. Đọc handout về tool (`tools-to-bring.md`, khoảng 5 phút) và làm bài kiểm tra 5 phút trong đó. Cần một chat tool ngay, và một coding tool trước buổi 7.
 2. Đọc **pre-read brief** (khoảng 10 phút, xem Appendix A).
 3. Chọn case: project, sản phẩm hoặc feature của chính mình, đã ẩn danh. Hub mặc định là private. Nếu công ty cấm AI tool hoặc case quá nhạy cảm để mang lên lớp, dùng case card của chương trình.
 4. Nghĩ trước một câu hỏi: trong 12 tháng tới, mong muốn công việc khác đi ở điểm nào? Không cần có câu trả lời.
 5. Tìm hiểu quy định của công ty về AI tool: có chính sách bằng văn bản không, tool nào được duyệt.
+6. Tải workspace template về máy (ZIP, không cần tài khoản GitHub; xem `guides/01-get-the-folder.md`) và đặt ở một folder trên máy, không đặt trong folder đồng bộ cloud, để bài tập về nhà có sẵn nền.
 
-**Giữa hai buổi:** không có bài đọc mới. Chọn và ẩn danh tài liệu của case để dùng ở buổi 2, và kiểm tra lại AI tool. Nếu muốn thử AI tool, chỉ dùng case card của chương trình; chưa dán tài liệu thật của case vào AI tool trước khi viết data rules ở buổi 2. Tải workspace template về máy (ZIP, không cần tài khoản GitHub; xem `guides/01-get-the-folder.md`), đặt ở một folder trên máy, không đặt trong folder đồng bộ cloud, và chọn công cụ để mở folder (AI coding tool, VS Code hoặc Obsidian; xem `guides/02-set-up-your-case.md`).
+**Giữa buổi 1 và buổi 2:** làm bài tập về nhà (mục 8.2). Trước khi viết data rules ở Activity 2, chưa dán tài liệu thật của case vào AI tool; nếu muốn thử AI tool, chỉ dùng case card của chương trình.
 
-**Tài liệu:** handout về tool (`tools-to-bring.md`), case card của chương trình (`course-case/case-card.md`), bộ thẻ thuật ngữ và sáu thẻ phân loại dữ liệu, workspace template (`my-case` gồm `AGENTS.md`, `tools/` (step card) và hub Markdown mẫu; `demo-case` cho học viên cần case giả), các method card, hướng dẫn chia sẻ hub (`guides/04-share-your-hub.md`).
+**Tài liệu:** handout về tool (`tools-to-bring.md`), handout `before-you-automate.md` (checklist tám câu, gửi sau buổi 1), case card của chương trình (`course-case/case-card.md`), workspace template (`my-case` gồm `AGENTS.md`, `tools/` (step card) và hub Markdown mẫu; `demo-case` cho học viên cần case giả), các method card, hướng dẫn chia sẻ hub (`guides/04-share-your-hub.md`).
 
 ---
 
@@ -349,22 +380,31 @@ Học viên được khuyến khích ghi câu hỏi vào chat trong suốt buổ
 
 1. Chọn một stage: nêu một method, khi nào dùng, AI làm gì và designer vẫn làm gì.
 2. AI-assisted khác AI-generated ở điểm nào?
-3. Context window là gì, và khi tài liệu dài thì nên làm gì?
+3. Context là gì, và grounding giúp gì khi tài liệu dài hoặc lộn xộn?
 4. Vì sao nên cho phép AI trả lời "unknown"?
-5. Agent làm được gì mà một câu trả lời chat không làm được, và sau đó cần kiểm tra gì?
+5. Trước khi kết nối một connector cho AI tool, cần xác định điều gì?
 6. Nêu hai thứ không nên dán vào một AI tool công khai, và việc cần làm trước khi dán một transcript phỏng vấn.
 7. Vì sao hub mặc định là private, và có những cách nào để cho người khác xem?
 8. Nêu một con số về mức dùng AI của designer kèm nguồn, năm và cỡ mẫu, và nói con số đó không cho biết điều gì.
 9. Nêu ba hướng đi nghề nghiệp, rồi với hướng mình nghiêng về, nêu một bằng chứng và một giới hạn của bằng chứng đó.
 10. Trước khi mô tả project cho AI từ trí nhớ, cần làm gì? Một instruction tốt gồm những thành phần nào?
+11. Nêu hai loại task AI làm tốt, hai loại AI còn yếu, và một bằng chứng cho mỗi bên.
+12. Vì sao không nên dùng AI để làm nhanh một workflow chưa ổn? Nêu ba câu hỏi cần trả lời trước khi automate.
 
-### 8.2 Tiếp tục dự án (tối đa 45 phút, nối tiếp phần đã bắt đầu trên lớp)
+### 8.2 Bài tập về nhà: dựng case folder (khoảng 45 phút, nối tiếp phần đã bắt đầu trên lớp)
 
-Phần này không phải bài nộp để chấm. Đó là các việc để case folder trở thành workspace dùng được cho dự án thật, cả trong khoá lẫn sau khoá.
+Phần này không phải bài nộp để chấm. Đó là một bài tập duy nhất để case folder trở thành workspace dùng được cho dự án thật, cả trong khoá lẫn sau khoá. Nên xong trước buổi 2, vì các buổi sau làm trên chính folder này. *(Activity 3 của bản hai buổi, cộng một bước viết hướng của mình; Activity 4 đọc chéo và phần chia sẻ hub đã bỏ khỏi bài tập, hướng dẫn chia sẻ hub nằm trong `guides/04-share-your-hub.md`.)*
 
-**Việc 1: hoàn thiện nền của dự án (cần có, khoảng 25 phút).** Nên xong trước buổi đầu tiên của module tiếp theo, vì các module sau làm trên chính folder này. Phần lớn là bổ sung ba điều từ Activity 4 và dọn gọn. Sản phẩm gồm: case folder hoàn chỉnh theo layout chuẩn; `context-product-and-users.md` hoàn thiện (một trang: sản phẩm, người dùng, job chính, thành công có thể trông như thế nào, và những điều chưa biết); `context-accessibility-rules.md` (viết mới, các yêu cầu phải đáp ứng, vài dòng) và `context-data-rules.md` (ba dòng) hoàn thiện; `hub/`, `AGENTS.md` và `tools/` đã có sẵn từ template; `context-glossary.md` (tuỳ chọn). Chia sẻ ảnh chụp cây folder và `product-and-users.md` để nhận feedback, sau khi ẩn danh mọi thông tin confidential. Dấu hiệu đạt: cấu trúc thật; `product-and-users.md` đủ cụ thể để người ngoài hình dung được người dùng; data rules bằng lời của chính học viên.
+*Mục đích:* dựng nền tảng mà cả chương trình chạy trên đó, và kiểm tra nó bằng một instruction giống instruction ở ví dụ 4.2. *Quy trình:*
+1. (5 phút) Lấy case folder từ workspace template (folder `my-case`, tải bằng ZIP, không cần tài khoản GitHub) và đổi tên theo case, chữ thường, nối bằng dấu gạch ngang; đối chiếu cây folder với layout ở 6.2.
+2. (10 phút) Bắt đầu context pack: viết phiên bản đầu của `context-product-and-users.md` (sản phẩm là gì, ai dùng, job chính của họ; nửa trang, đã ẩn danh); đưa `context-data-rules.md` từ Activity 2 vào.
+3. (5 phút) Mở cả folder case bằng công cụ mình quen (AI coding tool, VS Code hoặc Obsidian), rồi mở `hub/README.md`: trang Overview hiển thị dữ liệu mẫu. Đọc `AGENTS.md` để biết AI tool sẽ được dặn những gì. Chưa chỉnh sửa gì.
+4. (20 phút) Chạy một instruction với một file đã lưu. Đính kèm `context-product-and-users.md` vào AI chat tool và dùng: "Đây là context cho design case của tôi. Chỉ dùng file này. Liệt kê năm điều quan trọng nhất bạn cần biết về sản phẩm và người dùng mà KHÔNG có trong file, và nói vì sao mỗi điều quan trọng. Không đoán, không dùng kiến thức chung để lấp chỗ trống. Nếu chỗ nào chưa rõ, trả lời 'unknown'. Chỉ trả về danh sách." Đọc câu trả lời có phản biện: câu nào hữu ích, câu nào chung chung, câu nào tự tìm ra được; lưu những câu hữu ích vào `context-open-questions.md` trong `learnings/`.
+5. (5 phút) Ghi hai đến ba dòng vào `_personal/my-direction.md`: hướng nghiêng về trong ba hướng đi, lý do, một kỹ năng muốn xây trong chương trình. File nằm ngoài context pack, không đưa cho AI tool, và được xem lại ở buổi 12.
 
-**Việc 2: chia sẻ hub (tuỳ chọn, khoảng 20 phút).** Chọn một trong hai: (a) *Private:* export trang Overview của hub ra PDF, nén cả case folder và mở thử trên một thiết bị khác; (b) *Public, nếu toàn bộ case được phép chia sẻ:* làm theo `guides/04-share-your-hub.md` (tài khoản GitHub miễn phí, repository public mới chứa bản case đã làm sạch, mở link trong cửa sổ ẩn danh). Người công khai là người host và chịu trách nhiệm. Buổi live tiếp theo không phụ thuộc vào phần này.
+*Output:* case folder, context pack đã bắt đầu, hub mẫu đã mở, `context-open-questions.md`, `my-direction.md`. Học viên có công ty không cho phép AI tool, hoặc case quá nhạy cảm, dùng case card của chương trình cho bước 4.
+
+Dấu hiệu đạt: cấu trúc folder thật; `context-product-and-users.md` đủ cụ thể để người ngoài hình dung được người dùng; data rules bằng lời của chính học viên. Buổi live tiếp theo không phụ thuộc vào việc bài tập đã xong hay chưa.
 
 ---
 
@@ -373,6 +413,7 @@ Phần này không phải bài nộp để chấm. Đó là các việc để ca
 - **Thiên lệch của dữ liệu train.** AI tool phản ánh các pattern trong dữ liệu train, vốn nghiêng về phương Tây và tiếng Anh. Với người dùng Việt Nam hoặc Đông Nam Á, cần đối chiếu gợi ý với mental model của người dùng, không chỉ xem output có thuyết phục hay không.
 - **Dữ liệu đưa vào có thể bị lưu lại.** Cần áp dụng data rules ở mỗi lần dùng.
 - **Giới hạn của bằng chứng nghề nghiệp.** Xem mục 1.3. Các hướng đi ở mục 2 là xu hướng, không phải dự báo cá nhân.
+- **Giới hạn của bằng chứng về năng lực AI.** Các số liệu ở mục 3.4 đến từ nghiên cứu và benchmark trên những mô hình tại thời điểm đó, và thay đổi nhanh. Bằng chứng về AI như bộ khuếch đại (mục 3.5) đến từ phát triển phần mềm; việc áp vào công việc design là suy luận, chưa được đo.
 - **Giới hạn của chương trình.** Chương trình không dạy thiết kế sản phẩm AI; chỉ cung cấp nền tảng cho hướng đó.
 - **Thời gian trong thiết kế buổi học** chưa được kiểm chứng với lớp thật.
 
@@ -380,31 +421,36 @@ Phần này không phải bài nộp để chấm. Đó là các việc để ca
 
 ## 10. Connection to the series
 
-| Module (tuần) | Vai trò |
+| Buổi | Vai trò |
 |---|---|
-| **Module này (tuần 1)** | Tương lai của nghề và ba hướng đi; bốn stage và các method; AI ở mức tổng quan; bộ từ vựng chung; data rules; case folder; hub mẫu; lập trường AI-assisted |
-| Discover the Problem (tuần 2) | Lần đầu dùng case folder và các step card trong `tools/`; bắt đầu từ câu hỏi của business; stakeholder check bằng văn bản; phỏng vấn user theo cặp; user-voice synthesis trên quote thật với quy tắc "unknown" |
-| Frame the Problem Worth Solving (tuần 3) | Diễn giải findings và problem brief ở mức sâu; viết principle checks vào `learnings/` (`context-principle-checks.md`); viết opportunity, hypothesis và metric thành các file item trong hub |
-| Explore Ideas (tuần 4) | Method brainstorm và select của Develop ở mức sâu; chọn một hướng; viết flows và content |
-| Build Your First Prototype (tuần 5) | Thêm design system notes vào `learnings/` (`context-design-system-notes.md`); dựng prototype đầu tiên và ghi các decision đầu tiên thành file item |
-| Refine and Test (tuần 6) | Refine, alignment check và usability test ở mức sâu; tạo file test và dựng lại hub để thấy các khoảng trống |
-| Hand Off and Present (tuần 7) | Handoff pack, measurement plan và final project; hoàn thiện hub thành báo cáo cuối; xem lại `_personal/my-direction.md` đã viết ở tuần 1 |
+| **Buổi 1 (buổi này)** | Tương lai của nghề và ba hướng đi; bốn stage và các method; AI ở mức tổng quan; bộ từ vựng chung; data rules; case folder; hub mẫu; lập trường AI-assisted |
+| Buổi 2: Discover the Problem | Lần đầu dùng case folder và các step card trong `tools/`; bắt đầu từ câu hỏi của business; stakeholder check bằng văn bản; success metric và baseline; heuristic evaluation |
+| Buổi 3: Turn Research into Insights You Can Trust | Ghép điều người khác làm với điều user nói; user-voice synthesis trên quote thật với quy tắc "unknown"; kiểm theme về quote gốc |
+| Buổi 4: Frame the Problem Worth Solving | Opportunity, principle checks vào `learnings/` (`context-principle-checks.md`), hypothesis, Goals/Signals/Metrics thành các file item trong hub |
+| Buổi 5: Check point 1 | Chạy Discover đến Define trên case của từng người; problem brief |
+| Buổi 6: Explore Ideas | Method brainstorm và select của Develop ở mức sâu; chọn một hướng; viết flows và content |
+| Buổi 7: Build Your First Prototype | Thêm design system notes vào `learnings/` (`context-design-system-notes.md`); dựng prototype đầu tiên và ghi các decision đầu tiên thành file item |
+| Buổi 8: Refine and Check | State, edge case, kiểm tra AI với design system và accessibility, alignment check |
+| Buổi 9: Test with Real Users | Test plan, usability test, SUS; tạo file test và dựng lại hub để thấy các khoảng trống |
+| Buổi 10: Check point 2 | Dựng main flow, refine, peer test, sửa finding |
+| Buổi 11: Hand Off and Measure Success | Handoff pack, measurement plan, mô tả kết quả workflow bằng số đếm |
+| Buổi 12: Check point 3 | Final project; hoàn thiện hub thành báo cáo cuối; xem lại `_personal/my-direction.md` đã viết sau buổi 1 |
 
 ---
 
 ## References
 
-[1] Designer Fund và Foundation Capital. *AI in Design 2026* (khảo sát 906 designer, hơn 25 buổi phỏng vấn, 7 case study công ty, 2026). https://designerfund.com/blog/ai-in-design-2026
+[1] Designer Fund và Foundation Capital. *AI in Design 2026* (khảo sát hơn 900 designer, hơn 25 buổi phỏng vấn, 7 case study công ty, 2026). https://designerfund.com/blog/ai-in-design-2026
 
-[2] Figma. *State of the Designer 2026* (906 digital designer, thực hiện cùng NewtonX, 2026). Báo cáo đầy đủ cần điền form miễn phí; tỷ lệ 36/35/29 được trích qua nguồn thứ cấp và cần xác nhận ở báo cáo gốc. https://www.figma.com/reports/state-of-the-designer-2026/
+[2] Đã gỡ: số liệu từ báo cáo State of the Designer 2026 của Figma không xác thực được ở nguồn gốc (trang công khai chỉ có form tải báo cáo, kiểm tra 22/10/2026). Giữ số thứ tự để các tham chiếu khác không đổi.
 
-[3] Moran, K., Budiu, R., Gibbons, S. và các chuyên gia NN/g. *State of UX in 2026*. Nielsen Norman Group, 16/01/2026. https://www.nngroup.com/articles/state-of-ux-2026/
+[3] Moran, K., Budiu, R., Gibbons, S. và các chuyên gia NN/g. *State of UX 2026: Design Deeper to Differentiate*. Nielsen Norman Group, 16/01/2026. https://www.nngroup.com/articles/state-of-ux-2026/
 
 [4] U.S. Bureau of Labor Statistics. *Occupational Outlook Handbook: Web Developers and Digital Designers* (dự báo 2025 đến 2035; trang cập nhật 27/08/2026). https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm
 
 [5] Adobe. *The Economic State of Creative Professions*, Edition 1, 06/2026 (bản tổng hợp số liệu BLS, gồm dự báo việc làm 2024 đến 2034; không bàn về tác động của công nghệ). https://www.adobe.com/cc-shared/assets/ai/research/adobe-ai-research-june-2026-economic-state-of-creative-professions.pdf
 
-[6] Brynjolfsson, E., Chandar, B. và Chen, R. *Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence*. Stanford Digital Economy Lab, 13/11/2025 (dữ liệu bảng lương ADP). https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/
+[6] Brynjolfsson, E., Chandar, B. và Chen, R. *Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence*. Stanford Digital Economy Lab, bản đầu 08/2025, cập nhật 12/08/2026 (dữ liệu bảng lương ADP đến 06/2026). https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/
 
 [7] Figma. *Design systems, AI and MCP* (blog). https://www.figma.com/blog/design-systems-ai-mcp/
 
@@ -416,9 +462,27 @@ Phần này không phải bài nộp để chấm. Đó là các việc để ca
 
 [11] Chính phủ. *Nghị định 356/2025/NĐ-CP* quy định chi tiết một số điều và biện pháp thi hành Luật Bảo vệ dữ liệu cá nhân, ban hành ngày 31/12/2025. https://english.luatvietnam.vn/decree-no-356-2025-nd-cp-dated-december-31-2025-of-the-government-detailing-a-number-of-articles-and-measures-for-the-implementation-of-the-law-on-p-422896-doc1.html
 
-[12] Trang data controls và điều khoản dành cho người dùng của từng nhà cung cấp AI tool (nguồn gốc; cần đọc bản hiện hành của tool đang dùng). Danh sách các trang đã được đối chiếu và ngày kiểm tra nằm trong `programs/ai-design-workflow/04-future-of-design-careers.md`, mục 12.
+[12] Trang data controls và điều khoản dành cho người dùng của từng nhà cung cấp AI tool (nguồn gốc; cần đọc bản hiện hành của tool đang dùng). Danh sách các trang đã được đối chiếu và ngày kiểm tra nằm trong `programs/ai-design-workflow/learning/research.md`, Part 6.
 
-Nhật ký bằng chứng đầy đủ, mức độ tin cậy từng con số và các nhận định chưa dùng nằm trong `programs/ai-design-workflow/04-future-of-design-careers.md`.
+[13] Noy, S. và Zhang, W. *Experimental evidence on the productivity effects of generative artificial intelligence*. Science, 2023 (453 người làm chuyên môn có trình độ đại học). https://scale.stanford.edu/publications/experimental-evidence-productivity-effects-generative-artificial-intelligence
+
+[14] Dell'Acqua, F. và cộng sự. *Navigating the Jagged Technological Frontier*. Harvard Business School và BCG, working paper, 2023 (758 consultant). Chưa đọc được paper (HBS và SSRN chặn truy cập); các số 12,2%, 25,1%, 40% lấy từ bài của đồng tác giả Ethan Mollick. https://www.oneusefulthing.org/p/centaurs-and-cyborgs-on-the-jagged . Trang HBS: https://www.hbs.edu/faculty/Pages/item.aspx?num=64700
+
+[15] GitHub. *Research: quantifying GitHub Copilot's impact on developer productivity and happiness*. 2022 (95 developer, một task HTTP server bằng JavaScript). https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/
+
+[16] METR. *Measuring the impact of early-2025 AI on experienced open-source developer productivity*. 2025 (16 developer, 246 task, repository quen thuộc). https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/ ; cập nhật 24/02/2026: https://metr.org/blog/2026-02-24-uplift-update/
+
+[17] Scale AI và Center for AI Safety. *Remote Labor Index*. 2025, kèm bảng xếp hạng cập nhật (kiểm tra 22/10/2026). https://labs.scale.com/papers/rli ; https://labs.scale.com/leaderboard/rli
+
+[18] Nielsen Norman Group. Moran, K. và Rosala, M. *Accelerating Research with AI*, 27/09/2024 (xem lại 21/01/2026). https://www.nngroup.com/articles/research-with-ai/ ; Rosala, M. *Don't Outsource the Learning*, 17/07/2026. https://www.nngroup.com/articles/human-led-research-still-matters/
+
+[19] BetterUp Labs và Stanford Social Media Lab. *Workslop*. Harvard Business Review, 2025 22/09/2025 (khảo sát 1.150 desk worker toàn thời gian ở Mỹ, 09/2025). Số liệu lấy từ trang BetterUp vì phần thân bài HBR bị chặn. https://www.betterup.com/workslop ; https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity
+
+[20] DORA (Google Cloud). *State of AI-assisted Software Development 2025* (khảo sát gần 5.000 người làm công nghệ, 2025). Đọc qua bản tóm tắt thứ cấp; cần kiểm tra số liệu ở báo cáo gốc. https://www.dora.dev/research/ai
+
+[21] Hammer, M. *Reengineering Work: Don't Automate, Obliterate*. Harvard Business Review, tháng 7 và 8 năm 1990 (reprint 90406). Siêu dữ liệu đã kiểm tra trên trang HBR; phần thân bị chặn nên lập luận chưa đối chiếu với bản đầy đủ. https://hbr.org/1990/07/reengineering-work-dont-automate-obliterate
+
+Nhật ký bằng chứng đầy đủ, mức độ tin cậy từng con số và các nhận định chưa dùng nằm trong `programs/ai-design-workflow/learning/research.md` (Part 5 và Part 6).
 
 ---
 
@@ -426,8 +490,8 @@ Nhật ký bằng chứng đầy đủ, mức độ tin cậy từng con số v�
 
 Phần đọc tối thiểu trước buổi 1, theo thứ tự:
 
-1. **Mục 3.1 và 3.2:** bảng bốn stage, method và phân chia giữa AI với designer (khoảng 4 phút).
-2. **Mục 4.1:** mười thuật ngữ (khoảng 3 phút).
+1. **Mục 3.1 đến 3.5:** bảng bốn stage, method, phân chia giữa AI với designer, những gì AI làm tốt và còn yếu, và ba câu hỏi trước khi automate (khoảng 6 phút).
+2. **Mục 4.1 và 4.1b:** bốn khái niệm, cộng sáu thuật ngữ tham khảo (khoảng 3 phút).
 3. **Mục 6.2:** layout case folder (khoảng 1 phút).
 4. **Mục 2:** ba hướng đi nghề nghiệp, để chuẩn bị cho phần trao đổi ở buổi 1 (khoảng 2 phút).
 
