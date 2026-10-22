@@ -48,7 +48,7 @@ VISUAL DESIGN DIRECTION — apply globally to every slide:
 
 ## Slide structure
 
-> **90-minute version — 26 slides.**
+> **90-minute version — 27 slides.**
 > Arc: Hook → Problem → Mindset → Framework → 5 Stages → Activity → Assignments → Close.
 
 ---
@@ -146,6 +146,16 @@ VISUAL DESIGN DIRECTION — apply globally to every slide:
 - Lead: Empathise and Define aren't skipped because designers don't know them. They're skipped because nobody asked for them. The brief arrives. The team starts at Ideate. The problem was never validated.
 - Key quote: *"A brief is not a problem definition."*
 - 🎨 Visual hint: Same 5-card pipeline. Cards 01 (EMPATHISE) and 02 (DEFINE) visually faded/greyed out. Card 03 (IDEATE) highlighted in --sienna with label: "← teams start here". Cards 04 and 05 normal. Quote in large italic below the pipeline.
+
+---
+
+### STATEMENT · Make space for discovery
+- Kicker: The way through
+- Title: Keep delivering.\n*Add* a small share for discovery.
+- Lead: In a team that ships every sprint, run two tracks side by side. Deliver the screens the team expects, and set aside a fixed, small share of time for one bigger end-to-end improvement. The sprint screens then sit inside that flow.
+- Key line: *"Ask for an addition to delivery, not a swap."*
+- Footnote: The author's own working method, about 30% of time as one example. Not a published standard.
+- 🎨 Visual hint: Two horizontal tracks stacked. Top track (wide, muted): sprint blocks "Sprint 1 · Sprint 2 · Sprint 3". Bottom track (narrower, --sienna): one long bar labelled "End-to-end improvement". Thin connector lines from each sprint block down into the long bar. Key line in large italic below.
 
 ---
 
@@ -289,7 +299,7 @@ VISUAL DESIGN DIRECTION — apply globally to every slide:
 - 3 activities:
   - **Wireframes** — Structural layout. No colour, no brand, no distraction.
   - **Interactive prototype** — States, transitions, navigation. Cover default, loading, empty, error, success states.
-  - **POC (Proof of Concept)** — Answers one question: does this idea work? Keep it rough and fast.
+  - **POC (Proof of Concept)** — Answers one question: does this idea work? Tests a new business or technical idea for the product and engineering team. A prototype tests the experience with users.
 - 🎨 Visual hint: 3 cards in a row (orange/peach tint). Small icons: wireframe layout, prototype with cycle arrow, POC with question mark.
 
 ---

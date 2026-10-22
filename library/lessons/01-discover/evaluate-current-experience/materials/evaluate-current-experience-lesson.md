@@ -18,9 +18,11 @@ next-session: "Customer Understanding"
 
 Most junior designers have never been shown how to judge a design properly. They ship a flow, or inherit one, and the only tool they have is taste: "this feels off", "I'd change the colour". Taste is a fine starting point and a weak argument. It can't be checked, it can't be ranked, and nobody else on the team can act on it.
 
-This session gives a junior designer the foundation to evaluate an experience that already exists, whether they designed it themselves without guidance or inherited it from someone else. The first 64 minutes are manual and principle-led: pick the right method for the stage the project is in, judge a food-delivery checkout against Nielsen's 10 usability heuristics, attach evidence to every issue, and rate each issue by severity so the biggest problems rise to the top. Only then does AI enter, as an assistant for 12 minutes: to brainstorm issues the mentee missed, to structure their findings into their own `evaluation.md` file, and to preview the `evaluation.html` page they will generate as homework. An accessibility check against WCAG 2.1 AA is a take-home pass, not taught live.
+This session gives a junior designer the foundation to evaluate an experience that already exists, whether they designed it themselves without guidance or inherited it from someone else. The session runs theory first, then practice. The theory covers choosing a method for the stage the project is in, Nielsen's 10 usability heuristics, what a strong finding looks like, severity rating, and a short talk on where AI fits. Practice follows, on the mentee's own flow: evaluate it by hand (20 minutes), rate the findings (5 minutes), and only then use AI for 12 minutes to cross-check, review, build their own `evaluation.md` file, and preview the `evaluation.html` page they will generate as homework. An accessibility check against WCAG 2.1 AA is a take-home pass, not taught live.
 
 The order is deliberate. A mentee who learns the principles first can tell when AI is wrong. A mentee who starts with AI learns to accept whatever it says.
+
+> **Sync note (2026-10-22):** the structure below was reverse-synced from the Vietnamese deck `slides/Evaluate Current Experience (VI).dc.html`, the version used in a session on 2026-10-13. Content that the deck no longer teaches (place-your-project, match-the-symptom, the guided checkout practice, calibration on the Appendix D issues) is kept under Reserve Activities. Theory block timings are estimates `[to confirm]`. The three practice blocks (20, 5 and 12 minutes) come from the deck. The pre-sync versions are in `_archive/`.
 
 This lesson sits between Design Thinking and Customer Understanding. It builds on the screen flow the mentee captured in Design Thinking, and it hands off a ranked list of what is wrong and where. Customer Understanding then picks up the question an evaluation can't answer: why. Mid-level mentees must take this session before Desk Research; seniors can skip it by passing the senior fast-track below. Desk Research then uses the mentee's `evaluation.md` as one of its evidence sources.
 
@@ -42,7 +44,7 @@ By the end of this session, students will be able to:
 - A heuristic evaluation of your current product is complete
 - Issues are ranked by severity, and each one has a screenshot or example
 
-**In-session checkpoint:** one flow of your own product evaluated, with 3 to 5 findings, each rated 0 to 4 and each with a screenshot. The full Success Check above is met when the assignment is submitted.
+**In-session checkpoint:** one flow of your own product evaluated, with about 5 findings (3 to 5 is enough), each rated 0 to 4 and each with a screenshot. The full Success Check above is met when the assignment is submitted.
 
 ---
 
@@ -64,14 +66,14 @@ Say each of these once, in plain words, before using it. Keep this list on scree
 ## Materials Needed
 
 - A live food-delivery app on the mentor's phone or screen, used only for the opening. Live apps change without warning, so keep one screenshot of its checkout as a backup.
-- The seeded checkout set (Appendix F): 5 screens of a neutral mock food-delivery checkout with planted issues and an answer key, built as `assets/seeded-checkout/01-cart.png` to `05-payment-failed.png` (source: `checkout-set.html`). The guided practice runs on this, so every mentee faces the same findings.
+- The seeded checkout set (Appendix F): 5 screens of a neutral mock food-delivery checkout with planted issues and an answer key, built as `assets/seeded-checkout/01-cart.png` to `05-payment-failed.png` (source: `checkout-set.html`). Reserve material: used only in the reserve guided-practice activity, not in the current session plan.
 - `library/frameworks/framework-nielsen-usability-heuristics.md`: teach the 10 heuristics from this file. The lesson below groups and simplifies it for juniors, it doesn't replace it.
 - `library/frameworks/framework-severity-rating-scale.md`: teach the 0 to 4 scale and its factors from this file.
 - The ten heuristic principle slides (Heuristic 01 to 10), already inside the built deck `slides/Evaluate Current Experience.dc.html`. They come from the former Audit & Desk Research deck
 - The Heuristics Cheat Sheet (Appendix A): one page, handed out before Part 2. Print from `assets/heuristics-cheat-sheet.html`
-- The Evaluation Worksheet (Appendix B): the manual template the mentee fills in during Part 5. Print from `assets/evaluation-worksheet.html`
-- `assets/heuristics.md`: the principles as a markdown file for the AI (rules, output format, two worked examples). The mentee attaches it in the Part 6 brainstorm and keeps it in the AI foundation folder
-- The three pre-written calibration issues (Appendix D) for the severity activity, and the six symptom cards (Appendix E) for the matching activity
+- The Evaluation Worksheet (Appendix B): the manual template the mentee fills in during Practice A and B. Print from `assets/evaluation-worksheet.html`
+- `assets/heuristics.md`: the principles as a markdown file for the AI (rules, output format, two worked examples). The mentee attaches it in Practice C (the cross-check step) and keeps it in the AI foundation folder. The slide calls this file `principles.md` `[to confirm: pick one name]`
+- Reserve material: the three pre-written calibration issues (Appendix D) and the six symptom cards (Appendix E). They serve the Senior Fast-Track and the reserve activities, not the current session plan
 - For the AI block: an AI chat tool for the brainstorm and `evaluation.md` steps, and an AI tool that can create files (an AI coding tool, or a chat tool with file creation) for the `evaluation.html` homework step. The AI foundation folder from earlier sessions is the working folder.
 
 ---
@@ -91,27 +93,30 @@ Ask the mentee to do the following before the session:
 
 | Act | Block | Topic | Duration |
 |---|---|---|---|
-| 1 · Frame | Opening | Spot one problem, then learn why opinion isn't a finding | 4 min |
-| 2 · Method | Teaching + Activity | Choose a method by project stage | 7 min |
-| 3 · Principles | Teaching + Activity | Nielsen's 10: overview page, one slide per principle, matching activity | 17 min |
-| 4 · Practice | Guided activity | Evaluate the seeded checkout together | 12 min |
-| 5 · Severity | Teaching + Activity | Rate issues 0 to 4, then plot them | 10 min |
-| 6 · Own product | Activity (manual) | Evaluate and rate your own flow, no AI | 14 min |
-| 7 · AI assist | Teaching + Build | Brainstorm → `evaluation.md` → see `evaluation.html`, then the three levels of AI evaluation | 14 min |
-| 8 · Close | Wrap | Checkpoint, homework, bridge to Customer Understanding | 4 min |
+| 1 · Frame | Opening (theory) | Spot one problem, opinion isn't a finding, the four-part finding | 4 min |
+| 2 · Method | Teaching | Choose a method by project stage | 4 min |
+| 3 · Principles | Teaching | What heuristic evaluation is, Nielsen's 10: overview page, one slide per principle | 14 min |
+| 4 · Apply | Teaching | What a finding looks like: weak vs strong, three tests | 4 min |
+| 5 · Severity | Teaching | What severity is, the scale, three questions, the 2x2, severity as a next move | 9 min |
+| 6 · AI | Teaching (talk) | AI assists, you decide; the five-step workflow; three levels of AI evaluation | 7 min |
+| 7 · Practice A | Activity (manual) | Evaluate your own flow, no AI | 20 min |
+| 8 · Practice B | Activity (manual) | Rate your own findings, no AI | 5 min |
+| 9 · Practice C | Build with AI | Cross-check, review, build `evaluation.md`, visualise `evaluation.html` | 12 min |
+| 10 · Close | Wrap | Checkpoint, homework, bridge to Customer Understanding | 4 min |
 
-**Scripted total: 82 min, with an 8-minute buffer inside the 90-minute slot.** The first 64 minutes (blocks 1 to 6) use no AI at all. AI is 14 minutes, by design: 12 of hands-on work and a 2-minute talk on the three levels. Expect block 3 and block 6 to run long; the buffer is for them.
+**Scripted total: 83 min (theory 42, practice 37, close 4), with a 7-minute buffer inside the 90-minute slot.** The practice times (20, 5, 12) come from the deck. The theory times are estimates `[to confirm]`. Nothing before Practice C asks the mentee to use AI: AI appears as a 7-minute talk in act 6, and hands-on only after the mentee has evaluated and rated their own flow by hand. Expect act 3 and Practice A to run long; the buffer is for them.
 
 **If time runs short, cut in this order:**
 
 1. Skip the optional knowledge check after Part 4
 2. In Part 4, the mentor plots the 2x2 instead of the mentee
-3. The `evaluation.html` demo in Part 6 moves entirely to homework
-4. The three-levels talk in Part 6 becomes a handout the mentee reads at home
+3. In Part 4, "From severity to a next move" shrinks to one spoken sentence per level, with no worked case
+4. The `evaluation.html` step (Visualise) in Practice C moves entirely to homework
+5. The three-levels talk in Part 5 becomes a handout the mentee reads at home
 
-Do not cut the manual evaluation in Part 5. It is the point of the session.
+Do not cut Practice A. It is the point of the session.
 
-> **Story logic:** The session moves from *why* (an opinion isn't a finding) to *how to choose* (method by stage) to *what to judge against* (principles) to *how to judge* (evidence plus severity) to *doing it yourself* (manual) to *doing it faster and sharing it* (AI). By the end, the mentee has a ranked, evidenced evaluation of their own product, and an `evaluation.md` they can reuse on every future project.
+> **Story logic:** The session moves from *why* (an opinion isn't a finding) to *how to choose* (method by stage) to *what to judge against* (principles) to *what a good finding looks like* (evidence) to *how to rank* (severity) to *where AI fits* (a short talk), and only then to *doing it yourself* (manual, on the mentee's own flow), and last *doing it faster and sharing it* (AI). By the end, the mentee has a ranked, evidenced evaluation of their own product, and an `evaluation.md` they can reuse on every future project.
 
 ---
 
@@ -124,7 +129,7 @@ Seniors may skip this session if they can already do what it teaches. Run this c
 
 **Pass:** all three ratings are within one point of the mentor's suggested rating, the reasoning names frequency and impact, and the finding has all four parts with real proof. A pass means the mentee skips this session and goes straight to Desk Research. They bring any current-state notes in place of `evaluation.md`.
 
-**Not yet:** run the full session, or only Parts 2 to 4 (principles, guided practice, severity) if the gap is narrow. Say which gap showed up (ratings without reasoning, findings without proof, principles misnamed) so the mentee knows what to practise.
+**Not yet:** run the full session, or only Parts 2 to 4 (principles, what a finding looks like, severity) if the gap is narrow. Say which gap showed up (ratings without reasoning, findings without proof, principles misnamed) so the mentee knows what to practise.
 
 ---
 
@@ -194,11 +199,21 @@ If you designed it, you know why every choice was made, so you can't see it as a
 
 A finding in your own work isn't a failure. It's the evaluation doing its job.
 
+*No slide for this in the current deck. Use the three habits as coaching during Practice A.*
+
 ---
 
 ### Part 2: The Principles
 
-Teach from `framework-nielsen-usability-heuristics.md`. Show all ten on **one overview page first**, grouped into three families so a junior has a map. Then take **each principle on its own slide**, about a minute each: the plain meaning, one broken food-delivery example, and one check-for line. The ten slides are reused as is from the Audit & Desk Research deck (Heuristic 01 to 10, already inside the built deck): each has a definition, a Why it matters line, and a bad and good UI example. Teach the slide's own example first, then use the food-delivery line in the tables below as the bridge to the checkout. Budget 1 minute for the overview, 12 for the ten slides, 3 for the matching activity (Appendix E), and 1 to hand out the Cheat Sheet. Don't ask a discussion question on every slide: each slide's speaker notes mark the ones that earn one.
+#### What heuristic evaluation is
+
+**What.** Checking a design against a set of proven usability principles (heuristics). A few evaluators walk the screens and note where a principle is broken. No users are needed.
+
+**Why use it.** It is fast and cheap: no recruiting and no test session. It finds problems before users meet them. It gives the team evidence and a shared language.
+
+**When.** On a draft, before user testing. Before release, as a last pass. After launch, when there are complaints or drop-off. It does not replace user testing.
+
+Teach the ten from `framework-nielsen-usability-heuristics.md`. Show all ten on **one overview page first**, grouped into three families so a junior has a map. Then take **each principle on its own slide**, about a minute each: the plain meaning, one broken food-delivery example, and one check-for line. The ten slides are reused as is from the Audit & Desk Research deck (Heuristic 01 to 10, already inside the built deck): each has a definition, a Why it matters line, and a bad and good UI example. Teach the slide's own example first, then use the food-delivery line in the tables below as the bridge to the checkout. Budget 2 minutes for the definition, 1 for the overview and 11 for the ten slides `[to confirm: estimates]`. Hand out the Cheat Sheet at the Part 2 divider and tell the mentee to keep it beside them for the rest of the session. Don't ask a discussion question on every slide: each slide's speaker notes mark the ones that earn one.
 
 #### Family 1: Can I see and understand what's going on?
 
@@ -242,7 +257,9 @@ Log accessibility issues in the same worksheet, using the check name in the Heur
 
 ---
 
-### Part 3: Guided Practice (Checkout Together)
+### Part 3: Apply It in the Workplace (What a Finding Looks Like)
+
+From this part on, every activity uses the mentee's own product. The food-delivery examples only illustrate the finding format. Restate the four-part format: what I saw, where, which principle, proof. No screenshot, no finding. Keep the Cheat Sheet beside you.
 
 #### What a good finding looks like
 
@@ -250,7 +267,7 @@ Log accessibility issues in the same worksheet, using the check name in the Heur
 |---|---|
 | "The checkout is confusing." | At Review order, the service fee is labelled "SF" with no explanation. A user can't tell what they're paying for before they commit. Breaks *Match with the real world*. Screenshot attached. |
 
-> The strong example is a format demonstration, not a claim about any real app. The mentee's findings come from what they actually see on the seeded checkout set.
+> The strong example is a format demonstration, not a claim about any real app. The mentee's findings come from what they actually see in their own product.
 
 **Three tests for a finding.** Before logging an issue, check it against these:
 
@@ -258,23 +275,19 @@ Log accessibility issues in the same worksheet, using the check name in the Heur
 2. **Does it affect what the user can do or understand?** If not, it's a preference.
 3. **Is it a problem, not a fix?** "Make the button blue" is a solution. Write the problem it would solve.
 
-#### How the guided practice runs
-
-1. **Mentor models one finding end to end** on the seeded checkout set (Appendix F), using the service fee finding. Think aloud: what I saw, where, which family, which heuristic, then capture the screenshot and circle the spot. About 3 minutes.
-2. **Mentee finds two more**, using the same four-part format and the Cheat Sheet. About 6 minutes.
-3. **Share back.** Compare with the answer key. Did anyone choose a different heuristic for the same issue? That's fine, and a good discussion. About 3 minutes.
-
-The seeded set has nine planted issues and the mentee only needs two. Accept an unplanted issue too, if it passes the three tests.
-
 ---
 
 ### Part 4: Rate Severity
 
 Teach from `framework-severity-rating-scale.md`.
 
-#### Why rate at all
+#### What severity is, and why rate at all
 
-A list of 25 findings is a list of complaints. A ranked list is a plan. Severity is how you decide what the team looks at first.
+Severity is a number from 0 to 4 for how seriously a problem harms the user. A list of 25 findings is a list of complaints. A ranked list is a plan. Three reasons to rate:
+
+1. **A team cannot fix everything.** A list of 30 issues has to become an order of work.
+2. **It separates what matters from what doesn't.** Without a score, a tiny grey mismatch gets the same attention as a lost cart.
+3. **The whole team gets one language.** A number is easier to agree on than an opinion.
 
 #### The scale
 
@@ -311,74 +324,59 @@ Then use the third question to nudge: if it **keeps costing the user every time*
 
 #### Calibrate
 
-Use the three issues in Appendix D. Mentee rates all three silently, then compare with the mentor's suggested ratings. The discussion is the point, not matching the number.
+Calibration now happens in Practice B, on the mentee's own findings. The three issues in Appendix D stay available for the Senior Fast-Track and as a reserve activity.
+
+#### From severity to a next move (2 min)
+
+A severity number also decides how to respond when the person who owns the build declines a change. Run one short case, with no names: a developer or product owner does not want to add a pop-up that the designer proposed.
+
+Three moves, in order:
+
+1. **Ask what happens to the user without the change.** Can they still finish the task and recover from a mistake, or are they blocked or losing data?
+2. **Argue from evidence, not taste or favour.** Name the principle, the observed behaviour, the user impact and the severity, and attach the screenshot.
+3. **If it cannot be built, propose an alternative that keeps the outcome for the user.** For example, an inline message at the point of the problem instead of a pop-up.
+
+Severity then sets how hard to hold:
+
+| Severity | Typical response |
+|---|---|
+| 1 to 2 | Accept the "no", or park it in the backlog |
+| 3 | Make the case with evidence, and look for an alternative |
+| 4 | Hold the position. It must be fixed before release |
+
+> The learner may not own the decision. The goal is to give the decision-maker clear evidence and a workable alternative, not to win the argument. A junior designer who cannot settle it escalates with the evidence in hand.
+
+> This is the author's working method. It is not drawn from published research. The 0 to 4 scale itself comes from the severity framework cited in Further Resources.
 
 ---
 
-### Part 5: Evaluate Your Own Product (Manual)
+### Part 5: AI as an Assistant (Talk)
 
-No AI in this block. The mentee uses the Cheat Sheet, the Worksheet, and their screenshots.
-
-**Setup (2 min).** Confirm the flow and screenshots. Confirm which entry point applies: *I designed this* (use the three habits from Part 1) or *I inherited this* (note any known complaints, but judge the screens, don't repeat the complaints).
-
-**Evaluate and rate (10 min).** For each step of the flow:
-
-1. Look at the screen as a first-time user doing the task.
-2. Check each family: seeing and understanding, control and recovery, predictable and efficient.
-3. Log every issue in the Worksheet with the four-part format and a screenshot file name.
-4. Rate each with frequency, impact, and a severity from 0 to 4.
-
-**Target: 3 to 5 findings.** Quality over count. The accessibility check is a take-home.
-
-**Share back (2 min).** Mentee names their highest-severity issue and the evidence for it.
-
-**Facilitator watch-fors:**
-
-- A list of ten cosmetic points and nothing about the task. Redirect to the task
-- Everything rated 4. Ask: "If everything is a catastrophe, what's first?"
-- Solutions written instead of problems. Ask: "What is the problem that fix would solve?"
-- Findings with no screenshot. They don't count yet
-- Defending the design instead of logging the issue ("I did it that way because..."). Acknowledge it, then log it
-
----
-
-### Part 6: AI as an Assistant
-
-By now the mentee has done the work manually. AI is introduced to extend it, not replace it.
+By now the mentee has the principles and the severity scale. AI is introduced to extend their own judgment, not to replace it. Practice A and B come first and are manual. AI is used hands-on only in Practice C.
 
 #### The rule: AI assists, you decide
 
 AI can look at a screenshot and miss the thing you saw, or invent something that isn't there. It has no idea who your users are. The mentee's manual pass is what lets them tell the difference. Say this out loud at the start of the block.
 
-#### Step 1: Brainstorm (4 min)
+Every AI suggestion goes through three gates before it reaches the worksheet:
 
-The mentee gives AI their screenshots and `assets/heuristics.md` (the Cheat Sheet as a markdown file) and asks it to brainstorm issues they may have missed, one family at a time. AI does not rate severity and does not suggest fixes at this stage.
+1. **Gate 1: can I see it on the screen?** Point to the exact element. If not, drop it.
+2. **Gate 2: does it break a principle?** Name the principle. If not, drop it.
+3. **Gate 3: would a real user hit it?** If it is only true in theory, drop it.
 
-For every AI suggestion, the mentee asks three questions:
+Say what AI will not do today: rate severity, change the mentee's scores, or suggest a redesign. The scores stay the mentee's. Expect to discard some suggestions. That means the check is working. Before uploading anything, blur real customer data and follow the company's rules.
 
-1. **Can I see it on the screen?** (Point to the exact element.)
-2. **Does it really break that principle?**
-3. **Would a real user hit it?**
+#### The five-step workflow (overview)
 
-Yes to all three: add it to the Worksheet with a screenshot and rate it yourself. Otherwise discard it. Expect to discard some.
+| Step | Time | What happens |
+|---|---|---|
+| 1 Prep | Done beforehand | Save the principles and the severity scale as one markdown file (the principles file). It is the standard AI checks against, and it is reused on every run |
+| 2 Cross-check | 3 min | Give AI the flow (screenshots) and the principles file. It returns possible issues. Ask it to name the screen and the principle for each |
+| 3 Review | 3 min | Run each suggestion through the three gates and drop what fails. This comes before step 4 so invented issues never reach the main file |
+| 4 Build | 4 min | AI arranges what is left into `evaluation.md`. The severity scores stay the mentee's. Note which scores AI suggested |
+| 5 Visualise | 2 min | Generate `evaluation.html` from `evaluation.md`: a ranked table and the 2x2. `evaluation.md` is the source. To change anything, edit the `.md` and regenerate, never edit the `.html` |
 
-#### Step 2: Build your own `evaluation.md` (6 min)
-
-The mentee asks AI to turn their finished Worksheet into a single `evaluation.md` using the schema in Appendix C. AI structures. It does not add findings and does not change the mentee's severity scores.
-
-Save the file in the AI foundation folder. It is a reusable asset: next project, the mentee starts from the same schema.
-
-**Check the output:** the number of findings matches the Worksheet, every finding has an evidence file name, and no score has changed.
-
-#### Step 3: See `evaluation.html` (2 min, then homework)
-
-In class, the mentor shows the prompt and a finished `evaluation.html` built from a sample `evaluation.md`. The mentee generates their own as homework, asking an AI tool that can create files to read `evaluation.md` and generate one HTML page: a summary, a table ranked from highest severity to lowest with the screenshot embedded in each row, and the 2x2 plot with each issue as a numbered point.
-
-- **Embed the screenshots in the HTML** so it is one portable file. Resized images keep it small.
-- **`evaluation.md` is the source of truth.** To change a score, edit the `.md` and regenerate the `.html`. Never edit the `.html` by hand.
-- **The page must pass its own checks.** Ask for text contrast of at least 4.5:1 and for severity to be shown by number or shape as well as colour.
-
-**Check the output:** spot-check three rows against the `.md`, and check the position of three points on the plot.
+Final check: the number of findings matches, no score has changed, and three random rows match the screenshots. Common mistake: skipping step 3 because the AI output "sounds right". Sounding right is not the same as being right.
 
 #### Beyond today: three levels of AI evaluation (2 min, talk only)
 
@@ -398,9 +396,84 @@ Tie it back to the seeded set: the "Back empties the cart" issue (P5) is an inte
 
 ---
 
+### Practice A: Evaluate Your Own Flow (Manual, 20 min)
+
+No AI in this block. The mentee uses the Cheat Sheet, the Worksheet, and their screenshots.
+
+**Setup (2 min).** Confirm the flow and screenshots. Confirm which entry point applies: *I designed this* (use the three habits from Part 1) or *I inherited this* (note any known complaints, but judge the screens, don't repeat the complaints).
+
+**Evaluate (16 min).** For each step of the flow:
+
+1. Look at the screen as a first-time user doing the task.
+2. Check each family: seeing and understanding, control and recovery, predictable and efficient.
+3. Log every issue in the Worksheet with the four-part format (what I saw, where, which principle, proof) and a screenshot file name.
+
+**Target: about 5 findings (3 to 5 is enough).** Quality over count. The accessibility check is a take-home. Rating happens in Practice B.
+
+**Share back (2 min).** Mentee names their strongest finding and the evidence for it.
+
+**Facilitator watch-fors:**
+
+- A list of ten cosmetic points and nothing about the task. Redirect to the task
+- Solutions written instead of problems. Ask: "What is the problem that fix would solve?"
+- Findings with no screenshot. They don't count yet
+- Defending the design instead of logging the issue ("I did it that way because..."). Acknowledge it, then log it
+- Two people choosing different principles for the same issue is a good discussion, not a mistake. Use the Cheat Sheet to name the principle
+
+---
+
+### Practice B: Rate Your Own Findings (Manual, 5 min)
+
+Take the findings from Practice A. Rate each from 0 to 4, silently, using the 2x2 and the three questions: how often, how bad, does it keep happening. Compare with the mentor (in a class, with a neighbour). Where the two ratings differ by more than one point, explain the reasoning. The reasoning matters more than matching the number. Log frequency, impact and severity in the Worksheet.
+
+**Facilitator watch-fors:**
+
+- Everything rated 4. Ask: "If everything is a catastrophe, what's first?"
+- Ratings based on taste. Ask the three questions again
+
+---
+
+### Practice C: Build Your Evaluation With AI (12 min)
+
+Keep the prompts (see AI in Practice) on screen. Step 1 (Prep) is already done: the principles file is ready. The mentee works on their own flow and their own findings.
+
+#### Step 2: Cross-check (3 min)
+
+The mentee gives AI their screenshots and `assets/heuristics.md` (the Cheat Sheet as a markdown file) and asks it to brainstorm issues they may have missed, one family at a time. AI does not rate severity and does not suggest fixes at this stage.
+
+#### Step 3: Review (3 min)
+
+For every AI suggestion, the mentee asks three questions:
+
+1. **Can I see it on the screen?** (Point to the exact element.)
+2. **Does it really break that principle?**
+3. **Would a real user hit it?**
+
+Yes to all three: add it to the Worksheet with a screenshot and rate it yourself. Otherwise discard it. Expect to discard some.
+
+#### Step 4: Build your own `evaluation.md` (4 min)
+
+The mentee asks AI to turn their finished Worksheet into a single `evaluation.md` using the schema in Appendix C. AI structures. It does not add findings and does not change the mentee's severity scores.
+
+Save the file in the AI foundation folder. It is a reusable asset: next project, the mentee starts from the same schema.
+
+**Check the output:** the number of findings matches the Worksheet, every finding has an evidence file name, and no score has changed.
+
+#### Step 5: Visualise `evaluation.html` (2 min, then homework)
+
+In class, the mentor shows the prompt and a finished `evaluation.html` built from a sample `evaluation.md`. The mentee generates their own as homework, asking an AI tool that can create files to read `evaluation.md` and generate one HTML page: a summary, a table ranked from highest severity to lowest with the screenshot embedded in each row, and the 2x2 plot with each issue as a numbered point.
+
+- **Embed the screenshots in the HTML** so it is one portable file. Resized images keep it small.
+- **`evaluation.md` is the source of truth.** To change a score, edit the `.md` and regenerate the `.html`. Never edit the `.html` by hand.
+- **The page must pass its own checks.** Ask for text contrast of at least 4.5:1 and for severity to be shown by number or shape as well as colour.
+
+**Check the output:** spot-check three rows against the `.md`, and check the position of three points on the plot.
+
+---
+
 ### Close (4 min)
 
-1. Read the in-session checkpoint aloud and check it against the mentee's work: one flow, 3 to 5 findings, each rated and each with a screenshot. Say that the full Success Check is met with the assignment.
+1. Read the in-session checkpoint aloud and check it against the mentee's work: one flow, about 5 findings (3 to 5 is enough), each rated and each with a screenshot. Say that the full Success Check is met with the assignment.
 2. Brief the homework.
 3. Name where evaluation stops: it tells you *what* is wrong and *where*. It can't tell you *why* users struggle. Ask: *"Pick your top finding. What do you believe about your user that makes it a problem, and how do you know?"* Take one answer.
 4. Bridge: *"Next session, Customer Understanding, starts from there. Your `evaluation.md` shows where friction is likely. Talking to real users tells you why, and which of your beliefs are wrong."*
@@ -411,9 +484,40 @@ Tie it back to the seeded set: the "Back empties the cart" issue (P5) is an inte
 
 ## Activities
 
+### Activity: Evaluate Your Own Flow
+**Type:** In-class · Worksheet (Appendix B) · no AI
+**Time:** 20 min
+**Format:** Solo, with coaching
+
+See Practice A.
+
+---
+
+### Activity: Rate Your Own Findings
+**Type:** In-class · Worksheet (Appendix B) · no AI
+**Time:** 5 min
+**Format:** Solo, then compare with the mentor (or a neighbour in a class)
+
+See Practice B.
+
+---
+
+### Activity: Build Your Evaluation With AI
+**Type:** In-class · AI chat tool, plus a demo of an AI tool that creates files
+**Time:** 12 min
+**Format:** Solo, with coaching
+
+See Practice C.
+
+---
+
+## Reserve Activities (not in the current session plan)
+
+These ran in earlier versions of the session. They are kept for a lighter or longer slot and for the Senior Fast-Track. They use Appendices D, E and F.
+
 ### Activity: Place Your Project and Pick a Method
 **Type:** In-class · discussion
-**Time:** 3 min (inside Part 1)
+**Time:** 3 min (was inside Part 1)
 **Format:** Solo, then share
 
 1. **(1 min)** Place your project on the stage table: draft, live and you designed it, or live and you inherited it.
@@ -424,7 +528,7 @@ Tie it back to the seeded set: the "Back empties the cart" issue (P5) is an inte
 
 ### Activity: Match the Symptom
 **Type:** In-class · Appendix E
-**Time:** 3 min (end of Part 2)
+**Time:** 3 min (was the end of Part 2)
 **Format:** Solo, then reveal
 
 1. **(2 min)** Read each of the six symptom cards. Name the principle number and its family.
@@ -441,11 +545,19 @@ Tie it back to the seeded set: the "Back empties the cart" issue (P5) is an inte
 2. **(6 min)** Mentee finds two more findings in the four-part format, each with a screenshot.
 3. **(3 min)** Compare and discuss.
 
+**How the guided practice runs**
+
+1. **Mentor models one finding end to end** on the seeded checkout set (Appendix F), using the service fee finding. Think aloud: what I saw, where, which family, which heuristic, then capture the screenshot and circle the spot. About 3 minutes.
+2. **Mentee finds two more**, using the same four-part format and the Cheat Sheet. About 6 minutes.
+3. **Share back.** Compare with the answer key. Did anyone choose a different heuristic for the same issue? That's fine, and a good discussion. About 3 minutes.
+
+The seeded set has nine planted issues and the mentee only needs two. Accept an unplanted issue too, if it passes the three tests.
+
 ---
 
 ### Activity: Calibrate Severity
 **Type:** In-class · Appendix D
-**Time:** 5 min (inside Part 4)
+**Time:** 5 min (was inside Part 4)
 **Format:** Solo, then pair
 
 1. **(2 min)** Rate the three issues silently using the 2x2 and the three questions.
@@ -453,40 +565,22 @@ Tie it back to the seeded set: the "Back empties the cart" issue (P5) is an inte
 
 ---
 
-### Activity: Evaluate Your Own Product
-**Type:** In-class · Worksheet (Appendix B) · no AI
-**Time:** 14 min
-**Format:** Solo, with coaching
-
-See Part 5.
-
----
-
-### Activity: Build Your Evaluation With AI
-**Type:** In-class · AI chat tool, plus a demo of an AI tool that creates files
-**Time:** 12 min
-**Format:** Solo, with coaching
-
-See Part 6.
-
----
-
-## AI in Practice: Brainstorm, Build, Visualise
+## AI in Practice: Cross-check, Build, Visualise
 
 This session's AI use is deliberately late and deliberately limited. The mentee does the judging. AI helps them see more, structure what they found, and show it.
 
 ### 🤖 The three prompts
 
-**Brainstorm:**
+**Cross-check (step 2):**
 
 > *"I'm evaluating the [flow name] of [product]. Attached are screenshots of each step, in order. The attached heuristics.md has the usability principles in three groups, with rules and an output format. Follow it. Review one group at a time. For each possible problem, tell me which step, point to the exact element or quote the exact text, and name the principle. Do not rate severity. Do not suggest redesigns. If you can't tell from the screenshot, say 'not sure'."*
 > [attach heuristics.md]
 
-**Build `evaluation.md`:**
+**Build `evaluation.md` (step 4):**
 
 > *"Here is my completed findings worksheet: [paste]. Turn it into one markdown file named evaluation.md using exactly this structure: [paste the schema from Appendix C]. Do not add findings. Do not change any severity score. If a field is missing, write MISSING instead of guessing."*
 
-**Generate `evaluation.html` (homework):**
+**Generate `evaluation.html` (step 5, homework):**
 
 > *"Read evaluation.md. Generate one self-contained HTML file named evaluation.html with: (1) a summary header, (2) a table sorted by severity, highest first, with each row showing the id, title, heuristic, severity, and the screenshot, (3) a 2x2 plot with frequency on the horizontal axis and impact on the vertical axis, each issue shown as a numbered point. Embed the screenshots in the file. Use only data from evaluation.md. Text contrast at least 4.5:1, and show severity with a number or shape as well as colour."*
 
@@ -516,12 +610,16 @@ Optional. Run verbally in the buffer after Part 4, or set as a take-home self-ch
 1. Your analytics show a big drop-off at one step and you have no budget for user testing. Which method do you start with, and then which?
 2. What makes something a finding rather than an opinion?
 3. Two issues both happen often. One is a confusing label, the other charges the customer twice. Which goes first, and why?
+4. A developer declines a change you rated 2, and another you rated 4. Which do you hold, which do you let go, and what do you bring to the conversation?
 
 ---
 
 ## Assignments
 
 ### Assignment: Finish and Share Your Evaluation
+
+> `[to confirm]` The deck slide shows a shorter assignment: evaluate the current experience of your own product with heuristic evaluation, rate each finding by severity, add a screenshot to each, and submit one evaluation worksheet, done by hand or with AI support. The detailed version below is kept until Winnie confirms which one stands. The Customer Understanding handoff depends on the "Open questions about users" item.
+
 **Due:** Before next session
 **Time estimate:** 2 to 2.5 hours
 **Type:** Analysis · Your real project
