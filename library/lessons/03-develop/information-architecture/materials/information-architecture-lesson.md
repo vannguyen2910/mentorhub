@@ -8,6 +8,41 @@
 
 ---
 
+> **Sync note 2026-10-23 (reverse-sync từ deck):** deck đã dạy (`Information Architecture (VIE).dc.html`, 47 slide, trên Claude Design) khác lesson này khá nhiều. Theo Deck edit rule, deck thắng; cấu trúc dưới đây lấy từ deck. Bản trước khi sync: `_archive/information-architecture-lesson-pre-deck-sync-2026-10-23.md`. Phần Key Concepts và Practice Activity bên dưới là bản cũ, chưa viết lại; những chỗ lệch được liệt kê ở "Coverage gaps".
+
+## Session Structure (theo deck)
+
+| # | Phần | Slide | Thời gian |
+|---|---|---|---|
+| 0 | Mở bài: nối từ buổi trước, câu hỏi năm cách, lộ trình | 1 đến 4 | khoảng 4 đến 5 phút `[to confirm]` |
+| 1 | Inherited vs Evidence-Based, sitemap | 5 đến 9 | 7 phút |
+| 1b | Build 1: vẽ sitemap inherited | 10 | 10 phút |
+| 2 | Card Sorting | 11 đến 15 | 7 phút |
+| 2b | Build 2: viết bộ thẻ, pilot | 16 | 9 phút |
+| 3 | Tree Testing | 17 đến 21 | 7 phút |
+| 3b | Build 3: đặt cược một đáp án, viết task và kill threshold | 22 | 8 phút |
+| 4 | User Flows | 23 đến 30 | 8 phút (nâng từ 6 phút của deck) |
+| 4b | Hoạt động 1: vẽ user flow | 31 | 20 phút |
+| 5 | Process Map | 32 đến 39 | 9 phút (nâng từ 6 phút của deck) |
+| 5b | Hoạt động 2: vẽ process map | 40 | 15 phút |
+| 6 | Defend Your IA: hồ sơ quyết định và phản biện | 41 đến 43 | 6 phút |
+| 6b | Bảo vệ: pitch cho người mất nhiều nhất | 44 | 10 phút |
+| 7 | AI trong thực tế | 45 | `[to confirm]` |
+| 8 | Bài tập và kết thúc | 46, 47 | `[to confirm]` |
+
+Tổng theo deck, sau khi nâng Phần 4 lên 8 phút và Phần 5 lên 9 phút: 44 phút nội dung các Phần và 72 phút activity, cộng mở bài và đóng buổi, khoảng 121 đến 126 phút. Buffer so với khung 120 đến 135 phút của lesson cũ: từ khoảng -6 phút (nếu buổi chỉ có 120 phút) đến 14 phút (nếu 135 phút) `[to confirm]` khung giờ thật của buổi. Deck vẫn ghi Phần 4 và Phần 5 là 6 phút (slide 4, 23 và 32; notes slide 4 trong outline đã cập nhật) nên cần sửa deck cho khớp. `[to confirm]` giả định phút của các Phần không gồm activity. Output của buổi: `ia-decision-record.md` và một lần pitch cho chủ sở hữu mục.
+
+## Coverage gaps (lesson cũ so với deck)
+
+- **Tree Testing** (slide 17 đến 22): lesson cũ không có phần này.
+- **Defend Your IA** và `ia-decision-record.md` (slide 41 đến 44): lesson cũ không có.
+- **Inherited vs Evidence-Based**, sitemap, card sorting: lesson cũ có nhưng ngắn hơn deck; deck thêm ba định dạng sort, cách viết thẻ, cách đọc kết quả.
+- **Hoạt động**: lesson cũ có 2 activity; deck có 3 bản Build, 2 Hoạt động và 1 Bảo vệ.
+- **AI trong thực tế** (slide 45): lesson cũ có "AI Workflow for User Flows and Process Maps"; deck dùng AI để thử thách ý tưởng, không tạo dữ liệu nghiên cứu. `[to confirm]` giữ hay thay phần cũ.
+- **Số buổi**: deck ghi "Buổi 5", lesson cũ ghi session 04 và 05 trong hai chương trình. `[to confirm]`.
+
+---
+
 ## Key Concepts
 
 ### What is Information Architecture?
