@@ -2,7 +2,7 @@
 
 ## Lesson file sync rule
 
-Every lesson in `library/lessons/` has two paired files:
+Every lesson in `library/lessons/` (and in `programs/<program>/lessons/`, for example AI Design Workflow) has two paired files:
 - `*-lesson.md` — the source of truth for all content (activities, phases, timing, concepts)
 - `*-slide-outline.md` — reflects the lesson structure as slide specs (layout types, visual hints, kickers)
 
@@ -34,7 +34,7 @@ Specifically:
 
 The website (`docs/`) is generated, not live. Lesson pages, slide-deck links and copied assets only update when `_system/scripts/build-home.py` runs. It already covers every lesson, framework, guide, mentee and program, so this rule applies everywhere.
 
-**After adding, moving, renaming or editing anything under `library/` (lessons, frameworks, guides, slides, their `materials/`, `slides/` or `assets/` folders) or `mentees/`, run `python3 _system/scripts/build-home.py` in the same response**, then tell the user it was rebuilt. Don't ask first.
+**After adding, moving, renaming or editing anything under `library/` (lessons, frameworks, guides, slides, their `materials/`, `slides/` or `assets/` folders), `programs/*/lessons/` or `mentees/`, run `python3 _system/scripts/build-home.py` in the same response**, then tell the user it was rebuilt. Don't ask first.
 
 - Decks must be `.html` files directly inside the item's `slides/` folder (not `_archive/`, not nested) to get a deck link.
 - Images and files a deck uses belong in `slides/` or `assets/`; both are copied to `docs/assets/`.

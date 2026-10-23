@@ -33,7 +33,7 @@ Topic folders keep their original names inside their stage folder (e.g. `01-disc
 
 `02-define/` holds two separate sessions in two folders: `synthesis-problem-definition-in-ux/` is the UX Class treatment of synthesis mechanics, `problem-definition-strategy/` is the Senior/Lead session that follows Customer Understanding. Same stage, different sessions, so they are not level variants of one topic and do not share a folder.
 
-`ai-design-workflow/` holds the lessons of the AI Design Workflow program for mid/senior designers (6 weeks, 12 sessions: 9 content lessons and 3 checkpoints), a separate curriculum from the stage flow above. Lesson folders sit directly inside it. The program itself (plan, research, method, pitch deck, lesson order, how to add a lesson) lives in `programs/ai-design-workflow/`, moved there on 2026-10-07.
+The lessons of the **AI Design Workflow** program (mid/senior designers, 6 weeks, 12 sessions: 9 content lessons and 3 checkpoints) live in `programs/ai-design-workflow/lessons/` since 2026-10-23, next to the program's plan, research and method. `_system/scripts/build-home.py` scans that folder as well, so the lessons still appear on the site. The rows below link there.
 
 `problem-understanding/` was a superseded early draft of the Customer Understanding session (same content now built out in `01-discover/customer-understanding/`) — moved to `library/_to_delete/problem-understanding/` pending permanent deletion.
 
@@ -42,7 +42,9 @@ Topic folders keep their original names inside their stage folder (e.g. `01-disc
 | File | Topic | Program | Level | Status |
 |---|---|---|---|---|
 | `00-foundation/design-thinking/materials/design-thinking-lesson.md` | Design Thinking for UX Designer | UX Class | — | ✅ Ready |
-| `ai-design-workflow/design-process-with-ai/materials/design-process-with-ai-lesson.md` | Your Design Process, with AI (lesson 1 of 9) | AI Design Workflow series | — | 🚧 Draft |
+| `../../programs/ai-design-workflow/lessons/01-design-process-with-ai/materials/design-process-with-ai-lesson.md` | Your Design Process, with AI (lesson 1 of 9) | AI Design Workflow series | — | 🚧 Draft |
+| `../../programs/ai-design-workflow/lessons/02-discover-the-problem/materials/discover-the-problem-lesson.md` | Discover the Problem (lesson 2 of 9) | AI Design Workflow series | — | 🚧 Draft |
+| `../../programs/ai-design-workflow/lessons/03-research-you-can-trust/materials/research-you-can-trust-lesson.md` | Turn Research into Insights You Can Trust (lesson 3 of 9) | AI Design Workflow series | — | 🚧 Draft |
 | `00-foundation/mental-models-in-ux-design/slides/mental-models-in-ux-design.html` | Mental Models in UX Design | UX Class | — | ✅ Ready |
 | `01-discover/desk-research/materials/desk-research-lesson.md` | Desk Research | Private Training | Mid | ✅ Ready |
 | `01-discover/customer-understanding/materials/customer-understanding-lesson.md` | Customer Understanding | UX Class | Junior | ✅ Ready |
