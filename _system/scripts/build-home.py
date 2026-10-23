@@ -9,7 +9,7 @@ Run from anywhere:
 Reads
   - Programs  : <WEBSITE>/src/pages/training/programs/*.sessions.js + *.jsx   (live program pages)
   - Programs  : programs/<folder>/                                           (working programs, one folder = one program)
-  - Lessons   : library/lessons/**/<topic>-lesson.md                          (+ EXTRA_LESSONS below)
+  - Lessons   : library/lessons/**/<topic>-lesson.md and programs/<program>/lessons/<topic>/materials/<topic>-lesson.md
   - Mentees   : <MENTEES>/<name>/plan|sessions|assessments                    (public: card + detail page)
   - Design    : <WEBSITE>/design-system/css + fonts  (copied, so the output is standalone)
 
@@ -702,11 +702,24 @@ def resolve_programs(slug, variants):
     return out
 
 
+def lesson_stage_dirs():
+    """(folder, stage name) pairs: the stage folders under library/lessons, plus <program>/lessons
+    folders in programs/ (a program may keep its own lessons next to its plan). The stage name of a
+    program's lessons is the program folder name."""
+    dirs = [(p, p.name) for p in LESSONS_DIR.iterdir() if p.is_dir() and visible(p)]
+    if PROGRAMS_DIR.exists():
+        for prog in PROGRAMS_DIR.iterdir():
+            ld = prog / "lessons"
+            if prog.is_dir() and visible(prog) and ld.is_dir():
+                dirs.append((ld, prog.name))
+    return sorted(dirs, key=lambda t: t[1])
+
+
 def load_lessons():
     lessons = []
-    for stage_dir in sorted(p for p in LESSONS_DIR.iterdir() if p.is_dir() and visible(p)):
+    for stage_dir, stage_name in lesson_stage_dirs():
         for topic in sorted(p for p in stage_dir.iterdir() if p.is_dir() and visible(p) and p.name.lower() not in NON_TOPIC):
-            slug = topic.name
+            slug = re.sub(r"^\d+-", "", topic.name)   # '02-discover-the-problem' -> slug 'discover-the-problem' (the number only orders the folder)
             mats = topic / "materials"
             files = [f for f in sorted(mats.glob("*.md")) if not NOT_LESSON.search(f.stem)] if mats.exists() else []
             primary = next((f for f in files if f.stem == f"{slug}-lesson"), None)
@@ -738,7 +751,7 @@ def load_lessons():
             homework = load_homework(slug)
             first = variants[0] if variants else {}
             lessons.append({
-                "slug": slug, "folder": topic, "stage": stage_label(stage_dir.name), "stage_dir": stage_dir.name,
+                "slug": slug, "folder": topic, "stage": stage_label(stage_name), "stage_dir": stage_name,
                 "title": title, "subtitle": first.get("subtitle", ""), "desc": first.get("desc", ""),
                 "variants": variants, "decks": htmls, "pdfs": pdfs, "links": links, "homework": homework,
                 "draft": bool(first.get("draft")), "programs": resolve_programs(slug, variants),

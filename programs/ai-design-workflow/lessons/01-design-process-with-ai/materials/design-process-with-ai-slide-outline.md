@@ -37,14 +37,14 @@ last_synced: 2026-10-22
 
 ## Slide structure: 69 slides
 
-- Một deck cho buổi 1, gồm **38 slide trong luồng dạy**, **3 slide Homework reference** (đặt sau slide END, chiếu khi học viên hỏi cách làm bài tập về nhà), **1 slide Terms reference** (agent và connector, thuật ngữ pre-read) và **27 slide Appendix** (method reference, chỉ mở khi học viên hỏi). Gộp từ hai buổi của bản 14 session, 2026-10-22, theo lộ trình Notion. Trên lớp chỉ có ice breaker và một activity (Activity 2, viết data rules); ở nhà chỉ có một bài tập (dựng case folder). Warm-up về hướng nghề, Activity 1 (giải thích thuật ngữ), bài phân loại sáu thẻ và Activity 4 (đọc chéo) đã bỏ.
-- Arc: **Ice breaker** (2, tính cả cover) → **Tương lai của nghề và hướng đi của bạn** (8: divider, số liệu, áp lực nằm ở đâu, ba slide cho ba hướng đi, lập trường partner, dòng một câu) → **Quy trình thiết kế của bạn, cùng AI** (10: một divider, stage map, bốn slide stage, hai slide về AI làm tốt và còn yếu, hai slide về workflow chưa ổn) → **Một task làm hai lần, bốn khái niệm và data safety** (7) → **Activity 2: viết data rules** (1) → **Case folder, series, hub và bài tập về nhà** (7: divider, case folder, working file, series map, hub, chia sẻ hub, bài tập về nhà) → **Hỏi đáp, lời kết, kết thúc** (3).
+- Một deck cho buổi 1, gồm **38 slide trong luồng dạy**, **3 slide Homework reference** (đặt sau slide END, chiếu khi học viên hỏi cách làm bài tập về nhà), **1 slide Terms reference** (agent và connector, thuật ngữ pre-read) và **27 slide Appendix** (method reference, chỉ mở khi học viên hỏi). Trên lớp chỉ có ice breaker và một activity (viết data rules); ở nhà chỉ có một bài tập (dựng case folder).
+- Arc: **Ice breaker** (2, tính cả cover) → **Tương lai của nghề và hướng đi của bạn** (8: divider, số liệu, áp lực nằm ở đâu, ba slide cho ba hướng đi, lập trường partner, dòng một câu) → **Quy trình thiết kế của bạn, cùng AI** (10: một divider, stage map, bốn slide stage, hai slide về AI làm tốt và còn yếu, hai slide về workflow chưa ổn) → **Một task làm hai lần, bốn khái niệm và data safety** (7) → **Activity: viết data rules** (1) → **Case folder, series, hub và bài tập về nhà** (7: divider, case folder, working file, series map, hub, chia sẻ hub, bài tập về nhà) → **Hỏi đáp, lời kết, kết thúc** (3).
 - Khớp với tám phase của lesson. Phase 1 (ice breaker) = slide 1–2. Phase 2 = slide 3–10. Phase 3 = slide 11–20. Phase 4 = slide 21–25. Phase 5 = slide 26–27. Phase 6 = slide 28. Phase 7 = slide 29–35. Phase 8 = slide 36 (hỏi đáp), rồi slide 37–38 trong phần kết thúc và buffer. Homework reference = slide 39–41. Terms reference = slide 42. Appendix = slide 43–69.
-- Thời gian trên màn hình chỉ xuất hiện ở slide `MILESTONE` (`Num:` = số phút): ice breaker = 7, Activity 2 = 8; slide tham khảo bài tập về nhà ghi 45. Timing các phase: Phase 1 7 phút, Phase 2 14, Phase 3 14, Phase 4 11, Phase 5 8, Phase 6 8, Phase 7 12, Phase 8 8; tổng nội dung 82 trên 90 phút, kết thúc và buffer 8 phút. Phase 2 chia: ground rule 1, số liệu 4, áp lực nằm ở đâu 2, ba hướng đi 5, lập trường partner và dòng một câu 2. Phase 3 chia: stage map 2, bốn stage 6, AI làm tốt và còn yếu 3, workflow chưa ổn 3. Phase 4 chia: demo 7, bốn khái niệm 4. Phase 7 chia: divider và case folder 4, working file 1, series map 2, hub 2, chia sẻ hub 2, bài tập về nhà 1.
-- Thứ tự cắt khi quá giờ: slide 20 (ba câu hỏi), slide 18 (trông đúng chưa chắc đúng), phần chia sẻ hub ở Phase 7, rút hỏi đáp còn 4 phút, rồi rút ice breaker còn 5 phút; data safety và Activity 2 không bao giờ bị cắt. Các method, sáu thuật ngữ còn lại và chi tiết folder nằm trong pre-read brief, nên deck không có slide nào đọc định nghĩa thành tiếng.
+- Thời gian trên màn hình chỉ xuất hiện ở slide `MILESTONE` (`Num:` = số phút): ice breaker = 7, Activity = 8; slide tham khảo bài tập về nhà ghi 45. Timing các phase: Phase 1 7 phút, Phase 2 14, Phase 3 14, Phase 4 11, Phase 5 8, Phase 6 8, Phase 7 12, Phase 8 8; tổng nội dung 82 trên 90 phút, kết thúc và buffer 8 phút. Phase 2 chia: ground rule 1, số liệu 4, áp lực nằm ở đâu 2, ba hướng đi 5, lập trường partner và dòng một câu 2. Phase 3 chia: stage map 2, bốn stage 6, AI làm tốt và còn yếu 3, workflow chưa ổn 3. Phase 4 chia: demo 7, bốn khái niệm 4. Phase 7 chia: divider và case folder 4, working file 1, series map 2, hub 2, chia sẻ hub 2, bài tập về nhà 1.
+- Thứ tự cắt khi quá giờ: slide 20 (ba câu hỏi), slide 18 (trông đúng chưa chắc đúng), phần chia sẻ hub ở Phase 7, rút hỏi đáp còn 4 phút, rồi rút ice breaker còn 5 phút; data safety và Activity không bao giờ bị cắt. Các method, sáu thuật ngữ còn lại và chi tiết folder nằm trong pre-read brief, nên deck không có slide nào đọc định nghĩa thành tiếng.
 - Mọi con số trên slide ở Phase 2 ghi nguồn, năm và cỡ mẫu. Chỉ dùng số liệu đã đọc ở nguồn gốc (xem `programs/ai-design-workflow/learning/research.md`, Part 5); không đưa lên slide những con số mà mục 10 của Part 5 xếp vào danh sách chưa dùng.
 - Các con số ở slide 17 và 18 (Phase 3) ghi nguồn, năm và cỡ mẫu theo bảng ở mục 3.4 của lesson (References [13] đến [19]); số liệu về agent đổi theo từng phiên bản mô hình, nên kiểm tra lại trước khi dạy. Slide 19 và 20 dựa trên mục 3.5 (References [20] và [21]); handout tám câu là `before-you-automate.md`.
-- Buổi 1 không có buổi thực hành đi kèm: Activity 2 là phần làm việc duy nhất trên case của học viên.
+- Buổi 1 không có buổi thực hành đi kèm: Activity là phần làm việc duy nhất trên case của học viên.
 
 ---
 
@@ -401,7 +401,7 @@ last_synced: 2026-10-22
 - Speaker notes:
   - Định nghĩa nằm trong pre-read brief; đừng đọc to
   - Chỉ gọi tên bốn khái niệm, gắn với những gì họ vừa thấy trong demo; sáu thuật ngữ còn lại đã ở pre-read và được dạy khi cần
-  - Sau đó là phần data safety, rồi Activity 2
+  - Sau đó là phần data safety, rồi Activity
 - 🎨 Visual hint: TYPOGRAPHIC. Nền paper-deeper, số phần lớn, accent ở dòng 2.
 
 ---
@@ -479,7 +479,7 @@ last_synced: 2026-10-22
   - Mọi thứ cho tới giờ là về những gì đi ra; đây là về những gì đi vào
   - **Đừng mặc định là nó private**: ở nhiều gói consumer, hội thoại có thể được dùng để cải thiện model trừ khi bạn tắt đi; hãy kiểm tra tool bạn dùng
   - Dữ liệu cá nhân ở Việt Nam thuộc luật 2025 có hiệu lực từ ngày 1 tháng 1 năm 2026; tên, email và bản ghi cũng tính; đây không phải tư vấn pháp lý
-  - Cho ví dụ cho từng nhóm; việc phân loại thật sự làm ngay sau phần này, trên tài liệu của chính bạn (Activity 2)
+  - Cho ví dụ cho từng nhóm; việc phân loại thật sự làm ngay sau phần này, trên tài liệu của chính bạn (Activity)
   - Trang giá công khai và ghi chú về một app công khai là safe; transcript có tên, spec chưa phát hành, danh sách khách hàng là never in a public tool (ẩn danh trước nếu được)
 - 🎨 Visual hint: TYPOGRAPHIC. Numbered, ba cột kèm một dòng ví dụ bên dưới; không tô màu nào ngoài số purple.
 
@@ -500,12 +500,12 @@ last_synced: 2026-10-22
   - Một dòng về connector: nó cho AI đọc thẳng file design hoặc tài liệu của bạn (ví dụ trong công cụ design hoặc ghi chú); **trước khi kết nối, biết nó đọc và sửa được những gì**, và áp data rules như khi dán. Dạy kỹ hơn ở buổi 7
   - Dữ liệu gốc cần ẩn danh nằm trong `_raw-private/`: không lên GitHub, và file luật bảo tool không đọc; đó là quy tắc chứ không phải rào chắn, nên file thật sự confidential vẫn để ngoài folder
   - Output của AI có được dùng cho công việc với client hay không, và ai sở hữu nó, tuỳ công ty và quốc gia của bạn; hãy ghi lại trong case log chỗ nào đã dùng AI
-  - Bạn sẽ viết data rules của riêng mình ngay sau phần này (Activity 2), trên tài liệu thật của case; cho đến lúc đó đừng dán tài liệu thật vào AI tool
+  - Bạn sẽ viết data rules của riêng mình ngay sau phần này (Activity), trên tài liệu thật của case; cho đến lúc đó đừng dán tài liệu thật vào AI tool
 - 🎨 Visual hint: SCHEMATIC. Process track bốn bước, bước ba được tô purple.
 
 ---
 
-### MILESTONE · Activity 2
+### MILESTONE · Activity
 - Num: 8
 - Kicker: Your own case
 - Title: Write your
@@ -628,7 +628,7 @@ last_synced: 2026-10-22
   - Chỉ một bài tập, khoảng bốn mươi lăm phút; xong trước buổi 2 vì các buổi sau làm trên chính folder này
   - Năm bước nằm ở phần Homework reference sau slide END: lấy folder `my-case`, viết product-and-users, mở hub, chạy một instruction với file đã lưu, rồi ghi hai đến ba dòng vào `_personal/my-direction.md`
   - `my-direction.md`: hướng nghiêng về trong ba hướng đi, lý do, một kỹ năng muốn xây; file xem lại ở buổi 12
-  - **Chưa dán tài liệu thật của case vào AI tool trước khi viết data rules**; ai chưa viết xong Activity 2 thì dùng case card để thử
+  - **Chưa dán tài liệu thật của case vào AI tool trước khi viết data rules**; ai chưa viết xong Activity thì dùng case card để thử
   - Nếu case không thể mang vào AI tool, dùng case card của khoá
   - Đây là folder dự án của bạn, không phải bài nộp; nhắc tải workspace template (ZIP) trước nếu chưa có
 - 🎨 Visual hint: TYPOGRAPHIC. Practice layout, một card lớn "Dựng case folder" kèm ba dòng ngắn bên dưới.
@@ -705,7 +705,7 @@ last_synced: 2026-10-22
   - 05 · Viết hai dòng vào my-direction.md
 - Speaker notes:
   - 01: năm phút, lấy folder `my-case` từ template, đổi tên theo case và đối chiếu với layout chuẩn
-  - 02: mười phút, product-and-users đã ẩn danh, cộng với data-rules từ Activity 2
+  - 02: mười phút, product-and-users đã ẩn danh, cộng với data-rules từ Activity
   - 03: năm phút, mở cả folder case bằng công cụ quen thuộc (AI coding tool, VS Code hoặc Obsidian), mở `hub/README.md` để thấy dữ liệu mẫu và đọc `AGENTS.md`; chưa chỉnh gì
   - 04: hai mươi phút, đính kèm file product, hỏi còn thiếu gì, rồi đọc câu trả lời có phản biện
   - 05: năm phút, hai đến ba dòng vào `_personal/my-direction.md`: hướng nghiêng về, lý do, một kỹ năng muốn xây
