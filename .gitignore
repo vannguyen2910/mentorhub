@@ -42,3 +42,6 @@ business/
 showcase/private/
 showcase/testimonials.md
 programs/assessment-tool/
+
+# Instructor-only answer keys (never publish)
+**/_instructor-only-*
