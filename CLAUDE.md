@@ -8,7 +8,7 @@ Every lesson in `library/lessons/` (and in `programs/<program>/lessons/`, for ex
 
 **When either file is updated, always check and update the other.**
 
-New `*-slide-outline.md` files start from `_system/learning templates/_template-slide-outline.md`, not a blank page — it fixes the session metadata table, the standard slide-entry fields, and the speaker-notes-as-bullets rule. Layout types come from the catalogue in `_system/rules/slide-deck-rules.md` (canonical — other paths to a rules file are pointers to it).
+New `*-slide-outline.md` files start from `_system/learning templates/_template-slide-outline.md`, not a blank page — it fixes the session metadata table, the standard slide-entry fields, and the speaker-notes rule (verbatim `>` lines plus bullets, with `Giờ`, `Ví dụ` and `Câu hỏi hay gặp` fields). Layout types come from the catalogue in `_system/rules/slide-deck-rules.md` (canonical — other paths to a rules file are pointers to it).
 
 Specifically:
 
@@ -52,6 +52,8 @@ The built deck (`slides/*.html`) is the version that gets taught, so it drifts f
 | Reverse-sync changes the structure | Copy the old lesson and outline to `materials/_archive/` first, named with `-pre-<reason>-YYYY-MM-DD`, and add a short sync note at the top of the lesson |
 | A lesson has more than one deck (for example EN and VI) | Every variant keeps the same slide order. Language may differ, structure may not. Fix the odd one out, not the outline |
 | A deck is new or has been taught | It is committed to git. An untracked deck has no history to recover from |
+
+To sync an outline from its deck, run `/sync-deck <lesson folder>` (script: `_system/scripts/sync-deck.py`; dry run by default). To audit speaker notes, run `/notes-audit`.
 
 This rule sits beside the lesson file sync rule above. That rule keeps lesson and outline together. This one keeps both together with the deck.
 

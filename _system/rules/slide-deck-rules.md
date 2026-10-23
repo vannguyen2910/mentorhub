@@ -103,19 +103,19 @@ Use the **alias names** from `tokens.css`, not raw hex values:
 ### 13 · Diagram — `.diagram`
 - Header: `.slide-kicker` + `.slide-title`, or a two-line `Title` field
 - Body: a schematic explanatory graphic — a mechanism, a 2×2 matrix, a stack, a measurement scale — never a photo. Visual hint is written starting `SCHEMATIC` so it's never confused with `.image`
-- Outline fields: Kicker, Title, On-slide (short on-screen text, not prose), Speaker notes (bullets), 🎨 Visual hint
+- Outline fields: Kicker, Title, On-slide (short on-screen text, not prose), Speaker notes (`>` lines and bullets), Giờ, Ví dụ, 🎨 Visual hint
 - Use for: concept diagrams, matrices, process/stack breakdowns, scales — this was the most common undocumented layout before being promoted here
 
 ### 14 · Formula — `.formula`
 - Body: an escalating build of 2–4 rows or clauses, each longer and heavier than the last, ending on the one that's actionable
 - Visual weight increases per row — `--ink` → `--ochre` → `--sienna` is the established progression
-- Outline fields: Kicker, Title, On-slide (the rows themselves), Speaker notes (bullets), 🎨 Visual hint
+- Outline fields: Kicker, Title, On-slide (the rows themselves), Speaker notes (`>` lines and bullets), Giờ, Ví dụ, 🎨 Visual hint
 - Use for: insight formulas, statement formulas, any "here's how the pieces stack" moment
 
 ### 15 · Image — `.image`
 - Body: one real photo or screenshot, full bleed or near it, minimal to no annotation
 - Visual hint is written starting `REAL` (not `SCHEMATIC`) so it's never confused with `.diagram`
-- Outline fields: Kicker, Title, On-slide (what the image shows, one line), Speaker notes (bullets), 🎨 Visual hint
+- Outline fields: Kicker, Title, On-slide (what the image shows, one line), Speaker notes (`>` lines and bullets), Giờ, Ví dụ, 🎨 Visual hint
 - Use for: before/after reveals, real UI screenshots, stimulus sets — the visual itself is the point, not a supporting graphic
 
 ---
@@ -167,14 +167,26 @@ Use the **alias names** from `tokens.css`, not raw hex values:
 
 ### Speaker notes rule
 
-- Speaker notes are **always bullet points**, one point per line. Never a prose paragraph.
-- Applies to every layout, in outlines and in the deck's notes (4–8 bullets per slide is the norm; section dividers and pure transition slides may stay shorter).
+Speaker notes are written so Winnie can teach from them without remembering the lesson. They mix two kinds of line:
+
+- **Verbatim lines** start with `>`. They are the exact words to say. Use them only where the exact wording decides the outcome: the opening line of the example, the line that must not be missed (in **bold**), the question put to the class, and the transition to the next slide. Usually 3 to 6 per slide.
+- **Bullets** carry everything between the verbatim lines: the ideas to explain, in Winnie's own words, one point per line. 4 to 8 per slide is the norm; section dividers and pure transition slides may stay shorter.
+- **No prose paragraphs, and no bracketed stage directions** such as `[Dừng một nhịp.]` or `[Hỏi lớp, 30 giây]` inside the notes. Anything that is not something to say or explain goes in its own field (below).
 - **Written in Vietnamese** (follow `vi-voice.md`: natural, professional, no spoken filler; terms kept in English stay in English).
-- **Detailed enough to teach from, not just to glance at.** Each content slide's notes cover: what to say to explain the idea, why it matters, and what to ask or check with the mentee before moving on.
-- **Every concept slide carries at least one real example** the mentee can picture in their own work: a concrete situation from a designer's day (a handoff to dev, a stakeholder review, a messy research folder, a Figma file with 40 frames), with realistic numbers, names of artifacts or moments, and the outcome. Not an abstract illustration.
-- Make the transfer explicit: end the example with a bullet that links it to the mentee's work (e.g. "Ví dụ: ... Trong dự án của bạn, thử áp dụng ở bước ...") or a question they answer from their own project.
+- **Example first, concept after** (concreteness fading, and `vi-voice.md`: "Ví dụ cụ thể trước, khái niệm sau"). Open a concept slide with the situation, then name the concept.
+- **Every concept slide carries at least one real example** the mentee can picture in their own work: a concrete situation from a designer's day, with realistic numbers, names of artifacts or moments, and the outcome. Not an abstract illustration.
+- Make the transfer explicit: end with a verbatim question or bullet that links the example to the mentee's own project.
 - Examples stay generic: no mentee, company or cohort names (see `CLAUDE.md` General lesson conventions). Use role labels such as "một designer ở team product".
 - The example originates in `*-lesson.md`; the outline's notes must stay in sync with it, per the lesson sync rule.
+- An example written by Claude rather than taken from Winnie's teaching is marked `bản nháp` in the `Ví dụ:` field until Winnie confirms or replaces it. Never present an invented case or number as real data.
+
+**Fields outside the notes** (every slide, write `None.` rather than omitting):
+
+| Field | Content |
+|---|---|
+| `Giờ:` | Minutes planned for this slide. The audit compares it with the length of the verbatim lines and bullets (about 130 to 150 spoken words a minute) |
+| `Ví dụ:` | `có (<tên ví dụ>)`, `bản nháp (<tên ví dụ>)`, `cần ví dụ: <loại ví dụ cần>`, or `Không cần.` with the reason |
+| `Câu hỏi hay gặp:` | Optional. Questions learners tend to ask here, each with a short answer |
 
 ---
 
