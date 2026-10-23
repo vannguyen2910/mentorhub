@@ -59,14 +59,23 @@ last_synced: 2026-00-00      # date lesson.md and this file were last confirmed 
 - Kicker: [eyebrow line above the title — this slide's own topic only; no "Part 01 ·" prefix, the part number lives on the SECTION DIVIDER]
 - Title: [on-slide title — line breaks written as \n]
 - On-slide: [the actual visible text/labels — short, not prose. "None." if the layout has no body copy field]
+- Giờ: [minutes for this slide]
+- Ví dụ: [có (tên ví dụ) | bản nháp (tên ví dụ) | cần ví dụ: loại ví dụ cần | Không cần. + lý do]
+- Câu hỏi hay gặp:
+  - [câu hỏi? Trả lời ngắn.  — or "None."]
 - Speaker notes:
-  - [one point per line, glanceable — never a prose paragraph]
-  - [bold the beat that must not be missed]
-  - [facilitation cues — timing, checkpoints — get their own bullet]
+
+  > [câu nói nguyên văn: mở bằng ví dụ hoặc tình huống, rồi mới đến khái niệm]
+
+  - [ý cần giải thích, một ý một dòng, nói bằng lời của mình]
+
+  > **[câu không được bỏ]**
+
+  > [câu hỏi cho lớp, hoặc câu nối sang slide kế tiếp]
 - 🎨 Visual hint: [SCHEMATIC / REAL / TYPOGRAPHIC, then the description]
 ```
 
-Speaker notes are always bullets, 3–6 per slide. More than ~7 means the slide is carrying too much and should probably split. This applies to every slide in every outline, old or new — see `CLAUDE.md` and the mentoring-practice notes on why (read standing up, mid-session).
+Speaker notes follow `_system/rules/slide-deck-rules.md` → Speaker notes rule: `>` lines are exact words (3–6 per slide: example opener, the must-not-miss line, the class question, the transition); bullets are the ideas between them (4–8 per slide). No prose paragraphs and no bracketed stage directions. Give the example first, the concept after. Run `/notes-audit` before building the deck.
 
 ---
 
