@@ -127,8 +127,10 @@
 </tr>
 </tbody>
 </table>
+<p><strong>Ví dụ minh hoạ (tình huống giả định, bản nháp, không phải dữ liệu thực).</strong> Team của app giao đồ ăn hư cấu "Ăn Ngay" cần biết vì sao user bỏ giỏ hàng ở bước thanh toán. Cách dễ lấy nhất là xem ba app đối thủ thanh toán thế nào (competitor analysis), nhưng nguồn này chỉ cho biết đối thủ có ít bước hơn hoặc hiện phí giao hàng sớm hơn. Nó không phân biệt được user của Ăn Ngay dừng lại vì phí hiện muộn, thiếu phương thức thanh toán hay ngại nhập thẻ. Nguồn đúng với câu hỏi này là analytics, để xác định bước có tỷ lệ rớt cao nhất, rồi phỏng vấn ngắn một vài user đã bỏ giỏ để hỏi lý do. Điểm rút ra: loại evidence dễ lấy nhất trả lời một câu hỏi khác với câu hỏi đang có.</p>
 <h3 id="v0-1-2-the-pairing-rule">1.2 The pairing rule</h3>
 <p>Competitor analysis cho thấy đối thủ làm gì. Nó không cho thấy vì sao user hành xử như vậy, nên một Discover chỉ dựa trên đối thủ là evidence yếu nhất. Mỗi evidence pack ghép một nguồn về điều người khác làm với một nguồn về điều user nói hoặc làm, vì mỗi loại che điểm mù của loại kia.</p>
+<p><strong>Ví dụ minh hoạ (tình huống giả định, bản nháp, không phải dữ liệu thực).</strong> Giả sử team Ăn Ngay chỉ phân tích đối thủ và thấy cả ba app hiện phí giao hàng ngay ở giỏ hàng, nên đưa phí lên sớm hơn. Nếu tỷ lệ bỏ giỏ gần như không đổi, review công khai của chính Ăn Ngay có thể cho thấy lý do khác, chẳng hạn nhiều user phàn nàn không biết đơn tới lúc nào. Nguồn thứ nhất cho hướng đi, nguồn thứ hai cho lý do.</p>
 <h3 id="v0-1-3-data-safety-applies-here">1.3 Data safety applies here</h3>
 <p>Ẩn danh trước khi AI nhìn thấy bất kỳ quote nào, bằng find and replace trên máy của mình, và thay tên bằng participant code (P1, P2). Dữ liệu gốc chưa ẩn danh nằm trong <code>sources/_raw-private/</code>, ngoài vùng AI đọc (xem buổi 1).</p>
 <hr />
@@ -140,6 +142,8 @@
 <li><strong>Đối chiếu từng ô với ảnh gốc.</strong> Bảng gọn tạo cảm giác chắc chắn hơn mức bằng chứng thật.</li>
 <li><strong>Mở từng nguồn do AI dẫn.</strong> Một phần citation do AI đưa ra không tồn tại: các phép đo cho thấy 3 đến 13% URL citation bịa ở một số mô hình thương mại [1], và 14 đến 95% citation bịa tuỳ mô hình trong một benchmark khác [2].</li>
 </ol>
+<p><strong>Ví dụ minh hoạ (tình huống giả định, bản nháp, không phải dữ liệu thực).</strong> Team Ăn Ngay chụp trang gói thành viên của một app đối thủ và nhờ AI điền bảng so sánh. Ảnh có bốn gói, bảng chỉ có ba; gói bị bỏ là gói duy nhất miễn phí giao hàng, nên kết luận về đối thủ lệch. Khi AI mô tả ảnh trước (thói quen 2), việc thiếu một gói lộ ra ở bước mô tả, trước khi nó trở thành một ô trong bảng.</p>
+<p><strong>Ví dụ minh hoạ (tình huống giả định, bản nháp, không phải dữ liệu thực).</strong> AI dẫn một bài nghiên cứu về hành vi bỏ giỏ hàng, có tác giả, năm và đường link, làm nguồn duy nhất cho một claim trong desk research. Khi mở link, trang báo không tìm thấy. Nếu bài đã được đưa vào evidence pack, claim dựa trên một nguồn không tồn tại (thói quen 4).</p>
 <hr />
 <h2 id="v0-3-what-users-say-user-voice-synthesis">3. What users say: user-voice synthesis</h2>
 <h3 id="v0-3-1-the-flow">3.1 The flow</h3>
@@ -251,7 +255,7 @@
 <td>3</td>
 <td>Theory 2: điều người khác làm (tổng quan)</td>
 <td>2</td>
-<td>7 phút</td>
+<td>4 phút</td>
 </tr>
 <tr>
 <td>4</td>
@@ -293,17 +297,17 @@
 <td></td>
 <td><strong>Tổng nội dung</strong></td>
 <td></td>
-<td><strong>84 phút</strong></td>
+<td><strong>81 phút</strong></td>
 </tr>
 <tr>
 <td></td>
 <td>Buffer</td>
 <td></td>
-<td>6 phút</td>
+<td>9 phút</td>
 </tr>
 </tbody>
 </table>
-<p>Timing chưa được thử với một lớp thật. <strong>Thứ tự cắt khi quá giờ (đề xuất, chưa thử):</strong> Theory 2 rút còn 4 phút, rồi hỏi đáp rút còn 4 phút, rồi rút bớt demo ở Theory 3.</p>
+<p>Timing chưa được thử với một lớp thật. <strong>Thứ tự cắt khi quá giờ (đề xuất, chưa thử):</strong> hỏi đáp rút còn 4 phút, rồi rút bớt demo ở Theory 3. Theory 2 đã ở mức 4 phút nên không còn chỗ rút.</p>
 <h3 id="v0-6-2-engagement-rules">6.2 Engagement rules</h3>
 <p>Giữ ba quy tắc của chương trình: đoán trước rồi mới xem; đổi kiểu tương tác mỗi 8 đến 10 phút, mỗi phần theory kết thúc bằng một câu hỏi 30 giây có hai lựa chọn; mỗi buổi có một "cái bẫy". Cái bẫy của buổi 3 là bản synthesis nghe rất hợp lý nhưng có lỗi cài sẵn.</p>
 <h3 id="v0-6-3-activities">6.3 Activities</h3>
