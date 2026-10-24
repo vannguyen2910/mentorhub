@@ -33,7 +33,7 @@ last_synced: 2026-10-23
 - Arc: **Open** (slide 1 đến 4) → **Phần 1** Inherited vs Evidence-Based (5 đến 10) → **Phần 2** Card Sorting (11 đến 16) → **Phần 3** Tree Testing (17 đến 22) → **Phần 4** User Flows (23 đến 31) → **Phần 5** Process Map (32 đến 40) → **Phần 6** Defend Your IA (41 đến 44) → **AI trong thực tế** (45) → **Close** (46, 47).
 - Thời lượng theo deck: Phần 1 đến 3 mỗi phần 7 phút; Phần 4 = 8 phút (nâng từ 6 phút của deck, 2026-10-23); Phần 5 = 9 phút (nâng từ 6 phút của deck, 2026-10-23); Phần 6 = 6 phút (tổng 44 phút nội dung). Activity: Build 1 = 10, Build 2 = 9, Build 3 = 8, Hoạt động 1 = 20, Hoạt động 2 = 15, Bảo vệ = 10 (tổng 72 phút). Mở bài khoảng 4 đến 5 phút. `[to confirm]` giả định phút của các Phần không gồm activity; tổng cộng khoảng 121 đến 126 phút, so với khung 120 đến 135 phút của lesson cũ.
 - Deck gộp MILESTONE và task card vào một slide `PRACTICE` (số phút nằm trên chính slide). Template mặc định tách hai slide; giữ theo deck.
-- Lệch quy tắc kicker so với deck: slide 4 ("Buổi 5 · ..."), slide 33 ("Phần 5 · Process Map") mang tiền tố số buổi hoặc số phần. Deck wins; xem lại khi sửa deck.
+- Kicker và Title đã rà theo quy tắc mới (2026-10-23): Title là nhãn chủ đề tối đa 6 từ, Kicker nêu vai trò slide và không mang số Phần hay Buổi. Đã sửa 31 slide trong cả deck và outline. Câu nhận định cũ (ví dụ "Nhiều actor, một kết quả") nằm trong On-slide hoặc speaker notes nếu đã có ở đó; chưa chuyển thêm.
 - Phần 4 đã nâng lên 8 phút cho 8 slide (23 đến 30), mỗi slide 1 phút. Deck vẫn ghi 6 phút ở slide 4 và 23, cần sửa deck.
 - Phần 5 đã nâng lên 9 phút cho 8 slide (32 đến 39): bảy slide mỗi slide 1 phút, slide 39 là 2 phút. Deck vẫn ghi 6 phút (slide 4, 23 và 32), cần sửa deck. Slide 39 trong deck có khoảng 25 bullet; outline đã gom còn 8, nên vẫn nên tách thành hai slide.
 - Slide 3 và 39 nêu tên app thật (Grab, ShopeeFood, Be); quy tắc ví dụ generic cần xem lại `[to confirm]`.
@@ -95,7 +95,7 @@ last_synced: 2026-10-23
 
 ### NUMBERED · Câu hỏi năm cách
 - Kicker: Câu hỏi năm cách
-- Title: Câu hỏi "đơn còn đang tới không?" nên nằm ở đâu?
+- Title: Đơn còn đang tới không?
 - On-slide: Khi đơn đang trên đường giao… | 01 | Một trang trạng thái, vào từ mục Orders | 02 | Màn hình Home trở thành đơn đang giao | 03 | Không có trang riêng, notification báo thay | 04 | Nằm trong Help, dưới tên "đơn của tôi đâu" | 05 | Một status bar hiện trên mọi màn hình cho tới khi đơn tới | Chat với tài xế không phải đáp án thứ sáu, vì nó nằm ngoài phạm vi (non-goal).
 - Giờ: 2 phút (theo deck, nói miệng, không viết)
 - Ví dụ: bản nháp (khách đặt pizza lúc 19:00, đến 19:35 vẫn chưa thấy). Cần ví dụ thật: mở hai app giao đồ ăn thật trên điện thoại, cho thấy mỗi app đặt "đơn đang giao" ở một chỗ khác nhau; chụp trước hai ảnh màn hình để so sánh
@@ -120,8 +120,8 @@ last_synced: 2026-10-23
 ---
 
 ### NUMBERED · Buổi 5 · System Architecture & IA
-- Kicker: Buổi 5 · System Architecture & IA
-- Title: Từ một câu hỏi đến một quyết định bạn bảo vệ được
+- Kicker: Tổng quan buổi
+- Title: Mục tiêu buổi học
 - On-slide: 01 | Inherited vs evidence-based: vẽ lại những gì đang có | 02 | Card sorting: xem khách hàng tự nhóm thế nào | 03 | Tree testing: kiểm tra xem cấu trúc có dùng được không | 04 | User flow: xem cấu trúc này bắt user trả giá những gì | 05 | Process map: xem ai làm gì phía sau màn hình | 06 | Bảo vệ IA: thuyết phục chính người đang sở hữu nó
 - Giờ: 1 phút (đề xuất)
 - Ví dụ: Không cần.
@@ -187,8 +187,8 @@ last_synced: 2026-10-23
 ---
 
 ### COMPARE · Điểm khác biệt cốt lõi
-- Kicker: Điểm khác biệt cốt lõi
-- Title: Xây cho doanh nghiệp, hay xây từ bằng chứng
+- Kicker: So sánh
+- Title: Hai cách làm IA
 - On-slide: Inherited IA | Nguồn: | PO, stakeholder, hệ thống cũ | Logic: | theo team, theo quyền sở hữu tính năng, theo hệ thống | Rủi ro: | "nghe hợp lý với bên mình" | Evidence-Based IA | Nguồn: | card sort, tree test, dữ liệu search và support | Logic: | theo mental model và task của user | Rủi ro: | cần thời gian và kỷ luật phương pháp | Cách nhận ra: nếu một mục chỉ có lý khi bạn nói ra ai sở hữu nó, thì đó là cấu trúc inherited.
 - Giờ: 2 phút (đề xuất)
 - Ví dụ: bản nháp (Support, Orders, Account so với Đơn của tôi, Sự cố với đơn, Thanh toán). Cần ví dụ thật: cặp ảnh một menu inherited và một menu sau khi test; ReferPlus ở slide 15 và 21 có thể dùng làm cặp này
@@ -212,8 +212,8 @@ last_synced: 2026-10-23
 ---
 
 ### NUMBERED · Phương pháp · Sitemap
-- Kicker: Phương pháp · Sitemap
-- Title: Sitemap
+- Kicker: Định nghĩa
+- Title: Sitemap là gì?
 - On-slide: Là gì | Mọi màn hình và mục user đang chạm vào hôm nay, xếp lồng nhau từ cha đến con, đúng như sản phẩm thật. | Để làm gì | Chưa kiểm kê nội dung thì không viết được bộ thẻ. Nó cũng phơi ra dấu hiệu “sơ đồ tổ chức” (org-chart tell) ngay trên bảng, trước khi bạn có bằng chứng từ user để phản biện. | Khi nào | Làm trước card sorting, khi bạn chưa có ý kiến về cách sửa. Các thẻ sau này lấy thẳng từ danh sách này.
 - Giờ: 1 phút (đề xuất)
 - Ví dụ: có (slide 9, Food delivery)
@@ -235,8 +235,8 @@ last_synced: 2026-10-23
 ---
 
 ### DIAGRAM · Minh họa · Food delivery
-- Kicker: Minh họa · Food delivery
-- Title: Ba mục, ba chủ sở hữu, một khách hàng đang sốt ruột
+- Kicker: Ví dụ
+- Title: Sitemap food delivery
 - On-slide: Food Delivery App | Home | Search | Growth | Offers | Operations | Orders | Customer Service | Account | Current | Order detail | Track | Past | Profile | Payment | Help Centre | Order issues
 - Giờ: 2 phút (đề xuất)
 - Ví dụ: có (Food delivery trên slide). Cần ví dụ thật: ảnh sitemap thật đã ẩn tên của một sản phẩm bạn từng làm, đặt cạnh sơ đồ minh họa. [to confirm] ghi chú của deck nói Account (Billing) nhưng sơ đồ trên slide ghi Customer Service ở mục Account
@@ -260,7 +260,7 @@ last_synced: 2026-10-23
 ### PRACTICE · Build 1
 - Num: 10
 - Kicker: Build 1
-- Title: Vẽ sitemap inherited cho giai đoạn bạn đang làm
+- Title: Vẽ sitemap inherited
 - On-slide: 01 | Đặt khung: ghi câu hỏi cấu trúc và giai đoạn ở đầu trang | 02 | Đi qua và vẽ: mọi màn hình bạn chạm vào, kèm màn hình cha | 03 | Ghi owner cho từng mục cấp 1 | 04 | Khoanh dấu hiệu: những ô chỉ giải thích được bằng việc ai là owner
 - Giờ: 10 phút (theo deck)
 - Ví dụ: Không cần.
@@ -305,8 +305,8 @@ last_synced: 2026-10-23
 ---
 
 ### COMPARE · Ba định dạng
-- Kicker: Ba định dạng
-- Title: Câu hỏi nào, định dạng đó
+- Kicker: So sánh
+- Title: Ba định dạng card sort
 - On-slide: Open | Họ tự tạo nhóm và đặt tên | Dùng khi bạn không tin cấu trúc hiện tại | Lộ ra mental model, bằng chính lời của họ | Closed | Họ sort vào nhóm của bạn | Dùng để test nhãn | Cho biết tên gọi có dễ hiểu không | Hybrid | Nhóm của bạn, cộng thêm chỗ để họ tự thêm. Dùng để tìm chỗ còn thiếu.
 - Giờ: 2 phút (đề xuất)
 - Ví dụ: bản nháp (app giao đồ ăn có ba nhóm Orders, Help, Account: open để khám phá nhóm, closed để test nhãn, hybrid để tìm chỗ thiếu). Cần ví dụ thật: một lần bạn chọn định dạng sort cho dự án thật và lý do
@@ -330,8 +330,8 @@ last_synced: 2026-10-23
 ---
 
 ### NUMBERED · Phương pháp · Viết thẻ
-- Kicker: Phương pháp · Viết thẻ
-- Title: Thẻ viết dở thì kết quả sort chỉ phản chiếu nhãn của bạn
+- Kicker: Cách làm
+- Title: Cách viết thẻ
 - On-slide: 01 | Lời của khách hàng, lấy từ JTBD map, không dùng nhãn sản phẩm | 02 | Thẻ và nhóm không dùng chung từ | 03 | Giới hạn trong một giai đoạn: 30 đến 40 thẻ | 04 | Giữ lại những thẻ khó xếp, vì đó là lý do bạn làm sort | "đồ ăn của tôi bị trễ" | "xem tài xế đang ở đâu" | "thiếu một món" | "được hoàn tiền"
 - Giờ: 2 phút (đề xuất)
 - Ví dụ: bản nháp (thẻ xấu: Order history, Order status, Order issues; thẻ tốt: xem lại món mình đã đặt tuần trước, đồ ăn của tôi bị trễ, thiếu một món). Cần ví dụ thật: một bộ thẻ của dự án thật, 5 thẻ trước khi sửa và 5 thẻ sau khi sửa, lấy từ lần sort gần nhất của bạn
@@ -355,8 +355,8 @@ last_synced: 2026-10-23
 ---
 
 ### DIAGRAM · Minh họa · Đọc kết quả
-- Kicker: Minh họa · Đọc kết quả
-- Title: Agreement cho bạn biết các nhóm. Divergence cho bạn biết vấn đề nằm ở đâu.
+- Kicker: Đọc kết quả
+- Title: Agreement và divergence
 - On-slide: Agreement | "Nó đang ở đâu" | trễ | vị trí tài xế | ETA | Divergence | "thiếu một món" | Orders | Account | Help | 5 = pilot · ~15 = open sort đáng tin
 - Giờ: 1 phút (đề xuất)
 - Ví dụ: có minh họa trên slide; bản nháp (15 người sort thẻ "đồ ăn của tôi bị trễ": 9 vào "Nó đang ở đâu", 4 vào "Hỗ trợ", 2 vào "Đơn hàng"). Cần ví dụ thật: một ma trận similarity hoặc bảng kết quả thật từ công cụ card sort hay bảng tính, thay cho minh họa
@@ -379,7 +379,7 @@ last_synced: 2026-10-23
 
 ### IMAGE · Thực tế · ReferPlus 2019
 - Kicker: Thực tế · ReferPlus 2019
-- Title: Card sort cho nền tảng có hai nhóm user
+- Title: Card sort hai nhóm user
 - On-slide: Hai nhóm user là recruiter và headhunter, dùng chung một sản phẩm | Cách làm: gặp trực tiếp, dùng whiteboard, với team nội bộ | Đầu ra: cấu trúc navigation và sitemap
 - Giờ: 1 phút (đề xuất)
 - Ví dụ: có (ReferPlus 2019, trên slide). Chuẩn bị ba câu: vì sao chọn whiteboard, điều gì bất ngờ nhất, điều gì sẽ làm lại nếu có thêm thời gian
@@ -405,7 +405,7 @@ last_synced: 2026-10-23
 ### PRACTICE · Build 2
 - Num: 9
 - Kicker: Build 2
-- Title: Viết bộ thẻ của bạn, rồi xem mình sort thử
+- Title: Viết thẻ và sort thử
 - On-slide: 01 | Viết 15 đến 20 thẻ từ sitemap, bằng ngôn ngữ JTBD | 02 | Chọn định dạng và nói rõ lý do | 03 | Pilot: mình vừa sort vừa nói to, bạn ghi lại mọi chỗ mình ngập ngừng | 04 | Sửa hai thẻ tệ nhất
 - Giờ: 9 phút (theo deck: 4 viết, 1 chọn, 3 pilot, 1 sửa)
 - Ví dụ: Không cần.
@@ -450,8 +450,8 @@ last_synced: 2026-10-23
 ---
 
 ### PROCESS · Phương pháp · Tree testing
-- Kicker: Phương pháp · Tree testing
-- Title: Chỉ có chữ. Không màn hình. Chỉ cấu trúc.
+- Kicker: Định nghĩa
+- Title: Tree Testing là gì?
 - On-slide: 01 | Dựng cây dưới dạng text | 02 | Viết task theo tình huống, dùng từ không xuất hiện trong cây | 03 | Đặt đích đúng cho từng task | 04 | Người tham gia click xuống chỗ họ nghĩ sẽ tìm thấy | "Đồ ăn của bạn lẽ ra đã tới từ 20 phút trước, mà bản đồ vẫn đứng yên. Bạn sẽ vào đâu để biết chuyện gì đang xảy ra?"
 - Giờ: 2 phút (đề xuất)
 - Ví dụ: bản nháp (task "đồ ăn lẽ ra đã tới 20 phút trước, bản đồ vẫn đứng yên"; đích đúng Orders > Đơn đang giao). Cần ví dụ thật: mở một tree test thật trên màn hình bằng công cụ tree test, cho mentee thử làm một task trong 30 giây
@@ -503,8 +503,8 @@ last_synced: 2026-10-23
 ---
 
 ### DIAGRAM · Minh họa · Food delivery
-- Kicker: Minh họa · Food delivery
-- Title: 48% tìm ra. First click của họ chia làm hai nửa.
+- Kicker: Ví dụ
+- Title: Kết quả tree test
 - On-slide: 48% | Success · Directness: thấp | First click | Orders | 52% | Account | 48%
 - Giờ: 1 phút (đề xuất)
 - Ví dụ: có minh họa trên slide
@@ -527,7 +527,7 @@ last_synced: 2026-10-23
 
 ### IMAGE · Thực tế · ReferPlus 2019
 - Kicker: Thực tế · ReferPlus 2019
-- Title: Sitemap dựng lại xoay quanh job của user
+- Title: Sitemap dựng lại
 - On-slide: Mobile IA v0.2: phân cấp màn hình, không phải wireframe | Xây từ: kết quả card sort và journey mapping | Để ý: có hai đường vào, mỗi nhóm user một đường, rồi nhập lại ở các màn hình chung
 - Giờ: 1 phút (đề xuất)
 - Ví dụ: có (ReferPlus 2019, trên slide). Chuẩn bị số liệu trước và sau nếu có: số bước, tỉ lệ hoàn thành, hoặc phản hồi của stakeholder
@@ -552,7 +552,7 @@ last_synced: 2026-10-23
 ### PRACTICE · Build 3
 - Num: 8
 - Kicker: Build 3
-- Title: Đặt cược vào một đáp án, rồi viết cách bạn sẽ test nó
+- Title: Đặt cược và thiết kế test
 - On-slide: 01 | Chỉ vẽ lại phần của cây mà đáp án của bạn thay đổi | 02 | Gắn nhãn: "Giả thuyết, chưa được test" | 03 | Viết ba task kèm đích đúng | 04 | Đặt kill threshold: tỉ lệ success thấp tới mức bạn sẽ bỏ phương án này
 - Giờ: 8 phút (theo deck: 4 vẽ lại, 3 task, 1 ngưỡng)
 - Ví dụ: Không cần.
@@ -597,8 +597,8 @@ last_synced: 2026-10-23
 ---
 
 ### NUMBERED · USER FLOW
-- Kicker: USER FLOW
-- Title: Một user, một task, từ điểm vào đến kết quả
+- Kicker: Định nghĩa
+- Title: User Flow là gì?
 - On-slide: Là gì | Sơ đồ các bước một user đi qua để hoàn thành một task cụ thể, từ điểm vào đến kết quả cuối. | Không phải wireframe. Đây là bản đồ màn hình, hành động và quyết định trên đường đi của task, nhìn từ phía user. | Mục tiêu | Thiết kế và kiểm tra đường đi của task trước khi vẽ màn hình nào. Tìm friction và state còn thiếu khi sửa vẫn còn rẻ. | Khi nào dùng | Trước khi wireframe: chốt cấu trúc của task trước khi thiết kế màn hình | Rà soát sản phẩm cũ: ghi lại những gì user thật sự phải làm | Tìm friction: chỗ user bỏ đi hoặc bị lạc | Bàn giao màn hình cho engineering: cho thấy mỗi màn hình xuất hiện khi nào và trong điều kiện nào
 - Giờ: 1 phút (đề xuất)
 - Ví dụ: bản nháp (flow "Đặt và xác nhận một slot": sáu bước và hai điểm quyết định, ở slide 28). Cần ví dụ thật: một user flow thật từ dự án của bạn (onboarding hoặc checkout), đã ẩn thông tin, để mentee so với định nghĩa
@@ -621,8 +621,8 @@ last_synced: 2026-10-23
 ---
 
 ### COMPARE · User Flow · Phạm vi
-- Kicker: User Flow · Phạm vi
-- Title: Phần lớn vấn đề thiết kế nằm ở flow, không nằm ở màn hình
+- Kicker: Phạm vi
+- Title: Phạm vi của user flow
 - On-slide: Trong phạm vi | Một user, một task, một điểm vào | Màn hình, hành động, quyết định | Những gì user nhìn thấy | Ngoài phạm vi | Các actor khác (admin, support, payment provider) | Việc hệ thống làm phía sau | Bàn giao nội bộ → Process Map | Khi không có user flow | Bạn thiết kế màn hình mà không biết trước và sau nó là gì | State lỗi và edge case chỉ lộ ra khi dev, không phải khi thiết kế | Stakeholder tranh luận chi tiết màn hình khi chưa thống nhất cấu trúc của task
 - Giờ: 1 phút (đề xuất)
 - Ví dụ: cần ví dụ: một dự án thật nơi state lỗi hoặc edge case chỉ lộ ra khi dev, vì thiếu user flow
@@ -643,7 +643,7 @@ last_synced: 2026-10-23
 ---
 
 ### PROCESS · Phương pháp · Vẽ flow
-- Kicker: Phương pháp · Vẽ flow
+- Kicker: Cách làm
 - Title: Cách vẽ một user flow
 - On-slide: 01 | Đặt tên task | Đặt tên cho cụ thể. Không phải “checkout”, mà là “Đặt và xác nhận một slot (user đã dùng app trước đó)”. | 02 | Xác định điểm vào và điểm kết thúc | Vẽ pill Start và End trước mọi thứ khác. | 03 | Vẽ happy path trước | Chuỗi bước lý tưởng khi mọi thứ đều suôn sẻ. | 04 | Thêm nhánh lỗi và edge case | Slot đã bị lấy, chưa đăng nhập, empty state. Mỗi nhánh đều phải có đích. | 05 | Ghi chú ở chỗ có friction | Đánh dấu bước đó, ghi rõ nó tốn gì. | 06 | Kiểm tra độ đầy đủ | Mỗi diamond có hai mũi tên ra, đều có nhãn. Không để hình nào bị bỏ lẻ.
 - Giờ: 1 phút (đề xuất)
@@ -666,8 +666,8 @@ last_synced: 2026-10-23
 ---
 
 ### DIAGRAM · Cấu tạo · User flow
-- Kicker: Cấu tạo · User flow
-- Title: 5 hình mang toàn bộ ý nghĩa
+- Kicker: Cấu tạo
+- Title: 5 hình của user flow
 - On-slide: Pill | Điểm bắt đầu và kết thúc | “User mở app” | “Đã xác nhận đặt chỗ” | Rectangle | Một màn hình hoặc hành động của user | Xem danh sách slot | Bấm “Pay” | Diamond | Điểm quyết định | “Slot còn trống không?” | “Thanh toán thành công?” | Arrow | Hướng đi của flow | Gắn nhãn cho nhánh: | Yes / No, Success / Error | friction | Note | Ngữ cảnh không nhét vừa một hình | “Friction: phải bấm 3 lần mới tới đây” | Dùng hình nhất quán thì ai trong team cũng đọc được flow của bạn. Nếu cần hình thứ sáu, thường đó là một bước của hệ thống, tức là chuyện của Process Map.
 - Giờ: 1 phút (theo deck: 60 giây cho người đã senior)
 - Ví dụ: có (nhãn mẫu trên slide: "Slot còn trống không?", "Thanh toán thành công?")
@@ -687,8 +687,8 @@ last_synced: 2026-10-23
 ---
 
 ### DIAGRAM · Ví dụ · Đặt và xác nhận một slot
-- Kicker: Ví dụ · Đặt và xác nhận một slot
-- Title: Những gì user thấy, và chỗ nó gãy
+- Kicker: Ví dụ
+- Title: Đặt và xác nhận một slot
 - On-slide: Start | → | Xem danh sách slot | → | Chọn slot | → | Slot còn trống? | → | Yes | Xem lại đặt chỗ | ↓ | Thanh toán | ← | Thanh toán OK? | ← | Yes | Đã xác nhận đặt chỗ | ← | End | No | Quay lại danh sách slot | No | Lỗi: thử lại hoặc đổi phương thức | Màn hình xác nhận hiện “pending”, không phải “confirmed”. | Flow chỉ cho thấy những gì user thấy, nên không giải thích được vì sao lại hiện “pending”. → phần tiếp theo.
 - Giờ: 1 phút (đề xuất)
 - Ví dụ: có minh họa trên slide. Bản nháp (đáp án gợi ý cho "pending": đơn vượt hạn mức tự duyệt và đang chờ Ops team). Cần ví dụ thật: một flow thật có bước "pending", như chuyển khoản hoặc duyệt đơn
@@ -711,8 +711,8 @@ last_synced: 2026-10-23
 ---
 
 ### NUMBERED · Một flow tốt cho bạn thấy gì
-- Kicker: Một flow tốt cho bạn thấy gì
-- Title: Đọc flow để tìm ba điều này
+- Kicker: Đọc flow
+- Title: Ba điều flow cho bạn thấy
 - On-slide: 01 | Điểm quyết định bắt user làm việc mà hệ thống có thể tự xử lý | 02 | Flow dài hơn mức cần thiết vì nội dung nằm sai chỗ trong IA | 03 | Thiếu state: empty, error, loading, success | 7 | Task cốt lõi mà dài hơn 7 bước thì nhiều khả năng lỗi nằm ở IA, không phải ở thiết kế màn hình.
 - Giờ: 1 phút (đề xuất)
 - Ví dụ: cần ví dụ: một flow thật dài hơn bảy bước mà nguyên nhân nằm ở IA, không nằm ở màn hình
@@ -734,7 +734,7 @@ last_synced: 2026-10-23
 
 ### COMPARE · JTBD → Flow
 - Kicker: JTBD → Flow
-- Title: Dùng JTBD Map để đánh giá từng bước
+- Title: Đánh giá flow bằng JTBD Map
 - On-slide: Với mỗi bước, hãy hỏi: bước này giúp user tiến gần job của họ, hay chỉ là friction do hệ thống tự tạo ra? | JTBD insight | Hệ quả cho flow | User cần xác nhận nhanh trước khi mất slot | → | Không đặt màn hình upsell trên đường đi chính | User lo lắng về những hành động không thể hoàn tác | → | Thêm bước review trước khi xác nhận cuối cùng | User muốn trông chuyên nghiệp khi chia sẻ sản phẩm của mình | → | Đặt “share” ngay lúc hoàn thành task, đừng giấu trong settings
 - Giờ: 1 phút (đề xuất)
 - Ví dụ: bản nháp (job "tôi muốn biết đơn có tới kịp trước 7 giờ không" dẫn tới hiển thị giờ dự kiến ở màn hình đầu tiên). Cần ví dụ thật: JTBD map thật của mentee hoặc của bạn, không dùng ví dụ trên slide
@@ -799,9 +799,9 @@ last_synced: 2026-10-23
 
 ---
 
-### NUMBERED · Phần 5 · Process Map
-- Kicker: Phần 5 · Process Map
-- Title: Nhiều actor, một kết quả
+### NUMBERED · Định nghĩa · Process Map
+- Kicker: Định nghĩa
+- Title: Process Map là gì?
 - On-slide: Là gì | Sơ đồ cho thấy công việc chuyển qua lại giữa các actor (user, hệ thống, team nội bộ và bên thứ ba) để ra được một kết quả. | User flow đi theo đường của một người. Process map cho thấy toàn bộ vận hành phía sau, kể cả phần user không bao giờ nhìn thấy. | Mục tiêu | Nhìn rõ chỗ bàn giao (handoff), chỗ phụ thuộc lẫn nhau và chỗ nghẽn (bottleneck). Từ đó tìm ra những bước chỉ có vì cách tổ chức hoặc hệ thống được dựng, chứ user không hề cần. | Khi nào dùng | Có hơn một actor: checkout qua payment provider, onboarding có email hệ thống, tính năng admin | User flow trông ổn nhưng user vẫn bị delay hoặc bối rối, và màn hình không giải thích được | Trước khi bàn giao cho engineering: cho thấy logic back-stage phía sau mỗi màn hình | Thống nhất giữa design, engineering và operations về việc ai chịu trách nhiệm bước nào
 - Giờ: 1 phút (đề xuất)
 - Ví dụ: bản nháp (khách bấm "Hoàn tiền" và thấy "Đang xử lý" suốt ba ngày; bốn lane User, System, Support, Finance). Cần ví dụ thật: một ví dụ thật nơi user thấy "chờ duyệt" còn nguyên nhân nằm ở team vận hành, như duyệt hoàn tiền hoặc duyệt tài khoản
@@ -823,8 +823,8 @@ last_synced: 2026-10-23
 ---
 
 ### COMPARE · Process Map · Phạm vi
-- Kicker: Process Map · Phạm vi
-- Title: Zoom out khỏi User Flow của cùng một task
+- Kicker: Phạm vi
+- Title: Phạm vi của process map
 - On-slide: Trong phạm vi | Nhiều actor | Front-stage và back-stage | Từ đầu đến cuối, từ trigger đến kết quả | Ngoài phạm vi | Layout và chi tiết màn hình | Cảm xúc và quyết định của một user | Cùng task. Cùng flow. Khung nhìn rộng hơn.
 - Giờ: 1 phút (đề xuất)
 - Ví dụ: có (nối với ví dụ hoàn tiền ở slide 33)
@@ -845,7 +845,7 @@ last_synced: 2026-10-23
 ---
 
 ### PROCESS · Phương pháp · Dựng map
-- Kicker: Phương pháp · Dựng map
+- Kicker: Cách làm
 - Title: Cách dựng một process map
 - On-slide: 01 | Bắt đầu từ user flow | Các bước của nó trở thành lớp front-stage. | 02 | Liệt kê các actor | User, hệ thống, team nội bộ, bên thứ ba. Mỗi actor một swimlane. | 03 | Đặt mỗi bước vào lane của người sở hữu | Kể cả những bước user không bao giờ thấy. | 04 | Đánh dấu các handoff | Mỗi mũi tên băng qua một lane. Ghi rõ thứ được chuyển đi. | 05 | Tìm các bước chờ, lặp, mồ côi | Bất cứ chỗ nào công việc bị kẹt hoặc lặp vòng. | 06 | So với user flow | Bước nào user chỉ cảm nhận được dưới dạng độ trễ?
 - Giờ: 1 phút (đề xuất)
@@ -870,8 +870,8 @@ last_synced: 2026-10-23
 ---
 
 ### DIAGRAM · Cấu tạo · Process map
-- Kicker: Cấu tạo · Process map
-- Title: Các hình và công cụ
+- Kicker: Cấu tạo
+- Title: Hình và công cụ process map
 - On-slide: Swimlane | Mỗi lane một actor | User · System | Ops team · Payment provider | Rectangle | Một hành động của actor đó | Ops team review đặt chỗ | Diamond | Điểm quyết định | “Vượt hạn mức tự động duyệt?” | Parallelogram | Bước tự động của hệ thống | Khóa slot, gửi email, kiểm tra thẻ | Handoff arrow | Công việc băng qua các lane | System → Ops team: | “cần duyệt”
 - Giờ: 1 phút (đề xuất)
 - Ví dụ: có (nhãn mẫu trên slide: khóa slot, gửi email, kiểm tra thẻ, Ops team review đặt chỗ)
@@ -892,7 +892,7 @@ last_synced: 2026-10-23
 ---
 
 ### DIAGRAM · Ví dụ · Đặt và xác nhận một slot
-- Kicker: Ví dụ · Đặt và xác nhận một slot
+- Kicker: Ví dụ
 - Title: Cùng task, bốn lane
 - On-slide: User | Chọn slot | Thanh toán | user chờ | Thấy “pending” | System | Khóa slot | Yêu cầu thanh toán | Gắn cờ: cần duyệt | Ops team | Vượt hạn mức tự động duyệt? | No | Duyệt thủ công | 3rd party | Gateway trả kết quả | “Pending” không phải lỗi màn hình. | Đó là một handoff thủ công mà user không bao giờ thấy. Cách sửa nằm ở quy trình: tự động duyệt dưới một hạn mức, hiển thị trạng thái duyệt.
 - Giờ: 1 phút (đề xuất)
@@ -916,8 +916,8 @@ last_synced: 2026-10-23
 ---
 
 ### IMAGE · Thực tế · Process flow diagram
-- Kicker: Thực tế · Process flow diagram
-- Title: Mỗi lane là một actor, mỗi mũi tên băng qua lane là một handoff
+- Kicker: Thực tế
+- Title: Lane, actor và handoff
 - On-slide: Nguồn: aha.io · Process flow diagram template
 - Giờ: 1 phút (đề xuất)
 - Ví dụ: có (template process flow của Aha! trên slide). Cần ví dụ thật: thêm một process map từ dự án của bạn để cho thấy mức chi tiết thực tế
@@ -1011,8 +1011,8 @@ last_synced: 2026-10-23
 ---
 
 ### NUMBERED · File của bạn · ia-decision-record.md
-- Kicker: File của bạn · ia-decision-record.md
-- Title: Bảy phần, một thay đổi cấu trúc
+- Kicker: File của bạn
+- Title: ia-decision-record.md
 - On-slide: 01 | Câu hỏi cấu trúc | 02 | Các phương án đã cân nhắc | 03 | Quyết định: trước và sau | 04 | Bằng chứng: kèm cỡ mẫu và nhãn "provisional" | 05 | Liên kết với root outcome của brief | 06 | Ai bị ảnh hưởng: các mục và owner | 07 | Điều gì sẽ khiến mình đổi ý
 - Giờ: 2 phút (đề xuất)
 - Ví dụ: bản nháp (câu hỏi "trạng thái đơn đang giao nên nằm ở đâu": trước Orders > Chi tiết đơn, sau Home hiển thị đơn đang giao). Cần ví dụ thật: một ia-decision-record.md mẫu đã điền, một trang, để mentee thấy mức chi tiết mong đợi
@@ -1033,8 +1033,8 @@ last_synced: 2026-10-23
 ---
 
 ### NUMBERED · Chuẩn bị sẵn câu trả lời cho những ý này
-- Kicker: Chuẩn bị sẵn câu trả lời cho những ý này
-- Title: Bốn câu chủ sở hữu sẽ nói
+- Kicker: Chuẩn bị
+- Title: Bốn câu chủ sở hữu hỏi
 - On-slide: "Team mình chia như vậy mà." | Quyền sở hữu vẫn giữ nguyên. Chỉ vị trí hiển thị thay đổi. | "User sẽ tự search thôi." | Search cũng chạy trên chính các nhãn đó. Hãy xin log để xem. | "Không đụng được nav cũ." | Một giai đoạn, một điểm vào, test trước. | "Mới có năm người thôi." | Đồng ý trước đã. Pilot chỉ giúp tìm ra câu hỏi.
 - Giờ: 3 phút (đề xuất)
 - Ví dụ: bản nháp (câu trả lời cho "Team mình chia như vậy mà"). Cần ví dụ thật: một lần bạn bị phản đối thật khi đề xuất đổi cấu trúc, gồm ai nói gì, bạn trả lời ra sao và kết quả thế nào; đây là chỗ mentee học nhiều nhất
@@ -1060,7 +1060,7 @@ last_synced: 2026-10-23
 ### PRACTICE · Bảo vệ
 - Num: 10
 - Kicker: Bảo vệ
-- Title: Pitch thay đổi cho người mất nhiều nhất
+- Title: Pitch cho người mất nhiều nhất
 - On-slide: Sản phẩm · ia-decision-record.md | Bốn vòng | Thứ tự các vòng | 01 | Hoàn thiện hồ sơ: phần 4 đến 7 | 2 phút | 02 | Pitch: hệ quả, bằng chứng, quyết định đề xuất | 2 phút | 03 | Phản biện: bốn ý phản đối, cộng thêm một ý của chính bạn | 3 phút | 04 | Coaching: chỗ bạn nói quá bằng chứng, chỗ bạn nhượng bộ | 3 phút
 - Giờ: 10 phút (theo deck: 2 hoàn thiện hồ sơ, 2 pitch, 3 phản biện, 3 coaching)
 - Ví dụ: Không cần.
@@ -1107,8 +1107,8 @@ last_synced: 2026-10-23
 ---
 
 ### NUMBERED · Trước buổi sau
-- Kicker: Trước buổi sau
-- Title: Chạy nghiên cứu, rồi mang thay đổi tới chủ sở hữu
+- Kicker: Bài về nhà
+- Title: Trước buổi sau
 - On-slide: 01 | Chạy card sort: nhắm khoảng 15 người, dưới 5 người thì ghi là provisional | 02 | Tree test cả hai cây với ba task của bạn | 03 | Hoàn thiện flow: diamond có nhãn, các bước đỏ có ghi chú | 04 | Điền hồ sơ bằng số liệu thật | 05 | Pitch cho owner. Ghi lại họ nói gì và bạn đã nhượng bộ điều gì | Cách kiểm tra: owner có tự giải thích được thay đổi mà không nhắc tới card sorting không?
 - Giờ: [to confirm]
 - Ví dụ: Không cần.

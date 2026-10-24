@@ -8,7 +8,9 @@ Every lesson in `library/lessons/` (and in `programs/<program>/lessons/`, for ex
 
 **When either file is updated, always check and update the other.**
 
-New `*-slide-outline.md` files start from `_system/learning templates/_template-slide-outline.md`, not a blank page — it fixes the session metadata table, the standard slide-entry fields, and the speaker-notes rule (verbatim `>` lines plus bullets, with `Giờ`, `Ví dụ` and `Câu hỏi hay gặp` fields). Layout types come from the catalogue in `_system/rules/slide-deck-rules.md` (canonical — other paths to a rules file are pointers to it).
+New `*-slide-outline.md` files start from `_system/learning templates/_template-slide-outline.md`, not a blank page — it fixes the session metadata table, the standard slide-entry fields, and the speaker-notes rule (verbatim `>` lines plus bullets, with `Ví dụ` and `Câu hỏi hay gặp` fields). Layout types come from the catalogue in `_system/rules/slide-deck-rules.md` (canonical — other paths to a rules file are pointers to it).
+
+**Before editing any `*-slide-outline.md`, read `_system/rules/slide-deck-rules.md` → Speaker notes rule; after editing, run `python3 _system/scripts/notes-audit.py <outline.md>` and report the result in the same response.** This applies to existing outlines too, not only new ones.
 
 Specifically:
 
@@ -101,6 +103,7 @@ For any user flow, process map, journey, flowchart, swimlane, sequence or archit
 
 - All specific AI tool names (Claude, Cursor, ChatGPT, Copilot, etc.) should be replaced with generic labels: "AI chat tool", "AI coding tool", "your AI tool". Do not introduce tool names when editing lesson content.
 - Lesson and slide-outline content must never reference a specific mentee or student by name — every lesson is built to be taught to any mentee, not just the one it was drafted for. Do not introduce a mentee's name, cohort, or identifying detail when drafting or editing `*-lesson.md` or `*-slide-outline.md`; if an example needs a person, use a role label ("the mentee", "a junior designer") instead. This is separate from the private-session attribution rule in `workflow-rules.md`, which governs crediting a mentee when their session is the *source* of a class example — that rule is about consent to reuse, this one is about the lesson content itself staying generic regardless of where an idea came from.
+- Slide `Title` is a short topic label (6 words or fewer, "Process Map là gì?"), and `Kicker` names the slide's role (Định nghĩa, Cách làm, Ví dụ) with no "Phần N" or "Buổi N" prefix. Full rule: `_system/rules/slide-deck-rules.md` → Title and kicker copy. `/notes-audit` flags breaches.
 - The `*-slide-outline.md` file contains only slide-specific concerns (layout, visual hints, kickers). Do not add full lesson prose to it.
 - The `*-lesson.md` file is the source of truth. If content in the two files conflicts, the lesson file wins.
 - **Any Vietnamese content** (lessons, slide outlines, teleprompter scripts, method cards, session recaps, material sent to mentees or students): read `_system/rules/vi-voice.md` first. It sets the voice (natural, professional, no spoken filler such as "thì á", "cho nên là", "tại vì"), the English-titles/Vietnamese-body convention, the terms kept in English, and a list of translated-sounding phrases to avoid. Where it conflicts with `writing-style-guide.md` below, `vi-voice.md` wins. When Winnie corrects a Vietnamese line, add the before/after to `vi-voice.md` so the fix applies next time. Chat with Winnie in Vietnamese.

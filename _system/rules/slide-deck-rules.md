@@ -41,6 +41,12 @@ Use the **alias names** from `tokens.css`, not raw hex values:
 | `--font-body` (Inter) | Body copy, bullet text, labels |
 | `--font-mono` (JetBrains Mono) | Kickers, step numbers, AI prompts, metadata |
 
+### Title and kicker copy
+
+- **Title is a topic label, 6 words or fewer**, in the slide's own terms. A definition slide is "X là gì?", a how-to slide is "Cách dựng X". The audience should know what the slide is about from the title alone.
+- **A claim or punchline does not go in the Title.** "Nhiều actor, một kết quả" belongs in On-slide or speaker notes. Exception: STATEMENT slides, whose job is one sentence.
+- **Kicker names the slide's role** (Định nghĩa, Cách làm, Ví dụ, So sánh). It never carries a part or session number ("Phần 5", "Buổi 5"), because the number lives on the SECTION DIVIDER, and it never repeats the Title.
+
 ---
 
 ## 4. Layout catalogue — use these classes exactly
@@ -103,19 +109,19 @@ Use the **alias names** from `tokens.css`, not raw hex values:
 ### 13 · Diagram — `.diagram`
 - Header: `.slide-kicker` + `.slide-title`, or a two-line `Title` field
 - Body: a schematic explanatory graphic — a mechanism, a 2×2 matrix, a stack, a measurement scale — never a photo. Visual hint is written starting `SCHEMATIC` so it's never confused with `.image`
-- Outline fields: Kicker, Title, On-slide (short on-screen text, not prose), Speaker notes (`>` lines and bullets), Giờ, Ví dụ, 🎨 Visual hint
+- Outline fields: Kicker, Title, On-slide (short on-screen text, not prose), Speaker notes (`>` lines and bullets), Ví dụ, 🎨 Visual hint
 - Use for: concept diagrams, matrices, process/stack breakdowns, scales — this was the most common undocumented layout before being promoted here
 
 ### 14 · Formula — `.formula`
 - Body: an escalating build of 2–4 rows or clauses, each longer and heavier than the last, ending on the one that's actionable
 - Visual weight increases per row — `--ink` → `--ochre` → `--sienna` is the established progression
-- Outline fields: Kicker, Title, On-slide (the rows themselves), Speaker notes (`>` lines and bullets), Giờ, Ví dụ, 🎨 Visual hint
+- Outline fields: Kicker, Title, On-slide (the rows themselves), Speaker notes (`>` lines and bullets), Ví dụ, 🎨 Visual hint
 - Use for: insight formulas, statement formulas, any "here's how the pieces stack" moment
 
 ### 15 · Image — `.image`
 - Body: one real photo or screenshot, full bleed or near it, minimal to no annotation
 - Visual hint is written starting `REAL` (not `SCHEMATIC`) so it's never confused with `.diagram`
-- Outline fields: Kicker, Title, On-slide (what the image shows, one line), Speaker notes (`>` lines and bullets), Giờ, Ví dụ, 🎨 Visual hint
+- Outline fields: Kicker, Title, On-slide (what the image shows, one line), Speaker notes (`>` lines and bullets), Ví dụ, 🎨 Visual hint
 - Use for: before/after reveals, real UI screenshots, stimulus sets — the visual itself is the point, not a supporting graphic
 
 ---
@@ -184,7 +190,6 @@ Speaker notes are written so Winnie can teach from them without remembering the 
 
 | Field | Content |
 |---|---|
-| `Giờ:` | Minutes planned for this slide. The audit compares it with the length of the verbatim lines and bullets (about 130 to 150 spoken words a minute) |
 | `Ví dụ:` | `có (<tên ví dụ>)`, `bản nháp (<tên ví dụ>)`, `cần ví dụ: <loại ví dụ cần>`, or `Không cần.` with the reason |
 | `Câu hỏi hay gặp:` | Optional. Questions learners tend to ask here, each with a short answer |
 

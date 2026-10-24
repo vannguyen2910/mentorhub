@@ -29,7 +29,7 @@ Viết như một đồng nghiệp có kinh nghiệm chia sẻ cách làm với 
 
 - Ví dụ cụ thể trước, khái niệm sau.
 - Câu ngắn, mỗi câu một ý. Hai câu đã tự nối ý thì không cần từ nối.
-- **Mỗi dòng một thông điệp, viết thành một câu liền mạch.** Không liệt kê các mảnh bằng dấu phẩy ("Một case, một workflow, một hub") và không chỉ đổi dấu phẩy thành dấu chấm ("Một case. Một workflow. Một hub."). Hỏi: dòng này muốn người đọc nhớ điều gì? Rồi viết đúng điều đó thành một câu. Quy tắc này áp dụng cho Title, Subtitle, On-slide và từng bullet của speaker notes.
+- **Mỗi dòng một thông điệp, viết thành một câu liền mạch.** Không liệt kê các mảnh bằng dấu phẩy ("Một case, một workflow, một hub") và không chỉ đổi dấu phẩy thành dấu chấm ("Một case. Một workflow. Một hub."). Hỏi: dòng này muốn người đọc nhớ điều gì? Rồi viết đúng điều đó thành một câu. Quy tắc này áp dụng cho Subtitle, On-slide và từng bullet của speaker notes. Title của slide là nhãn chủ đề ngắn (tối đa 6 từ, "Process Map là gì?"), không phải câu thông điệp; xem `_system/rules/slide-deck-rules.md` mục Title and kicker copy. Ngoại lệ: Title của slide STATEMENT.
 - Bullet có hai ý thì tách thành hai bullet, mỗi bullet một thông điệp.
 - Dùng "chứ không phải", "còn", "để", "rồi", "và" để nối vế thay cho dấu phẩy hoặc dấu chấm phẩy.
 - Cần nối ý thì dùng "vì vậy", "do đó".

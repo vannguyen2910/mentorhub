@@ -13,7 +13,7 @@ This command reads and reports. It does not edit the outline, the lesson or the 
 python3 _system/scripts/notes-audit.py <outline.md>
 ```
 
-It reports, per slide: verbatim (`>`) lines, bullets, spoken words, estimated minutes against `Giờ`, missing `Giờ` or `Ví dụ` fields, bracketed stage directions, and slides with no verbatim line.
+It reports, per slide: verbatim (`>`) lines, bullets, spoken words, estimated spoken minutes, missing `Ví dụ` fields, bracketed stage directions, and slides with no verbatim line. It also flags Title and Kicker copy that breaks `_system/rules/slide-deck-rules.md` → Title and kicker copy (Title over 6 words, Kicker with a Phần/Buổi number, Kicker repeating Title).
 
 ## 2. Judge what the script cannot
 
