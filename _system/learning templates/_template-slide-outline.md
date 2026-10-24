@@ -56,10 +56,9 @@ last_synced: 2026-00-00      # date lesson.md and this file were last confirmed 
 
 ```
 ### [LAYOUT TYPE] · [Slide title / short label]
-- Kicker: [eyebrow line above the title — this slide's own topic only; no "Part 01 ·" prefix, the part number lives on the SECTION DIVIDER]
-- Title: [on-slide title — line breaks written as \n]
+- Kicker: [eyebrow line above the title — names the slide's role (Định nghĩa, Cách làm, Ví dụ, So sánh), never a part or session number ("Phần 5", "Buổi 5": the number lives on the SECTION DIVIDER) and never repeats the Title]
+- Title: [on-slide title — a short topic label, 6 words or fewer, in the slide's own terms: "X là gì?" for a definition, "Cách dựng X" for a how-to. A claim or punchline goes in On-slide or speaker notes, not here — line breaks written as \n]
 - On-slide: [the actual visible text/labels — short, not prose. "None." if the layout has no body copy field]
-- Giờ: [minutes for this slide]
 - Ví dụ: [có (tên ví dụ) | bản nháp (tên ví dụ) | cần ví dụ: loại ví dụ cần | Không cần. + lý do]
 - Câu hỏi hay gặp:
   - [câu hỏi? Trả lời ngắn.  — or "None."]

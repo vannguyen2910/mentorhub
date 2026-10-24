@@ -146,13 +146,6 @@ def build_entry(n, total, slide, layout, guessed):
         out += [f"### {layout} · {kick}", f"- Kicker: {kick}", f"- Title: {title}",
                 "- On-slide: " + (" | ".join(L[2:]) or "None.")]
     if layout != "COVER":
-        part = re.search(r"Phần\s*\d+\s*·\s*(\d+)\s*phút", slide["notes"])
-        if mins:
-            gio = f"{mins} phút (theo deck)"
-        elif layout == "SECTION DIVIDER" and part:
-            gio = f"{part.group(1)} phút cho cả phần (theo deck)"
-        else:
-            gio = "[to confirm]"
         if teach:
             vd = "có (ví dụ dạy nằm trong notes của deck)"
         else:
@@ -164,7 +157,7 @@ def build_entry(n, total, slide, layout, guessed):
             if not parts:
                 parts.append("cần ví dụ: chưa đánh giá" if layout in CONCEPT else "Không cần.")
             vd = "; ".join(parts)
-        out += [f"- Giờ: {gio}", f"- Ví dụ: {vd}", "- Câu hỏi hay gặp: None.", "- Speaker notes:"]
+        out += [f"- Ví dụ: {vd}", "- Câu hỏi hay gặp: None.", "- Speaker notes:"]
         for b, tx in bl:
             out.append(f"  {b} {tx}")
         if detail:
@@ -176,12 +169,12 @@ def build_entry(n, total, slide, layout, guessed):
     return "\n".join(out)
 
 
-FIELDS = re.compile(r"^- Giờ:.*\n- Ví dụ:.*\n- Câu hỏi hay gặp:.*(?:\n  - .*)*", re.M)
+FIELDS = re.compile(r"^- Ví dụ:.*\n- Câu hỏi hay gặp:.*(?:\n  - .*)*", re.M)
 
 
 def keep_fields(oe, ne, notes_unchanged):
-    """Keep Winnie's Giờ / Ví dụ / Câu hỏi hay gặp from the existing entry.
-    If the deck notes changed since the last sync, take the fresh Ví dụ but keep Giờ and FAQ."""
+    """Keep Winnie's Ví dụ / Câu hỏi hay gặp from the existing entry.
+    If the deck notes changed since the last sync, take the fresh Ví dụ but keep the FAQ."""
     mo, mn = FIELDS.search(oe), FIELDS.search(ne)
     if not (mo and mn):
         return ne
@@ -189,7 +182,7 @@ def keep_fields(oe, ne, notes_unchanged):
         block = mo.group(0)
     else:
         lo, ln = mo.group(0).split("\n"), mn.group(0).split("\n")
-        block = "\n".join([lo[0], ln[1]] + lo[2:])
+        block = "\n".join([ln[0]] + lo[1:])
     return ne[:mn.start()] + block + ne[mn.end():]
 
 

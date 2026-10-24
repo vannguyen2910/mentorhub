@@ -4,11 +4,12 @@
 Usage: python3 _system/scripts/notes-audit.py <outline.md> [--json]
 
 Checks per slide (rules: _system/rules/slide-deck-rules.md -> Speaker notes rule):
-  - has Giờ, Ví dụ fields
+  - has Ví dụ field
   - verbatim (">") line count and bullet count
   - bracketed stage directions inside the notes
-  - spoken length vs Giờ (130-150 words a minute)
+  - estimated spoken minutes (130-150 words a minute)
   - concept layouts with no example status
+  - Title over 6 words, Kicker with a Phần/Buổi number, Kicker repeating Title
 """
 import json
 import re
@@ -17,6 +18,9 @@ import sys
 CONCEPT = {"NUMBERED", "COMPARE", "FORMULA", "STATEMENT", "DIAGRAM", "PROCESS", "QUOTE"}
 SKIP_EXAMPLE = {"COVER", "SECTION DIVIDER", "MILESTONE", "END", "IMAGE", "PRACTICE"}
 WPM_LOW, WPM_HIGH = 130, 150
+# Title and kicker copy rule: _system/rules/slide-deck-rules.md. STATEMENT titles may be a full sentence.
+NO_TITLE_CHECK = {"COVER", "SECTION DIVIDER", "END", "STATEMENT"}
+TITLE_MAX_WORDS = 6
 
 
 def words(text):
@@ -53,9 +57,17 @@ def audit(path):
         verbatim = [l for l in lines if l.startswith(">")]
         bullets = [l for l in lines if re.match(r"^[-*] ", l)]
         spoken = words(" ".join(verbatim + bullets))
-        gio = field(s["body"], "Giờ")
         vidu = field(s["body"], "Ví dụ")
         issues = []
+        if s["layout"] not in NO_TITLE_CHECK:
+            title = (field(s["body"], "Title") or "").replace("\\n", " ").replace("*", "")
+            kicker = field(s["body"], "Kicker") or ""
+            if words(title) > TITLE_MAX_WORDS:
+                issues.append(f"Title {words(title)} từ (>{TITLE_MAX_WORDS}), rút thành nhãn chủ đề")
+            if re.match(r"^(Phần|Buổi)\s*\d", kicker):
+                issues.append("Kicker mang số Phần/Buổi")
+            if kicker and kicker.lower() == title.strip().lower():
+                issues.append("Kicker lặp Title")
         if not notes.strip():
             issues.append("không có speaker notes")
         if re.search(r"\[[^\]]*\]", re.sub(r"\[[^\]]*\]\([^)]*\)", "", notes)):
@@ -71,21 +83,10 @@ def audit(path):
         if vidu and vidu.lower().startswith("bản nháp"):
             issues.append("ví dụ bản nháp, chờ xác nhận")
         est = round(spoken / ((WPM_LOW + WPM_HIGH) / 2), 1)
-        if gio:
-            m = re.search(r"\d+(\.\d+)?", gio)
-            if m:
-                planned = float(m.group())
-                if spoken and est > planned * 1.25:
-                    issues.append(f"script ~{est} phút, quá Giờ {planned:g}")
-                elif spoken and est < planned * 0.5 and s["layout"] in CONCEPT:
-                    issues.append(f"script ~{est} phút, mỏng so với Giờ {planned:g}")
-        else:
-            if s["layout"] not in SKIP_EXAMPLE:
-                issues.append("thiếu field Giờ")
         rows.append({
             "n": s["n"], "layout": s["layout"], "label": s["label"],
             "verbatim": len(verbatim), "bullets": len(bullets),
-            "words": spoken, "est_min": est, "gio": gio, "vi_du": vidu,
+            "words": spoken, "est_min": est, "vi_du": vidu,
             "issues": issues,
         })
     return rows
