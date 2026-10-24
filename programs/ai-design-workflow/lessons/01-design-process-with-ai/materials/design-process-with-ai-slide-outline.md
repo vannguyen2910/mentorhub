@@ -517,7 +517,7 @@ last_synced: 2026-10-23
   - Design memory là một record dùng chung cho cả tám agent; hôm nay nó chính là project folder và hub (slide kế tiếp và T5)
   - **Designer duyệt ở mỗi mũi tên REVIEW**; không có agent nào duyệt thay, vì một agent duyệt cũng có thể sai
   - Hai vai không giao cho AI: người dùng thật và người phía product và business
-  - Nói thật về hiện trạng: toolkit hiện có step card cho agent 01 đến 06; hai agent còn lại (07 và 08) mới có template tài liệu, card được dựng ở các buổi sau
+  - Nói thật về hiện trạng: toolkit hiện có step card cho cả tám agent, nhưng đều là bản nháp chưa thử với lớp thật; mỗi card được chỉnh sau lần chạy đầu ở buổi tương ứng
   - Đây là cách tổ chức của chương trình, không phải kiến trúc bắt buộc; sơ đồ theo cấu trúc trong các nghiên cứu đã công bố (LacAIDes, MAUX) nhưng tên và phạm vi agent là của chương trình; chưa có nghiên cứu nào đo hiệu quả của đội agent trong công việc design `[to confirm]`
   - Bốn phút cho slide này
 - 🎨 Visual hint: SCHEMATIC. Một ảnh, gần full bleed: sơ đồ bốn phase, mỗi phase một khung hai agent, design memory ở dưới, vòng Next round; agent Framing được nhấn màu accent. Tệp: `../assets/designer-agents-double-diamond.png` (nguồn HTML: `_system/diagrams/designer-agents-double-diamond.html`).
@@ -910,7 +910,7 @@ last_synced: 2026-10-23
 - On-slide: Private: file HTML hoặc PDF, file nén, hoặc mời vào repo private. Public: chỉ khi cả case được phép chia sẻ.
 - Speaker notes:
   - **Hub mặc định là private**: nó nằm trong project folder của bạn và không ai thấy trừ khi bạn gửi
-  - Để cho stakeholder xem, chạy script `toolkit/skills/export-hub.py` để ra một file HTML mở được bằng trình duyệt, hoặc export các page chính ra PDF; hoặc gửi file nén của cả project folder, vì các page hub link sang nhiều folder
+  - Để cho stakeholder xem, chạy script `toolkit/skills/build-report.py` để ra một file HTML mở được bằng trình duyệt, hoặc export các page chính ra PDF; hoặc gửi file nén của cả project folder, vì các page hub link sang nhiều folder
   - Muốn một người xem trực tiếp, mời họ vào repository private trên GitHub
   - Chỉ khi toàn bộ case được phép chia sẻ (case của khoá, hoặc bản đã làm sạch từ công việc của bạn) mới công khai cả project folder trong một repository public mới; GitHub hiển thị Markdown nên không cần dựng website; guide và homework tuỳ chọn có hướng dẫn
   - **Nếu bạn công khai, bạn là người host và chịu trách nhiệm**; công việc thật được giữ private
