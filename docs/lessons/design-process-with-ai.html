@@ -490,7 +490,7 @@
 <li><strong>Một AI coding tool mở cả project folder</strong> làm project của nó.</li>
 <li><strong><code>AGENTS.md</code> ở gốc folder là quy tắc chung.</strong> Tool tự đọc file này khi mở folder; trong đó có luật propose first (đề xuất trước khi tạo hoặc sửa nhiều file) và luật không đọc <code>_personal/</code> và <code>work/sources/_raw-private/</code>.</li>
 <li><strong>Mỗi agent là một step card</strong>, một file Markdown trong <code>toolkit/skills/</code>, ghi bước đó đọc file nào, làm gì và ghi vào đâu. Chạy một agent nghĩa là nhờ tool đọc step card của bước đó, sau khi đọc context pack trong <code>context/</code>.</li>
-<li><strong>Output ghi vào file</strong>: tài liệu trong <code>work/</code>, item (decision, evidence, finding...) trong <code>insights/</code> qua <code>new-item.py</code>. Design memory chính là project folder cộng hub, và hub được dựng lại bằng <code>refresh-hub.md</code> và <code>export-hub.py</code>.</li>
+<li><strong>Output ghi vào file</strong>: tài liệu trong <code>work/</code>, item (decision, evidence, finding...) trong <code>insights/</code> qua <code>new-item.py</code>. Design memory chính là project folder cộng hub, và hub được dựng lại bằng <code>refresh-hub.md</code> và <code>build-report.py</code>.</li>
 <li><strong>Gate là tiêu chí trong <code>standards/</code></strong> (gates, principle checks, severity levels), dùng để designer kiểm tra trước khi sang phase sau.</li>
 </ol>
 <p>Flow của một bước: designer ra lệnh, tool đọc step card và context, tool đề xuất, designer duyệt, tool ghi file, designer kiểm tra theo gate, rồi mới sang bước tiếp. Mũi tên REVIEW trong sơ đồ chính là gate này.</p>
@@ -585,7 +585,7 @@
 <p>Bên cạnh item, mỗi tài liệu làm ra trong dự án (phân tích đối thủ, persona, khảo sát, user flow, prototype) là một <strong>artifact</strong> có trang riêng, nối với các item nó hỗ trợ; tệp ảnh, PDF, HTML thả vào folder của artifact được tự nhận diện, và link Figma được mở ở tab ngoài. File item là nguồn duy nhất. Bảng alignment, danh sách warnings (decision không có user need phía sau, hypothesis không có test) và trạng thái gate do AI dựng lại bằng bước <code>toolkit/skills/refresh-hub.md</code>, vào các khối đánh dấu <code>generated</code>. Bước này chưa được thử với một lớp thật; sau mỗi lần dựng, học viên đối chiếu vài dòng với file item.</p>
 <p><strong>Hub mặc định là private.</strong> Có bốn cách cho người khác xem, từ ít rủi ro nhất:</p>
 <ol>
-<li>Dùng trang chủ <code>index.html</code> của hub: một file HTML tự chứa, tạo bằng <code>toolkit/skills/export-hub.py</code> (my-project có sẵn một bản mẫu), mở bằng trình duyệt mà không cần cài gì. Copy ra ngoài và đổi tên khi gửi; hoặc export các page chính ra PDF. File HTML là sản phẩm xuất ra từ Markdown, không phải nguồn.</li>
+<li>Dùng trang chủ <code>index.html</code> của hub: một file HTML tự chứa, tạo bằng <code>toolkit/skills/build-report.py</code> (my-project có sẵn một bản mẫu), mở bằng trình duyệt mà không cần cài gì. Copy ra ngoài và đổi tên khi gửi; hoặc export các page chính ra PDF. File HTML là sản phẩm xuất ra từ Markdown, không phải nguồn.</li>
 <li>Gửi file nén của cả project folder (các page hub link sang nhiều folder, nên nén riêng một folder con làm link hỏng).</li>
 <li>Mời một người vào repository private trên GitHub.</li>
 <li>Công khai cả project folder trong một repository public mới, chỉ khi toàn bộ case được phép chia sẻ (case của chương trình, hoặc phiên bản đã làm sạch từ công việc thật).</li>
