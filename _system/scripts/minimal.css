@@ -1,0 +1,146 @@
+/* Minimal skin: the look of the workspace template hub (theme "Minimal", green) on the whole Training Hub.
+   Loaded after home.css. Everything here maps onto the site's design tokens, so the pages keep their markup. */
+
+:root {
+  /* primary: green instead of purple (the token names stay "purple" because the site CSS uses them) */
+  --purple: #00a76f;
+  --purple-deep: #007867;
+  --purple-mid: #5be49b;
+  --purple-tint: rgba(0, 167, 111, .16);
+  --purple-subtle: rgba(0, 167, 111, .08);
+
+  /* neutrals: cool grey scale of the Minimal kit */
+  --gray-50: #f9fafb;
+  --gray-100: #f4f6f8;
+  --gray-200: #dfe3e8;
+  --gray-300: #c4cdd5;
+  --gray-400: #919eab;
+  --gray-500: #637381;
+  --gray-600: #454f5b;
+  --gray-700: #212b36;
+  --gray-900: #1c252e;
+  --paper-deeper: #f4f6f8;
+  --paper-cool: #f4f6f8;
+  --ink-soft: #454f5b;
+  --ink-muted: #637381;
+  --ink-ghost: #dfe3e8;
+  --surface-page: #fff;
+  --border-default: rgba(145, 158, 171, .28);
+  --border-strong: rgba(145, 158, 171, .48);
+  --border-focus: #00a76f;
+
+  --font-display: 'Public Sans', system-ui, sans-serif;
+  --shadow-card: 0 0 2px 0 rgba(145, 158, 171, .2), 0 12px 24px -4px rgba(145, 158, 171, .12);
+  --shadow-card-hover: 0 0 2px 0 rgba(145, 158, 171, .24), 0 20px 40px -4px rgba(145, 158, 171, .24);
+}
+
+body { background: #fff; color: var(--gray-900); }
+h1, h2, h3, .page-title { letter-spacing: -.01em; }
+h1, .page-title { font-weight: 800; }
+
+/* top bar: translucent, dashed rule */
+body > nav { background: rgba(255, 255, 255, .86); backdrop-filter: blur(6px); border-bottom: 1px dashed var(--border-default); }
+
+/* soft cards, no outline */
+.cl-mini, .case-card, .hub-card, .mentee-card, .file-card, .contact-card, .lesson-card, .prog-card, .tp-hw__card {
+  border: 0;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow .2s, transform .2s;
+}
+.cl-mini:hover, .case-card--interactive:hover, .hub-card:hover, .mentee-card:hover, .lesson-card:hover, .prog-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+/* chips: small squared labels */
+.chip { border-radius: 6px; font-weight: 700; font-size: 12px; }
+
+/* sidebar of program pages */
+.pg-side { border-right: 1px dashed var(--border-default); }
+.pg-nav a { border-radius: 8px; font-weight: 500; }
+.pg-nav a.is-active { font-weight: 700; }
+.pg-nav__label { display: flex; justify-content: space-between; align-items: center; text-transform: none; }
+.pg-nav__n { font-size: 12px; font-weight: 600; color: var(--gray-400); }
+
+/* tables: grey header band, dashed rows */
+.tp-body table { border-collapse: separate; border-spacing: 0; width: 100%; }
+.tp-body th { background: var(--gray-100); color: var(--gray-500); font-weight: 600; font-size: 13px; border: 0; }
+.tp-body th:first-child { border-radius: 8px 0 0 8px; }
+.tp-body th:last-child { border-radius: 0 8px 8px 0; }
+.tp-body td { border-bottom: 1px dashed var(--border-default); }
+
+/* status chips and stat tiles (program overview) */
+.st { display: inline-block; padding: 0 8px; line-height: 24px; border-radius: 6px; font-size: 12px; font-weight: 700; background: rgba(255, 171, 0, .16); color: #b76e00; }
+.st--ok { background: rgba(34, 197, 94, .16); color: #118d57; }
+.hub-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 8px 0 24px; }
+.hub-stat { background: var(--gray-100); border-radius: 12px; padding: 14px 16px; }
+.hub-stat b { display: block; font-size: 30px; line-height: 1.1; font-weight: 800; letter-spacing: -.02em; }
+.hub-stat span { color: var(--gray-500); font-size: 13px; }
+.hub-prog { margin: 0 0 24px; }
+.hub-prog__row { display: grid; grid-template-columns: minmax(140px, 1fr) minmax(120px, 2fr) auto; gap: 16px; align-items: center; padding: 14px 0; border-bottom: 1px dashed var(--border-default); }
+.hub-prog__row strong { font-weight: 700; }
+.hub-prog__bar { height: 6px; border-radius: 99px; background: var(--purple-tint); overflow: hidden; }
+.hub-prog__bar i { display: block; height: 100%; border-radius: 99px; background: var(--purple); }
+.hub-prog__n { font-size: 13px; color: var(--gray-500); white-space: nowrap; }
+@media (max-width: 560px) { .hub-prog__row { grid-template-columns: 1fr; gap: 8px; } }
+
+/* sidebar scrolls but shows no scrollbar */
+.pg-side { scrollbar-width: none; -ms-overflow-style: none; }
+.pg-side::-webkit-scrollbar { display: none; width: 0; height: 0; }
+
+/* mentee and lesson pages: the tab list becomes a side nav (same look as the program sidebar), panels sit to its right */
+.tp:has(> .tp-tabs) { display: grid; grid-template-columns: 248px minmax(0, 1fr); column-gap: 40px; align-items: start; }
+.tp:has(> .tp-tabs) > .tp-back, .tp:has(> .tp-tabs) > .tp-head { grid-column: 1 / -1; }
+.tp:has(> .tp-tabs) > .tp-tabs { grid-column: 1; grid-row: 3; position: sticky; top: 88px; margin: 0; padding-right: 4px; border-right: 1px dashed var(--border-default); }
+.tp:has(> .tp-tabs) > .tp-panel, .tp:has(> .tp-tabs) > .tp-related { grid-column: 2; min-width: 0; }
+.tp-tabs > .tabs__list { display: flex; flex-direction: column; gap: 2px; overflow: visible; margin: 0; padding: 4px 12px 4px 0; background: transparent; border-radius: 0; }
+.tp-tabs .tabs__scroll-arrow { display: none; }
+.tp-tabs .tabs__tab { width: 100%; min-height: 48px; padding: 8px 16px; justify-content: flex-start; text-align: left; border-radius: 28px; font-size: 14px; font-weight: 500; color: var(--gray-600); white-space: normal; }
+.tp-tabs .tabs__tab:hover { background: color-mix(in srgb, var(--gray-900) 8%, transparent); color: var(--gray-900); }
+.tp-tabs .tabs__tab--active, .tp-tabs .tabs__tab--active:hover { background: var(--purple-subtle); color: var(--purple-deep); font-weight: 600; box-shadow: none; }
+@media (max-width: 860px) {
+  .tp:has(> .tp-tabs) { display: block; }
+  .tp:has(> .tp-tabs) > .tp-tabs { position: static; border-right: 0; margin-bottom: 24px; }
+  .tp-tabs > .tabs__list { flex-direction: row; overflow-x: auto; padding: 4px; background: var(--gray-100); border-radius: 12px; }
+  .tp-tabs .tabs__tab { width: auto; min-height: 40px; border-radius: 8px; white-space: nowrap; }
+}
+
+/* ---- Minimal components, ported from the Minimal theme of the workspace template ---- */
+
+/* navigation items: 8px radius, quiet grey, green tint on the current one */
+.pg-nav a, .tp-tabs .tabs__tab { border-radius: 8px; font-size: 14px; font-weight: 500; color: #637381; }
+.pg-nav a:hover, .tp-tabs .tabs__tab:hover { background: rgba(145, 158, 171, .08); color: #1c252e; }
+.pg-nav a.is-active, .pg-nav a.is-active:hover, .tp-tabs .tabs__tab--active, .tp-tabs .tabs__tab--active:hover { background: rgba(0, 167, 111, .08); color: #007867; font-weight: 700; }
+.pg-nav a.is-branch { color: #007867; font-weight: 700; }
+.pg-nav__home { color: #1c252e; }
+.pg-nav__kids { border-left: 1px dashed var(--border-default); }
+.pg-nav__label { text-transform: uppercase; font-size: 11px; font-weight: 700; letter-spacing: .04em; color: #919eab; }
+.pg-pns { border-top: 1px dashed var(--border-default); }
+
+/* filter buttons on the index pages: outlined, the chosen one filled dark */
+.cl-tabs .tabs__list { background: transparent; padding: 0; gap: 8px; border-radius: 0; flex-wrap: wrap; }
+.cl-tabs .tabs__tab { background: #fff; border: 1px solid rgba(145, 158, 171, .32); border-radius: 8px; color: #454f5b; font-weight: 600; font-size: 13px; padding: 5px 12px; min-height: 0; box-shadow: none; }
+.cl-tabs .tabs__tab:hover { background: rgba(145, 158, 171, .08); }
+.cl-tabs .tabs__tab--active, .cl-tabs .tabs__tab--active:hover, .cl-tabs .tabs__tab[aria-selected="true"] { background: #1c252e; border-color: #1c252e; color: #fff; box-shadow: none; }
+
+/* search: outlined field, dark ring on focus */
+.cl-search input { background: #fff; border: 1px solid rgba(145, 158, 171, .32); border-radius: 8px; }
+.cl-search input:focus { outline: 0; border-color: #1c252e; box-shadow: 0 0 0 1px #1c252e; }
+
+/* overview numbers: a row separated by thin rules, no boxes */
+.hub-stats { gap: 0; }
+.hub-stat { background: none; border-radius: 0; padding: 4px 24px; border-left: 1px solid var(--border-default); }
+.hub-stat:first-child { border-left: 0; padding-left: 0; }
+.hub-stat b { font-size: 34px; }
+
+/* code, rules, footer */
+.tp-body code, .page-desc code { background: rgba(145, 158, 171, .16); border-radius: 6px; }
+.tp-body pre { background: rgba(145, 158, 171, .12); border-radius: 8px; }
+.tp-body pre code { background: none; }
+.tp-body hr { border: 0; border-top: 1px dashed var(--border-default); }
+footer { background: #fff; border-top: 1px dashed var(--border-default); }
+.footer-inner p, .footer-inner span { color: var(--gray-500); }
+.footer-links a { color: var(--gray-600); }
+.footer-links a:hover { color: #007867; }

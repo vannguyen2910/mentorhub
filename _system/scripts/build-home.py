@@ -35,6 +35,8 @@ from urllib.parse import quote, unquote
 
 import markdown
 
+import swimlane   # data-driven diagrams: programs/*/assets/diagrams/*.swimlane.json -> .html
+
 # ─────────────────────────────────────────────────────────────────────────────
 # CONFIG
 # ─────────────────────────────────────────────────────────────────────────────
@@ -281,8 +283,19 @@ def _md_entry(path, base, group, slug_prefix, title=""):
     m = re.search(r"^#\s+(.+)$", body, re.M)
     title = (title or meta.get("title") or (m.group(1).strip() if m else re.sub(r"^\d+[-_]", "", path.stem).replace("-", " ").replace("_", " ").title())).strip()
     rel = path.relative_to(base).as_posix()
-    return {"path": path, "rel": rel, "group": group, "title": title, "sum": _first_para(body),
+    return {"path": path, "rel": rel, "group": group, "title": title, "sum": _first_para(body), "draft": meta.get("draft"),
             "slug": ascii_slug(f"{slug_prefix}-{rel[:-3]}")}
+
+
+def _html_entry(path, base, group, slug_prefix, title=""):
+    """A self-contained .html page listed in SUMMARY.md (a diagram, for example); it is shown in an iframe."""
+    raw = path.read_text(encoding="utf-8", errors="replace")
+    t = re.search(r"<title[^>]*>(.*?)</title>", raw, re.S)
+    d = re.search(r'<meta\s+name="description"\s+content="([^"]*)"', raw)
+    rel = path.relative_to(base).as_posix()
+    return {"path": path, "rel": rel, "group": group, "html": True,
+            "title": (title or (html.unescape(t.group(1)).strip() if t else path.stem)).strip(),
+            "sum": html.unescape(d.group(1)) if d else "", "slug": ascii_slug(f"{slug_prefix}-{rel[:-5]}")}
 
 
 def _summary_groups(root, prefix, intro):
@@ -304,8 +317,8 @@ def _summary_groups(root, prefix, intro):
         path = root / unquote(m.group(2).strip())
         if not path.is_relative_to(root):
             continue
-        if path.suffix != ".md" or not path.is_file():
-            print(f"  ! {root.name}/SUMMARY.md: skipped {m.group(2)} (not an existing .md file)")
+        if path.suffix not in (".md", ".html") or not path.is_file():
+            print(f"  ! {root.name}/SUMMARY.md: skipped {m.group(2)} (not an existing .md or .html file)")
             continue
         if path.relative_to(root).parts[0] == "learning":
             continue                              # <program>/learning/ is the private working folder: never published
@@ -314,7 +327,15 @@ def _summary_groups(root, prefix, intro):
         if cur is None:
             cur = {"name": "Documents", "md": []}
             groups.append(cur)
-        cur["md"].append(_md_entry(path, root, cur["name"], prefix, m.group(1)))
+        make = _html_entry if path.suffix == ".html" else _md_entry
+        entry = make(path, root, cur["name"], prefix, m.group(1))
+        entry["children"] = []
+        indent = len(line) - len(line.lstrip(" "))
+        tops = [x for x in cur["md"] if not x.get("parent")]
+        if indent >= 2 and tops:                      # an indented item sits under the item above it
+            entry["parent"] = tops[-1]
+            tops[-1]["children"].append(entry)
+        cur["md"].append(entry)
     return [g for g in groups if g["md"]]
 
 
@@ -930,6 +951,7 @@ def page(title, body, depth=0, desc="", extra_head="", body_cls="", active=""):
 <link rel="stylesheet" href="{pre}assets/css/card-list.css"/>
 <link rel="stylesheet" href="{pre}assets/css/text-page.css"/>
 <link rel="stylesheet" href="{pre}assets/css/home.css"/>
+<link rel="stylesheet" href="{pre}assets/css/minimal.css"/>
 {extra_head}
 </head>
 <body class="{body_cls}">
@@ -981,12 +1003,19 @@ def program_card(p, lesson_count):
 </a>"""
 
 
+def stat_tiles(pairs):
+    """Hub-style row of numbers: [(count, label), ...]. Tiles with a zero count are left out."""
+    tiles = "".join(f'<div class="hub-stat"><b>{n}</b><span>{esc(label)}</span></div>' for n, label in pairs if n)
+    return f'<div class="hub-stats">{tiles}</div>' if tiles else ""
+
+
 def lesson_card(l):
     tags = " ".join(t for v in l["variants"] for t in v["tags"])
     levels = " ".join(v["level"] for v in l["variants"])
     hay = esc(" ".join([l["title"], l["subtitle"], l["desc"], tags, l["stage"], levels]).lower())
     soon = not l["variants"]
-    top = chip(l["stage"], "default") + (chip("Coming soon", "warning") if soon else "")
+    status = "" if soon else ('<span class="st">Draft</span>' if l.get("draft") else '<span class="st st--ok">Ready</span>')
+    top = chip(l["stage"], "default") + (chip("Coming soon", "warning") if soon else "") + status
     desc = l["desc"] or ("Lesson plan coming soon." if soon else "")
     inner = f"""<div class="cl-mini__top">{top}</div>
   <h3 class="cl-mini__title">{esc(l['title'])}</h3>
@@ -1059,6 +1088,7 @@ def build_lessons_index(lessons):
     )
     body = f"""{page_header("", "Lesson Library", "Click a lesson to read the full plan: timing, activities and facilitator notes.")}
 <section class="section section--tight">
+  {stat_tiles([(len(lessons), "Lessons"), (sum(1 for l in lessons if l["variants"] and not l.get("draft")), "Ready"), (sum(1 for l in lessons if l["variants"] and l.get("draft")), "Draft"), (sum(1 for l in lessons if not l["variants"]), "Coming soon")])}
   <div class="cl-controls">
     <div class="input-field cl-search"><input id="q" type="search" placeholder=" "/><label for="q">Search lessons, topics, levels</label></div>
   </div>
@@ -1092,6 +1122,7 @@ def build_lessons_index(lessons):
 def build_programs_index(programs, counts):
     body = f"""{page_header("", "Programs", "Live programs are read from the website; working programs are read from the programs/ folder, one card per folder.")}
 <section class="section section--tight">
+  {stat_tiles([(len(programs), "Programs"), (sum(1 for p in programs if p.get("kind") == "folder"), "Working programs"), (sum(1 for p in programs if p.get("kind") != "folder"), "Live on the website")])}
   <div class="cl-grid prog-grid">{''.join(program_card(p, counts['by_program'].get(p['slug'], 0)) for p in programs)}</div>
 </section>"""
     return page("Programs — Training Hub", body, 0, "All programs.", active="programs")
@@ -1103,6 +1134,7 @@ def build_mentees_page(mentees):
         f'<button type="button" role="tab" class="tabs__tab{" tabs__tab--active" if x == "All" else ""}" data-stage="{x}" aria-selected="{"true" if x == "All" else "false"}">{x}</button>' for x in statuses)
     body = f"""{page_header("", "Private Training", "Everyone I coach one to one. Open a card for their programme, sessions and homework.")}
 <section class="section section--tight">
+  {stat_tiles([(len(mentees), "Mentees")] + [(sum(1 for m in mentees if m["status"] == x), x) for x in ("In progress", "Completed", "Not started")])}
   <div class="cl-controls">
     <div class="input-field cl-search"><input id="q" type="search" placeholder=" "/><label for="q">Search by name or programme</label></div>
   </div>
@@ -1424,17 +1456,35 @@ def _all_entries(p):
 def _prog_nav(p, current, prefix, home):
     """Material-style drawer: Overview, then one labelled list per SUMMARY.md group (long groups collapse)."""
     def li(e):
-        on = ' class="is-active" aria-current="page"' if e is current else ""
-        return f'<li><a{on} href="{prefix}{e["slug"]}.html">{esc(e["title"])}</a></li>'
+        """Two levels. A page with up to three children lists them under it; one with more shows a count and no list,
+        and its children are reached from its own page (they show a breadcrumb back to it)."""
+        kids = e.get("children", [])
+        few = 0 < len(kids) <= 3
+        cls = []
+        if e is current:
+            cls.append("is-active")
+        if not few and any(k is current for k in kids):
+            cls.append("is-branch")
+        attrs = f' class="{" ".join(cls)}"' if cls else ""
+        attrs += ' aria-current="page"' if e is current else ""
+        count = ""
+        if kids and not few:
+            attrs += ' data-kids="' + " ".join(f'{k["slug"]}.html' for k in kids) + '"'
+            count = f'<span class="pg-nav__count">{len(kids)}</span>'
+        sub = f'<ul class="pg-nav__kids">{"".join(li(k) for k in kids)}</ul>' if few else ""
+        return f'<li><a{attrs} href="{prefix}{e["slug"]}.html">{esc(e["title"])}{count}</a>{sub}</li>'
 
+    # The Overview link is always in the sidebar and hidden by CSS while it is the current page, so it stays
+    # available after the page content is swapped without a reload.
     parts = [f'<a class="pg-nav__home{" is-active" if current is None else ""}" href="{home}">Overview</a>']
     for g in p["groups"]:
-        items = f'<ul>{"".join(li(e) for e in g["md"])}</ul>'
-        if len(g["md"]) > 12:
+        tops = [e for e in g["md"] if not e.get("parent")]
+        items = f'<ul>{"".join(li(e) for e in tops)}</ul>'
+        if len(tops) > 12:
             is_open = any(e is current for e in g["md"])
-            parts.append(f'<details class="pg-nav__grp"{" open" if is_open else ""}><summary>{esc(g["name"])} <span>{len(g["md"])}</span></summary>{items}</details>')
+            parts.append(f'<details class="pg-nav__grp"{" open" if is_open else ""}><summary>{esc(g["name"])} <span>{len(tops)}</span></summary>{items}</details>')
         else:
-            parts.append(f'<p class="pg-nav__label">{esc(g["name"])}</p>{items}')
+            parts.append(f'<p class="pg-nav__label">{esc(g["name"])}<span class="pg-nav__n">{len(g["md"])}</span></p>{items}')
     return f'<div class="pg-nav" role="navigation" aria-label="Program pages">{"".join(parts)}</div>'
 
 
@@ -1468,6 +1518,10 @@ PG_NAV_JS = """<script>
       var on = a.href === url;
       a.classList.toggle('is-active', on);
       if (on) { a.setAttribute('aria-current', 'page'); found = a; } else a.removeAttribute('aria-current');
+    });
+    var name = url.split('/').pop();
+    [].forEach.call(side.querySelectorAll('a[data-kids]'), function (a) {
+      a.classList.toggle('is-branch', !found && (' ' + a.getAttribute('data-kids') + ' ').indexOf(' ' + name + ' ') > -1);
     });
     if (found) { var d = found.closest('details'); if (d) d.open = true; reveal(found); }
   }
@@ -1520,17 +1574,46 @@ def _pg_shell(p, nav, main, back_href):
 </div>{PG_NAV_JS}"""
 
 
+def _overview_stats(p, meta):
+    """Hub-style overview: one tile per group, then progress rows for the lessons (totals come from the README front matter)."""
+    def num(k):
+        try:
+            return int(str(meta.get(k, "")).strip())
+        except ValueError:
+            return 0
+
+    tiles = "".join(f'<div class="hub-stat"><b>{len(g["md"])}</b><span>{esc(g["name"])}</span></div>' for g in p["groups"])
+    rows = []
+    lessons = next((g for g in p["groups"] if g["name"].lower() == "lessons"), None)
+    if lessons:
+        tops = [x for x in lessons["md"] if not x.get("parent")]
+        sheets = [x for x in lessons["md"] if x.get("parent")]
+        ready = [x for x in tops if str(x.get("draft")).lower() == "false"]
+        for label, done, total in (("Lessons written", len(tops), num("lessons_total")),
+                                   ("Practice sheets written", len(sheets), num("practices_total")),
+                                   ("Lessons marked ready", len(ready), num("lessons_total"))):
+            if not total:
+                continue
+            ok = done >= total
+            rows.append(f'<div class="hub-prog__row"><strong>{label}</strong>'
+                        f'<div class="hub-prog__bar"><i style="width:{min(100, round(100 * done / total))}%"></i></div>'
+                        f'<span class="hub-prog__n">{done} / {total} <span class="st{" st--ok" if ok else ""}">{"Done" if ok else "In progress"}</span></span></div>')
+    return f'<div class="hub-stats">{tiles}</div>' + (f'<div class="hub-prog">{"".join(rows)}</div>' if rows else "")
+
+
 def build_folder_program_page(p, lessons_by_slug, mentees):
     for e in _all_entries(p):
         e["prog"] = p["slug"]
-    intro_html = ""
+    intro_html, intro_meta = "", {}
     if p["intro"]:
-        _, body = parse_front_matter(p["intro"].read_text(encoding="utf-8", errors="replace"))
+        intro_meta, body = parse_front_matter(p["intro"].read_text(encoding="utf-8", errors="replace"))
         intro_html, _ = render_markdown(re.sub(r"^#\s+.*\n", "", body.lstrip(), count=1))
+        intro_html = _link_pages(p, {"path": p["intro"]}, intro_html, prefix=f"{p['slug']}/")
+    tops = lambda g: [x for x in g["md"] if not x.get("parent")]
     cards = "".join(f"""<a class="cl-mini" href="{p['slug']}/{g['md'][0]['slug']}.html">
   <div class="cl-mini__top">{chip(g['name'], 'default')}<span>{len(g['md'])} pages</span></div>
   <h3 class="cl-mini__title">{esc(g['md'][0]['title'])}</h3>
-  <p class="cl-mini__desc">{esc(' · '.join(x['title'] for x in g['md'][1:4]))}</p>
+  <p class="cl-mini__desc">{esc(' · '.join(x['title'] for x in tops(g)[1:4]))}</p>
   <span class="cl-mini__cta">Open {esc(g['name'])} →</span></a>""" for g in p["groups"])
     extra = []
     lessons = [l for l in lessons_by_slug.values() if any(ps == p["slug"] for ps, _ in l["programs"])]
@@ -1541,23 +1624,78 @@ def build_folder_program_page(p, lessons_by_slug, mentees):
             for l in lessons) + "".join(f'<a class="sess__lesson" href="../mentees/{m["slug"]}.html">{esc(m["name"])} →</a>' for m in people)
         extra.append(f'<h2>Lessons &amp; mentees</h2><div class="sess__links">{chips}</div>')
     hint = '' if p["groups"] else '<p class="sess__none">No pages published yet. Add a SUMMARY.md to this folder to choose what appears here.</p>'
+    # The description is the intro's first paragraph unless the README sets one; don't print it twice.
+    intro_text = html.unescape(re.sub(r"<[^>]+>", "", intro_html))
+    dup = bool(intro_html) and p["desc"].strip().rstrip("…").strip()[:60] in intro_text
+    desc_html = "" if dup else f'<p class="page-desc">{esc(p["desc"])}</p>'
     main = f"""<header class="tp-head">
     <div class="page-eyebrow">{esc(p['tag'])}</div>
     <h1 class="page-title">{esc(p['title'])}</h1>
-    <p class="page-desc">{esc(p['desc'])}</p>
+    {desc_html}
     <p class="prog-stat">{p['doc_count']} pages</p>
   </header>
-  {'<article class="tp-body">' + intro_html + '</article>' if intro_html else ''}
+  {_overview_stats(p, intro_meta) if p["groups"] else ''}
+  {'<article class="tp-body">' + intro_html + '</article>' if intro_html and str(intro_meta.get("body", "true")).lower() != "false" else ''}
   {('<h2 class="pg-h">Sections</h2><div class="cl-grid pg-cards">' + cards + '</div>') if cards else hint}
   {''.join(extra)}"""
     nav = _prog_nav(p, None, f"{p['slug']}/", f"{p['slug']}.html")
     return page(f"{p['title']} — Training Hub", _pg_shell(p, nav, main, "../programs.html"), 1, p["desc"], active="programs")
 
 
+def _link_pages(p, e, html_body, prefix=""):
+    """Point relative links at other published pages of this program (SUMMARY.md entries) to their hub pages.
+    A link to a file that exists but is not published keeps its words and loses the dead link."""
+    slugs = {x["path"].resolve(): x["slug"] for x in _all_entries(p)}
+    root = p["root"].resolve()
+
+    def fix(m):
+        attrs, text = m.group(1), m.group(2)
+        h = re.search(r'\bhref="([^"]+)"', attrs)
+        if not h or re.match(r"^(https?:|mailto:|data:|/|#)", h.group(1)):
+            return m.group(0)
+        path, _, frag = h.group(1).partition("#")
+        target = (e["path"].parent / unquote(path)).resolve()
+        if target in slugs:
+            href = f'href="{prefix}{slugs[target]}.html{"#" + frag if frag else ""}"'
+            return "<a" + attrs.replace(h.group(0), href) + ">" + text + "</a>"
+        if target.exists() and target.is_relative_to(root):
+            return text
+        return m.group(0)
+
+    return re.sub(r"<a(\b[^>]*)>(.*?)</a>", fix, html_body, flags=re.S)
+
+
+def _copy_page_images(p, e, html_body):
+    """Copy images a program page refers to by relative path into docs/programs/<slug>/img/ and repoint the links."""
+    base, root = e["path"].parent, p["root"].resolve()
+
+    def fix(m):
+        src = m.group(2)
+        if re.match(r"^(https?:|data:|/|#)", src):
+            return m.group(0)
+        f = (base / unquote(src.split("#")[0].split("?")[0])).resolve()
+        if not f.is_file() or not f.is_relative_to(root):
+            return m.group(0)
+        dest = OUT / "programs" / p["slug"] / "img"
+        dest.mkdir(parents=True, exist_ok=True)
+        name = f"{ascii_slug(f.parent.name)}-{f.name}"
+        shutil.copy2(f, dest / name)
+        return f"{m.group(1)}img/{name}{m.group(3)}"
+
+    return re.sub(r'(<img[^>]*\bsrc=")([^"]+)(")', fix, html_body)
+
+
 def build_folder_doc_page(p, e):
-    meta, body = parse_front_matter(e["path"].read_text(encoding="utf-8", errors="replace"))
-    body = re.sub(r"^#\s+.*\n", "", body.lstrip(), count=1)
-    html_body, _ = render_markdown(body)
+    if e.get("html"):
+        src = f'{e["slug"]}-frame.html'   # written next to the page by main()
+        html_body = (f'<iframe class="pg-frame" src="{src}" title="{esc(e["title"])}" '
+                     f'onload="var d=this.contentDocument;if(d)this.style.height=(d.documentElement.scrollHeight+8)+\'px\'"></iframe>'
+                     f'<p class="pg-frame-open"><a href="{src}" target="_blank" rel="noopener">Mở toàn trang ↗</a></p>')
+    else:
+        meta, body = parse_front_matter(e["path"].read_text(encoding="utf-8", errors="replace"))
+        body = re.sub(r"^#\s+.*\n", "", body.lstrip(), count=1)
+        html_body, _ = render_markdown(body)
+        html_body = _link_pages(p, e, _copy_page_images(p, e, html_body))
     order = _all_entries(p)
     i = next(k for k, x in enumerate(order) if x is e)
     prev_e = order[i - 1] if i > 0 else None
@@ -1565,9 +1703,14 @@ def build_folder_doc_page(p, e):
     pn = "".join(
         f'<a class="pg-pn pg-pn--{cls}" href="{x["slug"]}.html"><span>{label}</span>{esc(x["title"])}</a>' if x else f'<span class="pg-pn pg-pn--{cls}"></span>'
         for cls, label, x in (("prev", "← Previous", prev_e), ("next", "Next →", next_e)))
+    d = str(e.get("draft")).lower()
+    status = {"true": '<span class="st">Draft</span>', "false": '<span class="st st--ok">Ready</span>'}.get(d, "")
+    par = e.get("parent")
+    crumb = f'<a href="{par["slug"]}.html">{esc(par["title"])}</a> ›' if par else esc(e["group"])
     main = f"""<header class="tp-head">
-    <div class="page-eyebrow">{esc(e['group'])}</div>
+    <div class="page-eyebrow">{crumb}</div>
     <h1 class="page-title">{esc(e['title'])}</h1>
+    {status}
   </header>
   <article class="tp-body">{html_body}</article>
   <div class="pg-pns">{pn}</div>"""
@@ -1764,6 +1907,7 @@ def copy_design_system():
             text = '@charset "UTF-8";\n' + text  # served without a charset header; avoids "Â·" / garbled arrows
         (css_out / Path(src).name).write_text(text, encoding="utf-8")
     shutil.copy2(Path(__file__).resolve().parent / "home.css", css_out / "home.css")  # hand-written page styles live next to this script
+    shutil.copy2(Path(__file__).resolve().parent / "minimal.css", css_out / "minimal.css")  # the Minimal skin, loaded last
     img_out = OUT / "assets/images"
     img_out.mkdir(parents=True, exist_ok=True)
     shutil.copy2(WEBSITE / "public/portfolio/images/logo-nav.svg", img_out / "logo-nav.svg")
@@ -1955,6 +2099,7 @@ def build():
         if not needed.exists():
             sys.exit(f"Missing folder: {needed}")
     started = time.time()
+    swimlane.generate_all(PROGRAMS_DIR)
     for d in ("lessons", "programs", "mentees"):   # pages are overwritten in place; stale ones are pruned at the end, so open pages never 404 mid-build
         (OUT / d).mkdir(parents=True, exist_ok=True)
     shutil.rmtree(ASSETS / "lesson-assets", ignore_errors=True)
@@ -2004,6 +2149,10 @@ def build():
                 sub.mkdir(parents=True)
             for e in entries:
                 (sub / f"{e['slug']}.html").write_text(build_folder_doc_page(p, e), encoding="utf-8")
+                if e.get("html"):
+                    # the hub page already shows the title: mark the copy so the file hides its own heading
+                    raw = e["path"].read_text(encoding="utf-8", errors="replace").replace("<html ", '<html class="embedded" ', 1)
+                    (sub / f"{e['slug']}-frame.html").write_text(raw, encoding="utf-8")
     keep_dirs = {p["slug"] for p in programs if p.get("kind") == "folder"}
     for old in (OUT / "programs").iterdir():
         if old.is_dir() and old.name not in keep_dirs:
