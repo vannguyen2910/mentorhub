@@ -35,6 +35,8 @@ from urllib.parse import quote, unquote
 
 import markdown
 
+import swimlane   # data-driven diagrams: programs/*/assets/diagrams/*.swimlane.json -> .html
+
 # ─────────────────────────────────────────────────────────────────────────────
 # CONFIG
 # ─────────────────────────────────────────────────────────────────────────────
@@ -2097,6 +2099,7 @@ def build():
         if not needed.exists():
             sys.exit(f"Missing folder: {needed}")
     started = time.time()
+    swimlane.generate_all(PROGRAMS_DIR)
     for d in ("lessons", "programs", "mentees"):   # pages are overwritten in place; stale ones are pruned at the end, so open pages never 404 mid-build
         (OUT / d).mkdir(parents=True, exist_ok=True)
     shutil.rmtree(ASSETS / "lesson-assets", ignore_errors=True)
