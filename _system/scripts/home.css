@@ -233,3 +233,7 @@ a.tp-hw__thumb { text-decoration: none; color: inherit; }
   .pg-side { position: static; max-height: 50vh; border-bottom: 1px solid var(--border-default); }
 }
 @media (prefers-reduced-motion: reduce) { .pg-main.is-in { animation: none; } .pg-nav__grp > summary::after { transition: none; } }
+
+.pg-frame { display: block; width: 100%; min-height: 480px; border: 1px solid var(--border, #e4e0ee); border-radius: 12px; background: #fff; }
+.pg-frame-open { margin: 8px 0 0; font-size: 13px; text-align: right; }
+.pg-main .tp-body img { display: block; max-width: 100%; height: auto; margin: 12px 0; border: 1px solid var(--border, #e4e0ee); border-radius: 8px; }

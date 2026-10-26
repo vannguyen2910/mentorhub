@@ -285,6 +285,17 @@ def _md_entry(path, base, group, slug_prefix, title=""):
             "slug": ascii_slug(f"{slug_prefix}-{rel[:-3]}")}
 
 
+def _html_entry(path, base, group, slug_prefix, title=""):
+    """A self-contained .html page listed in SUMMARY.md (a diagram, for example); it is shown in an iframe."""
+    raw = path.read_text(encoding="utf-8", errors="replace")
+    t = re.search(r"<title[^>]*>(.*?)</title>", raw, re.S)
+    d = re.search(r'<meta\s+name="description"\s+content="([^"]*)"', raw)
+    rel = path.relative_to(base).as_posix()
+    return {"path": path, "rel": rel, "group": group, "html": True,
+            "title": (title or (html.unescape(t.group(1)).strip() if t else path.stem)).strip(),
+            "sum": html.unescape(d.group(1)) if d else "", "slug": ascii_slug(f"{slug_prefix}-{rel[:-5]}")}
+
+
 def _summary_groups(root, prefix, intro):
     """[{name, md:[entry]}] from root/SUMMARY.md. No SUMMARY.md: only the README / plan is shown."""
     f = root / "SUMMARY.md"
@@ -304,8 +315,8 @@ def _summary_groups(root, prefix, intro):
         path = root / unquote(m.group(2).strip())
         if not path.is_relative_to(root):
             continue
-        if path.suffix != ".md" or not path.is_file():
-            print(f"  ! {root.name}/SUMMARY.md: skipped {m.group(2)} (not an existing .md file)")
+        if path.suffix not in (".md", ".html") or not path.is_file():
+            print(f"  ! {root.name}/SUMMARY.md: skipped {m.group(2)} (not an existing .md or .html file)")
             continue
         if path.relative_to(root).parts[0] == "learning":
             continue                              # <program>/learning/ is the private working folder: never published
@@ -314,7 +325,8 @@ def _summary_groups(root, prefix, intro):
         if cur is None:
             cur = {"name": "Documents", "md": []}
             groups.append(cur)
-        cur["md"].append(_md_entry(path, root, cur["name"], prefix, m.group(1)))
+        make = _html_entry if path.suffix == ".html" else _md_entry
+        cur["md"].append(make(path, root, cur["name"], prefix, m.group(1)))
     return [g for g in groups if g["md"]]
 
 
@@ -1427,7 +1439,8 @@ def _prog_nav(p, current, prefix, home):
         on = ' class="is-active" aria-current="page"' if e is current else ""
         return f'<li><a{on} href="{prefix}{e["slug"]}.html">{esc(e["title"])}</a></li>'
 
-    parts = [f'<a class="pg-nav__home{" is-active" if current is None else ""}" href="{home}">Overview</a>']
+    # On the program's own page the link would point at itself; sub-pages keep it as the way back.
+    parts = [] if current is None else [f'<a class="pg-nav__home" href="{home}">Overview</a>']
     for g in p["groups"]:
         items = f'<ul>{"".join(li(e) for e in g["md"])}</ul>'
         if len(g["md"]) > 12:
@@ -1541,10 +1554,14 @@ def build_folder_program_page(p, lessons_by_slug, mentees):
             for l in lessons) + "".join(f'<a class="sess__lesson" href="../mentees/{m["slug"]}.html">{esc(m["name"])} →</a>' for m in people)
         extra.append(f'<h2>Lessons &amp; mentees</h2><div class="sess__links">{chips}</div>')
     hint = '' if p["groups"] else '<p class="sess__none">No pages published yet. Add a SUMMARY.md to this folder to choose what appears here.</p>'
+    # The description is the intro's first paragraph unless the README sets one; don't print it twice.
+    intro_text = html.unescape(re.sub(r"<[^>]+>", "", intro_html))
+    dup = bool(intro_html) and p["desc"].strip().rstrip("…").strip()[:60] in intro_text
+    desc_html = "" if dup else f'<p class="page-desc">{esc(p["desc"])}</p>'
     main = f"""<header class="tp-head">
     <div class="page-eyebrow">{esc(p['tag'])}</div>
     <h1 class="page-title">{esc(p['title'])}</h1>
-    <p class="page-desc">{esc(p['desc'])}</p>
+    {desc_html}
     <p class="prog-stat">{p['doc_count']} pages</p>
   </header>
   {'<article class="tp-body">' + intro_html + '</article>' if intro_html else ''}
@@ -1554,10 +1571,37 @@ def build_folder_program_page(p, lessons_by_slug, mentees):
     return page(f"{p['title']} — Training Hub", _pg_shell(p, nav, main, "../programs.html"), 1, p["desc"], active="programs")
 
 
+def _copy_page_images(p, e, html_body):
+    """Copy images a program page refers to by relative path into docs/programs/<slug>/img/ and repoint the links."""
+    base, root = e["path"].parent, p["root"].resolve()
+
+    def fix(m):
+        src = m.group(2)
+        if re.match(r"^(https?:|data:|/|#)", src):
+            return m.group(0)
+        f = (base / unquote(src.split("#")[0].split("?")[0])).resolve()
+        if not f.is_file() or not f.is_relative_to(root):
+            return m.group(0)
+        dest = OUT / "programs" / p["slug"] / "img"
+        dest.mkdir(parents=True, exist_ok=True)
+        name = f"{ascii_slug(f.parent.name)}-{f.name}"
+        shutil.copy2(f, dest / name)
+        return f"{m.group(1)}img/{name}{m.group(3)}"
+
+    return re.sub(r'(<img[^>]*\bsrc=")([^"]+)(")', fix, html_body)
+
+
 def build_folder_doc_page(p, e):
-    meta, body = parse_front_matter(e["path"].read_text(encoding="utf-8", errors="replace"))
-    body = re.sub(r"^#\s+.*\n", "", body.lstrip(), count=1)
-    html_body, _ = render_markdown(body)
+    if e.get("html"):
+        src = f'{e["slug"]}-frame.html'   # written next to the page by main()
+        html_body = (f'<iframe class="pg-frame" src="{src}" title="{esc(e["title"])}" '
+                     f'onload="var d=this.contentDocument;if(d)this.style.height=(d.documentElement.scrollHeight+8)+\'px\'"></iframe>'
+                     f'<p class="pg-frame-open"><a href="{src}" target="_blank" rel="noopener">Mở toàn trang ↗</a></p>')
+    else:
+        meta, body = parse_front_matter(e["path"].read_text(encoding="utf-8", errors="replace"))
+        body = re.sub(r"^#\s+.*\n", "", body.lstrip(), count=1)
+        html_body, _ = render_markdown(body)
+        html_body = _copy_page_images(p, e, html_body)
     order = _all_entries(p)
     i = next(k for k, x in enumerate(order) if x is e)
     prev_e = order[i - 1] if i > 0 else None
@@ -2004,6 +2048,10 @@ def build():
                 sub.mkdir(parents=True)
             for e in entries:
                 (sub / f"{e['slug']}.html").write_text(build_folder_doc_page(p, e), encoding="utf-8")
+                if e.get("html"):
+                    # the hub page already shows the title: mark the copy so the file hides its own heading
+                    raw = e["path"].read_text(encoding="utf-8", errors="replace").replace("<html ", '<html class="embedded" ', 1)
+                    (sub / f"{e['slug']}-frame.html").write_text(raw, encoding="utf-8")
     keep_dirs = {p["slug"] for p in programs if p.get("kind") == "folder"}
     for old in (OUT / "programs").iterdir():
         if old.is_dir() and old.name not in keep_dirs:
