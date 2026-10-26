@@ -1,5 +1,32 @@
 # Mentoring Program — Claude Rules
 
+## Commands
+
+Run all of these from the repo root.
+
+| Command | Use |
+|---|---|
+| `python3 _system/scripts/build-home.py` | Rebuild the website in `docs/`. Add `--watch` to rebuild on every change |
+| `python3 _system/scripts/notes-audit.py <outline.md>` | Audit speaker notes of a slide outline (report only) |
+| `python3 _system/scripts/sync-deck.py <lesson folder> [--write]` | Sync an outline from its built deck. Dry run unless `--write` |
+| `python3 _system/scripts/mentee.py new\|log\|check\|migrate` | Set up mentees and log sessions without hand-editing the site |
+| `_system/scripts/new-lesson.sh lesson\|framework\|guide\|slides <name>` | Scaffold a new lesson, framework, guide or slides folder |
+
+To view the site locally, use the `docs` entry in `.claude/launch.json` (port 3002). `.claude/commands` is a symlink to `_system/commands`, so edit slash commands there.
+
+## Repo boundaries
+
+- `docs/` is generated. Never edit it by hand: `build-home.py` rewrites it.
+- Private by `.gitignore`, so never expect these on the site or in git: `source/`, `mentees/`, `business/`, `showcase/private/`, `showcase/testimonials.md`, `programs/assessment-tool/`.
+- Lessons shared across programs live in `library/lessons/`. Lessons that belong to one program live in `programs/<program>/lessons/<NN-slug>/` (`materials/`, `slides/`, `assets/`, `_archive/`); `build-home.py` scans both.
+
+## AI Design Workflow (`programs/ai-design-workflow/`)
+
+- `learning/plan.md` is the source of truth for the programme structure (weeks, which sessions are theory or practice, key decisions, open questions). Change it before changing a lesson that depends on it. There are no Check points: weeks 1 to 5 pair a theory lesson with a practice session, and week 6 ends with a one-day practice and a reflection and wrap-up session.
+- `learning/` is private working material (research, method, lesson details). Only pages listed in `SUMMARY.md` reach the site.
+- Lesson files say "buổi N" meaning lesson N, not the session number in the 12-session sequence. Keep that in mind when linking lessons to the plan until the labels are renamed.
+- Before restructuring a lesson, copy the old lesson and outline to `materials/_archive/` with a `-pre-<reason>-YYYY-MM-DD` suffix.
+
 ## Lesson file sync rule
 
 Every lesson in `library/lessons/` (and in `programs/<program>/lessons/`, for example AI Design Workflow) has two paired files:
