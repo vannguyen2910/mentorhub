@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="../../assets/css/card-list.css"/>
 <link rel="stylesheet" href="../../assets/css/text-page.css"/>
 <link rel="stylesheet" href="../../assets/css/home.css"/>
+<link rel="stylesheet" href="../../assets/css/minimal.css"/>
 
 </head>
 <body class="">
@@ -25,9 +26,10 @@
 </nav>
 <div class="tp">
   <a class="tp-back" href="../../programs.html">← All programs</a>
-  <div class="pg"><aside class="pg-side" data-prog="ai-prototype-development"><div class="pg-nav" role="navigation" aria-label="Program pages"><a class="pg-nav__home" href="../ai-prototype-development.html">Overview</a><p class="pg-nav__label">Course sections</p><ul><li><a href="ai-prototype-development-practice-xay-dung-prototype-bang-ai-practice-lesson.html">Practice: Xây Dựng Prototype Bằng AI</a></li><li><a href="ai-prototype-development-section-1-gioi-thieu-learning-section-1-lesson.html">Section 1 · Giới Thiệu</a></li><li><a href="ai-prototype-development-section-2-thay-doi-tu-duy-phat-trien-ai-prototype-section-2-lesson.html">Section 2 · Phần A: Tư Duy Pattern-First</a></li><li><a href="ai-prototype-development-section-3-xay-dung-ai-prototype-bang-claude-design-section-3-lesson.html">Section 3: Xây Dựng AI Prototype bằng Claude Design</a></li><li><a href="ai-prototype-development-section-4-xay-dung-ai-prototype-bang-figma-make-section-4-lesson.html">Section 4: Xây Dựng AI Prototype bằng Figma Make</a></li><li><a href="ai-prototype-development-section-5-xay-dung-ai-prototype-bang-claude-code-section-5-lesson.html">Section 5: Xây Dựng AI Prototype bằng Claude Code</a></li><li><a href="ai-prototype-development-section-6-stitching-prototype-section-6-lesson.html">Section 6: Stitching Prototype</a></li></ul><p class="pg-nav__label">Course docs</p><ul><li><a href="ai-prototype-development-course-02-outline-brief.html">Course 02 — Systematic AI Prototyping for Product Designers: Toàn Bộ Outline Khóa Học</a></li><li><a class="is-active" aria-current="page" href="ai-prototype-development-landing-page-copy.html">Landing Page Copy: Systematic AI Prototyping for Product Designers</a></li><li><a href="ai-prototype-development-writing-style-guide.html">Voice &amp; Writing Style Guide — AI Prototype Development Course</a></li></ul></div></aside><div class="pg-main"><header class="tp-head">
+  <div class="pg"><aside class="pg-side" data-prog="ai-prototype-development"><div class="pg-nav" role="navigation" aria-label="Program pages"><a class="pg-nav__home" href="../ai-prototype-development.html">Overview</a><p class="pg-nav__label">Course sections<span class="pg-nav__n">7</span></p><ul><li><a href="ai-prototype-development-practice-xay-dung-prototype-bang-ai-practice-lesson.html">Practice: Xây Dựng Prototype Bằng AI</a></li><li><a href="ai-prototype-development-section-1-gioi-thieu-learning-section-1-lesson.html">Section 1 · Giới Thiệu</a></li><li><a href="ai-prototype-development-section-2-thay-doi-tu-duy-phat-trien-ai-prototype-section-2-lesson.html">Section 2 · Phần A: Tư Duy Pattern-First</a></li><li><a href="ai-prototype-development-section-3-xay-dung-ai-prototype-bang-claude-design-section-3-lesson.html">Section 3: Xây Dựng AI Prototype bằng Claude Design</a></li><li><a href="ai-prototype-development-section-4-xay-dung-ai-prototype-bang-figma-make-section-4-lesson.html">Section 4: Xây Dựng AI Prototype bằng Figma Make</a></li><li><a href="ai-prototype-development-section-5-xay-dung-ai-prototype-bang-claude-code-section-5-lesson.html">Section 5: Xây Dựng AI Prototype bằng Claude Code</a></li><li><a href="ai-prototype-development-section-6-stitching-prototype-section-6-lesson.html">Section 6: Stitching Prototype</a></li></ul><p class="pg-nav__label">Course docs<span class="pg-nav__n">3</span></p><ul><li><a href="ai-prototype-development-course-02-outline-brief.html">Course 02 — Systematic AI Prototyping for Product Designers: Toàn Bộ Outline Khóa Học</a></li><li><a class="is-active" aria-current="page" href="ai-prototype-development-landing-page-copy.html">Landing Page Copy: Systematic AI Prototyping for Product Designers</a></li><li><a href="ai-prototype-development-writing-style-guide.html">Voice &amp; Writing Style Guide — AI Prototype Development Course</a></li></ul></div></aside><div class="pg-main"><header class="tp-head">
     <div class="page-eyebrow">Course docs</div>
     <h1 class="page-title">Landing Page Copy: Systematic AI Prototyping for Product Designers</h1>
+    
   </header>
   <article class="tp-body"><h2 id="bối-cảnh-trước-khi-đọc-copy-này">Bối cảnh trước khi đọc copy này</h2>
 <p>Đây là bản nháp đầu tiên cho toàn bộ landing page, ráp từ nội dung đã build ở <code>course-02-outline-brief.md</code> và các file <code>section X-lesson.md</code>. Section 5 đã có sẵn 1 bản copy card riêng (<code>Section 5 - Đóng Gói &amp; Chia Sẻ Prototype/section 5-landing-copy.md</code>), bản này chọn lại 1 trong 3 option đã có ở đó để khớp format chung với 5 section-card còn lại, không viết lại từ đầu.</p>
@@ -210,6 +212,10 @@
       var on = a.href === url;
       a.classList.toggle('is-active', on);
       if (on) { a.setAttribute('aria-current', 'page'); found = a; } else a.removeAttribute('aria-current');
+    });
+    var name = url.split('/').pop();
+    [].forEach.call(side.querySelectorAll('a[data-kids]'), function (a) {
+      a.classList.toggle('is-branch', !found && (' ' + a.getAttribute('data-kids') + ' ').indexOf(' ' + name + ' ') > -1);
     });
     if (found) { var d = found.closest('details'); if (d) d.open = true; reveal(found); }
   }

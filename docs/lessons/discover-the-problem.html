@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="../assets/css/card-list.css"/>
 <link rel="stylesheet" href="../assets/css/text-page.css"/>
 <link rel="stylesheet" href="../assets/css/home.css"/>
+<link rel="stylesheet" href="../assets/css/minimal.css"/>
 
 </head>
 <body class="tp-white">
@@ -29,10 +30,10 @@
     <h1 class="page-title">Discover the Problem</h1>
     <p class="page-desc">Set the principles first, then break the brief with AI and see how to understand users</p>
     
-    <div class="tp-info" data-var-panel data-var-id="0"><div class="draft-banner">Draft: content exists but is not finalised for delivery.</div><dl class="tp-meta" style="--tp-cols: repeat(4, minmax(0, 1fr)) minmax(0, 1.8fr)"><div><dt>Stage</dt><dd>AI Design Workflow</dd></div><div><dt>Level</dt><dd>Intermediate</dd></div><div><dt>Duration</dt><dd>90 min</dd></div><div><dt>Date</dt><dd>26 Oct 2026</dd></div><div><dt>Source file</dt><dd><code>discover-the-problem-lesson.md</code></dd></div><div class="tp-meta__tags"><dt>Topics</dt><dd><span>discover</span><span>principles</span><span>break-the-brief</span><span>assumptions</span><span>competitor-analysis</span><span>ai-workflow</span></dd></div></dl></div>
+    <div class="tp-info" data-var-panel data-var-id="0"><div class="draft-banner">Draft: content exists but is not finalised for delivery.</div><dl class="tp-meta" style="--tp-cols: repeat(4, minmax(0, 1fr)) minmax(0, 1.8fr)"><div><dt>Stage</dt><dd>AI Design Workflow</dd></div><div><dt>Level</dt><dd>Intermediate</dd></div><div><dt>Duration</dt><dd>90 min</dd></div><div><dt>Date</dt><dd>26 Oct 2026</dd></div><div><dt>Source file</dt><dd><code>discover-the-problem-lesson.md</code></dd></div><div class="tp-meta__tags"><dt>Topics</dt><dd><span>discover</span><span>principles</span><span>break-the-brief</span><span>assumptions</span><span>competitor-analysis</span><span>ai-workflow</span></dd></div></dl></div><div class="tp-info" data-var-panel data-var-id="1" hidden><div class="draft-banner">Draft: content exists but is not finalised for delivery.</div><dl class="tp-meta" style="--tp-cols: repeat(2, minmax(0, 1fr)) minmax(0, 1.8fr)"><div><dt>Stage</dt><dd>AI Design Workflow</dd></div><div><dt>Duration</dt><dd>90 min</dd></div><div><dt>Source file</dt><dd><code>discover-the-problem-practice.md</code></dd></div></dl></div>
   </header>
   <div class="tabs tabs--pill tp-tabs"><div class="tabs__list" role="tablist"><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="lesson" aria-selected="false">Lesson</button><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="slides" aria-selected="false">Slides</button><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="homework" aria-selected="false">Homework</button></div></div>
-  <section class="tp-panel" data-tab-panel data-tab-id="lesson" role="tabpanel" hidden><div data-var-panel data-var-id="0">
+  <section class="tp-panel" data-tab-panel data-tab-id="lesson" role="tabpanel" hidden><div class="tabs tabs--pill var-switch"><div class="tabs__list" role="tablist" aria-label="Lesson version"><button type="button" role="tab" class="tabs__tab" data-var-btn data-var-id="0" aria-selected="false">Discover the Problem</button><button type="button" role="tab" class="tabs__tab" data-var-btn data-var-id="1" aria-selected="false">Break the Brief</button></div></div><div data-var-panel data-var-id="0">
   <div class="tp-layout">
     <aside class="tp-toc" aria-label="On this page"><p class="tp-toc__label">On this page</p><a href="#v0-abstract">Abstract</a><a href="#v0-learning-objectives">Learning Objectives</a><a href="#v0-success-check">Success Check</a><a href="#v0-materials-needed">Materials Needed</a><a href="#v0-pre-class-preparation">Pre-Class Preparation</a><a href="#v0-1-background-where-discover-sits-and-what-ai-can-do">1. Background: where Discover sits and what AI can do</a><a href="#v0-2-design-principles-the-standard-ai-checks-against">2. Design Principles: the standard AI checks against</a><a href="#v0-3-break-the-brief">3. Break the brief</a><a href="#v0-4-understand-our-users-theory">4. Understand our users (theory)</a><a href="#v0-5-package-into-agents-contribute-to-the-hub">5. Package into agents, contribute to the hub</a><a href="#v0-6-worked-example-kitchen-crate">6. Worked example: Kitchen Crate</a><a href="#v0-7-session-design">7. Session design</a><a href="#v0-8-ai-in-practice">8. AI in Practice</a><a href="#v0-9-assessment">9. Assessment</a><a href="#v0-10-limitations-and-ethics">10. Limitations and ethics</a><a href="#v0-11-connection-to-the-series">11. Connection to the series</a><a href="#v0-references">References</a></aside>
     <article class="tp-body"><blockquote>
@@ -74,7 +75,7 @@
 <h2 id="v0-materials-needed">Materials Needed</h2>
 <ul>
 <li>Case folder từ buổi 1 (<code>context-product-and-users.md</code>, <code>context-data-rules.md</code>).</li>
-<li>Case card hư cấu của chương trình (Kitchen Crate) cho phần demo, và cho học viên có case quá nhạy cảm.</li>
+<li><a class="tp-dead" title="Source file link: ../../../assets/starter-files/course-case/case-card.md">Case card</a> hư cấu của chương trình (Kitchen Crate) cho phần demo, và cho học viên có case quá nhạy cảm.</li>
 <li>Template <code>principles.md</code> (bốn mục: UX principles, business principles, severity, gates).</li>
 <li>Cheat sheet một màn hình: năm hoạt động Break the brief, ba mức access, thang severity 0 đến 4, các check của Gate 1.</li>
 <li>Một AI chat tool đã được công ty cho phép.</li>
@@ -127,7 +128,7 @@
 </tr>
 <tr>
 <td>Gates</td>
-<td>Gate 1 của chương trình (<code>learning/method.md</code>, Part 3): các check 1a đến 1g. Buổi 2 dùng 1a (business question và outcome đã agreed hay assumed) và 1f (data rules)</td>
+<td>Gate 1 của chương trình (<a class="tp-dead" title="Source file link: ../../../assets/starter-files/case-folder-template/hub/gates.md">Gates</a>): các check 1a đến 1g. Buổi 2 dùng 1a (business question và outcome đã agreed hay assumed) và 1f (data rules)</td>
 <td>Có sẵn</td>
 </tr>
 </tbody>
@@ -243,7 +244,7 @@
 <p>Bước kéo insight từ research có sẵn (pull insights from existing researches) tìm xem điều nào trong danh sách đã có evidence trong nghiên cứu cũ của team. Học viên chưa có research cũ ghi "chưa có" và để cho buổi 3 và phỏng vấn peer.</p>
 <p>Sau đó học viên xếp từng assumption theo mức độ quan trọng so với evidence hiện có, để quyết định kiểm chứng điều nào trước.</p>
 <h3 id="v0-3-6-competitor-analysis">3.6 Competitor analysis</h3>
-<p>Competitor analysis cho thấy đối thủ <strong>làm gì</strong>, không cho thấy người dùng <strong>vì sao</strong> chọn họ. Quy trình rút gọn từ <code>learning/desk-research-competitor-practice.md</code>, Practice B: chốt phạm vi (một journey, ba đến năm đối thủ, tối đa sáu tiêu chí), AI mô tả ảnh chụp trước, đánh giá sau, rồi điền bảng bằng chứng với tên file cho mỗi ô; học viên mở ảnh gốc, đối chiếu các ô quan trọng và ghi tỷ lệ ô sai. Kết luận là giả thuyết để hỏi trong phỏng vấn, không phải kết luận về người dùng. Buổi 3 giữ phần ghép điều người khác làm với điều user nói và làm.</p>
+<p>Competitor analysis cho thấy đối thủ <strong>làm gì</strong>, không cho thấy người dùng <strong>vì sao</strong> chọn họ. Quy trình rút gọn (xem thêm <a class="tp-dead" title="Source file link: ../../../assets/method-cards/01-discover/competitor-analysis.md">method card Competitor analysis</a>): chốt phạm vi (một journey, ba đến năm đối thủ, tối đa sáu tiêu chí), AI mô tả ảnh chụp trước, đánh giá sau, rồi điền bảng bằng chứng với tên file cho mỗi ô; học viên mở ảnh gốc, đối chiếu các ô quan trọng và ghi tỷ lệ ô sai. Kết luận là giả thuyết để hỏi trong phỏng vấn, không phải kết luận về người dùng. Buổi 3 giữ phần ghép điều người khác làm với điều user nói và làm.</p>
 <hr />
 <h2 id="v0-4-understand-our-users-theory">4. Understand our users (theory)</h2>
 <p>Phần này giới thiệu ba nhánh. Thực hành nằm ở buổi practice và bài tập phỏng vấn peer; buổi 3 xử lý quote thu được.</p>
@@ -387,7 +388,7 @@
 </ol>
 <p><em>Quy tắc dữ liệu:</em> chỉ dùng thông tin đã ẩn danh; học viên có case nhạy cảm dùng case card. <em>Output:</em> hai dòng đầu của <code>principles.md</code>. Không mở AI tool trong activity này.</p>
 <h3 id="v0-7-4-practice-session-and-homework">7.4 Practice session and homework</h3>
-<p><strong>Buổi practice 90 phút</strong> nằm ngay sau buổi này (lịch cố định sau mỗi lesson nội dung, Winnie quyết định 2026-10-26). Nội dung buổi practice <code>[to confirm]</code>: hoàn thiện <code>principles.md</code>, chạy năm hoạt động Break the brief trên case của từng người, lập lịch phỏng vấn peer cho buổi 3. Thiết kế chi tiết nằm ở tài liệu riêng của buổi practice.</p>
+<p><strong>Buổi practice 90 phút</strong> (<a href="discover-the-problem.html">Practice 2</a>) nằm ngay sau buổi này (lịch cố định sau mỗi lesson nội dung, Winnie quyết định 2026-10-26). Nội dung buổi practice <code>[to confirm]</code>: hoàn thiện <code>principles.md</code>, chạy năm hoạt động Break the brief trên case của từng người, lập lịch phỏng vấn peer cho buổi 3. Thiết kế chi tiết nằm ở tài liệu riêng của buổi practice.</p>
 <p><strong>Bài tập về nhà</strong> (chờ Winnie chốt vai trò sau khi có buổi practice): đủ nhỏ để không chồng lên buổi practice. Mặc định tạm: lên lịch 2 đến 3 buổi phỏng vấn ngắn với đồng nghiệp hoặc người dùng để có quote cho buổi 3.</p>
 <hr />
 <h2 id="v0-8-ai-in-practice">8. AI in Practice</h2>
@@ -476,6 +477,91 @@
 <p>Nhật ký bằng chứng đầy đủ nằm trong <code>programs/ai-design-workflow/learning/ai-in-discover.md</code> và <code>ai-strengths-and-limits.md</code>.</p>
 <hr />
 <p><em>Created by Winnie Nguyen · AI Design Workflow · Last updated October 2026</em></p></article>
+  </div>
+</div><div data-var-panel data-var-id="1" hidden>
+  <div class="tp-layout">
+    <aside class="tp-toc" aria-label="On this page"><p class="tp-toc__label">On this page</p><a href="#v1-goal">Goal</a><a href="#v1-before-you-start">Before you start</a><a href="#v1-steps">Steps</a><a href="#v1-output">Output</a><a href="#v1-self-check">Self-check</a><a href="#v1-if-you-get-stuck">If you get stuck</a></aside>
+    <article class="tp-body"><h2 id="v1-goal">Goal</h2>
+<p>Hoàn thiện <code>principles.md</code> và chạy năm hoạt động của Break the brief trên case của bạn, mỗi hoạt động cho ra một file trong hub. Các file này là đầu vào cho phỏng vấn peer và cho evidence pack ở Lesson 3.</p>
+<h2 id="v1-before-you-start">Before you start</h2>
+<ul>
+<li>Bạn đã học <a href="discover-the-problem.html">Lesson 2</a> và viết hai dòng đầu của <code>principles.md</code> trên lớp.</li>
+<li>Case folder từ Practice 1, kèm <code>learnings/context-product-and-users.md</code> và data rules.</li>
+<li>Brief hoặc PRD gần nhất của case (nếu có), đã ẩn danh theo data rules. Không có thì ghi "chưa có" và làm tiếp từ thông tin bạn biết.</li>
+<li>Một AI chat tool đã được công ty cho phép. Học viên có case quá nhạy cảm dùng <a class="tp-dead" title="Source file link: ../../../assets/starter-files/course-case/case-card.md">case card</a> của chương trình.</li>
+</ul>
+<h2 id="v1-steps">Steps</h2>
+<p>Quy tắc chung cho mọi bước: viết phần của bạn trước, rồi mới nhờ AI soạn nháp. AI không đóng vai PO hay user. Mục AI đưa ra mà tài liệu của case không có thì ghi "chưa có nguồn".</p>
+<h3 id="v1-step-1-hoàn-thiện-principles-md-15-phút-you">Step 1 · Hoàn thiện principles.md · 15 phút · YOU</h3>
+<ul>
+<li>UX principles: mười heuristic của Nielsen, thêm nguyên tắc riêng của tổ chức nếu có.</li>
+<li>Business principles: ràng buộc và ưu tiên của business (mission, brand value, compliance, KPI, guardrail). Chưa biết thì ghi "assumed" và người cần xác nhận.</li>
+<li>Severity: thang 0 đến 4. Gates: đánh dấu check 1a và 1f của Gate 1 trong <a class="tp-dead" title="Source file link: ../../../assets/starter-files/case-folder-template/hub/gates.md">Gates</a>.</li>
+<li><strong>File:</strong> <code>principles.md</code></li>
+</ul>
+<h3 id="v1-step-2-self-documentation-10-phút-ai-soạn-nháp-bạn-kiểm-tra">Step 2 · Self-documentation · 10 phút · AI soạn nháp, bạn kiểm tra</h3>
+<ul>
+<li><strong>AI soạn nháp:</strong> đưa tài liệu đã ẩn danh của case vào AI chat tool và nhờ tóm tắt thành các file nhỏ theo chủ đề.</li>
+<li><strong>Bạn kiểm tra:</strong> mỗi file có nguồn không. Mục nào không có nguồn thì ghi "chưa có nguồn".</li>
+<li><strong>File:</strong> các file <code>.md</code> trong hub</li>
+</ul>
+<h3 id="v1-step-3-research-questions-15-phút-ai-soạn-nháp-bạn-kiểm-tra">Step 3 · Research questions · 15 phút · AI soạn nháp, bạn kiểm tra</h3>
+<ul>
+<li><strong>Bạn viết trước:</strong> một câu business question, tách khỏi giải pháp đã nêu trong brief.</li>
+<li><strong>AI soạn nháp:</strong> năm câu gửi business: outcome, success metric, baseline, ràng buộc, thời hạn và người quyết định. Hỏi trung lập.</li>
+<li><strong>Bạn kiểm tra:</strong> gửi bằng văn bản và ghi agreement status vào scope: agreed, pending hoặc not available. Câu chưa có trả lời ghi "assumed".</li>
+<li><strong>File:</strong> <code>research-questions.md</code> (gồm cả phần scope)</li>
+</ul>
+<h3 id="v1-step-4-ux-observation-20-phút-ai-soạn-nháp-bạn-kiểm-tra">Step 4 · UX observation · 20 phút · AI soạn nháp, bạn kiểm tra</h3>
+<ul>
+<li>Chọn một flow của trải nghiệm hiện tại.</li>
+<li><strong>AI soạn nháp:</strong> các finding, mỗi finding gắn một principle trong <code>principles.md</code>.</li>
+<li><strong>Bạn kiểm tra:</strong> principle có đúng không, vấn đề có thật trên giao diện không, evidence có đủ không. Bạn tự chấm severity.</li>
+<li><strong>File:</strong> <code>ux-audit.md</code></li>
+</ul>
+<h3 id="v1-step-5-challenge-assumptions-10-phút-ai-soạn-nháp-bạn-kiểm-tra">Step 5 · Challenge assumptions · 10 phút · AI soạn nháp, bạn kiểm tra</h3>
+<ul>
+<li><strong>AI soạn nháp:</strong> danh sách điều đang tin, kèm evidence đang có và đang thiếu cho từng điều.</li>
+<li><strong>Bạn kiểm tra:</strong> đối chiếu với tài liệu của case. Kéo insight từ research có sẵn nếu có, rồi xếp assumption theo mức độ quan trọng so với evidence.</li>
+<li><strong>File:</strong> <code>assumption.md</code></li>
+</ul>
+<h3 id="v1-step-6-competitor-analysis-lượt-đầu-10-phút-ai-soạn-nháp-bạn-kiểm-tra">Step 6 · Competitor analysis, lượt đầu · 10 phút · AI soạn nháp, bạn kiểm tra</h3>
+<ul>
+<li>Làm theo <a class="tp-dead" title="Source file link: ../../../assets/method-cards/01-discover/competitor-analysis.md">method card Competitor analysis</a>. Chốt phạm vi: một journey, ba đến năm đối thủ, tối đa sáu tiêu chí.</li>
+<li><strong>AI soạn nháp:</strong> bảng bằng chứng, mỗi ô ghi tên file nguồn.</li>
+<li><strong>Bạn kiểm tra:</strong> mở ảnh gốc cho các ô quan trọng và ghi tỷ lệ ô sai. Phần còn lại hoàn thiện sau buổi này.</li>
+<li><strong>File:</strong> <code>competitor-analysis.md</code></li>
+</ul>
+<h3 id="v1-step-7-lên-lịch-phỏng-vấn-peer-5-phút-you">Step 7 · Lên lịch phỏng vấn peer · 5 phút · YOU</h3>
+<ul>
+<li>Hẹn hai đến ba buổi phỏng vấn ngắn với đồng nghiệp hoặc người dùng. Quote thu được dùng cho Lesson 3.</li>
+</ul>
+<p>Còn khoảng 5 phút dự phòng. Nếu thiếu giờ, hoàn thành Step 1, 3, 4 và 5 trước, phần còn lại làm sau buổi này. Thời lượng từng bước chưa được thử với một lớp thật.</p>
+<h2 id="v1-output">Output</h2>
+<ul>
+<li><code>principles.md</code></li>
+<li><code>research-questions.md</code></li>
+<li><code>ux-audit.md</code></li>
+<li><code>assumption.md</code></li>
+<li><code>competitor-analysis.md</code> (lượt đầu)</li>
+<li>Các file <code>.md</code> từ self-documentation</li>
+<li>Lịch phỏng vấn peer</li>
+</ul>
+<p>Xem hình dạng các file này khi đã nằm trong hub ở <a class="tp-dead" title="Source file link: ../../../examples/outcome-examples/README.md">Outcome Examples</a>.</p>
+<h2 id="v1-self-check">Self-check</h2>
+<ul>
+<li>☐ <code>principles.md</code> có đủ bốn phần: UX, business, severity, gates.</li>
+<li>☐ Case có một business question, tách khỏi giải pháp trong brief.</li>
+<li>☐ Mỗi finding trong <code>ux-audit.md</code> có evidence và severity do bạn chấm.</li>
+<li>☐ Mỗi mục trong <code>assumption.md</code> có nguồn hoặc nhãn "chưa có nguồn".</li>
+<li>☐ Bạn biết file nào do AI soạn nháp, và phần nào bạn đã kiểm tra.</li>
+</ul>
+<h2 id="v1-if-you-get-stuck">If you get stuck</h2>
+<ul>
+<li><strong>Không tiếp cận được business:</strong> dựng scope từ PRD hoặc brief, thông tin công khai và dữ liệu nhìn thấy được. Ghi mọi outcome và metric là "assumed", agreement status là "not available".</li>
+<li><strong>Chưa có research cũ để kéo insight:</strong> ghi "chưa có" ở <code>assumption.md</code> và để phần đó cho phỏng vấn peer.</li>
+<li><strong>AI đưa ra điều nghe hợp lý nhưng không có trong tài liệu:</strong> ghi "chưa có nguồn", không đưa vào danh sách như một sự thật.</li>
+</ul></article>
   </div>
 </div></section><section class="tp-panel" data-tab-panel data-tab-id="slides" role="tabpanel" hidden><div class="tp-slides tp-slides--empty"><strong>No slides yet</strong><span>Add a deck (.html) or .pdf to this lesson's <code>slides/</code> folder, or a <code>slides:</code> link in the lesson front matter.</span></div></section><section class="tp-panel" data-tab-panel data-tab-id="homework" role="tabpanel" hidden><div class="tp-slides tp-slides--empty"><strong>No mentee homework yet</strong><span>Drop files in <code>mentees/&lt;name&gt;/homework/discover-the-problem/</code> and they show up here.</span></div></section>
   <section class="tp-related"><h2>Related lessons</h2><div class="tp-related__grid"><a class="tp-related__card" href="design-process-with-ai.html"><span>Previous lesson</span><strong>Your Design Process, with AI</strong></a><a class="tp-related__card" href="research-you-can-trust.html"><span>Next lesson</span><strong>Turn Research into Insights You Can Trust</strong></a></div></section>

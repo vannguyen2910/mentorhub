@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="../assets/css/card-list.css"/>
 <link rel="stylesheet" href="../assets/css/text-page.css"/>
 <link rel="stylesheet" href="../assets/css/home.css"/>
+<link rel="stylesheet" href="../assets/css/minimal.css"/>
 
 </head>
 <body class="tp-white">
@@ -29,10 +30,10 @@
     <h1 class="page-title">Your Design Process, with AI</h1>
     <p class="page-desc">Where design careers are heading, the four stages you already know, where AI helps in each, and the workspace every later lesson builds on</p>
     
-    <div class="tp-info" data-var-panel data-var-id="0"><div class="draft-banner">Draft: content exists but is not finalised for delivery.</div><dl class="tp-meta" style="--tp-cols: repeat(4, minmax(0, 1fr)) minmax(0, 1.8fr)"><div><dt>Stage</dt><dd>AI Design Workflow</dd></div><div><dt>Level</dt><dd>Foundational</dd></div><div><dt>Duration</dt><dd>90 min (buổi 1) + bài tập về nhà</dd></div><div><dt>Date</dt><dd>6 Oct 2026</dd></div><div><dt>Source file</dt><dd><code>design-process-with-ai-lesson.md</code></dd></div><div class="tp-meta__tags"><dt>Topics</dt><dd><span>ai</span><span>design-process</span><span>double-diamond</span><span>terminology</span><span>context</span><span>folder</span></dd></div></dl></div>
+    <div class="tp-info" data-var-panel data-var-id="0"><div class="draft-banner">Draft: content exists but is not finalised for delivery.</div><dl class="tp-meta" style="--tp-cols: repeat(4, minmax(0, 1fr)) minmax(0, 1.8fr)"><div><dt>Stage</dt><dd>AI Design Workflow</dd></div><div><dt>Level</dt><dd>Foundational</dd></div><div><dt>Duration</dt><dd>90 min (buổi 1) + bài tập về nhà</dd></div><div><dt>Date</dt><dd>6 Oct 2026</dd></div><div><dt>Source file</dt><dd><code>design-process-with-ai-lesson.md</code></dd></div><div class="tp-meta__tags"><dt>Topics</dt><dd><span>ai</span><span>design-process</span><span>double-diamond</span><span>terminology</span><span>context</span><span>folder</span></dd></div></dl></div><div class="tp-info" data-var-panel data-var-id="1" hidden><div class="draft-banner">Draft: content exists but is not finalised for delivery.</div><dl class="tp-meta" style="--tp-cols: repeat(2, minmax(0, 1fr)) minmax(0, 1.8fr)"><div><dt>Stage</dt><dd>AI Design Workflow</dd></div><div><dt>Duration</dt><dd>90 min</dd></div><div><dt>Source file</dt><dd><code>design-process-with-ai-practice.md</code></dd></div></dl></div>
   </header>
   <div class="tabs tabs--pill tp-tabs"><div class="tabs__list" role="tablist"><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="lesson" aria-selected="false">Lesson</button><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="slides" aria-selected="false">Slides</button><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="homework" aria-selected="false">Homework</button></div></div>
-  <section class="tp-panel" data-tab-panel data-tab-id="lesson" role="tabpanel" hidden><div data-var-panel data-var-id="0">
+  <section class="tp-panel" data-tab-panel data-tab-id="lesson" role="tabpanel" hidden><div class="tabs tabs--pill var-switch"><div class="tabs__list" role="tablist" aria-label="Lesson version"><button type="button" role="tab" class="tabs__tab" data-var-btn data-var-id="0" aria-selected="false">Your Design Process, with AI</button><button type="button" role="tab" class="tabs__tab" data-var-btn data-var-id="1" aria-selected="false">Case Folder and Hub</button></div></div><div data-var-panel data-var-id="0">
   <div class="tp-layout">
     <aside class="tp-toc" aria-label="On this page"><p class="tp-toc__label">On this page</p><a href="#v0-abstract">Abstract</a><a href="#v0-learning-objectives">Learning Objectives</a><a href="#v0-success-check">Success Check</a><a href="#v0-1-background-ai-and-the-design-profession">1. Background: AI and the design profession</a><a href="#v0-2-career-directions">2. Career directions</a><a href="#v0-3-the-design-process-with-ai">3. The design process with AI</a><a href="#v0-4-working-with-ai-core-concepts">4. Working with AI: core concepts</a><a href="#v0-5-data-safety">5. Data safety</a><a href="#v0-6-the-workspace">6. The workspace</a><a href="#v0-7-session-design">7. Session design</a><a href="#v0-8-assessment-and-homework">8. Assessment and homework</a><a href="#v0-ai-in-practice">AI in Practice</a><a href="#v0-9-limitations-and-ethics">9. Limitations and ethics</a><a href="#v0-10-connection-to-the-series">10. Connection to the series</a><a href="#v0-references">References</a><a href="#v0-appendix-a-pre-read-brief-khoảng-14-phút-đọc-trước-buổi-1">Appendix A: Pre-read brief (khoảng 14 phút, đọc trước buổi 1)</a></aside>
     <article class="tp-body"><blockquote>
@@ -406,7 +407,7 @@
 <p>Ba khái niệm phụ không đưa vào bảng: <strong>model</strong> là phần lõi phía sau một tool, <strong>prompt</strong> là thứ người dùng đưa cho AI, và <strong>in-tool AI features</strong> là các tính năng AI có sẵn trong design tool.</p>
 <h3 id="v0-4-2-worked-example-one-task-done-twice">4.2 Worked example: one task, done twice</h3>
 <p>Ví dụ minh hoạ dùng một case hư cấu của chương trình.</p>
-<p><em>Case card (Kitchen Crate, hư cấu):</em> một app meal-kit theo gói đăng ký. Nhiều khách hàng mới tạm dừng sau hộp đầu tiên. Team muốn cải thiện onboarding. App có date picker chọn ngày giao, một màn hình menu và một bước thanh toán. Team nghi ngờ giá là lý do khách rời đi. Chưa có research nào được thực hiện.</p>
+<p><em><a class="tp-dead" title="Source file link: ../../../assets/starter-files/course-case/case-card.md">Case card</a> (Kitchen Crate, hư cấu):</em> một app meal-kit theo gói đăng ký. Nhiều khách hàng mới tạm dừng sau hộp đầu tiên. Team muốn cải thiện onboarding. App có date picker chọn ngày giao, một màn hình menu và một bước thanh toán. Team nghi ngờ giá là lý do khách rời đi. Chưa có research nào được thực hiện.</p>
 <ul>
 <li><strong>Instruction 1 (mơ hồ):</strong> "Làm sao để cải thiện onboarding cho app meal-kit của tôi?"</li>
 <li><strong>Instruction 2 (có cấu trúc, đính kèm case card):</strong> "Chỉ dùng case card. Liệt kê năm điều quan trọng nhất bạn cần biết mà KHÔNG có trong đó, và nói vì sao mỗi điều quan trọng. Không đoán, không dùng kiến thức chung để lấp chỗ trống. Nếu chỗ nào chưa rõ, trả lời 'unknown'. Chỉ trả về danh sách."</li>
@@ -581,7 +582,7 @@
 <li><strong>Lưu một mốc (commit hoặc bản sao) trước mỗi bước AI ghi file,</strong> để quay lại được khi kết quả sai.</li>
 </ol>
 <h3 id="v0-6-4-knowledge-hub-and-sharing">6.4 Knowledge Hub and sharing</h3>
-<p>Ở buổi 1, hub được giới thiệu trong khoảng 5 phút cùng layout project folder, bằng ba ảnh kết quả (overview, work, insights); học viên mở hub mẫu trong folder của mình ở bài tập về nhà. Cách chia sẻ hub (bốn cách bên dưới) nằm ở slide tham khảo và <code>guides/04-share-your-hub.md</code>, không giảng trên lớp.</p>
+<p>Ở buổi 1, hub được giới thiệu trong khoảng 5 phút cùng layout project folder, bằng ba ảnh kết quả (overview, work, insights; xem <a class="tp-dead" title="Source file link: ../../../examples/outcome-examples/README.md">Outcome Examples</a>); học viên mở hub mẫu trong folder của mình ở bài tập về nhà. Cách chia sẻ hub (bốn cách bên dưới) nằm ở slide tham khảo và <code>guides/04-share-your-hub.md</code>, không giảng trên lớp.</p>
 <p>Mọi output đi vào <strong>Knowledge Hub</strong>: một folder Markdown nằm trong project folder, gồm các page theo tuần, và mỗi item một file riêng ngay trong <code>insights/</code> (O1, H1, M1, D1, T1...; chữ cái đầu của mã cho biết loại). Các file liên kết với nhau qua properties, nên người đọc có thể bắt đầu từ bất kỳ design decision nào và lần ra user need, hypothesis, principle và test đứng sau nó. Hub hoàn chỉnh là báo cáo cuối của chương trình; mỗi buổi thêm các item và một page. Về giá trị với tổ chức: hub giữ lại lý do đằng sau mỗi decision khi người làm đổi dự án, cho phép người đọc kiểm chứng lập luận từ decision ngược về evidence, và chỉ ra chỗ yếu trước khi đầu tư xây. Ví dụ minh hoạ (bản nháp, chưa lấy từ một case thật): decision chọn khẩu phần ở màn hình đầu của Kitchen Crate nối tới một user need về việc sợ đặt dư đồ ăn, một evidence từ phỏng vấn và một test xác nhận. Công cụ nào mở được folder đều dùng được. Obsidian thêm Graph view, Backlinks và bảng theo loại item (Bases, file <code>insights/traceability.base</code>); wikilink trong properties chỉ bấm được trong Obsidian, nhưng các công cụ khác vẫn đọc và sửa được vì đó là text. Để chia sẻ cho người khác thì xuất báo cáo HTML.</p>
 <p>Bên cạnh item, mỗi tài liệu làm ra trong dự án (phân tích đối thủ, persona, khảo sát, user flow, prototype) là một <strong>artifact</strong> có trang riêng, nối với các item nó hỗ trợ; tệp ảnh, PDF, HTML thả vào folder của artifact được tự nhận diện, và link Figma được mở ở tab ngoài. File item là nguồn duy nhất. Bảng alignment, danh sách warnings (decision không có user need phía sau, hypothesis không có test) và trạng thái gate do AI dựng lại bằng bước <code>toolkit/skills/refresh-hub.md</code>, vào các khối đánh dấu <code>generated</code>. Bước này chưa được thử với một lớp thật; sau mỗi lần dựng, học viên đối chiếu vài dòng với file item.</p>
 <p><strong>Hub mặc định là private.</strong> Có bốn cách cho người khác xem, từ ít rủi ro nhất:</p>
@@ -720,6 +721,9 @@
 <li>Knowledge Hub dùng để làm gì, và vì sao mỗi item là một file?</li>
 </ol>
 <h3 id="v0-8-2-homework-build-your-project-folder-khoảng-45-phút-nối-tiếp-phần-đã-bắt-đầu-trên-lớp">8.2 Homework: build your project folder (khoảng 45 phút, nối tiếp phần đã bắt đầu trên lớp)</h3>
+<blockquote>
+<p>Từ 2026-10-26 bài tập này nằm trong buổi practice 90 phút ngay sau buổi 1: xem <a href="design-process-with-ai.html">Practice 1</a>. Các tên file trong practice theo <code>case-folder-template</code> (<code>learnings/context-product-and-users.md</code>); mục này vẫn ghi tên cũ <code>context/product-and-users.md</code> và cần đồng bộ khi sửa lesson 1.</p>
+</blockquote>
 <p>Phần này không phải bài nộp để chấm. Đó là một bài tập duy nhất để project folder trở thành workspace dùng được cho dự án thật, cả trong khoá lẫn sau khoá. Nên xong trước buổi 2, vì các buổi sau làm trên chính folder này. Hướng dẫn chia sẻ hub (tuỳ chọn) nằm trong <code>guides/04-share-your-hub.md</code>.</p>
 <p><em>Mục đích:</em> dựng nền tảng mà cả chương trình chạy trên đó, và kiểm tra nó bằng một instruction giống instruction ở ví dụ 4.2. <em>Quy trình:</em></p>
 <ol>
@@ -857,6 +861,77 @@
 <p>Không cần đọc hết các method card trước buổi học; có thể lướt những card của method ít dùng nhất.</p>
 <hr />
 <p><em>Created by Winnie Nguyen · AI Design Workflow · Last updated October 2026</em></p></article>
+  </div>
+</div><div data-var-panel data-var-id="1" hidden>
+  <div class="tp-layout">
+    <aside class="tp-toc" aria-label="On this page"><p class="tp-toc__label">On this page</p><a href="#v1-goal">Goal</a><a href="#v1-before-you-start">Before you start</a><a href="#v1-steps">Steps</a><a href="#v1-output">Output</a><a href="#v1-self-check">Self-check</a><a href="#v1-if-you-get-stuck">If you get stuck</a></aside>
+    <article class="tp-body"><h2 id="v1-goal">Goal</h2>
+<p>Dựng nền mà cả chương trình chạy trên đó: một project folder cho case của bạn, context pack đã bắt đầu, data rules bằng lời của chính bạn, hub khung và hai đến ba dòng về hướng nghề. Các buổi sau làm trên chính folder này.</p>
+<h2 id="v1-before-you-start">Before you start</h2>
+<ul>
+<li>Bạn đã học <a href="design-process-with-ai.html">Lesson 1</a> và có bản đầu của data rules từ activity trên lớp.</li>
+<li>Case của bạn đã được ẩn danh theo data rules. Nếu công ty không cho dùng AI tool, hoặc case quá nhạy cảm, dùng <a class="tp-dead" title="Source file link: ../../../assets/starter-files/course-case/case-card.md">case card</a> của chương trình (Kitchen Crate) cho Step 4.</li>
+<li>Một AI chat tool đã được công ty cho phép, và một công cụ mở folder quen thuộc (AI coding tool, VS Code hoặc Obsidian).</li>
+<li>Workspace template đã tải về dạng ZIP và đặt ở một folder không đồng bộ cloud.</li>
+</ul>
+<h2 id="v1-steps">Steps</h2>
+<h3 id="v1-step-1-dựng-project-folder-10-phút-you">Step 1 · Dựng project folder · 10 phút · YOU</h3>
+<ul>
+<li>Mở cả workspace bằng công cụ của bạn và tạo dự án mới (tên chữ thường, nối bằng dấu gạch ngang). Lệnh <code>toolkit/tools/new-project.py</code> tạo project folder từ <code>my-project</code>.</li>
+<li>Đối chiếu cây folder với layout đã học ở Lesson 1.</li>
+</ul>
+<h3 id="v1-step-2-bắt-đầu-context-pack-20-phút-you">Step 2 · Bắt đầu context pack · 20 phút · YOU</h3>
+<ul>
+<li>Viết bản đầu của <code>learnings/context-product-and-users.md</code>: sản phẩm là gì, ai dùng, job chính của họ. Nửa trang, đã ẩn danh.</li>
+<li>Đưa data rules vào <code>learnings/context-data-rules.md</code>, bằng lời của bạn.</li>
+</ul>
+<h3 id="v1-step-3-đọc-folder-chưa-chỉnh-sửa-5-phút-you">Step 3 · Đọc folder, chưa chỉnh sửa · 5 phút · YOU</h3>
+<ul>
+<li>Mở <code>README.md</code> (project card) và <code>index.html</code> (tab Overview của báo cáo).</li>
+<li>Đọc <code>AGENTS.md</code> để biết AI tool sẽ được dặn những gì.</li>
+</ul>
+<h3 id="v1-step-4-chạy-một-instruction-với-file-đã-lưu-25-phút-ai-soạn-nháp-bạn-kiểm-tra">Step 4 · Chạy một instruction với file đã lưu · 25 phút · AI soạn nháp, bạn kiểm tra</h3>
+<ul>
+<li><strong>AI soạn nháp:</strong> đính kèm <code>learnings/context-product-and-users.md</code> vào AI chat tool và dùng instruction sau.</li>
+</ul>
+<blockquote>
+<p>Đây là context cho design case của tôi. Chỉ dùng file này. Liệt kê năm điều quan trọng nhất bạn cần biết về sản phẩm và người dùng mà KHÔNG có trong file, và nói vì sao mỗi điều quan trọng. Không đoán, không dùng kiến thức chung để lấp chỗ trống. Nếu chỗ nào chưa rõ, trả lời "unknown". Chỉ trả về danh sách.</p>
+</blockquote>
+<ul>
+<li><strong>Bạn kiểm tra:</strong> đọc câu trả lời có phản biện. Câu nào hữu ích, câu nào chung chung, câu nào bạn tự tìm ra được?</li>
+<li><strong>File:</strong> lưu những câu hữu ích vào <code>learnings/context-open-questions.md</code>.</li>
+</ul>
+<h3 id="v1-step-5-hướng-nghề-của-bạn-5-phút-you">Step 5 · Hướng nghề của bạn · 5 phút · YOU</h3>
+<ul>
+<li>Ghi hai đến ba dòng vào <code>_personal/my-direction.md</code>: hướng bạn nghiêng về trong ba hướng đi, lý do, và một kỹ năng bạn muốn xây trong chương trình.</li>
+<li>File này nằm ngoài context pack, không đưa cho AI tool, và sẽ được xem lại ở buổi cuối.</li>
+</ul>
+<h3 id="v1-step-6-đọc-thử-theo-cặp-10-phút-you">Step 6 · Đọc thử theo cặp · 10 phút · YOU</h3>
+<ul>
+<li>Đổi <code>learnings/context-product-and-users.md</code> với một bạn trong lớp.</li>
+<li>Trả lời một câu: người ngoài có hình dung được sản phẩm và người dùng sau khi đọc file không?</li>
+</ul>
+<p>Còn khoảng 10 phút dự phòng cho phần coaching theo nhóm nhỏ. Thời lượng từng bước chưa được thử với một lớp thật.</p>
+<h2 id="v1-output">Output</h2>
+<ul>
+<li>Project folder đúng layout</li>
+<li><code>learnings/context-product-and-users.md</code> (bản đầu)</li>
+<li><code>learnings/context-data-rules.md</code></li>
+<li><code>learnings/context-open-questions.md</code></li>
+<li><code>_personal/my-direction.md</code></li>
+</ul>
+<h2 id="v1-self-check">Self-check</h2>
+<ul>
+<li>☐ Cấu trúc folder giống layout đã học.</li>
+<li>☐ <code>context-product-and-users.md</code> đủ cụ thể để người ngoài hình dung được người dùng.</li>
+<li>☐ Data rules viết bằng lời của chính bạn, không sao chép nguyên mẫu.</li>
+<li>☐ <code>my-direction.md</code> có hai đến ba dòng và nằm ngoài context pack.</li>
+</ul>
+<h2 id="v1-if-you-get-stuck">If you get stuck</h2>
+<ul>
+<li><strong>Công ty không cho dùng AI tool:</strong> làm Step 4 trên case card của chương trình, và quay lại case thật khi được phép.</li>
+<li><strong>Chưa có tài liệu nào về sản phẩm:</strong> viết <code>context-product-and-users.md</code> từ những gì bạn tự biết, và ghi "chưa có nguồn" ở các chỗ bạn đoán.</li>
+</ul></article>
   </div>
 </div></section><section class="tp-panel" data-tab-panel data-tab-id="slides" role="tabpanel" hidden><div class="tp-slides tp-slides--empty"><strong>No slides yet</strong><span>Add a deck (.html) or .pdf to this lesson's <code>slides/</code> folder, or a <code>slides:</code> link in the lesson front matter.</span></div></section><section class="tp-panel" data-tab-panel data-tab-id="homework" role="tabpanel" hidden><div class="tp-slides tp-slides--empty"><strong>No mentee homework yet</strong><span>Drop files in <code>mentees/&lt;name&gt;/homework/design-process-with-ai/</code> and they show up here.</span></div></section>
   <section class="tp-related"><h2>Related lessons</h2><div class="tp-related__grid"><a class="tp-related__card" href="discover-the-problem.html"><span>Next lesson</span><strong>Discover the Problem</strong></a></div></section>

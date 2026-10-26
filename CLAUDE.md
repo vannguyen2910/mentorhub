@@ -26,6 +26,7 @@ To view the site locally, use the `docs` entry in `.claude/launch.json` (port 30
 - `learning/` is private working material (research, method, lesson details). Only pages listed in `SUMMARY.md` reach the site.
 - Lesson files say "buổi N" meaning lesson N, not the session number in the 12-session sequence. Keep that in mind when linking lessons to the plan until the labels are renamed.
 - Before restructuring a lesson, copy the old lesson and outline to `materials/_archive/` with a `-pre-<reason>-YYYY-MM-DD` suffix.
+- Each lesson folder has three files in `materials/`: `*-lesson.md`, `*-practice.md` (student-facing worksheet for the practice session, from `_system/learning templates/_template-practice.md`) and `*-slide-outline.md`. The hub shows lesson and practice only: list them in the `## Lessons` group of `programs/ai-design-workflow/SUMMARY.md` and never list an outline. When a lesson's activities or output file names change, check its practice sheet too. The wrap-up session has its own folder, `07-wrap-up`, with a practice file only.
 
 ## Lesson file sync rule
 

@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="../assets/css/card-list.css"/>
 <link rel="stylesheet" href="../assets/css/text-page.css"/>
 <link rel="stylesheet" href="../assets/css/home.css"/>
+<link rel="stylesheet" href="../assets/css/minimal.css"/>
 
 </head>
 <body class="">
@@ -25,12 +26,13 @@
 </nav>
 <div class="tp">
   <a class="tp-back" href="../programs.html">← All programs</a>
-  <div class="pg"><aside class="pg-side" data-prog="assessment-tool"><div class="pg-nav" role="navigation" aria-label="Program pages"></div></aside><div class="pg-main"><header class="tp-head">
+  <div class="pg"><aside class="pg-side" data-prog="assessment-tool"><div class="pg-nav" role="navigation" aria-label="Program pages"><a class="pg-nav__home is-active" href="assessment-tool.html">Overview</a></div></aside><div class="pg-main"><header class="tp-head">
     <div class="page-eyebrow">Tool</div>
     <h1 class="page-title">assessment-tool</h1>
     <p class="page-desc"></p>
     <p class="prog-stat">0 pages</p>
   </header>
+  
   
   <p class="sess__none">No pages published yet. Add a SUMMARY.md to this folder to choose what appears here.</p>
   </div></div>
@@ -64,6 +66,10 @@
       var on = a.href === url;
       a.classList.toggle('is-active', on);
       if (on) { a.setAttribute('aria-current', 'page'); found = a; } else a.removeAttribute('aria-current');
+    });
+    var name = url.split('/').pop();
+    [].forEach.call(side.querySelectorAll('a[data-kids]'), function (a) {
+      a.classList.toggle('is-branch', !found && (' ' + a.getAttribute('data-kids') + ' ').indexOf(' ' + name + ' ') > -1);
     });
     if (found) { var d = found.closest('details'); if (d) d.open = true; reveal(found); }
   }
