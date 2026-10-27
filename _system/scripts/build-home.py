@@ -36,6 +36,7 @@ from urllib.parse import quote, unquote
 import markdown
 
 import swimlane   # data-driven diagrams: programs/*/assets/diagrams/*.swimlane.json -> .html
+import consistency   # cross-reference checks: programs/*/learning/consistency.json
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CONFIG
@@ -2166,6 +2167,10 @@ def build():
             if old.stat().st_mtime < started:
                 old.unlink()
     (ASSETS / "build-stamp.txt").write_text(str(time.time_ns()), encoding="utf-8")  # written last: open pages reload on it
+    try:
+        consistency.run(details=False)   # one line per program; `python3 _system/scripts/consistency.py` lists what to fix
+    except Exception as err:   # a bad config must never break the build
+        print("  ! consistency check skipped:", repr(err))
     pages = sum(1 for l in lessons if l["has_page"])
     soon = [l["title"] for l in lessons if not l["variants"]]
     health_total = print_health(mentee_health(mentees, lessons)) if "--quiet" not in sys.argv else 0
