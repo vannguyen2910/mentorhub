@@ -50,7 +50,7 @@
 <li><strong>Gate, Rules and Skill.</strong> Thành phần kiểm soát: các gate, rules file và step card mà AI tool làm theo. Quy tắc nhận từ người khác chưa thuộc về học viên cho đến khi tự viết lại.</li>
 </ol>
 <p>Nguyên tắc vận hành giữ nguyên: <strong>AI soạn nháp. Học viên kiểm tra. Học viên quyết định.</strong></p>
-<p><strong>Hình dạng buổi.</strong> Ice breaker, theory (bốn phần), một activity 5 phút trên lớp, hỏi đáp và close. Dựng prototype là việc của Practice 5. Buổi dự kiến 75 phút nội dung và 15 phút buffer để tránh quá giờ.</p>
+<p><strong>Hình dạng buổi.</strong> Ice breaker, theory (bốn phần), một activity 5 phút trên lớp, hỏi đáp và close. Dựng prototype là việc của Practice 5. Buổi dự kiến 72 phút nội dung và 18 phút buffer để tránh quá giờ.</p>
 <p><strong>Vị trí của buổi.</strong> Buổi giả định học viên đã có hướng được chọn và flow (Lesson 4 và Practice 4), và nội dung thật cho các màn hình. Buổi giả định học viên <strong>có một bộ design system trong Figma</strong> (token và component) nhưng <strong>chưa dựng thành code</strong>; việc dựng nằm ở Practice 5. Shell và template chưa có, vì hai layer này thuộc về từng product.</p>
 <hr />
 <h2 id="v0-learning-objectives">Learning Objectives</h2>
@@ -130,7 +130,7 @@
 </table>
 <p>Có một phép so sánh với lập trình, được dùng trong lesson AI Prototype Development: định nghĩa một mẫu một lần, dùng lại nhiều lần, và chỉ tuỳ chỉnh phần khác biệt. Mỗi màn do AI dựng giống một bản sao của cùng một mẫu, không phải một thứ được phát minh lại.</p>
 <h3 id="v0-1-3-systematic-prototype-mindset-ai-assisted-không-phải-ai-generated">1.3 Systematic prototype mindset: AI-assisted, không phải AI-generated</h3>
-<p>Tư duy hệ thống nghĩa là học viên giữ các quyết định: định nghĩa hệ thống, đặt ràng buộc, review từng màn. AI lắp ráp. Một nghiên cứu của Nielsen Norman Group (2025) được dẫn trong lesson AI Prototype Development. Nghiên cứu nêu hai ý. Một: công cụ AI prototyping làm theo chỉ dẫn chung nhưng thiếu độ tinh tế để cân nhắc các đánh đổi thiết kế. Hai: yêu cầu thiết kế dài và chi tiết cho kết quả tốt hơn [11]. Bản gốc chưa được mở lại <code>[to confirm]</code>.</p>
+<p>Tư duy hệ thống nghĩa là học viên giữ các quyết định: định nghĩa hệ thống, đặt ràng buộc, review từng màn. AI lắp ráp.</p>
 <h3 id="v0-1-4-các-đội-lớn-đưa-gì-cho-ai">1.4 Các đội lớn đưa gì cho AI</h3>
 <p>Điểm chung ở các nguồn công khai: đội không để AI tự nghĩ ra giao diện, mà đưa design system vào dạng AI đọc được trước.</p>
 <table>
@@ -213,7 +213,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Design Pattern</strong> là tên chung cho cả bộ bốn layer này, theo cách dùng trong khoá AI Prototype Development của chương trình. Nhóm component nhỏ giải một việc (bộ lọc, trạng thái rỗng) gọi là "nhóm component", không đặt tên riêng.</p>
+<p><strong>Design Pattern</strong> là tên chung cho cả bộ bốn layer này, theo cách dùng trong khoá AI Prototype Development của chương trình. <strong>experience pattern</strong> là cụm component lặp đi lặp lại ở nhiều màn, như search, navigation, bộ lọc, trạng thái rỗng. Loại này ghép từ component có sẵn và khác với Design Pattern, tên chung cho bốn layer. Dựng experience pattern ở Practice 5 là tuỳ chọn.</p>
 <p>Design system dùng làm chuẩn trong buổi này chỉ có token và component. Shell và template thuộc về từng product, nên học viên tự định nghĩa cho product của họ; đây là nội dung bài tập về nhà và bước 2 của skill <code>prototype</code>.</p>
 <h3 id="v0-2-3-tên-gọi-khác-nhau-theo-hệ-thống">2.3 Tên gọi khác nhau theo hệ thống</h3>
 <table>
@@ -287,9 +287,9 @@
 <li><strong>Push too high:</strong> hệ thống mang một thứ mà chỉ một màn hình cần.</li>
 </ul>
 <p>Layer ladder, từ rộng đến hẹp: token (mọi màn), component (mọi chỗ dùng), shell (mọi loại màn), template (mọi màn cùng loại), màn hình (chỉ màn đó). Màn hình không dẫn đi đâu thì sửa ở flow. Ladder gốc có bốn bậc (token, component inventory, template, màn hình); việc xếp shell vào ladder là điều chỉnh của người soạn theo phần shared layout của cùng lesson <code>[to confirm]</code>.</p>
-<h3 id="v0-3-5-gắn-requirement-vào-element-mẫu-link">3.5 Gắn requirement vào element (mẫu Link)</h3>
+<h3 id="v0-3-5-gắn-requirement-vào-element-mẫu-link-tuỳ-chọn">3.5 Gắn requirement vào element (mẫu Link, tuỳ chọn)</h3>
 <p>Một cách một số designer dùng để kiểm prototype <code>[to confirm]</code> (ví dụ do Winnie thu thập từ đồng nghiệp, chưa có nguồn công khai): mỗi requirement có một ID (R1, R2, R3), và mỗi element trong prototype mang ID của requirement mà nó thể hiện. Trong delivery app, màn thanh toán có ba requirement: R1 áp dụng mã giảm giá, R2 thanh toán một chạm, R3 hiển thị phí vận chuyển. AI dựng màn hình, ô nhập mã mang R1, nút Thanh toán mang R2, nhưng không element nào mang R3.</p>
-<p>Điều học viên cần thấy: <strong>một requirement chưa có element nào gắn là chỗ hở.</strong> Màn hình trông đủ, nhưng thiếu một thứ nó phải có. Ngược lại, một element không mang ID nào là chỗ để hỏi: nó thể hiện requirement nào? Người duyệt, không phải AI, quyết định chỗ hở đó được bổ sung hay requirement đó bị bỏ. Sơ đồ: <code>assets/ai-pattern-link.html</code>.</p>
+<p>Điều học viên cần thấy: <strong>một requirement chưa có element nào gắn là chỗ hở.</strong> Màn hình trông đủ, nhưng thiếu một thứ nó phải có. Ngược lại, một element không mang ID nào là chỗ để hỏi: nó thể hiện requirement nào? Người duyệt, không phải AI, quyết định chỗ hở đó được bổ sung hay requirement đó bị bỏ. Sơ đồ: <code>assets/ai-pattern-link.html</code>. Mục này là nội dung thêm, không bắt buộc và không có trong practice sheet; nếu trễ giờ thì bỏ trước tiên.</p>
 <p>Requirement ở đây là dòng ngắn rút từ problem brief và hướng đã chọn <code>[to confirm]</code> (chưa chốt nguồn requirement của học viên ở Practice 5).</p>
 <h3 id="v0-3-6-prototype-là-gì-và-cái-gì-đi-cùng-nó">3.6 Prototype là gì, và cái gì đi cùng nó</h3>
 <ul>
@@ -393,7 +393,7 @@
 </tr>
 <tr>
 <td>4</td>
-<td>The Second View: prototype thật, thay đổi cập nhật theo quy tắc, thứ tự dựng, sửa đúng layer, gắn requirement vào element, prototype là gì</td>
+<td>The Second View: prototype thật, thay đổi cập nhật theo quy tắc, thứ tự dựng, sửa đúng layer, gắn requirement vào element (tuỳ chọn), prototype là gì</td>
 <td>3</td>
 <td>12 phút</td>
 </tr>
@@ -423,25 +423,25 @@
 </tr>
 <tr>
 <td>9</td>
-<td>Close: nối sang Practice 5, bài tập về nhà</td>
+<td>Close: nối sang Practice 5, một câu reflection, learning log</td>
 <td>5.4</td>
-<td>8 phút</td>
+<td>5 phút</td>
 </tr>
 <tr>
 <td></td>
 <td><strong>Tổng nội dung</strong></td>
 <td></td>
-<td><strong>75 phút</strong></td>
+<td><strong>72 phút</strong></td>
 </tr>
 <tr>
 <td></td>
 <td>Buffer</td>
 <td></td>
-<td>15 phút</td>
+<td>18 phút</td>
 </tr>
 </tbody>
 </table>
-<p>Timing chưa được thử với lớp thật. <strong>Thứ tự cắt khi quá giờ (đề xuất, chưa thử):</strong> rút demo ở phần One View còn 3 phút, rồi hỏi đáp còn 6 phút, rồi phần The Aim còn 5 phút.</p>
+<p>Timing chưa được thử với lớp thật. <strong>Thứ tự cắt khi quá giờ (đề xuất, chưa thử):</strong> bỏ mục 3.5 (gắn requirement, tuỳ chọn) trước, rồi rút demo ở phần One View còn 3 phút, rồi hỏi đáp còn 6 phút, rồi phần The Aim còn 5 phút.</p>
 <h3 id="v0-5-2-engagement-rules">5.2 Engagement rules</h3>
 <p>Giữ ba quy tắc của chương trình: đoán trước rồi mới xem; đổi kiểu tương tác mỗi 8 đến 10 phút; mỗi buổi có một cái bẫy. Cái bẫy của buổi nằm ở activity: một màn hình trông ổn nhưng vi phạm ba quy tắc.</p>
 <p>Câu hỏi 30 giây ở cuối mỗi phần theory (hai lựa chọn, bỏ phiếu bằng chat):</p>
@@ -488,7 +488,7 @@
 </ol>
 <p><em>Quy tắc cắt:</em> nếu trễ thì bỏ bước 2, chiếu đáp án luôn. <em>Dữ liệu:</em> màn hình là hư cấu. <em>Output:</em> không có file; kết quả là danh sách lỗi nói ra. Kế hoạch chi tiết và đáp án: <code>learning/lesson-5-activity-rule-break-hunt.md</code> và <code>assets/templates/rule-break-hunt/</code>.</p>
 <h3 id="v0-5-4-homework-and-practice">5.4 Homework and practice</h3>
-<p><strong>Việc chuẩn bị và các bước của Practice 5</strong> nằm trong practice sheet (<code>ai-prototyping-practice.md</code>), không nhắc cụ thể ở buổi này để plan có thể đổi. Học viên mang hướng đã chọn, flow và nội dung thật. Practice 5 áp dụng bốn layer và mười quy tắc lên flow của chính học viên bằng skill <code>prototype</code> của toolkit.</p>
+<p>Cuối buổi, học viên trả lời một câu reflection (mục 7) và ghi learning log. <strong>Việc chuẩn bị và các bước của Practice 5</strong> nằm trong practice sheet (<code>ai-prototyping-practice.md</code>), không nhắc cụ thể ở buổi này để plan có thể đổi. Học viên mang hướng đã chọn, flow và nội dung thật. Practice 5 áp dụng bốn layer và mười quy tắc lên flow của chính học viên bằng skill <code>prototype</code> của toolkit.</p>
 <hr />
 <h2 id="v0-6-ai-in-practice">6. AI in Practice</h2>
 <h3 id="v0-try-this-with-ai">🤖 Try this with AI</h3>
@@ -515,9 +515,9 @@
 <li>Rules file mẫu có mấy quy tắc và chia thành nhóm nào? (Mười quy tắc: năm quy tắc hệ thống, năm quy tắc làm việc.)</li>
 <li>Vì sao báo cáo của AI rằng một màn hình đã xong không đủ? (Chỉ là bản tóm tắt; bằng chứng là trang đã mở và đối chiếu với quy tắc.)</li>
 </ol>
-<h3 id="v0-reflection-prompt-homework">Reflection prompt (homework)</h3>
+<h3 id="v0-reflection-prompt-cuối-buổi">Reflection prompt (cuối buổi)</h3>
 <blockquote>
-<p><em>"Trong flow của học viên, shell gồm những gì và có mấy template? Chỗ nào AI nhiều khả năng tự bịa nếu không có quy tắc?"</em></p>
+<p><em>"Ý nào hôm nay làm bạn đổi cách đưa context cho AI?"</em> Học viên ghi câu trả lời cùng ba dòng learning log (đã làm gì, phản hồi nhận được, lần sau đổi gì).</p>
 </blockquote>
 <hr />
 <h2 id="v0-8-limitations-and-ethics">8. Limitations and ethics</h2>
@@ -529,10 +529,9 @@
 <li><strong>Màn hình ở activity và hai kết quả demo</strong> là hư cấu hoặc dựng sẵn; không đại diện cho mức độ AI vi phạm quy tắc trong thực tế.</li>
 <li><strong>Định nghĩa One View và The Second View</strong> (nền chuẩn và prototype thật) đã được Winnie xác nhận; tên "view" được giữ theo yêu cầu của Winnie. Đây là khung của chương trình, không phải thuật ngữ chuẩn ngành.</li>
 <li><strong>Việc cập nhật thay đổi từ One View sang The Second View</strong> chỉ tự động ở layer token (theo lesson Scaling the Prototype). Các layer khác cần một prompt có kiểm soát.</li>
-<li><strong>Nghiên cứu của Nielsen Norman Group (2025) [11]</strong> được dẫn lại từ lesson AI Prototype Development, chưa mở bản gốc.</li>
 <li><strong>Mười quy tắc mẫu</strong> lấy từ deck lesson 3 của khoá AI Prototype Development; hai chỗ chỉnh (quy tắc 3 thêm shell, quy tắc 5 thêm content voice) đã được Winnie xác nhận.</li>
 <li><strong>Thời gian trong thiết kế buổi</strong> chưa được kiểm chứng.</li>
-<li><strong>Nguồn [1], [2], [10] và [11]</strong> chưa có transcript, chưa đọc hết hoặc chưa mở bản gốc, nên đánh dấu <code>[to confirm]</code>; các nguồn [3] đến [9] đã được đọc.</li>
+<li><strong>Nguồn [1], [2] và [10]</strong> chưa có transcript, chưa đọc hết hoặc chưa mở bản gốc, nên đánh dấu <code>[to confirm]</code>; các nguồn [3] đến [9] đã được đọc.</li>
 </ul>
 <hr />
 <h2 id="v0-9-connection-to-the-series">9. Connection to the series</h2>
@@ -575,7 +574,6 @@
 <p>[8] Sather, W. (2025-08-22). <em>AI-powered prototyping with design systems.</em> Vercel. Blog vendor; không có số liệu và không nêu tên khách hàng; đã đọc đầy đủ.</p>
 <p>[9] Guisard, I. (2026-03-11). <em>How Uber Built an Agentic System to Automate Design Specs in Minutes.</em> Uber Engineering. Số liệu của chính Uber (spec screen reader ba nền tảng trong dưới 2 phút); không có số đo độ chính xác; đã đọc đầy đủ.</p>
 <p>[10] Headway (2026). <em>Design Systems for AI and Agentic Development.</em> Podcast Even-Keeled. Agency bán dịch vụ liên quan; đã đọc khoảng 70% trang gốc, phần cuối là tóm tắt do máy sinh. <code>[to confirm]</code></p>
-<p>[11] Nielsen Norman Group (2025). Nghiên cứu về công cụ AI prototyping, được dẫn trong <code>library/lessons/03-develop/ai-prototype-development/materials/ai-prototype-development-lesson.md</code> (công cụ làm theo chỉ dẫn chung nhưng thiếu độ tinh tế để cân nhắc đánh đổi thiết kế; yêu cầu thiết kế dài và chi tiết cho kết quả tốt hơn). Tên bài và cỡ mẫu chưa có, bản gốc chưa được mở. <code>[to confirm]</code></p>
 <hr />
 <p><em>Created by Winnie Nguyen · AI Design Workflow · Last updated October 2026</em></p></article>
   </div>
@@ -624,11 +622,11 @@
 <li><strong>Bạn kiểm tra (Gate B):</strong> tab qua điều hướng bằng bàn phím, mở ở độ rộng điện thoại và máy tính, tìm giá trị thô. Khi đúng, nói "Lưu lại".</li>
 <li><strong>File:</strong> các file shell và template, mục <code>## Shell and templates</code> trong <code>work/prototype/index.md</code></li>
 </ul>
-<h3 id="v1-step-5-build-pattern-ai-coding-tool-optional">Step 5 · Build pattern · AI coding tool · Optional</h3>
+<h3 id="v1-step-5-build-experience-pattern-ai-coding-tool-optional">Step 5 · Build experience pattern · AI coding tool · Optional</h3>
 <ul>
-<li>Bước này <strong>tuỳ chọn</strong>. Làm khi flow có cụm component lặp lại ở nhiều màn, ví dụ form đăng nhập, danh sách có bộ lọc, hộp xác nhận, màn trạng thái rỗng.</li>
-<li><strong>AI dựng:</strong> mỗi pattern là một cụm component, ghép từ component có sẵn. Không thêm component mới.</li>
-<li><strong>Bạn kiểm tra:</strong> pattern có dùng ở ít nhất hai màn không? Một pattern chỉ dùng một lần thì để lại trong màn đó.</li>
+<li>Bước này <strong>tuỳ chọn</strong>. Làm khi flow có cụm component lặp lại ở nhiều màn, ví dụ search, navigation, form đăng nhập, danh sách có bộ lọc, hộp xác nhận, trạng thái rỗng.</li>
+<li><strong>AI dựng:</strong> mỗi experience pattern là một cụm component, ghép từ component có sẵn. Không thêm component mới.</li>
+<li><strong>Bạn kiểm tra:</strong> experience pattern có dùng ở ít nhất hai màn không? Một experience pattern chỉ dùng một lần thì để lại trong màn đó.</li>
 <li><strong>File:</strong> <code>components.css</code>, <code>components.html</code> (mục pattern)</li>
 </ul>
 <h3 id="v1-step-6-build-journey-prototype-ai-coding-tool-ai-dựng-bạn-kiểm-tra-gate-c-cho-screen-plan">Step 6 · Build journey prototype · AI coding tool · AI dựng, bạn kiểm tra (Gate C cho Screen plan)</h3>

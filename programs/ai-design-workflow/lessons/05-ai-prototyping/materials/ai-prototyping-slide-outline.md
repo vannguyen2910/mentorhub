@@ -2,7 +2,7 @@
 title: "AI Prototyping"
 lesson_file: "ai-prototyping-lesson.md"
 level: ""
-slide_count: 29
+slide_count: 32
 duration: "90 min"
 status: draft
 built_deck: ""
@@ -13,7 +13,7 @@ last_synced: 2026-10-30
 
 > **Copy standard:** mọi Kicker, Title và dòng On-slide đọc được trong một cái nhìn, không câu nào quá khoảng 15 từ. Speaker notes dùng ngôi "mình".
 
-> **Deck status:** chưa có deck nào được build từ outline này.
+> **Deck status:** đã build tại `Lesson 5 - AI Prototyping.dc.html` (32 slide). File này được đồng bộ ngược từ deck; nội dung on-slide trích từ chính slide.
 
 ---
 
@@ -30,35 +30,58 @@ last_synced: 2026-10-30
 
 ---
 
-## Slide structure: 29 slides
+## Slide structure: 32 slides
 
-- Arc: **Open** (cover, ice breaker) → **Theory** → **Bridge** (break, cheat sheet) → **Activity** (Rule-break hunt, 5 phút) → **Hỏi đáp** → **Close** (việc tiếp theo, kết thúc).
-- Theory gồm một divider và bốn phần: The Aim, One View, The Second View, Gate/Rules/Skill.
+- Arc: **Open** (Cover, Agenda, Ice breaker) → **01 The Aim** → **02 One View** → **03 The Second View** → **04 Gate, Rules, Skill** → **Close** (Cheat sheet, Q&A, Practice 5, Takeaway).
+- Hai activity dùng chung khuôn: Ice breaker (nền tím, căn trái, câu hỏi trên slide). Rule-break hunt và các slide đáp án đã bỏ khỏi deck.
+- Ảnh lưu ở thư mục `assets/` của project deck.
 
 ---
 
 ## Slides
 
-### COVER
-- Year: 2026 · Winnie Nguyen
-- Stage: Develop
-- Title: Prototype\nwith *rules*
-- Subtitle: Give AI your rules, not a blank page
-- Author: Winnie Nguyen
-- Credentials:
+### 01 · Cover · Systematic AI Prototyping
+- Kicker: 2026 · Winnie Nguyen
+- Title: Systematic AI Prototyping
+- On-slide:
+  - Develop
+  - Xây dựng prototype với Design System và Rules
+  - Winnie
+  - Nguyen
   - Senior Product Designer
   - Master of UX & Service Design
   - Product Design Instructor
-- Right panel photo: Ảnh thật từ Unsplash bàn tay đang xếp các thẻ giấy thành một khung màn hình trên bàn, ánh sáng ấm, gần gũi
 - Speaker notes:
-- 🎨 Visual hint: Cover layout, cố định. Panel trái trắng với dòng năm, nhãn stage, title (accent ở dòng 2) và subtitle. Panel phải là ảnh thật với gradient tối, tên và ba dòng credentials ở góc dưới trái.
+
+- 🎨 Visual hint: Ảnh: `https://images.unsplash.com/photo-1600132806608-231446b2e7af?auto=format&amp;fit=crop&amp;w=1400&amp;q=80`
 ---
 
-### MILESTONE · Ice breaker
-- Num: 6
-- Kicker: Open
+### 02 · AGENDA · Nội dung buổi học
+- Kicker: Agenda
+- Title: Nội dung\n*buổi học*
+- On-slide:
+  - 01
+  - The Aim
+  - 02
+  - One View
+  - 03
+  - The Second View
+  - 04
+  - Gate, Rules, Skill
+- Speaker notes:
+
+  > Bốn phần, mỗi phần kết thúc bằng một câu hỏi ngắn bỏ phiếu bằng chat.
+
+  - Việc dựng prototype là ở buổi practice
+  - Phần nặng nhất là One View: nó đặt tên cho những gì bạn sẽ đưa cho AI
+- 🎨 Visual hint: Typographic / layout chữ
+---
+
+### 03 · MILESTONE · Looked fine, was wrong
+- Kicker: Activity
 - Title: Looked fine,\n*was wrong*
-- Sub: Tên bạn, và một lần AI dựng màn hình trông ổn mà hóa ra sai
+- On-slide:
+  - Lần gần nhất AI dựng cho bạn một màn hình trông ổn, đến khi kiểm lại bạn mới thấy sai. Sai ở đâu, và bạn phát hiện bằng cách nào?
 - Speaker notes:
 
   > Lần gần nhất AI dựng cho bạn một màn hình trông ổn, đến khi kiểm lại bạn mới thấy sai. Sai ở đâu, và bạn phát hiện bằng cách nào?
@@ -68,41 +91,41 @@ last_synced: 2026-10-30
   - Hỏi nhanh về tuần 4: hướng đã chọn và flow đã có chưa
   - Ai chưa có câu chuyện thì kể điều mình sợ nhất khi AI dựng giao diện
 
-  > **Mình giữ bảng này để quay lại ở cuối buổi.**
+  > Mình giữ bảng này để quay lại ở cuối buổi.
 
   > Những lỗi này nghe quen không? Mình vào phần nội dung.
-- 🎨 Visual hint: TYPOGRAPHIC. Milestone layout nền purple, số phút lớn; bên dưới một cột trống "Kiểu lỗi" để ghi.
+- 🎨 Visual hint: Typographic / layout chữ
 ---
 
-### SECTION DIVIDER · Theory
-- Num: 01
-- Kicker: Four parts
-- Title: Give AI the\n*right context*
-- Sub: The Aim, One View, The Second View, Gate/Rules/Skill
+### 04 · SECTION DIVIDER · The Aim
+- Kicker: 01
+- Title: The *Aim*
+- On-slide:
+  - Vì sao từng màn bị lệch, và hướng đi của đội lớn
 - Speaker notes:
 
   > Những lỗi trên bảng đều có chung một nguồn: AI không có gì cố định để bám vào.
 
   - Bốn phần, mỗi phần kết thúc bằng một câu hỏi ngắn bỏ phiếu bằng chat
-  - Activity năm phút nằm sau phần cuối; việc dựng prototype là ở buổi practice
+  - Việc dựng prototype là ở buổi practice
   - Phần nặng nhất là One View: nó đặt tên cho những gì bạn sẽ đưa cho AI
 
   > Mình bắt đầu từ câu hỏi: vì sao dựng từng màn hình lại bị lệch?
-- 🎨 Visual hint: TYPOGRAPHIC. Nền paper-deeper, số phần lớn, accent ở dòng 2.
+- 🎨 Visual hint: Typographic / layout chữ
 ---
 
-### COMPARE · Four problems
+### 05 · COMPARE · Bốn vấn đề, một cách sửa
 - Kicker: So sánh
-- Title: Bốn vấn đề, một cách sửa
+- Title: Bốn vấn đề, *một cách sửa*
 - On-slide:
-  - Mọi thứ lệch dần: mọi màn dùng chung bố cục
-  - AI quên hết: một pattern viết sẵn, đọc lại mỗi prompt
-  - Trạng thái bị quên: ghi đủ trạng thái ngay từ đầu
-  - Làm lại tốn token: ít phải suy lại, ít phải thử lại
-- Ví dụ: có (delivery app: ba màn Giỏ hàng, Chọn thời gian giao, Thanh toán dựng ở ba lần prompt riêng)
-- Câu hỏi hay gặp:
-  - Viết prompt thật hay có đủ không? Prompt giúp từng màn, nhưng không giữ được những thứ phải cố định giữa các màn.
-  - Có số đo chi phí token không? Deck gốc của lesson 1 có số liệu; buổi này không dùng vì chưa kiểm.
+  - Mọi thứ lệch dần
+  - Mọi màn dùng chung bố cục
+  - AI quên hết
+  - Một pattern viết sẵn, đọc lại mỗi prompt
+  - Trạng thái bị quên
+  - Ghi đủ trạng thái ngay từ đầu
+  - Làm lại tốn token
+  - Ít phải suy lại, ít phải thử lại
 - Speaker notes:
 
   > Giả sử bạn dựng ba màn của một delivery app: giỏ hàng, chọn thời gian giao, thanh toán, mỗi màn một prompt riêng. Màn một và màn hai thường ổn. Màn ba có thể đã đổi thanh điều hướng và màu nút.
@@ -114,23 +137,34 @@ last_synced: 2026-10-30
   - Vấn đề hai và bốn cùng một gốc: AI không có context cố định, nên cùng một cách sửa giải quyết cả hai
   - Đây là quan sát từ thực hành của chương trình, không phải kết quả đo
 
-  > **Cả bốn vấn đề quy về một gốc: AI không có gì cố định để bám.**
+  > Cả bốn vấn đề quy về một gốc: AI không có gì cố định để bám.
 
   > Bạn đã thấy ba màn của một app có ba kiểu điều hướng chưa?
-- 🎨 Visual hint: SCHEMATIC. Bốn hàng, mỗi hàng một vấn đề bên trái và cách sửa bên phải, nối bằng mũi tên. Hàng AI quên hết và hàng làm lại tốn token cùng chỉ về một gốc "không có context cố định".
+
+  > Câu hỏi hay gặp:
+  - Viết prompt thật hay có đủ không? Prompt giúp từng màn, nhưng không giữ được những thứ phải cố định giữa các màn.
+  - Có số đo chi phí token không? Deck gốc của lesson 1 có số liệu; buổi này không dùng vì chưa kiểm.
+- 🎨 Visual hint: Typographic / layout chữ
 ---
 
-### DIAGRAM · The Aim
+### 06 · DIAGRAM · Ba ý của The Aim
 - Kicker: Mục tiêu
-- Title: Ba ý của The Aim
+- Title: Ba ý của *The Aim*
 - On-slide:
-  - Systematic prototype mindset: hệ thống trước, màn hình sau
-  - Pattern first: Design Pattern là đầu vào của prototype
-  - AI-assisted, không phải AI-generated
-- Ví dụ: có (delivery app: định nghĩa hệ thống một lần, rồi dựng ba màn từ nó)
-- Câu hỏi hay gặp:
-  - Pattern ở đây là gì? Design Pattern là tên chung cho bộ token, component, template và shell.
-  - Vì sao AI-assisted? Học viên giữ các quyết định: định nghĩa hệ thống, đặt ràng buộc, review từng màn.
+  - 01
+  - Systematic prototype mindset
+  - Hệ thống trước, màn hình sau
+  - 02
+  - Pattern first
+  - Design Pattern là đầu vào của prototype
+  - 03
+  - AI-assisted
+  - Không phải AI-generated với không có mục đích và sự đối chiếu
+  - Hệ thống
+  - Giỏ hàng
+  - Chọn thời gian giao
+  - Thanh toán
+  - định nghĩa một lần
 - Speaker notes:
 
   > Với delivery app, thay vì dựng màn giỏ hàng rồi màn thanh toán từ đầu, bạn định nghĩa hệ thống một lần. Ba màn sau đó là ba cách sắp xếp những thứ đã có.
@@ -140,24 +174,32 @@ last_synced: 2026-10-30
   - Ý ba: AI lắp ráp, còn bạn định nghĩa hệ thống, đặt ràng buộc và review từng màn
   - Cách nghĩ của lập trình: định nghĩa một mẫu một lần, dùng lại nhiều lần và chỉ tuỳ chỉnh phần khác biệt
 
-  > **Hệ thống là đầu vào của prototype, không phải đầu ra.**
+  > Hệ thống là đầu vào của prototype, không phải đầu ra.
 
   > Trong ba ý này, ý nào khác nhất với cách bạn đang làm?
-- 🎨 Visual hint: SCHEMATIC. Ba khối ngang: mindset, pattern first, AI-assisted; một mũi tên từ hệ thống sang ba màn hình.
+
+  > Câu hỏi hay gặp:
+  - Pattern ở đây là gì? Design Pattern là tên chung cho bộ token, component, template và shell.
+  - Vì sao AI-assisted? Học viên giữ các quyết định: định nghĩa hệ thống, đặt ràng buộc, review từng màn.
+- 🎨 Visual hint: Có diagram SVG line-art
 ---
 
-### NUMBERED · Big teams
+### 07 · NUMBERED · Cách product lớn đang làm thế nào
 - Kicker: Ví dụ
-- Title: Đội lớn làm thế nào
+- Title: Cách product lớn đang *làm thế nào*
 - On-slide:
-  - Stripe cho AI đọc rules file, khung điều hướng và design system qua MCP
-  - Atlassian cài skill vào repo, kèm chỉ dẫn ngắn trong AGENTS.md
-  - Vercel đóng gói component và block trong registry cho AI đọc
-  - Uber: agent đọc design system, spec ba nền tảng dưới 2 phút (số của Uber)
-- Ví dụ: có (bốn đội công khai: Stripe [1][2], Atlassian [3], Vercel [8], Uber [9]; Stripe `[to confirm]`)
-- Câu hỏi hay gặp:
-  - Có số đo hiệu quả không? Chỉ có số của chính Uber và lời nói của người xây công cụ ở Stripe, không có nghiên cứu độc lập.
-  - Cần MCP mới làm được không? Không; hôm nay chỉ cần rules file và design system.
+  - 01
+  - Stripe
+  - Cho AI đọc rules file, khung điều hướng và design system qua MCP
+  - 02
+  - Atlassian
+  - Cài skill vào repo, kèm chỉ dẫn ngắn trong AGENTS.md
+  - 03
+  - Vercel
+  - Đóng gói component và block trong registry cho AI đọc
+  - 04
+  - Uber
+  - Agent đọc design system, spec ba nền tảng dưới 2 phút (số của Uber)
 - Speaker notes:
 
   > Theo một tóm tắt podcast về Stripe, một designer xây công cụ để designer và PM tạo prototype từ design system, thay vì từ trang trắng. Mình chưa đọc transcript đầy đủ, nên coi đây là lời kể của một người: công cụ làm phần lớn việc, designer vẫn là người lái.
@@ -168,25 +210,49 @@ last_synced: 2026-10-30
   - Số của Uber là số của chính Uber, không có số đo độ chính xác
   - Phần lớn nguồn là tài liệu của vendor hoặc lời kể của một người; chưa có nghiên cứu độc lập
 
-  > **Mình nêu số liệu kèm nguồn, và nói thẳng khi chưa có số đo.**
+  > Mình nêu số liệu kèm nguồn, và nói thẳng khi chưa có số đo.
 
   > Câu hỏi 30 giây: màn ba có thanh điều hướng khác màn một. Nguyên nhân nhiều khả năng nhất? A, prompt chưa đủ hay. B, AI không có gì cố định để bám. Gõ A hoặc B vào chat.
-- 🎨 Visual hint: TYPOGRAPHIC. Numbered lưới 2 cột, bốn ô; tên công ty chữ lớn, một dòng mô tả bên dưới.
+
+  > Câu hỏi hay gặp:
+  - Có số đo hiệu quả không? Chỉ có số của chính Uber và lời nói của người xây công cụ ở Stripe, không có nghiên cứu độc lập.
+  - Cần MCP mới làm được không? Không; hôm nay chỉ cần rules file và design system.
+
+  > Nguồn: có (bốn đội công khai: Stripe [1][2], Atlassian [3], Vercel [8], Uber [9]; Stripe [to confirm])
+
+  > Cần xác nhận trước buổi dạy:
+  - Ví dụ: có (bốn đội công khai: Stripe [1][2], Atlassian [3], Vercel [8], Uber [9]; Stripe [to confirm])
+- 🎨 Visual hint: Typographic / layout chữ
 ---
 
-### DIAGRAM · One View
+### 08 · SECTION DIVIDER · One View
+- Kicker: 02
+- Title: One *View*
+- On-slide:
+  - Token, component, shell, template và một journey chính
+- Speaker notes:
+
+  > Phần này đặt tên cho những gì bạn sẽ đưa cho AI: bốn layer của Design Pattern và một journey.
+
+  - Đi từ layer thấp lên cao: token, component, shell, template
+  - Rồi phạm vi: một shell và một journey
+
+  > Mình bắt đầu từ định nghĩa One View.
+- 🎨 Visual hint: Typographic / layout chữ
+---
+
+### 09 · DIAGRAM · One View là gì?
 - Kicker: Nền chuẩn
-- Title: One View là gì?
+- Title: *One View* là gì?
 - On-slide:
   - Mọi prototype dùng chung một starter và một cấu trúc folder
   - Cùng component và cùng content voice
   - Bên trong có bốn layer và một journey chính
-  - Trong deck gốc: trang design-system.html
-- Ví dụ: có (delivery app: nhãn "Đơn hàng" ở mọi màn, không lúc "Đơn" lúc "Order")
-- Câu hỏi hay gặp:
-  - View là gì? Một cách nhìn vào cùng một product. One View là nền chuẩn; The Second View là prototype thật.
-  - Content voice là gì? Cách đặt nhãn, thông báo và thuật ngữ nhất quán giữa các màn.
-  - One View nhìn thấy ở đâu? Trang design-system.html: gom token, component, template và shell để kiểm tra hệ thống trước khi dựng màn.
+  - Starter
+  - Cấu trúc folder
+  - Component
+  - Content voice
+  - Bốn layer + một journey chính
 - Speaker notes:
 
   > Mở một delivery app và nhìn từng màn: chỗ này ghi "Đơn hàng", chỗ kia ghi "Order", chỗ nọ chỉ ghi "Đơn". Content voice đổi giữa các màn cũng là một kiểu lệch.
@@ -198,27 +264,34 @@ last_synced: 2026-10-30
   - "View" là một cách nhìn vào cùng một product; slide The Second View nói cách nhìn còn lại
   - Trong các deck của khoá AI Prototype Development, One View là trang design-system.html, nơi kiểm tra hệ thống trước khi dựng màn
 
-  > **Cùng một nền thì mọi prototype có cùng content voice.**
+  > Cùng một nền thì mọi prototype có cùng content voice.
 
   > Product của bạn hiện có bao nhiêu cách gọi cho cùng một thứ?
-- 🎨 Visual hint: SCHEMATIC. Một khối lớn "One View" chứa bốn ô: starter, folder, component, content voice; bên trong ghi "bốn layer + một journey".
+
+  > Câu hỏi hay gặp:
+  - View là gì? Một cách nhìn vào cùng một product. One View là nền chuẩn; The Second View là prototype thật.
+  - Content voice là gì? Cách đặt nhãn, thông báo và thuật ngữ nhất quán giữa các màn.
+  - One View nhìn thấy ở đâu? Trang design-system.html: gom token, component, template và shell để kiểm tra hệ thống trước khi dựng màn.
+- 🎨 Visual hint: Có diagram SVG line-art
 ---
 
-### DIAGRAM · The Design Stack
+### 10 · DIAGRAM · Bốn layer của  Design Pattern
 - Kicker: Bản đồ
-- Title: Bốn layer của Design Pattern
+- Title: Bốn layer của *\nDesign Pattern*
 - On-slide:
-  - Template: bố cục một loại trang
-  - Shell: khung lặp ở mọi màn hình
-  - Component: nút, ô nhập, thẻ chọn
-  - Token: màu, cỡ chữ, khoảng cách
-  - Cả bộ bốn layer gọi là Design Pattern
-  - Design system của bạn có token và component; shell và template là của product
-- Ví dụ: có (delivery app: màu chính là token, nút là component, header và menu là shell, trang danh sách là template)
-- Câu hỏi hay gặp:
-  - Search hay navigation lặp lại ở nhiều màn có phải Design Pattern không? Không; đó là experience pattern, ghép từ component. Design Pattern là tên chung cho cả bốn layer.
-  - Vì sao thứ tự này? Layer thấp ít đổi và nhiều thứ phụ thuộc; cố định trước. Đây là suy luận, chưa có nghiên cứu đo.
-  - Các hệ thống khác gọi thế nào? Carbon gọi UI shell, Material gọi layout scaffold, Polaris tách template và composition. Không có chuẩn ngành, nên lớp dùng bộ từ này.
+  - Design Pattern là tên chung cho bốn layer: token, component, shell, template
+  - Định nghĩa một mẫu một lần, dùng lại nhiều lần, chỉ tuỳ chỉnh phần khác biệt
+  - Là đầu vào của prototype, không phải đầu ra của việc thiết kế
+  - Template
+  - bố cục một loại trang
+  - Shell
+  - khung lặp ở mọi màn hình
+  - Component
+  - nút, ô nhập, thẻ chọn
+  - Token
+  - màu, cỡ chữ, khoảng cách
+  - Design
+  - Pattern
 - Speaker notes:
 
   > Mở một delivery app trên điện thoại. Màu xanh của nút là token. Nút là component. Thanh trên cùng và menu dưới là shell. Trang danh sách nhà hàng là template.
@@ -230,23 +303,75 @@ last_synced: 2026-10-30
   - Thứ tự từ dưới lên là suy luận từ cấu trúc: đổi shell là đổi mọi màn hình
   - Khi đọc tài liệu khác, đối chiếu từ của họ với bốn layer này: Carbon nói UI shell, Material nói layout scaffold (nguồn 4 và 6)
 
-  > **Bốn layer này là thứ bạn đưa cho AI trước khi nó dựng.**
+  > Bốn layer này là thứ bạn đưa cho AI trước khi nó dựng.
 
   > Trong design system của bạn hôm nay, layer nào đang thiếu?
-- 🎨 Visual hint: SCHEMATIC. Diagram `design-stack.html`: bốn khối xếp chồng, template trên cùng, token dưới cùng; một ngoặc bên phải ghi "Design Pattern".
+
+  > Câu hỏi hay gặp:
+  - Search hay navigation lặp lại ở nhiều màn có phải Design Pattern không? Không; đó là experience pattern, ghép từ component. Design Pattern là tên chung cho cả bốn layer.
+  - Vì sao thứ tự này? Layer thấp ít đổi và nhiều thứ phụ thuộc; cố định trước. Đây là suy luận, chưa có nghiên cứu đo.
+  - Các hệ thống khác gọi thế nào? Carbon gọi UI shell, Material gọi layout scaffold, Polaris tách template và composition. Không có chuẩn ngành, nên lớp dùng bộ từ này.
+- 🎨 Visual hint: Có diagram SVG line-art
 ---
 
-### DIAGRAM · Shell
+### 11 · DIAGRAM · Token là gì?
 - Kicker: Định nghĩa
-- Title: Shell là gì?
+- Title: *Token* là gì?
+- On-slide:
+  - Giá trị thiết kế được đặt tên: màu, cỡ chữ, khoảng cách
+  - Layer thấp nhất: đổi một token thì mọi nơi dùng nó đổi theo
+  - Không dùng giá trị thô như mã màu viết tay
+  - Minh hoạ: design system của product
+- Speaker notes:
+
+  > Mở một delivery app. Màu xanh của nút không nên là một mã màu viết tay ở từng màn, mà là một token tên "màu chính".
+
+  - Token là giá trị thiết kế được đặt tên: màu, cỡ chữ, khoảng cách
+  - Đây là layer thấp nhất, nhiều thứ phụ thuộc vào nó
+  - Đổi một token thì mọi nơi dùng token đó đổi theo; đây là layer duy nhất tự cập nhật
+  - Quy tắc 2 của rules file bắt AI chỉ dùng token và báo cái chưa có
+
+  > Token là lời đặt tên cho giá trị, để AI không tự bịa mã màu.
+
+  > Design system của bạn đã có token nào?
+
+  > (Bản nháp: nội dung do mình soạn, cần chỉnh lại.)
+- 🎨 Visual hint: Ảnh: `assets/token-color.png`
+---
+
+### 12 · DIAGRAM · Component là gì?
+- Kicker: Định nghĩa
+- Title: *Component* là gì?
+- On-slide:
+  - Thành phần giao diện dùng lại được: nút, ô nhập, thẻ chọn
+  - Dựng từ token, có đủ trạng thái: mặc định, rỗng, đang tải, lỗi
+  - Inventory liệt kê mọi component; thiếu thì thêm trước
+  - Minh hoạ: design system của product
+- Speaker notes:
+
+  > Trong delivery app, nút "Tiếp tục" ở màn giỏ hàng và ở màn thanh toán là cùng một component, chỉ khác nhãn.
+
+  - Component là thành phần giao diện dùng lại được: nút, ô nhập, thẻ chọn
+  - Nó dựng từ token, nên đổi token là component đổi theo
+  - Mỗi component ghi đủ trạng thái: mặc định, rỗng, đang tải, lỗi
+  - Component inventory liệt kê mọi component; quy tắc 1 bắt AI dừng khi thiếu
+
+  > AI chỉ được dùng component có trong inventory.
+
+  > Component nào product của bạn hay bị làm lại ở từng màn?
+
+  > (Bản nháp: nội dung do mình soạn, cần chỉnh lại.)
+- 🎨 Visual hint: Ảnh: `assets/component-inventory.png`
+---
+
+### 13 · DIAGRAM · Shell là gì?
+- Kicker: Định nghĩa
+- Title: *Shell* là gì?
 - On-slide:
   - Khung lặp ở mọi màn hình, còn gọi shared layout
   - Header, menu, vùng nội dung
   - Năm quyết định: header, side nav, mục điều hướng, nút chính, màn hình hẹp
-- Ví dụ: có (delivery app: header có tên app, menu Trang chủ, Đơn hàng, Cài đặt, thu thành menu ở màn hình hẹp)
-- Câu hỏi hay gặp:
-  - Shell có phải một component? Là một nhóm component đặt cố định; Carbon gọi là UI shell và tách thành header và panel.
-  - Product nhỏ có cần không? Có; ít nhất là quyết định có điều hướng hay không.
+  - Nguồn: Carbon Design System
 - Speaker notes:
 
   > Đây là dự án demo Travel Buddy của khoá: màn nào cũng có cùng một thanh tab ở đáy. Trong delivery app, đó là cùng một thanh trên cùng và cùng một menu ở màn giỏ hàng và màn thanh toán. Phần lặp đó là shell.
@@ -256,23 +381,23 @@ last_synced: 2026-10-30
   - Đây là thứ AI hay tự thêm hoặc đổi từng màn nếu bạn không cố định
   - Năm quyết định này là phần bạn tự định nghĩa cho product của bạn
 
-  > **Quyết định shell một lần, rồi cấm AI tự thêm điều hướng.**
+  > Quyết định shell một lần, rồi cấm AI tự thêm điều hướng.
 
   > Product của bạn hiện có mấy kiểu điều hướng khác nhau?
-- 🎨 Visual hint: REAL. Ảnh `library/lessons/03-develop/ai-prototype-development/assets/lesson-5-showcase-wireframe-3-plan.png` (dự án demo của khoá, ghi chú nhỏ "Dự án demo: Travel Buddy"). Khoanh thanh tab dưới (Discover / Plan / Connect / Journal) và nhãn "Shell"; vùng còn lại ghi "Nội dung từng màn". Nếu cần, thêm `wireframe-4-connect.png` để thấy cùng thanh tab ở màn khác.
+
+  > Câu hỏi hay gặp:
+  - Shell có phải một component? Là một nhóm component đặt cố định; Carbon gọi là UI shell và tách thành header và panel.
+  - Product nhỏ có cần không? Có; ít nhất là quyết định có điều hướng hay không.
+- 🎨 Visual hint: Ảnh: `assets/shell-carbon-ui-shell.png`
 ---
 
-### DIAGRAM · Template
+### 14 · DIAGRAM · Template là gì?
 - Kicker: Định nghĩa
-- Title: Template là gì?
+- Title: *Template* là gì?
 - On-slide:
   - Bố cục một loại trang, chưa có nội dung cuối
   - Ví dụ: trang danh sách, trang chi tiết, trang cài đặt
   - Mỗi template có các vùng: chính, phụ, thanh hành động
-- Ví dụ: có (delivery app: danh sách nhà hàng, chi tiết món, thanh toán)
-- Câu hỏi hay gặp:
-  - Cần bao nhiêu template? Hai đến ba cho một flow; nhiều hơn thường là chưa chọn.
-  - Template khác trang? Template là khung chưa có nội dung; trang là template đã điền nội dung thật.
 - Speaker notes:
 
   > Trong dự án demo Travel Buddy, danh sách ở màn Discover và danh sách ở màn Plan khác nội dung nhưng cùng một kiểu bố cục. Trong delivery app, trang danh sách nhà hàng và trang danh sách đơn hàng cũng vậy: tiêu đề, bộ lọc, danh sách thẻ. Bố cục đó là template.
@@ -282,23 +407,32 @@ last_synced: 2026-10-30
   - Frost mô tả template là bộ khung cấp trang; nội dung thật làm lộ chỗ hệ thống chưa chịu được
   - Việc chọn template cho flow là phần bạn tự định nghĩa cho product của bạn
 
-  > **Một màn hình, một template. Không có template phù hợp thì AI phải dừng và hỏi.**
+  > Một màn hình, một template. Không có template phù hợp thì AI phải dừng và hỏi.
 
   > Flow của bạn dùng mấy kiểu trang?
-- 🎨 Visual hint: REAL. Ba ảnh cạnh nhau từ `library/lessons/03-develop/ai-prototype-development/assets/`: `wireframe-2-discover.png` (danh sách, chi tiết) và `wireframe-3-plan.png` (danh sách, bản đồ); ghi chú nhỏ "Dự án demo: Travel Buddy". Tô và đặt tên các vùng của từng template. `wireframe-1-onboarding.png` dùng dự phòng.
+
+  > Câu hỏi hay gặp:
+  - Cần bao nhiêu template? Hai đến ba cho một flow; nhiều hơn thường là chưa chọn.
+  - Template khác trang? Template là khung chưa có nội dung; trang là template đã điền nội dung thật.
+- 🎨 Visual hint: Ảnh: `assets/template-delivery-screens.png`
 ---
 
-### DIAGRAM · One journey
+### 15 · DIAGRAM · Từ shell và journey
 - Kicker: Phạm vi
-- Title: Một đường đến thành công
+- Title: Từ shell và journey
 - On-slide:
   - Một shell, một journey
   - Từ lúc bắt đầu đến lúc đạt mục tiêu
   - Không phải cả product
-- Ví dụ: có (delivery app: từ mở app đến đặt xong một đơn, năm màn)
-- Câu hỏi hay gặp:
-  - Một journey có đủ để test không? Đủ để test đường chính, không đại diện cho cả product.
-  - Journey thứ hai thì sao? Theo lesson Scaling the Prototype của chương trình, nó tốn ít công hơn vì hệ thống đã có; chưa có số đo.
+  - Một shell, một journey
+  - Bắt đầu
+  - Kết thúc
+  - Mở app
+  - Chọn món
+  - Chọn thời
+  - gian giao
+  - Thanh toán
+  - Đặt xong
 - Speaker notes:
 
   > Đây là hành trình trong dự án demo Travel Buddy: mỗi làn là một vai, nhưng đường chính vẫn là một đường từ lúc bắt đầu đến lúc thành công. Với delivery app, đường chính là: mở app, chọn món, chọn thời gian giao, thanh toán, đặt xong. Năm màn.
@@ -309,20 +443,59 @@ last_synced: 2026-10-30
   - Journey thứ hai thường tốn ít công hơn vì hệ thống đã có; đây là quan sát của chương trình, chưa có số đo
   - Flow đến từ tuần 4, không phải AI nghĩ ra
 
-  > **Một shell và một journey. Chưa phải cả product.**
+  > Một shell và một journey. Chưa phải cả product.
 
   > Đường chính của product bạn gồm mấy màn?
-- 🎨 Visual hint: REAL. Ảnh `library/lessons/03-develop/ai-prototype-development/assets/lesson-5-showcase-user-flow-swimlane.webp` (dự án demo: Travel Buddy), đánh dấu một đường từ "Bắt đầu" đến "Thành công". Nếu swimlane quá nhiều làn, cắt về làn Traveler.
+
+  > Câu hỏi hay gặp:
+  - Một journey có đủ để test không? Đủ để test đường chính, không đại diện cho cả product.
+  - Journey thứ hai thì sao? Theo lesson Scaling the Prototype của chương trình, nó tốn ít công hơn vì hệ thống đã có; chưa có số đo.
+- 🎨 Visual hint: Có diagram SVG line-art
 ---
 
-### IMAGE · Same screen, two prompts
+### 16 · SECTION DIVIDER · The Second View
+- Kicker: 03
+- Title: The Second *View*
+- On-slide:
+  - Từ One View sang prototype thật, và sửa đúng layer
+- Speaker notes:
+
+  > Phần này nói về prototype thật dựng từ One View.
+
+  - Một demo hai prompt, rồi cách đưa thay đổi từ One View sang
+  - Thứ tự dựng, cách sửa đúng layer, và giới hạn của prototype
+
+  > Mình bắt đầu bằng một màn hình, hai prompt.
+- 🎨 Visual hint: Typographic / layout chữ
+---
+
+### 17 · IMAGE · Một màn, hai prompt
 - Kicker: Demo
-- Title: Một màn, hai prompt
-- On-slide: Trái: prompt mơ hồ. Phải: prompt kèm rules file.
-- Ví dụ: bản nháp (màn "Chọn thời gian giao" của delivery app, hai kết quả dựng sẵn trước buổi dạy `[to confirm]`)
-- Câu hỏi hay gặp:
-  - Vì sao không chạy trực tiếp? Chờ AI chạy mất thời gian và kết quả khó đoán, nên hai bản được dựng sẵn để chắc đủ giờ.
-  - Hai bản có thật không? Có; nhưng đây là một ví dụ, không phải số đo mức AI vi phạm quy tắc.
+- Title: Một màn, *hai prompt*
+- On-slide:
+  - Prompt mơ hồ
+  - Choose delivery time
+  - Home
+  - Order
+  - Me
+  - Today
+  - Tomorrow
+  - 12:30 – 13:00
+  - Giao không tiếp xúc
+  - Continue
+  - Prompt kèm rules file
+  - Chọn thời gian giao
+  - Ngày
+  - Hôm nay
+  - Ngày mai
+  - Khung giờ
+  - 12:00 – 12:30
+  - 12:30 – 13:00
+  - 13:00 – 13:30
+  - Tiếp tục
+  - Trang chủ
+  - Đơn hàng
+  - Cài đặt
 - Speaker notes:
 
   > Cùng một màn hình, cùng một AI. Bên trái prompt chỉ nói "dựng màn chọn thời gian giao". Bên phải kèm rules file. Trước khi mình mở file, bạn đoán bản nào dùng đúng design system.
@@ -333,24 +506,40 @@ last_synced: 2026-10-30
   - Hai bản dựng sẵn trước buổi dạy; không chạy trực tiếp
   - Đây là một ví dụ, không phải số đo mức AI vi phạm quy tắc
 
-  > **Khác biệt không nằm ở prompt hay hơn, mà ở thứ AI được đưa vào trước.**
+  > Khác biệt không nằm ở prompt hay hơn, mà ở thứ AI được đưa vào trước.
 
   > Câu hỏi 30 giây: AI thêm một thanh điều hướng riêng ở màn ba. Layer nào bị vi phạm? A, component. B, shell. Gõ A hoặc B vào chat.
-- 🎨 Visual hint: REAL. Hai ảnh chụp màn hình đặt cạnh nhau (bản mơ hồ và bản có rules file) `[to confirm]`: cần dựng trước buổi dạy.
+
+  > Câu hỏi hay gặp:
+  - Vì sao không chạy trực tiếp? Chờ AI chạy mất thời gian và kết quả khó đoán, nên hai bản được dựng sẵn để chắc đủ giờ.
+  - Hai bản có thật không? Có; nhưng đây là một ví dụ, không phải số đo mức AI vi phạm quy tắc.
+
+  > Cần xác nhận trước buổi dạy:
+  - Ví dụ: bản nháp (màn "Chọn thời gian giao" của delivery app, hai kết quả dựng sẵn trước buổi dạy [to confirm])
+  - Visual hint: REAL. Hai ảnh chụp màn hình đặt cạnh nhau (bản mơ hồ và bản có rules file) [to confirm]: cần dựng trước buổi dạy.
+- 🎨 Visual hint: Typographic / layout chữ
 ---
 
-### DIAGRAM · The Second View
+### 18 · DIAGRAM · The Second View
 - Kicker: Prototype thật
-- Title: The Second View
+- Title: The *Second View*
 - On-slide:
   - Prototype thật, dựng từ One View
   - Sửa ở One View, rồi để quy tắc đưa thay đổi sang
   - Chỉ layer token tự động cập nhật
   - Phần còn lại là một prompt có quy tắc
-- Ví dụ: có (delivery app: đổi màu chính ở token thì nút ở cả năm màn đổi theo; đổi tên menu ở shell thì phải dựng lại qua một prompt)
-- Câu hỏi hay gặp:
-  - Đổi ở One View là mọi thứ tự cập nhật? Chỉ layer token. Với component, shell và template, thay đổi được đưa sang qua một prompt có kiểm soát, theo quy tắc.
-  - Có sửa trực tiếp ở prototype được không? Được, nhưng sửa ở nguồn trước thì lỗi không quay lại.
+  - One View
+  - Token
+  - Component
+  - Shell
+  - Template
+  - The Second View
+  - Token đã đổi
+  - Prototype thật
+  - dựng lại
+  - qua một prompt
+  - tự động
+  - quy tắc
 - Speaker notes:
 
   > Bạn đổi màu chính trong token: nút ở cả năm màn đổi theo. Bạn đổi tên một mục menu trong shell: AI không tự biết, bạn phải dựng lại qua một prompt có quy tắc.
@@ -364,25 +553,77 @@ last_synced: 2026-10-30
   - Nhiều demo nói "tự động cập nhật" mà không nói rõ lớp nào; đó là chỗ cần nói thẳng
   - Hệ thống của bạn cập nhật đáng tin cậy, và điều đó hữu ích hơn là tự động
 
-  > **Sửa ở One View, rồi để quy tắc đưa thay đổi sang The Second View.**
+  > Sửa ở One View, rồi để quy tắc đưa thay đổi sang The Second View.
 
   > Trong prototype của bạn, thay đổi nào sẽ phải qua một prompt thay vì tự cập nhật?
-- 🎨 Visual hint: SCHEMATIC. Hai khối cạnh nhau, One View và The Second View, nối bằng một mũi tên có nhãn "quy tắc"; token có mũi tên đậm "tự động".
+
+  > Câu hỏi hay gặp:
+  - Đổi ở One View là mọi thứ tự cập nhật? Chỉ layer token. Với component, shell và template, thay đổi được đưa sang qua một prompt có kiểm soát, theo quy tắc.
+  - Có sửa trực tiếp ở prototype được không? Được, nhưng sửa ở nguồn trước thì lỗi không quay lại.
+- 🎨 Visual hint: Có diagram SVG line-art
 ---
 
-### PROCESS · Build order
-- Kicker: Quy trình
-- Title: Rules, shell, flow, build, review
+### 19 · DIAGRAM · Flow + requirement
+- Kicker: Feed the build
+- Title: Flow + *requirement*
 - On-slide:
-  - Rules: viết hoặc nhận rules file trước
-  - Shell: dựng màn hình số 0, khung trống
-  - Flow: đưa flow từ tuần 4 vào, không để AI tự nghĩ
-  - Build: AI dựng journey trong shell
-  - Review: bạn mở file và mở trang ra dùng
-- Ví dụ: có (delivery app: rules, header và menu, flow đặt đồ ăn năm màn, dựng, review)
-- Câu hỏi hay gặp:
-  - Dựng cả journey một lượt hay từng màn? Chương trình dạy dựng cả journey sau khi có rules và shell; các gate của skill dùng để kiểm.
-  - Vì sao không để AI nghĩ flow? Flow là quyết định thiết kế đã có từ tuần 4.
+  - User flow
+  - Đi đâu
+  - Mở app
+  - Chọn món
+  - Giờ giao
+  - Thanh toán
+  - Xong
+  - Thứ tự các màn
+  - Điểm bắt đầu và điểm thành công
+  - Rẽ nhánh và trạng thái lỗi
+  - Điều hướng giữa các màn
+  - PRD requirement
+  - Màn đó có gì
+  - R1 Mã giảm giá
+  - R2 Thanh toán một chạm
+  - R3 Phí vận chuyển
+  - Mỗi màn cần có những gì
+  - Mỗi requirement có một ID: R1, R2, R3
+  - Tiêu chí hoàn thành
+  - Ràng buộc và điều không làm
+  - Rút từ problem brief và hướng đã chọn
+- Speaker notes:
+
+  > Mình đưa hai thứ vào prompt, không chỉ một. Với delivery app: flow năm màn từ mở app đến đặt xong, và ba requirement ở màn thanh toán.
+
+  - User flow cho AI biết thứ tự các màn, điểm bắt đầu và điểm thành công, rẽ nhánh và trạng thái lỗi, điều hướng giữa các màn
+  - Flow đến từ tuần 4, không phải AI nghĩ ra
+  - PRD requirement cho AI biết mỗi màn cần có gì: mỗi requirement có một ID (R1, R2, R3), kèm tiêu chí hoàn thành, ràng buộc và điều không làm
+  - Requirement là dòng ngắn rút từ problem brief và hướng đã chọn
+  - Kết hợp: flow trả lời "đi đâu", requirement trả lời "màn đó có gì"
+  - Sau khi dựng, đối chiếu ngược: requirement nào chưa có element, màn nào không nằm trên flow
+  - Nối sang slide Link: ID requirement gắn vào element là cách thấy chỗ hở
+
+  > Flow nói AI đi đâu, requirement nói màn đó có gì.
+
+  > Flow của bạn đã có ID requirement cho màn quan trọng nhất chưa?
+
+  > (Bản nháp: nội dung do mình soạn từ các lựa chọn của bạn, cần chỉnh lại.)
+- 🎨 Visual hint: Có diagram SVG line-art
+---
+
+### 20 · PROCESS · Rules, shell, flow, build, review
+- Kicker: Quy trình
+- Title: Rules, shell, flow, build, *review*
+- On-slide:
+  - 01
+  - Rules
+  - Viết hoặc nhận rules file trước
+  - 02
+  - Shell
+  - Dựng màn hình số 0, khung trống
+  - 03
+  - Flow
+  - Đưa flow hoặc requirement vào, không để AI tự nghĩ
+  - 04
+  - Build
+  - AI dựng journey trong shell
 - Speaker notes:
 
   > Với delivery app: mình viết rules, dựng khung header và menu trống, đưa vào flow đặt đồ ăn năm màn đã có, để AI dựng, rồi mở từng file để review.
@@ -393,25 +634,37 @@ last_synced: 2026-10-30
   - Chưa có nghiên cứu đo hiệu quả của thứ tự này
   - Skill prototype của toolkit có các gate kiểm; bạn dùng nó ở Practice 5
 
-  > **Review là bước dài nhất, vì một lượt dựng cả journey cho ra nhiều chỗ cần sửa.**
+  > Review là bước dài nhất, vì một lượt dựng cả journey cho ra nhiều chỗ cần sửa.
 
   > Trong năm bước, bước nào bạn thường bỏ khi làm vội?
-- 🎨 Visual hint: SCHEMATIC. Process năm bước; bước Review tô active.
+
+  > Câu hỏi hay gặp:
+  - Dựng cả journey một lượt hay từng màn? Chương trình dạy dựng cả journey sau khi có rules và shell; các gate của skill dùng để kiểm.
+  - Vì sao không để AI nghĩ flow? Flow là quyết định thiết kế đã có từ tuần 4.
+- 🎨 Visual hint: Typographic / layout chữ
 ---
 
-### DIAGRAM · Right layer
+### 21 · DIAGRAM · Fix at the right layer
 - Kicker: Cách làm
-- Title: Fix at the right layer
+- Title: Fix at the *right layer*
 - On-slide:
   - Hỏi: lỗi này có sai ở nhiều hơn một màn không?
   - Sửa ở layer rộng nhất mà lỗi còn đúng
   - Token, component, shell, template, màn hình
   - Fix too low: lỗi quay lại ở từng màn
   - Push too high: hệ thống mang thứ một màn cần
-- Ví dụ: có (nút màu cam ở cả năm màn của delivery app: sửa ở token và rules file, không sửa năm màn)
-- Câu hỏi hay gặp:
-  - Vì sao shell nằm trong ladder? Ladder gốc ở lesson Scaling the Prototype có bốn bậc; shell được xếp thêm theo phần shared layout của cùng lesson `[to confirm]`.
-  - Lỗi ở một màn thì sao? Sửa ngay ở màn đó, đừng đẩy lên hệ thống.
+  - Token
+  - mọi màn
+  - Component
+  - mọi chỗ dùng
+  - Shell
+  - mọi loại màn
+  - Template
+  - mọi màn cùng loại
+  - Màn hình
+  - chỉ màn đó
+  - Push too high
+  - Fix too low
 - Speaker notes:
 
   > Nút màu cam xuất hiện ở cả năm màn của delivery app. Nếu sửa từng màn, màn sau sẽ lại cam. Câu hỏi để bạn tự dùng khi không có mình: lỗi này có sai ở nhiều hơn một màn không?
@@ -423,24 +676,37 @@ last_synced: 2026-10-30
   - Một màn không dẫn đi đâu thì sửa ở flow, không sửa ở layer nào của ladder
   - Đây là layer ladder của lesson Scaling the Prototype; việc xếp shell vào ladder là điều chỉnh của mình
 
-  > **Sửa ở layer rộng nhất mà lỗi còn đúng. Không phải layer rộng nhất có thể.**
+  > Sửa ở layer rộng nhất mà lỗi còn đúng. Không phải layer rộng nhất có thể.
 
   > Lỗi nào bạn từng sửa đi sửa lại ở nhiều màn?
-- 🎨 Visual hint: SCHEMATIC. Ladder năm bậc xếp dọc (token, component, shell, template, màn hình), mỗi bậc kèm phạm vi ảnh hưởng; hai mũi tên ghi "fix too low" và "push too high".
+
+  > Câu hỏi hay gặp:
+  - Vì sao shell nằm trong ladder? Ladder gốc ở lesson Scaling the Prototype có bốn bậc; shell được xếp thêm theo phần shared layout của cùng lesson [to confirm].
+  - Lỗi ở một màn thì sao? Sửa ngay ở màn đó, đừng đẩy lên hệ thống.
+
+  > Cần xác nhận trước buổi dạy:
+  - Vì sao shell nằm trong ladder? Ladder gốc ở lesson Scaling the Prototype có bốn bậc; shell được xếp thêm theo phần shared layout của cùng lesson [to confirm].
+- 🎨 Visual hint: Có diagram SVG line-art
 ---
 
-### DIAGRAM · Link
+### 22 · DIAGRAM · Requirement gắn vào element
 - Kicker: Tuỳ chọn
-- Title: Requirement gắn vào element
+- Title: Requirement gắn vào *element*
 - On-slide:
   - Mỗi requirement có một ID: R1, R2, R3
   - Mỗi element mang ID của requirement nó thể hiện
   - Requirement chưa có element nào là chỗ hở
   - Người duyệt quyết định: bổ sung hay bỏ requirement
-- Ví dụ: có (delivery app, màn thanh toán: R1 mã giảm giá và R2 thanh toán một chạm đã có element; R3 hiển thị phí vận chuyển chưa có element nào)
-- Câu hỏi hay gặp:
-  - Requirement lấy từ đâu? Dòng ngắn rút từ problem brief và hướng đã chọn `[to confirm]`.
-  - Cách này là chuẩn ngành? Không; đây là một cách một số designer dùng, chưa có nguồn công khai `[to confirm]`.
+  - Thanh toán
+  - Ô nhập mã
+  - Tóm tắt đơn
+  - Thanh toán
+  - R1
+  - R2
+  - R1 Mã giảm giá
+  - R2 Thanh toán một chạm
+  - R3 Phí vận chuyển
+  - chỗ hở
 - Speaker notes:
 
   > Màn thanh toán của delivery app có ba requirement. AI dựng xong, màn hình trông đủ: có ô mã giảm giá, có nút Thanh toán. Phí vận chuyển ở đâu?
@@ -454,23 +720,34 @@ last_synced: 2026-10-30
   - AI gắn ID và liệt kê chỗ hở; người duyệt quyết định bổ sung hay bỏ requirement đó
   - Đây là cách một số designer đang làm, chưa phải chuẩn ngành
 
-  > **Requirement chưa có element nào gắn là chỗ hở, và chỗ hở đó do bạn quyết, không phải AI.**
+  > Requirement chưa có element nào gắn là chỗ hở, và chỗ hở đó do bạn quyết, không phải AI.
 
   > Trong flow của bạn, bạn có thể liệt kê ba requirement nào cho màn quan trọng nhất? Gõ vào chat một requirement.
-- 🎨 Visual hint: DIAGRAM. Dùng `assets/ai-pattern-link.html`: prototype bên trái, requirement bên phải, nối bằng ID; R3 màu coral là chỗ hở.
+
+  > Câu hỏi hay gặp:
+  - Requirement lấy từ đâu? Dòng ngắn rút từ problem brief và hướng đã chọn [to confirm].
+  - Cách này là chuẩn ngành? Không; đây là một cách một số designer dùng, chưa có nguồn công khai [to confirm].
+
+  > Cần xác nhận trước buổi dạy:
+  - Requirement lấy từ đâu? Dòng ngắn rút từ problem brief và hướng đã chọn [to confirm].
+  - Cách này là chuẩn ngành? Không; đây là một cách một số designer dùng, chưa có nguồn công khai [to confirm].
+- 🎨 Visual hint: Có diagram SVG line-art
 ---
 
-### COMPARE · Prototype is
+### 23 · COMPARE · Prototype là gì, không là gì
 - Kicker: Giới hạn
-- Title: Prototype là gì, không là gì
+- Title: Prototype là gì, *không là gì*
 - On-slide:
-  - Là: bản tham chiếu cho developer, thứ để test với người dùng
-  - Không là: code production, bằng chứng rằng thiết kế đúng
-  - Chạy được: ý tưởng có thể hoạt động, chưa phải đã hoạt động
-  - Đi cùng prototype: link chạy được, rules file, điều chưa làm
-- Ví dụ: có (delivery app: prototype chạy được cho thấy flow đặt đồ ăn có thể hoạt động, chưa cho biết người dùng có chọn đúng thời gian giao hay không)
-- Câu hỏi hay gặp:
-  - Prototype có thể là final design không? Plan ghi "có thể là final design"; mức hoàn thiện cần chốt cho Practice 5 `[to confirm]`.
+  - Là
+  - Bản tham chiếu cho developer
+  - Thứ để test với người dùng
+  - Không là
+  - Code production
+  - Bằng chứng rằng thiết kế đúng
+  - Chạy được:
+  - ý tưởng có thể hoạt động, chưa phải đã hoạt động
+  - Đi cùng prototype:
+  - link chạy được, rules file, điều chưa làm
 - Speaker notes:
 
   > Prototype của delivery app chạy được: bạn bấm qua năm màn, đặt được một đơn giả. Điều đó chưa nói người dùng có hiểu màn chọn thời gian giao hay không.
@@ -483,23 +760,47 @@ last_synced: 2026-10-30
   - Khi chuyển cho người khác, ba thứ đi cùng: link chạy được, rules file và danh sách điều chưa làm
   - Lesson handoff đã bỏ khỏi chương trình; hôm nay chỉ nêu ba thứ này ở mức khái niệm
 
-  > **Một prototype chạy được là một thứ để test, không phải một kết quả.**
+  > Một prototype chạy được là một thứ để test, không phải một kết quả.
 
   > Câu hỏi 30 giây: nút màu cam xuất hiện ở cả bốn màn. Sửa ở đâu trước? A, từng màn. B, ở layer rộng nhất mà lỗi còn đúng, ví dụ token. Gõ A hoặc B vào chat.
-- 🎨 Visual hint: TYPOGRAPHIC. Compare hai cột "Là" và "Không là", dòng cuối nổi bật.
+
+  > Câu hỏi hay gặp:
+  - Prototype có thể là final design không? Plan ghi "có thể là final design"; mức hoàn thiện cần chốt cho Practice 5 [to confirm].
+
+  > Cần xác nhận trước buổi dạy:
+  - Prototype có thể là final design không? Plan ghi "có thể là final design"; mức hoàn thiện cần chốt cho Practice 5 [to confirm].
+- 🎨 Visual hint: Typographic / layout chữ
 ---
 
-### NUMBERED · Gate, Rules, Skill
-- Kicker: Kiểm soát
-- Title: Gate, Rules, Skill
+### 24 · SECTION DIVIDER · Gate, Rules, Skill
+- Kicker: 04
+- Title: Gate, Rules, *Skill*
 - On-slide:
-  - Gate: điểm dừng kiểm tra giữa các bước
-  - Rules: quy tắc AI đọc trước mỗi lần dựng
-  - Skill: step card mà AI tool làm theo
-- Ví dụ: có (Atlassian cài skill vào repo kèm chỉ dẫn trong AGENTS.md [3]; Uber dùng một skill cho mỗi mục spec [9])
-- Câu hỏi hay gặp:
-  - Skill khác rules file thế nào? Rules là quy tắc cố định; skill là các bước và prompt của một quy trình.
-  - Gate có phải review không? Gate là điểm dừng; review là việc bạn làm ở một gate.
+  - Quy tắc và điểm dừng AI làm theo trước mỗi lần dựng
+- Speaker notes:
+
+  > Phần cuối: ba thứ giữ cho quy trình không nằm trong trí nhớ của một người.
+
+  - Gate, rules và skill
+  - Mười quy tắc của rules file, chia hai nhóm
+  - Quy tắc nào bạn viết lại bằng lời của mình mới là của bạn
+
+  > Mình bắt đầu từ ba khái niệm.
+- 🎨 Visual hint: Typographic / layout chữ
+---
+
+### 25 · NUMBERED · Gate, Rules, Skill
+- Kicker: Kiểm soát
+- Title: Gate, Rules, *Skill*
+- On-slide:
+  - 01
+  - Gate
+  - Điểm dừng kiểm tra giữa các bước
+  - 02
+  - Rules
+  - Quy tắc AI đọc trước mỗi lần dựng
+  - 03
+  - Step card mà AI tool làm theo
 - Speaker notes:
 
   > Atlassian cài bộ skill vào repo và thêm một chỉ dẫn ngắn trong AGENTS.md để mọi agent dùng chung. Uber dùng một skill riêng cho mỗi mục của spec.
@@ -510,25 +811,32 @@ last_synced: 2026-10-30
   - Cả ba cùng một mục đích: quy trình không nằm trong trí nhớ của một người
   - Ba lớp này chạy xuyên cả One View và The Second View, và được đặt trước khi dựng
 
-  > **Quy tắc và gate được đặt trước khi dựng, không thêm vào sau.**
+  > Quy tắc và gate được đặt trước khi dựng, không thêm vào sau.
 
   > Quy trình nào của bạn đang nằm trong đầu bạn mà chưa viết ra?
-- 🎨 Visual hint: TYPOGRAPHIC. Numbered lưới ba cột, ba ô: Gate, Rules, Skill; mỗi ô một dòng mô tả.
+
+  > Câu hỏi hay gặp:
+  - Skill khác rules file thế nào? Rules là quy tắc cố định; skill là các bước và prompt của một quy trình.
+  - Gate có phải review không? Gate là điểm dừng; review là việc bạn làm ở một gate.
+
+  > Nguồn: có (Atlassian cài skill vào repo kèm chỉ dẫn trong AGENTS.md [3]; Uber dùng một skill cho mỗi mục spec [9])
+- 🎨 Visual hint: Typographic / layout chữ
 ---
 
-### NUMBERED · System rules
+### 26 · NUMBERED · System rules
 - Kicker: Rules file
-- Title: System rules
+- Title: System *rules*
 - On-slide:
-  - 1. Chỉ dùng component trong inventory; thiếu thì thêm trước
-  - 2. Không dùng giá trị thô: chỉ dùng token, báo cái chưa có
-  - 3. Màn hình kế thừa template, nằm trong shell
-  - 4. Mỗi lần dựng mang theo flow context
-  - 5. Nội dung thật, đúng content voice, không lorem ipsum
-- Ví dụ: có (delivery app: công tắc chưa có trong inventory, nên quy tắc 1 bắt AI dừng và yêu cầu thêm công tắc vào inventory trước)
-- Câu hỏi hay gặp:
-  - Vì sao quy tắc 2 có vế "báo cái chưa có"? Để một token còn thiếu không biến thành một mã màu tự bịa mà trông vẫn ổn.
-  - Quy tắc nào quan trọng nhất? Quy tắc 1 đến 3; quy tắc 1 và 2 cùng trả lời câu "đừng dùng gì ngoài design system".
+  - 01
+  - Chỉ dùng component trong inventory; thiếu thì thêm trước
+  - 02
+  - Không dùng giá trị thô: chỉ dùng token, báo cái chưa có
+  - 03
+  - Màn hình kế thừa template, nằm trong shell
+  - 04
+  - Mỗi lần dựng mang theo flow context
+  - 05
+  - Nội dung thật, đúng content voice, không lorem ipsum
 - Speaker notes:
 
   > Một rules file cho delivery app có quy tắc 1: thiếu component trong inventory thì yêu cầu thêm trước, rồi mới dựng. AI đọc quy tắc đó trước mỗi lần dựng.
@@ -540,25 +848,30 @@ last_synced: 2026-10-30
   - Quy tắc 3 giúp cập nhật thay đổi xuống các màn hình về sau; mình thêm "nằm trong shell" vào quy tắc gốc
   - Quy tắc 5 có thêm "đúng content voice đã chốt", theo content voice ở slide One View
 
-  > **Quy tắc 1 và 2 là toàn bộ câu trả lời cho: đừng dùng gì ngoài design system.**
+  > Quy tắc 1 và 2 là toàn bộ câu trả lời cho: đừng dùng gì ngoài design system.
 
   > Trong năm quy tắc này, quy tắc nào bạn chưa từng viết cho AI?
-- 🎨 Visual hint: TYPOGRAPHIC. Numbered lưới năm ô, mỗi ô một quy tắc; ba quy tắc đầu tô nổi.
+
+  > Câu hỏi hay gặp:
+  - Vì sao quy tắc 2 có vế "báo cái chưa có"? Để một token còn thiếu không biến thành một mã màu tự bịa mà trông vẫn ổn.
+  - Quy tắc nào quan trọng nhất? Quy tắc 1 đến 3; quy tắc 1 và 2 cùng trả lời câu "đừng dùng gì ngoài design system".
+- 🎨 Visual hint: Typographic / layout chữ
 ---
 
-### NUMBERED · Working rules
+### 27 · NUMBERED · Working rules
 - Kicker: Rules file
-- Title: Working rules
+- Title: Working *rules*
 - On-slide:
-  - 6. Mỗi lần sửa một layer, nêu tên layer
-  - 7. Chỉ đính kèm file mà bước đó cần
-  - 8. Báo, không bịa: kết thúc bằng điều chưa làm được
-  - 9. Lưu trước khi sửa cấu trúc
-  - 10. WCAG 2.1 AA mọi màn: tương phản, focus, vùng chạm
-- Ví dụ: có (delivery app: sửa màn danh sách thì chỉ đính kèm shell và template danh sách, không đính kèm cả folder)
-- Câu hỏi hay gặp:
-  - Vì sao đính kèm ít file hơn? Thêm file không giúp hơn; nó chỉ mở rộng phạm vi tool có thể sửa.
-  - WCAG ở đây có phải là một buổi audit không? Không; đây là quy tắc áp lúc dựng. Áp lúc dựng không tốn gì, kiểm tra sau thì tốn cả một buổi.
+  - 06
+  - Mỗi lần sửa một layer, nêu tên layer
+  - 07
+  - Chỉ đính kèm file mà bước đó cần
+  - 08
+  - Báo, không bịa: kết thúc bằng điều chưa làm được
+  - 09
+  - Lưu trước khi sửa cấu trúc
+  - 10
+  - WCAG 2.1 AA mọi màn: tương phản, focus, vùng chạm
 - Speaker notes:
 
   > Bạn đính kèm cả folder để AI hiểu rõ hơn. Kết quả thường ngược lại: AI có thêm nhiều file để sửa nhầm.
@@ -570,19 +883,24 @@ last_synced: 2026-10-30
   - Quy tắc 9: "lưu" là lưu một checkpoint; skill prototype dùng lệnh "Lưu lại"
   - Quy tắc 8: mỗi lần dựng kết thúc bằng những gì AI chưa làm được, để bạn không phải đoán
 
-  > **Áp quy tắc lúc dựng không tốn gì. Kiểm tra sau thì tốn cả một buổi.**
+  > Áp quy tắc lúc dựng không tốn gì. Kiểm tra sau thì tốn cả một buổi.
 
   > Quy tắc nào trong năm quy tắc này bạn sẽ khó giữ nhất?
-- 🎨 Visual hint: TYPOGRAPHIC. Numbered lưới năm ô, mỗi ô một quy tắc; quy tắc 7 và 10 tô nổi.
+
+  > Câu hỏi hay gặp:
+  - Vì sao đính kèm ít file hơn? Thêm file không giúp hơn; nó chỉ mở rộng phạm vi tool có thể sửa.
+  - WCAG ở đây có phải là một buổi audit không? Không; đây là quy tắc áp lúc dựng. Áp lúc dựng không tốn gì, kiểm tra sau thì tốn cả một buổi.
+- 🎨 Visual hint: Typographic / layout chữ
 ---
 
-### STATEMENT · Rules you rewrite
+### 28 · STATEMENT · Rules you rewrite are yours
 - Kicker: Nguyên tắc
 - Title: Rules you\n*rewrite* are yours
-- On-slide: Quy tắc nhận từ người khác chưa thuộc về bạn
-- Ví dụ: có (một quy tắc mẫu "dùng màu chính cho nút chính" bị AI phá vì không nói rõ "mọi nút chính", nên học viên viết lại)
-- Câu hỏi hay gặp:
-  - Rules file có lệch khi đổi design system không? Có; khi thêm component hoặc đổi token, cập nhật design-system notes và rules file trong cùng lượt.
+- On-slide:
+  - Quy tắc nhận từ người khác chưa thuộc về bạn
+  - rules.md
+  - Dùng màu chính cho nút chính
+  - Dùng màu chính cho mọi nút chính
 - Speaker notes:
 
   > Bạn nhận bộ mười quy tắc từ mình. Sau lần dựng đầu, bạn sẽ thấy dòng nào AI vẫn vi phạm, dòng nào thiếu. Dòng bạn viết lại bằng lời của mình mới là dòng của bạn.
@@ -595,177 +913,122 @@ last_synced: 2026-10-30
   - Quy tắc không bắt được gì chưa chắc là sai: đánh dấu, đừng xoá, xem lại sau journey thứ hai
   - Quy tắc nào chưa có thì viết thêm bằng lời của bạn, đặt ở đầu danh sách
 
-  > **Quy tắc bạn viết lại bằng lời của mình mới là quy tắc của bạn.**
+  > Quy tắc bạn viết lại bằng lời của mình mới là quy tắc của bạn.
 
   > Câu hỏi 30 giây: khi thiếu component, rules file nên nói gì? A, tạo cái gần giống nhất. B, dừng và hỏi. Gõ A hoặc B vào chat.
-- 🎨 Visual hint: TYPOGRAPHIC. Statement layout; một dòng, accent ở "rewrite".
+
+  > Câu hỏi hay gặp:
+  - Rules file có lệch khi đổi design system không? Có; khi thêm component hoặc đổi token, cập nhật design-system notes và rules file trong cùng lượt.
+- 🎨 Visual hint: Có diagram SVG line-art
 ---
 
-### MILESTONE · Break and check
-- Num: 4
-- Kicker: Bridge
-- Title: Break,\n*then check*
-- Sub: Nghỉ ngắn, hai câu kiểm tra, cheat sheet
-- Speaker notes:
-
-  > Nghỉ hai phút. Quay lại, mình hỏi hai câu nhanh, rồi cheat sheet ở lại trên màn hình đến hết buổi.
-
-  - Hai phút nghỉ, rồi hai câu kiểm tra nhanh hỏi miệng
-  - Câu một: bốn layer của Design Pattern là gì và layer nào là của product
-  - Câu hai: vì sao báo cáo của AI rằng một màn hình đã xong không đủ
-  - Cheat sheet một màn hình ở slide kế
-
-  > **Câu nào bạn chưa chắc, ghi vào chat để mình quay lại ở phần hỏi đáp.**
-
-  > Mình mở cheat sheet.
-- 🎨 Visual hint: TYPOGRAPHIC. Milestone layout nền purple, số 4 lớn.
----
-
-### DIAGRAM · Cheat sheet
+### 29 · DIAGRAM · Cheat sheet
 - Kicker: Tham khảo
-- Title: Cheat sheet
+- Title: Cheat *sheet*
 - On-slide:
-  - Bốn layer: token, component, shell, template; cả bộ là Design Pattern
-  - Mười quy tắc: năm cho hệ thống, năm cho cách làm việc
-  - Sau khi dựng: mở file, mở trang, đối chiếu quy tắc, kiểm hai độ rộng
-- Ví dụ: Không cần. Slide tham khảo, nhắc lại nội dung đã có.
-- Câu hỏi hay gặp:
-  - Tài liệu này gửi sau buổi không? Có.
+  - Quy tắc hệ thống
+  - 1
+  - Chỉ dùng component trong inventory
+  - 2
+  - Chỉ dùng token, báo cái chưa có
+  - 3
+  - Màn hình kế thừa template, nằm trong shell
+  - 4
+  - Mang theo flow context
+  - 5
+  - Nội dung thật, đúng content voice
+  - Quy tắc làm việc
+  - 6
+  - Sửa một layer, nêu tên layer
+  - 7
+  - Chỉ đính kèm file cần
+  - 8
+  - Báo điều chưa làm được
+  - 9
+  - Lưu trước khi sửa cấu trúc
+  - 10
+  - WCAG 2.1 AA mọi màn
 - Speaker notes:
 
   > Một màn hình để bạn quay lại khi làm ở buổi practice.
 
-  - Bốn layer ở trên cùng
-  - Mười quy tắc rules file ở giữa
-  - Các bước kiểm sau khi dựng ở dưới cùng
-  - Slide này ở lại trên màn hình trong activity và hỏi đáp
+  - Hai thẻ: năm quy tắc hệ thống và năm quy tắc làm việc
+  - Slide này ở lại trên màn hình trong phần hỏi đáp
   - Mình gửi bản này sau buổi học
 
-  > **Mọi thứ trên slide này đã nói trong buổi; không có nội dung mới.**
+  > Mọi thứ trên slide này đã nói trong buổi; không có nội dung mới.
 
   > Có dòng nào trên đây bạn chưa hiểu?
-- 🎨 Visual hint: SCHEMATIC. Một màn hình, ba khối: bốn layer, mười quy tắc, các bước kiểm; chữ nhỏ đọc được trong một cái nhìn.
+
+  > Câu hỏi hay gặp:
+  - Tài liệu này gửi sau buổi không? Có.
+- 🎨 Visual hint: Typographic / layout chữ
 ---
 
-### MILESTONE · Rule-break hunt
-- Num: 5
-- Kicker: Activity
-- Title: Find the\n*three breaks*
-- Sub: Ba quy tắc hệ thống, một màn hình, ba lỗi
-- Speaker notes:
-
-  > Đây là màn hình AI vừa dựng cho một delivery app. Nhìn thoáng thì ổn. Mình dán ba quy tắc hệ thống bên cạnh. Trong hai phút, bạn tìm giúp mình ba chỗ vi phạm quy tắc. Chưa nói to, ghi ra trước.
-
-  - Năm phút: 30 giây giới thiệu, 2 phút tự tìm, 1,5 phút lộ đáp án, 1 phút nối sang dự án của bạn
-  - Nói rõ có đúng ba lỗi, và có vài chỗ trông lạ nhưng đúng quy tắc
-  - Không gợi ý khi học viên tìm; mục đích là tự thấy việc đối chiếu cần quy tắc viết sẵn
-  - Quy tắc cắt: nếu trễ thì bỏ phần tự tìm, chiếu đáp án luôn
-
-  > **Đối chiếu với quy tắc, không đoán theo cảm giác.**
-
-  > Mình chiếu màn hình.
-- 🎨 Visual hint: TYPOGRAPHIC. Milestone layout nền purple, số 5 lớn.
----
-
-### IMAGE · The screen
-- Kicker: Màn hình
-- Title: Chọn thời gian giao
-- On-slide: Màn hình mẫu ở độ rộng điện thoại, cạnh ba quy tắc hệ thống
-- Ví dụ: bản nháp (màn hình `screen.html` của delivery app, hư cấu, ba lỗi cài sẵn; đáp án giảng viên ở `_instructor-only-error-key.md`)
-- Câu hỏi hay gặp:
-  - Có đúng ba lỗi không? Có; ngoài ra có vài chỗ trông lạ nhưng đúng quy tắc (thẻ Phổ biến, khối thông báo, chỉ báo bước).
-- Speaker notes:
-
-  > Hai phút. Ghi ba chỗ vi phạm quy tắc ra giấy hoặc chat. Chưa nói.
-
-  - Chiếu màn hình ở độ rộng điện thoại, cùng ba quy tắc hệ thống (quy tắc 1 đến 3)
-  - Học viên tự tìm trong hai phút
-  - Không nói đáp án và không gợi ý trong lúc này
-  - Mở sẵn `components.html` để đối chiếu khi lộ đáp án
-
-  > **Có đúng ba lỗi. Có vài chỗ trông lạ nhưng đúng quy tắc.**
-
-  > Mình mở đáp án.
-- 🎨 Visual hint: REAL. Ảnh chụp `assets/templates/rule-break-hunt/screen.html` ở độ rộng điện thoại `[to confirm]`: cần mở file và chụp trước buổi dạy.
----
-
-### DIAGRAM · Three breaks
-- Kicker: Đáp án
-- Title: Ba lỗi, ba quy tắc
+### 30 · STATEMENT · Q&A
+- Kicker: Bạn muốn hỏi về
+- Title: Q&A
 - On-slide:
-  - Thanh điều hướng thứ hai ở đáy: quy tắc 3, mọi màn nằm trong shell
-  - Nút màu cam: quy tắc 2, chỉ dùng token
-  - Công tắc ngoài hệ thống: quy tắc 1, thiếu thì thêm trước
-  - Trông lạ nhưng đúng: thẻ Phổ biến, khối thông báo, chỉ báo bước
-- Ví dụ: có (màn hình `screen.html` của delivery app)
-- Câu hỏi hay gặp:
-  - Thẻ Phổ biến có phải lỗi không? Không; nó là component có sẵn. Đối chiếu với `components.html`.
+  - Thiết kế hệ thống của mình
+  - Viết rules cho AI
+  - Dựng AI prototype
 - Speaker notes:
 
-  > Lỗi một: thanh điều hướng tối ở đáy, trong khi header đã có điều hướng. Lỗi hai: nút "Tiếp tục" màu cam, trong khi màu chính là xanh lá. Lỗi ba: công tắc "Giao không tiếp xúc", không có trong danh sách component.
-
-  - Mỗi lỗi lộ xong, hỏi "quy tắc nào bị phá" và "tìm nó trong file bằng cách nào"
-  - Cách tìm: tìm `nav` và `tabbar`; tìm `#` trong thuộc tính style; đối chiếu `components.html`
-  - Lỗi một và ba còn kéo theo màu thô: một thứ AI tự bịa thường kéo theo thứ khác
-  - Thẻ Phổ biến, khối thông báo và chỉ báo bước đúng quy tắc; hỏi "chỗ này có trong components.html không?"
-  - Nối lại bảng lỗi ở ice breaker: kiểu lỗi nào hôm nay gặp lại
-
-  > **Báo cáo của AI chỉ là bản tóm tắt. Bằng chứng là trang bạn mở ra và so với quy tắc.**
-
-  > Trong prototype của bạn, chỗ nào AI có thể âm thầm làm đúng như vậy mà bạn chưa kiểm?
-- 🎨 Visual hint: SCHEMATIC. Bảng ba hàng (lỗi, quy tắc bị vi phạm, cách tìm) và một hàng riêng "Trông lạ nhưng đúng".
----
-
-### MILESTONE · Q&A
-- Num: 10
-- Kicker: Hỏi đáp
-- Title: Questions\n*in the chat*
-- Sub: Cheat sheet ở lại trên màn hình
-- Speaker notes:
-
-  > Mười phút cho câu hỏi. Mình đọc từ chat, bắt đầu với những câu bạn ghi lúc nghỉ.
+  > Mười phút cho câu hỏi. Mình đọc từ chat, bắt đầu với những câu bạn đã ghi trong chat.
 
   - Câu hỏi học viên ghi trong chat suốt buổi
   - Ưu tiên câu liên quan đến design system và dữ liệu của công ty
   - Nếu hỏi về tinh chỉnh state, accessibility, principle audit: nói đây là việc ở Practice 5
   - Nếu hỏi về số liệu hiệu quả: nói thẳng là chưa có số đo độc lập
 
-  > **Câu nào chưa có số đo, mình nói thẳng là chưa có.**
+  > Câu nào chưa có số đo, mình nói thẳng là chưa có.
 
   > Câu hỏi đầu tiên là gì?
-- 🎨 Visual hint: TYPOGRAPHIC. Milestone layout nền purple, số 10 lớn; cheat sheet thu nhỏ ở góc.
+- 🎨 Visual hint: Typographic / layout chữ
 ---
 
-### PRACTICE · Practice
-- Kicker: Việc tiếp theo
-- Title: Practice 5
+### 31 · PRACTICE · Build the prototype
+- Kicker: Practice
+- Title: Build the *prototype*
 - On-slide:
-  - Bạn áp dụng bốn layer và mười quy tắc lên flow của chính bạn
-  - Việc chuẩn bị và các bước nằm trong practice sheet
-  - Mang hướng đã chọn, flow và nội dung thật
-  - Cuối buổi, trả lời một câu reflection và ghi ba dòng vào learning log
-- Ví dụ: Không cần. Slide giao việc.
+  - Dựng prototype chạy được cho một flow của bạn, từ design system và các màn đã thiết kế
+  - 01
+  - Có một bộ design system
+  - 02
+  - Chọn một flow
+  - 03
+  - Build design system
+  - 04
+  - Dựng shell và template
+  - 05
+  - Experience pattern (tuỳ chọn)
+  - 06
+  - Dựng journey prototype
 - Speaker notes:
 
   > Hôm nay bạn đã có bốn layer và mười quy tắc của rules file. Ở Practice 5, bạn dùng đúng chúng trên flow của chính bạn.
 
-  - Việc chuẩn bị và các bước cụ thể nằm trong practice sheet, mình gửi riêng
-  - Hướng đã chọn và flow là đầu ra của tuần 4
-  - Design system của công ty có thể là tài liệu mật; không chắc thì dùng bản của mình
-  - Cuối buổi này, bạn trả lời một câu: ý nào hôm nay làm bạn đổi cách đưa context cho AI? Rồi ghi ba dòng vào learning log
-  - Learning log của practice là bước riêng, nằm trong practice sheet
+  - Bài không giới hạn một buổi: làm phần đầu ở nhà, tiếp tục trên lớp; mỗi bước có một file lưu lại
+  - Mang theo: design system trong Figma (token, component kèm trạng thái), hướng đã chọn và flow từ tuần 4, nội dung thật, một AI coding tool đã được công ty cho phép
+  - Design system của công ty có thể là tài liệu mật; không chắc thì dùng bản của giảng viên
+  - Hai làn: Figma (bạn tự làm) và AI coding tool (AI dựng, bạn kiểm tra)
+  - Gate A ở Step 3, Gate B ở Step 4, Gate C ở Screen plan của Step 6, Gate D ở Step 7, Gate E ở Step 8
+  - Gợi ý chia việc (chưa thử với lớp thật): Step 1 đến 3 ở nhà, Step 4 đến 8 trên lớp
+  - Nếu đến lớp mà Step 3 chưa đúng, dừng ở Step 3: một design system lệch sẽ lan sang mọi màn sau
+  - Output: tokens.css, components.css, components.html, project-rules.md, file shell và template, file màn hình, work/prototype/index.md, _personal/learning-log.md
 
-  > **Shell và template của product là phần bạn tự định nghĩa; AI không làm thay.**
-- 🎨 Visual hint: TYPOGRAPHIC. Một card "Practice 5" với ba dòng: áp dụng, practice sheet, reflection và learning log.
+  > Shell và template của product là phần bạn tự định nghĩa; AI không làm thay.
+- 🎨 Visual hint: Typographic / layout chữ
 ---
 
-### END
-- Kicker: End
-- Title: Thank *you*
-- Sign: Winnie Nguyen
-- Contact: Buổi tiếp theo, Practice 5
+### 32 · END · Hệ thống là đầu vào của prototype, không phải đầu ra.
+- Kicker: Takeaway
+- Title: Hệ thống là *đầu vào* của prototype, không phải đầu ra.
+- On-slide:
+  - Winnie Nguyen
 - Speaker notes:
+
   - Cảm ơn cả lớp
   - Nhắc lại: Practice 5 dùng bốn layer và mười quy tắc của hôm nay
   - Gửi cheat sheet sau buổi học
-- 🎨 Visual hint: End layout, nền paper-deeper; title lớn nghiêng, tên bên dưới.
+- 🎨 Visual hint: Typographic / layout chữ
