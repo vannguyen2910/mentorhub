@@ -7,7 +7,7 @@ description: "Chương trình 12 buổi trong 6 tuần cho designer mid và seni
 
 # AI Design Workflow
 
-Chương trình 12 buổi trong 6 tuần dành cho designer mid và senior. Mỗi tuần hai buổi 90 phút: một buổi theory rồi một buổi practice. Tuần 6 kết bằng một ngày test và buổi reflection và wrap-up. Học viên làm một case, một workflow AI dùng lại được, và một Knowledge Hub dựng dần theo từng trang. Không còn Check point. Đọc `learning/plan.md` trước, vì đây là nguồn chuẩn cho cấu trúc.
+Chương trình 12 buổi trong 6 tuần dành cho designer mid và senior. Mỗi tuần hai buổi 90 phút: một buổi theory rồi một buổi practice. Mỗi buổi practice kết thúc bằng ba phút ghi learning log (`_personal/learning-log.md`). Tuần 6 kết bằng một ngày test và buổi reflection và wrap-up. Học viên làm một case, một workflow AI dùng lại được, và một Knowledge Hub dựng dần theo từng trang. Không còn Check point. Đọc `learning/plan.md` trước, vì đây là nguồn chuẩn cho cấu trúc.
 
 **Program và lesson cùng nằm trong thư mục này** (từ 2026-10-23, trước đó lesson nằm ở `library/lessons/ai-design-workflow/`):
 - **Program**: kế hoạch, research, method, pitch deck, tài nguyên dùng chung.
@@ -56,7 +56,7 @@ Mỗi buổi theory là một lesson. Buổi practice đi liền sau mỗi lesso
 | 2 | 2 (buổi 3) | [`discover-the-problem`](lessons/02-discover-the-problem/materials/discover-the-problem-lesson.md) | Discover the problem (Design Principles, break the brief, hiểu người dùng, package thành agent và hub) | 🚧 Draft (viết lại 2026-10-26) |
 | 3 | 3 (buổi 5) | [`research-you-can-trust`](lessons/03-research-you-can-trust/materials/research-you-can-trust-lesson.md) | Insights you can trust (synthesis, persona, journey map, opportunity, mỗi dòng dẫn về quote có ID) | 🚧 Draft (cần sửa theo cấu trúc mới) |
 | 4 | 4 (buổi 7) | `explore-ideas` | Explore ideas (hypothesis, How might we, sketch giấy rồi AI, chọn hướng bằng principle check) | ⬜ Planned |
-| 5 | 5 (buổi 9) | `ai-prototyping` | AI prototyping (design system, pattern, template, rules file; prototype sẵn sàng test, có thể là final design) | ⬜ Planned |
+| 5 | 5 (buổi 9) | [`ai-prototyping`](lessons/05-ai-prototyping/materials/ai-prototyping-lesson.md) | AI prototyping (design system, pattern, template, rules file; prototype sẵn sàng test, có thể là final design) | 🚧 Draft (bản đầu 2026-10-28, chưa thử với lớp; chưa có practice sheet) |
 | 6 | 6 (buổi 11) | `test-with-real-users` | Test with real users (metrics, test plan, phân tích kết quả, SUS, sửa finding) | ⬜ Planned |
 
 Tuần 6 còn một buổi test trong một ngày và buổi 12 reflection và wrap-up, đều không có lesson riêng. Chi tiết từng lesson nằm trong `learning/lesson-details.md` (còn lesson 4 đến 11 cũ, chưa gộp theo bảng trên). Thư mục chỉ được tạo khi bắt đầu lesson, không tạo trước: build site liệt kê mọi thư mục tìm thấy, nên thư mục rỗng sẽ hiện thành lesson trống.

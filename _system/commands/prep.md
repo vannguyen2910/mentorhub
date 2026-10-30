@@ -39,6 +39,8 @@ Save to `mentees/<slug>/sessions/prep-NN-YYYY-MM-DD.md` (private, `draft: true`)
 6. **Things to watch**: from the recap's trainer notes and assessment gaps. Candid wording is fine here, since the note is private.
 7. **Gaps**: lesson file missing or still `draft: true`, slides missing, homework not submitted, no recap, no baseline, no date. For a class lesson, also check the shape (Rule LP-3 in mentoring-rules.md): Theory block 40 minutes or less with no activity inside it, a Bridge with a cheat sheet, an unbroken Practice block of at least 30 minutes, and every theory concept used by an activity. Report any miss as a gap; do not rewrite the lesson.
 
+8. **Loop check**: apply the `learning-loop` skill to this session. Say which kind it is (theory, practice, coaching or mentoring) and its one question, then list gaps at most 4 lines, with the learning log and reflection first. For this mentee, read their last learning-log entry in the recap (Follow-up drafts) and name the one change they committed to. Report only; do not edit the lesson.
+
 ## 4. Gap handling (WF-5)
 
 If the lesson or slides are missing or incomplete, do not build them. List exactly what is missing and offer `/build-lesson` (which starts with a content brief for approval). If the mentee's project is the vehicle for the lesson, suggest one concrete way to apply it to their project.

@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="noindex"/>
+<meta name="description" content="Dựng prototype từ design system riêng bằng rules file, thay vì để AI tự vẽ lại từng màn hình"/>
+<title>AI Prototyping — Training Hub</title>
+<link rel="stylesheet" href="../assets/css/tokens.css"/>
+<link rel="stylesheet" href="../assets/css/components.css"/>
+<link rel="stylesheet" href="../assets/css/site.css"/>
+<link rel="stylesheet" href="../assets/css/card-list.css"/>
+<link rel="stylesheet" href="../assets/css/text-page.css"/>
+<link rel="stylesheet" href="../assets/css/home.css"/>
+<link rel="stylesheet" href="../assets/css/minimal.css"/>
+
+</head>
+<body class="tp-white">
+<nav>
+  <a class="nav-logo" href="../index.html"><img src="../assets/images/logo-nav.svg" alt="Winnie Nguyen — Training Hub"/></a>
+  <div class="nav-links">
+    <a href="../lessons.html" data-text="Lesson Library" class=active>Lesson Library</a>
+    <a href="../private-training.html" data-text="Private Training">Private Training</a>
+    <a href="../programs.html" data-text="Programs">Programs</a>
+  </div>
+</nav>
+<div class="tp">
+  <a class="tp-back" href="../lessons.html">← All lessons</a>
+  <header class="tp-head">
+    <h1 class="page-title">AI Prototyping</h1>
+    <p class="page-desc">Dựng prototype từ design system riêng bằng rules file, thay vì để AI tự vẽ lại từng màn hình</p>
+    
+    <div class="tp-info" data-var-panel data-var-id="0"><div class="draft-banner">Draft: content exists but is not finalised for delivery.</div><dl class="tp-meta" style="--tp-cols: repeat(4, minmax(0, 1fr)) minmax(0, 1.8fr)"><div><dt>Stage</dt><dd>AI Design Workflow</dd></div><div><dt>Level</dt><dd>Intermediate</dd></div><div><dt>Duration</dt><dd>90 min</dd></div><div><dt>Date</dt><dd>28 Oct 2026</dd></div><div><dt>Source file</dt><dd><code>ai-prototyping-lesson.md</code></dd></div><div class="tp-meta__tags"><dt>Topics</dt><dd><span>prototyping</span><span>design-systems</span><span>ai-in-ux</span><span>ux-class</span><span>intermediate</span></dd></div></dl></div><div class="tp-info" data-var-panel data-var-id="1" hidden><div class="draft-banner">Draft: content exists but is not finalised for delivery.</div><dl class="tp-meta" style="--tp-cols: repeat(2, minmax(0, 1fr)) minmax(0, 1.8fr)"><div><dt>Stage</dt><dd>AI Design Workflow</dd></div><div><dt>Duration</dt><dd>Làm ở nhà, tiếp tục trên lớp</dd></div><div><dt>Source file</dt><dd><code>ai-prototyping-practice.md</code></dd></div></dl></div>
+  </header>
+  <div class="tabs tabs--pill tp-tabs"><div class="tabs__list" role="tablist"><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="lesson" aria-selected="false">Lesson</button><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="slides" aria-selected="false">Slides</button><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="homework" aria-selected="false">Homework</button></div></div>
+  <section class="tp-panel" data-tab-panel data-tab-id="lesson" role="tabpanel" hidden><div class="tabs tabs--pill var-switch"><div class="tabs__list" role="tablist" aria-label="Lesson version"><button type="button" role="tab" class="tabs__tab" data-var-btn data-var-id="0" aria-selected="false">AI Prototyping</button><button type="button" role="tab" class="tabs__tab" data-var-btn data-var-id="1" aria-selected="false">Build the Prototype</button></div></div><div data-var-panel data-var-id="0">
+  <div class="tp-layout">
+    <aside class="tp-toc" aria-label="On this page"><p class="tp-toc__label">On this page</p><a href="#v0-abstract">Abstract</a><a href="#v0-learning-objectives">Learning Objectives</a><a href="#v0-success-check">Success Check</a><a href="#v0-materials-needed">Materials Needed</a><a href="#v0-pre-class-preparation">Pre-Class Preparation</a><a href="#v0-1-the-aim">1. The Aim</a><a href="#v0-2-one-view">2. One View</a><a href="#v0-3-the-second-view">3. The Second View</a><a href="#v0-4-gate-rules-and-skill">4. Gate, Rules and Skill</a><a href="#v0-5-session-design">5. Session design</a><a href="#v0-6-ai-in-practice">6. AI in Practice</a><a href="#v0-7-assessment">7. Assessment</a><a href="#v0-8-limitations-and-ethics">8. Limitations and ethics</a><a href="#v0-9-connection-to-the-series">9. Connection to the series</a><a href="#v0-references">References</a></aside>
+    <article class="tp-body"><blockquote>
+<p><strong>Ghi chú sync (2026-10-28, lần hai).</strong> Cấu trúc được viết lại theo sơ đồ bốn cột của Winnie: The Aim, One View, The Second View, Gate/Rules/Skill. Bản trước (bốn phần Context over Prompts, The Design Stack, The Rules File, Build and Review) nằm ở <code>materials/_archive/ai-prototyping-lesson-pre-views-2026-10-28.md</code>. Nội dung phần The Aim tái dùng từ lesson 1 và bài gốc trong <code>library/lessons/03-develop/ai-prototype-development</code>.</p>
+<p><strong>Ghi chú (2026-10-28).</strong> Lesson soạn từ brief <code>learning/briefs/ai-prototyping-brief.md</code> đã được duyệt. Bản đầu, chưa thử với lớp thật. Hai nguồn phương pháp: phương pháp của Winnie ở lesson 3 trong <code>library/lessons/03-develop/ai-prototype-development</code> (rules trước, shared layout, dựng cả journey một lượt, review dài nhất) và nghiên cứu ở <code>learning/ai-in-prototype.md</code> và <code>learning/ai-prototype-foundations.md</code>. Phần tinh chỉnh (state, accessibility, principle audit, alignment check) nằm ở cheat sheet và coaching trong Practice 5, không ở buổi này.</p>
+</blockquote>
+<h2 id="v0-abstract">Abstract</h2>
+<p>Tài liệu này mô tả buổi 5 của chương trình AI Design Workflow, dành cho Product Designer và UI/UX Designer ở cấp mid và senior. Buổi 5 là buổi <strong>theory</strong> của tuần 5. Học viên đã có hướng được chọn và flow từ tuần 4, và buổi này chuẩn bị cho Practice 5, nơi prototype main flow được dựng trên case của chính họ.</p>
+<p>Buổi giải quyết bốn vấn đề, theo thứ tự trình bày:</p>
+<ol>
+<li><strong>The Aim.</strong> Dựng từng màn hình từ đầu thì kết quả lệch dần. Tư duy hệ thống: Design Pattern trước, AI-assisted chứ không phải AI-generated. Các đội lớn xử lý bằng cách đưa design system vào dạng AI đọc được.</li>
+<li><strong>One View.</strong> Nền chuẩn mà mọi prototype xuất phát từ nó: cùng starter, cùng cấu trúc folder, cùng component, cùng content voice. Gồm bốn layer token, component, template và shell, và một journey chuẩn từ đầu đến thành công.</li>
+<li><strong>The Second View.</strong> Prototype thật, dựng từ One View theo thứ tự rules, shell, flow, dựng, review. Thay đổi ở One View được cập nhật sang theo quy tắc đã viết, và chỉ layer token tự cập nhật. Mỗi element mang ID của requirement nó thể hiện, để thấy requirement nào còn hở.</li>
+<li><strong>Gate, Rules and Skill.</strong> Thành phần kiểm soát: các gate, rules file và step card mà AI tool làm theo. Quy tắc nhận từ người khác chưa thuộc về học viên cho đến khi tự viết lại.</li>
+</ol>
+<p>Nguyên tắc vận hành giữ nguyên: <strong>AI soạn nháp. Học viên kiểm tra. Học viên quyết định.</strong></p>
+<p><strong>Hình dạng buổi.</strong> Ice breaker, theory (bốn phần), một activity 5 phút trên lớp, hỏi đáp và close. Dựng prototype là việc của Practice 5. Buổi dự kiến 72 phút nội dung và 18 phút buffer để tránh quá giờ.</p>
+<p><strong>Vị trí của buổi.</strong> Buổi giả định học viên đã có hướng được chọn và flow (Lesson 4 và Practice 4), và nội dung thật cho các màn hình. Buổi giả định học viên <strong>có một bộ design system trong Figma</strong> (token và component) nhưng <strong>chưa dựng thành code</strong>; việc dựng nằm ở Practice 5. Shell và template chưa có, vì hai layer này thuộc về từng product.</p>
+<hr />
+<h2 id="v0-learning-objectives">Learning Objectives</h2>
+<p>Sau buổi 5, học viên có thể:</p>
+<ol>
+<li><strong>Giải thích</strong> vì sao dựng từng màn hình từ đầu thì kết quả lệch dần, và vì sao Design Pattern đi trước màn hình</li>
+<li><strong>Phân biệt</strong> token, component, template và shell, <strong>gọi tên</strong> cả bộ là Design Pattern, và <strong>chỉ ra</strong> layer nào còn thiếu trong design system của học viên</li>
+<li><strong>Phân biệt</strong> One View (nền chuẩn) với The Second View (prototype thật), và <strong>nêu</strong> vì sao thay đổi ở nguồn chỉ tự cập nhật sang ở layer token</li>
+<li><strong>Nêu</strong> vai trò của Gate, Rules và Skill, và hai nhóm quy tắc của một rules file (quy tắc hệ thống, quy tắc làm việc)</li>
+<li><strong>Nhận ra</strong> một màn hình do AI dựng vi phạm quy tắc bằng cách đối chiếu với rules file và component có sẵn, và <strong>nêu</strong> giới hạn của prototype: là bản tham chiếu và vật để test</li>
+</ol>
+<hr />
+<h2 id="v0-success-check">Success Check</h2>
+<ul>
+<li>Học viên chỉ ra đúng bốn layer và nói được layer nào chưa có trong design system của học viên (thường là shell và template).</li>
+<li>Học viên phân biệt được One View với The Second View.</li>
+<li>Học viên tìm ra ít nhất hai trong ba lỗi ở activity bằng cách đối chiếu với quy tắc và <code>components.html</code>, không theo cảm giác.</li>
+<li>Học viên nêu được ít nhất ba quy tắc cần có trong rules file cho case của học viên, gồm quy tắc "thiếu component thì yêu cầu thêm trước".</li>
+</ul>
+<p><strong>Checkpoint trên lớp:</strong> mỗi học viên chỉ ra ít nhất một lỗi ở activity, nêu quy tắc bị vi phạm và cách tìm nó trong file.</p>
+<hr />
+<h2 id="v0-materials-needed">Materials Needed</h2>
+<ul>
+<li>Màn hình mẫu của activity: <code>assets/templates/rule-break-hunt/screen.html</code> (một delivery app, hư cấu, bản nháp) và đáp án giảng viên <code>_instructor-only-error-key.md</code> (không gửi trước).</li>
+<li>One View làm chuẩn cho demo: starter, cấu trúc folder, token và component (cùng content voice). Demo dùng design system của giảng viên; starter dùng để minh hoạ shell và template: <code>workspace-template/toolkit/skills/prototype/starter/</code>.</li>
+<li>Hai kết quả dựng sẵn cho cùng một màn hình (prompt mơ hồ, prompt kèm rules file) để làm demo ở phần One View <code>[to confirm]</code>: cần soạn trước buổi dạy, không chạy trực tiếp.</li>
+<li>Deck tham khảo của khoá AI Prototype Development (<code>library/lessons/03-develop/ai-prototype-development/slides/</code>): lesson 1 (bốn vấn đề, Design Pattern), lesson 2 (design-system.html), lesson 3 (mười quy tắc, thang sửa theo layer, lan thay đổi).</li>
+<li>Cheat sheet một màn hình: bốn layer, mười quy tắc của rules file, các bước kiểm sau khi dựng.</li>
+<li>Một AI coding tool đã được công ty cho phép, chỉ để học viên dùng ở Practice 5.</li>
+</ul>
+<h2 id="v0-pre-class-preparation">Pre-Class Preparation</h2>
+<p>Tối đa khoảng 10 phút:</p>
+<ol>
+<li>Mang hướng đã chọn và flow từ Lesson 4 và Practice 4, cùng nội dung thật cho các màn hình (tên, nhãn, thông báo).</li>
+<li>Mang design system trong Figma (token và danh sách component, kèm các trạng thái).</li>
+<li>Học viên dùng design system của công ty: kiểm tra trước xem file đó có được đưa vào AI tool không (data rules ở buổi 1). Không chắc thì dùng bản của giảng viên.</li>
+</ol>
+<hr />
+<h2 id="v0-1-the-aim">1. The Aim</h2>
+<h3 id="v0-1-1-dựng-từng-màn-hình-từ-đầu-thì-lệch-dần">1.1 Dựng từng màn hình từ đầu thì lệch dần</h3>
+<p>Quy trình thường gặp: mở một màn hình, mô tả, để AI dựng, rồi sang màn hình kế. Màn đầu và màn hai thường ổn. Từ màn ba, vấn đề bắt đầu xuất hiện. Có bốn vấn đề, theo lesson AI Prototype Development của chương trình:</p>
+<ul>
+<li><strong>Component bị lệch.</strong> Nút ở màn hình thứ nhất hơi khác nút ở màn hình thứ ba; mỗi màn hình có một kiểu điều hướng.</li>
+<li><strong>Không có trí nhớ giữa các prompt.</strong> Mỗi yêu cầu bắt đầu lại từ đầu và không có gì cố định phía sau.</li>
+<li><strong>Trạng thái bị quên.</strong> Trạng thái rỗng, đang tải, lỗi thường chỉ lộ ra khi developer hoặc người dùng gặp sau khi ra mắt.</li>
+<li><strong>Mỗi lần làm lại đều tốn token.</strong> Mỗi lần prompt lại, AI xử lý lại toàn bộ phần đi trước, nên làm lại một màn hình bị lệch tốn cả thời gian và tiền. Deck gốc có số liệu cụ thể; lesson này không dùng vì chưa kiểm <code>[to confirm]</code>.</li>
+</ul>
+<p>Khi thiết kế đổi, mọi màn đều phải sửa lại. Với một delivery app, ba màn "Giỏ hàng", "Chọn thời gian giao" và "Thanh toán" dựng ở ba lần prompt riêng dễ cho ra ba thanh điều hướng khác nhau. Màu nút chính cũng có thể lệch. Sửa từng màn không chặn được lỗi tiếp theo; phải đổi thứ AI được đưa vào trước khi dựng. Mô tả này đến từ thực hành của chương trình, chưa có số đo.</p>
+<h3 id="v0-1-2-pattern-first">1.2 Pattern first</h3>
+<p>Design system là <strong>đầu vào</strong> của prototype, không phải đầu ra của việc thiết kế. Thay vì bắt đầu từ màn hình, bắt đầu từ thứ đã có: component (kể cả trạng thái của chúng) và cách các màn nối với nhau. Khi đó mỗi màn chỉ còn là một cách sắp xếp những thứ đã tồn tại. Trong chương trình, bộ nền này gọi là <strong>Design Pattern</strong>.</p>
+<p>Bốn vấn đề ở mục 1.1 có cùng một cách sửa (theo deck gốc của lesson 1):</p>
+<table>
+<thead>
+<tr>
+<th>Vấn đề</th>
+<th>Cách sửa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mọi thứ lệch dần</td>
+<td>Template cho mọi màn cùng một bố cục</td>
+</tr>
+<tr>
+<td>AI quên hết</td>
+<td>Một pattern viết sẵn, được đọc lại ở mỗi prompt</td>
+</tr>
+<tr>
+<td>Trạng thái bị quên</td>
+<td>Component inventory ghi mọi trạng thái ngay từ đầu</td>
+</tr>
+<tr>
+<td>Làm lại tốn token</td>
+<td>Ít phải suy lại thì ít phải thử lại</td>
+</tr>
+</tbody>
+</table>
+<p>Có một phép so sánh với lập trình, được dùng trong lesson AI Prototype Development: định nghĩa một mẫu một lần, dùng lại nhiều lần, và chỉ tuỳ chỉnh phần khác biệt. Mỗi màn do AI dựng giống một bản sao của cùng một mẫu, không phải một thứ được phát minh lại.</p>
+<h3 id="v0-1-3-systematic-prototype-mindset-ai-assisted-không-phải-ai-generated">1.3 Systematic prototype mindset: AI-assisted, không phải AI-generated</h3>
+<p>Tư duy hệ thống nghĩa là học viên giữ các quyết định: định nghĩa hệ thống, đặt ràng buộc, review từng màn. AI lắp ráp.</p>
+<h3 id="v0-1-4-các-đội-lớn-đưa-gì-cho-ai">1.4 Các đội lớn đưa gì cho AI</h3>
+<p>Điểm chung ở các nguồn công khai: đội không để AI tự nghĩ ra giao diện, mà đưa design system vào dạng AI đọc được trước.</p>
+<table>
+<thead>
+<tr>
+<th>Đội</th>
+<th>Điều nguồn mô tả</th>
+<th>Mức nguồn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stripe</td>
+<td>Công cụ nội bộ cho designer và PM: bộ rules file, khung điều hướng và design system mở qua MCP, nên đầu ra dùng component thật thay vì tự tạo. Người xây công cụ nói nó "đến 80%" và designer vẫn lái hướng [1][2]</td>
+<td>Lời kể trong podcast qua tóm tắt thứ cấp, không có transcript <code>[to confirm]</code></td>
+</tr>
+<tr>
+<td>Atlassian</td>
+<td>Bộ skill cài vào repo kèm một chỉ dẫn ngắn trong <code>AGENTS.md</code>; CLI và MCP server công khai; bố cục dựng từ một Root bọc các vùng cố định [3]</td>
+<td>Tài liệu chính thức; bộ skill chỉ dành cho nhân viên</td>
+</tr>
+<tr>
+<td>Vercel</td>
+<td>Registry đóng gói component và block để AI đọc, nối MCP để dùng ở nhiều tool [8]</td>
+<td>Blog vendor, không có số liệu</td>
+</tr>
+<tr>
+<td>Uber</td>
+<td>Agent đọc design system và tạo spec accessibility ba nền tảng trong dưới 2 phút [9]</td>
+<td>Số liệu của chính Uber, không có số đo độ chính xác</td>
+</tr>
+</tbody>
+</table>
+<p>Thông điệp rút ra là suy luận của chương trình: chất lượng đầu ra phụ thuộc vào bộ context đưa vào trước khi dựng, hơn là vào cách viết một prompt.</p>
+<p><strong>Giới hạn của bằng chứng.</strong></p>
+<ul>
+<li>Phần lớn nguồn là tài liệu của vendor hoặc lời kể của một người; chưa có nghiên cứu độc lập đo hiệu quả.</li>
+<li>Chưa nguồn nào đo thứ tự shell, template rồi màn hình. Thứ tự này là phương pháp của chương trình cộng suy luận từ cấu trúc của các hệ thống thiết kế.</li>
+<li>Số liệu hiệu quả không được dùng trong buổi này, trừ con số của Uber, nêu kèm lưu ý nó là số của chính Uber.</li>
+</ul>
+<hr />
+<h2 id="v0-2-one-view">2. One View</h2>
+<h3 id="v0-2-1-one-view-là-gì">2.1 One View là gì</h3>
+<p>"View" ở đây là một cách nhìn vào cùng một product. <strong>One View</strong> là nền chuẩn mà mọi prototype xuất phát từ nó: cùng starter, cùng cấu trúc folder, cùng component, cùng content voice. Trong One View có bốn layer (mục 2.2) và một journey chuẩn (mục 2.4). Trong các deck của khoá AI Prototype Development, One View là trang <code>design-system.html</code>: một trang gom token, component inventory, template và shell, nơi học viên kiểm tra hệ thống trước khi dựng màn hình. The Second View là prototype dựng từ trang này. Định nghĩa và việc gán vào <code>design-system.html</code> đã được Winnie xác nhận (2026-10-29).</p>
+<p><strong>Content voice</strong> là cách đặt nhãn, thông báo và thuật ngữ nhất quán giữa các màn hình. Ví dụ trong delivery app (bản nháp): luôn gọi là "Đơn hàng", không lúc "Đơn" lúc "Order".</p>
+<h3 id="v0-2-2-bốn-layer">2.2 Bốn layer</h3>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Là gì</th>
+<th>Ví dụ trong delivery app</th>
+<th>Ai định nghĩa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Token</strong></td>
+<td>Màu, cỡ chữ, khoảng cách, bo góc</td>
+<td>Màu chính, cỡ chữ tiêu đề</td>
+<td>Design system</td>
+</tr>
+<tr>
+<td><strong>Component</strong></td>
+<td>Đơn vị nhỏ nhất</td>
+<td>Nút, ô nhập, thẻ chọn</td>
+<td>Design system</td>
+</tr>
+<tr>
+<td><strong>Shell</strong> (còn gọi shared layout)</td>
+<td>Khung lặp ở mọi màn hình</td>
+<td>Header và menu của app</td>
+<td>Từng product</td>
+</tr>
+<tr>
+<td><strong>Template</strong></td>
+<td>Bố cục một loại trang</td>
+<td>Trang danh sách, trang chi tiết</td>
+<td>Từng product</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Design Pattern</strong> là tên chung cho cả bộ bốn layer này, theo cách dùng trong khoá AI Prototype Development của chương trình. <strong>experience pattern</strong> là cụm component lặp đi lặp lại ở nhiều màn, như search, navigation, bộ lọc, trạng thái rỗng. Loại này ghép từ component có sẵn và khác với Design Pattern, tên chung cho bốn layer. Dựng experience pattern ở Practice 5 là tuỳ chọn.</p>
+<p>Design system dùng làm chuẩn trong buổi này chỉ có token và component. Shell và template thuộc về từng product, nên học viên tự định nghĩa cho product của họ; đây là nội dung bài tập về nhà và bước 2 của skill <code>prototype</code>.</p>
+<h3 id="v0-2-3-tên-gọi-khác-nhau-theo-hệ-thống">2.3 Tên gọi khác nhau theo hệ thống</h3>
+<table>
+<thead>
+<tr>
+<th>Hệ thống</th>
+<th>Cách gọi shell</th>
+<th>Cách gọi template</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IBM Carbon</td>
+<td>UI shell: header, left panel, right panel [4]</td>
+<td>Không có layer riêng; template chỉ là nguyên liệu của pattern [4]</td>
+</tr>
+<tr>
+<td>Shopify Polaris</td>
+<td>Khung admin do nền tảng cấp; app chỉ dựng nội dung trong khung [5]</td>
+<td>Template là mẫu trang đầy đủ (Homepage, Index, Details, Settings); composition là nhóm component nhỏ [5]</td>
+</tr>
+<tr>
+<td>Material Design 3</td>
+<td>Layout scaffold [6]</td>
+<td>Canonical layout: feed, list-detail, supporting pane [6]</td>
+</tr>
+<tr>
+<td>Atlassian</td>
+<td>Layout: Root bọc Banner, Top nav, Side nav, Main, Panel [3]</td>
+<td>Không có layer template riêng trong các trang đã đọc [3]</td>
+</tr>
+<tr>
+<td>Atomic Design</td>
+<td>Header là một organism [7]</td>
+<td>Template là bộ khung cấp trang, chưa có nội dung cuối; trang mới là nơi kiểm tra hệ thống [7]</td>
+</tr>
+</tbody>
+</table>
+<p>Vì mỗi nơi gọi khác nhau, bộ từ của buổi này là bộ ở mục 2.2, và slide nêu rõ khi một nguồn dùng từ theo nghĩa khác.</p>
+<h3 id="v0-2-4-một-journey-một-đường-đi-từ-đầu-đến-thành-công">2.4 Một journey: một đường đi từ đầu đến thành công</h3>
+<p>Phạm vi của prototype ở buổi này là <strong>một shell và một journey</strong>. Journey là đường chính từ lúc người dùng bắt đầu đến lúc đạt mục tiêu, ví dụ từ mở app đến đặt xong một đơn. Đó không phải cả product. Một journey là một mảnh của product, nên prototype này là vật để test đường chính, không phải bằng chứng cho toàn bộ trải nghiệm. Theo lesson Scaling the Prototype của chương trình, journey thứ hai tốn ít công hơn journey đầu vì hệ thống đã có; đây là quan sát của chương trình, chưa có số đo.</p>
+<h3 id="v0-2-5-vì-sao-thứ-tự-này">2.5 Vì sao thứ tự này</h3>
+<ul>
+<li><strong>Phát hiện:</strong> Material khuyên khi tạo layout mới thì dùng scaffold, bắt đầu từ một canonical layout, và kiểm tra layout co giãn qua các breakpoint [6]. Frost mô tả template là bộ khung cấp trang, và nội dung thật ở trang là nơi kiểm tra hệ thống: nếu nội dung làm vỡ một pattern thì quay lại sửa layer dưới [7].</li>
+<li><strong>Suy luận:</strong> layer càng thấp càng ít thay đổi và càng nhiều thứ phụ thuộc vào nó, nên cố định trước. Đổi shell là đổi mọi màn hình; đổi một màn hình thì không ảnh hưởng layer nào.</li>
+<li><strong>Phương pháp của chương trình:</strong> cố định quy tắc, rồi shell, rồi đưa flow vào, rồi dựng. Chưa có nghiên cứu đo hiệu quả của thứ tự này.</li>
+</ul>
+<h3 id="v0-2-6-demo-cùng-một-màn-hình-hai-prompt">2.6 Demo: cùng một màn hình, hai prompt</h3>
+<p>Giảng viên chiếu hai kết quả dựng sẵn cho màn hình "Chọn thời gian giao": một từ prompt mơ hồ, một từ prompt kèm rules file. Học viên nêu bản nào dùng đúng design system trước khi giảng viên mở file để đối chiếu. Hai kết quả được dựng trước buổi dạy, không chạy trực tiếp, để tránh phụ thuộc thời gian chờ của AI <code>[to confirm]</code>.</p>
+<hr />
+<h2 id="v0-3-the-second-view">3. The Second View</h2>
+<h3 id="v0-3-1-the-second-view-là-gì">3.1 The Second View là gì</h3>
+<p><strong>The Second View</strong> là prototype thật: chạy được trong trình duyệt, dựng từ One View. Đây là thứ học viên sửa, test và đưa cho người khác. One View cho biết "đúng" trông như thế nào; The Second View là nơi áp dụng nó vào flow của học viên.</p>
+<h3 id="v0-3-2-sửa-ở-one-view-rồi-cập-nhật-the-second-view-theo-quy-tắc">3.2 Sửa ở One View, rồi cập nhật The Second View theo quy tắc</h3>
+<p>Một thay đổi ở One View có thể cập nhật sang The Second View, nhưng <strong>chỉ layer token tự động cập nhật</strong>. Với component, shell và template, thay đổi được đưa sang qua một prompt có kiểm soát, theo quy tắc đã viết (theo lesson Scaling the Prototype của chương trình). Cả trang <code>design-system.html</code> và các màn hình đều dùng <code>tokens.css</code>, nên đổi token là cả hai đổi theo. Quy tắc dùng trong chương trình: sửa ở nguồn trước, dựng lại phần bị ảnh hưởng, rồi review. Theo lesson Scaling the Prototype, các demo hay nói "tự động cập nhật" mà không nói rõ lớp nào; điều đáng giá hơn là hệ thống cập nhật đáng tin cậy qua một prompt có quy tắc.</p>
+<h3 id="v0-3-3-thứ-tự-dựng">3.3 Thứ tự dựng</h3>
+<p>Rules, shell, flow, dựng, review.</p>
+<ol>
+<li><strong>Rules:</strong> viết hoặc nhận rules file trước, vì nó quyết định mọi thứ được dựng.</li>
+<li><strong>Shell:</strong> dựng màn hình số 0 là shell trống (header, điều hướng, vùng nội dung trống), kiểm ở độ rộng điện thoại và máy tính.</li>
+<li><strong>Flow:</strong> đưa flow đã có từ Lesson 4 vào, không để AI tự nghĩ ra flow.</li>
+<li><strong>Dựng:</strong> AI dựng cả journey trong shell, dùng template đã chọn.</li>
+<li><strong>Review:</strong> học viên mở các file đã đổi và mở trang ra dùng, đối chiếu với rules file.</li>
+</ol>
+<p>Skill <code>prototype</code> của toolkit có thêm các gate kiểm (đối chiếu kế hoạch, bàn phím, hai độ rộng, giá trị thô) và dùng ở Practice 5.</p>
+<h3 id="v0-3-4-sửa-ở-đúng-layer">3.4 Sửa ở đúng layer</h3>
+<p>Báo cáo của AI chỉ là bản tóm tắt. Bằng chứng là trang học viên mở ra và so với quy tắc. Kết quả của một lượt dựng cả journey là nhiều chỗ cần sửa, nên review là phần dài nhất của quá trình.</p>
+<p>Quy tắc của chương trình (lesson Scaling the Prototype): sửa ở <strong>layer rộng nhất mà lỗi còn đúng</strong>. Deck gốc gọi đây là "highest layer"; ở đây dùng "layer rộng nhất" để không nhầm với thứ tự chồng của bốn layer, nơi token nằm dưới cùng. Câu hỏi kiểm tra: lỗi này có sai ở nhiều hơn một màn không? Có hai cách sai:</p>
+<ul>
+<li><strong>Fix too low:</strong> sửa lại ở từng màn hình, và các bản lệch nhau thêm sau mỗi lần sửa.</li>
+<li><strong>Push too high:</strong> hệ thống mang một thứ mà chỉ một màn hình cần.</li>
+</ul>
+<p>Layer ladder, từ rộng đến hẹp: token (mọi màn), component (mọi chỗ dùng), shell (mọi loại màn), template (mọi màn cùng loại), màn hình (chỉ màn đó). Màn hình không dẫn đi đâu thì sửa ở flow. Ladder gốc có bốn bậc (token, component inventory, template, màn hình); việc xếp shell vào ladder là điều chỉnh của người soạn theo phần shared layout của cùng lesson <code>[to confirm]</code>.</p>
+<h3 id="v0-3-5-gắn-requirement-vào-element-mẫu-link-tuỳ-chọn">3.5 Gắn requirement vào element (mẫu Link, tuỳ chọn)</h3>
+<p>Một cách một số designer dùng để kiểm prototype <code>[to confirm]</code> (ví dụ do Winnie thu thập từ đồng nghiệp, chưa có nguồn công khai): mỗi requirement có một ID (R1, R2, R3), và mỗi element trong prototype mang ID của requirement mà nó thể hiện. Trong delivery app, màn thanh toán có ba requirement: R1 áp dụng mã giảm giá, R2 thanh toán một chạm, R3 hiển thị phí vận chuyển. AI dựng màn hình, ô nhập mã mang R1, nút Thanh toán mang R2, nhưng không element nào mang R3.</p>
+<p>Điều học viên cần thấy: <strong>một requirement chưa có element nào gắn là chỗ hở.</strong> Màn hình trông đủ, nhưng thiếu một thứ nó phải có. Ngược lại, một element không mang ID nào là chỗ để hỏi: nó thể hiện requirement nào? Người duyệt, không phải AI, quyết định chỗ hở đó được bổ sung hay requirement đó bị bỏ. Sơ đồ: <code>assets/ai-pattern-link.html</code>. Mục này là nội dung thêm, không bắt buộc và không có trong practice sheet; nếu trễ giờ thì bỏ trước tiên.</p>
+<p>Requirement ở đây là dòng ngắn rút từ problem brief và hướng đã chọn <code>[to confirm]</code> (chưa chốt nguồn requirement của học viên ở Practice 5).</p>
+<h3 id="v0-3-6-prototype-là-gì-và-cái-gì-đi-cùng-nó">3.6 Prototype là gì, và cái gì đi cùng nó</h3>
+<ul>
+<li><strong>Là:</strong> bản tham chiếu cho developer và vật để test với người dùng.</li>
+<li><strong>Không là:</strong> code production, hay bằng chứng rằng thiết kế đúng. Prototype chạy được chỉ cho thấy ý tưởng <strong>có thể</strong> hoạt động, chưa cho thấy nó <strong>có</strong> hoạt động.</li>
+</ul>
+<p>Khi chuyển cho người khác, ba thứ đi cùng prototype: link chạy được, rules file, và danh sách điều chưa làm (state chưa dựng, nội dung giả, màn hình thiếu). Lesson handoff đã bỏ khỏi chương trình (2026-10-26), nên buổi này chỉ nêu ba thứ này ở mức khái niệm.</p>
+<hr />
+<h2 id="v0-4-gate-rules-and-skill">4. Gate, Rules and Skill</h2>
+<h3 id="v0-4-1-ba-thành-phần-kiểm-soát">4.1 Ba thành phần kiểm soát</h3>
+<table>
+<thead>
+<tr>
+<th>Lớp</th>
+<th>Là gì</th>
+<th>Dùng để</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gate</strong></td>
+<td>Điểm dừng kiểm tra giữa các bước: các gate của skill <code>prototype</code> (design system, shell, kế hoạch, review, điều chưa làm)</td>
+<td>Dừng lại kiểm trước khi đi tiếp</td>
+</tr>
+<tr>
+<td><strong>Rules</strong></td>
+<td>Rules file: các quy tắc AI đọc trước mỗi lần dựng</td>
+<td>Giữ AI trong One View</td>
+</tr>
+<tr>
+<td><strong>Skill</strong></td>
+<td>Step card: các bước và prompt mà AI tool làm theo</td>
+<td>Làm quy trình lặp lại được</td>
+</tr>
+</tbody>
+</table>
+<p>Atlassian cài bộ skill vào repo kèm một chỉ dẫn ngắn trong <code>AGENTS.md</code> [3]. Uber dùng một skill riêng cho mỗi mục của spec [9]. Cả hai đều là một cách giữ cho quy trình không nằm trong trí nhớ của một người.</p>
+<h3 id="v0-4-2-mười-quy-tắc-của-rules-file">4.2 Mười quy tắc của rules file</h3>
+<p>Rules file là file mà AI tool đọc trước mỗi lần dựng. Mỗi dòng là một quy tắc có thể kiểm tra được. Bộ quy tắc mẫu của buổi này gồm mười quy tắc, lấy từ deck lesson 3 của khoá AI Prototype Development. Bộ này chia hai nhóm: năm quy tắc về hệ thống (AI được phép dùng gì) và năm quy tắc về cách làm việc (học viên và tool cư xử thế nào).</p>
+<p><strong>Năm quy tắc hệ thống</strong></p>
+<ol>
+<li>Chỉ dùng component trong inventory. Thiếu thì yêu cầu thêm vào inventory trước, rồi mới dựng.</li>
+<li>Không dùng giá trị thô, không ngoại lệ: chỉ dùng token, và báo những gì chưa tồn tại.</li>
+<li>Màn hình kế thừa template và nằm trong shell, không tách nhánh.</li>
+<li>Mỗi lần dựng mang theo flow context.</li>
+<li>Nội dung thật, đúng content voice đã chốt, không lorem ipsum.</li>
+</ol>
+<p><strong>Năm quy tắc làm việc</strong></p>
+<ol start="6">
+<li>Mỗi lần sửa một layer, nêu tên layer trong prompt.</li>
+<li>Chỉ đính kèm file mà bước đó cần.</li>
+<li>Báo, không bịa: mỗi lần dựng kết thúc bằng những gì chưa làm được.</li>
+<li>Lưu trước khi sửa cấu trúc.</li>
+<li>WCAG 2.1 AA ở mọi màn hình: độ tương phản, focus nhìn thấy, kích thước vùng chạm.</li>
+</ol>
+<p>Ghi chú theo deck gốc:</p>
+<ul>
+<li>Các quy tắc 1 đến 3 là những quy tắc cần nhấn nhất. Quy tắc 1 và 2 cùng trả lời câu "đừng dùng gì ngoài design system".</li>
+<li>Vế sau của quy tắc 2 (báo những gì chưa tồn tại) ngăn một token còn thiếu biến thành một mã màu tự bịa mà trông vẫn ổn.</li>
+<li>Quy tắc 3 giúp việc cập nhật thay đổi xuống các màn hình trở nên khả thi về sau.</li>
+<li>Quy tắc 7 ngược trực giác: thêm context không giúp, mà chỉ mở rộng phạm vi tool có thể sửa.</li>
+<li>Quy tắc 10: màn do AI dựng thường có focus không nhìn thấy và độ tương phản sát ngưỡng. Áp quy tắc lúc dựng không tốn gì, kiểm tra sau thì tốn cả một buổi.</li>
+<li>Quy tắc 9: "lưu" ở đây là lưu một checkpoint; skill <code>prototype</code> dùng lệnh "Lưu lại".</li>
+</ul>
+<p>Có hai chỗ chỉnh so với deck gốc. Quy tắc 3 thêm "nằm trong shell" (deck gốc xử lý shared layout ở một phần riêng). Quy tắc 5 thêm "đúng content voice đã chốt" (theo sơ đồ của Winnie: same content voice). Cả hai đã được Winnie xác nhận (2026-10-29).</p>
+<h3 id="v0-4-3-phải-cập-nhật-cùng-design-system">4.3 Phải cập nhật cùng design system</h3>
+<p>Rules file và design system có thể lệch nhau khi một bên đổi mà bên kia không đổi. Một nguồn agency báo rủi ro này và đề xuất để AI cập nhật file trước khi commit hoặc dùng hook [10]. Đó là kinh nghiệm của một agency, không phải kết quả đo <code>[to confirm]</code>. Quy tắc dùng trong chương trình: khi thêm component hoặc đổi token, cập nhật <code>design-system-notes.md</code> và rules file trong cùng lượt.</p>
+<h3 id="v0-4-4-quy-tắc-nhận-từ-người-khác-chưa-thuộc-về-học-viên">4.4 Quy tắc nhận từ người khác chưa thuộc về học viên</h3>
+<p>Bộ quy tắc mẫu đến từ kinh nghiệm của người khác. Quy tắc chỉ thật sự thuộc về học viên sau khi họ dựng một lần, thấy quy tắc nào AI vẫn vi phạm hoặc quy tắc nào thiếu, và tự viết lại bằng lời riêng. Đây là điểm của phương pháp ở lesson Scaling the Prototype của chương trình: bộ quy tắc mẫu được đưa ra, rồi học viên viết lại sau lần dựng đầu.</p>
+<hr />
+<h2 id="v0-5-session-design">5. Session design</h2>
+<h3 id="v0-5-1-structure">5.1 Structure</h3>
+<p>Hình dạng: ice breaker, theory (bốn phần, mỗi phần kết thúc bằng một câu hỏi 30 giây có hai lựa chọn, bỏ phiếu bằng chat), activity 5 phút, hỏi đáp, close. Không có activity trong khối theory.</p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Nội dung</th>
+<th>Mục</th>
+<th>Thời gian</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Ice breaker: AI dựng một màn hình trông ổn nhưng sai ở chỗ nào</td>
+<td>5.3</td>
+<td>6 phút</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The Aim: dựng từng màn hình từ đầu thì lệch dần; Pattern first; tư duy hệ thống; các đội lớn làm gì</td>
+<td>1</td>
+<td>8 phút</td>
+</tr>
+<tr>
+<td>3</td>
+<td>One View: nền chuẩn, bốn layer, bộ từ, một journey, demo hai prompt</td>
+<td>2</td>
+<td>12 phút</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The Second View: prototype thật, thay đổi cập nhật theo quy tắc, thứ tự dựng, sửa đúng layer, gắn requirement vào element (tuỳ chọn), prototype là gì</td>
+<td>3</td>
+<td>12 phút</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Gate, Rules and Skill: ba lớp kiểm soát, rules file, cập nhật, quy tắc chưa thuộc về học viên</td>
+<td>4</td>
+<td>10 phút</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Bridge: hai câu kiểm tra nhanh, cheat sheet</td>
+<td>5.3</td>
+<td>4 phút</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Activity: Rule-break hunt</td>
+<td>5.3</td>
+<td>5 phút</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Hỏi đáp</td>
+<td></td>
+<td>10 phút</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Close: nối sang Practice 5, một câu reflection, learning log</td>
+<td>5.4</td>
+<td>5 phút</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Tổng nội dung</strong></td>
+<td></td>
+<td><strong>72 phút</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>Buffer</td>
+<td></td>
+<td>18 phút</td>
+</tr>
+</tbody>
+</table>
+<p>Timing chưa được thử với lớp thật. <strong>Thứ tự cắt khi quá giờ (đề xuất, chưa thử):</strong> bỏ mục 3.5 (gắn requirement, tuỳ chọn) trước, rồi rút demo ở phần One View còn 3 phút, rồi hỏi đáp còn 6 phút, rồi phần The Aim còn 5 phút.</p>
+<h3 id="v0-5-2-engagement-rules">5.2 Engagement rules</h3>
+<p>Giữ ba quy tắc của chương trình: đoán trước rồi mới xem; đổi kiểu tương tác mỗi 8 đến 10 phút; mỗi buổi có một cái bẫy. Cái bẫy của buổi nằm ở activity: một màn hình trông ổn nhưng vi phạm ba quy tắc.</p>
+<p>Câu hỏi 30 giây ở cuối mỗi phần theory (hai lựa chọn, bỏ phiếu bằng chat):</p>
+<table>
+<thead>
+<tr>
+<th>Phần</th>
+<th>Câu hỏi</th>
+<th>Đáp án</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The Aim</td>
+<td>Màn ba có thanh điều hướng khác màn một. Nguyên nhân nhiều khả năng nhất? A) Prompt chưa đủ hay. B) AI không có gì cố định để bám</td>
+<td>B</td>
+</tr>
+<tr>
+<td>One View</td>
+<td>AI thêm một thanh điều hướng riêng ở màn ba. Layer nào bị vi phạm? A) Component. B) Shell</td>
+<td>B</td>
+</tr>
+<tr>
+<td>The Second View</td>
+<td>Nút màu cam xuất hiện ở cả bốn màn. Sửa ở đâu trước? A) Từng màn. B) Ở layer rộng nhất mà lỗi còn đúng, ví dụ token</td>
+<td>B (xem mục 3.4)</td>
+</tr>
+<tr>
+<td>Gate, Rules and Skill</td>
+<td>Khi thiếu component, rules file nên nói gì? A) Tạo cái gần giống nhất. B) Dừng và hỏi</td>
+<td>B</td>
+</tr>
+</tbody>
+</table>
+<h3 id="v0-5-3-activities">5.3 Activities</h3>
+<p><strong>Ice breaker</strong> (6 phút, cả lớp, không có output). Mỗi người nói tên và một câu: lần gần nhất AI dựng cho họ một màn hình trông ổn nhưng sai ở chỗ nào, và họ phát hiện bằng cách nào. Giảng viên ghi nhanh các kiểu lỗi lên bảng, dùng lại ở phần The Aim.</p>
+<p><strong>Bridge</strong> (4 phút). Nghỉ ngắn, hai câu kiểm tra nhanh (mục 7), và cheat sheet một màn hình ở lại trên màn hình đến hết buổi.</p>
+<p><strong>Activity: Rule-break hunt</strong> (5 phút, cá nhân rồi cả lớp, không dùng AI). <em>Mục đích:</em> thấy rằng một màn hình AI dựng ra có thể trông ổn mà vẫn vi phạm quy tắc, và đối chiếu với quy tắc viết sẵn là cách bắt lỗi.</p>
+<ol>
+<li>(30 giây) Giảng viên chiếu <code>screen.html</code> ở độ rộng điện thoại cùng ba quy tắc hệ thống (quy tắc 1 đến 3), và nói có đúng ba lỗi và vài chỗ trông lạ nhưng đúng quy tắc.</li>
+<li>(2 phút, một mình) Mỗi người tìm ba lỗi, ghi ra giấy hoặc chat, chưa nói.</li>
+<li>(1,5 phút, cả lớp) Lộ lần lượt: điều hướng thứ hai, nút màu cam, công tắc ngoài hệ thống. Mỗi lỗi hỏi "Quy tắc nào bị vi phạm?" và "Tìm nó trong file bằng cách nào?"</li>
+<li>(1 phút) Nối sang dự án của học viên: chỗ nào AI có thể âm thầm làm đúng như vậy mà chưa được kiểm.</li>
+</ol>
+<p><em>Quy tắc cắt:</em> nếu trễ thì bỏ bước 2, chiếu đáp án luôn. <em>Dữ liệu:</em> màn hình là hư cấu. <em>Output:</em> không có file; kết quả là danh sách lỗi nói ra. Kế hoạch chi tiết và đáp án: <code>learning/lesson-5-activity-rule-break-hunt.md</code> và <code>assets/templates/rule-break-hunt/</code>.</p>
+<h3 id="v0-5-4-homework-and-practice">5.4 Homework and practice</h3>
+<p>Cuối buổi, học viên trả lời một câu reflection (mục 7) và ghi learning log. <strong>Việc chuẩn bị và các bước của Practice 5</strong> nằm trong practice sheet (<code>ai-prototyping-practice.md</code>), không nhắc cụ thể ở buổi này để plan có thể đổi. Học viên mang hướng đã chọn, flow và nội dung thật. Practice 5 áp dụng bốn layer và mười quy tắc lên flow của chính học viên bằng skill <code>prototype</code> của toolkit.</p>
+<hr />
+<h2 id="v0-6-ai-in-practice">6. AI in Practice</h2>
+<h3 id="v0-try-this-with-ai">🤖 Try this with AI</h3>
+<blockquote>
+<p>Đưa cho AI chat tool danh sách component và token của design system (đã ẩn thông tin nhạy cảm) cùng mô tả một màn hình:
+<em>"Đây là danh sách component và token của tôi, và đây là mô tả một màn hình. Liệt kê mọi thứ màn hình cần mà danh sách này không có, và đánh dấu từng thứ là MISSING. Không tạo gì mới, không đề xuất giao diện."</em></p>
+</blockquote>
+<h3 id="v0-critical-thinking-prompt">🧠 Critical thinking prompt</h3>
+<ul>
+<li>AI đã liệt kê đúng những gì thật sự thiếu, hay bịa ra những thứ vốn có?</li>
+<li>Cái gì AI không biết về product (shell, template đã chọn)?</li>
+<li>Có thứ nào AI chấp nhận là "đủ gần" mà quy tắc yêu cầu dừng lại?</li>
+</ul>
+<h3 id="v0-prompt-engineering-tip">✍️ Prompt engineering tip</h3>
+<p>Viết quy tắc dừng thành một câu kiểm tra được: "Thiếu component thì nói rõ tên và dừng." Quy tắc mơ hồ như "dùng component phù hợp" để AI tự quyết thế nào là phù hợp.</p>
+<h3 id="v0-ethics-consideration">⚖️ Ethics consideration</h3>
+<p>Design system của công ty có thể là tài liệu nội bộ. Trước khi đưa token, component hoặc rules file vào một AI tool, kiểm tra hai điều: tool có được công ty cho phép không, và dữ liệu có dùng để huấn luyện không (data rules ở buổi 1). Không chắc thì dùng design system mẫu.</p>
+<hr />
+<h2 id="v0-7-assessment">7. Assessment</h2>
+<h3 id="v0-quick-knowledge-check">Quick knowledge check</h3>
+<ol>
+<li>Bốn layer của Design Pattern là gì, và layer nào thuộc về từng product? (Token, component, shell, template; shell và template.)
+    Thêm câu: One View khác The Second View ở điểm nào? (One View là nền chuẩn; The Second View là prototype thật dựng từ nó.)</li>
+<li>Rules file mẫu có mấy quy tắc và chia thành nhóm nào? (Mười quy tắc: năm quy tắc hệ thống, năm quy tắc làm việc.)</li>
+<li>Vì sao báo cáo của AI rằng một màn hình đã xong không đủ? (Chỉ là bản tóm tắt; bằng chứng là trang đã mở và đối chiếu với quy tắc.)</li>
+</ol>
+<h3 id="v0-reflection-prompt-cuối-buổi">Reflection prompt (cuối buổi)</h3>
+<blockquote>
+<p><em>"Ý nào hôm nay làm bạn đổi cách đưa context cho AI?"</em> Học viên ghi câu trả lời cùng ba dòng learning log (đã làm gì, phản hồi nhận được, lần sau đổi gì).</p>
+</blockquote>
+<hr />
+<h2 id="v0-8-limitations-and-ethics">8. Limitations and ethics</h2>
+<ul>
+<li><strong>Bằng chứng về cách các đội lớn làm</strong> đến từ tài liệu vendor, blog và lời kể của một người; chưa có nghiên cứu độc lập đo hiệu quả. Con số "đến 80%" của một công cụ nội bộ [1][2] và con số "dưới 2 phút" của Uber [9] là số của chính những nguồn đó, không phải kết quả đo độc lập.</li>
+<li><strong>Thứ tự shell, template rồi màn hình</strong> là phương pháp của chương trình cộng suy luận; chưa có nghiên cứu đo.</li>
+<li><strong>Layer ladder</strong> (mục 3.4) lấy từ lesson Scaling the Prototype của chương trình; việc xếp shell vào ladder là điều chỉnh của người soạn <code>[to confirm]</code>.</li>
+<li><strong>Tên gọi</strong> của shell, template và pattern khác nhau giữa các hệ thống (mục 2.3); bộ từ của buổi này là chọn lựa của chương trình, không phải chuẩn ngành.</li>
+<li><strong>Màn hình ở activity và hai kết quả demo</strong> là hư cấu hoặc dựng sẵn; không đại diện cho mức độ AI vi phạm quy tắc trong thực tế.</li>
+<li><strong>Định nghĩa One View và The Second View</strong> (nền chuẩn và prototype thật) đã được Winnie xác nhận; tên "view" được giữ theo yêu cầu của Winnie. Đây là khung của chương trình, không phải thuật ngữ chuẩn ngành.</li>
+<li><strong>Việc cập nhật thay đổi từ One View sang The Second View</strong> chỉ tự động ở layer token (theo lesson Scaling the Prototype). Các layer khác cần một prompt có kiểm soát.</li>
+<li><strong>Mười quy tắc mẫu</strong> lấy từ deck lesson 3 của khoá AI Prototype Development; hai chỗ chỉnh (quy tắc 3 thêm shell, quy tắc 5 thêm content voice) đã được Winnie xác nhận.</li>
+<li><strong>Thời gian trong thiết kế buổi</strong> chưa được kiểm chứng.</li>
+<li><strong>Nguồn [1], [2] và [10]</strong> chưa có transcript, chưa đọc hết hoặc chưa mở bản gốc, nên đánh dấu <code>[to confirm]</code>; các nguồn [3] đến [9] đã được đọc.</li>
+</ul>
+<hr />
+<h2 id="v0-9-connection-to-the-series">9. Connection to the series</h2>
+<table>
+<thead>
+<tr>
+<th>Lesson và practice</th>
+<th>Vai trò</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lesson 4 và Practice 4 (tuần 4)</td>
+<td>Hypothesis, How might we, ý tưởng, hướng được chọn bằng principle check, flow; đầu vào cho buổi này</td>
+</tr>
+<tr>
+<td><strong>Lesson 5 (tuần 5, buổi này)</strong></td>
+<td>The Aim, One View và bốn layer của Design Pattern, The Second View, Gate, Rules and Skill; activity Rule-break hunt</td>
+</tr>
+<tr>
+<td>Practice 5 (tuần 5)</td>
+<td>Dựng prototype main flow bằng skill <code>prototype</code>; rules file của chính học viên; Known gaps</td>
+</tr>
+<tr>
+<td>Lesson 6 và Practice 6 (tuần 6)</td>
+<td>Test với người dùng thật: metrics, test plan, phân tích kết quả; prototype đã test</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="v0-references">References</h2>
+<p>Trạng thái ghi cuối mỗi nguồn: <em>đã đọc</em> (mở bản gốc, ghi rõ mức) hoặc <code>[to confirm]</code>. Nhật ký đầy đủ nằm ở <code>learning/ai-in-prototype.md</code> (mã P) và <code>learning/ai-prototype-foundations.md</code> (mã T).</p>
+<p>[1] Williams, O. (2026-05-04). <em>The internal AI tool that's transforming how Stripe designs products.</em> How I AI (host Claire Vo), Lenny's Newsletter. Chỉ đọc mô tả và danh sách chương, không có transcript. <code>[to confirm]</code></p>
+<p>[2] Wong, R. (2026-05-12). <em>Stripe Protodash.</em> rogerwong.me. Tóm tắt tập podcast kèm bình luận riêng; đã đọc toàn bài. <code>[to confirm]</code></p>
+<p>[3] Atlassian Design System. <em>With AI</em> và <em>Layout</em> (navigation system). atlassian.design. Không ghi ngày; đã đọc đầy đủ. Bộ skill chỉ dành cho nhân viên Atlassian; CLI và MCP server công khai.</p>
+<p>[4] IBM Carbon Design System. <em>UI shell header: usage</em> (cập nhật 2026-10-02) và <em>Patterns overview</em> (cập nhật 2026-08-12). carbondesignsystem.com. Đã đọc đầy đủ.</p>
+<p>[5] Shopify. <em>App Home: patterns</em> (templates và compositions). shopify.dev/docs/api/app-home. Không ghi ngày; đã đọc trang tổng quan, Details và Index; chưa đọc Settings.</p>
+<p>[6] Google. <em>Material Design 3: Layout overview</em> và <em>Canonical layout examples</em> (cập nhật 2026-05). m3.material.io. Đã đọc đầy đủ; viết cho Android, nói áp dụng cho web.</p>
+<p>[7] Frost, B. (2016). <em>Atomic Design</em>, chương 2: Atomic Design Methodology. atomicdesign.bradfrost.com. Đã đọc đầy đủ chương.</p>
+<p>[8] Sather, W. (2025-08-22). <em>AI-powered prototyping with design systems.</em> Vercel. Blog vendor; không có số liệu và không nêu tên khách hàng; đã đọc đầy đủ.</p>
+<p>[9] Guisard, I. (2026-03-11). <em>How Uber Built an Agentic System to Automate Design Specs in Minutes.</em> Uber Engineering. Số liệu của chính Uber (spec screen reader ba nền tảng trong dưới 2 phút); không có số đo độ chính xác; đã đọc đầy đủ.</p>
+<p>[10] Headway (2026). <em>Design Systems for AI and Agentic Development.</em> Podcast Even-Keeled. Agency bán dịch vụ liên quan; đã đọc khoảng 70% trang gốc, phần cuối là tóm tắt do máy sinh. <code>[to confirm]</code></p>
+<hr />
+<p><em>Created by Winnie Nguyen · AI Design Workflow · Last updated October 2026</em></p></article>
+  </div>
+</div><div data-var-panel data-var-id="1" hidden>
+  <div class="tp-layout">
+    <aside class="tp-toc" aria-label="On this page"><p class="tp-toc__label">On this page</p><a href="#v1-goal">Goal</a><a href="#v1-before-you-start">Before you start</a><a href="#v1-steps">Steps</a><a href="#v1-output">Output</a><a href="#v1-self-check">Self-check</a><a href="#v1-if-you-get-stuck">If you get stuck</a></aside>
+    <article class="tp-body"><h2 id="v1-goal">Goal</h2>
+<p>Dựng prototype chạy được trong trình duyệt cho một flow của bạn, từ design system và các màn đã thiết kế trong Figma. Cuối bài bạn có design system dạng code, shell, template, rules file và một journey 5 đến 6 màn đã qua review. Prototype này là đầu vào cho Lesson 6 (test với người dùng).</p>
+<p>Bài không có giới hạn một buổi. Bạn làm phần đầu ở nhà, rồi tiếp tục trên lớp. Mỗi bước có một file lưu lại, nên bạn dừng và quay lại ở bất kỳ bước nào.</p>
+<h2 id="v1-before-you-start">Before you start</h2>
+<p><strong>Mang theo:</strong></p>
+<ul>
+<li>Bộ design system trong Figma của bạn: token (màu, chữ, khoảng cách, bo góc) và các component, kèm trạng thái.</li>
+<li>Hướng đã chọn và flow từ Lesson 4 và Practice 4, cùng nội dung thật cho các màn hình (tên, nhãn, thông báo).</li>
+<li>Một AI coding tool đã được công ty cho phép. Design system của công ty có thể là tài liệu nội bộ: kiểm tra data rules ở Lesson 1 trước khi đưa file cho AI. Không chắc thì dùng bản của giảng viên.</li>
+<li>Thư mục làm việc <code>work/prototype/</code>. Chưa có thì copy từ <code>workspace-template/toolkit/skills/prototype/starter/</code>.</li>
+</ul>
+<h2 id="v1-steps">Steps</h2>
+<p>Bài đi theo hai làn: <strong>Figma</strong> (bạn tự làm) và <strong>AI coding tool</strong> (AI dựng, bạn kiểm tra). Thứ tự dựng: design system, shell và template, pattern, journey, review.</p>
+<p><strong>AI dựng, bạn kiểm tra, bạn quyết định.</strong> Mỗi lần dựng, đưa cho AI <code>work/prototype/project-rules.md</code> và chỉ nhờ nó làm đúng bước đang chạy. Không nhận "xong" khi bạn chưa tự mở trang.</p>
+<h3 id="v1-step-1-có-một-bộ-design-system-figma-you">Step 1 · Có một bộ design system · Figma · YOU</h3>
+<ul>
+<li>Kiểm tra bộ design system trong Figma: token đã đặt tên chưa, component nào có đủ trạng thái (mặc định, hover, focus, lỗi, vô hiệu).</li>
+<li>Ghi những gì còn thiếu vào <code>context/design-system-notes.md</code>.</li>
+<li><strong>File:</strong> <code>context/design-system-notes.md</code></li>
+</ul>
+<h3 id="v1-step-2-scope-chọn-một-flow-figma-you">Step 2 · Scope: chọn một flow · Figma · YOU</h3>
+<ul>
+<li>Chọn <strong>một flow</strong> với 5 đến 6 màn: điểm bắt đầu, mục tiêu, điểm kết thúc.</li>
+<li>Các màn này đã được thiết kế trong Figma. Ghi tên màn, nội dung thật và các trạng thái cần có (rỗng, đang tải, lỗi, thành công).</li>
+<li><strong>Kiểm tra:</strong> một người có hoàn thành flow trong một lượt ngồi được không? Dấu hiệu sai: "cả app"; nội dung chưa có.</li>
+<li><strong>File:</strong> <code>work/prototype/index.md</code> mục <code>## Scope</code></li>
+</ul>
+<h3 id="v1-step-3-build-design-system-ai-coding-tool-ai-dựng-bạn-kiểm-tra-gate-a">Step 3 · Build design system · AI coding tool · AI dựng, bạn kiểm tra (Gate A)</h3>
+<ul>
+<li><strong>AI dựng:</strong> từ Figma, tạo <code>tokens.css</code> (token) và <code>components.css</code>, <code>components.html</code> (component). Chỉ dùng token và component bạn liệt kê; thiếu thì nói và dừng.</li>
+<li><strong>Bạn kiểm tra:</strong> mở <code>components.html</code>, so từng component với Figma. Tìm trong file các giá trị thô (màu <code>#</code>, cỡ <code>px</code> ngoài token). Component nào lệch thì gửi lại <strong>một</strong> danh sách sửa.</li>
+<li>Viết rules file: bắt đầu từ mười quy tắc trong <code>project-rules.md</code>, viết lại những quy tắc mơ hồ và thêm content voice ở quy tắc 5.</li>
+<li>Khi đúng, nói "Lưu lại".</li>
+<li><strong>File:</strong> <code>tokens.css</code>, <code>components.css</code>, <code>components.html</code>, <code>project-rules.md</code></li>
+</ul>
+<h3 id="v1-step-4-ai-dựng-shell-và-template-ai-coding-tool-ai-dựng-bạn-kiểm-tra">Step 4 · AI dựng shell và template · AI coding tool · AI dựng, bạn kiểm tra</h3>
+<ul>
+<li><strong>Bạn quyết định trước:</strong> năm quyết định của shell (header, điều hướng, tên product, các mục, nút chính, hành vi ở màn hình hẹp) và 2 hoặc 3 template (khi nào dùng, các vùng bố cục). Rút từ các màn đã thiết kế, không để AI tự nghĩ.</li>
+<li><strong>AI dựng:</strong> shell là màn số 0, rồi các template, từ token và component. Shell chỉ dựng ở đây; các màn sau không tự thêm điều hướng.</li>
+<li><strong>Bạn kiểm tra (Gate B):</strong> tab qua điều hướng bằng bàn phím, mở ở độ rộng điện thoại và máy tính, tìm giá trị thô. Khi đúng, nói "Lưu lại".</li>
+<li><strong>File:</strong> các file shell và template, mục <code>## Shell and templates</code> trong <code>work/prototype/index.md</code></li>
+</ul>
+<h3 id="v1-step-5-build-experience-pattern-ai-coding-tool-optional">Step 5 · Build experience pattern · AI coding tool · Optional</h3>
+<ul>
+<li>Bước này <strong>tuỳ chọn</strong>. Làm khi flow có cụm component lặp lại ở nhiều màn, ví dụ search, navigation, form đăng nhập, danh sách có bộ lọc, hộp xác nhận, trạng thái rỗng.</li>
+<li><strong>AI dựng:</strong> mỗi experience pattern là một cụm component, ghép từ component có sẵn. Không thêm component mới.</li>
+<li><strong>Bạn kiểm tra:</strong> experience pattern có dùng ở ít nhất hai màn không? Một experience pattern chỉ dùng một lần thì để lại trong màn đó.</li>
+<li><strong>File:</strong> <code>components.css</code>, <code>components.html</code> (mục pattern)</li>
+</ul>
+<h3 id="v1-step-6-build-journey-prototype-ai-coding-tool-ai-dựng-bạn-kiểm-tra-gate-c-cho-screen-plan">Step 6 · Build journey prototype · AI coding tool · AI dựng, bạn kiểm tra (Gate C cho Screen plan)</h3>
+<ul>
+<li>Bạn viết Screen plan từ flow ở Step 2: mỗi màn một dòng gồm tên, template, nội dung thật, trạng thái, màn tiếp theo. Nhờ AI chỉ <strong>kiểm tra</strong> plan (thiếu component, thiếu nội dung), không viết hộ. Thiếu component thì bạn quyết định dùng cái có sẵn hay tự thêm vào design system.</li>
+<li><strong>AI dựng cả journey trong một lượt:</strong> mọi màn nằm trong shell, theo template đã chọn. Nội dung thiếu thì ghi "unknown".</li>
+<li><strong>File:</strong> các file màn hình, mục <code>## Screen plan</code> và <code>## Build log</code> trong <code>work/prototype/index.md</code></li>
+</ul>
+<h3 id="v1-step-7-review-ai-coding-tool-rồi-bạn-gate-d">Step 7 · Review · AI coding tool, rồi bạn · Gate D</h3>
+<ul>
+<li><strong>AI kiểm tra trước, không sửa:</strong> liệt kê chỗ phạm quy tắc kèm file và dòng (giá trị thô, component ngoài design system, màn ngoài shell, ô nhập thiếu nhãn, lỗi không có thông báo cạnh ô, nghĩa chỉ nằm ở màu, vùng chạm dưới 44 px, nhiều hơn một <code>&lt;h1&gt;</code>, focus không chuyển khi đổi màn).</li>
+<li><strong>Bạn kiểm tra (phần dài nhất):</strong> mở ba chỗ AI liệt kê xem có thật không. Rồi mở và dùng từng màn: bấm mọi control, tab qua, xem ở hai độ rộng, so với plan và <code>components.html</code>.</li>
+<li><strong>Sửa ở layer rộng nhất mà lỗi còn đúng.</strong> Lỗi lặp ở nhiều màn thường nằm ở token, component, shell hoặc template: sửa ở đó, rồi dựng lại. Lỗi chỉ ở một màn thì sửa ở màn đó.</li>
+<li>Viết lại mỗi quy tắc AI phá hoặc còn thiếu, bằng lời của bạn, và cập nhật <code>project-rules.md</code>.</li>
+<li><strong>File:</strong> mục <code>## Rule check (AI)</code> và <code>## Build log</code> trong <code>work/prototype/index.md</code>, <code>project-rules.md</code></li>
+</ul>
+<h3 id="v1-step-8-known-gaps-learning-log-và-reflection-you-gate-e">Step 8 · Known gaps, learning log và reflection · YOU · Gate E</h3>
+<ul>
+<li>Ghi vào <code>## Known gaps</code> những gì prototype <strong>chưa</strong> làm: trạng thái chưa dựng, nội dung giả, màn còn thiếu. Để người test không nhầm một bản chưa xong là bản hoàn chỉnh.</li>
+<li>Mở <code>_personal/learning-log.md</code> (riêng tư, không đưa cho AI) và thêm một mục ba dòng: bạn đã làm gì, phản hồi nào bạn nhận được, lần sau bạn đổi gì.</li>
+<li>Trả lời một câu: layer nào bạn đã sửa sai chỗ, và bạn sẽ sửa ở đâu lần sau? Ghi ngay dưới mục vừa thêm.</li>
+<li><strong>File:</strong> <code>work/prototype/index.md</code> (<code>## Known gaps</code>), <code>_personal/learning-log.md</code></li>
+</ul>
+<p><strong>Gợi ý chia việc (chưa thử với lớp thật <code>[to confirm]</code>):</strong> Step 1 đến 3 làm ở nhà. Step 4 đến 8 làm trên lớp, hoặc làm tiếp ở nhà nếu bạn đã đi nhanh. Nếu bạn đến lớp mà Step 3 chưa đúng, dừng ở Step 3: một design system lệch sẽ lan sang mọi màn sau.</p>
+<h2 id="v1-output">Output</h2>
+<ul>
+<li><code>context/design-system-notes.md</code></li>
+<li><code>tokens.css</code>, <code>components.css</code>, <code>components.html</code></li>
+<li><code>project-rules.md</code> (mười quy tắc, đã viết lại)</li>
+<li>Các file shell, template và (nếu làm) pattern</li>
+<li>Các file màn hình của journey</li>
+<li><code>work/prototype/index.md</code> (Scope, Shell and templates, Screen plan, Rule check, Known gaps)</li>
+<li><code>_personal/learning-log.md</code> (một mục mới và câu reflection)</li>
+</ul>
+<h2 id="v1-self-check">Self-check</h2>
+<ul>
+<li>☐ Một người hoàn thành flow trong một lượt ngồi được, và bạn đã tự thử.</li>
+<li>☐ Mọi màu và cỡ trong prototype lấy từ token; bạn đã tìm giá trị thô trong các file AI chạm tới.</li>
+<li>☐ Shell chỉ dựng một lần, không màn nào có điều hướng riêng.</li>
+<li>☐ Mỗi màn theo một template đã liệt kê.</li>
+<li>☐ Bạn đã mở và dùng từng màn, ở hai độ rộng và bằng bàn phím.</li>
+<li>☐ Mỗi quy tắc bị phá hoặc còn thiếu đã được sửa hoặc ghi lại.</li>
+<li>☐ <code>## Known gaps</code> nêu rõ prototype chưa làm gì.</li>
+<li>☐ <code>_personal/learning-log.md</code> có một mục mới và câu reflection đã trả lời.</li>
+</ul>
+<h2 id="v1-if-you-get-stuck">If you get stuck</h2>
+<ul>
+<li><strong>Design system trong Figma thiếu component hoặc trạng thái:</strong> ghi vào <code>context/design-system-notes.md</code> và bổ sung trong Figma trước Step 3. Không để AI tự bịa.</li>
+<li><strong>AI tự thêm điều hướng, file CSS mới hoặc màu cứng:</strong> đưa lại <code>project-rules.md</code>, nhắc đúng quy tắc bị phá, và chỉ cho phép sửa các file bạn nêu. Lỗi lặp lại thì sửa ở layer thấp hơn trước khi dựng lại.</li>
+<li><strong>Component thiếu so với flow:</strong> bạn quyết định dùng component có sẵn hoặc tự thêm vào design system, cập nhật <code>context/design-system-notes.md</code> và <code>project-rules.md</code> cùng lúc. Không để AI tự bịa.</li>
+<li><strong>Quá nhiều màn:</strong> cắt về một flow hoàn thành được. Prototype đủ nghĩa khi người test đi hết flow.</li>
+<li><strong>Không dùng được AI coding tool của công ty:</strong> dừng và hỏi lead, hoặc dùng design system mẫu của giảng viên.</li>
+</ul></article>
+  </div>
+</div></section><section class="tp-panel" data-tab-panel data-tab-id="slides" role="tabpanel" hidden><div class="tp-slides tp-slides--empty"><strong>No slides yet</strong><span>Add a deck (.html) or .pdf to this lesson's <code>slides/</code> folder, or a <code>slides:</code> link in the lesson front matter.</span></div></section><section class="tp-panel" data-tab-panel data-tab-id="homework" role="tabpanel" hidden><div class="tp-slides tp-slides--empty"><strong>No mentee homework yet</strong><span>Drop files in <code>mentees/&lt;name&gt;/homework/ai-prototyping/</code> and they show up here.</span></div></section>
+  <section class="tp-related"><h2>Related lessons</h2><div class="tp-related__grid"><div class="tp-related__card"><span>Previous lesson</span><strong>Explore Ideas (Lesson 4 và Practice 4)</strong></div><div class="tp-related__card"><span>Next lesson</span><strong>Practice 5: Build prototype main flow</strong></div></div></section>
+</div>
+<script>
+(function () {
+  function group(btnSel, panelSel, attr, onShow) {
+    var btns = [].slice.call(document.querySelectorAll(btnSel)), panels = [].slice.call(document.querySelectorAll(panelSel));
+    function show(id) {
+      btns.forEach(function (b) { var on = b.getAttribute(attr) === id; b.setAttribute('aria-selected', on); b.classList.toggle('tabs__tab--active', on && b.classList.contains('tabs__tab')); });
+      panels.forEach(function (p) { p.hidden = p.getAttribute(attr) !== id; });
+      if (onShow) onShow(id);
+    }
+    btns.forEach(function (b) { b.addEventListener('click', function () { show(b.getAttribute(attr)); }); });
+    return show;
+  }
+  var firstTab = (document.querySelector('[data-tab-btn]') || {getAttribute: function () {}}).getAttribute('data-tab-id');
+  var showTab = group('[data-tab-btn]', '[data-tab-panel]', 'data-tab-id', function (id) { history.replaceState(null, '', id === firstTab ? location.pathname : '#' + id); });
+  var showVar = group('[data-var-btn]', '[data-var-panel]', 'data-var-id');
+  var h = (location.hash || '').replace('#', '');
+  showTab(h && document.querySelector('[data-tab-btn][data-tab-id="' + h + '"]') ? h : firstTab);
+  if (document.querySelector('[data-var-btn]')) showVar('0');
+  var decks = [].slice.call(document.querySelectorAll('[data-deck-btn]'));
+  decks.forEach(function (b) { b.addEventListener('click', function () {
+    var f = document.getElementById('deck-frame'); f.src = b.dataset.src; document.getElementById('deck-open').href = b.dataset.src;
+    decks.forEach(function (x) { x.classList.toggle('deck-item--active', x === b); x.setAttribute('aria-pressed', x === b); });
+  }); });
+})();
+</script>
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Winnie Nguyen · Senior Product Designer</p>
+    <div class="footer-links">
+      <a href="mailto:nguyenphuctuongvan@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/winnienguyen2910" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+<script>(function(){if(location.protocol.indexOf('http')!==0)return;var u='../assets/build-stamp.txt',last=null;function c(){fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.text():null}).then(function(t){if(t===null)return;if(last!==null&&t!==last)location.reload();last=t}).catch(function(){})}c();setInterval(c,1500)})();</script>
+</body>
+</html>

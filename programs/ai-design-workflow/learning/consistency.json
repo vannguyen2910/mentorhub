@@ -2,6 +2,19 @@
   "_about": "Read by _system/scripts/consistency.py. `terms` lists wording that was retired or renamed (a hit means a file still says the old thing); `mentions` lists facts that every file depending on them must contain. Add a rule whenever a decision changes a name or a number. Lesson and slide-outline files stay generic about hub file names (2026-10-26), so only the practice sheet, the diagram and plan.md must mention them.",
   "terms": [
     {
+      "pattern": "toolkit/skills/(?!README)[a-z-]+\\.(md|py)|toolkit/templates/(prioritization|options|persona|problem-brief|measurement-plan|interview-guide|research-plan|pestel-analysis|stakeholder-map|survey-results)|toolkit/diagram-design|sync-workspace",
+      "why": "toolkit skills are folders (toolkit/skills/<name>/SKILL.md), scripts are in toolkit/tools, and the toolkit is the source (2026-10-28)",
+      "scope": [
+        "lessons/*/materials/*.md",
+        "introduction.md",
+        "README.md",
+        "SUMMARY.md",
+        "learning/plan.md",
+        "learning/lesson-details.md"
+      ],
+      "allow": []
+    },
+    {
       "pattern": "check ?point",
       "why": "no Check points any more (2026-10-26): practice sessions replaced them",
       "scope": [
@@ -201,6 +214,21 @@
       "why": "output of the opportunity step in Practice 3",
       "in": [
         "lessons/03-research-you-can-trust/materials/research-you-can-trust-practice.md",
+        "assets/diagrams/ai-design-workflow-six-weeks.swimlane.json",
+        "learning/plan.md"
+      ]
+    },
+    {
+      "term": "learning-log.md",
+      "why": "private log and reflection after each practice",
+      "in": [
+        "lessons/03-research-you-can-trust/materials/research-you-can-trust-practice.md",
+        "lessons/03-research-you-can-trust/materials/research-you-can-trust-lesson.md",
+        "lessons/01-design-process-with-ai/materials/design-process-with-ai-practice.md",
+        "lessons/01-design-process-with-ai/materials/design-process-with-ai-lesson.md",
+        "lessons/02-discover-the-problem/materials/discover-the-problem-practice.md",
+        "introduction.md",
+        "README.md",
         "assets/diagrams/ai-design-workflow-six-weeks.swimlane.json",
         "learning/plan.md"
       ]

@@ -343,6 +343,8 @@ Một số học viên thật sự không tiếp cận được PO hoặc busine
 
 ## Lesson 6: Build Your First Prototype
 
+> **Cập nhật 2026-10-28:** Lesson 6 và Lesson 7 dưới đây là kế hoạch cũ. Theo `plan.md` (2026-10-26), nội dung gộp thành T5 (Lesson 5, tuần 5) và P5. T5 đã được soạn: `lessons/05-ai-prototyping/` và `briefs/ai-prototyping-brief.md`. Phần tinh chỉnh và alignment check nằm ở cheat sheet và coaching của P5. Giữ phần còn lại ở đây làm tham khảo.
+
 *Slug:* `build-your-first-prototype`. Là **buổi 7 (tuần 4)**.
 
 **Why (tách ra 2026-10-05):** dựng prototype trên một design system cần hơn một lesson. Lesson này tạo ra phiên bản chạy được đầu tiên, theo đúng cách.
@@ -366,6 +368,8 @@ Một số học viên thật sự không tiếp cận được PO hoặc busine
 ---
 
 ## Lesson 7: Refine and Check Your Design
+
+> **Cập nhật 2026-10-28:** đã gộp vào T5 và P5; xem ghi chú ở Lesson 6.
 
 *Slug:* `refine-and-check`. Là **buổi 8 (tuần 4)**.
 

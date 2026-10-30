@@ -91,7 +91,7 @@ def check_practices(root):
     for p in sorted(root.glob("lessons/*/materials/*-practice.md")):
         text = p.read_text(encoding="utf-8")
         minutes = sum(int(m) for m in re.findall(r"^### Step \d+ · .*? · (\d+) phút", text, re.M))
-        limit = int(re.match(r"\d+", front_matter(text).get("duration", "90")).group(0))
+        limit = int((re.match(r"\d+", front_matter(text).get("duration", "90")) or re.match(r"90", "90")).group(0))
         if minutes > limit:
             out.append((str(p.relative_to(root)), f"steps add up to {minutes} min, session is {limit}", ""))
         else:

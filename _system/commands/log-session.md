@@ -65,6 +65,7 @@ Fill the recap the script created from step 3, in Vietnamese per the Language no
 ## 8. Follow-up drafts (append to the recap under `## Follow-up drafts`)
 
 - **Homework**: one clear task, expected output, due date, and the lesson or template it relates to. If the lesson has a homework section, reuse it rather than inventing a new task.
+- **Learning log** (`learning-loop` skill): a draft entry of three lines for the mentee in Vietnamese: what they did, feedback they got (quote the recap's Feedback Given), what they will change. Add one reflection question from the session, such as "feedback nào hôm nay làm bạn đổi cách nghĩ?". Draft only; the mentee writes the final answer.
 - **Next-session seed**: 3 bullets for `/prep` to pick up (open questions, what to check on the homework, what to teach next). Put the same bullets in the recap's Next Session Plan.
 
 ## 9. Testimonial capture
