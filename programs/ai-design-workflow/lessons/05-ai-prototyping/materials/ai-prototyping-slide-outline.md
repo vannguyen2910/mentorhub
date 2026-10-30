@@ -138,7 +138,6 @@ last_synced: 2026-10-30
   - Ý một: tư duy hệ thống. Hệ thống đi trước, màn hình đi sau
   - Ý hai: pattern first. Design system là đầu vào của prototype, không phải đầu ra của việc thiết kế
   - Ý ba: AI lắp ráp, còn bạn định nghĩa hệ thống, đặt ràng buộc và review từng màn
-  - Nielsen Norman Group (2025) có một nghiên cứu, được dẫn trong lesson AI Prototype Development: công cụ làm theo chỉ dẫn chung nhưng thiếu độ tinh tế. Mình chưa mở bản gốc
   - Cách nghĩ của lập trình: định nghĩa một mẫu một lần, dùng lại nhiều lần và chỉ tuỳ chỉnh phần khác biệt
 
   > **Hệ thống là đầu vào của prototype, không phải đầu ra.**
@@ -161,7 +160,7 @@ last_synced: 2026-10-30
   - Cần MCP mới làm được không? Không; hôm nay chỉ cần rules file và design system.
 - Speaker notes:
 
-  > Ở Stripe, một designer xây công cụ để designer và PM tạo prototype từ design system, thay vì từ trang trắng. Người xây nói công cụ làm được khoảng 80%, designer vẫn là người lái.
+  > Theo một tóm tắt podcast về Stripe, một designer xây công cụ để designer và PM tạo prototype từ design system, thay vì từ trang trắng. Mình chưa đọc transcript đầy đủ, nên coi đây là lời kể của một người: công cụ làm phần lớn việc, designer vẫn là người lái.
 
   - Bốn đội, bốn cách đóng gói, nhưng cùng một ý: đưa design system vào dạng AI đọc được trước
   - Atlassian có bộ skill chỉ cho nhân viên, còn CLI và MCP server công khai
@@ -217,7 +216,7 @@ last_synced: 2026-10-30
   - Design system của bạn có token và component; shell và template là của product
 - Ví dụ: có (delivery app: màu chính là token, nút là component, header và menu là shell, trang danh sách là template)
 - Câu hỏi hay gặp:
-  - Pattern là nhóm component như bộ lọc? Không; ở đây Design Pattern là tên chung cho cả bộ. Nhóm component như bộ lọc gọi là "nhóm component".
+  - Search hay navigation lặp lại ở nhiều màn có phải Design Pattern không? Không; đó là experience pattern, ghép từ component. Design Pattern là tên chung cho cả bốn layer.
   - Vì sao thứ tự này? Layer thấp ít đổi và nhiều thứ phụ thuộc; cố định trước. Đây là suy luận, chưa có nghiên cứu đo.
   - Các hệ thống khác gọi thế nào? Carbon gọi UI shell, Material gọi layout scaffold, Polaris tách template và composition. Không có chuẩn ngành, nên lớp dùng bộ từ này.
 - Speaker notes:
@@ -250,7 +249,7 @@ last_synced: 2026-10-30
   - Product nhỏ có cần không? Có; ít nhất là quyết định có điều hướng hay không.
 - Speaker notes:
 
-  > Màn giỏ hàng và màn thanh toán của delivery app có cùng một thanh trên cùng và cùng một menu. Phần lặp đó là shell.
+  > Đây là dự án demo Travel Buddy của khoá: màn nào cũng có cùng một thanh tab ở đáy. Trong delivery app, đó là cùng một thanh trên cùng và cùng một menu ở màn giỏ hàng và màn thanh toán. Phần lặp đó là shell.
 
   - Shell là khung bao mọi màn hình; bạn quyết định nó một lần
   - Năm quyết định: có header không, có side nav không, các mục điều hướng, nút chính ở đâu, màn hình hẹp thì sao
@@ -276,7 +275,7 @@ last_synced: 2026-10-30
   - Template khác trang? Template là khung chưa có nội dung; trang là template đã điền nội dung thật.
 - Speaker notes:
 
-  > Trang danh sách nhà hàng và trang danh sách đơn hàng của delivery app khác nội dung nhưng cùng một bố cục: tiêu đề, bộ lọc, danh sách thẻ. Bố cục đó là template.
+  > Trong dự án demo Travel Buddy, danh sách ở màn Discover và danh sách ở màn Plan khác nội dung nhưng cùng một kiểu bố cục. Trong delivery app, trang danh sách nhà hàng và trang danh sách đơn hàng cũng vậy: tiêu đề, bộ lọc, danh sách thẻ. Bố cục đó là template.
 
   - Template trả lời câu hỏi nội dung nằm ở đâu trong khung của shell
   - Hai đến ba template là đủ cho một flow
@@ -302,7 +301,7 @@ last_synced: 2026-10-30
   - Journey thứ hai thì sao? Theo lesson Scaling the Prototype của chương trình, nó tốn ít công hơn vì hệ thống đã có; chưa có số đo.
 - Speaker notes:
 
-  > Với delivery app, đường chính là: mở app, chọn món, chọn thời gian giao, thanh toán, đặt xong. Năm màn, một đường từ đầu đến thành công.
+  > Đây là hành trình trong dự án demo Travel Buddy: mỗi làn là một vai, nhưng đường chính vẫn là một đường từ lúc bắt đầu đến lúc thành công. Với delivery app, đường chính là: mở app, chọn món, chọn thời gian giao, thanh toán, đặt xong. Năm màn.
 
   - Phạm vi của buổi practice là một shell và một journey, không phải cả product
   - Journey là đường chính từ lúc người dùng bắt đầu đến lúc đạt mục tiêu
@@ -431,7 +430,7 @@ last_synced: 2026-10-30
 ---
 
 ### DIAGRAM · Link
-- Kicker: Cách kiểm
+- Kicker: Tuỳ chọn
 - Title: Requirement gắn vào element
 - On-slide:
   - Mỗi requirement có một ID: R1, R2, R3
@@ -446,6 +445,7 @@ last_synced: 2026-10-30
 
   > Màn thanh toán của delivery app có ba requirement. AI dựng xong, màn hình trông đủ: có ô mã giảm giá, có nút Thanh toán. Phí vận chuyển ở đâu?
 
+  - Slide tuỳ chọn: bỏ nếu trễ giờ, cắt đầu tiên; practice sheet không bắt buộc phần này
   - Một số designer gắn ID requirement vào từng element của prototype
   - Ô nhập mã mang R1, nút Thanh toán mang R2
   - R3, phí vận chuyển, không element nào mang: đó là chỗ hở
@@ -743,7 +743,7 @@ last_synced: 2026-10-30
   - Bạn áp dụng bốn layer và mười quy tắc lên flow của chính bạn
   - Việc chuẩn bị và các bước nằm trong practice sheet
   - Mang hướng đã chọn, flow và nội dung thật
-  - Cuối bài, ghi ba dòng vào learning log
+  - Cuối buổi, trả lời một câu reflection và ghi ba dòng vào learning log
 - Ví dụ: Không cần. Slide giao việc.
 - Speaker notes:
 
@@ -752,10 +752,11 @@ last_synced: 2026-10-30
   - Việc chuẩn bị và các bước cụ thể nằm trong practice sheet, mình gửi riêng
   - Hướng đã chọn và flow là đầu ra của tuần 4
   - Design system của công ty có thể là tài liệu mật; không chắc thì dùng bản của mình
-  - Cuối bài, bạn ghi learning log ba dòng và trả lời một câu reflection
+  - Cuối buổi này, bạn trả lời một câu: ý nào hôm nay làm bạn đổi cách đưa context cho AI? Rồi ghi ba dòng vào learning log
+  - Learning log của practice là bước riêng, nằm trong practice sheet
 
   > **Shell và template của product là phần bạn tự định nghĩa; AI không làm thay.**
-- 🎨 Visual hint: TYPOGRAPHIC. Một card "Practice 5" với ba dòng: áp dụng, practice sheet, learning log.
+- 🎨 Visual hint: TYPOGRAPHIC. Một card "Practice 5" với ba dòng: áp dụng, practice sheet, reflection và learning log.
 ---
 
 ### END

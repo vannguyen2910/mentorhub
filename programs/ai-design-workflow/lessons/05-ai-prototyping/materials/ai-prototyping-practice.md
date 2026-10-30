@@ -56,11 +56,11 @@ Bài đi theo hai làn: **Figma** (bạn tự làm) và **AI coding tool** (AI d
 - **Bạn kiểm tra (Gate B):** tab qua điều hướng bằng bàn phím, mở ở độ rộng điện thoại và máy tính, tìm giá trị thô. Khi đúng, nói "Lưu lại".
 - **File:** các file shell và template, mục `## Shell and templates` trong `work/prototype/index.md`
 
-### Step 5 · Build pattern · AI coding tool · Optional
+### Step 5 · Build experience pattern · AI coding tool · Optional
 
-- Bước này **tuỳ chọn**. Làm khi flow có cụm component lặp lại ở nhiều màn, ví dụ form đăng nhập, danh sách có bộ lọc, hộp xác nhận, màn trạng thái rỗng.
-- **AI dựng:** mỗi pattern là một cụm component, ghép từ component có sẵn. Không thêm component mới.
-- **Bạn kiểm tra:** pattern có dùng ở ít nhất hai màn không? Một pattern chỉ dùng một lần thì để lại trong màn đó.
+- Bước này **tuỳ chọn**. Làm khi flow có cụm component lặp lại ở nhiều màn, ví dụ search, navigation, form đăng nhập, danh sách có bộ lọc, hộp xác nhận, trạng thái rỗng.
+- **AI dựng:** mỗi experience pattern là một cụm component, ghép từ component có sẵn. Không thêm component mới.
+- **Bạn kiểm tra:** experience pattern có dùng ở ít nhất hai màn không? Một experience pattern chỉ dùng một lần thì để lại trong màn đó.
 - **File:** `components.css`, `components.html` (mục pattern)
 
 ### Step 6 · Build journey prototype · AI coding tool · AI dựng, bạn kiểm tra (Gate C cho Screen plan)
