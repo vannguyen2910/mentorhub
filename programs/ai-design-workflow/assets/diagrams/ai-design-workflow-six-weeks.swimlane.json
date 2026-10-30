@@ -33,7 +33,7 @@
             "Dựng case folder, viết context sản phẩm",
             "Viết data rules của riêng mình",
             "Dựng Knowledge Hub khung",
-            "Chọn hướng nghề của mình"
+            "Chọn hướng nghề, ghi learning log đầu tiên"
           ]
         },
         {
@@ -43,7 +43,8 @@
             "context-product-and-users.md",
             "context-data-rules.md",
             "my-direction.md",
-            "Knowledge Hub khung"
+            "Knowledge Hub khung",
+            "learning-log.md"
           ]
         }
       ]
@@ -70,7 +71,7 @@
             "Hoàn thiện principles.md",
             "Business question và scope",
             "UX observation, challenge assumptions",
-            "Research questions, competitor analysis, lên lịch phỏng vấn peer"
+            "Research questions, competitor analysis, lên lịch phỏng vấn peer, ghi learning log"
           ]
         },
         {
@@ -79,7 +80,8 @@
           "details": [
             "principles.md",
             "research-questions.md, ux-audit.md",
-            "assumption.md, competitor-analysis.md"
+            "assumption.md, competitor-analysis.md",
+            "learning-log.md"
           ]
         }
       ]
@@ -106,7 +108,7 @@
             "Quote peer đã ẩn danh, bốn bước",
             "personas.md, journey-map.md, frame-opportunity.md",
             "Một trang cho lead, O1 trong insight hub",
-            "Gate 1, problem-brief.md"
+            "Gate 1, problem-brief.md, ghi learning log"
           ]
         },
         {
@@ -116,7 +118,8 @@
             "Evidence pack",
             "Problem brief",
             "Persona và journey map có nguồn",
-            "Gate 1 đã chạy"
+            "Gate 1 đã chạy",
+            "learning-log.md"
           ]
         }
       ]
@@ -177,6 +180,7 @@
           "sub": "Buổi 10 · practice",
           "details": [
             "Dựng prototype main flow bằng AI coding tool",
+            "Gắn ID requirement vào element, tìm chỗ hở",
             "Chạy các check với design system, rules file",
             "Review chéo"
           ]

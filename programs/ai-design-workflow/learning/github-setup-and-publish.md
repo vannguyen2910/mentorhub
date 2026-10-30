@@ -69,6 +69,19 @@ Không bật Pages. Chọn một cách:
 
 ---
 
+## 5. Làm việc cùng người khác (tuỳ chọn)
+
+Khi hai người cùng làm trên một repo, ví dụ một người Product và một người Design, mỗi người làm trên **branch** riêng rồi mới đưa về `main`. Xem [sơ đồ](../assets/diagrams/github-collaboration-workflow.html).
+
+1. Mỗi người tách một branch từ `main` và làm việc cùng AI trên branch đó.
+2. Người xong trước đẩy lên `main` (People A trong sơ đồ).
+3. Người còn lại **pull** bản `main` mới nhất về branch của mình trước khi đẩy tiếp. Bỏ bước này thì dễ ghi đè hoặc xung đột với phần người kia vừa làm.
+4. Người thứ hai đẩy lên `main`. Bản `main` cuối cùng là thứ thành live site.
+
+Bạn nói với AI: "Lấy bản mới nhất từ main về", rồi "Lưu và đăng lên". Chưa quyết định chương trình dạy mục này ở lesson nào `[to confirm]`; hiện chỉ là tài liệu tham khảo cho học viên chia sẻ hub qua repo private (xem Lesson 1, các cách cho người khác xem hub).
+
+---
+
 ## AI không làm thay bạn
 
 AI không tự bật GitHub Pages, chuyển repo sang Public hay `push --force`. Hai việc cuối cùng chỉ bạn làm: đọc danh sách file ở mục 3 và bật Pages ở mục 4.
