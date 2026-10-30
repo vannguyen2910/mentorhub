@@ -80,6 +80,16 @@ Từ 2026-10-07, file `*-lesson.md` được viết như một paper hoặc bả
 | show (chiếu) | chiếu, trình bày |
 | lặp lại được (repeatable) | có thể dùng lại |
 | đường viết, sĩ số (dịch word-by-word) | bộ câu hỏi viết sẵn, lớp nhỏ |
+| luật (rules) | quy tắc; để "rules" khi là tên file hoặc nhóm (rules file, System rules) |
+| tầng (layer) | layer |
+| trôi, bị trôi (drift) | lệch dần, bị lệch |
+| từ con số không, từ số không | từ đầu |
+| lan sang (propagate) | cập nhật theo, được đưa sang |
+| cổng kiểm | gate; hoặc "điểm dừng kiểm tra" |
+| phá luật, luật bị phá | vi phạm quy tắc, quy tắc bị vi phạm |
+| vật để test | thứ để test |
+| tuỳ chỉnh ở rìa | tuỳ chỉnh phần khác biệt |
+| sửa quá thấp, đẩy quá cao | giữ "fix too low", "push too high" |
 
 ## Quy ước ngôn ngữ
 
@@ -88,7 +98,7 @@ Từ 2026-10-07, file `*-lesson.md` được viết như một paper hoặc bả
 | 1 | **Tiêu đề bằng tiếng Anh, nội dung bằng tiếng Việt.** Tên lesson, cover, header slide, Kicker, Title để tiếng Anh. On-slide và speaker notes bằng tiếng Việt | Title: "Your Design Process, with AI" |
 | 2 | **Nhãn trên slide method bằng tiếng Anh:** What, Why, When, Where AI helps. Nội dung sau nhãn bằng tiếng Việt | "What: Đọc những gì product đã có…" |
 | 3 | **Không ghi thời lượng trên slide.** Section divider không có dòng Sub chứa số phút. Thời gian chỉ nằm trong speaker notes và trên slide `MILESTONE` của activity | |
-| 4 | **Giữ thuật ngữ nghề bằng tiếng Anh**, không dịch | business question, constraints, assumptions, support tickets, data analytics, existing research, user need, opportunity statement, live traffic, shortlist, sticky note, topic, item, group, cluster, interview guide, desk research, stakeholder interview, insight, deliver, context, folder, prototype, design system, handoff, opportunity, hypothesis, metric, decision, test, principle, gate, warning, alignment, evidence, user need |
+| 4 | **Giữ thuật ngữ nghề bằng tiếng Anh**, không dịch | business question, constraints, assumptions, support tickets, data analytics, existing research, user need, opportunity statement, live traffic, shortlist, sticky note, topic, item, group, cluster, interview guide, desk research, stakeholder interview, insight, deliver, context, folder, prototype, design system, handoff, opportunity, hypothesis, metric, decision, test, principle, gate, warning, alignment, evidence, user need, content voice, layer, journey, shell, template, rules file |
 | 5 | **Dùng "group", "topic", "item", "sticky note"** thay vì dịch | "group các câu trả lời thành các topic" |
 | 6 | **Mỗi dòng trên slide là một thông điệp, viết thành một câu ngắn,** đọc được trong một cái nhìn. Không câu nào quá khoảng 15 từ (nguồn trong ngoặc không tính) | "Không uổng phí buổi phỏng vấn cho những điều team đã biết" |
 | 7 | **Why mở đầu bằng lợi ích cụ thể** (không uổng phí, thấy, biết, tránh) | Why: "Không uổng phí…" |
@@ -156,6 +166,8 @@ Playback viết trung tính, không có ngôi thứ nhất của Winnie và khô
 | On-slide | Mỗi bước: AI soạn nháp, bạn kiểm tra, bạn quyết định | Ở mỗi bước, AI soạn nháp còn bạn kiểm tra và quyết định |
 | On-slide | 7 tuần, 14 session 90 phút, 7 đến 8 người mỗi lớp | Lớp 7 đến 8 người học 14 session 90 phút trong 7 tuần |
 | Speaker notes | Quote được ẩn danh trước khi AI đọc; AI chỉ làm việc trên quote thật, trả lại nguyên văn kèm ID | (hai bullet) Quote được ẩn danh trước khi AI đọc / AI chỉ làm việc trên quote thật và trả lại nguyên văn kèm ID |
+| Tên phần theory (brief Lesson 5) | Context thắng prompt; Chồng nền; Dựng và kiểm | Context over Prompts; The Design Stack; Build and Review (tên phần để tiếng Anh cho tự nhiên) |
+| Luật 5 của rules file (Lesson 5) | Nội dung thật, đúng giọng đã chốt, không lorem ipsum | Nội dung thật, đúng content voice đã chốt, không lorem ipsum (giữ "content voice" bằng tiếng Anh, vì "giọng nội dung" nghe gượng) |
 
 ## Kiểm tra trước khi giao
 

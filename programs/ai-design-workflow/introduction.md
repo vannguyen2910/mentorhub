@@ -54,6 +54,7 @@ Chương trình chưa phù hợp nếu bạn:
 - **Mỗi tuần một cặp buổi**: buổi theory dạy khái niệm và có một activity ngắn, rồi buổi practice để bạn làm trên case của chính mình, có coaching theo nhóm nhỏ và review chéo.
 - **Tuần 6** có một nhịp khác: buổi theory về test, sau đó bạn test với người dùng thật trong một ngày, rồi buổi cuối là reflection và wrap-up.
 - **Giữa các buổi** chỉ có việc nhỏ dưới 20 phút, để nối tiếp phần đã làm.
+- **Learning log:** mỗi buổi practice kết thúc bằng ba phút ghi vào một file riêng tư (`_personal/learning-log.md`): bạn đã làm gì, phản hồi nào nhận được, lần sau đổi gì, kèm một câu reflection. Ở buổi cuối, bạn đọc lại cả log để tìm điều lặp lại.
 - **Ba tầng theo dõi tiến bộ:**
   - KNOW: giải thích khái niệm bằng lời của mình.
   - DO: một file trong case folder sau mỗi buổi.

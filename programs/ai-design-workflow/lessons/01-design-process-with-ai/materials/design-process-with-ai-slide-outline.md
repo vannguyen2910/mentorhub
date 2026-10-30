@@ -515,7 +515,7 @@ last_synced: 2026-10-24
 
   > Một agent đầu tiên chỉ cần một vai, một folder và một lần chạy thử.
 
-  - Ví dụ thật của mình: agent Competitor Analysis là một step card, file `toolkit/skills/competitor-analysis.md`; mình mở project folder, nhờ tool đọc step card này và làm theo
+  - Ví dụ thật của mình: agent Competitor Analysis là một step card, file `toolkit/skills/competitor-analysis/SKILL.md`; mình mở project folder, nhờ tool đọc step card này và làm theo
   - Step card ghi rõ file làm việc là `work/competitor-analysis.md`, nguồn là `work/sources/anonymised/`, và mỗi bước điền một mục: bước 1 bạn viết Scope, bước 2 và 3 AI đề xuất rồi bạn chốt danh sách đối thủ
   - Bước 5 AI soạn mục Evidence (AI draft) và bạn không sửa mục này; bước 6 bạn tự đối chiếu với nguồn rồi ghi bản đã sửa vào Evidence (verified)
 
@@ -748,12 +748,14 @@ last_synced: 2026-10-24
   - Một bài tập: dựng project folder của bạn (khoảng 45 phút)
   - Lấy folder từ template, viết product-and-users, mở hub, chạy một instruction
   - Cuối cùng: hai dòng về hướng của bạn
+  - Sau mỗi buổi practice: ba dòng learning log
 - Ví dụ: có (instruction "năm điều AI cần biết mà file không có", chạy trên file đã lưu)
 - Câu hỏi hay gặp: None.
 - Speaker notes:
   - Chỉ một bài tập, khoảng bốn mươi lăm phút; ba phút rưỡi cho slide này, và chiếu luôn slide tham khảo "Five steps" ở Appendix vì đây là lần duy nhất học viên thấy đủ năm bước; xong trước buổi 2 vì các buổi sau làm trên chính folder này
   - Năm bước nằm ở phần Homework reference sau slide END: tạo project từ `my-project`, viết product-and-users, mở hub, chạy một instruction với file đã lưu, rồi ghi hai đến ba dòng vào `_personal/my-direction.md`
   - `my-direction.md`: hướng nghiêng về trong ba hướng đi, lý do, một kỹ năng muốn xây; file xem lại ở buổi 12
+  - `learning-log.md`: sau mỗi buổi practice, ba dòng về điều đã làm, phản hồi nhận được và điều sẽ đổi, kèm một câu reflection; cuối khoá bạn đọc lại để tìm điều lặp lại
   - **Chưa dán tài liệu thật của case vào AI tool trước khi viết data rules**; ai chưa viết xong Activity thì dùng case mẫu để thử
   - Nếu case không thể mang vào AI tool, dùng case mẫu của khoá
   - Đây là folder dự án của bạn, không phải bài nộp; nhắc tải workspace template (ZIP) trước nếu chưa có
@@ -952,7 +954,7 @@ last_synced: 2026-10-24
 - On-slide: Private: file HTML hoặc PDF, file nén, hoặc mời vào repo private. Public: chỉ khi cả case được phép chia sẻ.
 - Speaker notes:
   - **Hub mặc định là private**: nó nằm trong project folder của bạn và không ai thấy trừ khi bạn gửi
-  - Để cho stakeholder xem, chạy script `toolkit/skills/build-report.py` để ra một file HTML mở được bằng trình duyệt, hoặc export các page chính ra PDF; hoặc gửi file nén của cả project folder, vì các page hub link sang nhiều folder
+  - Để cho stakeholder xem, chạy script `toolkit/tools/build-report.py` để ra một file HTML mở được bằng trình duyệt, hoặc export các page chính ra PDF; hoặc gửi file nén của cả project folder, vì các page hub link sang nhiều folder
   - Muốn một người xem trực tiếp, mời họ vào repository private trên GitHub
   - Chỉ khi toàn bộ case được phép chia sẻ (case của khoá, hoặc bản đã làm sạch từ công việc của bạn) mới công khai cả project folder trong một repository public mới; GitHub hiển thị Markdown nên không cần dựng website; guide và homework tuỳ chọn có hướng dẫn
   - **Nếu bạn công khai, bạn là người host và chịu trách nhiệm**; công việc thật được giữ private
