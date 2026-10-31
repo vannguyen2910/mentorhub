@@ -153,7 +153,7 @@ Pair what users **do** (analytics, task results) with what they **say** (surveys
 - **Error rate at the gates** (e.g. the step 6 spot-check in competitor analysis). A falling error rate over projects shows better instructions, not just faster output.
 - **Rework:** how many steps were rerun after a gate failed; how many insights were thrown away at Gate C.
 - **Reversed decisions:** decisions in the decision log later changed because the evidence was weak.
-- **Don't trust felt speed.** A METR trial found experienced developers were about 19% *slower* with AI while feeling about 20% faster ⚠️ ([summary](https://radar.zurb.com/article/metr-trial-developers-were-19-slower-with-ai-while-feeling-20-faster)). Designers show a similar gap: 89% say AI makes them faster, only ~58% say quality improves (see `research.md` Part 1). Measure with a stopwatch and counts, not impressions.
+- **Don't trust felt speed.** A METR trial found experienced developers were about 19% *slower* with AI while feeling about 20% faster ⚠️ ([summary](https://radar.zurb.com/article/metr-trial-developers-were-19-slower-with-ai-while-feeling-20-faster)). Designers show a similar gap: 89% say AI makes them faster, only ~58% say quality improves (see `reference/research.md` Part 1). Measure with a stopwatch and counts, not impressions.
 
 ### Where it fits in the workflow
 | Stage | Measurement job | Gate link |
@@ -199,11 +199,11 @@ The aim is not to take over product's job but to design with the numbers in view
 5. What would make us stop or roll back?
 6. Can you share the current dashboard or last quarter's numbers for this area?
 
-**If the numbers can't be shared yet** (some students have little or no access; the three access access levels are in Lesson 2 of `lesson-details.md`)
+**If the numbers can't be shared yet** (some students have little or no access; the three access access levels are in Lesson 2 (`lessons/02-discover-the-problem/materials/discover-the-problem-lesson.md`, section 3.2))
 - Write the metric as a **stated assumption** in the Scope section: "Assumed: onboarding completion is the success measure. Not yet confirmed with product."
 - Fall back to pre-launch proxies the student controls: task success, time on task, errors, SUS.
 - Offer something in return: a usability baseline and test results give product evidence they may not have. Bringing numbers is an easy way to start the exchange.
-- Frame it as practising a premium skill: the Vietnam salary report names "business mindset" (linking design to ROI and retention) as a pay differentiator, though from a source with no stated method (see `research.md` Part 3). Also: [Readymag — why metrics matter to designers](https://blog.readymag.com/a-discipline-for-designers-product-designer-on-why-metrics-matter/) (not read in full).
+- Frame it as practising a premium skill: the Vietnam salary report names "business mindset" (linking design to ROI and retention) as a pay differentiator, though from a source with no stated method (see `reference/research.md` Part 3). Also: [Readymag — why metrics matter to designers](https://blog.readymag.com/a-discipline-for-designers-product-designer-on-why-metrics-matter/) (not read in full).
 
 ### Still open
 1. Should "Plan and read the measurement" stay a separate activity, or be folded into Validate (usability testing) since students are pre-launch? *(Recommend: fold in, and keep the post-launch part as a short "hand to the PO" step.)*

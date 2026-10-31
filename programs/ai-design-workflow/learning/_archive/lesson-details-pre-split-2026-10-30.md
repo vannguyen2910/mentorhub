@@ -1,3 +1,5 @@
+> **Archived 2026-10-30.** Cấu trúc 9 lesson và Check point trong file này đã lỗi thời so với `../plan.md`. Bảng Series Vocabulary đã chuyển sang `../vocabulary.md`; chi tiết Lesson 1, 2, 3, 5 nằm ở `../lesson-N-details.md`. Giữ lại cho Lesson 4 và 6 đến 9 cũ cho đến khi viết lại.
+
 # Lesson Details
 
 Tài liệu tham chiếu để dựng từng lesson. **Đọc `plan.md` trước.** File này giữ phần chi tiết mà plan không có: bộ từ vựng của series, rồi mục tiêu, activity và output của từng lesson (Lesson 1 đến 9) và ba Check point.

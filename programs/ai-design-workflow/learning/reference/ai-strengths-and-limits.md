@@ -137,7 +137,7 @@ Dùng cho một workflow cụ thể. Trả lời có hoặc không.
 
 ## 5. Where This Fits in the Lessons
 
-Gợi ý chèn vào các lesson trong `lesson-details.md`. Đã đưa vào Lesson 1 (`design-process-with-ai`, mục 3.4 và 3.5, bốn slide, handout `assets/templates/before-you-automate.md`). Các lesson còn lại chưa sửa.
+Gợi ý chèn vào các lesson trong `_archive/lesson-details-pre-split-2026-10-30.md`. Đã đưa vào Lesson 1 (`design-process-with-ai`, mục 3.4 và 3.5, bốn slide, handout `assets/templates/before-you-automate.md`). Các lesson còn lại chưa sửa.
 
 | Lesson | Thông điệp nên đưa vào |
 |---|---|

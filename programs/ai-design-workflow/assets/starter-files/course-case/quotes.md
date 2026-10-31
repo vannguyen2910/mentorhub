@@ -1,4 +1,4 @@
-# Quote set: Kitchen Crate (fictional)
+# Quote set: delivery app (fictional)
 
 **All quotes are invented.** There are 24, from three kinds of source:
 - **R01 to R10:** app store reviews
@@ -9,29 +9,29 @@ They are already anonymised and have IDs. Use them word for word. Any quote you 
 
 | ID | Source | Quote |
 |---|---|---|
-| R01 | Review | I picked a delivery date without realising it could not be changed after checkout. The box arrived while I was on holiday and half the food went off. |
-| R02 | Review | The date picker is confusing. It shows a Friday but the box came on a Wednesday. I still do not know which one I chose. |
-| R03 | Review | I could not find how to skip a week anywhere. In the end I cancelled and signed up again. |
-| R04 | Review | Pausing is hidden in settings under 'Plan'. Nobody would look there. I got charged for a box I did not want. |
-| R05 | Review | Recipes say 30 minutes. It took me over an hour with all the chopping. Not a quick weeknight dinner. |
-| R06 | Review | A bit expensive for two people, but the food is good so I keep it. |
-| R07 | Review | I love how much variety there is. I have cooked things I would never have tried. |
-| R08 | Review | The food quality is great and the portions are generous. |
+| R01 | Review | I picked a delivery slot without realising it could not be changed after checkout. The food arrived while I was at the airport and went cold on the doorstep. |
+| R02 | Review | The slot picker is confusing. It shows 7 to 8 pm but the courier came at 6:30. I still do not know which one I chose. |
+| R03 | Review | I could not find how to cancel an order anywhere. In the end I called the restaurant myself. |
+| R04 | Review | Cancel is hidden at the bottom of 'Order details' and it disappears after two minutes. Nobody would look there. I got charged for an order I did not want. |
+| R05 | Review | The app said 25 minutes. It took over an hour. Not a quick dinner after work. |
+| R06 | Review | A bit expensive with the delivery fee, but the food is good so I keep ordering. |
+| R07 | Review | I love how many local restaurants there are. I have tried places I would never have found. |
+| R08 | Review | The food always arrives hot and the portions are generous. |
 | R09 | Review | Great app!!! Five stars. |
-| R10 | Review | Courier left the box at the wrong door and was rude when I called. Not impressed. |
-| F01 | Forum | First box arrived on a day nobody was home. The app lets you choose a date but it never said the choice was final. Anyone else caught out? |
-| F02 | Forum | Is there any way to move my delivery date? The app says the cut-off was yesterday, but I never saw a cut-off anywhere when I ordered. |
-| F03 | Forum | How do you pause? I have looked everywhere. The skip-a-week button only shows up for a few hours on Thursdays, I think. |
-| F04 | Forum | I paused my plan and still got a box. Support said the pause had to be set before Thursday 6 pm. That was not written on the pause screen. |
-| F05 | Forum | The 20-minute meals are really 45 if you cook slowly like me. The step photos help but the timings are optimistic. |
-| F06 | Forum | Cooking from these kits for the first time is stressful. The first recipes had too many steps for a beginner. |
-| F07 | Forum | Too pricey for what it is. I can buy the same ingredients for half at the supermarket. |
-| F08 | Forum | The vegetarian options are really good. Better than I expected from a kit. |
-| I01-01 | Interview 1 | I ordered on a Sunday and just tapped the first date it showed. I did not think about whether I would be home. It arrived when I was at my parents' and I felt silly. |
-| I01-02 | Interview 1 | I wanted to skip the next week because I was travelling. I went through the whole menu and could not find it. Eventually I messaged support. |
-| I01-03 | Interview 1 | The first recipe was fine, but it said 30 minutes and I was still chopping at 30. I felt like I was doing it wrong. |
-| I02-01 | Interview 2 | When I picked the delivery day, I assumed I could change it later like in other apps. I only learned it was locked when I tried. |
-| I02-02 | Interview 2 | I thought pausing would be easy. It is not obvious. I would rather the app asked me before charging me when I am away. |
-| I02-03 | Interview 2 | Honestly, the cooking time bothered me more than the price. After a long day I do not want an hour of cooking. |
+| R10 | Review | The restaurant forgot my drinks and the staff were rude when I called. Not impressed. |
+| F01 | Forum | My first order arrived when nobody was home. The app lets you choose a time slot but it never said the choice was final. Anyone else caught out? |
+| F02 | Forum | Is there any way to move my delivery time? The app says the cut-off was five minutes ago, but I never saw a cut-off anywhere when I ordered. |
+| F03 | Forum | How do you cancel or edit an order? I have looked everywhere. The cancel button only shows up for a couple of minutes after you pay, I think. |
+| F04 | Forum | I cancelled my order and still got charged. Support said cancelling had to happen before the restaurant accepted it. That was not written on the cancel screen. |
+| F05 | Forum | The 20-minute estimate is really 45 when it rains. The live map helps but the estimates are optimistic. |
+| F06 | Forum | Ordering for the first time is stressful. The first checkout had too many steps for a newcomer. |
+| F07 | Forum | Too pricey for what it is. I can pick up the same meal myself for half the price. |
+| F08 | Forum | The vegetarian options are really good. Better than I expected from a delivery app. |
+| I01-01 | Interview 1 | I ordered on a Sunday and just tapped the first slot it showed. I did not think about whether I would be home. It arrived when I was at my parents' and I felt silly. |
+| I01-02 | Interview 1 | I wanted to cancel because my plans changed. I went through the whole order screen and could not find it. Eventually I messaged support. |
+| I01-03 | Interview 1 | The first order was fine, but it said 25 minutes and I was still waiting at 50. I felt like I had done something wrong. |
+| I02-01 | Interview 2 | When I picked the delivery time, I assumed I could change it later like in other apps. I only learned it was locked when I tried. |
+| I02-02 | Interview 2 | I thought cancelling would be easy. It is not obvious. I would rather the app asked me before charging me when I am away. |
+| I02-03 | Interview 2 | Honestly, the waiting time bothered me more than the delivery fee. After a long day I do not want to wait an hour for dinner. |
 
 *Note on the sample: reviews lean towards people with strong feelings; the forum is people who had a problem; the interviews are two polite participants. Say so in your limits.*

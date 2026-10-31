@@ -83,7 +83,7 @@ Dùng `git mv` để giữ lịch sử. **Ví dụ** (`examples/`): chỉ lấy 
 | File | Việc |
 |---|---|
 | `lessons/01-design-process-with-ai/materials/` (lesson 7 chỗ, slide outline 5, practice 1) | Câu "step card là một file Markdown trong `toolkit/skills/`" đổi thành "một folder trong `toolkit/skills/`". Theo quy tắc đồng bộ lesson và outline: sửa cả hai, chạy `notes-audit.py` trên outline và báo kết quả, rồi `build-home.py` |
-| `learning/plan.md` (3), `lesson-details.md`, `quality-and-measurement.md`, `github-setup-and-publish.md`, `ai-strengths-and-limits.md`, `ai-in-insights.md`, `ai-in-prototype.md`, `briefs/research-you-can-trust-brief.md` | Sửa đường dẫn cũ; `plan.md` ghi quyết định mới |
+| `learning/plan.md` (3), `quality-and-measurement.md`, `assets/templates/workflow-kit/github-setup-and-publish.md`, `reference/ai-strengths-and-limits.md`, `reference/ai-in-insights.md`, `reference/ai-in-prototype.md`, `briefs/research-you-can-trust-brief.md` | Sửa đường dẫn cũ; `plan.md` ghi quyết định mới |
 | `assets/starter-files/README.md`, `course-case/po-case-pack.md` | Sửa đường dẫn |
 | `assets/starter-files/prototype-starter/` | Bản copy riêng, đang lệch với bản trong toolkit. **Cần chốt** giữ hay trỏ về một nguồn |
 | `learning/consistency.json` | Thêm luật `terms` cho `toolkit/skills/[a-z-]+\.md` (đã bỏ) và `sync-workspace` để `consistency.py` bắt chỗ sót |

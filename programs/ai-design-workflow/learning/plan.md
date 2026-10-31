@@ -23,7 +23,7 @@ Làm theo thứ tự.
 |---|---|---|
 | 1 | **Lesson 1:** xác nhận số liệu Figma 36/35/29 trong báo cáo đầy đủ trước khi dạy; dựng lại deck | File xong; deck chưa dựng |
 | 2 | **Lesson 2:** lesson và slide outline đã viết lại (2026-10-26); xem lại các ví dụ `bản nháp`; **thêm synthesis** (chuyển từ lesson 3, 2026-10-30) và phỏng vấn user thật; dựng deck | File cần viết lại phần synthesis; chờ Winnie xem lại |
-| 3 | **Lesson 3:** sửa lesson và slide (competitor đầy đủ đã chuyển sang lesson 2; thêm persona, journey map, opportunity, insight hub; synthesis rút gọn thành phần ôn) | Đã có desk research và đề xuất cấu trúc 90 phút (`ai-in-insights.md` mục 6, 2026-10-27); đã viết lại 2026-10-30 (synthesis sang lesson 2, thêm package); cần soạn persona mẫu cho activity |
+| 3 | **Lesson 3:** sửa lesson và slide (competitor đầy đủ đã chuyển sang lesson 2; thêm persona, journey map, opportunity, insight hub; synthesis rút gọn thành phần ôn) | Đã có desk research và đề xuất cấu trúc 90 phút (`reference/ai-in-insights.md` mục 6, 2026-10-27); đã viết lại 2026-10-30 (synthesis sang lesson 2, thêm package); cần soạn persona mẫu cho activity |
 | 4 | **Lesson 4, 5, 6** (mỗi lesson gộp hai lesson cũ), theo thứ tự | Chưa bắt đầu |
 | 5 | Hướng dẫn facilitation một trang cho practice P1 đến P5 và buổi wrap-up | Chưa bắt đầu |
 | 6 | Lớp chạy thử: kiểm tra khoảng 4 giờ làm ở nhà mỗi tuần (mục tiêu 2026-10-30), nhất là tuần 2 và 6; theory lesson 2 (56 phút, nay thêm synthesis), lesson 3 và 6 có quá tải không | Sau lớp đầu |
@@ -54,7 +54,7 @@ Làm theo thứ tự.
 - Practice 1 có thêm hai bước tuỳ chọn: push lên Git và bật trang live. Output "ready-folder với context" không phụ thuộc vào hai bước này.
 - Define rải theo mạch: problem brief ở cuối tuần 3, hypothesis đầu tuần 4, metrics ở tuần 6. Không còn lesson handoff và measurement plan (bỏ 2026-10-26).
 - Tên gọi: buổi theory là "lesson" (T1 đến T6), buổi practice là "practice" (P1 đến P6). File lesson hiện còn ghi "buổi N" theo số lesson; đổi khi sửa lần tới.
-- Chi tiết từng lesson ở `lesson-details.md`.
+- Chi tiết từng lesson nằm trong file lesson, practice và `lesson-N-details.md` (Lesson 1, 2, 3, 5); bản cũ cho Lesson 4 và 6 đến 9 ở `_archive/lesson-details-pre-split-2026-10-30.md` cho đến khi viết lại.
 
 **Theo dõi tiến bộ:** KNOW (giải thích khái niệm bằng lời của mình), DO (một file trong case folder), SHOW (trình bày và review chéo ở practice và buổi wrap-up). Thêm **learning log** (`_personal/learning-log.md`, riêng tư): mỗi practice kết thúc bằng ba phút ghi ba dòng và một câu reflection; buổi wrap-up đọc lại để tìm điều lặp lại. Đã áp dụng cho P1 đến P3; P4 đến P6 chưa viết nên chưa có bước này. Khung: skill `learning-loop`.
 
@@ -76,12 +76,12 @@ Làm theo thứ tự.
 | Gates | Bốn gate, 20 check (1a đến 4d), định nghĩa một lần ở `method.md` Part 3. |
 | Đo lường | Lõi là usability metrics trước launch (Goals, Signals, Metrics). Business metrics hỏi product, ghi assumed. |
 | Tool | Một AI chat tool từ lesson 1, một AI coding tool từ lesson 5. Lesson và slide dùng tên chung; tên cụ thể chỉ nằm ở `assets/templates/tools-to-bring.md`. |
-| Toolkit | `workspace-template/toolkit/` là nguồn gốc duy nhất (quyết định 2026-10-28). Mỗi skill là một folder `toolkit/skills/<tên>/` (`SKILL.md`, `templates/`, `examples/`), script ở `toolkit/tools/`. Không còn đồng bộ từ skill `product-workspace`. Kế hoạch và kết quả: `toolkit-refactor-plan.md`. |
+| Toolkit | `workspace-template/toolkit/` là nguồn gốc duy nhất (quyết định 2026-10-28). Mỗi skill là một folder `toolkit/skills/<tên>/` (`SKILL.md`, `templates/`, `examples/`), script ở `toolkit/tools/`. Không còn đồng bộ từ skill `product-workspace`. Kế hoạch và kết quả: `_system/toolkit-refactor/toolkit-refactor-plan.md`. |
 | Prototype | Học viên không viết code; AI coding tool làm. Mục tiêu lesson 5: prototype sẵn sàng test, có thể là final design. |
 | Hub | Private mặc định, nằm trong case folder. Đưa lên GitHub là tuỳ chọn. |
-| Định hướng nghề | Lesson 1 dành 18 phút cho hướng đi của nghề và ba con đường; số liệu có nguồn, năm, cỡ mẫu (`research.md` Part 5). Học viên viết `my-direction.md` và xem lại ở buổi wrap-up. Chương trình không dạy thiết kế sản phẩm AI. |
+| Định hướng nghề | Lesson 1 dành 18 phút cho hướng đi của nghề và ba con đường; số liệu có nguồn, năm, cỡ mẫu (`reference/research.md` Part 5). Học viên viết `my-direction.md` và xem lại ở buổi wrap-up. Chương trình không dạy thiết kế sản phẩm AI. |
 | Đã bỏ | Lesson handoff và measurement plan; workflow lab (tài liệu cũ ở `assets/templates/workflow-kit/` giữ nguyên, không dùng trong lớp). Quyết định 2026-10-26. |
-| Tên gọi | Mỗi ý một tên, định nghĩa ở bảng vocabulary trong `lesson-details.md`. Không dùng tên tool AI trong lesson. |
+| Tên gọi | Mỗi ý một tên, định nghĩa ở `vocabulary.md`. Không dùng tên tool AI trong lesson. |
 
 ---
 
@@ -97,18 +97,18 @@ Làm theo thứ tự.
 7. **Lesson 2 có quá tải không** khi thêm synthesis vào theory (hiện 56 phút).
 
 **Việc cần làm:**
-- **Đồng bộ theo cách hiểu mới (2026-10-30), chưa làm:** `introduction.md` (Lộ trình), `README.md` (bảng Lessons), `assets/diagrams/ai-design-workflow-six-weeks.swimlane.json` (đang ghi practice là buổi làm trên lớp), `lesson-details.md`, bảng "Connection to the series" của từng lesson, và các practice sheet P1 đến P3 (đang chia theo phút trong buổi 90 phút, cần viết lại thành chuỗi việc ở nhà cộng phần làm tiếp và chấm trên lớp).
+- **Đồng bộ theo cách hiểu mới (2026-10-30), chưa làm:** `introduction.md` (Lộ trình), `README.md` (bảng Lessons), `assets/diagrams/ai-design-workflow-six-weeks.swimlane.json` (đang ghi practice là buổi làm trên lớp), bảng "Connection to the series" của từng lesson, và các practice sheet P1 đến P3 (đang chia theo phút trong buổi 90 phút, cần viết lại thành chuỗi việc ở nhà cộng phần làm tiếp và chấm trên lớp).
 - **Đã làm (2026-10-30):** synthesis chuyển từ lesson 3 sang lesson 2 (lesson và slide outline của cả hai đã viết lại; Lesson 2 có 33 slide, theory khoảng 61 phút; Lesson 3 có 22 slide, thêm activity "persona có quote hay không" và slide package thành agent chuyển từ Lesson 2). Còn lại: soạn `assets/starter-files/course-case/persona-ai-draft.md` cho activity mới của Lesson 3, viết lại practice sheet P2 và P3, và thử thời lượng Lesson 2 với lớp thật.
 - Thêm vào practice: bước ẩn danh transcript (P2), user flow (P4), hai bước "Hub" và "linked" ở cuối mỗi practice (P6 còn thiếu "linked").
 - Dựng lại năm hình draft practice của Winnie (2026-10-30) theo style của khoá, nhãn thống nhất một ngôn ngữ, sau khi chốt các mục ở trên.
 - Viết practice P3 đến P6 và thư mục `07-wrap-up` (chỉ có file practice) khi chốt nội dung; P1 và P2 đã có bản nháp. Hub hiện Lesson và Practice trong nhóm `Lessons` của `SUMMARY.md`, không hiện outline.
-- Đổi nhãn "buổi N" thành "lesson N" trong các file lesson và slide outline; gộp lesson 4 đến 11 cũ trong `lesson-details.md`.
-- Sửa các trang còn nhắc Check point, handoff hoặc 9+3 buổi: `README.md`, `introduction.md`, lesson 1, `lesson-details.md`.
-- Kiểm chứng ở Việt Nam: phỏng vấn 5 đến 8 designer hoặc hiring manager (`research.md` Part 3).
+- Đổi nhãn "buổi N" thành "lesson N" trong các file lesson và slide outline; viết lại lesson 4 đến 11 cũ (bản cũ ở `_archive/lesson-details-pre-split-2026-10-30.md`).
+- Sửa các trang còn nhắc Check point, handoff hoặc 9+3 buổi: `README.md`, `introduction.md`, lesson 1.
+- Kiểm chứng ở Việt Nam: phỏng vấn 5 đến 8 designer hoặc hiring manager (`reference/research.md` Part 3).
 - Dọn file cũ: `assets/templates/po-case-pack-template.md`, `assets/starter-files/course-case/po-case-pack.md`.
 - Vẽ các flow còn thiếu: problem brief, ideation, prototype build, alignment check.
 - Ba mẫu workflow từ designer khác (2026-10-30, chưa có nguồn công khai, nói rõ khi dạy): **Link** (requirement gắn vào element) đã vào Lesson 5 mục 3.5 và P5, sơ đồ `lessons/05-ai-prototyping/assets/ai-pattern-link.html`. Còn lại: **Render** (một file `.md` ra nhiều bản flow) vào Lesson 4 phần flow; **Route** (feedback thành implement ticket, có người duyệt và data rules) vào Lesson 6. Sơ đồ đã vẽ ở `assets/diagrams/ai-pattern-render.html` và `ai-pattern-route.html`; chuyển vào `assets/` của lesson khi viết Lesson 4 và 6. Thêm một slide tổng hợp ba mẫu ở buổi wrap-up.
-- Làm template facilitator page cho phỏng vấn (câu hỏi, follow-up, ghi chú, timer) trước practice P2 và P3; chi tiết ở `ai-in-discover.md`.
+- Làm template facilitator page cho phỏng vấn (câu hỏi, follow-up, ghi chú, timer) trước practice P2 và P3; chi tiết ở `reference/ai-in-discover.md`.
 
 ---
 
@@ -116,35 +116,14 @@ Làm theo thứ tự.
 
 Thư mục `learning/` (riêng tư, không lên site trừ các file có trong `SUMMARY.md`) giữ kế hoạch, research và method.
 
-**Kế hoạch và nền của khoá**
-
-| File | Nội dung |
-|---|---|
-| `plan.md` | Trang này |
-| `lesson-details.md` | Vocabulary, objectives, activity và output của từng lesson và buổi practice (theo 12 buổi) |
-| `method.md` | Activity flow standard, step card, stage method và 20 gate check |
-| `quality-and-measurement.md` | Traceability, alignment check, đo thành công |
-| `workflow-design-log.md` | Quyết định thiết kế và sự cố của workspace phía sau khoá (cho giảng viên và pitch) |
-| `voice-sample-vi.md` | Mẫu giọng tiếng Việt; quy tắc chính nằm ở `_system/rules/vi-voice.md` |
-
-**Research bằng chứng**
-
-| File | Nội dung |
-|---|---|
-| `research.md` | Thị trường, failure case và rủi ro, thị trường Việt Nam, dạy designer đi làm, tương lai nghề và data safety (Part 5, 6, tiếng Việt) |
-| `ai-strengths-and-limits.md` | AI làm tốt và còn yếu ở đâu, không automate workflow xấu, checklist trước khi automate, danh mục 100 task |
-| `ai-in-discover.md` | Bằng chứng và cách làm cho stage Discover (phỏng vấn, desk research, competitor, consent, tiếng Việt) |
-| `desk-research-competitor-practice.md` | Cách làm, template và prompt cho desk research và competitor analysis (tách từ `ai-in-discover.md` mục 4) |
-| `ai-mental-model-desk-research.md` | Report AI mental model: người dùng hình dung AI thế nào |
-| `ai-mental-model-harness.md` | Bổ sung cho report trên: harness và agent ở góc mental model và thiết kế quyền hạn |
-| `agentic-ai-concepts.md` | Khái niệm kỹ thuật: agent, tool use, MCP, skills, harness, workflow pattern (KNOW / DO / SHOW) |
+Danh mục từng file trong `learning/` (nguồn chính của việc gì, file nào đã cũ) nằm ở [`INDEX.md`](INDEX.md); không liệt kê lại ở đây.
 
 **Ở nơi khác**
 
 | Vị trí | Nội dung |
 |---|---|
 | `assets/templates/synthesis-hunt/` | Bộ activity "Săn lỗi" cho lesson 3: quote "Ăn Ngay", bản synthesis có lỗi cài sẵn, bảng lỗi cho giảng viên (không gửi học viên trước khi activity kết thúc) |
-| `assets/templates/rule-break-hunt/` | Activity "Rule-break hunt" cho T5 (5 phút): màn hình `screen.html` có ba lỗi cài sẵn và đáp án giảng viên. Bản nháp, chưa thử. Kế hoạch: `learning/lesson-5-activity-rule-break-hunt.md` |
+| `assets/templates/rule-break-hunt/` | Activity "Rule-break hunt" cho T5 (5 phút): màn hình `screen.html` có ba lỗi cài sẵn và đáp án giảng viên. Bản nháp, chưa thử. Kế hoạch: `learning/reference/lesson-5-activity-rule-break-hunt.md` |
 | `assets/templates/handout-ai-design-workflow-buoc-1.md` | Giáo án một buổi thực hành (workflow audit, role card, baseline run). Chưa dùng trong 12 buổi; role card hợp với lesson 5 |
 | `assets/references/claude-code-16-lessons-nhat-anh.md` | Ghi chú từ một video về cách dùng AI coding tool; tài liệu tham khảo, không thuộc khoá |
 | `assets/templates/workflow-kit/` | Bộ mẫu cho học viên: step card, luật cho AI tool, propose first, prompt vocabulary, checklist, failure case |

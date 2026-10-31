@@ -16,7 +16,7 @@ Winnie dạy bằng tiếng Việt và mentee là người Việt, nên tài li�
 
 | Loại file | Ngôn ngữ |
 |---|---|
-| Lesson và slide outline mới | Tiếng Việt: tiêu đề, Kicker, tên mục bằng tiếng Anh, nội dung bằng tiếng Việt. Dùng skill `vi-voice`, và `vietnamese-copy-polish` để kiểm tra lần cuối chữ trên slide |
+| Lesson và slide outline mới | Tiếng Việt: Title và Kicker của slide cũng bằng tiếng Việt, chỉ giữ thuật ngữ nghề bằng tiếng Anh; tên lesson, tiêu đề mục trong file lesson và nhãn field giữ tiếng Anh. Dùng skill `vi-voice`, và `vietnamese-copy-polish` để kiểm tra lần cuối chữ trên slide |
 | Lesson cũ đang viết bằng tiếng Anh | Giữ nguyên cho đến khi Winnie yêu cầu viết lại |
 | Prep note, recap session, close-out recap (private) | Tiếng Việt, tiêu đề mục bằng tiếng Anh theo template |
 | Playback, tin Zalo, homework gửi mentee | Tiếng Việt |
@@ -95,7 +95,7 @@ Từ 2026-10-07, file `*-lesson.md` được viết như một paper hoặc bả
 
 | # | Quy tắc | Ví dụ |
 |---|---|---|
-| 1 | **Tiêu đề bằng tiếng Anh, nội dung bằng tiếng Việt.** Tên lesson, cover, header slide, Kicker, Title để tiếng Anh. On-slide và speaker notes bằng tiếng Việt | Title: "Your Design Process, with AI" |
+| 1 | **Title và Kicker của slide bằng tiếng Việt, giữ thuật ngữ nghề bằng tiếng Anh** (danh sách ở dòng 4). Tên lesson, tiêu đề mục trong file lesson và nhãn field (Kicker, Title, On-slide) vẫn bằng tiếng Anh. On-slide và speaker notes bằng tiếng Việt | Title: "Quy trình design, cùng AI" (không phải "Your Design Process, with AI") |
 | 2 | **Nhãn trên slide method bằng tiếng Anh:** What, Why, When, Where AI helps. Nội dung sau nhãn bằng tiếng Việt | "What: Đọc những gì product đã có…" |
 | 3 | **Không ghi thời lượng trên slide.** Section divider không có dòng Sub chứa số phút. Thời gian chỉ nằm trong speaker notes và trên slide `MILESTONE` của activity | |
 | 4 | **Giữ thuật ngữ nghề bằng tiếng Anh**, không dịch | business question, constraints, assumptions, support tickets, data analytics, existing research, user need, opportunity statement, live traffic, shortlist, sticky note, topic, item, group, cluster, interview guide, desk research, stakeholder interview, insight, deliver, context, folder, prototype, design system, handoff, opportunity, hypothesis, metric, decision, test, principle, gate, warning, alignment, evidence, user need, content voice, layer, journey, shell, template, rules file |
@@ -174,7 +174,7 @@ Playback viết trung tính, không có ngôi thứ nhất của Winnie và khô
 1. Tìm các chữ đệm trong bảng "Bỏ khỏi văn bản chính thức". Không còn chữ nào.
 2. Tìm các cụm trong bảng "Cụm dịch từ tiếng Anh cần tránh". Không còn cụm nào.
 3. Mỗi dòng trên slide và mỗi bullet notes là một thông điệp. Không còn chuỗi mảnh nối bằng dấu phẩy, không còn các câu cụt chỉ tách bằng dấu chấm. Đọc to vài câu: một designer Việt Nam có nói câu này khi làm việc không, hay nó chỉ đúng khi dịch ngược sang tiếng Anh? Nếu là vế sau, viết lại quanh ý chính.
-4. Tiêu đề, Kicker và nhãn đúng quy ước ngôn ngữ ở trên; không còn số phút trên slide.
+4. Title và Kicker bằng tiếng Việt (chỉ thuật ngữ nghề giữ tiếng Anh), nhãn field đúng quy ước ngôn ngữ ở trên; không còn số phút trên slide.
 5. Slide và card (hoặc lesson và slide outline) đã khớp nhau.
 6. Không có tên tool AI cụ thể, không có tên mentee (theo `CLAUDE.md`).
 7. Winnie tự đọc lại. Câu nào Winnie sửa, thêm vào bảng "Các dòng Winnie sửa trực tiếp" để lần sau áp dụng đúng.

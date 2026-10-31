@@ -272,7 +272,7 @@ Theo `plan.md` mục 2, output của buổi 3 là evidence pack và problem brie
 2. AI viết opportunity theo mẫu "[Người dùng] gặp khó khi [tình huống] vì [lý do]", cấm nhắc tính năng.
 3. Học viên kiểm tra ba điều: có phải nhu cầu không, có quote ID không, mẫu cho biết gì và không cho biết gì.
 4. Xếp theo severity, context, reach (đã học ở synthesis) và gắn với outcome của business question từ Lesson 2.
-5. Đầu ra là danh sách opportunity đã xếp hạng, đúng với đầu vào của problem brief trong `lesson-details.md`.
+5. Đầu ra là danh sách opportunity đã xếp hạng, đúng với đầu vào của problem brief trong `_archive/lesson-details-pre-split-2026-10-30.md`.
 
 ## 5. Insight hub (một phần của Knowledge Hub)
 
@@ -285,7 +285,7 @@ Theo `plan.md` mục 2, output của buổi 3 là evidence pack và problem brie
 
 ### Gắn vào cấu trúc hiện có
 
-`lesson-details.md` đã định nghĩa hub có `insights/` (opportunities, hypotheses, metrics, decisions, evidence, findings) và `product-workspace` skill có cách thêm insight kèm quan hệ. Vì vậy **không cần dạy khái niệm mới, chỉ cần dạy thói quen**:
+`_archive/lesson-details-pre-split-2026-10-30.md` đã định nghĩa hub có `insights/` (opportunities, hypotheses, metrics, decisions, evidence, findings) và `product-workspace` skill có cách thêm insight kèm quan hệ. Vì vậy **không cần dạy khái niệm mới, chỉ cần dạy thói quen**:
 
 1. **Đóng góp:** mỗi insight đã kiểm tra thành một entry có ID, quote ID dẫn về, ngày, độ mạnh evidence (số người, số quote), tag từ danh sách cố định, người phụ trách.
 2. **Tìm trước khi hỏi:** trước khi lên kế hoạch phỏng vấn mới, tìm trong `insights/` xem câu hỏi đã có trả lời chưa. AI có thể tìm giúp, nhưng chỉ được trích entry có ID.
@@ -328,7 +328,7 @@ Học viên dán prompt cùng bộ quote đã ẩn danh và có ID.
 
 Đề xuất, chưa sửa lesson. Dựa trên bốn bước (mục 5b), chín câu hỏi (mục 0), các thẻ (mục 0b) và ba diagram trong `lessons/03-research-you-can-trust/assets/`. Hình dạng buổi giữ như `feedback_ai-design-workflow-lesson-format`: ice breaker, theory, một activity ngắn, hỏi đáp; phần làm trên case riêng nằm ở practice.
 
-> **Cập nhật 2026-10-27:** activity Challenge trên gói AI soạn sẵn (khối 7, 16 phút, mục 6.3) đã bỏ và thay bằng activity "viết claim, phản biện chéo" 14 phút trên bộ quote Kitchen Crate của `course-case` (không cần gói soạn sẵn). Ví dụ xuyên suốt đổi từ "Ăn Ngay" sang Kitchen Crate. Khung giờ: 80 phút nội dung, buffer 10 phút. Lesson và outline đã sửa theo; các mục 6.2 và 6.3 giữ lại như bản đề xuất ban đầu.
+> **Cập nhật 2026-10-27:** activity Challenge trên gói AI soạn sẵn (khối 7, 16 phút, mục 6.3) đã bỏ và thay bằng activity "viết claim, phản biện chéo" 14 phút trên bộ quote app giao đồ ăn của `course-case` (không cần gói soạn sẵn). Ví dụ xuyên suốt đổi từ "Ăn Ngay" sang app giao đồ ăn. Khung giờ: 80 phút nội dung, buffer 10 phút. Lesson và outline đã sửa theo; các mục 6.2 và 6.3 giữ lại như bản đề xuất ban đầu.
 
 ### 6.1 Ý tưởng dẫn dắt
 
@@ -404,7 +404,7 @@ Journey map minh hoạ có ô assumption đã thử vẽ rồi bỏ (2026-10-27)
 
 1. Lưu lesson và slide outline cũ vào `materials/_archive/` với hậu tố `-pre-four-steps-2026-10-27` trước khi sửa, và thêm ghi chú sync ở đầu lesson.
 2. Sửa `*-lesson.md` và `*-slide-outline.md` cùng lúc; chạy `notes-audit.py` cho outline; đọc `_system/rules/slide-deck-rules.md` và `vi-voice.md` trước khi viết.
-3. Đồng bộ (theo CLAUDE.md): `*-practice.md` nếu tạo; `plan.md` mục 2; `introduction.md`; `README.md`; file `*.swimlane.json` của sơ đồ sáu tuần; bảng "Connection to the series" của các lesson; `learning/lesson-details.md`; `learning/consistency.json` nếu có tên bị đổi hoặc bỏ (ví dụ "ba cổng", "tám bước").
+3. Đồng bộ (theo CLAUDE.md): `*-practice.md` nếu tạo; `plan.md` mục 2; `introduction.md`; `README.md`; file `*.swimlane.json` của sơ đồ sáu tuần; bảng "Connection to the series" của các lesson; `learning/lesson-N-details.md`; `learning/consistency.json` nếu có tên bị đổi hoặc bỏ (ví dụ "ba cổng", "tám bước").
 4. Nhúng ba diagram vào slide (đã có ở `assets/`); chạy `python3 _system/scripts/build-home.py` rồi `python3 _system/scripts/consistency.py`.
 
 ## 7. Còn thiếu
