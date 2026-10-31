@@ -1,6 +1,6 @@
 # GitHub cho AI Design Workflow
 
-Bạn không cần gõ lệnh Git. Bạn làm những việc cần đăng nhập hoặc cần quyết định, AI coding tool làm phần còn lại. Xem [sơ đồ luồng](../assets/diagrams/github-create-build-push-publish.html).
+Bạn không cần gõ lệnh Git. Bạn làm những việc cần đăng nhập hoặc cần quyết định, AI coding tool làm phần còn lại. Xem [sơ đồ luồng](../../diagrams/github-create-build-push-publish.html).
 
 | Giai đoạn | Bạn làm | Bạn nói với AI |
 |---|---|---|
@@ -71,7 +71,7 @@ Không bật Pages. Chọn một cách:
 
 ## 5. Làm việc cùng người khác (tuỳ chọn)
 
-Khi hai người cùng làm trên một repo, ví dụ một người Product và một người Design, mỗi người làm trên **branch** riêng rồi mới đưa về `main`. Xem [sơ đồ](../assets/diagrams/github-collaboration-workflow.html).
+Khi hai người cùng làm trên một repo, ví dụ một người Product và một người Design, mỗi người làm trên **branch** riêng rồi mới đưa về `main`. Xem [sơ đồ](../../diagrams/github-collaboration-workflow.html).
 
 1. Mỗi người tách một branch từ `main` và làm việc cùng AI trên branch đó.
 2. Người xong trước đẩy lên `main` (People A trong sơ đồ).

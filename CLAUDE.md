@@ -31,7 +31,7 @@ To view the site locally, use the `docs` entry in `.claude/launch.json` (port 30
 
   | If you change | Also check |
   |---|---|
-  | Week structure, lesson or practice titles, which session is theory or practice | `learning/plan.md` section 2, `introduction.md` (Lộ trình), `README.md` (Lessons table), the `*.swimlane.json` diagram data, the "Connection to the series" table of every lesson, `learning/lesson-details.md`, the week-map artifact |
+  | Week structure, lesson or practice titles, which session is theory or practice | `learning/plan.md` section 2, `introduction.md` (Lộ trình), `README.md` (Lessons table), the `*.swimlane.json` diagram data, the "Connection to the series" table of every lesson, `learning/lesson-N-details.md`, the week-map artifact |
   | Activities or output file names of a lesson | its `*-lesson.md`, `*-slide-outline.md`, `*-practice.md`, the `*.swimlane.json` details and files, `learning/plan.md`, `introduction.md` |
   | A file name in the student folder (`context/…`, `_personal/…`) | `workspace-template/my-project`, Practice 1 and 2, Lesson 1 |
   | A name or a number that is renamed or retired | add a rule to `learning/consistency.json` (`terms` for what must disappear, `mentions` for what every dependent file must contain) |
@@ -59,7 +59,7 @@ Specifically:
 | Phase added or removed | Add/remove the corresponding slide section; update total slide count in the structure note |
 | New checkpoint or transition inserted | Add a STATEMENT or MILESTONE slide at the matching position in the outline |
 | Section reordered (e.g. concept extension moved) | Reorder the corresponding slides in the outline |
-| Slide count changes for any reason | Update the `## Slide structure` header line (e.g. "17 slides" → "18 slides") |
+| Slide count changes for any reason | Update `slide_count` in the front matter (e.g. 17 → 18) |
 
 | What changed in slide-outline.md | What to update in lesson.md |
 |---|---|
@@ -145,5 +145,5 @@ For any user flow, process map, journey, flowchart, swimlane, sequence or archit
 - Slide `Title` is a short topic label (6 words or fewer, "Process Map là gì?"), and `Kicker` names the slide's role (Định nghĩa, Cách làm, Ví dụ) with no "Phần N" or "Buổi N" prefix. Full rule: `_system/rules/slide-deck-rules.md` → Title and kicker copy. `/notes-audit` flags breaches.
 - The `*-slide-outline.md` file contains only slide-specific concerns (layout, visual hints, kickers). Do not add full lesson prose to it.
 - The `*-lesson.md` file is the source of truth. If content in the two files conflicts, the lesson file wins.
-- **Any Vietnamese content** (lessons, slide outlines, teleprompter scripts, method cards, session recaps, material sent to mentees or students): read `_system/rules/vi-voice.md` first. It sets the voice (natural, professional, no spoken filler such as "thì á", "cho nên là", "tại vì"), the English-titles/Vietnamese-body convention, the terms kept in English, and a list of translated-sounding phrases to avoid. Where it conflicts with `writing-style-guide.md` below, `vi-voice.md` wins. When Winnie corrects a Vietnamese line, add the before/after to `vi-voice.md` so the fix applies next time. Chat with Winnie in Vietnamese.
+- **Any Vietnamese content** (lessons, slide outlines, teleprompter scripts, method cards, session recaps, material sent to mentees or students): read `_system/rules/vi-voice.md` first. It sets the voice (natural, professional, no spoken filler such as "thì á", "cho nên là", "tại vì"), the language convention (slide Title and Kicker in Vietnamese with trade terms kept in English, field labels in English), the terms kept in English, and a list of translated-sounding phrases to avoid. Where it conflicts with `writing-style-guide.md` below, `vi-voice.md` wins. When Winnie corrects a Vietnamese line, add the before/after to `vi-voice.md` so the fix applies next time. Chat with Winnie in Vietnamese.
 - For detailed voice/tone rules (tone, English code-switching, punctuation, teleprompter script format, Practice/Bài Tập script structure), see `programs/online-course/AI Prototype Development/writing-style-guide.md`. Read this before drafting or revising any `*-lesson.md`, `*-slide-outline.md`, or teleprompter script. It remains the source for that course's own structural formats; `_system/rules/vi-voice.md` takes precedence on tone, vocabulary and language conventions.

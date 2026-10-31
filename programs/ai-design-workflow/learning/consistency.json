@@ -9,8 +9,7 @@
         "introduction.md",
         "README.md",
         "SUMMARY.md",
-        "learning/plan.md",
-        "learning/lesson-details.md"
+        "learning/plan.md"
       ],
       "allow": []
     },
@@ -22,8 +21,7 @@
         "introduction.md",
         "README.md",
         "SUMMARY.md",
-        "learning/plan.md",
-        "learning/lesson-details.md"
+        "learning/plan.md"
       ],
       "allow": [
         "(không còn|không có|bỏ|thay cho|thay quyết định|đã bỏ|no longer|without) *check ?point",
@@ -42,8 +40,7 @@
         "introduction.md",
         "README.md",
         "SUMMARY.md",
-        "learning/plan.md",
-        "learning/lesson-details.md"
+        "learning/plan.md"
       ],
       "allow": [
         "case-card\\.md"
@@ -57,8 +54,7 @@
         "introduction.md",
         "README.md",
         "SUMMARY.md",
-        "learning/plan.md",
-        "learning/lesson-details.md"
+        "learning/plan.md"
       ],
       "allow": [
         "(bỏ|không còn|đã bỏ|dropped|Đã bỏ)"
@@ -72,8 +68,7 @@
         "introduction.md",
         "README.md",
         "SUMMARY.md",
-        "learning/plan.md",
-        "learning/lesson-details.md"
+        "learning/plan.md"
       ],
       "allow": [
         "(bỏ|không dùng|bỏ khỏi|dropped|không còn)"

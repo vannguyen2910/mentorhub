@@ -10,7 +10,7 @@ last_updated: 2026-10-23
 
 Nguồn chuẩn cho câu hỏi "chương trình này là gì". Mọi lesson, pitch và trang giới thiệu lấy định vị từ đây. Trang công khai rút gọn nằm ở [`introduction.md`](../../introduction.md); khi hai bên lệch, file này thắng.
 
-Lịch, số buổi và vị trí Check point: theo [`plan.md`](../plan.md) (Notion là nguồn chuẩn). Cách viết lộ trình hướng tới người học (cột "Cuối buổi, bạn nhận được", không nêu tên method) nằm ở [`introduction.md`](../../introduction.md) và ở bảng lộ trình trên trang Notion "AI Design Workflow cho Product Designer"; hai nơi này giữ cùng một cách viết. Bằng chứng: [`research.md`](../research.md) Part 5.
+Lịch, số buổi và vị trí Check point: theo [`plan.md`](../plan.md) (Notion là nguồn chuẩn). Cách viết lộ trình hướng tới người học (cột "Cuối buổi, bạn nhận được", không nêu tên method) nằm ở [`introduction.md`](../../introduction.md) và ở bảng lộ trình trên trang Notion "AI Design Workflow cho Product Designer"; hai nơi này giữ cùng một cách viết. Bằng chứng: [`reference/research.md`](../reference/research.md) Part 5.
 
 ## 1. Chương trình là gì
 
@@ -36,7 +36,7 @@ Ba lý do, đều dùng số liệu có nguồn (chi tiết và giới hạn ở
 
 Mạch lập luận chung: AI làm phần build rẻ đi, nên giá trị chuyển sang chọn đúng vấn đề và kiểm tra. Xem slide "The bottleneck moves" ở buổi 1; hình đó chỉ là minh hoạ, không phải bằng chứng.
 
-Không dùng: các con số mà `research.md` Part 5 mục 10 xếp vào danh sách chưa dùng, và số liệu Figma đã gỡ (References [2] của lesson 1).
+Không dùng: các con số mà `reference/research.md` Part 5 mục 10 xếp vào danh sách chưa dùng, và số liệu Figma đã gỡ (References [2] của lesson 1).
 
 ## 4. Learning objective cấp chương trình
 
@@ -48,12 +48,12 @@ Sau 12 buổi, học viên có thể:
 5. Dựng prototype bằng AI coding tool, test với người dùng thật, sửa theo finding, không tự viết code.
 6. Trình bày case cùng evidence, decision, trade-off, và đánh giá phần workflow nên giữ, chỉnh hay bỏ.
 
-Objective chi tiết từng buổi: [`lesson-details.md`](../lesson-details.md). Khi sửa ở đây, kiểm tra lại các objective đó.
+Objective chi tiết từng buổi: từng file lesson trong `lessons/`. Khi sửa ở đây, kiểm tra lại các objective đó.
 
 ## 5. Người học
 
 - **Đối tượng:** UI/UX và product designer mức mid và senior, có ít nhất 2 đến 3 năm kinh nghiệm [to confirm con số], không cần biết code.
-- **Điều kiện đầu vào:** có một case thật của chính mình để làm xuyên suốt 6 tuần. Case của khoá (Kitchen Crate, hư cấu) là phương án dự phòng. Tài liệu bảo mật được ẩn danh trước.
+- **Điều kiện đầu vào:** có một case thật của chính mình để làm xuyên suốt 6 tuần. Case của khoá (app giao đồ ăn, hư cấu) là phương án dự phòng. Tài liệu bảo mật được ẩn danh trước.
 - **Không phù hợp:** chưa có case; muốn học thiết kế sản phẩm AI hoặc mẹo prompt cho một công cụ.
 - **Chưa quyết định:** có mở cho junior, PO, PM, BA hay không (lesson buổi 1 vẫn có ghi chú cho lớp có PO, PM, BA).
 

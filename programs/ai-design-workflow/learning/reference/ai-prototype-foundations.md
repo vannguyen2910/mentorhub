@@ -29,7 +29,7 @@
 | **Material Design 3** | Bar, rail, pane (thành phần của layout) | Không dùng từ này cho layout | **Canonical layout**: feed, list-detail, supporting pane, mỗi cái có cấu hình cho compact, medium, expanded | **Layout scaffold**: "nền tảng chuẩn để lắp các thành phần chính của màn hình", gồm bar, rail, pane | T9 |
 | **shadcn/ui** | `registry:ui`, `registry:component` | Không có định nghĩa riêng | `registry:page` đóng gói trang với đường dẫn đích | **Block** sidebar (vd `sidebar-07`) và dashboard (vd `dashboard-01`) là shell cộng trang mẫu; bọc app bằng `SidebarProvider` | T5 |
 
-**Suy luận.** Khi một đồng nghiệp nói "build shell" hay "pattern", câu hỏi đầu tiên nên là: theo hệ thống nào? Trong lớp, nên chốt một bộ định nghĩa duy nhất và ghi vào bảng vocabulary ở `lesson-details.md` (quy ước "mỗi ý một tên").
+**Suy luận.** Khi một đồng nghiệp nói "build shell" hay "pattern", câu hỏi đầu tiên nên là: theo hệ thống nào? Trong lớp, nên chốt một bộ định nghĩa duy nhất và ghi vào bảng vocabulary ở `_archive/lesson-details-pre-split-2026-10-30.md` (quy ước "mỗi ý một tên").
 
 ## 2. App shell: nó là gì và ai dựng
 
@@ -100,7 +100,7 @@ Không nguồn nào nêu thứ tự này nguyên văn. Nó được rút ra từ
 
 ## 5. Điều dùng được cho Lesson 5 (đề xuất, chưa thử với học viên)
 
-`lesson-details.md` đã có nguyên tắc pattern-first: học viên mang token, component inventory và template của mình, AI tạo prototype từ hệ thống đó, và `context/design-system-notes.md` ghi token, component, pattern, do và don't, accessibility. Các đề xuất dưới đây chỉ làm rõ thêm hai tầng còn thiếu là shell và template. Chúng là **suy luận**, chưa sửa lesson.
+`_archive/lesson-details-pre-split-2026-10-30.md` đã có nguyên tắc pattern-first: học viên mang token, component inventory và template của mình, AI tạo prototype từ hệ thống đó, và `context/design-system-notes.md` ghi token, component, pattern, do và don't, accessibility. Các đề xuất dưới đây chỉ làm rõ thêm hai tầng còn thiếu là shell và template. Chúng là **suy luận**, chưa sửa lesson.
 
 | Đề xuất | Cách làm | Căn cứ |
 |---|---|---|

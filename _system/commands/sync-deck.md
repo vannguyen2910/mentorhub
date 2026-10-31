@@ -31,7 +31,7 @@ Only after Winnie has seen the dry run:
 python3 _system/scripts/sync-deck.py <lesson folder> --write
 ```
 
-It updates `slide_count`, `last_synced` and the `## Slide structure` count, saves hashes to `materials/.deck-sync.json`, and runs `notes-audit.py`.
+It updates `slide_count` and `last_synced`, saves hashes to `materials/.deck-sync.json`, and runs `notes-audit.py`.
 
 ## 4. Lesson sync (by hand, per CLAUDE.md)
 

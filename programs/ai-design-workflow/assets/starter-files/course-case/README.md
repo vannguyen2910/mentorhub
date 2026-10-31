@@ -1,4 +1,4 @@
-# Course case: Kitchen Crate (fictional)
+# Course case: delivery app (fictional)
 
 **Everything in this folder is invented.** No real company, person, review or number.
 
@@ -12,5 +12,5 @@ Use it when:
 | `case-card.md` | Week 1 demo and fallback case | One page |
 | `po-case-pack.md` | Retired, not used in class | For the student who has no PO to talk to. **The PO-only section is for the person playing the PO** |
 | `quotes.md` | Week 2, session B | 24 fictional quotes with IDs, from three kinds of source |
-| `competitors/` | Week 2 demo | Three fictional competitor pages |
+| `competitors/` | Week 2 demo | Three fictional competitor pages (delivery apps) |
 | `quotes-answer-key.md` | Instructor only | The intended themes, the traps, and what a good answer looks like. **Do not share with students before the exercise** |

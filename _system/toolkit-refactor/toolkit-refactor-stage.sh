@@ -1,9 +1,9 @@
 #!/bin/sh
-# Stage ONLY the toolkit refactor (2026-10-28) in workspace-template. Run from workspace-template/.
+# Stage ONLY the toolkit refactor (2026-10-28) in workspace-template. Run from anywhere; it changes into programs/ai-design-workflow/workspace-template.
 # Part 1 stages every file that belongs to the refactor and nothing else. It ends with `git status`, commits nothing.
 # Part 2 (below, comments) lists the five files where your earlier edits and the refactor share one file.
 
-cd "$(dirname "$0")/../workspace-template" || exit 1
+cd "$(dirname "$0")/../../programs/ai-design-workflow/workspace-template" || exit 1
 
 git add -A -- \
   toolkit/skills toolkit/templates toolkit/tools toolkit/guides toolkit/README.md \

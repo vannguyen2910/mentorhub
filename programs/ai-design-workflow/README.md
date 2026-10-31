@@ -19,10 +19,10 @@ Chương trình 12 buổi trong 6 tuần dành cho designer mid và senior. Mỗ
 programs/ai-design-workflow/                  (thư mục này)
   README.md                 file này: thứ tự lesson, trạng thái, cách thêm lesson
   plan.md                kế hoạch một trang: trọng tâm, lịch, quyết định chính (đọc trước)
-  research.md  method.md  quality-and-measurement.md
+  reference/research.md  method.md  quality-and-measurement.md
   pitch-deck-plan.md                             kế hoạch pitch deck
-  lesson-details.md         learning objective, activity và output của từng lesson (còn lesson cũ, chưa gộp theo 6 lesson)
-  workflow-design-log.md quyết định thiết kế và các sự cố của workspace phía sau khoá, cho giảng viên và pitch
+  INDEX.md                  danh mục các file trong learning/ (nguồn chính, file cũ)
+  reference/workflow-design-log.md quyết định thiết kế và các sự cố của workspace phía sau khoá, cho giảng viên và pitch
   voice-sample-vi.md        bản thử giọng tiếng Việt
   assets/                   starter-files, hub và doc template, diagram, ảnh tham khảo
     method-cards/           card tham khảo cho từng design method, theo stage
@@ -59,7 +59,7 @@ Mỗi buổi theory là một lesson. Buổi practice đi liền sau mỗi lesso
 | 5 | 5 (buổi 9) | [`ai-prototyping`](lessons/05-ai-prototyping/materials/ai-prototyping-lesson.md) | AI prototyping (design system, pattern, template, rules file; prototype sẵn sàng test, có thể là final design) | 🚧 Draft (bản đầu 2026-10-28, chưa thử với lớp; chưa có practice sheet) |
 | 6 | 6 (buổi 11) | `test-with-real-users` | Test with real users (metrics, test plan, phân tích kết quả, SUS, sửa finding) | ⬜ Planned |
 
-Tuần 6 còn một buổi test trong một ngày và buổi 12 reflection và wrap-up, đều không có lesson riêng. Chi tiết từng lesson nằm trong `learning/lesson-details.md` (còn lesson 4 đến 11 cũ, chưa gộp theo bảng trên). Thư mục chỉ được tạo khi bắt đầu lesson, không tạo trước: build site liệt kê mọi thư mục tìm thấy, nên thư mục rỗng sẽ hiện thành lesson trống.
+Tuần 6 còn một buổi test trong một ngày và buổi 12 reflection và wrap-up, đều không có lesson riêng. Chi tiết từng lesson nằm trong file lesson, practice và `learning/lesson-N-details.md`; bản cũ cho lesson 4 đến 11 ở `_archive/lesson-details-pre-split-2026-10-30.md` (chưa gộp theo bảng trên). Thư mục chỉ được tạo khi bắt đầu lesson, không tạo trước: build site liệt kê mọi thư mục tìm thấy, nên thư mục rỗng sẽ hiện thành lesson trống.
 
 ## Thêm một lesson
 
