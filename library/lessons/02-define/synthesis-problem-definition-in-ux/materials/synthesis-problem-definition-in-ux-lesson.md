@@ -164,7 +164,11 @@ You are **not** the one with the answers. You are the one holding the process.
 
 ### What is Affinity Mapping?
 
-A method for clustering raw research observations into themes — so patterns emerge instead of staying buried in your notes.
+A method for clustering raw research observations into themes — so patterns emerge instead of staying buried in your notes. It originates from the KJ method (Kawakita Jiro, 1960s) and is now one of the most common synthesis moves in UX research.
+
+**Why:** patterns live in the spaces between notes, not in any single note. It surfaces patterns invisible in raw notes, forces engagement with every observation (not just the loud ones), builds shared understanding in the room, and makes themes visible, namable and debatable.
+
+**When:** after listening, before deciding what it means — after interviews and before writing insights, with 30+ observations to make sense of, when stakeholders disagree on what the research said, and at the start of any synthesis workshop.
 
 **01 · One note, one observation** Each quote, behaviour, or data point lives on its own sticky. No grouping yet.
 
@@ -407,9 +411,9 @@ because [barrier].
 
 ## Your Assignment — Before Session 4
 
-1. Run affinity mapping on all your interview notes — use FigJam, Miro, or physical sticky notes
-2. Write 3 insight statements from your research. Use the Observation + Implication formula for each
-3. Share your problem statement with one stakeholder — a PM, engineer, or team lead — and note how they respond
+1. Run affinity mapping on all your interview notes — use FigJam, Miro, or physical sticky notes. Look for super-themes and outliers, and bring the named clusters to Session 4
+2. Write 3 insight statements from your research. Use the Observation + Implication formula for each, and push the implication until it is product-specific
+3. Share your problem statement with one stakeholder — a PM, engineer, or team lead — and note how they respond; update the statement if they were unclear about who or why
 > 🤖 **AI Challenge:** Paste your raw notes into Claude. Ask it to cluster themes. Compare its groupings to yours — where did it help? Where did it miss context only you had?
 
 ---

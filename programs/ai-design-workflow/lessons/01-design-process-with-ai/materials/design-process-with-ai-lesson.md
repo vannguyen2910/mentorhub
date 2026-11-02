@@ -1,17 +1,26 @@
 ---
-title: "Your Design Process, with AI"
-summary: "Nghề thiết kế đang đi về đâu, bốn stage của quy trình, AI giúp gì ở mỗi stage và workspace mà các buổi sau sẽ dùng."
-subtitle: "Where design careers are heading, the four stages you already know, where AI helps in each, and the workspace every later lesson builds on"
+title: Your Design Process, with AI
+summary: Nghề thiết kế đang đi về đâu, bốn stage của quy trình, AI giúp gì ở mỗi stage và workspace mà các buổi sau sẽ dùng.
+subtitle: Where design careers are heading, the four stages you already know, where AI helps in each, and the workspace every later lesson builds on
 type: lesson
 program: ai-design-workflow
-tags: [ai, design-process, double-diamond, terminology, context, folder, data-safety, hub, foundational]
+tags:
+  - ai
+  - design-process
+  - double-diamond
+  - terminology
+  - context
+  - folder
+  - data-safety
+  - hub
+  - foundational
 level: foundational
-duration: "90 min (buổi 1) + Practice 1 ở nhà"
+duration: 90 min (buổi 1) + Practice 1 ở nhà
 date: 2026-10-06
-draft: true
-slides: "https://claude.ai/artifact/St1HGVWFHvngrRsdUFb8Xv"
+draft: false
+slides: https://claude.ai/artifact/St1HGVWFHvngrRsdUFb8Xv
 previous-session: ""
-next-session: "Discover the Problem"
+next-session: Discover the Problem
 ---
 
 > **Sync note 2026-10-30.** Lesson được rút gọn: bỏ các đoạn lặp và chi tiết không cần để học hoặc dạy buổi này. Số mục, bảng phase, timing, activity và các trích dẫn [n] giữ nguyên để khớp slide outline. Bản trước nằm ở `materials/_archive/design-process-with-ai-lesson-pre-condense-2026-10-30.md`.

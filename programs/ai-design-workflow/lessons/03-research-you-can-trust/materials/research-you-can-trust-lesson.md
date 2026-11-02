@@ -13,9 +13,6 @@ slides: ""
 previous-session: "Discover the Problem"
 next-session: "Frame the Problem Worth Solving"
 ---
-
-> **Sync note 2026-10-30.** Synthesis chuyển sang Lesson 2 (mục 5); buổi này giữ phần ôn ngắn rồi đi tiếp từ claim sang persona, journey map, opportunity và insight hub. Package thành agent chuyển về đây từ Lesson 2. Còn bốn câu hỏi về giới hạn của AI (năm câu đầu của cheat sheet chín câu nằm ở Lesson 2). Activity mới: persona có quote hay không. Đầu vào là claim và insight của designer từ Practice 2. Lesson được rút gọn: số mục, bảng phase và trích dẫn [n] giữ nguyên; kịch bản ice breaker và Activity dời sang `learning/lesson-3-details.md`. Bản trước nằm ở `materials/_archive/research-you-can-trust-lesson-pre-condense-2026-10-30.md` (và các bản cũ hơn cùng thư mục). Thời lượng mới chưa thử `[to confirm]`.
-
 ## Abstract
 
 Buổi 3 của AI Design Workflow tiếp tục stage Discover cho Product Designer và UI/UX Designer ở cấp mid và senior. Designer đã có quote từ phỏng vấn user thật, cùng claim và insight đã qua synthesis ở Lesson 2 và Practice 2. Buổi này biến chúng thành persona, customer journey map và opportunity mà mỗi dòng truy được về quote gốc, rồi đóng góp insight đã kiểm tra vào insight hub và package quy trình thành agent.

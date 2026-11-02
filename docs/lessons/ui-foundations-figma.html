@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="noindex"/>
+<meta name="description" content=""/>
+<title>UI Foundations: Building in Figma — Training Hub</title>
+<link rel="stylesheet" href="../assets/css/tokens.css"/>
+<link rel="stylesheet" href="../assets/css/components.css"/>
+<link rel="stylesheet" href="../assets/css/site.css"/>
+<link rel="stylesheet" href="../assets/css/card-list.css"/>
+<link rel="stylesheet" href="../assets/css/text-page.css"/>
+<link rel="stylesheet" href="../assets/css/home.css"/>
+<link rel="stylesheet" href="../assets/css/minimal.css"/>
+
+</head>
+<body class="tp-white">
+<nav>
+  <a class="nav-logo" href="../index.html"><img src="../assets/images/logo-nav.svg" alt="Winnie Nguyen — Training Hub"/></a>
+  <div class="nav-links">
+    <a href="../lessons.html" data-text="Lesson Library" class=active>Lesson Library</a>
+    <a href="../private-training.html" data-text="Private Training">Private Training</a>
+    <a href="../programs.html" data-text="Programs">Programs</a>
+  </div>
+</nav>
+<div class="tp">
+  <a class="tp-back" href="../lessons.html">← All lessons</a>
+  <header class="tp-head">
+    <h1 class="page-title">UI Foundations: Building in Figma</h1>
+    
+    
+    <div class="tp-info" data-var-panel data-var-id="0"><dl class="tp-meta" style="--tp-cols: repeat(3, minmax(0, 1fr)) minmax(0, 1.8fr)"><div><dt>Stage</dt><dd>Develop</dd></div><div><dt>Level</dt><dd>Beginner</dd></div><div><dt>Duration</dt><dd>90 min</dd></div><div><dt>Source file</dt><dd><code>ui-foundations-figma-brief.md</code></dd></div></dl></div>
+  </header>
+  <div class="tabs tabs--pill tp-tabs"><div class="tabs__list" role="tablist"><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="lesson" aria-selected="false">Lesson</button><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="slides" aria-selected="false">Slides</button><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="homework" aria-selected="false">Homework</button></div></div>
+  <section class="tp-panel" data-tab-panel data-tab-id="lesson" role="tabpanel" hidden><div data-var-panel data-var-id="0">
+  <div class="tp-layout">
+    <aside class="tp-toc" aria-label="On this page"><p class="tp-toc__label">On this page</p><a href="#v0-purpose">Purpose</a><a href="#v0-structure">Structure</a><a href="#v0-learning-objectives">Learning objectives</a><a href="#v0-key-decisions">Key decisions</a><a href="#v0-sources">Sources</a><a href="#v0-to-confirm">[to confirm]</a></aside>
+    <article class="tp-body"><h2 id="v0-purpose">Purpose</h2>
+<p>Sau buổi này, học viên dựng được một component set chạy ở ít nhất hai kích thước màn hình, từ chính màn hình của mình, bằng auto layout và variables, trong một file đã được tổ chức rõ ràng.</p>
+<h2 id="v0-structure">Structure</h2>
+<ol>
+<li>Mở đầu, 10 phút: xem file học viên đã dọn theo guide gửi trước buổi (pages, tên layer, cấu trúc) và chốt màn hình sẽ làm việc.</li>
+<li>Nhiệm vụ 1, Variables, 22 phút: học viên chọn thang spacing 8pt, type scale và bộ màu nhỏ từ màn hình của mình, rồi tạo collection, đặt tên theo đường dẫn, dùng alias giữa primitive và semantic.</li>
+<li>Nhiệm vụ 2, Auto layout, 18 phút: dựng lại một màn hình bằng auto layout, dùng Hug, Fill, Fixed, min và max, gắn padding và gap vào variables.</li>
+<li>Nhiệm vụ 3, Component và variants, 20 phút: biến hai đến ba phần tử lặp lại (ví dụ nút, thẻ, thanh điều hướng) thành component, thêm variant property và component property.</li>
+<li>Nhiệm vụ 4, Breakpoints, 14 phút: điều chỉnh màn hình và component cho một breakpoint thứ hai, kiểm tra component co giãn đúng.</li>
+<li>Kết, 6 phút (gồm 3 phút dự phòng): rà success check, ghi lại việc còn dở thành homework.</li>
+</ol>
+<p>Tổng 90 phút. Nếu buổi chạy quá giờ, Nhiệm vụ 4 rút còn một component và một màn hình.</p>
+<p>Cách dạy: học viên làm ngay từ đầu trên file của mình, không có phần demo trước. Winnie chỉ ra chỗ sai và sửa cùng học viên ngay lúc làm.</p>
+<h2 id="v0-learning-objectives">Learning objectives</h2>
+<ol>
+<li>Kiểm tra được file của mình theo guide: pages, tên layer và cấu trúc đủ rõ để người khác tìm đường (kiểm ở phần mở đầu, việc dọn file làm trước buổi).</li>
+<li>Dựng được layout linh hoạt bằng auto layout, với spacing, màu và cỡ chữ lấy từ variables.</li>
+<li>Tạo được component và variants từ màn hình của mình, dùng đúng loại property (variant, boolean, text, instance swap).</li>
+<li>Điều chỉnh được layout và component cho ít nhất hai kích thước màn hình.</li>
+</ol>
+<p>Success check: file có pages, tên layer và cấu trúc rõ; một component set chạy được ở ít nhất hai kích thước màn hình.</p>
+<h2 id="v0-key-decisions">Key decisions</h2>
+<ul>
+<li>Ví dụ chạy: sitemap và màn hình của chính học viên, không dùng case mẫu.</li>
+<li>AI: không có trong buổi này (theo coaching plan, đây là buổi thuần kỹ thuật).</li>
+<li>Cắt: nhiệm vụ dọn file không làm trong buổi, chuyển thành guide gửi trước và 10 phút kiểm ở đầu buổi. Objective "tổ chức file" vẫn được kiểm bằng success check.</li>
+<li>Nền tảng (grid, 8pt, typography, color) giữ ngắn, chỉ đủ để dựng variables, nằm trong Nhiệm vụ 1. Học viên chọn giá trị từ file của mình rồi mới đặt tên.</li>
+<li>Hoãn sang buổi UI Fundamentals: phán đoán visual (5 layer) và lý do chọn từng giá trị.</li>
+<li>Hoãn sang buổi Design System: quy tắc đặt tên đầy đủ theo atomic (<code>a/m/o</code>), tài liệu hoá hệ thống, nhiều hơn một vài component.</li>
+<li>Lesson viết generic, không nhắc tên học viên hay chi tiết nhận dạng.</li>
+<li>Nguồn gốc ý tưởng: coaching plan của một học viên private, ghi <code>source: adapted-from-private-session</code> khi viết front matter của lesson.</li>
+<li>Câu hỏi mở cho Winnie:<ol>
+<li>Guide gửi trước buổi (dọn file) có nằm trong phạm vi lesson này không, hay làm riêng như một tài liệu.</li>
+<li>Ranh giới với buổi Design System: dừng ở variables cộng một vài component, hay thêm quy tắc đặt tên <code>a/m/o</code>.</li>
+<li>Có chọn thêm một ví dụ lỗi thường gặp cho mỗi nhiệm vụ không (spacing lẻ, màu gõ tay, layer "Frame 123", component không co giãn).</li>
+</ol>
+</li>
+</ul>
+<h2 id="v0-sources">Sources</h2>
+<p>Chi tiết ở <code>learning/research.md</code>. Nguồn chính thức dùng được để nêu như sự thật:</p>
+<ul>
+<li>Figma Help: variables và collections, modes, auto layout, component properties.</li>
+<li>Material Design 3, Breakpoints: compact dưới 600dp, medium 600 đến 839dp, expanded 840 đến 1199dp.</li>
+<li>W3C WCAG 2.2, Understanding 1.4.3: 4.5:1 cho chữ thường, 3:1 cho chữ lớn.</li>
+<li>Design Tokens Community Group, Format Module 2025.10.</li>
+</ul>
+<p>Nguồn blog chỉ làm gợi ý: tách primitive và semantic, thang 8pt, cách tổ chức file.</p>
+<h2 id="v0-to-confirm">[to confirm]</h2>
+<ul>
+<li>Alias giữa collection có chọn được mode không (nguồn cộng đồng cũ nói không); thử trong Figma trước khi dạy.</li>
+<li>Gói Figma của học viên cho phép bao nhiêu mode.</li>
+<li>Chưa có nguồn cho tỷ lệ designer dùng auto layout hay variables; không nêu con số nào.</li>
+<li>"Nền tảng ngắn rồi dựng variables" là phương pháp của Winnie, không có nghiên cứu đi kèm.</li>
+</ul></article>
+  </div>
+</div></section><section class="tp-panel" data-tab-panel data-tab-id="slides" role="tabpanel" hidden><div class="tp-slides tp-slides--empty"><strong>No slides yet</strong><span>Add a deck (.html) or .pdf to this lesson's <code>slides/</code> folder, or a <code>slides:</code> link in the lesson front matter.</span></div></section><section class="tp-panel" data-tab-panel data-tab-id="homework" role="tabpanel" hidden><div class="tp-slides tp-slides--empty"><strong>No mentee homework yet</strong><span>Drop files in <code>mentees/&lt;name&gt;/homework/ui-foundations-figma/</code> and they show up here.</span></div></section>
+  
+</div>
+<script>
+(function () {
+  function group(btnSel, panelSel, attr, onShow) {
+    var btns = [].slice.call(document.querySelectorAll(btnSel)), panels = [].slice.call(document.querySelectorAll(panelSel));
+    function show(id) {
+      btns.forEach(function (b) { var on = b.getAttribute(attr) === id; b.setAttribute('aria-selected', on); b.classList.toggle('tabs__tab--active', on && b.classList.contains('tabs__tab')); });
+      panels.forEach(function (p) { p.hidden = p.getAttribute(attr) !== id; });
+      if (onShow) onShow(id);
+    }
+    btns.forEach(function (b) { b.addEventListener('click', function () { show(b.getAttribute(attr)); }); });
+    return show;
+  }
+  var firstTab = (document.querySelector('[data-tab-btn]') || {getAttribute: function () {}}).getAttribute('data-tab-id');
+  var showTab = group('[data-tab-btn]', '[data-tab-panel]', 'data-tab-id', function (id) { history.replaceState(null, '', id === firstTab ? location.pathname : '#' + id); });
+  var showVar = group('[data-var-btn]', '[data-var-panel]', 'data-var-id');
+  var h = (location.hash || '').replace('#', '');
+  showTab(h && document.querySelector('[data-tab-btn][data-tab-id="' + h + '"]') ? h : firstTab);
+  if (document.querySelector('[data-var-btn]')) showVar('0');
+  var decks = [].slice.call(document.querySelectorAll('[data-deck-btn]'));
+  decks.forEach(function (b) { b.addEventListener('click', function () {
+    var f = document.getElementById('deck-frame'); f.src = b.dataset.src; document.getElementById('deck-open').href = b.dataset.src;
+    decks.forEach(function (x) { x.classList.toggle('deck-item--active', x === b); x.setAttribute('aria-pressed', x === b); });
+  }); });
+})();
+</script>
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Winnie Nguyen · Senior Product Designer</p>
+    <div class="footer-links">
+      <a href="mailto:nguyenphuctuongvan@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/winnienguyen2910" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+<script>(function(){if(location.protocol.indexOf('http')!==0)return;var u='../assets/build-stamp.txt',last=null;function c(){fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.text():null}).then(function(t){if(t===null)return;if(last!==null&&t!==last)location.reload();last=t}).catch(function(){})}c();setInterval(c,1500)})();</script>
+</body>
+</html>

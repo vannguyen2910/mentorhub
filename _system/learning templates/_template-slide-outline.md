@@ -44,4 +44,6 @@ last_synced: 2026-00-00      # date lesson.md and this file were last confirmed 
 
 ---
 
-<!-- Slide entries go here, in the standard field format above, one section-divider per lesson phase. -->
+<!-- Slide order: COVER, AGENDA, Ice breaker, then each part opened by a SECTION DIVIDER, then Q&A, PRACTICE, closing STATEMENT, END.
+     AGENDA lines = SECTION DIVIDERs, same names, same order. Q&A and PRACTICE are identical in every lesson.
+     Copy the ready-made blocks from slide-deck-rules.md layouts 02, 11, 16, 17 and the ai-design-workflow repo file learning/slide-outline-standard-slides.md. -->

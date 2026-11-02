@@ -63,6 +63,7 @@ Use the **alias names** from `tokens.css`, not raw hex values:
 - Background: `--paper-deeper` (light lavender — **not** dark ink)
 - Contains: `section-divider__inner` → `section-divider__kicker` (with large `.num` at 120px) + `section-divider__title` (144px) + `section-divider__sub`
 - Title `em` spans get `color: var(--sienna)` inline
+- Every part of a lesson opens with one. Outline fields: Num (`0N`), Kicker (a role word such as `Chuyển phần`, no part number), Title (`<ink>\n*<accent>*`), Sub (one line)
 
 ### 03 · Statement — `.statement`
 - `justify-content: center` (vertically centred)
@@ -100,6 +101,7 @@ Use the **alias names** from `tokens.css`, not raw hex values:
 - Grid: `.practice__grid` (2-col)
 - Cards: `.practice__card` with `border: 2px solid var(--ink)`, `practice__card-kicker`, h3 (52px), ul with `→` arrow bullets in `--sienna`
 - **Use this for assignment / homework slides**
+- **Always the same shape (fixed 2026-11-01):** Kicker `Practice`; Title in two parts, ink then purple italic (e.g. `Your folder, *your first hub*`); exactly **two cards**, each with an outline icon, a h3 title and **exactly four short bullets**. Card 1 = what to build, Card 2 = where the result goes (push, publish, hand in, review). Hours, inputs, outputs and grading go in speaker notes and the practice sheet, never on the slide. Outline tag is `PRACTICE`; Visual hint starts `TWO CARDS`
 
 ### 12 · End — `.end`
 - Background: `--paper-deeper` (light)
@@ -232,3 +234,17 @@ These are okay to add on top of the base template CSS when the content requires 
 - **HMW word cards** — 3-col grid using sienna / paper-deeper / ink backgrounds
 
 These use the same token vocabulary and type scale as the base layouts.
+
+### 16 · Agenda — `.agenda`
+- Placed right after COVER, before the ice breaker. Kicker `Agenda`, Title `Nội dung\n*buổi học*`
+- Body: one large numbered line per part (`01 · <part name>`), number in purple italic, name in ink; English part names
+- **Each Agenda line is one SECTION DIVIDER, same name, same order.** Q&A and Practice are not parts, so they are not listed. Rename, add or drop a part in both places together
+- Visual hint starts `TYPOGRAPHIC`
+
+### 17 · Q&A — `.qa` (identical in every lesson)
+- Split layout: left panel solid yellow with `Q&A` at display size; right panel white with kicker `Bạn muốn hỏi về` and three stacked cards, ink 2px border, outline icon + one line each
+- Cards, fixed: `Nội dung hôm nay` (book-open), `Hướng đi nghề nghiệp của design` (compass), `Khoá học` (graduation-cap). No descriptions
+- Placed after the last part and before PRACTICE. Only the speaker notes change per lesson
+- Outline tag `Q&A`; Visual hint starts `SPLIT`
+
+> Outline-ready blocks for Agenda, Section divider, Q&A and Practice: `learning/slide-outline-standard-slides.md` in the ai-design-workflow repo.
