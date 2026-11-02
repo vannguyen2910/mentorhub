@@ -1911,7 +1911,7 @@ def copy_design_system():
     shutil.copy2(Path(__file__).resolve().parent / "minimal.css", css_out / "minimal.css")  # the Minimal skin, loaded last
     img_out = OUT / "assets/images"
     img_out.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(WEBSITE / "public/portfolio/images/logo-nav.svg", img_out / "logo-nav.svg")
+    shutil.copy2(WEBSITE / "public/assets/images/brand/logo-nav.svg", img_out / "logo-nav.svg")
     # Older slide decks link to ../../../../_system/Themes/{tokens,components}.css, a folder that no longer exists
     # in the Library. Serve the design-system versions at that path so those decks still render.
     legacy = OUT / "_system/Themes"
