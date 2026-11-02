@@ -1,376 +1,719 @@
-# Slide Deck Outline — Session 3 · Synthesis & Problem Definition
-
-> **Source of truth:** `synthesis-problem-definition-lesson.md`
-> All content changes (activities, examples, concepts) must be made there first, then reflected here.
-> This file contains only slide-specific concerns: layout types, visual hints, kickers, and structure.
-
-> **How to use this file**
-> Paste both this file and `synthesis-problem-definition-lesson.md` into Claude with the instruction below to generate a new slide deck.
-> Claude will read `CLAUDE.md` and `_system/rules/slide-deck-rules.md` automatically and follow Winnie's design system.
-
 ---
-
-## Prompt to use
-
-```
-Using the outline in this file, create an HTML slide deck for Session 3 · Synthesis & Problem Definition.
-
-Follow the rules in Training_Hub/slide-deck-design/RULES.md exactly.
-Save the file to synthesis-problem-definition-in-ux/session-3-synthesis.html.
-Copy tokens.css and deck-stage.js locally into that same folder so the deck is self-contained.
-
-VISUAL DESIGN DIRECTION — apply globally to every slide:
-
-- Prefer simple diagrams, icons, and visual metaphors over bullet lists. If content can be shown
-  as a shape, flow, or diagram — do that instead of listing text.
-- Use inline SVG for all diagrams and illustrations. Keep them clean and minimal —
-  flat shapes, no gradients, use only token colours (--sienna, --ochre, --sage, --ink, --paper).
-- For process steps, draw a horizontal flow with numbered circles connected by arrows,
-  not a plain list.
-- For comparisons (weak vs strong), use a two-column visual split with a clear dividing line
-  and colour-coded labels — not a table.
-- For formulas or equations (e.g. Observation + Implication = Insight), render them large
-  as a typographic visual with the operator symbols styled distinctly, not as a sentence.
-- For the affinity mapping cluster diagram, draw a visual scatter of sticky-note shapes
-  grouped into labelled clusters — not a list of steps.
-- Activity slides (.milestone) should feel like a full-bleed moment — no extra content,
-  just the number, title, and prompt. No diagrams needed.
-- Every slide should have one dominant visual element. If the layout is mostly text,
-  add a supporting icon or shape to anchor the eye.
-- Avoid centred bullet lists. If items must be listed, use the .numbered or .process layout
-  with visual numbering, not a plain <ul>.
-```
-
+title: "Synthesis & Problem Definition"
+lesson_file: "synthesis-problem-definition-in-ux-lesson.md"
+level: ""
+slide_count: 33
+duration: "90–120 min"
+status: draft
+built_deck: ""
+last_synced: 2026-10-31
 ---
 
 ## Session metadata
 
 | Field | Value |
 |---|---|
-| Session number | 3 |
-| Title | Synthesis & Problem Definition |
-| Instructor | Winnie Nguyen |
-| Year | 2026 |
-| Cover photo | Unsplash photo of a research wall / sticky notes / workshop |
+| Program | UX class |
+| Track / session | Session 3, 90 đến 120 phút |
+| Stage | Define |
+| Prior session | Session 2: Customer Understanding (interview và raw notes) |
+| Next session | Session 4 |
+| Running example | recipe app (dataset có sẵn trên FigJam) cho activity; checkout và booking status cho các ví dụ giải thích |
+| Deck tham chiếu | https://claude.ai/artifact/SXojRRcDMMbfFb362GF6MT (33 slide) |
 
 ---
 
-## Slide structure
+## Slides
 
 ### COVER
-- Year: 2026
-- Day label: Session 03
-- Title: Synthesis &\nProblem Definition
-- Subtitle: Turning raw research into a problem worth solving
+- Year: 2026 · Winnie Nguyen
+- Stage: Define
+- Title: Synthesis &\n*Problem Definition*
+- Subtitle: Biến research thô thành một vấn đề đáng giải quyết
 - Author: Winnie Nguyen
+- Credentials:
+  - Senior Product Designer at NAB
+  - Master of UX & Service Design
+  - Product Design Instructor
+- Right panel photo: Ảnh thật một bức tường đầy sticky note sau workshop research, ánh sáng ấm
+- 🎨 Visual hint: Cover layout, cố định. Panel trái trắng với dòng năm, nhãn stage, title (accent ở dòng 2) và subtitle. Panel phải là ảnh thật với gradient tối, tên và ba dòng credentials ở góc dưới trái.
 
 ---
 
 ### SECTION DIVIDER · Recap
 - Num: 00
-- Title: Session 2\nRecap
-- Sub: What you brought into today
+- Kicker: Nối từ buổi trước
+- Title: Ôn\n*Session 2*
+- Sub: Những gì bạn mang vào buổi này
+- 🎨 Visual hint: TYPOGRAPHIC. Nền paper-deeper, số lớn, accent ở dòng 2.
 
 ---
 
 ### STATEMENT · Session 2 recap
-- Kicker: Last session · Customer Understanding
-- Title: You learned how to\n*listen* without\ninterpreting.
-- Lead: You surfaced assumptions, wrote discussion guides, ran interviews, and logged raw notes without editorialising.
+- Kicker: Buổi trước
+- Title: Bạn đã học cách\n*lắng nghe* mà\nkhông diễn giải.
+- Lead: Bạn đã tìm ra assumptions, soạn discussion guide, chạy interview và ghi raw notes mà không thêm nhận định.
+- Ví dụ: bản nháp (ghi "người dùng không tin app" so với "người dùng bỏ giỏ hàng sau bước thanh toán")
+- Speaker notes:
 
----
+  > Ghi "người dùng không tin app" là đã diễn giải. Ghi "người dùng bỏ giỏ hàng sau bước thanh toán" mới chỉ là ghi lại.
 
-### NUMBERED · What your assignment was
-- Kicker: Your homework
-- Title: What you did\nbefore today
-- 4 items:
-  1. Run user interviews on your live project
-  2. Log raw notes in your Research Log within 24 hours
-  3. Start mapping Jobs-to-Be-Done from what you heard
-  4. Begin your Design Decision Log
+  - Session 2 dạy bốn việc: tìm assumptions, soạn discussion guide, chạy interview và ghi raw notes.
+  - Raw notes là lời nói và hành vi nguyên văn, chưa qua nhận định của người ghi.
+  - Ghi như vậy giữ cho dữ liệu sạch, nên việc tìm pattern hôm nay mới đáng tin.
+
+  > **Ghi chú càng ít nhận định thì kết quả synthesis càng đáng tin.**
+- 🎨 Visual hint: Statement layout. Một icon tai nghe hoặc sóng âm đơn giản bên phải, màu ochre.
+
 
 ---
 
 ### STATEMENT · Bridge
-- Kicker: Today's shift
-- Title: Now we make\nthe data *mean*\nsomething.
-- Lead: Research without synthesis is just noise.
+- Kicker: Bước chuyển hôm nay
+- Title: Giờ là lúc làm cho\ndữ liệu *có nghĩa*.
+- Lead: Research mà không có synthesis chỉ là nhiễu.
+- Ví dụ: bản nháp (ba mươi cuộc phỏng vấn, mỗi cuộc mười trang ghi chú)
+- Speaker notes:
+
+  > Hình dung ba mươi cuộc phỏng vấn, mỗi cuộc mười trang ghi chú. Nếu không xử lý, team chỉ nhớ vài câu gây ấn tượng nhất.
+
+  - Synthesis đưa dữ liệu từ "điều đã nghe" lên "điều đó có nghĩa gì với thiết kế".
+  - Phần lớn research dừng ở quan sát, còn hướng đi chỉ xuất hiện sau synthesis.
+
+  > **Research mà không có synthesis chỉ là nhiễu.**
+  > Bốn bước tiếp theo biến nhiễu thành hướng đi.
+- 🎨 Visual hint: Statement layout, nền paper-deeper. Một icon nhiễu (nhiều nét ngắn rời rạc) hợp dần thành một đường rõ.
 
 ---
 
 ### SECTION DIVIDER · The Pipeline
 - Num: 01
-- Title: The\nPipeline
-- Sub: Four moves from raw data to a problem worth solving
+- Kicker: Các bước nối nhau
+- Title: Pipeline\n*bốn bước*
+- Sub: Bốn bước đi từ raw data đến một vấn đề đáng giải
+- Ví dụ: Không cần. Slide chuyển tiếp.
+- Speaker notes:
+
+  > Bốn bước này nối nhau như một dây chuyền: đầu ra của bước trước là nguyên liệu của bước sau.
+
+  - Mình xem toàn cảnh trước, rồi mới đi vào từng bước.
+- 🎨 Visual hint: TYPOGRAPHIC. Nền paper-deeper, số 01 lớn, accent ở dòng 2.
 
 ---
 
-### DIAGRAM · The Pipeline (4-step flow)
-- Kicker: How it works
-- Title: Raw notes don't\nbecome direction\non their own.
-- 4 steps in a horizontal flow:
-  1. **Affinity Mapping** — Input: raw observations → Output: themes
-  2. **Insight Statements** — Input: themes → Output: the "so what"
-  3. **How Might We** — Input: insights → Output: design opportunities
-  4. **Problem Statement** — Input: HMW questions → Output: one problem to solve
-- 🎨 Visual hint: Draw a left-to-right horizontal pipeline — 4 nodes connected by arrows. Each node is a rounded rectangle with the method name large and the input/output in small text below. Use --sienna for node borders, --ochre for the arrows. Make the flow feel inevitable — each step feeds directly into the next.
+### DIAGRAM · The Pipeline
+- Kicker: Sơ đồ
+- Title: Pipeline bốn bước
+- On-slide:
+  - Raw notes không tự thành hướng đi
+  - 01 Affinity Mapping: raw observations vào, themes ra
+  - 02 Insight Statements: themes vào, "so what" ra
+  - 03 How Might We: insights vào, design opportunities ra
+  - 04 Problem Statement: HMW questions vào, một vấn đề cần giải ra
+- Ví dụ: có (dữ liệu recipe app đi qua cả bốn bước trong các activity của buổi)
+- Câu hỏi hay gặp:
+  - Có bỏ qua được bước nào không? Bỏ bước nào thì bước sau mất độ chính xác; insight viết trên note chưa gom nhóm thường chỉ là quan sát.
+  - Pipeline này chỉ dùng cho interview? Không; dùng cho bất kỳ dữ liệu định tính nào: survey mở, support tickets, observation.
+- Speaker notes:
+
+  > Hãy nhìn từ trái sang phải. Mỗi bước nhận một thứ vào và trả một thứ ra.
+
+  - Affinity mapping nhận ghi chú thô và trả ra các theme, tức các nhóm chủ đề.
+  - Insight statement nhận theme và trả ra ý nghĩa của theme đó với thiết kế, hay còn gọi là "so what".
+  - How Might We nhận insight và trả ra câu hỏi mở để team thiết kế hướng tới.
+  - Problem statement nhận các câu hỏi đó và chọn ra một vấn đề để cả team cùng giải.
+  - Bỏ một bước thì bước sau mất nền: không viết được problem statement tốt khi thiếu insight, và không có insight tốt khi chưa gom nhóm.
+
+  > Mình đi lần lượt từ bước một.
+- 🎨 Visual hint: SCHEMATIC. Pipeline ngang bốn node bo tròn nối bằng mũi tên. Mỗi node có tên method lớn, In/Out nhỏ bên dưới. Viền sienna, mũi tên ochre; nhịp đi liền mạch từ trái sang phải.
 
 ---
 
 ### COMPARE · Mindset shift
-- Kicker: Mindset shift
-- Title: Before vs\nAfter synthesis
-- Left column (label: Before):
-  - "I have interview notes… let me start designing."
-  - Jumping to solutions with unprocessed data
-  - Designing based on what felt memorable in the room
-- Right column (label: After):
-  - "I have interview notes. Now I'll find the patterns, name the insights, define the real problem."
-  - Letting the data lead before picking a direction
-  - Designing based on what the evidence actually says
-- 🎨 Visual hint: Draw a large arrow pointing right across the centre divider to make the shift feel directional and kinetic, not just two columns of text.
+- Kicker: Thay đổi tư duy
+- Title: Trước và sau synthesis
+- On-slide:
+  - Trước:
+    - "Mình có interview notes… bắt đầu design thôi."
+    - Nhảy vào giải pháp khi dữ liệu chưa được xử lý
+    - Design theo điều gây ấn tượng nhất trong phòng
+  - Sau:
+    - "Mình có interview notes. Giờ tìm pattern, gọi tên insight, định nghĩa vấn đề thật."
+    - Để dữ liệu dẫn đường trước khi chọn hướng
+    - Design theo điều bằng chứng thật sự nói
+- Ví dụ: bản nháp (một người dùng phàn nàn to về nút sai chỗ, bốn người im lặng cùng kẹt ở bước chọn ngày)
+- Speaker notes:
+
+  > Một người dùng phàn nàn rất to về một nút sai chỗ. Bốn người còn lại im lặng, nhưng cả bốn đều kẹt ở bước chọn ngày. Bạn thiết kế cho ai?
+
+  - Trí nhớ trong phòng nghiêng về người nói to và câu chuyện sinh động.
+  - Synthesis đặt mọi ghi chú ngang hàng, nên người im lặng cũng có trọng lượng.
+  - Cột bên trái là phản xạ quen thuộc sau khi phỏng vấn xong: muốn bắt tay vào thiết kế ngay.
+  - Cột bên phải thêm ba việc trước khi thiết kế: tìm pattern, gọi tên insight, định nghĩa vấn đề thật.
+
+  > Câu "để mình bắt đầu thiết kế" hôm nay đổi thành "để mình xem dữ liệu nói gì".
+- 🎨 Visual hint: SCHEMATIC. Hai cột; một mũi tên lớn chỉ sang phải cắt qua đường chia giữa để thấy chuyển động từ trước sang sau.
 
 ---
 
-### COMPARE · Solo vs workshop synthesis
-- Kicker: How you run it matters
-- Title: Solo synthesis\nvs workshop\nsynthesis
-- Left column (label: Solo):
-  - You carry all the context
-  - Stakeholders receive a report
-  - Buy-in happens later — if at all
-  - One perspective on the data
-- Right column (label: Workshop):
-  - Context is distributed across the room
-  - Stakeholders co-own the findings
-  - Alignment is a byproduct of the process
-  - Multiple lenses catch what one person misses
-- 🎨 Visual hint: Left column feels closed and individual — single person icon, inward-pointing shapes. Right column feels open and collective — group of person icons, outward-pointing or circular shapes. Use --ink for left, --sage for right.
+### COMPARE · Solo vs workshop
+- Kicker: Cách chạy
+- Title: Solo và workshop
+- On-slide:
+  - Solo:
+    - Bạn giữ toàn bộ context
+    - Stakeholder nhận một bản báo cáo
+    - Buy-in đến sau, nếu có
+    - Dữ liệu chỉ có một góc nhìn
+  - Workshop:
+    - Context được chia đều trong phòng
+    - Stakeholder cùng sở hữu các finding
+    - Alignment là kết quả đi kèm của quy trình
+    - Nhiều góc nhìn bắt được điều một người bỏ sót
+- Ví dụ: có (theo lesson: PM nhận ra điều designer coi là bình thường, engineer chỉ ra điều không khả thi)
+- Speaker notes:
+
+  > Bạn đã bao giờ trình bày một báo cáo research mà stakeholder không thấy mình trong đó chưa?
+
+  - Làm một mình, designer tự gom nhóm rồi trình bày kết luận. Stakeholder nhận kết quả có sẵn, nên dễ phản biện và sự đồng thuận đến muộn.
+  - Làm trong workshop, cả phòng cùng dựng ý nghĩa. Người tự tay gom nhóm ít phản đối kết quả vì chính họ tạo ra nó.
+  - Workshop còn chính xác hơn. PM nhận ra điều designer đã coi là bình thường, và engineer chỉ ra điều không khả thi trước khi nó nằm trong problem statement.
+  - Một người luôn có điểm mù với dữ liệu do chính mình thu thập.
+
+  > Vì vậy phần tiếp theo mình nói cách dựng một workshop như thế.
+- 🎨 Visual hint: SCHEMATIC. Cột Solo: một icon người, hình khép kín, màu ink. Cột Workshop: nhóm icon người xếp vòng, hình mở, màu sage.
 
 ---
 
 ### SECTION DIVIDER · Setting Up Your Workshop
 - Num: 02
-- Title: Setting Up\nYour Workshop
-- Sub: Before you run the pipeline, get the right people in the room
+- Kicker: Trước khi chạy
+- Title: Dựng\n*workshop*
+- Sub: Trước khi chạy pipeline, mời đúng người vào phòng
+- Ví dụ: Không cần. Slide chuyển tiếp.
+- Speaker notes:
+
+  > Một workshop tốt bắt đầu trước khi mọi người bước vào phòng.
+
+  - Phần này trả lời ba câu hỏi: mời ai, chuẩn bị gì, và facilitator làm gì.
+  - Sai người hoặc thiếu chuẩn bị thì pipeline vẫn chạy, nhưng kết quả sẽ lệch.
+- 🎨 Visual hint: TYPOGRAPHIC. Nền paper-deeper, số 02 lớn.
 
 ---
 
 ### NUMBERED · Who to invite
-- Kicker: The room
-- Title: Four people\nwho make synthesis\nsmarter
-- 4 items:
-  1. **Product Manager** — aligns the roadmap to what users actually said
-  2. **Engineer** — spots technical constraints before they become design assumptions
-  3. **Fellow designer** — second set of eyes on what's a pattern vs. an outlier
-  4. **Stakeholder or lead** — makes prioritisation decisions; better if they built the meaning themselves
-- Note: Keep it to 4–6 people. More than that and clustering becomes a committee.
+- Kicker: Người tham gia
+- Title: Ai nên có mặt?
+- On-slide:
+  1. **Product Manager:** gắn roadmap với điều người dùng thật sự nói
+  2. **Engineer:** thấy technical constraints trước khi chúng thành assumption của design
+  3. **Fellow designer:** thêm một cặp mắt để phân biệt pattern và outlier
+  4. **Stakeholder hoặc lead:** đưa ra quyết định ưu tiên, tốt hơn nếu họ tự dựng ý nghĩa
+  - Giữ ở 4 đến 6 người; nhiều hơn thì clustering thành họp hội đồng
+- Ví dụ: bản nháp (engineer chỉ ra giới hạn kỹ thuật từ sớm)
+- Speaker notes:
+
+  > Mỗi người trong phòng thấy được một điều mà những người còn lại bỏ sót.
+
+  - PM nối theme với roadmap, nên team biết theme nào đáng ưu tiên.
+  - Engineer chỉ ra giới hạn kỹ thuật từ sớm, trước khi nó trở thành giả định của design.
+  - Fellow designer giúp phân biệt đâu là pattern thật, đâu là một ngoại lệ gây chú ý.
+  - Stakeholder hoặc lead là người quyết định ưu tiên; khi họ tự gom nhóm, họ hiểu và ít phản đối kết quả hơn.
+  - Từ sáu người trở lên, gom nhóm thành họp hội đồng và có người đứng ngoài. Dưới bốn người thì thiếu góc nhìn.
+
+  > Bốn người bạn sẽ mời cho project của mình là ai?
+- 🎨 Visual hint: Bốn card, mỗi card có icon vai trò đơn giản và số 01 đến 04 màu sienna. Một dòng chú thích nhỏ phía dưới về 4 đến 6 người.
 
 ---
 
 ### NUMBERED · Room setup
-- Kicker: Before the session
-- Title: Three things\nthat make the\nroom work
-- 3 items:
-  1. **Share raw notes in advance** — give participants 15 min to read before the session, not during
-  2. **One tool, one board** — FigJam or Miro, all raw observations already on stickies before anyone arrives
-  3. **No titles in the room** — everyone clusters as equals; seniority distorts patterns
-- 🎨 Visual hint: Three horizontal cards stacked with a small icon on the left of each — clock icon, board/grid icon, equals sign icon. Clean and instructional.
+- Kicker: Trước buổi workshop
+- Title: Ba điều giúp phòng chạy tốt
+- On-slide:
+  1. **Gửi raw notes trước:** cho người tham gia 15 phút đọc trước buổi, không phải trong buổi
+  2. **Một tool, một board:** FigJam hoặc Miro, mọi observation đã nằm trên sticky trước khi ai đến
+  3. **Không chức danh trong phòng:** mọi người gom nhóm như nhau, vì cấp bậc làm lệch pattern
+- Ví dụ: bản nháp (lead đặt sticky đầu tiên, các sticky sau xếp theo hướng của lead)
+- Speaker notes:
+
+  > Ba việc này làm xong trước khi workshop bắt đầu, và chúng quyết định buổi chạy trơn hay vấp.
+
+  - Gửi ghi chú trước 15 phút để mọi người vào phòng đã có context, nên thời gian trong phòng dành hết cho việc gom nhóm.
+  - Một board duy nhất để mọi người nhìn cùng một thứ. Observation đã nằm sẵn trên sticky nên không mất thời gian chép lại.
+  - Khi một lead đặt sticky đầu tiên, các sticky sau có xu hướng xếp theo hướng của lead. Bỏ chức danh để pattern đến từ dữ liệu.
+
+  > **Cấp bậc làm lệch pattern.**
+- 🎨 Visual hint: Ba card ngang xếp dọc, mỗi card có icon bên trái: đồng hồ, bảng lưới, dấu bằng. Gọn, mang tính hướng dẫn.
 
 ---
 
-### NUMBERED · Your role as facilitator
-- Kicker: Your role
-- Title: You hold the\nprocess, not\nthe answers.
-- 5 items:
-  1. Open with the research question: "We're here to find out what the data tells us — not confirm what we already think."
-  2. Protect silent clustering time — resist the urge to explain notes
-  3. Name disagreements as useful: "That tension is data too."
-  4. Time-box each step ruthlessly
-  5. Close by asking: "What surprised you most?" — surprises are where the real insights live
-- 🎨 Visual hint: Show a facilitator figure (simple outline) at the edge of a group, not at the centre. Visual metaphor: holding the space, not dominating it.
+### NUMBERED · Facilitator role
+- Kicker: Vai trò
+- Title: Vai trò của facilitator
+- On-slide:
+  - Bạn giữ quy trình, không giữ đáp án
+  1. Mở bằng câu hỏi research: "Mình ở đây để xem dữ liệu nói gì, không phải để xác nhận điều mình đã nghĩ."
+  2. Bảo vệ thời gian gom nhóm im lặng, không giải thích note
+  3. Gọi tên bất đồng là hữu ích: "Sự căng thẳng đó cũng là dữ liệu."
+  4. Time-box từng bước nghiêm túc
+  5. Kết bằng câu: "Điều gì làm bạn bất ngờ nhất?"
+- Ví dụ: bản nháp (hai người đặt cùng một sticky vào hai cluster)
+- Speaker notes:
+
+  > Facilitator không phải người có đáp án. Facilitator là người giữ cho quy trình chạy đúng.
+
+  - Câu mở đầu đặt khung cho cả buổi: tìm điều dữ liệu nói, không đi xác nhận điều mình đã tin.
+  - Nếu facilitator giải thích sticky trong lúc gom nhóm, mọi người sẽ gom theo lời giải thích thay vì theo chính sticky.
+  - Hai người đặt cùng một sticky vào hai chỗ là tín hiệu có ích: sticky đó có thể chứa hai ý, hoặc ranh giới giữa hai theme chưa rõ.
+  - Time-box giữ nhịp để buổi không biến thành một cuộc tranh luận kéo dài.
+  - Điều làm cả phòng bất ngờ thường nằm gần insight thật.
+
+  > **Chỗ bất ngờ thường là chỗ insight thật nằm.**
+  > Trong năm việc này, việc nào bạn thấy khó làm nhất?
+- 🎨 Visual hint: SCHEMATIC. Một hình facilitator đơn giản đứng ở rìa nhóm, không ở trung tâm; ý là giữ không gian, không chi phối.
 
 ---
 
 ### SECTION DIVIDER · Step 1
 - Num: 03
-- Title: Step 1\nAffinity\nMapping
-- Sub: Your first move — raw notes go in, themes come out
+- Kicker: Bước một
+- Title: Affinity\n*Mapping*
+- Sub: Nước đi đầu tiên, raw notes đi vào, theme đi ra
+- Ví dụ: Không cần. Slide chuyển tiếp.
+- Speaker notes:
+
+  > Bước một biến vài chục sticky rời rạc thành vài theme nhìn thấy được.
+
+  - Phần này gồm định nghĩa, ba động tác, năm bước thực hiện và Activity 1.
+- 🎨 Visual hint: TYPOGRAPHIC. Nền paper-deeper, số 03 lớn.
 
 ---
 
-### NUMBERED · What is affinity mapping (3-col)
-- Kicker: The method
-- Title: One method,\nthree moves
-- 3 items:
-  1. **One note, one observation** — Each quote, behaviour, or data point lives on its own sticky. No grouping yet.
-  2. **Move notes that feel related** — Group silently first — don't discuss, just feel. Let the clusters find themselves.
-  3. **Name the cluster** — Write a header that captures what unites that group. That header is your theme.
-- 🎨 Visual hint: Draw a small inline SVG per card — (1) a single isolated sticky note, (2) several stickies drifting toward each other, (3) a neat cluster with a label above. Flat, minimal, --ochre sticky colour.
+### NUMBERED · What is affinity mapping
+- Kicker: Định nghĩa
+- Title: Affinity mapping là gì?
+- On-slide:
+  - What: phương pháp gom các observation rời rạc thành theme, bằng cách nhóm những note thuộc về nhau
+  - Why: không uổng phí note nào, vì pattern nằm ở khoảng giữa các note chứ không nằm trong từng note
+    - Lộ ra pattern mà raw notes giấu
+    - Buộc cả nhóm đọc mọi observation, không chỉ những cái nói to
+    - Tạo hiểu biết chung trong phòng
+    - Biến theme thành thứ nhìn được, gọi tên được và tranh luận được
+  - When: sau khi lắng nghe, trước khi quyết định nó có nghĩa gì
+    - Sau interview, trước khi viết insight
+    - Khi có từ 30 observation trở lên
+    - Khi stakeholder bất đồng về research nói gì
+    - Ở đầu mọi workshop synthesis
+  - Nguồn gốc: KJ method (Kawakita Jiro, thập niên 1960), một trong những cách synthesis phổ biến nhất trong UX research
+- Ví dụ: bản nháp (ba trăm ghi chú từ mười cuộc phỏng vấn)
+- Câu hỏi hay gặp:
+  - Dưới 30 observation có cần không? Vẫn dùng được, nhưng lợi ích lớn nhất xuất hiện khi dữ liệu nhiều đến mức khó nhớ hết.
+  - Khác gì với tự đọc rồi tóm tắt? Tóm tắt là một người quyết định điều quan trọng; gom nhóm để cả nhóm quyết định.
+- Speaker notes:
+
+  > Hình dung bạn có ba trăm ghi chú từ mười cuộc phỏng vấn. Từng ghi chú nghe hợp lý, nhưng không ghi chú nào cho biết vấn đề nằm ở đâu.
+
+  - Pattern không nằm trong từng ghi chú mà nằm ở khoảng giữa các ghi chú, và affinity mapping giúp nhìn thấy khoảng đó.
+  - Phương pháp bắt nguồn từ KJ method của Kawakita Jiro vào thập niên 1960, và nay là một bước synthesis phổ biến trong UX research.
+  - Làm trên board buộc cả nhóm đọc mọi ghi chú, kể cả những ghi chú ít người nhắc tới.
+  - Theme hiện ra trên board nên cả phòng gọi tên và tranh luận được.
+  - Nên dùng sau phỏng vấn và trước khi viết insight, nhất là khi có từ 30 observation hoặc khi stakeholder bất đồng về điều research nói.
+
+  > Bạn đang có bao nhiêu observation? Đủ nhiều để cần gom nhóm chưa?
+- 🎨 Visual hint: SCHEMATIC. Ba hàng What, Why, When; mỗi hàng có nhãn mono và nội dung bên cạnh. Một icon sticky note rời rạc ở hàng What và một cụm sticky ở hàng Why.
 
 ---
 
-### PROCESS · How to run affinity mapping (5 steps)
-- Kicker: Step by step
-- Title: How to run it
-- 5 steps:
-  1. **Dump everything** — one observation per sticky note (FigJam, Miro, or physical)
-  2. **Read each note** — don't sort yet, just absorb the full weight of the data
-  3. **Start moving** — cluster notes that feel related, without labelling first
-  4. **Name each cluster** — the header should answer: "what unites these notes?"
-  5. **Stand back** — look for super-themes, outliers, and surprises
-- Step 3 is active
-- 🎨 Visual hint: Render as a horizontal flow — numbered circles connected by thin arrows, not a vertical list. Step 3 circle fills with --sienna, others are outlined. Show a small sticky-note icon inside each circle.
+### NUMBERED · Three moves
+- Kicker: Phương pháp
+- Title: Một phương pháp, ba động tác
+- On-slide:
+  1. **Một note, một observation:** mỗi quote, hành vi hoặc điểm dữ liệu nằm trên một sticky riêng, chưa gom nhóm
+  2. **Di chuyển note thấy liên quan:** gom im lặng trước, không bàn luận, để cluster tự hình thành
+  3. **Đặt tên cluster:** viết một header nói điều gì nối nhóm đó; header đó là theme
+- Ví dụ: bản nháp (hai sticky về công thức đã lưu và công thức chụp màn hình)
+- Speaker notes:
+
+  > Ba động tác, đúng thứ tự: một sticky một observation, di chuyển trong im lặng, rồi mới đặt tên.
+
+  - Một sticky chứa hai ý buộc người gom nhóm phải chọn một ý, nên tách sticky ra trước.
+  - Gom nhóm im lặng để mỗi người dùng phán đoán riêng, chưa bị người nói to ảnh hưởng.
+  - Cluster tự hình thành khi chưa gắn nhãn; đặt tên quá sớm sẽ ép sticky vào một nhãn có sẵn.
+  - Header của cluster trả lời câu hỏi "điều gì nối các sticky này?", và header đó chính là theme.
+
+  > Hai sticky "mình hay quên đã lưu công thức nào" và "mình chụp màn hình công thức" nằm gần nhau. Theme của chúng có thể là gì?
+- 🎨 Visual hint: SCHEMATIC. Ba card, mỗi card một SVG nhỏ: (1) một sticky đơn lẻ, (2) vài sticky trôi lại gần nhau, (3) một cụm gọn có nhãn. Sticky màu ochre, phẳng, tối giản.
+
+---
+
+### PROCESS · How to run it
+- Kicker: Cách làm
+- Title: Cách chạy affinity mapping
+- On-slide:
+  1. **Dump everything:** một observation trên một sticky, trong FigJam, Miro hoặc sticky giấy
+  2. **Đọc từng note:** chưa sắp xếp, chỉ cảm nhận toàn bộ trọng lượng của dữ liệu
+  3. **Bắt đầu di chuyển:** gom note thấy liên quan, chưa gắn nhãn
+  4. **Đặt tên cluster:** header trả lời "điều gì nối các note này?"
+  5. **Lùi lại nhìn:** tìm super-theme, outlier và điều bất ngờ
+  - Bước 3 đang active
+- Ví dụ: bản nháp (recipe app: hai cluster cùng thuộc một super-theme)
+- Speaker notes:
+
+  > Năm bước, và bước ba là nơi pattern bắt đầu lộ ra.
+
+  - Đọc hết ghi chú trước khi di chuyển để cả nhóm thấy toàn bộ khối lượng dữ liệu, không bị ấn tượng bởi sticky đọc đầu tiên.
+  - Ở bước di chuyển, chưa đặt tên; cluster tự hình thành.
+  - Tên cluster là một cụm ngắn trả lời điều gì nối các sticky.
+  - Bước lùi lại nhìn cho thấy quan hệ giữa các cluster: super-theme, outlier và điều bất ngờ.
+  - Outlier không bị bỏ đi; một sticky lạ có thể là insight chưa có đồng minh.
+
+  > Bước nào trong năm bước này nhóm của bạn dễ bỏ qua nhất?
+- 🎨 Visual hint: SCHEMATIC. Luồng ngang năm vòng tròn đánh số, nối bằng mũi tên mảnh. Vòng 3 tô đặc sienna, các vòng khác chỉ có viền. Mỗi vòng có icon sticky nhỏ.
 
 ---
 
 ### MILESTONE · Activity 1
-- Kicker: Activity 01
 - Num: 10
-- Title: Minutes
-- Sub: Recipe app dataset is on your FigJam board. 6 min — cluster silently. 4 min — label each cluster. What surprised you? Did any note belong in two places?
+- Kicker: Activity 01
+- Title: Phút
+- Sub: Dataset recipe app đã có trên FigJam. Vòng 1, 6 phút: gom nhóm im lặng. Vòng 2, 4 phút: đặt tên từng cluster.
+- Ví dụ: có (dataset recipe app trên FigJam)
+- Speaker notes:
+
+  > Dataset recipe app đã nằm trên board, mỗi ghi chú một sticky. Mười phút, chia hai vòng.
+
+  - Vòng 1, sáu phút: gom nhóm trong im lặng, không giải thích.
+  - Vòng 2, bốn phút: viết header cho từng cluster trong 3 đến 5 từ, trả lời "điều gì nối các sticky này?".
+  - Một sticky thuộc về hai cluster cho thấy sticky đó có hai ý, hoặc ranh giới theme chưa rõ.
+
+  > Cluster nào làm bạn bất ngờ? Có sticky nào thuộc về hai chỗ không, và điều đó nói gì?
+- 🎨 Visual hint: Milestone layout nền sienna, số 10 lớn, tiêu đề và prompt bên dưới. Không thêm diagram.
 
 ---
 
 ### SECTION DIVIDER · Step 2
 - Num: 04
-- Title: Step 2\nInsight\nStatements
-- Sub: You have themes — now name what each one means
+- Kicker: Bước hai
+- Title: Insight\n*Statements*
+- Sub: Đã có theme, giờ gọi tên ý nghĩa của từng theme
+- Ví dụ: Không cần. Slide chuyển tiếp.
+- Speaker notes:
+
+  > Có theme rồi. Giờ mình hỏi: vậy thì sao?
+
+  - Theme cho biết điều gì đang xảy ra; insight cho biết điều đó có nghĩa gì với thiết kế.
+  - Lỗi phổ biến nhất là dừng ở quan sát rồi gọi nó là insight.
+- 🎨 Visual hint: TYPOGRAPHIC. Nền paper-deeper, số 04 lớn.
 
 ---
 
-### STATEMENT · What is an insight statement
-- Kicker: The definition
-- Title: *Observation* +\n*Implication* =\nInsight
-- Lead: An observation is what you saw or heard. An implication is why it matters for design. Together they make an insight.
-- 🎨 Visual hint: Render the formula as a large typographic equation — three big blocks side by side: [OBSERVATION] + [IMPLICATION] = [INSIGHT]. Style the "+" and "=" as --sienna. Below each block, add a one-line descriptor in small mono text. Make the equation the dominant element on the slide, not the lead text.
+### FORMULA · What is an insight
+- Kicker: Định nghĩa
+- Title: Insight là gì?
+- On-slide:
+  - Observation: điều bạn thấy
+  - +
+  - Implication: vì sao nó quan trọng
+  - =
+  - Insight: "so what"
+  - Observation là điều bạn thấy hoặc nghe. Implication là lý do nó quan trọng với thiết kế. Hai thứ cộng lại thành insight.
+- Ví dụ: có (checkout: người dùng bỏ flow sau bước thanh toán dù giao dịch đã thành công; implication là app không xác nhận rõ, nên người dùng không biết nó đã thành công, và niềm tin vỡ đúng lúc quan trọng nhất)
+- Câu hỏi hay gặp:
+  - Insight có luôn cần một con số? Không; cần đủ cụ thể để một designer chưa dự session cũng hiểu nó nói về điều gì.
+- Speaker notes:
+
+  > Người dùng bỏ flow ngay sau bước thanh toán, dù giao dịch đã thành công. Đó là một observation, chưa phải insight.
+
+  - Observation là điều quan sát được: một câu nói, một hành vi hoặc một pattern.
+  - Implication trả lời câu hỏi "vậy thì sao": điều này quan trọng thế nào với quyết định thiết kế.
+  - Trong ví dụ checkout, implication là app không xác nhận rõ giao dịch, nên người dùng không biết nó đã thành công và niềm tin vỡ đúng lúc quan trọng nhất.
+  - Hai phần cộng lại thành insight.
+
+  > **Observation cộng Implication bằng Insight.**
+  > Câu trong ghi chú của bạn đang là observation hay đã là insight?
+- 🎨 Visual hint: SCHEMATIC. Phương trình typographic lớn gồm ba khối [OBSERVATION] + [IMPLICATION] = [INSIGHT]; "+" và "=" màu sienna; mỗi khối có một dòng mô tả nhỏ dạng mono bên dưới. Phương trình là yếu tố chính, lead chỉ là phụ.
 
 ---
 
-### COMPARE · Strong vs weak insight
-- Kicker: Quality check
-- Title: Weak insight\nvs strong insight
-- Left column (label: Weak):
-  - "Users find the app confusing"
-  - "Users want a simpler interface"
-  - "Users liked the new feature"
-- Right column (label: Strong):
-  - "Users can't locate booking status after submission, causing them to call support — a gap in post-action feedback design"
-  - "Hospitality managers visit the app 3–5x per shift but navigate 4 screens each time — suggesting a need for a persistent dashboard view"
-  - "3 of 4 users completed the flow faster, but all 4 got stuck at the date picker — a specific interaction failure, not a layout issue"
+### COMPARE · Weak vs strong insight
+- Kicker: Kiểm tra chất lượng
+- Title: Insight yếu và insight mạnh
+- On-slide:
+  - Yếu:
+    - "Người dùng thấy app khó hiểu."
+    - "Người dùng muốn giao diện đơn giản hơn."
+    - "Người dùng thích tính năng mới."
+  - Mạnh:
+    - "Người dùng không tìm được trạng thái booking sau khi gửi, nên phải gọi support, cho thấy khoảng trống trong thiết kế phản hồi sau hành động."
+    - "Quản lý khách sạn mở app 3 đến 5 lần mỗi ca nhưng phải qua 4 màn hình mỗi lần, gợi ý cần một dashboard cố định."
+    - "3 trong 4 người hoàn thành flow nhanh hơn, nhưng cả 4 đều kẹt ở date picker, đây là lỗi tương tác cụ thể chứ không phải lỗi layout."
+- Ví dụ: có (booking status, dashboard quản lý khách sạn, date picker)
+- Speaker notes:
+
+  > "Người dùng thấy app khó hiểu." Câu này đúng với gần như mọi app, nên không giúp team quyết định gì.
+
+  - Insight yếu áp dụng được cho sản phẩm nào cũng được; insight mạnh chỉ đúng với sản phẩm này.
+  - Insight mạnh nói rõ ba thứ: điều gì xảy ra, nó xảy ra ở đâu trong flow, và hệ quả là gì.
+  - Ví dụ booking: người dùng không tìm được trạng thái sau khi gửi nên phải gọi support; khoảng trống nằm ở phản hồi sau hành động.
+  - Ví dụ date picker: 3 trong 4 người nhanh hơn, nhưng cả 4 kẹt ở một chỗ; vấn đề là một tương tác cụ thể chứ không phải cả layout.
+
+  > Insight của bạn còn đúng khi đổi sang sản phẩm khác không? Nếu còn, nó chưa đủ cụ thể.
+- 🎨 Visual hint: SCHEMATIC. Hai cột; nhãn Weak màu sienna, Strong màu sage; đường chia giữa rõ.
 
 ---
 
 ### MILESTONE · Activity 2
-- Kicker: Activity 02
 - Num: 10
-- Title: Minutes
-- Sub: Pick one moment from your interviews. Write the insight: what did you observe, and what does it mean for the design?
+- Kicker: Activity 02
+- Title: Phút
+- Sub: Chọn một khoảnh khắc trong interview. Viết insight: bạn quan sát thấy gì, và nó có nghĩa gì với thiết kế?
+- Ví dụ: có (khoảnh khắc từ interview của chính project)
+- Speaker notes:
+
+  > Chọn một khoảnh khắc trong phỏng vấn của bạn và viết thành insight: bạn thấy gì, và nó có nghĩa gì cho thiết kế?
+
+  - Mười phút, làm cá nhân.
+  - Câu viết gồm hai phần: observation cụ thể, rồi implication cho quyết định thiết kế.
+  - Implication nào đúng với mọi sản phẩm là chưa đủ cụ thể.
+  - Insight vừa viết là đầu vào của activity kế tiếp.
+
+  > Đọc lại implication của bạn: nó còn đúng nếu đổi sang app khác không?
+- 🎨 Visual hint: Milestone layout nền sienna, số 10 lớn, prompt bên dưới. Không thêm diagram.
 
 ---
 
 ### SECTION DIVIDER · Step 3
 - Num: 05
-- Title: Step 3\nHow Might\nWe
-- Sub: Turn insights into questions the team can design toward
+- Kicker: Bước ba
+- Title: How Might\n*We*
+- Sub: Biến insight thành câu hỏi để team thiết kế hướng tới
+- Ví dụ: Không cần. Slide chuyển tiếp.
+- Speaker notes:
+
+  > Insight cho biết điều gì đúng. Câu hỏi How Might We mở ra cách giải nó.
+
+  - HMW giúp team chưa nhảy vào giải pháp quá sớm.
+- 🎨 Visual hint: TYPOGRAPHIC. Nền paper-deeper, số 05 lớn.
 
 ---
 
-### NUMBERED · What HMW means (3-col)
-- Kicker: Breaking it down
-- Title: Three words,\none big idea
-- 3 items:
-  1. **How** — Assumes it's solvable. Not "can we" or "should we" — it's already a given that it can be done.
-  2. **Might** — Leaves the solution open. Invites exploration. No single right answer yet.
-  3. **We** — It's a team challenge. Builds shared ownership, not one person's burden to solve alone.
+### NUMBERED · Three words
+- Kicker: Giải nghĩa
+- Title: Ba từ, một ý lớn
+- On-slide:
+  1. **How:** giả định rằng giải được, không hỏi "có nên" hay "có thể"
+  2. **Might:** để mở giải pháp, mời khám phá, chưa có một đáp án đúng
+  3. **We:** đây là thách thức của team, tạo sở hữu chung chứ không đặt gánh nặng lên một người
+- Ví dụ: bản nháp (so sánh "Liệu có thể sửa checkout không?" với một câu HMW)
+- Câu hỏi hay gặp:
+  - HMW quá rộng hay quá hẹp thì sao? Quá rộng thì không biết bắt đầu; quá hẹp thì đã chứa sẵn giải pháp. Một HMW tốt đủ cụ thể để hành động và đủ mở để trả lời bằng năm cách khác nhau.
+- Speaker notes:
+
+  > "Liệu có thể sửa checkout không?" khác với "How might we làm rõ giao dịch đã thành công?". Câu đầu hỏi có nên làm hay không. Câu sau coi như làm được và hỏi làm thế nào.
+
+  - "How" cho rằng vấn đề giải được, nên team bắt tay vào cách làm thay vì tranh luận có làm hay không.
+  - "Might" giữ giải pháp mở, nên nhiều hướng cùng được xem xét.
+  - "We" biến câu hỏi thành thách thức chung của team, không phải gánh nặng của một người.
+  - Một HMW tốt nằm ở vùng vừa: đủ cụ thể để hành động, đủ mở để trả lời bằng năm cách khác nhau.
+
+  > Câu hỏi nào của bạn đang chứa sẵn giải pháp?
+- 🎨 Visual hint: SCHEMATIC. Ba cột; mỗi cột một từ lớn (How, Might, We), tiêu đề đậm và mô tả ngắn bên dưới.
 
 ---
 
-### STATEMENT · HMW example
-- Kicker: In practice
-- Title: From insight\nto *opportunity*
-- Lead: Insight: "Users abandon after checkout even when the transaction succeeds — because there is no clear confirmation — breaking trust at the most critical moment in the flow."
-- HMW list (3 bullets on the slide):
-  - How might we make it immediately clear that a transaction was successful, without requiring the user to check?
-  - How might we reduce user anxiety at the moment between action and confirmation?
-  - How might we design a post-payment experience that builds trust instead of doubt?
-- 🎨 Visual hint: Show the insight in a distinct callout box (dark --ink background, --paper text) at the top. Below it, draw a downward arrow into 3 HMW cards arranged horizontally — each card in --paper-deeper with a --sienna "HMW →" label. Visually show the transformation from one insight to multiple opportunities.
+### DIAGRAM · HMW example
+- Kicker: Ví dụ
+- Title: Từ insight đến opportunity
+- On-slide:
+  - Insight: "Người dùng bỏ flow sau checkout dù giao dịch thành công, vì không có xác nhận rõ ràng, làm vỡ niềm tin đúng lúc quan trọng nhất."
+  - HMW → làm rõ ngay lập tức rằng giao dịch đã thành công, không bắt người dùng phải tự kiểm tra?
+  - HMW → giảm lo lắng ở khoảng giữa hành động và xác nhận?
+  - HMW → thiết kế trải nghiệm sau thanh toán xây niềm tin thay vì nghi ngờ?
+- Ví dụ: có (checkout không xác nhận giao dịch)
+- Speaker notes:
+
+  > Một insight, ba câu hỏi, và mỗi câu mở ra một hướng thiết kế khác.
+
+  - Câu đầu hướng về thông tin: làm rõ giao dịch thành công mà người dùng không phải tự kiểm tra.
+  - Câu thứ hai hướng về cảm xúc: khoảng giữa lúc bấm và lúc nhận xác nhận là lúc người dùng lo nhất.
+  - Câu thứ ba hướng về cả trải nghiệm sau thanh toán.
+  - Cả ba cùng xuất phát từ một insight nhưng dẫn tới ba nhóm ý tưởng khác nhau.
+
+  > Insight chỉ ra một khoảng trống. HMW biến khoảng trống đó thành nhiều cơ hội.
+- 🎨 Visual hint: SCHEMATIC. Insight nằm trong callout nền ink, chữ paper ở trên cùng. Bên dưới là mũi tên xuống và ba card HMW xếp ngang, nền paper-deeper, nhãn "HMW →" màu sienna.
 
 ---
 
 ### MILESTONE · Activity 3
-- Kicker: Activity 03
 - Num: 8
-- Title: Minutes
-- Sub: Take the insight you wrote. Turn it into 3 different "How Might We" questions.
+- Kicker: Activity 03
+- Title: Phút
+- Sub: Lấy insight vừa viết, biến nó thành 3 câu "How Might We" khác nhau.
+- Ví dụ: có (insight từ Activity 2)
+- Speaker notes:
+
+  > Lấy insight bạn vừa viết và biến nó thành ba câu How Might We khác nhau.
+
+  - Tám phút, làm cá nhân.
+  - Ba câu nên đi ba hướng: thông tin, cảm xúc, trải nghiệm tổng thể.
+  - Kiểm tra mỗi câu bằng một câu hỏi: có thiết kế được thứ gì để trả lời nó không?
+  - Câu nào đã chứa sẵn giải pháp thì cần mở rộng lại.
+
+  > Câu nào trong ba câu gợi cho bạn nhiều hướng nhất?
+- 🎨 Visual hint: Milestone layout nền sienna, số 8 lớn, prompt bên dưới. Không thêm diagram.
 
 ---
 
 ### SECTION DIVIDER · Step 4
 - Num: 06
-- Title: Step 4\nProblem\nStatement
-- Sub: Converge — one problem the whole team can act on
+- Kicker: Bước bốn
+- Title: Problem\n*Statement*
+- Sub: Hội tụ về một vấn đề cả team có thể hành động
+- Ví dụ: Không cần. Slide chuyển tiếp.
+- Speaker notes:
+
+  > Ba bước trước mở rộng. Bước cuối thu về một vấn đề.
+
+  - Cả phòng cần cùng đứng sau một câu duy nhất.
+- 🎨 Visual hint: TYPOGRAPHIC. Nền paper-deeper, số 06 lớn.
 
 ---
 
-### NUMBERED · What makes a strong problem statement (3-col)
-- Kicker: The criteria
-- Title: Three things a\ngood problem\nstatement does
-- 3 items:
-  1. **User-centred** — Describes a real person's problem, not a business goal, a feature request, or a technical constraint.
-  2. **Specific, not vague** — "Users struggle to track booking status" beats "users find the product confusing." Precision makes it testable.
-  3. **Open to multiple solutions** — Doesn't hint at the answer. Opens possibility instead of closing it down.
+### NUMBERED · Criteria
+- Kicker: Tiêu chí
+- Title: Problem statement tốt cần gì?
+- On-slide:
+  1. **Lấy người dùng làm trung tâm:** mô tả vấn đề của một người thật, không phải mục tiêu kinh doanh, yêu cầu tính năng hay ràng buộc kỹ thuật
+  2. **Cụ thể, không mơ hồ:** "Người dùng khó theo dõi trạng thái booking" tốt hơn "người dùng thấy sản phẩm khó hiểu", vì cụ thể thì kiểm chứng được
+  3. **Mở cho nhiều giải pháp:** không gợi ý đáp án, mở ra khả năng thay vì đóng lại
+- Ví dụ: có (trạng thái booking so với "sản phẩm khó hiểu")
+- Speaker notes:
+
+  > "Cần redesign checkout" không phải là vấn đề. Đó là một giải pháp.
+
+  - Tiêu chí một: mô tả một người thật và khó khăn của họ, không mô tả mục tiêu kinh doanh hay tính năng.
+  - Tiêu chí hai: càng cụ thể thì càng dễ kiểm chứng sau này.
+  - Tiêu chí ba: statement không gợi ý đáp án, nên team còn nhiều cách giải.
+  - Statement có tên một tính năng thường đã chọn giải pháp rồi.
+
+  > Statement của bạn có nhắc tên tính năng nào không?
+- 🎨 Visual hint: SCHEMATIC. Ba cột; mỗi cột một icon nhỏ: một người, một mục tiêu có tâm, một ngã ba nhiều hướng. Số 01 đến 03 màu sienna.
 
 ---
 
-### STATEMENT · The formula
-- Kicker: The formula
-- Title: *[User]* needs a way\nto *[goal]* because\n*[barrier]*
-- Lead example: "First-time online shoppers need a way to know their order was confirmed immediately after payment because the current delay and lack of feedback causes them to abandon — and sometimes re-order — thinking the transaction failed."
-- 🎨 Visual hint: Render the formula as three colour-coded pill/tag blocks in a row — [USER] in --sienna-tint, [GOAL] in --sage-tint, [BARRIER] in --ochre-tint — each with its label above in mono. Below, show the filled-in example sentence with the same colour highlights applied inline to the matching words.
+### FORMULA · The problem statement formula
+- Kicker: Công thức
+- Title: Công thức problem statement
+- On-slide:
+  - [USER] cần một cách để [GOAL] vì [BARRIER]
+  - Điền mẫu: "Người mua online lần đầu cần một cách để biết đơn hàng đã được xác nhận ngay sau khi thanh toán, vì độ trễ và thiếu phản hồi hiện tại khiến họ bỏ giữa chừng, thậm chí đặt lại đơn, vì nghĩ giao dịch thất bại."
+- Ví dụ: có (người mua online lần đầu và xác nhận đơn hàng)
+- Câu hỏi hay gặp:
+  - Barrier lấy ở đâu? Từ điều người dùng thật sự nói hoặc làm, không phải điều nghe hợp lý.
+  - Nhiều nhóm người dùng thì sao? Chọn nhóm có vấn đề rõ nhất cho statement đầu tiên, các nhóm còn lại viết statement riêng.
+- Speaker notes:
+
+  > Người mua online lần đầu cần một cách để biết đơn hàng đã được xác nhận ngay sau khi thanh toán, vì độ trễ và thiếu phản hồi khiến họ bỏ giữa chừng, thậm chí đặt lại đơn.
+
+  - Công thức có ba ô: ai (user), muốn đạt điều gì (goal), và điều gì đang cản (barrier).
+  - Ô user nêu một nhóm cụ thể, không viết "người dùng" chung chung.
+  - Ô goal nêu nhu cầu, không nêu tính năng.
+  - Ô barrier lấy từ insight; barrier mà người dùng chưa từng nói chỉ là giả định.
+  - Mỗi ô một màu để thấy ngay ô nào còn thiếu.
+
+  > **Barrier phải đến từ điều người dùng thật sự nói.**
+  > Bạn điền được cả ba ô cho project của mình chưa? Ô nào còn trống?
+- 🎨 Visual hint: SCHEMATIC. Ba khối pill/tag xếp hàng: [USER] nền sienna-tint, [GOAL] nền sage-tint, [BARRIER] nền ochre-tint, nhãn mono phía trên. Bên dưới là câu ví dụ đã điền, tô màu inline các từ tương ứng.
 
 ---
 
-### COMPARE · Strong vs weak problem statement
-- Kicker: Quality check
-- Title: Weak statement\nvs strong statement
-- Left column (label: Weak):
-  - "We need to redesign the checkout flow" — *Solution, not a problem*
-  - "Users don't trust the app" — *Too vague to act on*
-  - "The app needs better notifications" — *Solution, not user-centred*
-- Right column (label: Strong):
-  - "First-time buyers need a way to confirm their order was placed because the current lack of feedback after payment causes them to re-submit, creating duplicate orders"
-  - "New users need a way to verify their account is set up correctly because there is no onboarding confirmation — leading them to contact support before completing their first action"
-  - "Frequent users need a way to know when a status change happens without opening the app because they currently miss time-sensitive updates — causing delays and frustration"
+### COMPARE · Weak vs strong statement
+- Kicker: Kiểm tra chất lượng
+- Title: Statement yếu và statement mạnh
+- On-slide:
+  - Yếu:
+    - "Cần redesign flow checkout." Là giải pháp, không phải vấn đề.
+    - "Người dùng không tin app." Quá mơ hồ để hành động.
+    - "App cần thông báo tốt hơn." Là giải pháp, không lấy người dùng làm trung tâm.
+  - Mạnh:
+    - "Người mua lần đầu cần một cách để xác nhận đơn đã được đặt, vì thiếu phản hồi sau thanh toán khiến họ gửi lại, tạo ra đơn trùng."
+    - "Người dùng mới cần một cách để xác nhận tài khoản đã thiết lập đúng, vì không có xác nhận onboarding, khiến họ liên hệ support trước khi làm hành động đầu tiên."
+    - "Người dùng thường xuyên cần một cách để biết khi trạng thái thay đổi mà không phải mở app, vì họ bỏ lỡ cập nhật gấp, gây chậm trễ và bực bội."
+- Ví dụ: có (checkout, onboarding, notification)
+- Speaker notes:
+
+  > "Cần redesign flow checkout" nghe giống một vấn đề, nhưng thật ra là một giải pháp.
+
+  - Statement yếu có ba kiểu: là giải pháp, quá mơ hồ, hoặc không xuất phát từ người dùng.
+  - Statement mạnh có đủ ba ô: nhóm người dùng cụ thể, nhu cầu cụ thể, rào cản có thật.
+  - Ví dụ đơn trùng: thiếu phản hồi sau thanh toán khiến người dùng gửi lại, và hệ quả là đơn bị tạo hai lần.
+  - Phép thử cuối: statement này có thể giải bằng nhiều hơn một cách không?
+
+  > Statement của bạn đang thuộc cột nào?
+- 🎨 Visual hint: SCHEMATIC. Hai cột; nhãn Weak màu sienna kèm nhận xét nghiêng bên dưới mỗi dòng; nhãn Strong màu sage.
 
 ---
 
 ### MILESTONE · Activity 4
-- Kicker: Activity 04
 - Num: 15
-- Title: Minutes
-- Sub: Start your problem statement now. Use the formula. You'll finish it before Session 4.
+- Kicker: Activity 04
+- Title: Phút
+- Sub: Soạn nháp problem statement cho project của bạn. Dùng công thức và bám vào điều bạn thật sự nghe được.
+- Ví dụ: có (project của chính designer)
+- Speaker notes:
+
+  > Soạn nháp problem statement cho project của bạn, dùng công thức và bám vào điều bạn thật sự nghe được.
+
+  - Mười lăm phút, làm cá nhân.
+  - Điền ba ô user, goal, barrier; barrier lấy từ insight đã viết.
+  - Ba câu kiểm tra trước khi kết lại: statement mô tả một người chứ không phải một hệ thống? Giải được bằng nhiều hơn một cách? Dựa trên điều người dùng thật sự nói?
+  - Bản nháp này sẽ được hoàn thiện trước Session 4.
+
+  > Bản nháp của bạn có nhắc tên giải pháp nào không?
+- 🎨 Visual hint: Milestone layout nền sienna, số 15 lớn, prompt bên dưới. Không thêm diagram.
 
 ---
 
-### PRACTICE · Assignment (before Session 4)
-- Kicker: Your assignment
-- Title: Before Session 4
-- Card 1 — Affinity Mapping:
-  - Run affinity mapping on all your interview notes
-  - Use FigJam, Miro, or physical sticky notes
-  - Look for super-themes and outliers
-- Card 2 — Insight Statements:
-  - Write 3 insight statements from your research
-  - Use the Observation + Implication formula for each
-  - Push the implication until it's product-specific
-- Card 3 — Share your problem statement:
-  - Share it with one stakeholder — a PM, engineer, or team lead
-  - Note how they respond
-  - Update the statement if they were confused about who or why
+### PRACTICE · Assignment
+- Kicker: Bài tập
+- Title: Trước Session 4
+- On-slide:
+  - Task 01 · Affinity Mapping: chạy affinity mapping cho toàn bộ interview notes
+    - Dùng FigJam, Miro hoặc sticky giấy
+    - Tìm super-theme và outlier
+    - Mang các cluster đã đặt tên đến Session 4
+  - Task 02 · Insight Statements: viết 3 insight statement từ research
+    - Dùng công thức Observation + Implication cho từng cái
+    - Đẩy implication đến khi nó đặc thù cho sản phẩm
+    - Không dừng ở điều hiển nhiên; lượt thứ ba là nơi insight thật xuất hiện
+  - Task 03 · Share It: chia sẻ problem statement với một stakeholder
+    - Chọn PM, engineer hoặc team lead
+    - Ghi lại phản ứng của họ; sự bối rối cũng là dữ liệu
+    - Sửa statement nếu họ không rõ về ai hoặc vì sao
+- Ví dụ: Không cần. Slide giao bài tập.
+- Speaker notes:
+
+  > Ba bài tập này nối buổi hôm nay với Session 4.
+
+  - Task 01 là Activity 1 chạy trên toàn bộ ghi chú phỏng vấn của bạn, thay cho dataset mẫu.
+  - Task 02 chạy công thức insight ba lần; implication chung chung là dấu hiệu cần hỏi sâu hơn.
+  - Task 03 đưa problem statement ra khỏi tay designer; phản ứng của stakeholder cho biết statement có rõ ai và vì sao hay không.
+  - Đến Session 4, mỗi bạn có cluster đã đặt tên, ba insight và một problem statement đã qua một lượt phản hồi.
+
+  > Task nào bạn đoán sẽ khó nhất?
+- 🎨 Visual hint: Practice layout, ba card viền ink, mỗi card có kicker mono, tiêu đề lớn và danh sách mũi tên `→` màu sienna.
+
 ---
 
 ### END · Closing
-- Kicker: After today, you should have one thing
-- Title: A problem\nworth solving.
+- Kicker: Sau hôm nay, bạn cần có một thứ
+- Title: Một vấn đề\nđáng giải.
 - Sign: — Winnie Nguyen
+- Ví dụ: Không cần. Slide kết.
+- Speaker notes:
+
+  > Sau hôm nay, bạn cần có một thứ: một vấn đề đáng giải.
+
+  - Bốn bước đã đi qua: affinity mapping, insight statements, How Might We, problem statement.
+  - Điều đọng lại: dữ liệu chưa nói gì cho đến khi mình gom nhóm, hỏi "vậy thì sao", và chọn một vấn đề.
+- 🎨 Visual hint: End layout, nền paper-deeper, title italic lớn, chữ ký sienna-deep.
