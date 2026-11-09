@@ -37,15 +37,17 @@ Viết như một đồng nghiệp có kinh nghiệm chia sẻ cách làm với 
 - Ngôi xưng: "mình" cho cả nhóm và trong speaker notes; "bạn" khi nói trực tiếp với học viên. Không trộn hai ngôi trong cùng một câu.
 - Em dash, nhịp staccato và các quy tắc dấu câu khác: theo `writing-style-guide.md`.
 
-## Văn bản dạng paper (file lesson để chia sẻ với partner và học viên)
+## File lesson chia sẻ với học viên (cập nhật 2026-11-06)
 
-Từ 2026-10-07, file `*-lesson.md` được viết như một paper hoặc bản research, không phải kịch bản giảng. Quy ước:
+Từ 2026-11-06, `*-lesson.md` là **một bản duy nhất** gửi cho học viên và là nguồn để đẩy lên Notion (card Nội dung chính). Không còn bản paper riêng cho partner. Lesson 5 là bản mẫu; các lesson khác cập nhật theo. Quy ước:
 
-- Giọng khách quan, không dùng "bạn", "mình", không có câu mệnh lệnh như "hãy", "đừng". Gọi người học là "học viên" hoặc "designer".
-- Có Abstract, Background, Limitations, References. Mỗi số liệu ghi nguồn, năm, cỡ mẫu và đánh số trích dẫn [n].
-- Tách rõ phát hiện (từ nguồn) và suy luận (của tác giả).
-- Không có kịch bản từng phase, lời nhắc cho giảng viên, thứ tự cắt khi quá giờ. Phần giảng nằm trong speaker notes của slide outline. Bản cũ có kịch bản nằm ở `materials/_archive/`.
-- Slide outline vẫn dùng giọng "mình" trong speaker notes như quy ước ở trên.
+- Nói với học viên bằng "bạn". Câu ngắn, ví dụ Delivery App trước, khái niệm sau. Không dùng "mình" trong file lesson.
+- Chỉ giữ phần lý thuyết, hình ảnh và ví dụ. Bỏ Abstract, Materials Needed, Pre-Class Preparation, Session design, Assessment, Connection to the series và mọi lời nhắc cho giảng viên.
+- Bài tập về nhà nằm ở `*-practice.md`; câu hỏi ôn tập, tài liệu tham khảo thêm nằm ngoài file lesson.
+- Tách rõ phát hiện (từ nguồn) và suy luận (của chương trình); ghi tên nguồn ngay trong câu, không đánh số [n].
+- Giữ mục "Giới hạn của bằng chứng" ngắn ở chỗ có số liệu từ nguồn.
+- Hình ảnh và sơ đồ dùng link tương đối tới `assets/`, đã ẩn tên mentee và công ty.
+- Sửa lesson thì sửa slide outline cho khớp. Slide outline vẫn dùng giọng "mình" trong speaker notes.
 
 ## Bỏ khỏi văn bản chính thức
 

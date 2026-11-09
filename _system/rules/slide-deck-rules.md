@@ -51,6 +51,8 @@ Use the **alias names** from `tokens.css`, not raw hex values:
 
 ## 4. Layout catalogue — use these classes exactly
 
+> **Outline tags are fixed:** `COVER`, `AGENDA`, `SECTION DIVIDER`, `STATEMENT`, `NUMBERED`, `COMPARE`, `PROCESS`, `QUOTE`, `MILESTONE`, `PRACTICE`, `END`, `DIAGRAM`, `FORMULA`, `IMAGE`, `Q&A`. Never write `DESIGN METHOD`, `ACTIVITY`, `COMPARISON` or `SECTION`. The `notes-audit` skill checks this list.
+>
 > **Naming is fixed below — outlines have drifted from these before.** Use `SECTION DIVIDER`, not `SECTION`. Use `COMPARE`, not `COMPARISON`. Use `MILESTONE` for any activity or timed-break slide — there is no separate `ACTIVITY` layout, on screen or in an outline.
 
 ### 01 · Cover — `.cover`
@@ -239,7 +241,17 @@ These use the same token vocabulary and type scale as the base layouts.
 - Placed right after COVER, before the ice breaker. Kicker `Agenda`, Title `Nội dung\n*buổi học*`
 - Body: one large numbered line per part (`01 · <part name>`), number in purple italic, name in ink; English part names
 - **Each Agenda line is one SECTION DIVIDER, same name, same order.** Q&A and Practice are not parts, so they are not listed. Rename, add or drop a part in both places together
-- Visual hint starts `TYPOGRAPHIC`
+- Outline tag `AGENDA`; Visual hint starts `TYPOGRAPHIC`
+- Agenda lines use exactly the SECTION DIVIDER titles, in the same language and order (the `notes-audit` skill compares them)
+
+### 18 · Definition slide ("X là gì?") — `NUMBERED`, fixed 2026-11-04
+- Outline tag `NUMBERED · What is X`. Kicker `Định nghĩa`. Title `X\n*là gì?*` (ink line, then purple italic `là gì?`). Never a `DESIGN METHOD` layout and never a `Where AI helps` row on the slide
+- Body: three columns **What / Why / When**, each with two short lines, so six On-slide rows in this order: `What`, an extra row (`Gồm`, `Nằm ở` or `Không phải`), `Why`, an extra row (`Nếu thiếu` or `Còn giúp`), `When`, an extra row (`Không cần khi` or `Tìm`)
+- Row text is lowercase after the colon, one sentence, no full stop
+- A small outline icon sits top-right; the middle of the slide stays empty
+- What AI helps with goes in the speaker notes as `AI giúp được ở đâu: ...`
+- Visual hint: `TYPOGRAPHIC. Numbered, sáu hàng ngắn với nhãn What, ..., When, ...; <icon> nhỏ góc phải.`
+- Example: `NUMBERED · What is an insight hub` in Lesson 3 and the Lesson 4 outline (`What is a user flow`)
 
 ### 17 · Q&A — `.qa` (identical in every lesson)
 - Split layout: left panel solid yellow with `Q&A` at display size; right panel white with kicker `Bạn muốn hỏi về` and three stacked cards, ink 2px border, outline icon + one line each
