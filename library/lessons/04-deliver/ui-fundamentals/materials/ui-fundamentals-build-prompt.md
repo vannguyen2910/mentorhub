@@ -17,7 +17,7 @@ Paste the block below into Claude Design with the two source files attached or i
 ---
 
 ```
-Build a 44-slide teaching deck from the attached slide outline.
+Build a 45-slide teaching deck from the attached slide outline.
 
 CONTEXT
 This is a 90-minute lesson for junior product designers about judging UI decisions
@@ -37,15 +37,19 @@ BUILD IN THREE PHASES. STOP AFTER EACH AND SHOW ME.
 PHASE 1 - Design system file
 Set up the token vocabulary from tokens.css, then build the schematic component
 kit defined in the outline's "Visual language" section as reusable components:
-  - text bar (body): grey bar, --ink-ghost, ~8px tall, 2px radius, variable length
-  - heading bar: taller, --ink-muted, shorter length
-  - primary button: filled rounded rect, --sienna
-  - secondary button: outlined rounded rect, --ink-muted hairline
+  - text line (body): short horizontal stroke, --ink-ghost, 2px, round caps, variable length
+  - heading line: 4px stroke, --ink-muted, shorter length
+  - primary button: the one filled element, --ink fill, rounded rect
+  - secondary button: outlined rounded rect, 2px --ink-muted
   - input field: outlined rounded rect, taller than a button, empty
-  - radio / checkbox: circle, filled --sienna when selected
-  - image or map block: flat rect, --paper-deeper fill, no icon inside
-  - specimen frame: 1.5px --ink hairline, square corners, generous padding
-  - annotation set: --sienna arrows, measurement brackets, mono labels
+  - radio / checkbox: circle outline, small --ink dot when selected
+  - image or map block: outlined rect, no fill, no icon inside
+  - specimen frame: 2px --ink hairline, --radius-lg corners (same as DS cards), generous padding
+  - annotation set: --sienna arrows, measurement brackets, mono labels (at least 18px)
+LINE-ART RULE (Design System): schematic specimens use 2px strokes, no fill, no
+gradient. The only fill is --ink for emphasis, and the only colour is the single
+--sienna accent for annotation. Colour is allowed elsewhere only in REAL screens and
+on the role chips of the "Roles, not palettes" slide.
 Also build the five-plane "Decision Stack" diagram as a component, since it
 appears on slide 7 and returns as a small locator on all five layer dividers.
 Show me the kit before building anything else.
@@ -53,7 +57,7 @@ Show me the kit before building anything else.
 PHASE 2 - Slide templates
 Build one template per slide type using the layout classes in RULES.md:
   COVER            -> .cover
-  SECTION DIVIDER  -> .section-divider (--paper-deeper background, never dark)
+  SECTION DIVIDER  -> .section-main (Design System Section Main: yellow full-bleed, corner number, centred title; the five-plane locator sits top right)
   STATEMENT        -> .statement
   COMPARE          -> .compare (two matched specimen frames, equal size)
   DIAGRAM          -> .statement header + full-width specimen canvas below
@@ -64,7 +68,7 @@ Build one template per slide type using the layout classes in RULES.md:
   END              -> .end (--paper-deeper background, never dark or sienna)
 Show me the templates before building pages.
 
-PHASE 3 - The 44 pages
+PHASE 3 - The 45 pages
 Build every slide from the outline. For each one, read its Visual hint line and
 build what it describes.
 
@@ -86,8 +90,8 @@ I can drop the screens in without relayout.
 SPECIMEN RULES, apply to every slide
 1. Anything inside a hairline frame is a UI being examined. Anything outside it
    is the deck talking. Never let slide chrome bleed into a specimen.
-2. One accent per slide. --sienna marks the single element under discussion and
-   nothing else. If two things are purple, the slide is making two arguments.
+2. One accent per slide. --sienna annotates the single element under discussion and
+   nothing else. Emphasis inside a specimen is an --ink fill. If two things are purple, the slide is making two arguments.
 3. NO red X, NO green tick, NO "good" and "bad" labels, ever. Mark what is under
    discussion and let the student judge. The slide must never grade the screen.
 4. COMPARE slides change exactly ONE variable. Same content, same layout, same
@@ -107,7 +111,7 @@ HARD RULES from RULES.md
 - Never use --purple or --yellow directly, use the --sienna and --ochre aliases.
 - Fonts: --font-display (Syne) for headings, --font-body (Inter) for body,
   --font-mono (JetBrains Mono) for kickers, numbers and measurement labels.
-- Section dividers use --paper-deeper, never a dark ink background.
+- Section dividers use the Design System Section Main layout (yellow full-bleed), never a dark ink background.
 - The end slide uses --paper-deeper, never dark or sienna.
 - No visible slide numbers or session tags.
 - 1920x1080 per slide.
@@ -135,10 +139,10 @@ Start with Phase 1.
 
 **The assets you still owe the deck:**
 1. Stimulus set, 6 to 8 screens of one product, mixed AI and real, genuinely hard to choose between
-2. Tracking screen, original broken state
-3. Tracking screen, five corrected states, one per layer
-4. Tracking screen, blurred
-5. Tracking screen, desaturated (two versions: one where hierarchy survives, one where it collapses)
-6. Two real text samples for the contrast slide, deliberately similar, one passing and one failing
+2. Two real text samples for the contrast slide, deliberately similar, one passing and one failing
+3. Cover photo (a real photograph)
+4. @2x exports of five tracking screens (original, type, blur and desaturate-collapses already have them)
 
-Items 2 to 5 are one Figma file with variants, not eight builds.
+Done (2026-11-18): the tracking screen in nine versions, in `assets/tracking-screen/` (see `assets/SOURCES.md`).
+
+**Build with the teaching-slide-deck skill and the Design System.** Start from `templates/slide-deck/SlideDeck.dc.html`, do not add layouts, fonts or text sizes, declare the deck language, and run the three Vietnamese editing steps (translationese, style guide, grammar) on any Vietnamese text before delivery.

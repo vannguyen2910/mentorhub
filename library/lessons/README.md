@@ -52,7 +52,7 @@ The lessons of the **AI Design Workflow** program (mid/senior designers, 6 weeks
 | `02-define/synthesis-problem-definition-in-ux/slides/synthesis-problem-definition-in-ux.html` | Synthesis & Problem Definition | UX Class | — | ✅ Ready |
 | `02-define/problem-definition-strategy/materials/problem-definition-strategy-lesson.md` | Problem Definition & Strategy | Private Training | Senior / Lead | ✅ Ready |
 | `03-develop/information-architecture/slides/information-architecture.html` | Information Architecture | UX Mentoring | — | ✅ Ready |
-| `03-develop/ui-fundamentals/materials/ui-fundamentals-lesson.md` | UI Fundamentals (Judging design decisions you didn't make) | Standalone | Junior | 🚧 Draft |
+| `04-deliver/ui-fundamentals/materials/ui-fundamentals-lesson.md` | UI Fundamentals (Judging design decisions you didn't make), follows Information Architecture, precedes UI Foundations: Building in Figma | Private Training | Junior | 🚧 Draft |
 | `03-develop/design-system/materials/design-system-lesson.md` | Design System (Atomic Design) | UX Class | Intermediate | 🚧 Draft |
 | `03-develop/ai-prototype-development/materials/ai-prototype-development-lesson.md` | AI Prototype Development | UX Class | Intermediate | 🚧 Draft |
 | `03-develop/develop-solutions-ideate/materials/develop-solutions-ideate-lesson.md` | Develop Solutions & Ideate | UX Class / Private | — | ✅ Ready |
