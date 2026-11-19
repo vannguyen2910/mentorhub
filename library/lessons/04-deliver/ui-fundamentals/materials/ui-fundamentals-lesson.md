@@ -8,7 +8,7 @@ level: junior
 duration: "90 min"
 date: 2026-09-09
 draft: true
-slides: ""
+slides: "https://claude.ai/artifact/Lx2WEK3DKv3M8AVdkGxEx7"
 previous-session: "Information Architecture Basics. Output: sitemap and process map, no screens yet."
 next-session: "UI Foundations: Building in Figma. Builds the chosen concept with variables, auto layout and components."
 programs: [ui-ux-fundamentals:06]
