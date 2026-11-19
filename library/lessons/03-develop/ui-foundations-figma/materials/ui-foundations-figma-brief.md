@@ -7,11 +7,11 @@ duration: "90 min"
 ---
 
 ## Purpose
-Sau buổi này, học viên dựng được một component set chạy ở ít nhất hai kích thước màn hình, từ chính màn hình của mình, bằng auto layout và variables, trong một file đã được tổ chức rõ ràng.
+Sau buổi này, học viên dựng được một component set chạy ở ít nhất hai kích thước màn hình, từ concept đã chọn ở buổi UI Fundamentals, bằng auto layout và variables, trong một file đã được tổ chức rõ ràng.
 
 ## Structure
-1. Mở đầu, 10 phút: xem file học viên đã dọn theo guide gửi trước buổi (pages, tên layer, cấu trúc) và chốt màn hình sẽ làm việc.
-2. Nhiệm vụ 1, Variables, 22 phút: học viên chọn thang spacing 8pt, type scale và bộ màu nhỏ từ màn hình của mình, rồi tạo collection, đặt tên theo đường dẫn, dùng alias giữa primitive và semantic.
+1. Mở đầu, 10 phút: xem file học viên đã dọn theo guide gửi trước buổi (pages, tên layer, cấu trúc) và chốt concept sẽ dựng (concept đã chọn ở buổi UI Fundamentals).
+2. Nhiệm vụ 1, Variables, 22 phút: học viên lấy thang spacing, type scale và role màu từ token set của buổi UI Fundamentals, rồi tạo collection, đặt tên theo đường dẫn, dùng alias giữa primitive và semantic.
 3. Nhiệm vụ 2, Auto layout, 18 phút: dựng lại một màn hình bằng auto layout, dùng Hug, Fill, Fixed, min và max, gắn padding và gap vào variables.
 4. Nhiệm vụ 3, Component và variants, 20 phút: biến hai đến ba phần tử lặp lại (ví dụ nút, thẻ, thanh điều hướng) thành component, thêm variant property và component property.
 5. Nhiệm vụ 4, Breakpoints, 14 phút: điều chỉnh màn hình và component cho một breakpoint thứ hai, kiểm tra component co giãn đúng.
@@ -24,17 +24,18 @@ Cách dạy: học viên làm ngay từ đầu trên file của mình, không c�
 ## Learning objectives
 1. Kiểm tra được file của mình theo guide: pages, tên layer và cấu trúc đủ rõ để người khác tìm đường (kiểm ở phần mở đầu, việc dọn file làm trước buổi).
 2. Dựng được layout linh hoạt bằng auto layout, với spacing, màu và cỡ chữ lấy từ variables.
-3. Tạo được component và variants từ màn hình của mình, dùng đúng loại property (variant, boolean, text, instance swap).
+3. Tạo được component và variants từ concept của mình, dùng đúng loại property (variant, boolean, text, instance swap).
 4. Điều chỉnh được layout và component cho ít nhất hai kích thước màn hình.
 
 Success check: file có pages, tên layer và cấu trúc rõ; một component set chạy được ở ít nhất hai kích thước màn hình.
 
 ## Key decisions
-- Ví dụ chạy: sitemap và màn hình của chính học viên, không dùng case mẫu.
+- Thứ tự: học sau UI Fundamentals (cập nhật 2026-11-15). Màn hình để dựng là concept học viên đã chọn ở UI Fundamentals, kèm decision sheet và token set của buổi đó. Học viên chưa có màn hình sau bài Information Architecture, nên concept này là màn hình đầu tiên của họ.
+- Ví dụ chạy: concept đã chọn ở UI Fundamentals, không dùng case mẫu.
 - AI: không có trong buổi này (theo coaching plan, đây là buổi thuần kỹ thuật).
 - Cắt: nhiệm vụ dọn file không làm trong buổi, chuyển thành guide gửi trước và 10 phút kiểm ở đầu buổi. Objective "tổ chức file" vẫn được kiểm bằng success check.
 - Nền tảng (grid, 8pt, typography, color) giữ ngắn, chỉ đủ để dựng variables, nằm trong Nhiệm vụ 1. Học viên chọn giá trị từ file của mình rồi mới đặt tên.
-- Hoãn sang buổi UI Fundamentals: phán đoán visual (5 layer) và lý do chọn từng giá trị.
+- Đã dạy ở buổi UI Fundamentals (học trước buổi này): phán đoán visual (5 layer) và lý do chọn từng giá trị. Nhiệm vụ 1 bắt đầu từ token set học viên đã rút ra ở buổi đó, nên không dạy lại thang 8pt và type scale, chỉ chuyển giá trị thành variables.
 - Hoãn sang buổi Design System: quy tắc đặt tên đầy đủ theo atomic (`a/m/o`), tài liệu hoá hệ thống, nhiều hơn một vài component.
 - Lesson viết generic, không nhắc tên học viên hay chi tiết nhận dạng.
 - Nguồn gốc ý tưởng: coaching plan của một học viên private, ghi `source: adapted-from-private-session` khi viết front matter của lesson.

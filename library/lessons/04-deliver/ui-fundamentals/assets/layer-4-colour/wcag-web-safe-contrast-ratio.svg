@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+""" To recover the Python script to generate this SVG, delete the line above -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="-70 -64 2142 714">
+ <title>WCAG web safe contrast ratio</title>
+ <desc>Contrast ratios of web safe colours vs black (top row) and white (bottom) or vice versa, with contours at 3 (red), 4.5 (green) and 7 (blue) by CMG Lee.</desc>
+ <style type="text/css">
+.main { font-family:Helvetica,Arial,sans-serif; font-weight:bold; font-size:36px; letter-spacing:-4px; text-anchor:middle; fill:#000000; stroke:none; stroke-linejoin:round; }
+text  { cursor:default; }
+.hash { font-size:24px; }
+.l2_0 { fill:#000000; stroke:#ffffff; }
+.l2_1 { fill:#ffffff; stroke:#000000; }
+.thr0 { fill:#ff6666; stroke:#990000; stroke-width:0.05; }
+.thr1 { fill:#006633; stroke:#003300; stroke-width:0.05; }
+.thr2 { fill:#6666ff; stroke:#0000cc; stroke-width:0.05; }
+ </style>
+ <defs>
+<!-- BEGIN_DYNAMIC_DEFS -->
+
+<!--   END_DYNAMIC_DEFS -->
+  <rect id="s" x="-22" y="-22" width="44" height="44" rx="9" ry="9" stroke="none"/>
+  <radialGradient id="grad_threshold0">
+   <stop offset="10%" stop-color="#ff0000" stop-opacity="1"/>
+   <stop offset="99%" stop-color="#ff0000" stop-opacity="0"/>
+  </radialGradient>
+  <g id="common" class="l2_0">
+   <text transform="translate(  0,-42)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>--0</tspan></text>
+   <text transform="translate( 51,-42)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>--3</tspan></text>
+   <text transform="translate(102,-42)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>--6</tspan></text>
+   <text transform="translate(153,-42)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>--9</tspan></text>
+   <text transform="translate(204,-42)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>--c</tspan></text>
+   <text transform="translate(255,-42)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>--f</tspan></text>
+   <text transform="translate(-48,  0)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>0--</tspan></text>
+   <text transform="translate(-48, 51)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>3--</tspan></text>
+   <text transform="translate(-48,102)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>6--</tspan></text>
+   <text transform="translate(-48,153)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>9--</tspan></text>
+   <text transform="translate(-48,204)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>c--</tspan></text>
+   <text transform="translate(-48,255)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>f--</tspan></text>
+  </g>
+ </defs>
+ <circle cx="0" cy="0" r="99999" fill="#ffffff"/>
+ <g class="main">
+<!-- BEGIN_DYNAMIC_MAIN -->
+  <g transform="translate(0,0)">
+   <g class="l2_0" transform="translate(0,0)">
+    <g transform="translate(0,0)">
+     <text class="l2_0" transform="translate(-48,-42)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>-0-</tspan></text>
+     <use xlink:href="#common"/>
+    <path class="thr0" transform="scale(51) translate(-0.5,-0.5)" d="M0,5v-1h4v-1h1v-1h1v2h-1v1z"/>
+    <path class="thr1" transform="scale(51) translate(-0.5,-0.5)" d="M0,6v-1h5v-1h1v2z"/>
+     <g transform="translate(0,0)"><use xlink:href="#s" fill="#000000"/><text x="0" y="0.7ex">1.0</text></g>
+     <g transform="translate(51,0)"><use xlink:href="#s" fill="#000033"/><text x="0" y="0.7ex">1.0</text></g>
+     <g transform="translate(102,0)"><use xlink:href="#s" fill="#000066"/><text x="0" y="0.7ex">1.2</text></g>
+     <g transform="translate(153,0)"><use xlink:href="#s" fill="#000099"/><text x="0" y="0.7ex">1.5</text></g>
+     <g transform="translate(204,0)"><use xlink:href="#s" fill="#0000cc"/><text x="0" y="0.7ex">1.9</text></g>
+     <g transform="translate(255,0)"><use xlink:href="#s" fill="#0000ff"/><text x="0" y="0.7ex">2.4</text></g>
+     <g transform="translate(0,51)"><use xlink:href="#s" fill="#330000"/><text x="0" y="0.7ex">1.1</text></g>
+     <g transform="translate(51,51)"><use xlink:href="#s" fill="#330033"/><text x="0" y="0.7ex">1.2</text></g>
+     <g transform="translate(102,51)"><use xlink:href="#s" fill="#330066"/><text x="0" y="0.7ex">1.3</text></g>
+     <g transform="translate(153,51)"><use xlink:href="#s" fill="#330099"/><text x="0" y="0.7ex">1.6</text></g>
+     <g transform="translate(204,51)"><use xlink:href="#s" fill="#3300cc"/><text x="0" y="0.7ex">2.0</text></g>
+     <g transform="translate(255,51)"><use xlink:href="#s" fill="#3300ff"/><text x="0" y="0.7ex">2.6</text></g>
+     <g transform="translate(0,102)"><use xlink:href="#s" fill="#660000"/><text x="0" y="0.7ex">1.6</text></g>
+     <g transform="translate(51,102)"><use xlink:href="#s" fill="#660033"/><text x="0" y="0.7ex">1.6</text></g>
+     <g transform="translate(102,102)"><use xlink:href="#s" fill="#660066"/><text x="0" y="0.7ex">1.8</text></g>
+     <g transform="translate(153,102)"><use xlink:href="#s" fill="#660099"/><text x="0" y="0.7ex">2.0</text></g>
+     <g transform="translate(204,102)"><use xlink:href="#s" fill="#6600cc"/><text x="0" y="0.7ex">2.4</text></g>
+     <g transform="translate(255,102)"><use xlink:href="#s" fill="#6600ff"/><text x="0" y="0.7ex">3.0</text></g>
+     <g transform="translate(0,153)"><use xlink:href="#s" fill="#990000"/><text x="0" y="0.7ex">2.4</text></g>
+     <g transform="translate(51,153)"><use xlink:href="#s" fill="#990033"/><text x="0" y="0.7ex">2.4</text></g>
+     <g transform="translate(102,153)"><use xlink:href="#s" fill="#990066"/><text x="0" y="0.7ex">2.5</text></g>
+     <g transform="translate(153,153)"><use xlink:href="#s" fill="#990099"/><text x="0" y="0.7ex">2.8</text></g>
+     <g transform="translate(204,153)"><use xlink:href="#s" fill="#9900cc"/><text x="0" y="0.7ex">3.2</text></g>
+     <g transform="translate(255,153)"><use xlink:href="#s" fill="#9900ff"/><text x="0" y="0.7ex">3.8</text></g>
+     <g transform="translate(0,204)"><use xlink:href="#s" fill="#cc0000"/><text x="0" y="0.7ex">3.6</text></g>
+     <g transform="translate(51,204)"><use xlink:href="#s" fill="#cc0033"/><text x="0" y="0.7ex">3.6</text></g>
+     <g transform="translate(102,204)"><use xlink:href="#s" fill="#cc0066"/><text x="0" y="0.7ex">3.8</text></g>
+     <g transform="translate(153,204)"><use xlink:href="#s" fill="#cc0099"/><text x="0" y="0.7ex">4.0</text></g>
+     <g transform="translate(204,204)"><use xlink:href="#s" fill="#cc00cc"/><text x="0" y="0.7ex">4.4</text></g>
+     <g transform="translate(255,204)"><use xlink:href="#s" fill="#cc00ff"/><text x="0" y="0.7ex">5.0</text></g>
+     <g transform="translate(0,255)"><use xlink:href="#s" fill="#ff0000"/><text x="0" y="0.7ex">5.3</text></g>
+     <g transform="translate(51,255)"><use xlink:href="#s" fill="#ff0033"/><text x="0" y="0.7ex">5.3</text></g>
+     <g transform="translate(102,255)"><use xlink:href="#s" fill="#ff0066"/><text x="0" y="0.7ex">5.4</text></g>
+     <g transform="translate(153,255)"><use xlink:href="#s" fill="#ff0099"/><text x="0" y="0.7ex">5.7</text></g>
+     <g transform="translate(204,255)"><use xlink:href="#s" fill="#ff00cc"/><text x="0" y="0.7ex">6.1</text></g>
+     <g transform="translate(255,255)"><use xlink:href="#s" fill="#ff00ff"/><text x="0" y="0.7ex">6.7</text></g>
+    </g>
+    <g transform="translate(357,0)">
+     <text class="l2_0" transform="translate(-48,-42)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>-3-</tspan></text>
+     <use xlink:href="#common"/>
+    <path class="thr0" transform="scale(51) translate(-0.5,-0.5)" d="M0,5v-1h2v-1h3v-2h1v3h-3v1z"/>
+    <path class="thr1" transform="scale(51) translate(-0.5,-0.5)" d="M5,6h-5v-1h3v-1h3v1h-1v1z"/>
+    <path class="thr2" transform="scale(51) translate(-0.5,-0.5)" d="M5,6v-1h1v1z"/>
+     <g transform="translate(0,0)"><use xlink:href="#s" fill="#003300"/><text x="0" y="0.7ex">1.5</text></g>
+     <g transform="translate(51,0)"><use xlink:href="#s" fill="#003333"/><text x="0" y="0.7ex">1.5</text></g>
+     <g transform="translate(102,0)"><use xlink:href="#s" fill="#003366"/><text x="0" y="0.7ex">1.7</text></g>
+     <g transform="translate(153,0)"><use xlink:href="#s" fill="#003399"/><text x="0" y="0.7ex">1.9</text></g>
+     <g transform="translate(204,0)"><use xlink:href="#s" fill="#0033cc"/><text x="0" y="0.7ex">2.3</text></g>
+     <g transform="translate(255,0)"><use xlink:href="#s" fill="#0033ff"/><text x="0" y="0.7ex">2.9</text></g>
+     <g transform="translate(0,51)"><use xlink:href="#s" fill="#333300"/><text x="0" y="0.7ex">1.6</text></g>
+     <g transform="translate(51,51)"><use xlink:href="#s" fill="#333333"/><text x="0" y="0.7ex">1.7</text></g>
+     <g transform="translate(102,51)"><use xlink:href="#s" fill="#333366"/><text x="0" y="0.7ex">1.8</text></g>
+     <g transform="translate(153,51)"><use xlink:href="#s" fill="#333399"/><text x="0" y="0.7ex">2.1</text></g>
+     <g transform="translate(204,51)"><use xlink:href="#s" fill="#3333cc"/><text x="0" y="0.7ex">2.5</text></g>
+     <g transform="translate(255,51)"><use xlink:href="#s" fill="#3333ff"/><text x="0" y="0.7ex">3.1</text></g>
+     <g transform="translate(0,102)"><use xlink:href="#s" fill="#663300"/><text x="0" y="0.7ex">2.0</text></g>
+     <g transform="translate(51,102)"><use xlink:href="#s" fill="#663333"/><text x="0" y="0.7ex">2.1</text></g>
+     <g transform="translate(102,102)"><use xlink:href="#s" fill="#663366"/><text x="0" y="0.7ex">2.2</text></g>
+     <g transform="translate(153,102)"><use xlink:href="#s" fill="#663399"/><text x="0" y="0.7ex">2.5</text></g>
+     <g transform="translate(204,102)"><use xlink:href="#s" fill="#6633cc"/><text x="0" y="0.7ex">2.9</text></g>
+     <g transform="translate(255,102)"><use xlink:href="#s" fill="#6633ff"/><text x="0" y="0.7ex">3.5</text></g>
+     <g transform="translate(0,153)"><use xlink:href="#s" fill="#993300"/><text x="0" y="0.7ex">2.8</text></g>
+     <g transform="translate(51,153)"><use xlink:href="#s" fill="#993333"/><text x="0" y="0.7ex">2.9</text></g>
+     <g transform="translate(102,153)"><use xlink:href="#s" fill="#993366"/><text x="0" y="0.7ex">3.0</text></g>
+     <g transform="translate(153,153)"><use xlink:href="#s" fill="#993399"/><text x="0" y="0.7ex">3.3</text></g>
+     <g transform="translate(204,153)"><use xlink:href="#s" fill="#9933cc"/><text x="0" y="0.7ex">3.7</text></g>
+     <g transform="translate(255,153)"><use xlink:href="#s" fill="#9933ff"/><text x="0" y="0.7ex">4.3</text></g>
+     <g transform="translate(0,204)"><use xlink:href="#s" fill="#cc3300"/><text x="0" y="0.7ex">4.0</text></g>
+     <g transform="translate(51,204)"><use xlink:href="#s" fill="#cc3333"/><text x="0" y="0.7ex">4.1</text></g>
+     <g transform="translate(102,204)"><use xlink:href="#s" fill="#cc3366"/><text x="0" y="0.7ex">4.2</text></g>
+     <g transform="translate(153,204)"><use xlink:href="#s" fill="#cc3399"/><text x="0" y="0.7ex">4.5</text></g>
+     <g transform="translate(204,204)"><use xlink:href="#s" fill="#cc33cc"/><text x="0" y="0.7ex">4.9</text></g>
+     <g transform="translate(255,204)"><use xlink:href="#s" fill="#cc33ff"/><text x="0" y="0.7ex">5.5</text></g>
+     <g transform="translate(0,255)"><use xlink:href="#s" fill="#ff3300"/><text x="0" y="0.7ex">5.7</text></g>
+     <g transform="translate(51,255)"><use xlink:href="#s" fill="#ff3333"/><text x="0" y="0.7ex">5.8</text></g>
+     <g transform="translate(102,255)"><use xlink:href="#s" fill="#ff3366"/><text x="0" y="0.7ex">5.9</text></g>
+     <g transform="translate(153,255)"><use xlink:href="#s" fill="#ff3399"/><text x="0" y="0.7ex">6.2</text></g>
+     <g transform="translate(204,255)"><use xlink:href="#s" fill="#ff33cc"/><text x="0" y="0.7ex">6.6</text></g>
+     <g transform="translate(255,255)"><use xlink:href="#s" fill="#ff33ff"/><text x="0" y="0.7ex">7.2</text></g>
+    </g>
+    <g transform="translate(714,0)">
+     <text class="l2_0" transform="translate(-48,-42)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>-6-</tspan></text>
+     <use xlink:href="#common"/>
+    <path class="thr0" transform="scale(51) translate(-0.5,-0.5)" d="M0,4v-3h2v-1h4v2h-1v1h-2v1z"/>
+    <path class="thr1" transform="scale(51) translate(-0.5,-0.5)" d="M0,5v-1h3v-1h2v-1h1v3z"/>
+    <path class="thr2" transform="scale(51) translate(-0.5,-0.5)" d="M0,6v-1h6v1z"/>
+     <g transform="translate(0,0)"><use xlink:href="#s" fill="#006600"/><text x="0" y="0.7ex">2.9</text></g>
+     <g transform="translate(51,0)"><use xlink:href="#s" fill="#006633"/><text x="0" y="0.7ex">2.9</text></g>
+     <g transform="translate(102,0)"><use xlink:href="#s" fill="#006666"/><text x="0" y="0.7ex">3.1</text></g>
+     <g transform="translate(153,0)"><use xlink:href="#s" fill="#006699"/><text x="0" y="0.7ex">3.4</text></g>
+     <g transform="translate(204,0)"><use xlink:href="#s" fill="#0066cc"/><text x="0" y="0.7ex">3.8</text></g>
+     <g transform="translate(255,0)"><use xlink:href="#s" fill="#0066ff"/><text x="0" y="0.7ex">4.3</text></g>
+     <g transform="translate(0,51)"><use xlink:href="#s" fill="#336600"/><text x="0" y="0.7ex">3.0</text></g>
+     <g transform="translate(51,51)"><use xlink:href="#s" fill="#336633"/><text x="0" y="0.7ex">3.1</text></g>
+     <g transform="translate(102,51)"><use xlink:href="#s" fill="#336666"/><text x="0" y="0.7ex">3.2</text></g>
+     <g transform="translate(153,51)"><use xlink:href="#s" fill="#336699"/><text x="0" y="0.7ex">3.5</text></g>
+     <g transform="translate(204,51)"><use xlink:href="#s" fill="#3366cc"/><text x="0" y="0.7ex">3.9</text></g>
+     <g transform="translate(255,51)"><use xlink:href="#s" fill="#3366ff"/><text x="0" y="0.7ex">4.5</text></g>
+     <g transform="translate(0,102)"><use xlink:href="#s" fill="#666600"/><text x="0" y="0.7ex">3.5</text></g>
+     <g transform="translate(51,102)"><use xlink:href="#s" fill="#666633"/><text x="0" y="0.7ex">3.5</text></g>
+     <g transform="translate(102,102)"><use xlink:href="#s" fill="#666666"/><text x="0" y="0.7ex">3.7</text></g>
+     <g transform="translate(153,102)"><use xlink:href="#s" fill="#666699"/><text x="0" y="0.7ex">3.9</text></g>
+     <g transform="translate(204,102)"><use xlink:href="#s" fill="#6666cc"/><text x="0" y="0.7ex">4.3</text></g>
+     <g transform="translate(255,102)"><use xlink:href="#s" fill="#6666ff"/><text x="0" y="0.7ex">4.9</text></g>
+     <g transform="translate(0,153)"><use xlink:href="#s" fill="#996600"/><text x="0" y="0.7ex">4.3</text></g>
+     <g transform="translate(51,153)"><use xlink:href="#s" fill="#996633"/><text x="0" y="0.7ex">4.3</text></g>
+     <g transform="translate(102,153)"><use xlink:href="#s" fill="#996666"/><text x="0" y="0.7ex">4.4</text></g>
+     <g transform="translate(153,153)"><use xlink:href="#s" fill="#996699"/><text x="0" y="0.7ex">4.7</text></g>
+     <g transform="translate(204,153)"><use xlink:href="#s" fill="#9966cc"/><text x="0" y="0.7ex">5.1</text></g>
+     <g transform="translate(255,153)"><use xlink:href="#s" fill="#9966ff"/><text x="0" y="0.7ex">5.7</text></g>
+     <g transform="translate(0,204)"><use xlink:href="#s" fill="#cc6600"/><text x="0" y="0.7ex">5.5</text></g>
+     <g transform="translate(51,204)"><use xlink:href="#s" fill="#cc6633"/><text x="0" y="0.7ex">5.5</text></g>
+     <g transform="translate(102,204)"><use xlink:href="#s" fill="#cc6666"/><text x="0" y="0.7ex">5.7</text></g>
+     <g transform="translate(153,204)"><use xlink:href="#s" fill="#cc6699"/><text x="0" y="0.7ex">5.9</text></g>
+     <g transform="translate(204,204)"><use xlink:href="#s" fill="#cc66cc"/><text x="0" y="0.7ex">6.3</text></g>
+     <g transform="translate(255,204)"><use xlink:href="#s" fill="#cc66ff"/><text x="0" y="0.7ex">6.9</text></g>
+     <g transform="translate(0,255)"><use xlink:href="#s" fill="#ff6600"/><text x="0" y="0.7ex">7.2</text></g>
+     <g transform="translate(51,255)"><use xlink:href="#s" fill="#ff6633"/><text x="0" y="0.7ex">7.2</text></g>
+     <g transform="translate(102,255)"><use xlink:href="#s" fill="#ff6666"/><text x="0" y="0.7ex">7.3</text></g>
+     <g transform="translate(153,255)"><use xlink:href="#s" fill="#ff6699"/><text x="0" y="0.7ex">7.6</text></g>
+     <g transform="translate(204,255)"><use xlink:href="#s" fill="#ff66cc"/><text x="0" y="0.7ex">8.0</text></g>
+     <g transform="translate(255,255)"><use xlink:href="#s" fill="#ff66ff"/><text x="0" y="0.7ex">8.6</text></g>
+    </g>
+    <g transform="translate(1071,0)">
+     <text class="l2_0" transform="translate(-48,-42)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>-9-</tspan></text>
+     <use xlink:href="#common"/>
+    <path class="thr1" transform="scale(51) translate(-0.5,-0.5)" d="M0,4v-4h5v3h-3v1z"/>
+    <path class="thr2" transform="scale(51) translate(-0.5,-0.5)" d="M0,6v-2h2v-1h3v-3h1v6z"/>
+     <g transform="translate(0,0)"><use xlink:href="#s" fill="#009900"/><text x="0" y="0.7ex">5.6</text></g>
+     <g transform="translate(51,0)"><use xlink:href="#s" fill="#009933"/><text x="0" y="0.7ex">5.6</text></g>
+     <g transform="translate(102,0)"><use xlink:href="#s" fill="#009966"/><text x="0" y="0.7ex">5.7</text></g>
+     <g transform="translate(153,0)"><use xlink:href="#s" fill="#009999"/><text x="0" y="0.7ex">6.0</text></g>
+     <g transform="translate(204,0)"><use xlink:href="#s" fill="#0099cc"/><text x="0" y="0.7ex">6.4</text></g>
+     <g transform="translate(255,0)"><use xlink:href="#s" fill="#0099ff"/><text x="0" y="0.7ex">7.0</text></g>
+     <g transform="translate(0,51)"><use xlink:href="#s" fill="#339900"/><text x="0" y="0.7ex">5.7</text></g>
+     <g transform="translate(51,51)"><use xlink:href="#s" fill="#339933"/><text x="0" y="0.7ex">5.7</text></g>
+     <g transform="translate(102,51)"><use xlink:href="#s" fill="#339966"/><text x="0" y="0.7ex">5.9</text></g>
+     <g transform="translate(153,51)"><use xlink:href="#s" fill="#339999"/><text x="0" y="0.7ex">6.2</text></g>
+     <g transform="translate(204,51)"><use xlink:href="#s" fill="#3399cc"/><text x="0" y="0.7ex">6.6</text></g>
+     <g transform="translate(255,51)"><use xlink:href="#s" fill="#3399ff"/><text x="0" y="0.7ex">7.1</text></g>
+     <g transform="translate(0,102)"><use xlink:href="#s" fill="#669900"/><text x="0" y="0.7ex">6.1</text></g>
+     <g transform="translate(51,102)"><use xlink:href="#s" fill="#669933"/><text x="0" y="0.7ex">6.2</text></g>
+     <g transform="translate(102,102)"><use xlink:href="#s" fill="#669966"/><text x="0" y="0.7ex">6.3</text></g>
+     <g transform="translate(153,102)"><use xlink:href="#s" fill="#669999"/><text x="0" y="0.7ex">6.6</text></g>
+     <g transform="translate(204,102)"><use xlink:href="#s" fill="#6699cc"/><text x="0" y="0.7ex">7.0</text></g>
+     <g transform="translate(255,102)"><use xlink:href="#s" fill="#6699ff"/><text x="0" y="0.7ex">7.6</text></g>
+     <g transform="translate(0,153)"><use xlink:href="#s" fill="#999900"/><text x="0" y="0.7ex">6.9</text></g>
+     <g transform="translate(51,153)"><use xlink:href="#s" fill="#999933"/><text x="0" y="0.7ex">7.0</text></g>
+     <g transform="translate(102,153)"><use xlink:href="#s" fill="#999966"/><text x="0" y="0.7ex">7.1</text></g>
+     <g transform="translate(153,153)"><use xlink:href="#s" fill="#999999"/><text x="0" y="0.7ex">7.4</text></g>
+     <g transform="translate(204,153)"><use xlink:href="#s" fill="#9999cc"/><text x="0" y="0.7ex">7.8</text></g>
+     <g transform="translate(255,153)"><use xlink:href="#s" fill="#9999ff"/><text x="0" y="0.7ex">8.4</text></g>
+     <g transform="translate(0,204)"><use xlink:href="#s" fill="#cc9900"/><text x="0" y="0.7ex">8.1</text></g>
+     <g transform="translate(51,204)"><use xlink:href="#s" fill="#cc9933"/><text x="0" y="0.7ex">8.2</text></g>
+     <g transform="translate(102,204)"><use xlink:href="#s" fill="#cc9966"/><text x="0" y="0.7ex">8.3</text></g>
+     <g transform="translate(153,204)"><use xlink:href="#s" fill="#cc9999"/><text x="0" y="0.7ex">8.6</text></g>
+     <g transform="translate(204,204)"><use xlink:href="#s" fill="#cc99cc"/><text x="0" y="0.7ex">9.0</text></g>
+     <g transform="translate(255,204)"><use xlink:href="#s" fill="#cc99ff"/><text x="0" y="0.7ex">9.6</text></g>
+     <g transform="translate(0,255)"><use xlink:href="#s" fill="#ff9900"/><text x="0" y="0.7ex">9.8</text></g>
+     <g transform="translate(51,255)"><use xlink:href="#s" fill="#ff9933"/><text x="0" y="0.7ex">9.9</text></g>
+     <g transform="translate(102,255)"><use xlink:href="#s" fill="#ff9966"/><text x="0" y="0.7ex">10</text></g>
+     <g transform="translate(153,255)"><use xlink:href="#s" fill="#ff9999"/><text x="0" y="0.7ex">10</text></g>
+     <g transform="translate(204,255)"><use xlink:href="#s" fill="#ff99cc"/><text x="0" y="0.7ex">11</text></g>
+     <g transform="translate(255,255)"><use xlink:href="#s" fill="#ff99ff"/><text x="0" y="0.7ex">11</text></g>
+    </g>
+    <g transform="translate(1428,0)">
+     <text class="l2_0" transform="translate(-48,-42)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>-c-</tspan></text>
+     <use xlink:href="#common"/>
+    <path class="thr2" transform="scale(51) translate(-0.5,-0.5)" d="M0,6v-6h6v6z"/>
+     <g transform="translate(0,0)"><use xlink:href="#s" fill="#00cc00"/><text x="0" y="0.7ex">9.6</text></g>
+     <g transform="translate(51,0)"><use xlink:href="#s" fill="#00cc33"/><text x="0" y="0.7ex">9.7</text></g>
+     <g transform="translate(102,0)"><use xlink:href="#s" fill="#00cc66"/><text x="0" y="0.7ex">9.8</text></g>
+     <g transform="translate(153,0)"><use xlink:href="#s" fill="#00cc99"/><text x="0" y="0.7ex">10</text></g>
+     <g transform="translate(204,0)"><use xlink:href="#s" fill="#00cccc"/><text x="0" y="0.7ex">11</text></g>
+     <g transform="translate(255,0)"><use xlink:href="#s" fill="#00ccff"/><text x="0" y="0.7ex">11</text></g>
+     <g transform="translate(0,51)"><use xlink:href="#s" fill="#33cc00"/><text x="0" y="0.7ex">9.8</text></g>
+     <g transform="translate(51,51)"><use xlink:href="#s" fill="#33cc33"/><text x="0" y="0.7ex">9.8</text></g>
+     <g transform="translate(102,51)"><use xlink:href="#s" fill="#33cc66"/><text x="0" y="0.7ex">10</text></g>
+     <g transform="translate(153,51)"><use xlink:href="#s" fill="#33cc99"/><text x="0" y="0.7ex">10</text></g>
+     <g transform="translate(204,51)"><use xlink:href="#s" fill="#33cccc"/><text x="0" y="0.7ex">11</text></g>
+     <g transform="translate(255,51)"><use xlink:href="#s" fill="#33ccff"/><text x="0" y="0.7ex">11</text></g>
+     <g transform="translate(0,102)"><use xlink:href="#s" fill="#66cc00"/><text x="0" y="0.7ex">10</text></g>
+     <g transform="translate(51,102)"><use xlink:href="#s" fill="#66cc33"/><text x="0" y="0.7ex">10</text></g>
+     <g transform="translate(102,102)"><use xlink:href="#s" fill="#66cc66"/><text x="0" y="0.7ex">10</text></g>
+     <g transform="translate(153,102)"><use xlink:href="#s" fill="#66cc99"/><text x="0" y="0.7ex">11</text></g>
+     <g transform="translate(204,102)"><use xlink:href="#s" fill="#66cccc"/><text x="0" y="0.7ex">11</text></g>
+     <g transform="translate(255,102)"><use xlink:href="#s" fill="#66ccff"/><text x="0" y="0.7ex">12</text></g>
+     <g transform="translate(0,153)"><use xlink:href="#s" fill="#99cc00"/><text x="0" y="0.7ex">11</text></g>
+     <g transform="translate(51,153)"><use xlink:href="#s" fill="#99cc33"/><text x="0" y="0.7ex">11</text></g>
+     <g transform="translate(102,153)"><use xlink:href="#s" fill="#99cc66"/><text x="0" y="0.7ex">11</text></g>
+     <g transform="translate(153,153)"><use xlink:href="#s" fill="#99cc99"/><text x="0" y="0.7ex">11</text></g>
+     <g transform="translate(204,153)"><use xlink:href="#s" fill="#99cccc"/><text x="0" y="0.7ex">12</text></g>
+     <g transform="translate(255,153)"><use xlink:href="#s" fill="#99ccff"/><text x="0" y="0.7ex">12</text></g>
+     <g transform="translate(0,204)"><use xlink:href="#s" fill="#cccc00"/><text x="0" y="0.7ex">12</text></g>
+     <g transform="translate(51,204)"><use xlink:href="#s" fill="#cccc33"/><text x="0" y="0.7ex">12</text></g>
+     <g transform="translate(102,204)"><use xlink:href="#s" fill="#cccc66"/><text x="0" y="0.7ex">12</text></g>
+     <g transform="translate(153,204)"><use xlink:href="#s" fill="#cccc99"/><text x="0" y="0.7ex">13</text></g>
+     <g transform="translate(204,204)"><use xlink:href="#s" fill="#cccccc"/><text x="0" y="0.7ex">13</text></g>
+     <g transform="translate(255,204)"><use xlink:href="#s" fill="#ccccff"/><text x="0" y="0.7ex">14</text></g>
+     <g transform="translate(0,255)"><use xlink:href="#s" fill="#ffcc00"/><text x="0" y="0.7ex">14</text></g>
+     <g transform="translate(51,255)"><use xlink:href="#s" fill="#ffcc33"/><text x="0" y="0.7ex">14</text></g>
+     <g transform="translate(102,255)"><use xlink:href="#s" fill="#ffcc66"/><text x="0" y="0.7ex">14</text></g>
+     <g transform="translate(153,255)"><use xlink:href="#s" fill="#ffcc99"/><text x="0" y="0.7ex">14</text></g>
+     <g transform="translate(204,255)"><use xlink:href="#s" fill="#ffcccc"/><text x="0" y="0.7ex">15</text></g>
+     <g transform="translate(255,255)"><use xlink:href="#s" fill="#ffccff"/><text x="0" y="0.7ex">15</text></g>
+    </g>
+    <g transform="translate(1785,0)">
+     <text class="l2_0" transform="translate(-48,-42)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>-f-</tspan></text>
+     <use xlink:href="#common"/>
+    <path class="thr2" transform="scale(51) translate(-0.5,-0.5)" d="M0,6v-6h6v6z"/>
+     <g transform="translate(0,0)"><use xlink:href="#s" fill="#00ff00"/><text x="0" y="0.7ex">15</text></g>
+     <g transform="translate(51,0)"><use xlink:href="#s" fill="#00ff33"/><text x="0" y="0.7ex">15</text></g>
+     <g transform="translate(102,0)"><use xlink:href="#s" fill="#00ff66"/><text x="0" y="0.7ex">15</text></g>
+     <g transform="translate(153,0)"><use xlink:href="#s" fill="#00ff99"/><text x="0" y="0.7ex">16</text></g>
+     <g transform="translate(204,0)"><use xlink:href="#s" fill="#00ffcc"/><text x="0" y="0.7ex">16</text></g>
+     <g transform="translate(255,0)"><use xlink:href="#s" fill="#00ffff"/><text x="0" y="0.7ex">17</text></g>
+     <g transform="translate(0,51)"><use xlink:href="#s" fill="#33ff00"/><text x="0" y="0.7ex">15</text></g>
+     <g transform="translate(51,51)"><use xlink:href="#s" fill="#33ff33"/><text x="0" y="0.7ex">15</text></g>
+     <g transform="translate(102,51)"><use xlink:href="#s" fill="#33ff66"/><text x="0" y="0.7ex">16</text></g>
+     <g transform="translate(153,51)"><use xlink:href="#s" fill="#33ff99"/><text x="0" y="0.7ex">16</text></g>
+     <g transform="translate(204,51)"><use xlink:href="#s" fill="#33ffcc"/><text x="0" y="0.7ex">16</text></g>
+     <g transform="translate(255,51)"><use xlink:href="#s" fill="#33ffff"/><text x="0" y="0.7ex">17</text></g>
+     <g transform="translate(0,102)"><use xlink:href="#s" fill="#66ff00"/><text x="0" y="0.7ex">16</text></g>
+     <g transform="translate(51,102)"><use xlink:href="#s" fill="#66ff33"/><text x="0" y="0.7ex">16</text></g>
+     <g transform="translate(102,102)"><use xlink:href="#s" fill="#66ff66"/><text x="0" y="0.7ex">16</text></g>
+     <g transform="translate(153,102)"><use xlink:href="#s" fill="#66ff99"/><text x="0" y="0.7ex">16</text></g>
+     <g transform="translate(204,102)"><use xlink:href="#s" fill="#66ffcc"/><text x="0" y="0.7ex">17</text></g>
+     <g transform="translate(255,102)"><use xlink:href="#s" fill="#66ffff"/><text x="0" y="0.7ex">17</text></g>
+     <g transform="translate(0,153)"><use xlink:href="#s" fill="#99ff00"/><text x="0" y="0.7ex">17</text></g>
+     <g transform="translate(51,153)"><use xlink:href="#s" fill="#99ff33"/><text x="0" y="0.7ex">17</text></g>
+     <g transform="translate(102,153)"><use xlink:href="#s" fill="#99ff66"/><text x="0" y="0.7ex">17</text></g>
+     <g transform="translate(153,153)"><use xlink:href="#s" fill="#99ff99"/><text x="0" y="0.7ex">17</text></g>
+     <g transform="translate(204,153)"><use xlink:href="#s" fill="#99ffcc"/><text x="0" y="0.7ex">18</text></g>
+     <g transform="translate(255,153)"><use xlink:href="#s" fill="#99ffff"/><text x="0" y="0.7ex">18</text></g>
+     <g transform="translate(0,204)"><use xlink:href="#s" fill="#ccff00"/><text x="0" y="0.7ex">18</text></g>
+     <g transform="translate(51,204)"><use xlink:href="#s" fill="#ccff33"/><text x="0" y="0.7ex">18</text></g>
+     <g transform="translate(102,204)"><use xlink:href="#s" fill="#ccff66"/><text x="0" y="0.7ex">18</text></g>
+     <g transform="translate(153,204)"><use xlink:href="#s" fill="#ccff99"/><text x="0" y="0.7ex">18</text></g>
+     <g transform="translate(204,204)"><use xlink:href="#s" fill="#ccffcc"/><text x="0" y="0.7ex">19</text></g>
+     <g transform="translate(255,204)"><use xlink:href="#s" fill="#ccffff"/><text x="0" y="0.7ex">19</text></g>
+     <g transform="translate(0,255)"><use xlink:href="#s" fill="#ffff00"/><text x="0" y="0.7ex">20</text></g>
+     <g transform="translate(51,255)"><use xlink:href="#s" fill="#ffff33"/><text x="0" y="0.7ex">20</text></g>
+     <g transform="translate(102,255)"><use xlink:href="#s" fill="#ffff66"/><text x="0" y="0.7ex">20</text></g>
+     <g transform="translate(153,255)"><use xlink:href="#s" fill="#ffff99"/><text x="0" y="0.7ex">20</text></g>
+     <g transform="translate(204,255)"><use xlink:href="#s" fill="#ffffcc"/><text x="0" y="0.7ex">20</text></g>
+     <g transform="translate(255,255)"><use xlink:href="#s" fill="#ffffff"/><text x="0" y="0.7ex">21</text></g>
+    </g>
+   </g>
+   <g class="l2_1" transform="translate(0,358)">
+    <g transform="translate(0,0)">
+     <text class="l2_0" transform="translate(-48,-42)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>-0-</tspan></text>
+     <use xlink:href="#common"/>
+    <path class="thr0" transform="scale(51) translate(-0.5,-0.5)" d="M0,5v1h6v-2h-1v1z"/>
+    <path class="thr1" transform="scale(51) translate(-0.5,-0.5)" d="M0,4v1h5v-1h1v-2h-1v1h-1v1z"/>
+    <path class="thr2" transform="scale(51) translate(-0.5,-0.5)" d="M0,0v4h4v-1h1v-1h1v-2z"/>
+     <g transform="translate(0,0)"><use xlink:href="#s" fill="#000000"/><text x="0" y="0.7ex">21</text></g>
+     <g transform="translate(51,0)"><use xlink:href="#s" fill="#000033"/><text x="0" y="0.7ex">20</text></g>
+     <g transform="translate(102,0)"><use xlink:href="#s" fill="#000066"/><text x="0" y="0.7ex">18</text></g>
+     <g transform="translate(153,0)"><use xlink:href="#s" fill="#000099"/><text x="0" y="0.7ex">14</text></g>
+     <g transform="translate(204,0)"><use xlink:href="#s" fill="#0000cc"/><text x="0" y="0.7ex">11</text></g>
+     <g transform="translate(255,0)"><use xlink:href="#s" fill="#0000ff"/><text x="0" y="0.7ex">8.6</text></g>
+     <g transform="translate(0,51)"><use xlink:href="#s" fill="#330000"/><text x="0" y="0.7ex">18</text></g>
+     <g transform="translate(51,51)"><use xlink:href="#s" fill="#330033"/><text x="0" y="0.7ex">18</text></g>
+     <g transform="translate(102,51)"><use xlink:href="#s" fill="#330066"/><text x="0" y="0.7ex">16</text></g>
+     <g transform="translate(153,51)"><use xlink:href="#s" fill="#330099"/><text x="0" y="0.7ex">13</text></g>
+     <g transform="translate(204,51)"><use xlink:href="#s" fill="#3300cc"/><text x="0" y="0.7ex">10</text></g>
+     <g transform="translate(255,51)"><use xlink:href="#s" fill="#3300ff"/><text x="0" y="0.7ex">8.1</text></g>
+     <g transform="translate(0,102)"><use xlink:href="#s" fill="#660000"/><text x="0" y="0.7ex">13</text></g>
+     <g transform="translate(51,102)"><use xlink:href="#s" fill="#660033"/><text x="0" y="0.7ex">13</text></g>
+     <g transform="translate(102,102)"><use xlink:href="#s" fill="#660066"/><text x="0" y="0.7ex">12</text></g>
+     <g transform="translate(153,102)"><use xlink:href="#s" fill="#660099"/><text x="0" y="0.7ex">10</text></g>
+     <g transform="translate(204,102)"><use xlink:href="#s" fill="#6600cc"/><text x="0" y="0.7ex">8.6</text></g>
+     <g transform="translate(255,102)"><use xlink:href="#s" fill="#6600ff"/><text x="0" y="0.7ex">7.0</text></g>
+     <g transform="translate(0,153)"><use xlink:href="#s" fill="#990000"/><text x="0" y="0.7ex">8.9</text></g>
+     <g transform="translate(51,153)"><use xlink:href="#s" fill="#990033"/><text x="0" y="0.7ex">8.7</text></g>
+     <g transform="translate(102,153)"><use xlink:href="#s" fill="#990066"/><text x="0" y="0.7ex">8.2</text></g>
+     <g transform="translate(153,153)"><use xlink:href="#s" fill="#990099"/><text x="0" y="0.7ex">7.5</text></g>
+     <g transform="translate(204,153)"><use xlink:href="#s" fill="#9900cc"/><text x="0" y="0.7ex">6.5</text></g>
+     <g transform="translate(255,153)"><use xlink:href="#s" fill="#9900ff"/><text x="0" y="0.7ex">5.5</text></g>
+     <g transform="translate(0,204)"><use xlink:href="#s" fill="#cc0000"/><text x="0" y="0.7ex">5.9</text></g>
+     <g transform="translate(51,204)"><use xlink:href="#s" fill="#cc0033"/><text x="0" y="0.7ex">5.8</text></g>
+     <g transform="translate(102,204)"><use xlink:href="#s" fill="#cc0066"/><text x="0" y="0.7ex">5.6</text></g>
+     <g transform="translate(153,204)"><use xlink:href="#s" fill="#cc0099"/><text x="0" y="0.7ex">5.2</text></g>
+     <g transform="translate(204,204)"><use xlink:href="#s" fill="#cc00cc"/><text x="0" y="0.7ex">4.7</text></g>
+     <g transform="translate(255,204)"><use xlink:href="#s" fill="#cc00ff"/><text x="0" y="0.7ex">4.2</text></g>
+     <g transform="translate(0,255)"><use xlink:href="#s" fill="#ff0000"/><text x="0" y="0.7ex">4.0</text></g>
+     <g transform="translate(51,255)"><use xlink:href="#s" fill="#ff0033"/><text x="0" y="0.7ex">4.0</text></g>
+     <g transform="translate(102,255)"><use xlink:href="#s" fill="#ff0066"/><text x="0" y="0.7ex">3.9</text></g>
+     <g transform="translate(153,255)"><use xlink:href="#s" fill="#ff0099"/><text x="0" y="0.7ex">3.7</text></g>
+     <g transform="translate(204,255)"><use xlink:href="#s" fill="#ff00cc"/><text x="0" y="0.7ex">3.4</text></g>
+     <g transform="translate(255,255)"><use xlink:href="#s" fill="#ff00ff"/><text x="0" y="0.7ex">3.1</text></g>
+    </g>
+    <g transform="translate(357,0)">
+     <text class="l2_0" transform="translate(-48,-42)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>-3-</tspan></text>
+     <use xlink:href="#common"/>
+    <path class="thr0" transform="scale(51) translate(-0.5,-0.5)" d="M0,5v1h5v-1h1v-1h-3v1z"/>
+    <path class="thr1" transform="scale(51) translate(-0.5,-0.5)" d="M0,4v1h3v-1h3v-3h-1v2h-3v1z"/>
+    <path class="thr2" transform="scale(51) translate(-0.5,-0.5)" d="M0,0v4h2v-1h3v-2h1v-1z"/>
+     <g transform="translate(0,0)"><use xlink:href="#s" fill="#003300"/><text x="0" y="0.7ex">14</text></g>
+     <g transform="translate(51,0)"><use xlink:href="#s" fill="#003333"/><text x="0" y="0.7ex">14</text></g>
+     <g transform="translate(102,0)"><use xlink:href="#s" fill="#003366"/><text x="0" y="0.7ex">13</text></g>
+     <g transform="translate(153,0)"><use xlink:href="#s" fill="#003399"/><text x="0" y="0.7ex">11</text></g>
+     <g transform="translate(204,0)"><use xlink:href="#s" fill="#0033cc"/><text x="0" y="0.7ex">9.0</text></g>
+     <g transform="translate(255,0)"><use xlink:href="#s" fill="#0033ff"/><text x="0" y="0.7ex">7.2</text></g>
+     <g transform="translate(0,51)"><use xlink:href="#s" fill="#333300"/><text x="0" y="0.7ex">13</text></g>
+     <g transform="translate(51,51)"><use xlink:href="#s" fill="#333333"/><text x="0" y="0.7ex">13</text></g>
+     <g transform="translate(102,51)"><use xlink:href="#s" fill="#333366"/><text x="0" y="0.7ex">12</text></g>
+     <g transform="translate(153,51)"><use xlink:href="#s" fill="#333399"/><text x="0" y="0.7ex">10</text></g>
+     <g transform="translate(204,51)"><use xlink:href="#s" fill="#3333cc"/><text x="0" y="0.7ex">8.4</text></g>
+     <g transform="translate(255,51)"><use xlink:href="#s" fill="#3333ff"/><text x="0" y="0.7ex">6.9</text></g>
+     <g transform="translate(0,102)"><use xlink:href="#s" fill="#663300"/><text x="0" y="0.7ex">10</text></g>
+     <g transform="translate(51,102)"><use xlink:href="#s" fill="#663333"/><text x="0" y="0.7ex">10</text></g>
+     <g transform="translate(102,102)"><use xlink:href="#s" fill="#663366"/><text x="0" y="0.7ex">9.4</text></g>
+     <g transform="translate(153,102)"><use xlink:href="#s" fill="#663399"/><text x="0" y="0.7ex">8.4</text></g>
+     <g transform="translate(204,102)"><use xlink:href="#s" fill="#6633cc"/><text x="0" y="0.7ex">7.2</text></g>
+     <g transform="translate(255,102)"><use xlink:href="#s" fill="#6633ff"/><text x="0" y="0.7ex">6.0</text></g>
+     <g transform="translate(0,153)"><use xlink:href="#s" fill="#993300"/><text x="0" y="0.7ex">7.4</text></g>
+     <g transform="translate(51,153)"><use xlink:href="#s" fill="#993333"/><text x="0" y="0.7ex">7.3</text></g>
+     <g transform="translate(102,153)"><use xlink:href="#s" fill="#993366"/><text x="0" y="0.7ex">7.0</text></g>
+     <g transform="translate(153,153)"><use xlink:href="#s" fill="#993399"/><text x="0" y="0.7ex">6.4</text></g>
+     <g transform="translate(204,153)"><use xlink:href="#s" fill="#9933cc"/><text x="0" y="0.7ex">5.7</text></g>
+     <g transform="translate(255,153)"><use xlink:href="#s" fill="#9933ff"/><text x="0" y="0.7ex">4.9</text></g>
+     <g transform="translate(0,204)"><use xlink:href="#s" fill="#cc3300"/><text x="0" y="0.7ex">5.2</text></g>
+     <g transform="translate(51,204)"><use xlink:href="#s" fill="#cc3333"/><text x="0" y="0.7ex">5.1</text></g>
+     <g transform="translate(102,204)"><use xlink:href="#s" fill="#cc3366"/><text x="0" y="0.7ex">5.0</text></g>
+     <g transform="translate(153,204)"><use xlink:href="#s" fill="#cc3399"/><text x="0" y="0.7ex">4.7</text></g>
+     <g transform="translate(204,204)"><use xlink:href="#s" fill="#cc33cc"/><text x="0" y="0.7ex">4.3</text></g>
+     <g transform="translate(255,204)"><use xlink:href="#s" fill="#cc33ff"/><text x="0" y="0.7ex">3.8</text></g>
+     <g transform="translate(0,255)"><use xlink:href="#s" fill="#ff3300"/><text x="0" y="0.7ex">3.7</text></g>
+     <g transform="translate(51,255)"><use xlink:href="#s" fill="#ff3333"/><text x="0" y="0.7ex">3.6</text></g>
+     <g transform="translate(102,255)"><use xlink:href="#s" fill="#ff3366"/><text x="0" y="0.7ex">3.5</text></g>
+     <g transform="translate(153,255)"><use xlink:href="#s" fill="#ff3399"/><text x="0" y="0.7ex">3.4</text></g>
+     <g transform="translate(204,255)"><use xlink:href="#s" fill="#ff33cc"/><text x="0" y="0.7ex">3.2</text></g>
+     <g transform="translate(255,255)"><use xlink:href="#s" fill="#ff33ff"/><text x="0" y="0.7ex">2.9</text></g>
+    </g>
+    <g transform="translate(714,0)">
+     <text class="l2_0" transform="translate(-48,-42)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>-6-</tspan></text>
+     <use xlink:href="#common"/>
+    <path class="thr0" transform="scale(51) translate(-0.5,-0.5)" d="M0,4v1h6v-3h-1v1h-2v1z"/>
+    <path class="thr1" transform="scale(51) translate(-0.5,-0.5)" d="M0,1v3h3v-1h2v-1h1v-2h-4v1z"/>
+    <path class="thr2" transform="scale(51) translate(-0.5,-0.5)" d="M0,0v1h2v-1z"/>
+     <g transform="translate(0,0)"><use xlink:href="#s" fill="#006600"/><text x="0" y="0.7ex">7.2</text></g>
+     <g transform="translate(51,0)"><use xlink:href="#s" fill="#006633"/><text x="0" y="0.7ex">7.1</text></g>
+     <g transform="translate(102,0)"><use xlink:href="#s" fill="#006666"/><text x="0" y="0.7ex">6.8</text></g>
+     <g transform="translate(153,0)"><use xlink:href="#s" fill="#006699"/><text x="0" y="0.7ex">6.2</text></g>
+     <g transform="translate(204,0)"><use xlink:href="#s" fill="#0066cc"/><text x="0" y="0.7ex">5.6</text></g>
+     <g transform="translate(255,0)"><use xlink:href="#s" fill="#0066ff"/><text x="0" y="0.7ex">4.8</text></g>
+     <g transform="translate(0,51)"><use xlink:href="#s" fill="#336600"/><text x="0" y="0.7ex">6.9</text></g>
+     <g transform="translate(51,51)"><use xlink:href="#s" fill="#336633"/><text x="0" y="0.7ex">6.8</text></g>
+     <g transform="translate(102,51)"><use xlink:href="#s" fill="#336666"/><text x="0" y="0.7ex">6.5</text></g>
+     <g transform="translate(153,51)"><use xlink:href="#s" fill="#336699"/><text x="0" y="0.7ex">6.0</text></g>
+     <g transform="translate(204,51)"><use xlink:href="#s" fill="#3366cc"/><text x="0" y="0.7ex">5.4</text></g>
+     <g transform="translate(255,51)"><use xlink:href="#s" fill="#3366ff"/><text x="0" y="0.7ex">4.7</text></g>
+     <g transform="translate(0,102)"><use xlink:href="#s" fill="#666600"/><text x="0" y="0.7ex">6.1</text></g>
+     <g transform="translate(51,102)"><use xlink:href="#s" fill="#666633"/><text x="0" y="0.7ex">6.0</text></g>
+     <g transform="translate(102,102)"><use xlink:href="#s" fill="#666666"/><text x="0" y="0.7ex">5.7</text></g>
+     <g transform="translate(153,102)"><use xlink:href="#s" fill="#666699"/><text x="0" y="0.7ex">5.3</text></g>
+     <g transform="translate(204,102)"><use xlink:href="#s" fill="#6666cc"/><text x="0" y="0.7ex">4.8</text></g>
+     <g transform="translate(255,102)"><use xlink:href="#s" fill="#6666ff"/><text x="0" y="0.7ex">4.3</text></g>
+     <g transform="translate(0,153)"><use xlink:href="#s" fill="#996600"/><text x="0" y="0.7ex">4.9</text></g>
+     <g transform="translate(51,153)"><use xlink:href="#s" fill="#996633"/><text x="0" y="0.7ex">4.9</text></g>
+     <g transform="translate(102,153)"><use xlink:href="#s" fill="#996666"/><text x="0" y="0.7ex">4.7</text></g>
+     <g transform="translate(153,153)"><use xlink:href="#s" fill="#996699"/><text x="0" y="0.7ex">4.5</text></g>
+     <g transform="translate(204,153)"><use xlink:href="#s" fill="#9966cc"/><text x="0" y="0.7ex">4.1</text></g>
+     <g transform="translate(255,153)"><use xlink:href="#s" fill="#9966ff"/><text x="0" y="0.7ex">3.7</text></g>
+     <g transform="translate(0,204)"><use xlink:href="#s" fill="#cc6600"/><text x="0" y="0.7ex">3.8</text></g>
+     <g transform="translate(51,204)"><use xlink:href="#s" fill="#cc6633"/><text x="0" y="0.7ex">3.8</text></g>
+     <g transform="translate(102,204)"><use xlink:href="#s" fill="#cc6666"/><text x="0" y="0.7ex">3.7</text></g>
+     <g transform="translate(153,204)"><use xlink:href="#s" fill="#cc6699"/><text x="0" y="0.7ex">3.5</text></g>
+     <g transform="translate(204,204)"><use xlink:href="#s" fill="#cc66cc"/><text x="0" y="0.7ex">3.3</text></g>
+     <g transform="translate(255,204)"><use xlink:href="#s" fill="#cc66ff"/><text x="0" y="0.7ex">3.0</text></g>
+     <g transform="translate(0,255)"><use xlink:href="#s" fill="#ff6600"/><text x="0" y="0.7ex">2.9</text></g>
+     <g transform="translate(51,255)"><use xlink:href="#s" fill="#ff6633"/><text x="0" y="0.7ex">2.9</text></g>
+     <g transform="translate(102,255)"><use xlink:href="#s" fill="#ff6666"/><text x="0" y="0.7ex">2.9</text></g>
+     <g transform="translate(153,255)"><use xlink:href="#s" fill="#ff6699"/><text x="0" y="0.7ex">2.8</text></g>
+     <g transform="translate(204,255)"><use xlink:href="#s" fill="#ff66cc"/><text x="0" y="0.7ex">2.6</text></g>
+     <g transform="translate(255,255)"><use xlink:href="#s" fill="#ff66ff"/><text x="0" y="0.7ex">2.4</text></g>
+    </g>
+    <g transform="translate(1071,0)">
+     <text class="l2_0" transform="translate(-48,-42)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>-9-</tspan></text>
+     <use xlink:href="#common"/>
+    <path class="thr0" transform="scale(51) translate(-0.5,-0.5)" d="M0,0v4h2v-1h3v-3z"/>
+     <g transform="translate(0,0)"><use xlink:href="#s" fill="#009900"/><text x="0" y="0.7ex">3.8</text></g>
+     <g transform="translate(51,0)"><use xlink:href="#s" fill="#009933"/><text x="0" y="0.7ex">3.7</text></g>
+     <g transform="translate(102,0)"><use xlink:href="#s" fill="#009966"/><text x="0" y="0.7ex">3.7</text></g>
+     <g transform="translate(153,0)"><use xlink:href="#s" fill="#009999"/><text x="0" y="0.7ex">3.5</text></g>
+     <g transform="translate(204,0)"><use xlink:href="#s" fill="#0099cc"/><text x="0" y="0.7ex">3.3</text></g>
+     <g transform="translate(255,0)"><use xlink:href="#s" fill="#0099ff"/><text x="0" y="0.7ex">3.0</text></g>
+     <g transform="translate(0,51)"><use xlink:href="#s" fill="#339900"/><text x="0" y="0.7ex">3.7</text></g>
+     <g transform="translate(51,51)"><use xlink:href="#s" fill="#339933"/><text x="0" y="0.7ex">3.7</text></g>
+     <g transform="translate(102,51)"><use xlink:href="#s" fill="#339966"/><text x="0" y="0.7ex">3.6</text></g>
+     <g transform="translate(153,51)"><use xlink:href="#s" fill="#339999"/><text x="0" y="0.7ex">3.4</text></g>
+     <g transform="translate(204,51)"><use xlink:href="#s" fill="#3399cc"/><text x="0" y="0.7ex">3.2</text></g>
+     <g transform="translate(255,51)"><use xlink:href="#s" fill="#3399ff"/><text x="0" y="0.7ex">2.9</text></g>
+     <g transform="translate(0,102)"><use xlink:href="#s" fill="#669900"/><text x="0" y="0.7ex">3.4</text></g>
+     <g transform="translate(51,102)"><use xlink:href="#s" fill="#669933"/><text x="0" y="0.7ex">3.4</text></g>
+     <g transform="translate(102,102)"><use xlink:href="#s" fill="#669966"/><text x="0" y="0.7ex">3.3</text></g>
+     <g transform="translate(153,102)"><use xlink:href="#s" fill="#669999"/><text x="0" y="0.7ex">3.2</text></g>
+     <g transform="translate(204,102)"><use xlink:href="#s" fill="#6699cc"/><text x="0" y="0.7ex">3.0</text></g>
+     <g transform="translate(255,102)"><use xlink:href="#s" fill="#6699ff"/><text x="0" y="0.7ex">2.8</text></g>
+     <g transform="translate(0,153)"><use xlink:href="#s" fill="#999900"/><text x="0" y="0.7ex">3.0</text></g>
+     <g transform="translate(51,153)"><use xlink:href="#s" fill="#999933"/><text x="0" y="0.7ex">3.0</text></g>
+     <g transform="translate(102,153)"><use xlink:href="#s" fill="#999966"/><text x="0" y="0.7ex">3.0</text></g>
+     <g transform="translate(153,153)"><use xlink:href="#s" fill="#999999"/><text x="0" y="0.7ex">2.8</text></g>
+     <g transform="translate(204,153)"><use xlink:href="#s" fill="#9999cc"/><text x="0" y="0.7ex">2.7</text></g>
+     <g transform="translate(255,153)"><use xlink:href="#s" fill="#9999ff"/><text x="0" y="0.7ex">2.5</text></g>
+     <g transform="translate(0,204)"><use xlink:href="#s" fill="#cc9900"/><text x="0" y="0.7ex">2.6</text></g>
+     <g transform="translate(51,204)"><use xlink:href="#s" fill="#cc9933"/><text x="0" y="0.7ex">2.6</text></g>
+     <g transform="translate(102,204)"><use xlink:href="#s" fill="#cc9966"/><text x="0" y="0.7ex">2.5</text></g>
+     <g transform="translate(153,204)"><use xlink:href="#s" fill="#cc9999"/><text x="0" y="0.7ex">2.4</text></g>
+     <g transform="translate(204,204)"><use xlink:href="#s" fill="#cc99cc"/><text x="0" y="0.7ex">2.3</text></g>
+     <g transform="translate(255,204)"><use xlink:href="#s" fill="#cc99ff"/><text x="0" y="0.7ex">2.2</text></g>
+     <g transform="translate(0,255)"><use xlink:href="#s" fill="#ff9900"/><text x="0" y="0.7ex">2.1</text></g>
+     <g transform="translate(51,255)"><use xlink:href="#s" fill="#ff9933"/><text x="0" y="0.7ex">2.1</text></g>
+     <g transform="translate(102,255)"><use xlink:href="#s" fill="#ff9966"/><text x="0" y="0.7ex">2.1</text></g>
+     <g transform="translate(153,255)"><use xlink:href="#s" fill="#ff9999"/><text x="0" y="0.7ex">2.0</text></g>
+     <g transform="translate(204,255)"><use xlink:href="#s" fill="#ff99cc"/><text x="0" y="0.7ex">2.0</text></g>
+     <g transform="translate(255,255)"><use xlink:href="#s" fill="#ff99ff"/><text x="0" y="0.7ex">1.9</text></g>
+    </g>
+    <g transform="translate(1428,0)">
+     <text class="l2_0" transform="translate(-48,-42)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>-c-</tspan></text>
+     <use xlink:href="#common"/>
+
+     <g transform="translate(0,0)"><use xlink:href="#s" fill="#00cc00"/><text x="0" y="0.7ex">2.2</text></g>
+     <g transform="translate(51,0)"><use xlink:href="#s" fill="#00cc33"/><text x="0" y="0.7ex">2.2</text></g>
+     <g transform="translate(102,0)"><use xlink:href="#s" fill="#00cc66"/><text x="0" y="0.7ex">2.1</text></g>
+     <g transform="translate(153,0)"><use xlink:href="#s" fill="#00cc99"/><text x="0" y="0.7ex">2.1</text></g>
+     <g transform="translate(204,0)"><use xlink:href="#s" fill="#00cccc"/><text x="0" y="0.7ex">2.0</text></g>
+     <g transform="translate(255,0)"><use xlink:href="#s" fill="#00ccff"/><text x="0" y="0.7ex">1.9</text></g>
+     <g transform="translate(0,51)"><use xlink:href="#s" fill="#33cc00"/><text x="0" y="0.7ex">2.1</text></g>
+     <g transform="translate(51,51)"><use xlink:href="#s" fill="#33cc33"/><text x="0" y="0.7ex">2.1</text></g>
+     <g transform="translate(102,51)"><use xlink:href="#s" fill="#33cc66"/><text x="0" y="0.7ex">2.1</text></g>
+     <g transform="translate(153,51)"><use xlink:href="#s" fill="#33cc99"/><text x="0" y="0.7ex">2.1</text></g>
+     <g transform="translate(204,51)"><use xlink:href="#s" fill="#33cccc"/><text x="0" y="0.7ex">2.0</text></g>
+     <g transform="translate(255,51)"><use xlink:href="#s" fill="#33ccff"/><text x="0" y="0.7ex">1.9</text></g>
+     <g transform="translate(0,102)"><use xlink:href="#s" fill="#66cc00"/><text x="0" y="0.7ex">2.1</text></g>
+     <g transform="translate(51,102)"><use xlink:href="#s" fill="#66cc33"/><text x="0" y="0.7ex">2.0</text></g>
+     <g transform="translate(102,102)"><use xlink:href="#s" fill="#66cc66"/><text x="0" y="0.7ex">2.0</text></g>
+     <g transform="translate(153,102)"><use xlink:href="#s" fill="#66cc99"/><text x="0" y="0.7ex">2.0</text></g>
+     <g transform="translate(204,102)"><use xlink:href="#s" fill="#66cccc"/><text x="0" y="0.7ex">1.9</text></g>
+     <g transform="translate(255,102)"><use xlink:href="#s" fill="#66ccff"/><text x="0" y="0.7ex">1.8</text></g>
+     <g transform="translate(0,153)"><use xlink:href="#s" fill="#99cc00"/><text x="0" y="0.7ex">1.9</text></g>
+     <g transform="translate(51,153)"><use xlink:href="#s" fill="#99cc33"/><text x="0" y="0.7ex">1.9</text></g>
+     <g transform="translate(102,153)"><use xlink:href="#s" fill="#99cc66"/><text x="0" y="0.7ex">1.9</text></g>
+     <g transform="translate(153,153)"><use xlink:href="#s" fill="#99cc99"/><text x="0" y="0.7ex">1.8</text></g>
+     <g transform="translate(204,153)"><use xlink:href="#s" fill="#99cccc"/><text x="0" y="0.7ex">1.8</text></g>
+     <g transform="translate(255,153)"><use xlink:href="#s" fill="#99ccff"/><text x="0" y="0.7ex">1.7</text></g>
+     <g transform="translate(0,204)"><use xlink:href="#s" fill="#cccc00"/><text x="0" y="0.7ex">1.7</text></g>
+     <g transform="translate(51,204)"><use xlink:href="#s" fill="#cccc33"/><text x="0" y="0.7ex">1.7</text></g>
+     <g transform="translate(102,204)"><use xlink:href="#s" fill="#cccc66"/><text x="0" y="0.7ex">1.7</text></g>
+     <g transform="translate(153,204)"><use xlink:href="#s" fill="#cccc99"/><text x="0" y="0.7ex">1.7</text></g>
+     <g transform="translate(204,204)"><use xlink:href="#s" fill="#cccccc"/><text x="0" y="0.7ex">1.6</text></g>
+     <g transform="translate(255,204)"><use xlink:href="#s" fill="#ccccff"/><text x="0" y="0.7ex">1.5</text></g>
+     <g transform="translate(0,255)"><use xlink:href="#s" fill="#ffcc00"/><text x="0" y="0.7ex">1.5</text></g>
+     <g transform="translate(51,255)"><use xlink:href="#s" fill="#ffcc33"/><text x="0" y="0.7ex">1.5</text></g>
+     <g transform="translate(102,255)"><use xlink:href="#s" fill="#ffcc66"/><text x="0" y="0.7ex">1.5</text></g>
+     <g transform="translate(153,255)"><use xlink:href="#s" fill="#ffcc99"/><text x="0" y="0.7ex">1.5</text></g>
+     <g transform="translate(204,255)"><use xlink:href="#s" fill="#ffcccc"/><text x="0" y="0.7ex">1.4</text></g>
+     <g transform="translate(255,255)"><use xlink:href="#s" fill="#ffccff"/><text x="0" y="0.7ex">1.4</text></g>
+    </g>
+    <g transform="translate(1785,0)">
+     <text class="l2_0" transform="translate(-48,-42)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>-f-</tspan></text>
+     <use xlink:href="#common"/>
+
+     <g transform="translate(0,0)"><use xlink:href="#s" fill="#00ff00"/><text x="0" y="0.7ex">1.4</text></g>
+     <g transform="translate(51,0)"><use xlink:href="#s" fill="#00ff33"/><text x="0" y="0.7ex">1.4</text></g>
+     <g transform="translate(102,0)"><use xlink:href="#s" fill="#00ff66"/><text x="0" y="0.7ex">1.4</text></g>
+     <g transform="translate(153,0)"><use xlink:href="#s" fill="#00ff99"/><text x="0" y="0.7ex">1.3</text></g>
+     <g transform="translate(204,0)"><use xlink:href="#s" fill="#00ffcc"/><text x="0" y="0.7ex">1.3</text></g>
+     <g transform="translate(255,0)"><use xlink:href="#s" fill="#00ffff"/><text x="0" y="0.7ex">1.3</text></g>
+     <g transform="translate(0,51)"><use xlink:href="#s" fill="#33ff00"/><text x="0" y="0.7ex">1.4</text></g>
+     <g transform="translate(51,51)"><use xlink:href="#s" fill="#33ff33"/><text x="0" y="0.7ex">1.4</text></g>
+     <g transform="translate(102,51)"><use xlink:href="#s" fill="#33ff66"/><text x="0" y="0.7ex">1.3</text></g>
+     <g transform="translate(153,51)"><use xlink:href="#s" fill="#33ff99"/><text x="0" y="0.7ex">1.3</text></g>
+     <g transform="translate(204,51)"><use xlink:href="#s" fill="#33ffcc"/><text x="0" y="0.7ex">1.3</text></g>
+     <g transform="translate(255,51)"><use xlink:href="#s" fill="#33ffff"/><text x="0" y="0.7ex">1.2</text></g>
+     <g transform="translate(0,102)"><use xlink:href="#s" fill="#66ff00"/><text x="0" y="0.7ex">1.3</text></g>
+     <g transform="translate(51,102)"><use xlink:href="#s" fill="#66ff33"/><text x="0" y="0.7ex">1.3</text></g>
+     <g transform="translate(102,102)"><use xlink:href="#s" fill="#66ff66"/><text x="0" y="0.7ex">1.3</text></g>
+     <g transform="translate(153,102)"><use xlink:href="#s" fill="#66ff99"/><text x="0" y="0.7ex">1.3</text></g>
+     <g transform="translate(204,102)"><use xlink:href="#s" fill="#66ffcc"/><text x="0" y="0.7ex">1.3</text></g>
+     <g transform="translate(255,102)"><use xlink:href="#s" fill="#66ffff"/><text x="0" y="0.7ex">1.2</text></g>
+     <g transform="translate(0,153)"><use xlink:href="#s" fill="#99ff00"/><text x="0" y="0.7ex">1.3</text></g>
+     <g transform="translate(51,153)"><use xlink:href="#s" fill="#99ff33"/><text x="0" y="0.7ex">1.3</text></g>
+     <g transform="translate(102,153)"><use xlink:href="#s" fill="#99ff66"/><text x="0" y="0.7ex">1.2</text></g>
+     <g transform="translate(153,153)"><use xlink:href="#s" fill="#99ff99"/><text x="0" y="0.7ex">1.2</text></g>
+     <g transform="translate(204,153)"><use xlink:href="#s" fill="#99ffcc"/><text x="0" y="0.7ex">1.2</text></g>
+     <g transform="translate(255,153)"><use xlink:href="#s" fill="#99ffff"/><text x="0" y="0.7ex">1.2</text></g>
+     <g transform="translate(0,204)"><use xlink:href="#s" fill="#ccff00"/><text x="0" y="0.7ex">1.2</text></g>
+     <g transform="translate(51,204)"><use xlink:href="#s" fill="#ccff33"/><text x="0" y="0.7ex">1.2</text></g>
+     <g transform="translate(102,204)"><use xlink:href="#s" fill="#ccff66"/><text x="0" y="0.7ex">1.2</text></g>
+     <g transform="translate(153,204)"><use xlink:href="#s" fill="#ccff99"/><text x="0" y="0.7ex">1.1</text></g>
+     <g transform="translate(204,204)"><use xlink:href="#s" fill="#ccffcc"/><text x="0" y="0.7ex">1.1</text></g>
+     <g transform="translate(255,204)"><use xlink:href="#s" fill="#ccffff"/><text x="0" y="0.7ex">1.1</text></g>
+     <g transform="translate(0,255)"><use xlink:href="#s" fill="#ffff00"/><text x="0" y="0.7ex">1.1</text></g>
+     <g transform="translate(51,255)"><use xlink:href="#s" fill="#ffff33"/><text x="0" y="0.7ex">1.1</text></g>
+     <g transform="translate(102,255)"><use xlink:href="#s" fill="#ffff66"/><text x="0" y="0.7ex">1.1</text></g>
+     <g transform="translate(153,255)"><use xlink:href="#s" fill="#ffff99"/><text x="0" y="0.7ex">1.0</text></g>
+     <g transform="translate(204,255)"><use xlink:href="#s" fill="#ffffcc"/><text x="0" y="0.7ex">1.0</text></g>
+     <g transform="translate(255,255)"><use xlink:href="#s" fill="#ffffff"/><text x="0" y="0.7ex">1.0</text></g>
+    </g>
+   </g>
+  </g>
+<!--   END_DYNAMIC_MAIN -->
+ </g>
+</svg>
+<!-- Please retain this and other comments, which contain Python code to generate this SVG. """
+import re, math
+class dict2class(dict):
+ def __getattr__(self, k): return dict2class(self[k]) if isinstance(self[k], dict) else self[k]
+def fmt(string): ## string.format(**vars()) using tags {expression!format} by CMG Lee
+ def f(tag): i_sep = tag.rfind('!'); return (re.sub('\.0$', '', str(eval(tag[1:-1])))
+  if (i_sep < 0) else ('{:%s}' % tag[i_sep + 1:-1]).format(eval(tag[1:i_sep])))
+ return (re.sub(r'(?<!{){[^{}]+}', lambda m:f(m.group()), string)
+         .replace('{{', '{').replace('}}', '}'))
+def append(obj, string): return obj.append(fmt(string))
+def roundm(x, multiple=1):
+ if   (isinstance(x, tuple)): return tuple(roundm(list(x), multiple))
+ elif (isinstance(x, list )): return [roundm(x_i, multiple) for x_i in x]
+ else: return int(math.floor(float(x) / multiple + 0.5)) * multiple
+def roundsf(x, sf=3):
+ str_round = str(round(x, sf - 1 - int(math.floor(math.log10(abs(x))))))
+ n_pad     = sf - len(re.sub(r'\D', r'', str_round).lstrip('0'))
+ if n_pad < 0: return str_round[:-2]
+ else:         return str_round + '0' * n_pad
+
+def compute_component(component_8b):
+ component_srgb = component_8b / 255.0
+ return (  component_srgb / 12.92 if component_srgb <= 0.03928 else
+         ((component_srgb + 0.055) / 1.055) ** 2.4)
+def compute_luminance(r_8b, g_8b, b_8b):
+ return (0.2126 * compute_component(r_8b) +
+         0.7152 * compute_component(g_8b) +
+         0.0722 * compute_component(b_8b))
+
+path_thresholdss = {
+ (0,  0):['0,5v-1h4v-1h1v-1h1v2h-1v1z','0,6v-1h5v-1h1v2z'          ,None                   ],
+ (0, 51):['0,5v-1h2v-1h3v-2h1v3h-3v1z','5,6h-5v-1h3v-1h3v1h-1v1z'  ,'5,6v-1h1v1z'          ],
+ (0,102):['0,4v-3h2v-1h4v2h-1v1h-2v1z','0,5v-1h3v-1h2v-1h1v3z'     ,'0,6v-1h6v1z'          ],
+ (0,153):[None                        ,'0,4v-4h5v3h-3v1z'          ,'0,6v-2h2v-1h3v-3h1v6z'],
+ (0,204):[None                        ,None                        ,'0,6v-6h6v6z'          ],
+ (0,255):[None                        ,None                        ,'0,6v-6h6v6z'          ],
+ (1,  0):['0,5v1h6v-2h-1v1z'          ,'0,4v1h5v-1h1v-2h-1v1h-1v1z','0,0v4h4v-1h1v-1h1v-2z'],
+ (1, 51):['0,5v1h5v-1h1v-1h-3v1z'     ,'0,4v1h3v-1h3v-3h-1v2h-3v1z','0,0v4h2v-1h3v-2h1v-1z'],
+ (1,102):['0,4v1h6v-3h-1v1h-2v1z'     ,'0,1v3h3v-1h2v-1h1v-2h-4v1z','0,0v1h2v-1z'          ],
+ (1,153):['0,0v4h2v-1h3v-3z'          ,None                        ,None                   ],
+}
+(out_defs, out_mains) = ([], [])
+out_rows = []
+for   l2 in [0, 1]: ## 0=black, 1=white
+ out_columns = []
+ for   g in range(0, 256, 51):
+  (out_cells, out_path_thresholds) = ([], [])
+  for  r in range(0, 256, 51):
+   for b in range(0, 256, 51):
+    hex1  = '#%02x%02x%02x' % (r,g,b)
+    l1    = compute_luminance(r, g, b)
+    ratio = (max(l1, l2) + 0.05) / (min(l1, l2) + 0.05)
+    # print('%s=%3.0f%% vs %3.0f%% => %5.2f' % (hex1, l1 * 100, l2 * 100, ratio))
+    out_label = roundsf(ratio, 2)
+    # out_label = '' if ratio < 3 else 'R' if ratio < 4.5 else 'G' if ratio < 7 else 'B'
+    append(out_cells, '''\
+     <g transform="translate({b},{r})"><use xlink:href="#s" fill="{hex1}"/><text x="0" y="0.7ex">{out_label!s}</text></g>''')
+  if (l2, g) in path_thresholdss:
+   path_thresholds = path_thresholdss[(l2, g)]
+   for (i_path_threshold, path_threshold) in enumerate(path_thresholds):
+    # print(i_path_threshold, path_threshold)
+    if path_threshold is not None: append(out_path_thresholds, '''\
+    <path class="thr{i_path_threshold}" transform="scale(51) translate(-0.5,-0.5)" d="M{path_threshold}"/>''')
+  append(out_columns, '''\
+    <g transform="translate({g * 7},0)">
+     <text class="l2_0" transform="translate(-48,-42)" x="0" y="0.7ex"><tspan class="hash">#</tspan><tspan>-{g // 17!x}-</tspan></text>
+     <use xlink:href="#common"/>
+{'\\n'.join(out_path_thresholds)}
+{'\\n'.join(out_cells)}
+    </g>''')
+ append(out_rows, '''\
+   <g class="l2_{l2}" transform="translate(0,{l2 * 358})">
+{'\\n'.join(out_columns)}
+   </g>''')
+append(out_mains, '''\
+  <g transform="translate(0,0)">
+{'\\n'.join(out_rows)}
+  </g>''')
+
+out_p = fmt('width="100%" height="100%" viewBox="-70 -64 2142 714"')
+
+## Compile everything into an .svg file
+myself   = open(__file__, 'r').read() ## the contents of this very file
+file_out = open(__file__[:__file__.rfind('.')] + '.svg', 'wb') ## *.* -> *.svg
+try: ## use try/finally so that file is closed even if write fails
+ file_out.write('''<?xml version="1.0" encoding="utf-8"?><!%s%s
+%s%s%s\n%s%s\n%s%s''' % ('-', '-', ## because SVG comments cannot have 2 consecutive '-'s
+  myself[:myself.find('width',myself.find('<svg'))], ## assume width specified before height/viewBox
+  out_p, ## replace SVG width/height/viewBox with {out_p} & dynamic SVG blocks with {out*s} contents
+  myself[myself.find ('>',myself.find('<svg')):
+         myself.find ('\n',myself.find('BEGIN_'+'DYNAMIC_DEFS'))], '\n'.join(out_defs),
+  myself[myself.rfind('\n',0,myself.find('END_'+'DYNAMIC_DEFS')):
+         myself.find ('\n',myself.find('BEGIN_'+'DYNAMIC_MAIN'))], '\n'.join(out_mains),
+  myself[myself.rfind('\n',0,myself.find('END_'+'DYNAMIC_MAIN')):]))
+finally:
+ file_out.close()
+
+## SVG-Python near-polyglot framework version 3 by CMG Lee (March 2018) -->

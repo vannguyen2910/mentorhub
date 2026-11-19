@@ -37,6 +37,49 @@ Viết như một đồng nghiệp có kinh nghiệm chia sẻ cách làm với 
 - Ngôi xưng: "mình" cho cả nhóm và trong speaker notes; "bạn" khi nói trực tiếp với học viên. Không trộn hai ngôi trong cùng một câu.
 - Em dash, nhịp staccato và các quy tắc dấu câu khác: theo `writing-style-guide.md`.
 
+## Giọng mentor, bớt khẩu hiệu (cập nhật 2026-11-17)
+
+Winnie đọc lại outline Lesson 1 và thấy các skill biên tập tiếng Việt cho ra chữ nghe giống AI. Nội dung chuyên môn không sai, vấn đề nằm ở cách diễn đạt. Từ đây, quy tắc này **thắng** mọi chỗ cũ trong file khi hai bên mâu thuẫn.
+
+Bốn dấu hiệu cần sửa:
+
+1. **Câu nào cũng như một thông điệp lớn.** "AI nới implementation ra, còn verification vẫn hẹp." đọc như bài phân tích, không giống một mentor nói với học viên.
+2. **Lặp khuôn câu.** "Không phải X, mà là Y", "AI làm X, designer làm Y", "Tool đổi, mindset không đổi", và chuỗi câu cụt như "Đưa input rõ ràng. Yêu cầu nguồn. Kiểm tra. Tự quyết định."
+3. **Dịch thẳng từ tiếng Anh.** "Cùng định nghĩa requirement", "chọn vấn đề đáng giải", "đưa input rõ ràng", "nới implementation ra" chưa phải câu một designer Việt Nam nói. Vẫn giữ thuật ngữ nghề bằng tiếng Anh (bảng quy ước bên dưới), nhưng phần còn lại của câu phải là tiếng Việt tự nhiên: "xác định vấn đề cần giải quyết", "làm rõ yêu cầu", "cung cấp đủ thông tin".
+4. **Speaker notes giống tài liệu hướng dẫn.** Viết như lúc đứng lớp: có ví dụ, có nhận xét của người làm nghề, đôi lúc một câu ngắn đời thường.
+
+Cách viết:
+
+- Chỗ nào chỉ cần nói đơn giản, đúng ý thì dừng ở đó. Không biến mọi slide thành một câu quote hay slogan.
+- Mỗi ý viết thành một hoặc hai câu hoàn chỉnh, có chủ ngữ và vị ngữ. Nêu điều kiện và hệ quả thay cho vế đối xứng: "Nếu quy trình chưa ổn, AI chỉ giúp lỗi xuất hiện nhanh hơn."
+- Title có thể là một câu hỏi tự nhiên, dài hơn 6 từ nếu cần ("Khi AI làm nhanh hơn, điểm nghẽn chuyển đi đâu?"). Tự nhiên quan trọng hơn ngắn.
+- Chiều sâu của một Senior Product Designer nằm ở ví dụ và nhận xét nghề, không nằm ở câu chữ kêu.
+- Giữ nguyên số liệu, nguồn và mức chắc chắn của evidence khi sửa giọng.
+- "AI tool" viết là "công cụ AI". "AI chat tool" và "AI coding tool" vẫn giữ tên gọi này.
+
+Trước và sau (Winnie sửa 2026-11-17):
+
+| Trước | Sau |
+|---|---|
+| Câu hỏi mới ở mọi stage: AI giúp được ở đâu, và đâu là phần designer vẫn tự làm? | Ở mỗi bước, mình sẽ cùng nhìn xem AI có thể hỗ trợ phần nào, và phần nào vẫn cần designer trực tiếp tham gia. |
+| AI khuếch đại những gì đã có: workflow tốt chạy nhanh hơn, workflow chưa ổn cho ra nhiều thứ chưa ổn hơn, và nhanh hơn. | AI có thể giúp một quy trình tốt chạy nhanh hơn. Nhưng nếu ngay từ đầu cách làm đã có vấn đề, AI cũng chỉ giúp mình tạo ra nhiều kết quả sai hơn trong thời gian ngắn hơn. |
+| Đưa input rõ ràng. Yêu cầu nguồn. Kiểm tra. Tự quyết định. | Cho AI đủ thông tin để làm việc. Kiểm tra xem kết quả đến từ đâu. Đừng vội tin mọi thứ nó trả về. |
+| AI nới implementation ra, còn verification vẫn hẹp. | AI giúp làm nhanh hơn. Nhưng kiểm tra kết quả vẫn cần thời gian. |
+| Cùng product và business chọn vấn đề đáng giải | Cùng Product và Business xác định vấn đề cần giải quyết |
+| Mỗi cuộc chat AI mới bắt đầu từ trống. Hub là cách để AI không phải bắt đầu lại. | Mỗi lần mở một cuộc chat mới, bạn thường phải cung cấp lại bối cảnh. Hub lưu những thông tin cần thiết để AI tiếp tục công việc mà không phải bắt đầu lại từ đầu. |
+
+Rút ra khi sửa speaker notes Lesson 1 (2026-11-17):
+
+- **Notes là lời nói, không phải ghi chú.** Câu bị cắt thành mảnh ("Hai việc mỗi người nói: tên và công việc hiện tại; một lần dùng AI...") viết lại thành câu đủ chủ vị. Chỗ có nhiều ý song song thì dùng danh sách gạch đầu dòng, mỗi dòng một ý.
+- **"Câu hỏi cho lớp" phải là câu hỏi.** Câu khẳng định ("Một agent chạy ổn thì có một skill") đổi thành câu hỏi gắn với việc của học viên.
+- **Không tự điền chỗ chưa xác nhận.** Giữ nguyên các dấu `[to confirm]`, nguồn chưa rõ và lưu ý "chưa thử với lớp thật". Chỉ đổi giọng, không đổi mức chắc chắn.
+- **Giữ nguyên số liệu, nguồn, tên file, tên field.** Không dịch tên file (`AGENTS.md`, `SKILL.md`) hay nhãn What, Why, When.
+- **Sau khi cắt nhãn "Label: " khỏi một câu, viết hoa lại chữ đầu câu.**
+- **Title dài hơn thì kiểm tra layout.** Title mới của slide có khung cố định (kiểu `looks-done`, `fix-workflow`) dễ xuống dòng, kiểm tra trong trình xem thật trước khi chốt.
+- **Mỗi mục "Giọng mentor" áp dụng cho cả slide mới thêm**, không chỉ slide có trong bản outline đã chỉnh.
+
+Bản đầy đủ: `~/Downloads/design-process-with-ai-slide-outline-improved.md`. Quyết định của Winnie (2026-11-17): viết hoa "Product", "Business", "Design" khi chỉ các bên (team, chức năng) trong một tổ chức. Ví dụ: "cùng Product và Business xác định vấn đề cần giải quyết", "Design mang theo research và evidence". Khi nói về sản phẩm hay thiết kế nói chung thì vẫn viết thường ("product design", "thiết kế sản phẩm"). Các thuật ngữ khác, kể cả decision và outcome, vẫn theo bảng thuật ngữ bên dưới.
+
 ## File lesson chia sẻ với học viên (cập nhật 2026-11-06)
 
 Từ 2026-11-06, `*-lesson.md` là **một bản duy nhất** gửi cho học viên và là nguồn để đẩy lên Notion (card Nội dung chính). Không còn bản paper riêng cho partner. Lesson 5 là bản mẫu; các lesson khác cập nhật theo. Quy ước:
@@ -120,7 +163,8 @@ Từ 2026-11-06, `*-lesson.md` là **một bản duy nhất** gửi cho học vi
 
 **Dòng một câu**
 - Trước: "AI draft. Bạn verify. Bạn quyết định."
-- Sau: "AI soạn nháp. Bạn kiểm tra. Bạn quyết định."
+- Sau (cũ, đã bị thay từ 2026-11-17 vì nghe như khẩu hiệu): "AI soạn nháp. Bạn kiểm tra. Bạn quyết định."
+- Sau (hiện hành): "AI soạn bản nháp, bạn kiểm tra rồi quyết định." Nói một lần là đủ, không lặp khuôn ở mọi slide.
 
 **Giải thích khái niệm**
 - Trước: "Một cách chuẩn để AI tool đọc một app khác, ví dụ file design của bạn."

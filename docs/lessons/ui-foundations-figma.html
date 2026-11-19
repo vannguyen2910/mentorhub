@@ -37,11 +37,11 @@
   <div class="tp-layout">
     <aside class="tp-toc" aria-label="On this page"><p class="tp-toc__label">On this page</p><a href="#v0-purpose">Purpose</a><a href="#v0-structure">Structure</a><a href="#v0-learning-objectives">Learning objectives</a><a href="#v0-key-decisions">Key decisions</a><a href="#v0-sources">Sources</a><a href="#v0-to-confirm">[to confirm]</a></aside>
     <article class="tp-body"><h2 id="v0-purpose">Purpose</h2>
-<p>Sau buổi này, học viên dựng được một component set chạy ở ít nhất hai kích thước màn hình, từ chính màn hình của mình, bằng auto layout và variables, trong một file đã được tổ chức rõ ràng.</p>
+<p>Sau buổi này, học viên dựng được một component set chạy ở ít nhất hai kích thước màn hình, từ concept đã chọn ở buổi UI Fundamentals, bằng auto layout và variables, trong một file đã được tổ chức rõ ràng.</p>
 <h2 id="v0-structure">Structure</h2>
 <ol>
-<li>Mở đầu, 10 phút: xem file học viên đã dọn theo guide gửi trước buổi (pages, tên layer, cấu trúc) và chốt màn hình sẽ làm việc.</li>
-<li>Nhiệm vụ 1, Variables, 22 phút: học viên chọn thang spacing 8pt, type scale và bộ màu nhỏ từ màn hình của mình, rồi tạo collection, đặt tên theo đường dẫn, dùng alias giữa primitive và semantic.</li>
+<li>Mở đầu, 10 phút: xem file học viên đã dọn theo guide gửi trước buổi (pages, tên layer, cấu trúc) và chốt concept sẽ dựng (concept đã chọn ở buổi UI Fundamentals).</li>
+<li>Nhiệm vụ 1, Variables, 22 phút: học viên lấy thang spacing, type scale và role màu từ token set của buổi UI Fundamentals, rồi tạo collection, đặt tên theo đường dẫn, dùng alias giữa primitive và semantic.</li>
 <li>Nhiệm vụ 2, Auto layout, 18 phút: dựng lại một màn hình bằng auto layout, dùng Hug, Fill, Fixed, min và max, gắn padding và gap vào variables.</li>
 <li>Nhiệm vụ 3, Component và variants, 20 phút: biến hai đến ba phần tử lặp lại (ví dụ nút, thẻ, thanh điều hướng) thành component, thêm variant property và component property.</li>
 <li>Nhiệm vụ 4, Breakpoints, 14 phút: điều chỉnh màn hình và component cho một breakpoint thứ hai, kiểm tra component co giãn đúng.</li>
@@ -53,17 +53,18 @@
 <ol>
 <li>Kiểm tra được file của mình theo guide: pages, tên layer và cấu trúc đủ rõ để người khác tìm đường (kiểm ở phần mở đầu, việc dọn file làm trước buổi).</li>
 <li>Dựng được layout linh hoạt bằng auto layout, với spacing, màu và cỡ chữ lấy từ variables.</li>
-<li>Tạo được component và variants từ màn hình của mình, dùng đúng loại property (variant, boolean, text, instance swap).</li>
+<li>Tạo được component và variants từ concept của mình, dùng đúng loại property (variant, boolean, text, instance swap).</li>
 <li>Điều chỉnh được layout và component cho ít nhất hai kích thước màn hình.</li>
 </ol>
 <p>Success check: file có pages, tên layer và cấu trúc rõ; một component set chạy được ở ít nhất hai kích thước màn hình.</p>
 <h2 id="v0-key-decisions">Key decisions</h2>
 <ul>
-<li>Ví dụ chạy: sitemap và màn hình của chính học viên, không dùng case mẫu.</li>
+<li>Thứ tự: học sau UI Fundamentals (cập nhật 2026-11-15). Màn hình để dựng là concept học viên đã chọn ở UI Fundamentals, kèm decision sheet và token set của buổi đó. Học viên chưa có màn hình sau bài Information Architecture, nên concept này là màn hình đầu tiên của họ.</li>
+<li>Ví dụ chạy: concept đã chọn ở UI Fundamentals, không dùng case mẫu.</li>
 <li>AI: không có trong buổi này (theo coaching plan, đây là buổi thuần kỹ thuật).</li>
 <li>Cắt: nhiệm vụ dọn file không làm trong buổi, chuyển thành guide gửi trước và 10 phút kiểm ở đầu buổi. Objective "tổ chức file" vẫn được kiểm bằng success check.</li>
 <li>Nền tảng (grid, 8pt, typography, color) giữ ngắn, chỉ đủ để dựng variables, nằm trong Nhiệm vụ 1. Học viên chọn giá trị từ file của mình rồi mới đặt tên.</li>
-<li>Hoãn sang buổi UI Fundamentals: phán đoán visual (5 layer) và lý do chọn từng giá trị.</li>
+<li>Đã dạy ở buổi UI Fundamentals (học trước buổi này): phán đoán visual (5 layer) và lý do chọn từng giá trị. Nhiệm vụ 1 bắt đầu từ token set học viên đã rút ra ở buổi đó, nên không dạy lại thang 8pt và type scale, chỉ chuyển giá trị thành variables.</li>
 <li>Hoãn sang buổi Design System: quy tắc đặt tên đầy đủ theo atomic (<code>a/m/o</code>), tài liệu hoá hệ thống, nhiều hơn một vài component.</li>
 <li>Lesson viết generic, không nhắc tên học viên hay chi tiết nhận dạng.</li>
 <li>Nguồn gốc ý tưởng: coaching plan của một học viên private, ghi <code>source: adapted-from-private-session</code> khi viết front matter của lesson.</li>
