@@ -36,7 +36,7 @@
 
 **SCHEMATIC.** Abstracted UI: grey bars for text, geometric shapes for controls, no real words, no photography. This is the register for teaching a mechanism. Its whole value is that it removes content as a variable, so nobody can be distracted by whether the copy is good or the photo is nice. Only structure is left, and structure is what the five layers are about. Style reference: `../assets/style-reference-schematic.png`.
 
-**REAL.** Fully rendered screens with real type, real colour, real images. This is the register for the stimulus set, the tracking screen and the reveal. It is used wherever *attractiveness itself* is the subject, because a grey-bar wireframe cannot fool anybody and the whole reveal depends on students having been fooled.
+**REAL.** Fully rendered screens with real type, real colour, real images. This is the register for the tracking screen and the reveal. It is used wherever *attractiveness itself* is the subject, because a grey-bar wireframe cannot fool anybody and the whole reveal depends on students having been fooled.
 
 **The rule: schematic teaches the mechanism, real shows what fools you.** Each layer runs schematic first, then real. Never mix the two registers inside one slide.
 
@@ -68,13 +68,13 @@
 
 ### Asset production note
 
-Less work than it looks. The schematic kit is one Figma component set reused across every diagram. The REAL register is one tracking screen built once in its broken state, plus five corrected variants and two effect versions (blurred, desaturated). The stimulus set is the only genuinely separate build.
+Less work than it looks. The schematic kit is one Figma component set reused across every diagram. The REAL register is one tracking screen built once in its broken state, plus five corrected variants and two effect versions (blurred, desaturated).
 
 ---
 
 ## Slide structure
 
-> **90-minute version, 45 slides.**
+> **90-minute version, 44 slides.**
 > Arc: Open → The Frame → Layers 1 to 4 → The Reveal → Layer 5 → Close → Practice → Homework.
 > Five teaching layers, each running the same four-beat pattern: the question it answers, the principle (schematic), the worked example (real), the sentence you say to a dev. That repetition is deliberate and should not be varied for interest.
 > **The reveal sits at slide 30, not slide 4.** The Aesthetic-Usability Effect only works if students have already been caught by it in the opening. Do not move it earlier.
@@ -107,34 +107,20 @@ Less work than it looks. The schematic kit is one Figma component set reused acr
 
 ---
 
-### PRACTICE · Which one ships?
-- Kicker: Before anything else
-- Title: Which one\n*would you ship?*
-- On-slide: The stimulus set, 6 to 8 screens of the same product, unlabelled. Instruction: **Pick one. Write the reason in one sentence.**
-- Speaker notes:
-  > Chọn một màn hình bạn sẽ đưa vào sản phẩm và viết lý do trong một câu.
-  - Các màn hình có chất lượng ngang nhau, một số do AI tạo và một số là thật, và bạn không được biết cái nào là cái nào.
-  - Lý do thường gặp là "trông gọn hơn", "hiện đại hơn", "có vẻ chuyên nghiệp hơn".
-  - Những lý do này nghe hợp lý nhưng chưa chỉ ra tiêu chí nào đứng sau.
-  - Lý do viết ra ở đây được đọc lại ở phần Reveal.
-- Ví dụ: có (bộ 6 đến 8 màn hình của cùng một sản phẩm, trong lesson)
-- Câu hỏi hay gặp: None.
-- 🎨 Visual hint: REAL. A grid of 6 to 8 fully rendered screen thumbnails, genuinely attractive, all similar quality. No labels, no numbers that imply ranking, no frames that make one look chosen. They must be hard to choose between.
-
 ---
 
 ### STATEMENT · The split
-- Kicker: What just happened
-- Title: Anyone can *make*\na screen like these.\nFew can say *why*\none is better.
-- On-slide: The same grid, greyed. Two screens ringed: the one the mentee picked and the one the instructor picked
+- Kicker: Before we begin
+- Title: Which *concept*\nwould you pick, and *why?*
+- On-slide: The mentee's 2 to 3 concepts as placeholders. Instruction: **Pick one by instinct. Give the reason in one sentence.**
 - Speaker notes:
-  > Bạn chọn màn hình này, mình chọn màn hình kia, và cả hai đều có lý do nghe hợp lý.
-  - Hai lý do đều dựa trên cảm giác, nên không có cách nào phân xử giữa chúng.
-  - Ai cũng làm được những màn hình như thế này, nhưng nói được vì sao cái này tốt hơn cái kia thì chưa.
+  > Chọn một concept theo cảm giác và nói lý do trong một câu.
+  - Mentee chọn một concept, giảng viên chọn một concept khác, và mỗi người nêu lý do của mình.
+  - Hai lý do đều dựa trên cảm giác nên không có cách nào phân xử giữa chúng.
   - Sự bất đồng này chưa cần lời giải và được mở lại ở phần Reveal.
-- Ví dụ: Không cần. Nhắc lại lựa chọn ở slide trước.
+- Ví dụ: Không cần. Dùng concept của mentee.
 - Câu hỏi hay gặp: None.
-- 🎨 Visual hint: REAL, desaturated to near-grey. Two different thumbnails ringed in `--sienna` hairline, the mentee's pick and the instructor's pick, showing two defensible choices that cannot be arbitrated. The rings are the only colour on the slide.
+- 🎨 Visual hint: 2 to 3 neutral `.ph` placeholders labelled "concept 1/2/3". No ranking, nothing that makes one look chosen. The only colour is `--ink`.
 
 ---
 
@@ -574,16 +560,16 @@ Less work than it looks. The schematic kit is one Figma component set reused acr
 
 ### IMAGE · Back to the start
 - Kicker: The return
-- Title: So why *that one?*
-- On-slide: The original stimulus set, back at full size
+- Title: So why *that concept?*
+- On-slide: The mentee's concepts again, the two picks ringed: the mentee's with "Lý do của bạn", the instructor's with "Lý do của mình"
 - Speaker notes:
-  > Bây giờ bạn vẫn chọn màn hình đó chứ, và vì sao?
+  > Bây giờ bạn vẫn chọn concept đó chứ, và vì sao?
   - Lý do viết ở đầu buổi được đọc lại.
   - Bạn thử trả lời trước với bốn layer từ vựng mà lúc đầu chưa có.
   - Câu trả lời thường tốt hơn lúc đầu, và sự cải thiện đó đáng được gọi tên trước khi sang phần reveal.
-- Ví dụ: có (bộ màn hình ở slide mở đầu, trong lesson)
+- Ví dụ: Không cần. Dùng concept của mentee.
 - Câu hỏi hay gặp: None.
-- 🎨 Visual hint: REAL, full saturation, larger than the opening grid. The mentee's original one-sentence reason and the instructor's reason overlaid on the two screens that were picked, small, in `--ink-muted`.
+- 🎨 Visual hint: The three placeholders at full size, concept 1 and concept 3 ringed in `--sienna`, each with its one-sentence reason in `--ink-muted`.
 
 ---
 
@@ -615,12 +601,12 @@ Less work than it looks. The schematic kit is one Figma component set reused acr
   - Các công cụ tạo sinh nâng mặt bằng thẩm mỹ lên cho mọi người, nên gần như mọi thứ bây giờ đều trông ổn.
   - Chỉ cần trông ổn thì không còn đủ để phân biệt các lựa chọn.
   > Một designer chỉ có gu làm công cụ đánh giá đã lặng lẽ mất công cụ đánh giá duy nhất của mình.
-  - Bộ màn hình ban đầu gồm cả màn hình do AI tạo và màn hình thật, và không ai được báo trước, vì chủ ý.
-  - Khi biết một màn hình do AI tạo, người ta đi tìm dấu vết thay vì áp dụng tiêu chí.
+  - Concept bạn chọn lúc đầu cũng thuộc vùng “trông ổn”, nên nó qua được chỉ bằng cảm giác.
+  - Nếu concept đó do AI vẽ thì tiêu chí vẫn như vậy.
   > Nguồn gốc không quan trọng. Tiêu chí giống nhau ở cả hai.
-- Ví dụ: có (bộ màn hình trộn AI và thật, trong lesson)
+- Ví dụ: Không cần. Nhắc lại concept của mentee.
 - Câu hỏi hay gặp: None.
-- 🎨 Visual hint: A distribution curve of "visual quality" shown twice: a wide, low old curve in `--ink-muted`, and a compressed curve piled against the ceiling in `--sienna`. Beneath, the stimulus thumbnails re-shown with their sources finally labelled in mono, deliberately interleaved so no pattern is visible.
+- 🎨 Visual hint: A distribution curve of "visual quality" shown twice: a wide, low old curve in `--ink-muted`, and a compressed curve piled against the ceiling in `--sienna`. Nothing beneath the curves.
 
 ---
 

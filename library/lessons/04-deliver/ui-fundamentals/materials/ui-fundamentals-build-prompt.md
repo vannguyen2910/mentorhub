@@ -17,7 +17,7 @@ Paste the block below into Claude Design with the two source files attached or i
 ---
 
 ```
-Build a 45-slide teaching deck from the attached slide outline.
+Build a 44-slide teaching deck from the attached slide outline.
 
 CONTEXT
 This is a 90-minute lesson for junior product designers about judging UI decisions
@@ -68,7 +68,7 @@ Build one template per slide type using the layout classes in RULES.md:
   END              -> .end (--paper-deeper background, never dark or sienna)
 Show me the templates before building pages.
 
-PHASE 3 - The 45 pages
+PHASE 3 - The 44 pages
 Build every slide from the outline. For each one, read its Visual hint line and
 build what it describes.
 
@@ -135,7 +135,7 @@ Start with Phase 1.
 
 **Why it stops between phases.** The schematic kit is what makes 30 diagrams consistent instead of 30 slightly different drawings. If the tool starts making slides before the kit exists, every specimen drifts and the deck stops reading as one system.
 
-**Why REAL slides are placeholders.** Eleven slides need genuinely attractive, fully rendered product screens: the stimulus set, the tracking screen in its eight versions, and the reveal. A generative tool cannot make those convincing enough to carry the Aesthetic-Usability argument, and an unconvincing one breaks the whole reveal. Build those in Figma and drop them into the frames.
+**Why REAL slides are placeholders.** Several slides need genuinely attractive, fully rendered product screens: the tracking screen in its eight versions, and the reveal. A generative tool cannot make those convincing enough to carry the Aesthetic-Usability argument, and an unconvincing one breaks the whole reveal. Build those in Figma and drop them into the frames.
 
 **The assets you still owe the deck:**
 1. Stimulus set, 6 to 8 screens of one product, mixed AI and real, genuinely hard to choose between

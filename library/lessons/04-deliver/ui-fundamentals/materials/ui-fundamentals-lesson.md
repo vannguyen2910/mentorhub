@@ -8,7 +8,7 @@ level: junior
 duration: "90 min"
 date: 2026-09-09
 draft: true
-slides: ""
+slides: "https://claude.ai/artifact/Lx2WEK3DKv3M8AVdkGxEx7"
 previous-session: "Information Architecture Basics. Output: sitemap and process map, no screens yet."
 next-session: "UI Foundations: Building in Figma. Builds the chosen concept with variables, auto layout and components."
 programs: [ui-ux-fundamentals:06]
@@ -62,7 +62,7 @@ By the end of this session, students will be able to:
 - **The student's sitemap and process map from Information Architecture Basics**, with one main flow chosen and one key step picked (the step where the user has to act or decide).
 - **Two or three low-fidelity concepts for that step**, one screen each, drawn in grey bars and simple shapes with no real copy. They must differ in structure, not only in colour. Done before the session.
 - **A public component library** (for example GOV.UK Design System, Material, Carbon) for Layer 5. The student has no design system of their own yet, so the library stands in for the system they would inherit. They pick one component from it that they find confusing and bring the confusion, not a resolution.
-- **The stimulus set** (instructor): six to eight screens of the same product, mixed AI-generated and real, close enough in visual quality that the choice is not obvious. Prepared in advance. See the facilitation note below.
+- **Three concepts from the mentee** (from the previous lesson's practice): two to three concepts for the main flow, brought to the session. No prepared screens are needed from the instructor.
 - **A contrast checking tool.** Any of them. The habit matters more than the tool.
 - **The food delivery tracking screen**, prepared at a teachable level of wrongness, used for every worked example on the slides. It is needed in eight versions: the original, five progressively corrected states (one per layer), a heavily blurred version and a desaturated version. Built once as one file with variants, not eight separate screens.
 - **The schematic specimen kit**, a small set of reusable abstracted UI parts (grey bars for text, geometric shapes for controls) used for every principle diagram. See the Visual language section of the slide outline for the drawing rules.
@@ -82,7 +82,7 @@ By the end of this session, students will be able to:
 
 | # | Block | Topic | Duration |
 |---|---|---|---|
-| 1 | Open | Which one ships? | 5 min |
+| 1 | Open | Which concept, and why? | 5 min |
 | 2 | Frame | You can make it. You cannot judge it. | 7 min |
 | 3 | Layer 1 | Space and layout | 10 min |
 | 4 | Layer 2 | Hierarchy, and two laws you will hear quoted wrongly | 10 min |
@@ -99,7 +99,7 @@ By the end of this session, students will be able to:
 
 > **Why the reveal sits at minute 49 and not at minute 5.** The Aesthetic-Usability Effect only lands if the student has already been caught by it. They pick the prettiest screen in the opening, spend forty minutes learning four layers, and only then find out what happened to them at the start. Named up front it is a fact they nod at. Named after four layers it is an explanation of their own behaviour, and it recontextualises everything they have just learned. Do not move it earlier.
 
-> **Facilitation note on the stimulus set.** Six to eight screens of the same product, some AI-generated, some real, and the students are not told which is which. This matters: the moment they know a screen came from an AI tool, they start hunting for AI tells instead of applying criteria, and the point of the session is that the source does not change the criteria. Each screen should fail on exactly one layer, and the failures should be spread across the five, so that whichever screen a student defends, some layer later in the session takes it away from them. Building this set is the single largest prep cost and it is reusable indefinitely.
+> **Facilitation note on the opening.** The mentee brings two or three concepts of their own and picks one by instinct. The instructor picks a different one and gives a reason too. Both reasons rest on feeling, so neither can be argued with, and that is the point. Do not correct either reason yet. The mentee's concepts must be real, not generated, which keeps the session's assumption that no screen has been generated for them.
 
 > **Facilitation note on Layer 5.** This is the layer most likely to overrun, and it is the one worth overrunning for. It is also the only layer with a political dimension, because the student is being taught to evaluate their manager's work. Read the guardrail out loud rather than assuming it is obvious.
 
@@ -111,13 +111,13 @@ By the end of this session, students will be able to:
 
 ## Core Content
 
-### Open · Which One Ships?
+### Open · Which Concept, and Why?
 
-Put the stimulus set up. Ask each student to pick the one they would ship and write the reason in one sentence.
+Ask the mentee to lay out their two or three concepts and pick the one they would build. One sentence for the reason, no more.
 
-Do not discuss the answers yet. Collect them, read two or three aloud without comment, and move on. The reasons will be some version of "it looks cleaner" or "it feels more modern," and the room will split. That split is the session's opening evidence and it should be left sitting there uncomfortably rather than resolved.
+Then pick a different concept yourself and give your reason in one sentence. Do not discuss either reason. Both will be some version of "it feels cleaner" or "it looks more modern", and neither can be tested.
 
-Name what just happened in one line, then leave it: everyone here can make a screen like these. Nobody here can say why one of them is better.
+Name what just happened in one line, then leave it: two people made a choice, both have a reason, and neither reason can settle it. The mentee's pick and yours stay on the table and are revisited in the Reveal and in the practice.
 
 ---
 
@@ -239,7 +239,7 @@ Two consequences, and the second one is the one that is rarely taught.
 
 Now the part that connects to the whole session. Attractiveness only works as a signal when attractiveness is scarce. Generative tools raised the aesthetic floor for everybody, so nearly everything now looks fine, so looking fine stopped discriminating between options. A designer whose only evaluation tool was taste has, in the last few years, quietly lost their only evaluation tool.
 
-That is why the stimulus set was mixed and why nobody was told which screens were generated. The source never mattered. The criteria are the same either way.
+The concept you chose at the start belongs to this zone too: it looked fine, so it passed on feeling alone. If a tool had drawn it, the criteria would be the same. The source never mattered.
 
 ---
 
