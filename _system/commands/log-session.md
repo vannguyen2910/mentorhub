@@ -19,11 +19,14 @@ Everything below is a draft until the user approves it. Nothing is sent to a men
 
 Work out the mentee, the topic and the date (default today). Ask once if the mentee or topic is unclear. Find the session number from `mentees/<slug>/sessions.md`.
 
+Also decide whether this is the **final session**: count the sessions in the coaching plan (`mentees/<slug>/plan/`) and compare with the session number. If it matches, say so, use `_template-programme-closeout.md` for the recap (not the plain session template) and run step 13. If the plan and the real programme differ, ask once. Read the previous recap's `Commitments & Next Steps` and keep every open item owned by Winnie: they go into this recap and the final report.
+
 ## 2. Get the source material (first match wins)
 
-1. **Transcript file or pasted text** from Zoom or Meet (txt, vtt, srt, docx, or pasted into chat). Keep **one file per session** in `mentees/<slug>/transcripts/`, named `session-NN-YYYY-MM-DD.md` (private, never published). Save the cleaned version from step 3 there, not the raw `.vtt` or `.srt`, and do not leave a second copy. If the mentee's folder holds older names such as `Session N - Transcript - <Name>.md`, rename them to this pattern so all files match. Never overwrite or delete a file silently: if two files for the same session exist, say which one is wrong and ask first.
-2. **Notion**: search the page "Coaching Program - <Full Name>" and open the matching session sub-page (notion-search, then notion-fetch).
-3. **Neither exists**: ask the user for 3 to 5 bullets and work from those. Do not invent session content.
+1. **Zoom Cloud (Zoom connector)**: when the user says a session just happened, look it up before asking for a file. Use the unified `search` tool with the `zoom_meeting` datasource (`search_meetings` is deprecated), or `recordings_list` for the date, matching on the mentee's name, the date and the calendar event; ask once if two meetings match. Then `get_recording_resource` with `types: transcript,summary,nextStep` (the transcript carries `display_name` per line, so use it for speaker labels) and `get_meeting_assets` for participants and recording status. Read only: do not download the recording file without asking, and report if the recording is still processing or has no transcript. Say in the transcript quality note that the source is the Zoom Cloud transcript and whether the speaker labels were present.
+2. **Transcript file or pasted text** from Zoom or Meet (txt, vtt, srt, docx, or pasted into chat). Keep **one file per session** in `mentees/<slug>/transcripts/`, named `session-NN-YYYY-MM-DD.md` (private, never published). Save the cleaned version from step 3 there, not the raw `.vtt` or `.srt`, and do not leave a second copy. If the mentee's folder holds older names such as `Session N - Transcript - <Name>.md`, rename them to this pattern so all files match. Never overwrite or delete a file silently: if two files for the same session exist, say which one is wrong and ask first.
+3. **Notion**: search the page "Coaching Program - <Full Name>" and open the matching session sub-page (notion-search, then notion-fetch).
+4. **None of these exist**: ask the user for 3 to 5 bullets and work from those. Do not invent session content.
 
 ## 3. Clean and extract (private working notes, from the transcript)
 
@@ -37,6 +40,10 @@ Follow the `vietnamese-transcript-cleaner` conventions (run its `scripts/clean_s
 - anything reusable for class (WF-2 candidates), described generically with no names
 
 Mark anything you are unsure of as `[to confirm]` rather than guessing.
+
+**Source quality check.** Count the `[?]` marks yourself (grep, do not estimate) and put the real number in the note. If the source has a single speaker label for everyone, or many lines are only dots, say so at the top and tell the user which cues to check against the recording. Recurring mishearings (for example "siêu" for skill, "repor" for repo) go to the `vietnamese-voice-dictionary` as suggestions only, never auto-fixes, when the word is also a real word.
+
+**Plan vs delivered.** Compare what was taught with the session's entry in the coaching plan and its Success Check. List what was not covered. If the user has said the change was intended, record it as a deliberate change and not as a failure; otherwise ask whether a catch-up session is needed. Do not assign the planned lesson slug blindly: if the lesson was barely taught, tell the user before step 5.
 
 ## 4. Draft the public playback
 
@@ -52,9 +59,9 @@ Add `--n N` to edit an existing session, `--status` if not Completed, and `--les
 
 ## 6. Create the Notion playback page (after playback approval)
 
-Search Notion for the page "Coaching Program - <Full Name>", then fetch the mentee's previous session page and copy its structure. Create the new page directly under the hub, next to the previous session page, titled `Session N — <Topic>` with the number emoji icon. Sections: Date and Status line, Parts 1..N of what was covered, From Your Live Project — Concerns & Coaching, Areas to Keep Developing, Your Committed Homework (Before Session N+1) as checkboxes, Examples from Other Learners (see below), Key Takeaway (next session date), Materials for This Session (use "sẽ được cập nhật sau" when there is no deck or recording link), Questions Between Sessions with the ADPList link. Follow the generic-playback rule in step 4: Vietnamese body, English headings, no mentee name, no first person for Winnie.
+Search Notion for the page "Coaching Program - <Full Name>", then fetch the mentee's previous session page and copy its structure. Create the new page next to the previous session page (the previous sessions sit under the hub's `Sessions` sub-page, so use that page as the parent), titled `Session N — <Topic>` with the number emoji icon. Sections: Date and Status line, Parts 1..N of what was covered, From Your Live Project — Concerns & Coaching, Areas to Keep Developing, Your Committed Homework (Before Session N+1) as checkboxes, Examples from Other Learners (see below), Key Takeaway (next session date), Materials for This Session (use "sẽ được cập nhật sau" when there is no deck or recording link), Questions Between Sessions with the ADPList link. Follow the generic-playback rule in step 4: Vietnamese body, English headings, no mentee name, no first person for Winnie.
 
-**Examples from Other Learners:** when Winnie promised examples, take homework for the same lesson from other mentees' `mentees/*/homework/<lesson-slug>/` folders. View each image first. Use an image only if it shows no person name and no brand or company name; describe the others in text instead. Upload images with `notion-create-file-upload`, then `curl` the file with a neutral filename (never the mentee's name), and embed with `<image source="file-upload://...">`. Tell Winnie which images were used and which were skipped and why, since project content may still need her check.
+**Examples from Other Learners:** only when Winnie promised examples in the session; if she did not, skip the section and say so in the report. When she did, take homework for the same lesson from other mentees' `mentees/*/homework/<lesson-slug>/` folders. View each image first. Use an image only if it shows no person name and no brand or company name; describe the others in text instead. Upload images with `notion-create-file-upload`, then `curl` the file with a neutral filename (never the mentee's name), and embed with `<image source="file-upload://...">`. Tell Winnie which images were used and which were skipped and why, since project content may still need her check.
 
 Fetch the page back once to confirm images render. Report the page link.
 
@@ -78,12 +85,13 @@ When the user sends homework images or files, copy them to `mentees/<slug>/homew
 
 ## 11. Report
 
-The build prints a "Mentee health check". Pull out the lines for this mentee and say what is still open (missing playback, slides, dates, baseline). Then report:
+The build prints a "Mentee health check". Pull out the lines for this mentee (rerun `python3 _system/scripts/build-home.py` and filter by name if the first build's output was cut) and say what is still open (missing playback, slides, dates, baseline). Then report:
 
 - lesson link and slides found (the user should drop a deck named `Session N - ...` into the mentee's `slides/` folder if none)
 - the private recap path and the follow-up drafts, ready to review
 - WF-2 candidates, if any, as a short list (do not adapt them without asking)
-- the Notion page link, and what is still waiting on the user: add deck and recording links to the Notion page, check the example images, and anything Winnie promised in the session
+- the Notion page link, and what is still waiting on the user: add deck and recording links to the Notion page, check the example images, anything Winnie promised in the session, and the open Winnie items carried over from the previous recap
+- `[?]` cues worth checking against the recording, and the plan-vs-delivered result
 
 ## 12. Preview (when asked, or after a site change)
 
