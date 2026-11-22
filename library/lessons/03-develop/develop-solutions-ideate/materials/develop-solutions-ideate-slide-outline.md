@@ -2,21 +2,25 @@
 title: "Develop Solutions & Ideate"
 lesson_file: "develop-solutions-ideate-lesson.md"
 level: ""
-slide_count: 46
+slide_count: 54
 duration: "90 min"
-status: draft
-built_deck: "Develop Solutions and Ideate.html"
-last_synced: 2026-10-10
+status: matches-built-deck
+built_deck: ""
+artifact_deck: "https://claude.ai/artifact/VZ5LpM7TH8Ec2Uhirtbvqn"
+last_synced: 2026-11-22
 ---
 
-> **Source of truth:** `develop-solutions-ideate-lesson.md`
-> All content changes (activities, phases, timing, concepts) are made there first, then reflected here.
-> This file contains only slide-specific concerns: layout types, on-slide text, visual hints, kickers, and speaker notes.
-> See `CLAUDE.md` → Lesson file sync rule for what triggers an update on which side.
+> **Sync note (2026-11-22).** Outline này được viết lại từ deck artifact (`artifact_deck`, 54 slide, tiếng Việt), theo quy tắc Deck edit: deck là bản được dạy, nên deck thắng. Bản cũ (46 slide, tiếng Anh, có Part 7 AI-Assisted Workflow) nằm ở `materials/_archive/develop-solutions-ideate-slide-outline-pre-artifact-sync-2026-11-22.md`; deck HTML cũ nằm ở `slides/_archive/`.
+>
+> Khác biệt chính so với bản cũ: thêm Part 01 (Từ Insight đến Opportunity, gồm Opportunity Map và How Might We), thêm slide ví dụ thật của học viên (mỗi slide một ví dụ), Activity 2 dài 13 phút có bước viết câu HMW, slide cuối là một câu takeaway, Part 7 AI-Assisted Workflow chuyển sang take-home và không còn slide.
+>
+> **Tên học viên:** các slide ví dụ ghi tên học viên (Anh Truong, Tam Nguyen) như deck, theo quyết định của Winnie ngày 2026-11-22 và học viên đã đồng ý. Đây là ngoại lệ có chủ đích so với quy tắc "không nêu tên mentee" trong `CLAUDE.md`; nếu cần dạy ở nơi khác thì thay bằng nhãn vai trò.
+>
+> **Cần xác nhận `[to confirm]`:** (1) Deck chưa ghi thời lượng cho các phần, ngoài ba activity; bảng thời lượng bên dưới là đề xuất. (2) Ba slide Activity nằm thành một khối sau Prioritisation (slide 50 đến 52), không nằm trong từng phần. (3) Slide 52 vẫn có dòng "Tiếp theo · Activity 4" dù lesson không còn Activity 4. (4) Slide Practice có ba bước, trong khi quy tắc cố định là hai card. (5) Slide 20 là slide tuỳ chọn.
 
-> **Layout vocabulary is fixed.** Every `###` slide header below uses one of the types documented in `_system/rules/slide-deck-rules.md`.
+> **Source of truth:** `develop-solutions-ideate-lesson.md`. Mọi thay đổi về activity, thời lượng, khái niệm sửa ở đó trước, rồi phản ánh vào file này. File này chỉ chứa phần riêng của slide: layout, chữ trên slide, visual hint, kicker và speaker notes.
 
-> **Built-deck status:** this outline mirrors the built deck (`slides/Develop Solutions and Ideate.html`, 46 slides) slide for slide. See the sync notes at the bottom for the deck's stale speaker notes.
+> **Layout vocabulary cố định**, theo `_system/rules/slide-deck-rules.md`.
 
 ---
 
@@ -27,828 +31,1399 @@ last_synced: 2026-10-10
 | Program | ux-class and private-training (standalone lesson) |
 | Track / session | Develop stage, standalone |
 | Stage | Develop |
-| Prior session | None required in class. Prerequisite: current-state user flow and problem statement from earlier lessons |
-| Next session | Prototype from the surviving concept |
-| Running example | Freelancer proposal follow-up (practice scenario carried through tree, rationale test, assumption audit). Disney and the Go1 content curation map are real examples shown once. Real sketches and storyboards (QR seat-unlock, urban farming, Go1, Amazon Go) are shown in Parts 3 and 4. |
+| Prior session | Không bắt buộc trong lớp. Điều kiện: có problem statement và current-state user flow từ các lesson trước |
+| Next session | Prototype từ concept đã qua validation |
+| Running example | Freelancer gửi proposal, xuyên suốt từ insight, opportunity, HMW, solution đến assumption. Disney, Urban Farming, Amazon Go và workshop thực phẩm địa phương là ví dụ thật, dùng một lần. Bài tập của học viên (Anh Truong, Tam Nguyen) dùng làm ví dụ fullscreen ở Part 02, 03, 04 và 07 |
 
 ---
 
-## Slide structure · 46 slides
+## Slide structure · 54 slides
 
-Three class activities (Activity 1, 2 and 3) plus teaching blocks, mirroring the lesson Session Structure table.
+Ba activity trong lớp cộng các khối dạy, theo bảng Session Structure của lesson. Thời lượng dưới đây là đề xuất `[to confirm]`, trừ ba activity có thời lượng ghi trên slide.
 
-- **Open & Mindset · 6 min** · slides 1–4
-- **Part 1 · Opportunity Tree Mapping + Flow Review · 33 min** · slides 5–12 (Activity 1, 23 min)
-- **Part 2 · Crazy 8s · 15 min** · slides 13–17 (Activity 2, 12 min)
-- **Part 3 · Concept Sketching · 13 min** · slides 18–24 (Activity 3, 8 min)
-- **Part 4 · Storyboarding · 5 min** · slides 25–29 (explain only, built in the assignment)
-- **Part 5 · Concept Validation · 5 min** · slides 30–36 (five quick checks, run in the assignment)
-- **Part 6 · Prioritisation · 5 min** · slides 37–38 (modelled example, exercise is take-home)
-- **Part 7 · AI-Assisted Workflow · 3 min** · slides 39–43
-- **Wrap-up + Assignment · 5 min** · slides 44–45
-- **Appendix (not presented)** · slide 46
+- **Open & Mindset · 5 phút** · slide 1 đến 4
+- **Part 01 · Từ Insight đến Opportunity · 10 phút** · slide 5 đến 15
+- **Part 02 · Opportunity Tree Mapping + Flow Review · 9 phút** · slide 16 đến 23 (Activity 1 chạy ở slide 50)
+- **Part 03 · Crazy 8s · 5 phút** · slide 24 đến 28 (Activity 2 chạy ở slide 51)
+- **Part 04 · Concept Sketching · 6 phút** · slide 29 đến 35 (Activity 3 chạy ở slide 52)
+- **Part 05 · Storyboarding · 3 phút** · slide 36 đến 39 (chỉ giới thiệu, làm trong bài tập)
+- **Part 06 · Concept Validation · 6 phút** · slide 40 đến 46 (ba cách kiểm tra nhanh, làm trong bài tập)
+- **Part 07 · Prioritisation · 4 phút** · slide 47 đến 49 (ma trận mẫu và một ma trận thật)
+- **Activities · 36 phút** · slide 50 đến 52 (Activity 1 là 15 phút, Activity 2 là 13 phút, Activity 3 là 8 phút)
+- **Wrap-up + Assignment · 6 phút** · slide 53 và 54
+- **Take-home (không có slide)** · AI-Assisted Workflow, nằm trong lesson, đánh dấu `[to confirm]`
 
-**Delivery modes** (full table in the lesson, "Delivery modes"):
+Tổng: 5 + 10 + 9 + 5 + 6 + 3 + 6 + 4 + 36 + 6 = 90 phút `[to confirm]`.
 
-- **Full · 90 min:** all 45 presented slides.
-- **Core 60 · 60 min:** present 1–24 (Activity 1 on its Core path, Activity 3 on its Core path), then slide 31 only as the validation pointer, then slide 44. Slides 25–29 (storyboarding), 37–38 (prioritisation) and 39–43 (AI workflow) go in the take-home pack.
-- **Mini 45 · 45 min:** as Core 60, and skip slides 11 (flow link, folded into Round 3), 9, 10 and 22–23 (real examples).
-- **Cut order when running late:** Could blocks first (25–29, 37–43), then Should (11, 30–36), never the three activities.
+**Delivery modes:** bảng đầy đủ nằm ở lesson, mục "Delivery modes".
+
+- **Full · 90 phút:** toàn bộ 54 slide.
+- **Cắt khi hết giờ:** bỏ slide 20 (Disney) và slide 21 (Urban Farming) trước, rồi các slide "Cách làm" của validation (43 và 45), không bao giờ cắt ba activity.
 
 ---
 
 ## Standard slide entry
 
-Every slide below uses: Kicker, Title, On-slide, Speaker notes (bullets, 3–6), Visual hint. Activity slides are PRACTICE layout (the `.practice--act` variant: timer button, rounds as cards).
+Header mỗi slide có dạng `### LAYOUT · slide-id`, trong đó `slide-id` là id slide trong artifact. Mỗi slide dùng các field: Kicker, Title, On-slide, Speaker notes (bullet và dòng `>`), Ví dụ, Câu hỏi hay gặp, Visual hint. Slide Activity dùng layout MILESTONE kèm nút timer, các vòng là card.
 
 ---
 
 ## Slides
 
-## Slides
-
-### 01 · COVER
+### COVER
 - Year: 2026 · Winnie Nguyen
 - Stage: Develop
 - Title: Develop\nSolutions\n*& Ideate*
-- Subtitle: From problem to idea to decision, without jumping to screens.
+- Subtitle: Từ vấn đề đến ý tưởng rồi đến quyết định, không nhảy thẳng vào màn hình.
 - Author: Winnie Nguyen
 - Credentials:
   - Senior Product Designer at NAB
-  - Former Sr Product Designer at Go1
-  - Former Product Design Instructor at StayLab
-- Right panel photo: real photo, a team at a glass wall covered in sticky notes, energetic workshop mood
+  - Master of UX & Service Design
+  - Product Design Instructor
+- Right panel photo: bàn tay cầm bóng đèn trên nền trời hồng xanh, tông hồng và xanh
 - Speaker notes:
-  - Welcome. Today we move from understanding the problem to generating solutions for it
-  - It will feel uncomfortable at first: the rules of ideation are not the rules of normal design work
-  - Ask for two anchors on the table: problem statement and current-state user flow
-  - 90 minutes, six parts, three hands-on activities, the rest is short teaching
-- 🎨 Visual hint: Cover layout, fixed. White left panel with year line, stage label, title (accent on line 3) and subtitle. Right panel is the real photo with dark gradient overlay, name and three credential lines bottom-left.
+  - None.
+- Ví dụ: Không cần.
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: Cover layout, fixed. Panel trái trắng với year line, stage, title (accent dòng 3) và subtitle; panel phải là ảnh thật với gradient tối, tên và ba dòng credentials.
 
 ---
 
-### 02 · NUMBERED · Today's session
-- Kicker: Today
-- Title: Problem to idea\nto decision
+### AGENDA · agenda
+- Kicker: Hôm nay
+- Title: Từ vấn đề đến ý tưởng\n*rồi đến quyết định*
 - On-slide:
-  - 01 Opportunity Tree
-  - 02 Flow Review
-  - 03 Crazy 8s
-  - 04 Concept Sketching
-  - 05 Storyboarding
-  - 06 Concept Validation
-  - 07 Prioritisation
+  - 01
+  - Từ Insight đến Opportunity
+  - 02
+  - Opportunity Tree
+  - 03
+  - Crazy 8s
+  - 04
+  - Concept Sketching
+  - 05
+  - Storyboarding
+  - 06
+  - Concept Validation
+  - 07
+  - Prioritisation
 - Speaker notes:
-  - Seven pieces, 90 minutes, three hands-on activities: tree and flow, Crazy 8s, one concept sketch
-  - Storyboarding is introduced today and built in the assignment
-  - Validation is new: we check a concept before we prototype it
-  - **Stay with the three activities. They are where the learning happens**
-- 🎨 Visual hint: TYPOGRAPHIC. Numbered grid, seven items.
+  - Bảy phần đi theo một mạch: từ insight sang opportunity, vẽ cây, nghĩ rộng, làm ý tưởng hiện hình, kéo ý tưởng ra theo thời gian, kiểm tra, rồi chọn.
+  - Crazy 8s và concept sketch làm trực tiếp trong lớp. Storyboard chỉ giới thiệu hôm nay, mỗi người tự làm trong bài tập về nhà.
+  - Validation là phần mới: kiểm tra concept trước khi làm prototype. Prioritisation chốt buổi, giúp chọn concept nào đáng đầu tư.
+  - Tập trung vào các activity, đó là chỗ học được nhiều nhất.
+  > Phần nào trong bảy phần bạn thấy mình ít làm nhất?
+- Ví dụ: Không cần.
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TYPOGRAPHIC. Bảy dòng đánh số 01 đến 07, mỗi dòng một phần của buổi học.
 
 ---
 
-### 03 · COMPARE · Mindset shift
-- Kicker: Mindset shift
-- Title: The best solution is\nalmost never *the first one*
+### COMPARE · mindset
+- Kicker: Thay đổi tư duy
+- Title: Solutions tốt nhất\n*hiếm khi là solutions đầu tiên*
 - On-slide:
-  - Before: "I have the problem. Let me design a solution."
-  - After: "I have the problem. Let me map the opportunity space, then generate solutions across it."
+  - Trước
+  - “Mình đã có vấn đề. Giờ mình thiết kế solutions.”
+  - Sau
+  - “Mình đã có vấn đề. Giờ mình liệt kê mọi nhu cầu và pain point của người dùng quanh nó, rồi tạo solutions cho từng cái.”
 - Speaker notes:
-  - Read the title aloud, then repeat "almost never"
-  - Example: a ride-hailing team wants more bookings and the first idea is "add a discount code". Easiest idea, not necessarily the best
-  - Most common failure: converging before exploring widely enough
-  - The value of ideation is the distance travelled from your starting assumption
-  - If you end in the same place you started, the session failed, even if the idea is good
-- 🎨 Visual hint: TYPOGRAPHIC. Two-column compare, Before in neutral, After in sienna.
+  - Chưa giải thích vội, để lớp tự thấy hơi khó chịu với câu này.
+  - Ví dụ Grab muốn tăng đơn đặt xe. Ý đầu tiên của hầu hết team là “thêm mã giảm giá”. Đó là solution dễ nghĩ nhất, chưa chắc tốt nhất.
+  - Cột Sau chèn thêm một tầng ở giữa: nhu cầu và pain point của người dùng.
+  - Lỗi phổ biến nhất không phải ý tưởng dở, mà là chốt quá sớm. Ba dạng hay gặp:
+  - Chốt ý đầu tiên vì nó nghe hợp lý
+  - Chọn ý mà người cấp cao thích hoặc pitch tự tin nhất
+  - Đánh giá ngay khi đang nghĩ, nên ý lạ bị loại trước khi kịp phát triển
+  - Giá trị của ideation là quãng đường đi từ giả định ban đầu của bạn. Cuối buổi mà quay về đúng chỗ xuất phát thì buổi học chưa đạt, dù ý tưởng đó có hay.
+  > Lần gần nhất bạn chốt solution ngay từ ý đầu tiên là khi nào?
+- Ví dụ: bản nháp (Grab, mã giảm giá)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TYPOGRAPHIC. Hai cột Trước / Sau, cột Sau nhấn màu purple.
 
 ---
 
-### 04 · STATEMENT · The rule
-- Kicker: The one rule
-- Title: No evaluation\nwhile *generating*
-- On-slide: "Yes, and..." not "Yes, but..."
-- Speaker notes:
-  - Say it again at the start of every generating activity
-  - No "that won't work", no "there's an app for that". Write it down
-  - Bad ideas are fuel for good ones: "deliver by drone" sounds silly but leads to shared pickup points in apartment blocks
-  - You will evaluate later: prioritisation is for that
-  - **For now the only failure is stopping too soon**
-- 🎨 Visual hint: TYPOGRAPHIC. Centred statement, accent on "generating".
-
----
-
-### 05 · SECTION DIVIDER · Part 01
-- Kicker: Part 01
-- Title: Opportunity\nTree *Mapping*
-- On-slide: Before you generate solutions, get clear on what opportunities exist.
-- Speaker notes:
-  - The most underrated tool in the toolkit, and most teams skip it
-  - They go from problem statement straight to brainstorm
-  - About 33 minutes including the flow review and Activity 1
-- 🎨 Visual hint: TYPOGRAPHIC. Section divider on paper-deeper, 120px number, accent on "Mapping".
-
----
-
-### 06 · DIAGRAM · What is an Opportunity Tree
-- Kicker: The framework
-- Title: Outcome, opportunities,\nsolutions
-- On-slide: Developed by Teresa Torres, *Continuous Discovery Habits*. Optional fourth layer: assumption tests.
-- Speaker notes:
-  - A visual framework connecting an outcome to the user opportunities that could achieve it, then to solutions for each
-  - It makes the link between user needs and design directions explicit
-  - Without it you brainstorm into a void; with it every idea anchors to a user need
-  - Payoff later: when a stakeholder asks "why are we building this?" you have a clean answer
-  - Example: outcome "more weekly listeners", opportunity "hard to find new music that fits my taste", solutions like a weekly personalised playlist
-  - Torres's full tree has a fourth layer: assumption tests under each shortlisted solution (Part 5)
-- 🎨 Visual hint: SCHEMATIC. Tree with one root, three opportunity branches, one to two solutions each.
-
----
-
-### 07 · NUMBERED · Three levels
-- Kicker: Three levels
-- Title: Solutions live under\n*opportunities*
+### STATEMENT · rule
+- Kicker: Một luật duy nhất
+- Title: Không đánh giá\n*khi đang tạo ý tưởng*
 - On-slide:
-  - 01 Outcome: your problem statement, one root node
-  - 02 Opportunities: user needs and pain points, spaces where a solution could live
-  - 03 Solutions: specific ideas that address one opportunity
-  - Pull-out: Users struggle to [need] because [barrier].
+  - “Yes, and…”
+  - “Yes, but…”
 - Speaker notes:
-  - Worked example, keep it in your head: outcome is "increase the share of proposals answered within 48 hours"
-  - Opportunity: "freelancers struggle to keep the conversation warm because follow-up feels like nagging"
-  - Solutions: a scheduled nudge, an open-decisions inbox, a soft 48-hour check-in
-  - Best outcomes are measurable behaviour change, e.g. "more learners reaching a 3-day streak"
-  - **Opportunities are NOT solutions.** "A better notification system" is a solution dressed up
-  - Formula: "Users struggle to [need] because [barrier]". No "because" means a guess
-- 🎨 Visual hint: TYPOGRAPHIC. Three numbered items; the opportunity formula as a pull-out line.
+  - Những câu bị cấm trong phòng: “cái đó không chạy đâu”, “có app làm rồi”. Ghi hết xuống, kể cả ý nghe dở. Nếu ai lỡ nói, gọi tên đó là vi phạm luật, không phải góp ý.
+  - Ý dở là nhiên liệu cho ý hay. Ví dụ “giao hàng bằng drone” nghe dở, nhưng dẫn tới “điểm nhận hàng chung trong chung cư”.
+  - Đánh giá để sau: Concept Validation và Prioritisation dành cho việc đó. Lúc này thất bại duy nhất là dừng quá sớm.
+  > Bạn thường chen câu “nhưng mà…” vào lúc nào trong một buổi brainstorm?
+- Ví dụ: có (drone giao hàng dẫn tới điểm nhận hàng chung)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TYPOGRAPHIC. Câu luật lớn ở giữa, hai cụm “Yes, and…” và “Yes, but…” nhỏ bên dưới.
 
 ---
 
-### 08 · PROCESS · How to build the tree
-- Kicker: Method
-- Title: Five steps to\na tree
+### SECTION DIVIDER · sec0
+- Num: 01
+- Kicker: Chuyển phần
+- Title: Từ Insight\n*đến Opportunity*
+- Sub: Insight chưa phải việc cần làm. Hãy biến nó thành nhu cầu cụ thể trước khi nghĩ solution.
+- Speaker notes:
+  - Phần này là cầu nối mà nhiều team bỏ qua: từ insight sang solution.
+  - Research xong, team thường có một xấp ghi chú và vài insight, rồi nhảy thẳng sang brainstorm. Chỗ đó mất mạch, và solution không còn truy về được người dùng.
+  - Phần này đi qua bốn việc:
+  - Làm gì với insight từ interview và desk research
+  - Opportunity Map là gì
+  - Cách làm Map từ insight
+  - Cách sinh solution từ Map
+  > Sau buổi phỏng vấn gần nhất, bạn đã làm gì với ghi chú trước khi bắt đầu thiết kế?
+- Ví dụ: Không cần (slide chuyển phần).
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TYPOGRAPHIC. Số lớn 01, title hai dòng, một dòng sub.
+
+---
+
+### PROCESS · ins-flow
+- Kicker: Làm gì với insight
+- Title: Từ ghi chú thô đến\n*insight*
 - On-slide:
-  - 01 Start with the outcome
-  - 02 Map opportunities (5–8)
-  - 03 Don't solve yet
-  - 04 Branch 2–3 solutions each
-  - 05 Read the shape
+  - 01
+  - Ghi từng quan sát
+  - Một ý một note, giữ lời người dùng càng nguyên càng tốt.
+  - 02
+  - Gom nhóm theo chủ đề
+  - Note cùng chủ đề đặt cạnh nhau, để nhóm tự hiện ra.
+  - I1
+  - 03
+  - Viết câu insight
+  - Mỗi nhóm một câu: điều nhóm này cho ta biết về người dùng.
 - Speaker notes:
-  - Step 2 does not start from zero: each HMW from Define is a candidate opportunity, restated as "users struggle to... because..."
-  - Step 3 is the hard one: your brain will jump to solutions, push it back up the tree
-  - Solutions come only after you have the opportunities
-  - Opportunities come from research, not imagination. If you guessed one, mark it as a hypothesis
-  - An opportunity with no solutions means you haven't thought hard about it yet, not that none exist
-  - Dense branches and gaps are the signal
-  - You will not solve every opportunity: develop two to four, leave the rest marked "to be defined"
-  - No friction, no opportunity. If the experience works and nobody complains, don't add one
-- 🎨 Visual hint: SCHEMATIC. Five-step process track, step 03 active.
+  - Ghi chú phỏng vấn thô chưa dùng được ngay. Có ba bước để biến nó thành insight.
+  - Bước 1: ghi mỗi quan sát lên một note. Một ý một note, giữ lời người dùng càng nguyên càng tốt.
+  - Bước 2: gom nhóm. Note nào cùng chủ đề thì đặt cạnh nhau, để các nhóm tự hiện ra thay vì đặt tên nhóm trước. Đây là affinity diagram.
+  - Bước 3: mỗi nhóm viết một câu insight, nói điều nhóm đó cho ta biết về người dùng.
+  - Làm một mình hay cả team đều được. Làm cả team thì mỗi người thấy được những điều người kia bỏ sót.
+  - Nếu có desk research như khảo sát, báo cáo, dữ liệu, cho vào cùng board và gom chung với phỏng vấn.
+  > Ghi chú research của bạn hiện đang nằm ở đâu, và ai từng đọc lại chúng?
+- Ví dụ: có (affinity diagram từ ghi chú phỏng vấn)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: CARDS. Ba line-art featured card, mỗi card một minh hoạ note và nhóm note, mũi tên mảnh nối giữa các card.
 
 ---
 
-### 09 · DIAGRAM · Example tree (optional)
-- Kicker: Teaching example, optional
-- Title: A clean tree, *Disney*
+### COMPARE · ins-statement
+- Kicker: Insight statement
+- Title: Quan sát khác\n*insight ở đâu*
 - On-slide:
-  - Outcome: increase visitors returning to Disney
-  - Opportunity 1: predict the right time to visit
-  - Opportunity 2: don't miss the best parts
-  - Solutions: ride-wait app, interactive map, digital signage; opportunity 2 "Not yet. The gap is visible."
+  - QUAN SÁT
+  - Client mở proposal ba lần nhưng không trả lời.
+  - INSIGHT
+  - Client không từ chối. Họ quên, vì proposal chìm giữa nhiều việc khác.
+  - Insight tốt nói về người dùng, đủ cụ thể để hình dung tình huống, và chưa chứa solution. Gắn ID và nguồn để truy ngược.
 - Speaker notes:
-  - **Optional: skip this slide if Part 1 is running over 33 minutes** and go straight to the Go1 example
-  - Opportunities are framed in the user's voice
-  - Three solutions all trace back to the same opportunity. That is the discipline
-  - Opportunity 2 has no solutions yet: the tree makes the gap obvious
-- 🎨 Visual hint: SCHEMATIC. Tree diagram with the empty second branch visibly open.
+  - Hai câu này nhìn giống nhau nhưng khác nhau. Quan sát là điều xảy ra. Insight là điều đó có nghĩa gì.
+  - Ví dụ: client mở proposal ba lần mà không trả lời. Đó là quan sát. Insight là: client không từ chối, họ quên, vì proposal chìm giữa nhiều việc khác.
+  - Insight tốt có ba đặc điểm:
+  - Nói về người dùng, không nói về sản phẩm
+  - Đủ cụ thể để hình dung được tình huống
+  - Chưa chứa solution
+  - Gắn ID và nguồn cho từng insight, ví dụ I2 từ phỏng vấn nào. Sau này opportunity sẽ trỏ về ID này, nên khi ai hỏi “sao mình làm cái này?” bạn truy ngược được.
+  - Dữ liệu trong ví dụ này là minh hoạ.
+  > Insight nào trong research của bạn thực ra mới chỉ là một quan sát?
+- Ví dụ: có (client mở proposal ba lần nhưng không trả lời)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TYPOGRAPHIC. Hai khối Quan sát / Insight cạnh nhau, dòng lưu ý bên dưới.
 
 ---
 
-### 10 · IMAGE · Real opportunity map
-- Kicker: Real example
-- Title: Here's one I built\nat *Go1*
-- On-slide: Go1 · Content Curation · 2024
+### NUMBERED · What is Opportunity Map · map-what
+- Kicker: Định nghĩa
+- Title: Opportunity Map\n*là gì?*
+- On-slide:
+  - LÀ GÌ
+  - Bản đồ các nhu cầu, pain point và mong muốn của người dùng, gom thành nhánh. Mỗi nhánh truy về insight đã có.
+  - VÌ SAO
+  - Cả team thấy được toàn bộ không gian vấn đề trước khi chọn hướng giải, thay vì nhảy từ insight đầu tiên sang solution đầu tiên.
+  - KHI NÀO
+  - Sau khi đã có insight từ interview hoặc desk research, trước khi brainstorm solution.
 - Speaker notes:
-  - Outcome: streamline onboarding of mid-market customers to enable scale
-  - Linked to a measurable metric: time to value, contract signed to 30% of learners consuming content
-  - Opportunity: decrease time taken to present a curated content list
-  - Solutions: automated curation, search upgrade, tagging content with skills
-  - **It's messier than the Disney tree. Real trees are.** What matters: every solution traces to an opportunity and every opportunity to the outcome
-- 🎨 Visual hint: REAL. Full-bleed screenshot of the opportunity map (`media/opportunity-map.jpg`).
+  - Opportunity Map là bản đồ các nhu cầu, pain point và mong muốn của người dùng, gom thành nhánh. Mỗi nhánh truy về insight đã có. Cách nhìn này đến từ Teresa Torres.
+  - Vì sao cần: cả team nhìn thấy toàn bộ không gian vấn đề trước khi chọn hướng giải. Không có map, team thường nhảy từ insight đầu tiên sang solution đầu tiên.
+  - Khi nào dùng: sau khi đã có insight từ interview hoặc desk research, trước khi brainstorm solution.
+  - Liên hệ với phần sau: Map là tầng opportunity. Opportunity Tree là Map cộng thêm outcome ở trên và solutions ở dưới. Hôm nay ta dựng Map trước, rồi mở rộng thành cây.
+  > Team bạn đang nhìn thấy cả không gian vấn đề, hay chỉ vài nhu cầu nổi bật nhất?
+- Ví dụ: có (liên hệ Opportunity Tree ở Part 1)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TYPOGRAPHIC. Numbered, ba cột What / Why / When với đường kẻ 4px phía trên, icon khung bên phải.
 
 ---
 
-### 11 · DIAGRAM · Connect the flow to the tree
+### NUMBERED · map-levels
+- Kicker: Ba thứ hay bị lẫn
+- Title: Insight, opportunity,\n*solution*
+- On-slide:
+  - I1
+  - I2
+  - I3
+  - ĐÃ BIẾT
+  - Insight
+  - Freelancer sợ nhắn lại vì giống đi nhắc nợ.
+  - O1
+  - I1
+  - I2
+  - CẦN GIẢI
+  - Opportunity
+  - Freelancer muốn giữ cuộc trò chuyện nhưng bị cản vì follow-up giống nhắc nợ.
+  - O1
+  - S1
+  - S2
+  - CÁCH GIẢI
+  - Solution
+  - Check-in nhẹ sau 48 giờ.
+- Speaker notes:
+  - Ba thứ hay bị lẫn. Dùng cùng một câu chuyện để thấy khác biệt.
+  - Insight là điều ta đã biết: freelancer sợ nhắn lại vì giống đi nhắc nợ.
+  - Opportunity là nhu cầu chưa được đáp ứng, và là thứ ta cần giải: freelancer muốn giữ cuộc trò chuyện nhưng bị cản vì follow-up giống nhắc nợ.
+  - Solution là cách giải: check-in nhẹ sau 48 giờ.
+  - Cách phân biệt nhanh: insight trả lời “ta thấy gì”, opportunity trả lời “người dùng cần gì mà chưa có”, solution trả lời “ta làm gì”.
+  - Nhảy thẳng từ insight sang solution là chỗ team hay bỏ lỡ nhu cầu thật.
+  > Câu nào bạn viết gần đây tưởng là opportunity nhưng thật ra là solution?
+- Ví dụ: có (freelancer, check-in nhẹ sau 48 giờ)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: CARDS. Ba line-art featured card cùng cấp (Insight, Opportunity, Solution), nhãn ĐÃ BIẾT / CẦN GIẢI / CÁCH GIẢI.
+
+---
+
+### PROCESS · map-steps
+- Kicker: Cách làm
+- Title: Bốn bước từ insight đến\n*map*
+- On-slide:
+  - I1
+  - I2
+  - I3
+  - 01
+  - Nhóm insight
+  - Gom theo chủ đề, dùng lại kết quả vừa gom nhóm.
+  - I1
+  - O1
+  - 02
+  - Viết thành opportunity
+  - “Muốn… nhưng bị cản vì…”. Ghi insight nguồn bên cạnh.
+  - O1
+  - O1.1
+  - O1.2
+  - 03
+  - Gom thành nhánh
+  - Opportunity lớn chia thành sub-opportunity nhỏ hơn.
+  - O1.1
+  - 04
+  - Chọn nhánh đáng giải
+  - Theo outcome và chỗ có nhiều bằng chứng. Chưa chọn solution.
+- Speaker notes:
+  - Bốn bước, và bước 2 là bước khó nhất.
+  - Bước 1: nhóm insight theo chủ đề, dùng lại kết quả gom nhóm vừa làm.
+  - Bước 2: viết lại mỗi nhóm thành opportunity theo công thức “người dùng muốn… nhưng bị cản vì…”. Thiếu chữ “vì” nghĩa là đang đoán. Ghi insight nguồn bên cạnh.
+  - Bước 3: gom các opportunity thành nhánh. Opportunity lớn chia thành sub-opportunity nhỏ hơn. Nhánh nào có nhiều opportunity thường là chỗ có nhiều nhu cầu.
+  - Bước 4: chọn nhánh đáng giải trước, theo outcome của bạn và chỗ có nhiều bằng chứng. Chưa chọn solution.
+  - Nguyên tắc: mỗi opportunity truy về ít nhất một insight. Không có insight nguồn thì ghi rõ là giả thuyết.
+  > Opportunity nào trong map của bạn chưa trỏ về được insight nào?
+- Ví dụ: có (freelancer)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: CARDS. Bốn line-art featured card, mini line-art cho nhóm, câu “muốn… nhưng bị cản vì…”, nhánh cây và lựa chọn nhánh.
+
+---
+
+### DIAGRAM · map-example
+- Kicker: Ví dụ · freelancer
+- Title: Viết lại insight thành\n*opportunity*
+- On-slide:
+  - INSIGHT
+  - I1
+  - Freelancer sợ nhắn lại vì giống đi nhắc nợ.
+  - I2
+  - Client mở proposal rồi quên trả lời.
+  - I3
+  - Freelancer không biết client đã xem chưa.
+  - OPPORTUNITY
+  - O1 · từ I1 · I3
+  - Freelancer muốn giữ cuộc trò chuyện nhưng bị cản vì follow-up giống nhắc nợ.
+  - O2 · từ I2
+  - Client muốn trả lời nhưng bị cản vì proposal chìm giữa nhiều việc.
+  - Lỗi hay gặp: “Thêm nút nhắc” nghe giống opportunity nhưng là solution đội lốt.
+- Speaker notes:
+  - Bên trái là ba insight từ ví dụ freelancer. Bên phải là hai opportunity sau khi viết lại.
+  - O1 gộp I1 và I3: freelancer muốn giữ cuộc trò chuyện nhưng không dám nhắn, và cũng không biết client đã xem chưa. O2 xuất phát từ I2: client muốn trả lời nhưng proposal chìm giữa nhiều việc.
+  - “Thêm nút nhắc” nghe giống opportunity nhưng là solution đội lốt. Cách sửa là hỏi ngược lại: nút đó giúp ai làm được gì, và họ đang bị cản vì đâu.
+  - Dữ liệu insight trong ví dụ là minh hoạ.
+  > Insight nào của bạn có thể gộp vào cùng một opportunity?
+- Ví dụ: bản nháp (freelancer proposal, dữ liệu minh hoạ)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: SCHEMATIC. Hai cột: ba ô insight I1 đến I3 bên trái, hai ô opportunity O1, O2 bên phải, nối bằng đường mảnh; dải tối ở dưới cho lỗi hay gặp.
+
+---
+
+### NUMBERED · What is How Might We · hmw-what
+- Kicker: Định nghĩa
+- Title: How Might We\n*là gì?*
+- On-slide:
+  - LÀ GÌ
+  - Câu hỏi mở biến một opportunity thành đề bài để sinh solution, theo mẫu: How might we giúp ai làm được gì?
+  - Vừa đủ:
+  - đủ hẹp để có chỗ bắt đầu, đủ rộng để ra nhiều hướng, không chứa sẵn solution.
+  - VÌ SAO
+  - Giữ cả team ở không gian vấn đề, không chốt solution đầu tiên nghĩ ra.
+  - Thời đại AI: AI trả lời rất nhanh, nên chất lượng câu hỏi quyết định kết quả. Đặt câu hỏi là việc của người.
+  - KHI NÀO
+  - Sau khi đã chọn được opportunity, trước khi brainstorm, chạy Crazy 8s hoặc hỏi AI.
+  - Không cần khi:
+  - đã biết solution và chỉ còn thực thi, hoặc chưa hiểu vấn đề (quay lại research).
+- Speaker notes:
+  - Slide trước ta có Opportunity Map và đã chọn được nhánh đáng giải. Slide này trả lời: làm sao đi từ một opportunity sang solution mà không chốt sớm.
+  - How Might We, viết tắt HMW, là câu hỏi mở biến opportunity thành đề bài để sinh solution. Cách làm này được Min Basadur phổ biến ở Procter & Gamble từ thập niên 1970, rồi IDEO và Stanford d.school đưa vào design thinking.
+  - Ba từ, mỗi từ một việc:
+  - How (làm thế nào): nghĩ đến cách làm, tức là có cách. Không hỏi “có nên không”
+  - Might (có thể): cho phép ý chưa chắc đúng. Đây là lý do ý dở được phép nói ra
+  - We (chúng ta): cả team cùng nghĩ, không ai sở hữu câu trả lời
+  - Độ rộng quyết định chất lượng. Ví dụ freelancer: “Làm sao để freelancer thành công?” quá rộng, không biết bắt đầu từ đâu. “Thêm nút nhắc tự động” quá hẹp, đã là solution. “Làm sao để freelancer follow-up mà không giống đi nhắc nợ?” thì ra được nhắc lịch, check-in nhẹ hoặc đổi cách nói. Slide sau đi kỹ ba mức này.
+  - Vì sao cần: team hay chốt solution đầu tiên nghĩ ra, còn HMW giữ team ở vấn đề đủ lâu để nghĩ rộng hơn. Trong thời đại AI, solution rẻ và nhanh, nên rủi ro chuyển sang giải đúng câu hỏi sai. Câu HMW đã có chữ “chatbot” hay “AI” thì đã chứa sẵn solution.
+  - Khi nào dùng: sau khi đã chọn được opportunity, trước khi brainstorm, chạy Crazy 8s hoặc hỏi AI. Không cần khi solution đã chốt, hoặc khi chưa hiểu vấn đề. Lúc đó quay lại research.
+  - Trong buổi này, mỗi solution nằm dưới một opportunity và truy về insight ID trên map.
+  > Opportunity nào của bạn đang bị gắn sẵn một solution trong đầu?
+- Ví dụ: có (HMW của freelancer follow-up)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TYPOGRAPHIC. Numbered, ba cột What / Why / When, đường kẻ 4px trên, icon khung bên phải.
+
+---
+
+### COMPARE · hmw-write
+- Kicker: Cách viết
+- Title: Ba mức của một\n*câu HMW*
+- On-slide:
+  - QUÁ HẸP
+  - How might we thêm nút nhắc tự động?
+  - Đã chứa solution, chỉ còn một đáp án.
+  - VỪA ĐỦ
+  - How might we giúp freelancer follow-up mà không giống đi nhắc nợ?
+  - Bám opportunity, vẫn mở nhiều hướng.
+  - QUÁ RỘNG
+  - How might we giúp freelancer thành công?
+  - Hướng nào cũng đúng, nên không giúp chọn.
+  - Mẫu: How might we giúp [ai] [làm được gì] mà không [rào cản]? Từ một opportunity có thể viết vài câu, chọn câu mở ra nhiều hướng nhất.
+- Speaker notes:
+  - Ba câu cho cùng một opportunity, từ trái sang phải. Chỉ khác nhau ở độ mở.
+  - Quá hẹp: “thêm nút nhắc tự động” đã là solution, nên nhóm chỉ còn nghĩ cách làm cái nút.
+  - Vừa đủ: “giúp freelancer follow-up mà không giống đi nhắc nợ” bám đúng opportunity O1 và vẫn mở nhiều hướng: nhắc lịch, check-in nhẹ, hoặc thay đổi cách nói.
+  - Quá rộng: “giúp freelancer thành công” thì hướng nào cũng đúng, nên không giúp chọn hướng nào.
+  - Mẫu viết: How might we giúp (ai) (làm được gì) mà không (rào cản). Rào cản lấy thẳng từ chữ “vì” trong opportunity.
+  - Từ một opportunity có thể viết vài câu HMW. Chọn câu mở ra nhiều hướng nhất, hoặc chạy lần lượt từng câu.
+  > Câu HMW của opportunity bạn đang rơi vào mức nào, hẹp, vừa hay rộng?
+- Ví dụ: có (freelancer: nút nhắc, follow-up, thành công)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: CARDS. Ba card Quá hẹp / Vừa đủ / Quá rộng, mẫu viết ở dưới.
+
+---
+
+### PROCESS · sol-gen
+- Kicker: Solution generation
+- Title: Từ opportunity đến\n*solution*
+- On-slide:
+  - O1
+  - 01
+  - Chọn một opportunity
+  - Nhánh đáng giải nhất trên Map.
+  - 02
+  - Viết thành câu HMW
+  - Dùng mẫu và ba mức vừa học.
+  - 03
+  - Sinh nhiều ý tưởng
+  - Dùng HMW làm đề bài cho Crazy 8s.
+- Speaker notes:
+  - Đến đây ta đã có opportunity và biết cách viết HMW. Slide này gói lại cả đường đi.
+  - Ba bước:
+  - Chọn một opportunity từ nhánh đã ưu tiên
+  - Viết nó thành câu HMW, theo mẫu và ba mức vừa học
+  - Sinh nhiều ý tưởng, dùng câu HMW làm đề bài. Ở phần sau ta làm việc này bằng Crazy 8s
+  - Ba luật khi sinh solution: nhiều trước, chọn sau. Không đánh giá khi đang nghĩ, để Prioritisation lo việc đó. Mỗi solution phải truy về một opportunity, ghi ID.
+  > Opportunity nào của bạn có thể viết thành câu HMW vừa đủ ngay bây giờ?
+- Ví dụ: có (O1, HMW, S1.1)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: CARDS. Ba line-art featured card, kèm ba luật nhỏ bên dưới.
+
+---
+
+### DIAGRAM · sol-example
+- Kicker: Ví dụ · freelancer
+- Title: Mỗi solution\n*có nguồn*
+- On-slide:
+  - O1
+  - Freelancer muốn giữ cuộc trò chuyện nhưng bị cản vì follow-up giống nhắc nợ.
+  - HMW
+  - How might we giúp freelancer follow-up mà không giống đi nhắc nợ?
+  - S1.1
+  - Nhắc lịch tự động
+  - S1.2
+  - Check-in nhẹ sau 48 giờ
+  - O2
+  - Client muốn trả lời nhưng bị cản vì proposal chìm giữa nhiều việc.
+  - HMW
+  - How might we giúp client không quên trả lời proposal?
+  - S2.1
+  - Hộp thư quyết định đang chờ
+- Speaker notes:
+  - O1 viết thành câu HMW: how might we giúp freelancer follow-up mà không giống đi nhắc nợ. Từ đó ra hai solution: nhắc lịch tự động và check-in nhẹ sau 48 giờ.
+  - Nhánh O2 là phía client hay quên. Câu HMW khác, solution khác: hộp thư quyết định đang chờ.
+  - Mỗi solution có ID và nguồn: S1.1 và S1.2 dưới O1, S2.1 dưới O2. Ai hỏi “sao mình làm cái này?”, bạn chỉ ngược lên được tới opportunity, rồi tới insight.
+  - Solution nào không có cha thì ghi là hypothesis.
+  - Bước tiếp theo là Crazy 8s, dùng câu HMW làm đề bài để nghĩ rộng hơn ba ý này.
+  > Trong ba solution này, solution nào bạn muốn thêm một hướng đi ngược lẽ thường?
+- Ví dụ: bản nháp (freelancer, S1.1, S1.2, S2.1)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: SCHEMATIC. Cây hai nhánh O1, O2, mỗi nhánh có HMW và solution gắn ID.
+
+---
+
+### SECTION DIVIDER · sec1
+- Num: 02
+- Kicker: Chuyển phần
+- Title: Opportunity Tree\n*Mapping*
+- Sub: Trước khi tạo solutions, hãy làm rõ có những opportunity nào.
+- Speaker notes:
+  - Opportunity tree là công cụ bị đánh giá thấp nhất, và hầu hết team bỏ qua. Họ đi thẳng từ problem statement sang brainstorm.
+  - Phần này có hai việc: dựng cây, rồi nối cây với flow hiện tại. Kết thúc bằng Activity 1, mỗi người vẽ cây của chính mình.
+  > Team bạn thường mất bao lâu để đi từ problem statement sang brainstorm?
+- Ví dụ: Không cần (slide chuyển phần).
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TYPOGRAPHIC. Số lớn 02, title hai dòng, một dòng sub.
+
+---
+
+### DIAGRAM · tree-framework
+- Kicker: Framework
+- Title: Outcome, opportunities,\n*solutions*
+- On-slide:
+  - Outcome
+  - Mục tiêu bạn đang hướng tới
+  - Opportunity
+  - Nhu cầu hoặc pain point của người dùng
+  - Solution
+  - Ý tưởng cụ thể
+  - Solution
+  - Ý tưởng cụ thể
+  - Opportunity
+  - Nhu cầu hoặc pain point của người dùng
+  - Solution
+  - Ý tưởng cụ thể
+  - Opportunity
+  - Nhu cầu hoặc pain point của người dùng
+  - Solution
+  - Ý tưởng cụ thể
+  - Solution
+  - Ý tưởng cụ thể
+  - Do Teresa Torres phát triển,
+  - Continuous Discovery Habits
+  - . Có thể thêm lớp thứ tư: assumption tests.
+- Speaker notes:
+  - Khung này do Teresa Torres phát triển, trong Continuous Discovery Habits.
+  - Điểm mấu chốt: solution không nối thẳng vào outcome. Nó đi qua nhu cầu của người dùng.
+  - Nối với phần trước: Opportunity Map là tầng opportunity. Cây là Map cộng thêm outcome ở trên và solutions ở dưới.
+  - Không có cây, brainstorm vào khoảng trống. Có cây, mỗi ý tưởng neo vào một nhu cầu. Về sau khi stakeholder hỏi “sao mình làm cái này?”, bạn có câu trả lời gọn.
+  - Ví dụ Spotify: outcome “tăng số người nghe mỗi tuần”. Opportunity “người dùng khó tìm nhạc mới hợp gu”. Solution: Discover Weekly, Daily Mix.
+  - Cây đầy đủ của Torres còn lớp thứ tư: assumption test dưới mỗi solution. Đó chính là phần Concept Validation lát nữa.
+  > Outcome nào trong dự án hiện tại của bạn đủ rõ để làm node gốc?
+- Ví dụ: có (Spotify, Discover Weekly)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: SCHEMATIC. Cây ba tầng: một node Outcome, các node Opportunity, các node Solution, nối bằng đường mảnh.
+
+---
+
+### NUMBERED · three-levels
+- Kicker: Ba cấp độ
+- Title: Solution nằm dưới\n*opportunity*
+- On-slide:
+  - 01
+  - Outcome
+  - Problem statement của bạn, một node gốc
+  - 02
+  - Opportunities
+  - Nhu cầu và pain point của người dùng, nơi một solution có thể xuất hiện
+  - 03
+  - Solutions
+  - Ý tưởng cụ thể giải quyết một opportunity
+- Speaker notes:
+  - Đi qua ba cấp. Outcome là problem statement của bạn, một node gốc. Outcome tốt là thay đổi hành vi đo được. Ví dụ Duolingo: “tăng số người học 3 ngày liên tiếp”.
+  - Ví dụ xuyên suốt: outcome “tăng tỉ lệ proposal được phản hồi trong 48 giờ”.
+  - Opportunity: “freelancer khó giữ cuộc trò chuyện vì follow-up giống như đi nhắc nợ”.
+  - Solutions: nhắc lịch tự động, hộp thư quyết định đang chờ, check-in nhẹ sau 48 giờ.
+  - Opportunity KHÔNG phải solution. “Hệ thống thông báo tốt hơn” là solution đội lốt. Công thức: “Người dùng muốn (làm việc gì) nhưng bị cản vì (rào cản gì)”. Thiếu chữ “vì” nghĩa là đang đoán.
+  - Lỗi hay gặp: viết “Thêm progress bar” vào chỗ opportunity. Viết lại thành nhu cầu: “Người dùng không biết mình đang ở đâu trong quy trình”.
+  > Opportunity nào bạn từng viết thực ra là một solution đội lốt?
+- Ví dụ: có (Duolingo, freelancer proposal)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: CARDS. Ba card Outcome, Opportunities, Solutions.
+
+---
+
+### PROCESS · build-tree
+- Kicker: Cách làm
+- Title: Năm bước để dựng một\n*cây*
+- On-slide:
+  - 01
+  - Bắt đầu từ outcome
+  - 02
+  - Map opportunity (5–8)
+  - 03
+  - Chưa vội giải quyết
+  - 04
+  - Mỗi opportunity phân 2–3 solution
+  - 05
+  - Review Opportunity Map
+- Speaker notes:
+  - Đi qua năm bước, nhấn bước 3 vì đó là bước khó nhất.
+  - Bước 1 và 2: bắt đầu từ outcome, rồi map 5–8 opportunity. Opportunity đến từ research, không phải trí tưởng tượng. Nếu bạn đoán, ghi rõ là giả thuyết.
+  - Bước 3: chưa vội giải quyết. Não sẽ nhảy sang solutions, hãy kéo nó về lại opportunity. Solutions chỉ đến sau khi đã có opportunity.
+  - Bước 4 và 5: mỗi opportunity phân 2–3 solution, rồi review map. Opportunity chưa có solution nghĩa là chưa nghĩ đủ sâu, không phải không có solution. Nhánh dày và chỗ trống chính là tín hiệu.
+  - Chưa có cây thì một bản thô dựng nhanh vẫn tốt hơn bỏ qua.
+  > Trong năm bước, bước nào bạn dễ nhảy sang solution nhất?
+- Ví dụ: có (rủi ro: progress bar)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: PROCESS. Năm bước đánh số.
+
+---
+
+### DIAGRAM · tree-disney
+- Kicker: Ví dụ minh hoạ, không bắt buộc
+- Title: Một cây gọn,\n*Disney*
+- On-slide:
+  - Outcome
+  - Tăng lượt khách quay lại Disney
+  - Opportunity
+  - Đoán đúng thời điểm nên đi
+  - Solution
+  - App báo thời gian chờ trò chơi
+  - Solution
+  - Bản đồ tương tác
+  - Solution
+  - Bảng chỉ dẫn điện tử
+  - Opportunity
+  - Không bỏ lỡ những phần hay nhất
+  - Solution
+  - Chưa có. Lỗ hổng đã lộ ra.
+- Speaker notes:
+  - Slide này tuỳ chọn. Bỏ qua nếu lớp đã hiểu và cần đi thẳng sang ví dụ Urban Farming.
+  - Opportunity được viết bằng giọng của người dùng, không phải giọng của team.
+  - Ba solution cùng truy về một opportunity. Đó là kỷ luật của cây. Opportunity thứ hai chưa có solution nào: cây làm lỗ hổng lộ ra, trong khi brainstorm thường che nó đi.
+  > Nhánh nào trên cây này đang trống, và vì sao?
+- Ví dụ: có (Disney)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: SCHEMATIC. Cây Disney với một nhánh opportunity còn trống. Slide tuỳ chọn.
+
+---
+
+### IMAGE · map-urban
+- Kicker: Ví dụ thực tế
+- Title: Urban Farming\n*opportunity map*
+- On-slide:
+  - [IMG: Opportunity map của dự án Urban Farming]
+  - Urban Farming · Opportunity map
+- Speaker notes:
+  - Ví dụ thật thứ hai: opportunity map của dự án Urban Farming, đọc từ trái sang phải. Persona là Urban Farmer. Outcome: tăng doanh thu bằng cách tiếp cận nhiều người tiêu dùng và cửa hàng organic hơn.
+  - Từ Problem xuống Opportunity: nông dân cần cách truyền đạt chất lượng, thực hành canh tác và chu kỳ thu hoạch để người mua tin sản phẩm. Mỗi opportunity chia thành sub-opportunity, mỗi sub-opportunity có nhiều solution element.
+  - Ngôi sao là các solution team vote chọn: farm profiles, seasonal availability listings, webshop, kết hợp online và offline.
+  > Nhánh nào dày nhất, và nhánh nào chỉ có một solution?
+- Ví dụ: có (Urban Farming)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: REAL. Ảnh opportunity map Urban Farming, một dòng caption.
+
+---
+
+### IMAGE · opp-anh
+- Kicker: Ví dụ thực tế
+- Title: Opportunity tree\n*đến solution*
+- On-slide:
+  - [IMG: Opportunity tree của một app đặt ghế bãi biển: opportunity màu đỏ, hai câu HMW màu xanh, các solution màu cam]
+  - Opportunity tree · Anh Truong
+- Speaker notes:
+  - Đây là bài tập thật, nối thẳng từ map ở slide trước.
+  - Cây có ba lớp màu:
+  - Đỏ là opportunity: “The app stops at the confirmation screen”. Khách có mã đặt chỗ nhưng không có đường đến ghế.
+  - Xanh là câu HMW, mỗi câu mở một hướng. Một câu hỏi về việc tìm ra ghế trên bãi biển, một câu hỏi về việc kéo dài màn xác nhận ra khoảnh khắc khách đến nơi.
+  - Cam là solution, mỗi ô là một cách làm cụ thể. Ví dụ bảng chỉ dẫn hàng ghế ngoài bãi, hoặc vé Apple Wallet có số ghế.
+  - Chú ý: mọi solution đều truy được ngược lên một câu HMW, rồi lên một opportunity. Ô vàng bên cạnh là outcome cần tăng: completion rate.
+  > Solution cam nào bạn thấy đã là một tính năng hoàn chỉnh, và nào vẫn còn là ý tưởng thô?
+- Ví dụ: có (bài tập của Anh Truong)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: REAL. Ảnh fullscreen opportunity tree, caption có tên học viên.
+
+---
+
+### DIAGRAM · flow-review
 - Kicker: Flow Review
-- Title: Every friction point\nis a candidate *opportunity*
+- Title: Mỗi friction point là một\n*opportunity tiềm năng*
 - On-slide:
-  - Step the user struggles with → opportunity
-  - Handoff that breaks down → opportunity
-  - Step that takes too long → opportunity
-  - Step with no clear outcome → opportunity
-  - Direction: improve the flow, or propose a new one
-  - Mini diagram: flow strip (step / friction) mapped to tree (friction / opportunity)
+  - Bước người dùng gặp khó
+  - → opportunity
+  - Chỗ bàn giao bị đứt
+  - → opportunity
+  - Bước tốn quá nhiều thời gian
+  - → opportunity
+  - Bước không có kết quả rõ ràng
+  - → opportunity
+  - Hướng đi
+  - Cải thiện flow hiện tại, hoặc đề xuất flow mới.
+  - Trong flow
+  - Bước
+  - Friction
+  - Bước
+  - Friction
+  - Friction
+  - Opportunity
+  - Opportunity
+  - Opportunity
 - Speaker notes:
-  - Tree lives in user space, flow lives in product space. Make them talk
-  - Put your flow and tree side by side; each friction point should point at an opportunity
-  - Example: a food-ordering flow where picking the address goes wrong and waiting for a driver takes too long. Each is a candidate opportunity
-  - An opportunity that matches no step: either the flow is incomplete or the opportunity is weaker than you think
-  - Direction: clustered around one step means improve; spread across the flow means rethink
-  - **You write that sentence in Activity 1, Round 3: it is the anchor for everything you sketch next**
-- 🎨 Visual hint: SCHEMATIC. Flow strip on top, tree below, connector lines between friction steps and opportunity nodes.
+  - Cây nằm trong không gian người dùng, flow nằm trong không gian sản phẩm. Cho chúng nói chuyện với nhau: đặt flow và cây cạnh nhau, mỗi friction point phải chỉ tới một opportunity.
+  - Bốn kiểu friction hay gặp:
+  - Bước người dùng gặp khó
+  - Chỗ bàn giao bị đứt
+  - Bước tốn quá nhiều thời gian
+  - Bước không có kết quả rõ ràng
+  - Ví dụ flow đặt đồ ăn trên ShopeeFood: bước chọn địa chỉ hay sai, bước chờ tài xế quá lâu. Mỗi chỗ đó là một opportunity ứng viên.
+  - Chiều ngược lại cũng đáng nhìn: opportunity không khớp bước nào thì hoặc flow thiếu, hoặc opportunity yếu hơn bạn nghĩ.
+  - Từ đó ra câu hướng đi. Friction dồn vào một vài bước thì cải thiện flow hiện tại. Friction rải khắp flow thì nghĩ lại cả flow. Viết hướng đi thành một câu để dùng cho Crazy 8s.
+  > Friction nào trong flow của bạn chưa có opportunity tương ứng?
+- Ví dụ: có (flow đặt đồ ăn)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: SCHEMATIC. Flow bên trái, cây bên phải, mỗi friction nối thẳng tới một opportunity.
 
 ---
 
-### 12 · PRACTICE · Activity 1
-- Kicker: Activity 1 · 23 min
-- Title: Map your tree.
+### SECTION DIVIDER · sec2
+- Num: 03
+- Kicker: Chuyển phần
+- Title: *Crazy 8s*
+- Sub: Bạn đã có map và hướng đi. Giờ hãy đi rộng, đi nhanh.
+- Speaker notes:
+  - Phần trước cho biết cần giải quyết cái gì. Phần này là nghĩ cách giải quyết, và nghĩ cho rộng trước khi chọn.
+  - Giải thích ngắn rồi vẽ ngay ở Activity 2, không để về nhà.
+  > Bạn thường dành bao nhiêu phút cho ý tưởng đầu tiên?
+- Ví dụ: Không cần (slide chuyển phần).
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TYPOGRAPHIC. Số lớn 03, title, một dòng sub.
+
+---
+
+### NUMBERED · What is Crazy 8s · crazy8-overview
+- Kicker: Cách làm
+- Title: Crazy 8s: nghĩ rộng,\n*đi nhanh*
 - On-slide:
-  - Use your own problem statement as the outcome.
-  - Round 01 · 5 min · Opportunities: write at least 5 user needs. No solutions yet.
-  - Round 02 · 7 min · Solutions: add 2–3 solutions under your best 3 opportunities.
-  - Round 03 · 7 min · Flow link: connect each friction point to an opportunity. Write your direction.
-  - Round 04 · 4 min · Read the tree: find the fullest and emptiest branch. Share your direction.
-  - Start timer · 23:00
+  - LÀ GÌ
+  - Bài tập phác thảo có giới hạn thời gian: gấp một tờ giấy thành tám ô và vẽ tám ý tưởng khác nhau trong tám phút.
+  - VÌ SAO
+  - Ý tưởng đầu tiên hiếm khi là ý tưởng tốt nhất.
+  - Giới hạn thời gian khiến bạn không kịp chỉnh chu, và buộc bạn đi qua những ý hiển nhiên.
+  - KHI NÀO
+  - Sau khi đã có hướng đi từ opportunity tree, và trước khi chọn một concept để phác thảo chi tiết.
+  - Phù hợp với design workshop.
 - Speaker notes:
-  - Own problem statement, or the freelancer proposal scenario on the practice slide
-  - Remind: no solutions in round 1, no evaluating
-  - Round 3: draw a line from each friction point to its opportunity; add any missing opportunity
-  - No flow? Use the 5–7 steps a freelancer takes after sending a proposal and mark where you'd expect struggle
-  - Debrief inside round 4, no extra time: which branch surprised you?
-  - Short on time? Core path, 10 min: round 1 for 4 (5 opportunities), round 2 for 3 (best 2, two solutions each), round 3 for 3 (one struggle step, write the direction). Skip line-drawing and round 4
-  - When the end time arrives, jump to the direction sentence whatever round you are in. The rest is take-home
-  - **Start the timer. The direction sentence is the anchor for everything you sketch next**
-- 🎨 Visual hint: TYPOGRAPHIC. Practice layout, `.practice--act` variant: four round cards and a start-timer button (23:00).
+  - Crazy 8s lấy từ Design Sprint (Jake Knapp, Google Ventures). Gấp A4 thành 8 ô, vẽ 8 ý tưởng khác nhau trong 8 phút, mỗi ô khoảng 1 phút.
+  - Ý đầu tiên hiếm khi là ý tốt nhất. Giới hạn thời gian không cho bạn kịp chỉnh chu, và buộc bạn đi qua những ý hiển nhiên. Dùng sau khi đã có hướng đi từ opportunity tree, trước khi chọn concept để phác chi tiết.
+  - Đề bài của mỗi lần chạy là một câu HMW, như câu bạn vừa viết ở phần trước.
+  - Ví dụ bài toán “đặt bàn nhà hàng” ra 8 hướng: chat, giọng nói, đặt chung với bạn bè, trả trước, theo tâm trạng.
+  - Cả team chạy cùng lúc thì ra khoảng 80 panel chỉ trong 8 phút.
+  - Slide này chỉ giải thích. Vẽ thật ở Activity 2.
+  > Với bài toán đặt bàn nhà hàng, ngoài app bạn còn nghĩ ra hướng nào?
+- Ví dụ: có (đặt bàn nhà hàng)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TYPOGRAPHIC. Numbered, ba cột What / Why / When.
 
 ---
 
-### 13 · SECTION DIVIDER · Part 02
-- Kicker: Part 02
-- Title: Crazy\n*8s*
-- On-slide: You have a map and a direction. Now go wide, fast.
-- Speaker notes:
-  - Fifteen minutes: about 3 of explanation, then Activity 2 (12 min) runs live in the room
-  - Explain briefly, then draw. Do not leave the sketching for home
-- 🎨 Visual hint: TYPOGRAPHIC. Section divider on paper-deeper.
-
----
-
-### 14 · NUMBERED · Crazy 8s overview
-- Kicker: Method
-- Title: Crazy 8s:\ngo wide,\nfast
+### PROCESS · crazy8-steps
+- Kicker: Cách làm
+- Title: Tám ý tưởng,\n*tám phút*
 - On-slide:
-  - What: a timed sketching exercise: fold a sheet into eight panels and draw eight different ideas in eight minutes.
-  - Why: the first idea is rarely the best one. The time limit stops you polishing and forces you past the obvious.
-  - When: after you have a direction from the opportunity tree, before you pick a concept to sketch in detail. Suitable for a design workshop.
+  - 01
+  - Gấp A4 thành 8 ô
+  - 02
+  - Hẹn giờ: 8 phút
+  - 03
+  - Mỗi ô một ý tưởng, ghi nhãn
+  - 04
+  - Không tẩy xoá, không chỉnh chu
+  - 05
+  - Khoanh tròn hai ý hay nhất
 - Speaker notes:
-  - From the Design Sprint (Jake Knapp, Google Ventures)
-  - What: fold paper into 8 panels, 8 different ideas, about a minute each
-  - Why: the time limit stops you polishing
-  - When: after the tree gives you a direction
-  - Example: "restaurant booking" gives eight directions: chat, voice, group booking, prepay, by mood
-- 🎨 Visual hint: TYPOGRAPHIC. Three What / Why / When cards (built as the `.mth` method layout).
+  - Đi qua năm bước, bắt đầu từ câu HMW đã chọn làm đề bài. Không tẩy xoá vì tẩy là đang đánh giá. Hộp, mũi tên, nhãn, người que là đủ, đọc hiểu trong 15 giây.
+  - Bẫy lớn nhất: tám biến thể của một ý tưởng. Hãy nhắm tám hướng tiếp cận khác nhau, trong đó có một hướng đi ngược lẽ thường.
+  - Ví dụ cho “đặt bàn nhà hàng”: đặt qua chat, bằng giọng nói, đặt chung với bạn bè, trả trước, theo tâm trạng.
+  - Bước cuối khoanh hai ý hay nhất. Hai ô này là nguyên liệu cho concept sketch ở phần sau.
+  - Tuỳ chọn khi đã điền đủ tám ô: hỏi AI chat “What assumption do all 8 share? Give me 3 ideas that break it.” Chỉ hỏi sau khi bạn đã tự vẽ, không hỏi trước.
+  > Hướng đi ngược lẽ thường nào bạn muốn thử ở ô cuối?
+- Ví dụ: có (đặt bàn nhà hàng)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: PROCESS. Năm bước đánh số.
 
 ---
 
-### 15 · PROCESS · What is Crazy 8s
-- Kicker: Method
-- Title: Eight ideas,\neight minutes
+### IMAGE · crazy8-output
+- Kicker: Ví dụ thực tế
+- Title: Kết quả\n*trông thế nào*
 - On-slide:
-  - 01 Fold A4 into 8 panels
-  - 02 Timer: 8 minutes
-  - 03 One idea per panel, label it
-  - 04 No erasing, no perfecting
-  - 05 Circle the best two
+  - [IMG: Ideation board với nhóm HMW và lưới Crazy 8s của bốn người]
+  - Một ideation board thật: các nhóm HMW với silent dot vote, và lưới Crazy 8s của bốn người
 - Speaker notes:
-  - Most people spend their best thinking on the first plausible idea; the constraint forces you to keep moving
-  - Boxes, arrows, labels, stick figures. Readable in 15 seconds
-  - **Trap: eight variations of one idea.** Aim for eight approaches, one that contradicts the obvious
-  - Example, restaurant booking: via chat, by voice, with friends, prepaid, by mood
-- 🎨 Visual hint: SCHEMATIC. Five-step track.
+  - Đây là một ideation board thật, từ workshop về thực phẩm địa phương bền vững. Bên trái: các HMW theo nhóm, dot vote im lặng. Bên phải: Crazy 8s của bốn người tham gia.
+  - Nhanh, thô, có nhãn. Có ô chi tiết, có ô chỉ một logo và một nhãn. Không sao cả: kết quả cần là độ rộng, không phải độ bóng bẩy.
+  - Các chấm vote cho thấy team tò mò ở đâu. Đó là nơi cuộc trò chuyện tiếp theo bắt đầu.
+  > Ô nào trên board này chỉ có một logo và một nhãn mà vẫn có ích?
+- Ví dụ: có (workshop thực phẩm địa phương)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: REAL. Ảnh ideation board có nhóm HMW và lưới Crazy 8s.
 
 ---
 
-### 16 · IMAGE · Real workshop output
-- Kicker: Real example
-- Title: What the output\nlooks like
-- On-slide: A real ideation board: HMW themes with silent dot votes, and four people's Crazy 8s grids
-- Speaker notes:
-  - Sustainable local food workshop. Left: HMW opportunities in themes, silent dot votes
-  - Right: Crazy 8s from four participants. Rough, fast, labelled
-  - Some panels are detailed, some are barely a logo and a label. That's fine
-  - **The output is range, not polish**
-  - The dots show where the team got curious: that's where the next conversation starts
-  - At team scale: ten people, about 80 panels. The decision-maker picks, or the group votes silently. Then ask an AI chat tool to find connections, only after the group has generated
-- 🎨 Visual hint: REAL. Full-bleed screenshot of the board (`media/ideate-workshop.png`).
-
----
-
-### 17 · PRACTICE · Activity 2
-- Kicker: Activity 2 · 12 min
-- Title: Go wide with Crazy 8s.
+### IMAGE · crazy8-tam
+- Kicker: Ví dụ thực tế
+- Title: Crazy 8s\n*tám ô, tám ý*
 - On-slide:
-  - Pick one opportunity from your tree and use your flow direction as the anchor.
-  - Round 01 · 2 min · Fold and pick: fold an A4 sheet into 8 panels. Choose one opportunity from your tree.
-  - Round 02 · 8 min · Sketch 8 ideas: one idea per panel, label each one. No erasing, no perfecting. Aim for eight approaches, not eight variations.
-  - Round 03 · 2 min · Circle the best two: circle two panels worth developing. Share one with the class.
-  - Start timer · 12:00
-  - Banner: No evaluating while generating
+  - [IMG: Bảng trắng chia tám ô, mỗi ô là một phác thảo màn hình về thiết lập thanh toán cho shop]
+  - Crazy 8s · Tam Nguyen
 - Speaker notes:
-  - Runs in class, 12 minutes: 2 fold and pick, 8 sketch, 2 circle and share
-  - Repeat the rule: no evaluating while generating. Fill all 8 panels before judging any
-  - Trap: eight variations of one idea. Aim for eight different approaches, one against the obvious
-  - Optional, only after finishing: ask an AI chat tool "What assumption do all 8 share? Give me 3 ideas that break it". If all eight are apps, the shared assumption is "it must be an app"
-  - Debrief inside round 3: how many were variations on idea #1?
-  - No shorter version: eight panels in eight minutes is the method. If late, fold the paper beforehand and skip the sharing
-  - **Start the timer**
-- 🎨 Visual hint: TYPOGRAPHIC. Practice layout, `.practice--act` variant, three round cards, timer button (12:00) and a "No evaluating while generating" banner.
+  - Đây là một lượt Crazy 8s thật trên bảng trắng: tám ô, mỗi ô một ý, vẽ nhanh.
+  - Chú ý ba điều:
+  - Cùng một vấn đề, tám cách thể hiện khác nhau: cảnh báo màu đỏ trên đầu trang, danh sách shop kèm trạng thái, đường đi từ nút publish đến mục payment.
+  - Nét vẽ thô và chữ viết tay. Không ô nào cố cho đẹp, đúng tinh thần đi nhanh và đi rộng.
+  - Các ô không giống nhau về độ chi tiết. Có ô chỉ vài nét, có ô đã có luồng từng bước.
+  - Đừng đánh giá từng ô ở bước này. Việc chọn ô nào đi tiếp là bước sau.
+  > Trong tám ô, ô nào khác nhất so với cách bạn sẽ nghĩ đầu tiên?
+- Ví dụ: có (bài tập của Tam Nguyen)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: REAL. Ảnh fullscreen bảng trắng tám ô, caption có tên học viên.
 
 ---
 
-### 18 · SECTION DIVIDER · Part 03
-- Kicker: Part 03
+### SECTION DIVIDER · sec3
+- Num: 04
+- Kicker: Chuyển phần
 - Title: Concept\n*Sketching*
-- On-slide: Make the most promising ideas visible enough to evaluate.
+- Sub: Làm những ý tưởng triển vọng nhất đủ rõ để đánh giá.
 - Speaker notes:
-  - You have directions; now make them readable
-  - About 13 minutes including a short live demo (2 min) and the 8-minute sketch in Activity 3
-- 🎨 Visual hint: TYPOGRAPHIC. Section divider on paper-deeper.
+  - Bạn đã có hướng đi. Giờ làm cho nó đọc hiểu được, để người khác nhìn vào là hiểu.
+  - Phần này có một demo trực tiếp, rồi Activity 3 mỗi người phác một concept của mình.
+  > Ý tưởng nào của bạn đang chỉ nằm trong đầu?
+- Ví dụ: Không cần (slide chuyển phần).
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TYPOGRAPHIC. Số lớn 04, title, một dòng sub.
 
 ---
 
-### 19 · NUMBERED · Concept sketching overview
-- Kicker: Method
-- Title: Concept sketching:\nmake an idea\n*visible*
+### NUMBERED · What is Concept Sketching · sketch-overview
+- Kicker: Cách làm
+- Title: Concept sketching: làm ý tưởng\n*hiện hình*
 - On-slide:
-  - What: a rough drawing of one idea that shows its core structure, key interaction and what makes it different.
-  - Why: a sketch can be read, questioned and tested in minutes. It exposes unclear logic before any time goes into a prototype.
-  - When: after Crazy 8s or the opportunity tree, once you have a promising idea, and before you validate or prototype it.
+  - LÀ GÌ
+  - Một bản vẽ thô của một ý tưởng, cho thấy cấu trúc cốt lõi, tương tác chính và điểm khác biệt.
+  - VÌ SAO
+  - Một bản sketch có thể đọc, hỏi và test chỉ trong vài phút. Nó phơi bày logic chưa rõ trước khi mất thời gian làm prototype.
+  - KHI NÀO
+  - Sau Crazy 8s hoặc opportunity tree, khi đã có một ý tưởng triển vọng, và trước khi validate hay làm prototype.
 - Speaker notes:
-  - What: one rough drawing of one idea
-  - Why: it can be read, questioned and tested in minutes, and shows unclear logic before a prototype
-  - When: after Crazy 8s or the tree, before validating
-  - Example: after Crazy 8s for restaurant booking, pick the "book by voice" panel and sketch the main screen with labelled components
-- 🎨 Visual hint: TYPOGRAPHIC. Three What / Why / When cards (`.mth` method layout).
+  - Concept sketch là bản vẽ thô của một ý tưởng, cho thấy cấu trúc cốt lõi, tương tác chính và điểm khác biệt. Đọc, hỏi và test được trong vài phút. Nó làm lộ logic chưa rõ trước khi bạn bỏ thời gian làm prototype.
+  - Một solution trên cây có thể có nhiều concept, mỗi concept là một cách cụ thể hoá solution đó.
+  - Dùng sau Crazy 8s hoặc opportunity tree, khi đã có ý tưởng triển vọng, trước khi validate hoặc làm prototype.
+  - Ví dụ, sau Crazy 8s cho “đặt bàn nhà hàng”, chọn ô “đặt bằng giọng nói” và phác màn hình chính cùng nhãn thành phần.
+  > Ý tưởng nào trong map của bạn đáng được phác thô trước?
+- Ví dụ: có (đặt bàn bằng giọng nói)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TYPOGRAPHIC. Numbered, ba cột What / Why / When.
 
 ---
 
-### 20 · STATEMENT · What is a concept sketch
-- Kicker: Definition
-- Title: A thinking tool,\nnot a *wireframe*
-- On-slide: Core structure. Key interaction. What makes it different.
-- Speaker notes:
-  - One rough illustration of one idea
-  - Test: can someone who wasn't in the room get the structure, interaction and differentiating logic?
-  - If you must narrate it, the fix is more labelling, not more polish
-  - Four parts of a finished sketch: key moment, component labels, intent notes, "This works because..."
-  - Concept is not solution: one concept can hold several flows. It can combine pieces of several Crazy 8s panels, or of several people's panels
-- 🎨 Visual hint: TYPOGRAPHIC. Centred statement with three short lines beneath.
-
----
-
-### 21 · PROCESS · How to sketch a concept
-- Kicker: Method
-- Title: Four steps,\none moment
+### NUMBERED · sketch-definition
+- Kicker: Định nghĩa
+- Title: Công cụ để suy nghĩ, không phải\n*wireframe*
 - On-slide:
-  - 01 Pick one idea, the most interesting
-  - 02 Draw the key moment
-  - 03 Label, don't polish
-  - 04 "This works because..."
+  - 01
+  - Cấu trúc cốt lõi.
+  - 02
+  - Tương tác chính.
+  - 03
+  - Điểm khác biệt.
 - Speaker notes:
-  - Pick the one that surprised you, not the most refined
-  - One screen or one interaction, the moment that makes it legible
-  - A labelled scratchy sketch beats a polished unlabelled screen
-  - **The rule that catches everyone: finish "This works because..."** If you can't, go back to the tree
-  - **Live demo (about 2 min):** sketch one concept on the shared board, say what you label first, pause where it breaks
-- 🎨 Visual hint: SCHEMATIC. Four-step track.
+  - Sketch là công cụ để suy nghĩ, không phải wireframe. Phép thử: người không có mặt trong phòng có hiểu cấu trúc, tương tác và logic khác biệt không?
+  - Nếu phải thuyết minh thì cách sửa là thêm nhãn, không phải làm đẹp hơn.
+  - Bốn phần của một bản phác hoàn chỉnh:
+  - Khoảnh khắc chính
+  - Nhãn thành phần
+  - Ghi chú ý đồ
+  - “Cái này chạy được vì…”
+  - Điểm vào để bắt đầu một concept có nhiều: một câu HMW, một insight, một phép so sánh, một ràng buộc, hoặc một ô Crazy 8s.
+  > Người không có mặt trong phòng có đọc được sketch của bạn không?
+- Ví dụ: có (phép thử người ngoài phòng)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TYPOGRAPHIC. Ba mục đánh số.
 
 ---
 
-### 22 · IMAGE · Real concept sketch · QR seat unlock
-- Kicker: Real example
-- Title: Two journeys,\none *concept*
-- On-slide: Concept sketching · QR seat unlock (a mentee's work, shown with permission)
-- Speaker notes:
-  - A product that unlocks a seat by QR code, sketched as two journeys
-  - Journey 1: scan the QR, reserve, pay. Journey 2: download the app first, then scan
-  - Each journey has numbered panels, handwritten component labels and a Pros / Cons box underneath
-  - Team sticky notes beside it, such as "needs the app to unlock", changed the whole journey
-  - Point out: rough, yet a stranger can read the structure and the reason for choosing it
-- 🎨 Visual hint: REAL. Full-bleed sketch (`media/concept-sketch-anh-truong.png`). Confirm the mentee's permission to show it before presenting.
-
----
-
-### 23 · IMAGE · Real concept sketch · Urban Farming
-- Kicker: Real example
-- Title: Three concepts,\n10 minutes
-- On-slide: Concept sketching · Urban farming
-- Speaker notes:
-  - A 10-minute concept sketching exercise for an urban farming product
-  - Three rows are three different concepts: a seasonal pack, a farm-partner flow, phygital grocery shopping
-  - Finish varies: some rows are wireframes, some are diagrams and symbols
-  - Ask the class: which concept reads fastest in 30 seconds, and why?
-  - Link to the cold read: would a stranger know what each row does and for whom?
-- 🎨 Visual hint: REAL. Full-bleed sketch (`media/concept-sketch-urban-farming.png`).
-
----
-
-### 24 · PRACTICE · Activity 3
-- Kicker: Activity 3 · 8 min
-- Title: Make one idea visible.
+### PROCESS · sketch-steps
+- Kicker: Cách làm
+- Title: Bốn bước,\n*một khoảnh khắc*
 - On-slide:
-  - Use the strongest solution from your tree, or your best Crazy 8s panel.
-  - Round 01 · 8 min · Sketch the key moment: draw one screen or one interaction. Label every component. Don't polish. Finish: "This works because..."
-  - Keep the sketch. You will use it to practise the validation checks (see sync notes).
-  - If sketching killed the idea, that is the system working.
-  - Start timer · 8:00
-  - Banner: No evaluating while generating
+  - 01
+  - Chọn một ý tưởng, ý thú vị nhất
+  - 02
+  - Vẽ khoảnh khắc then chốt
+  - 03
+  - Ghi nhãn, đừng chỉnh chu
+  - 04
+  - “Cái này chạy được vì…”
 - Speaker notes:
-  - Strongest solution on your tree, or your best Crazy 8s panel
-  - One screen, labels not polish, finish "This works because..."
-  - Sometimes sketching kills an idea. That is the system working
-  - Short on time? Core path, 5 min: one labelled screen and "This works because...". The extra 3 minutes is a cold read by a neighbour
-  - **Keep the sketch. You use it to practise the validation checks in the assignment**
-- 🎨 Visual hint: TYPOGRAPHIC. Practice layout, `.practice--act` variant, one round card, timer button (8:00) and banner.
+  - Bốn bước. Chọn ý làm bạn bất ngờ, không phải ý chỉn chu nhất. Vẽ một màn hình hoặc một tương tác, đúng khoảnh khắc làm concept dễ hiểu nhất.
+  - Bản phác nhãn rõ dù nguệch ngoạc còn hơn màn hình đẹp nhưng không nhãn.
+  - Quy tắc hay bị bỏ qua: phải hoàn thành câu “Cái này chạy được vì…”. Không viết được thì quay lại cây, vì có thể concept chưa neo vào opportunity nào.
+  - Demo trực tiếp: phác một concept trên board chung, nói to bạn gắn nhãn gì trước, và dừng ở chỗ nó bị vướng.
+  - Ví dụ nút “Chia tiền” trong Momo, ghi nhãn “ai trả trước”, “ai nợ ai”.
+  > Bạn đã viết được câu “Cái này chạy được vì…” cho ý tưởng của mình chưa?
+- Ví dụ: có (nút Chia tiền trong Momo)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: PROCESS. Bốn bước đánh số.
 
 ---
 
-### 25 · SECTION DIVIDER · Part 04
-- Kicker: Part 04
-- Title: Storyboarding
-- On-slide: Extend one concept across time to see where the flow breaks.
-- Speaker notes:
-  - A sketch shows one moment; a storyboard shows the journey
-  - About 5 minutes of explanation today. You build your own in the assignment, for the concept that survives
-- 🎨 Visual hint: TYPOGRAPHIC. Section divider on paper-deeper.
-
----
-
-### 26 · NUMBERED · Storyboarding overview
-- Kicker: Method
-- Title: Storyboarding:\nextend an idea across *time*
+### IMAGE · sketch-anh
+- Kicker: Ví dụ thực tế
+- Title: Hai hành trình,\n*một concept*
 - On-slide:
-  - What: a short sequence of 3–5 panels that follows one user from context and trigger, through action, to outcome and emotion.
-  - Why: one screen can look good and still fail as a flow. A storyboard shows where the experience breaks and how the user feels at the end.
-  - When: after a concept has survived the first checks, and before you build a prototype.
+  - [IMG: Concept sketch hai hành trình của một sản phẩm mở khoá ghế bằng QR]
+  - Concept sketching · Anh Truong
 - Speaker notes:
-  - What: 3–5 panels following one user from context and trigger through action to outcome and emotion
-  - Why: a good screen can still fail as a flow, and the end feeling shows the breakage
-  - When: after the first checks, before a prototype
-  - Example: booking a flight succeeds, then a baggage fee appears at the last step. The emotion panel reads "cheated"
-  - Match it to the horizon: in sprint delivery, 3–4 panels for the survivor. Over a 1–3 year vision it also documents solutions you won't build now, and it is the form you can pitch to a client
-- 🎨 Visual hint: TYPOGRAPHIC. Three What / Why / When cards, centred (`.mth` method layout).
+  - Ví dụ thật của một mentee: sản phẩm mở khoá ghế bằng QR, phác hai hành trình.
+  - Hành trình 1: quét QR, đặt chỗ, thanh toán.
+  - Hành trình 2: tải app trước rồi mới quét QR.
+  - Mỗi hành trình có panel đánh số, nhãn thành phần viết tay, và phần Pros / Cons ở dưới. Hai concept cùng giải một opportunity nhưng đi theo hai hướng khác nhau, nên so sánh được.
+  - Ví dụ “cần tải app để mở khoá” làm đổi cả hành trình.
+  - Bản phác thô nhưng người ngoài vẫn đọc được cấu trúc và lý do chọn.
+  > Sticky note nào trên bản phác này làm đổi cả hành trình?
+- Ví dụ: có (bài tập của Anh Truong)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: REAL. Ảnh fullscreen concept sketch, caption có tên học viên.
 
 ---
 
-### 27 · PROCESS · Anatomy of a storyboard
-- Kicker: Storyboarding
-- Title: Extend a concept\nacross *time*
+### IMAGE · sketch-tam
+- Kicker: Ví dụ thực tế
+- Title: Concept sketch\n*hai option*
 - On-slide:
-  - Panel 01 Context
-  - Panel 02 Trigger
-  - Panel 03 Action
-  - Panel 04 Outcome
-  - Panel 05 Emotion
+  - [IMG: Concept sketch trên bảng trắng: màn Home, option 1 với banner đỏ cảnh báo, option 2 đánh dấu ngay trên dòng shop, cùng dẫn đến màn thiết lập payment]
+  - Concept sketching · Tam Nguyen
 - Speaker notes:
-  - One screen can look elegant and be unworkable as a flow
-  - Three or four panels is usually enough; budget about 20 minutes
-  - Emotion matters: a user can complete the task and leave feeling worse
-  - If the emotion panel is bad, the concept is bad
-  - You build one in the assignment, for the concept that survives, not today
-- 🎨 Visual hint: SCHEMATIC. Five-panel strip, one small thumbnail sketch per panel.
+  - Một concept sketch thật trên bảng trắng, đi từ trái sang phải.
+  - Bên trái là màn Home: danh sách các shop, mỗi shop một dòng, có nhãn trạng thái thiết lập payment.
+  - Ở giữa là option 1: một banner đỏ trên đầu trang báo “Payment has not set up yet”, kèm nút Set up payment.
+  - Phía dưới là option 2: đánh dấu đỏ ngay trên dòng của shop trong danh sách.
+  - Cả hai option cùng dẫn đến màn bên phải, đã mở sẵn mục payment. Mũi tên có ghi “auto nav to section”.
+  - Hai hướng cùng giải một vấn đề nhưng đặt cảnh báo ở hai chỗ khác nhau, nên so sánh được ngay. Bản phác thô nhưng người ngoài vẫn đọc được luồng.
+  > Option nào làm người dùng chú ý sớm hơn, và option nào ít gây khó chịu hơn?
+- Ví dụ: có (bài tập của Tam Nguyen)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: REAL. Ảnh fullscreen concept sketch trên bảng trắng, caption có tên học viên.
 
 ---
 
-### 28 · IMAGE · Real storyboard
-- Kicker: Real example
-- Title: Follow *Allison*
-- On-slide: Go1 · Content Curation
-- Speaker notes:
-  - Follows an HR manager across the whole arc
-  - Opens with the trigger: she sees a banner about curated recommendations
-  - Actions: provide needs, review the list, refine, share with the team
-  - Ends on emotion: the team celebrating the time saved
-  - It starts before the product, includes friction, ends on a feeling, uses the user's own voice
-- 🎨 Visual hint: REAL. Full-bleed storyboard image (`media/storyboard-example.png`).
-
----
-
-### 29 · IMAGE · Real storyboard · Amazon Go
-- Kicker: Real example
-- Title: Follow *Emilia*
+### IMAGE · sketch-urban
+- Kicker: Ví dụ thực tế
+- Title: Ba concept,\n*10 phút*
 - On-slide:
-  - 01 Persona and setting: name, age, motivation, and where each panel takes place.
-  - 02 Stage labels: onboarding at home, then shopping in store.
-  - 03 One sentence per panel: each panel has a caption saying what the user does.
-  - 04 Ends on emotion: she walks out with no trouble, smiling.
-  - Caption: Amazon Go · UX storyboard
+  - [IMG: Ba concept sketch cho sản phẩm Urban Farming]
+  - Concept sketching · Urban Farming
 - Speaker notes:
-  - Second example: an Amazon Go UX storyboard following Emilia (24, motivation: groceries)
-  - Scenario: a customer aged 21+ uploads a government ID to the app
-  - Left side states the persona and two stages: onboarding at home, shopping in store
-  - One sentence per panel, readable without a presenter
-  - Ends on emotion: she leaves with no trouble
-  - Ask the class: which panel shows a possible point of friction? (the PIR sensor)
-- 🎨 Visual hint: REAL. Storyboard image on the left (`media/storyboard-amazon-go.png`), four numbered points on the right. Built as an image plus numbered list (supplementary two-column split).
+  - Ví dụ thật: concept sketching cho sản phẩm nông nghiệp đô thị. Ba hàng là ba concept khác nhau: The Seasonal Pack, luồng đối tác nông trại, Phygital Grocery Shopping.
+  - Mức hoàn thiện khác nhau: có hàng là wireframe, có hàng chỉ là sơ đồ và ký hiệu. Độ bóng bẩy không quyết định concept nào mạnh hơn.
+  - Liên hệ với cold read ở phần sau: người chưa thấy bao giờ có biết hàng nào làm gì, cho ai không?
+  > Concept nào đọc hiểu nhanh nhất trong 30 giây, và vì sao?
+- Ví dụ: có (Urban Farming)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: REAL. Ảnh ba concept sketch Urban Farming.
 
 ---
 
-### 30 · SECTION DIVIDER · Part 05
-- Kicker: Part 05
+### SECTION DIVIDER · sec4
+- Num: 05
+- Kicker: Chuyển phần
+- Title: Story\n*boarding*
+- Sub: Kéo một concept dài ra theo thời gian để thấy flow đứt ở đâu.
+- Speaker notes:
+  - Phác thảo cho thấy một khoảnh khắc. Storyboard cho thấy cả hành trình, và chỗ flow đứt.
+  - Hôm nay chỉ giới thiệu. Mỗi người tự làm storyboard trong bài tập về nhà, cho concept sống sót sau validation.
+  > Flow nào của bạn có từng màn hình đẹp nhưng cả flow vẫn khó dùng?
+- Ví dụ: Không cần (slide chuyển phần).
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TYPOGRAPHIC. Số lớn 05, title, một dòng sub.
+
+---
+
+### NUMBERED · What is Storyboarding · story-overview
+- Kicker: Cách làm
+- Title: Storyboarding: kéo ý tưởng dài ra theo\n*thời gian*
+- On-slide:
+  - LÀ GÌ
+  - Chuỗi ngắn 3–5 khung, theo một người dùng từ bối cảnh và trigger, qua hành động, đến kết quả và cảm xúc.
+  - VÌ SAO
+  - Một màn hình có thể đẹp mà cả flow vẫn hỏng. Storyboard cho thấy trải nghiệm đứt ở đâu và người dùng cảm thấy thế nào ở cuối.
+  - KHI NÀO
+  - Sau khi concept đã qua các bước kiểm tra đầu tiên, và trước khi làm prototype.
+- Speaker notes:
+  - Storyboard là chuỗi 3–5 panel, theo một người dùng từ bối cảnh và trigger, qua hành động, đến kết quả và cảm xúc.
+  - Một màn hình có thể đẹp nhưng cả flow vẫn hỏng. Storyboard cho thấy flow vỡ ở đâu và người dùng cảm thấy thế nào ở cuối.
+  - Ví dụ đặt vé máy bay thành công nhưng phải trả thêm phí hành lý ở bước cuối. Panel cảm xúc là “bị lừa”.
+  - Dùng sau khi concept đã qua các bước kiểm tra đầu tiên, trước khi làm prototype.
+  > Trải nghiệm nào bạn từng hoàn thành xong nhưng rời đi thấy tệ?
+- Ví dụ: có (đặt vé máy bay, phí hành lý)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TYPOGRAPHIC. Numbered, ba cột What / Why / When.
+
+---
+
+### PROCESS · story-anatomy
+- Kicker: Cấu trúc
+- Title: Kéo dài một concept qua\n*thời gian*
+- On-slide:
+  - Khung 01
+  - Bối cảnh
+  - Khung 02
+  - Trigger
+  - Khung 03
+  - Hành động
+  - Khung 04
+  - Outcome
+  - Khung 05
+  - Cảm xúc
+- Speaker notes:
+  - Năm khung: bối cảnh, trigger, hành động, outcome, cảm xúc. Thường 3–4 panel là đủ.
+  - Trigger là cái khiến người dùng bắt đầu. Hành động là việc họ làm với concept của bạn. Outcome là kết quả họ nhận được.
+  - Khung cảm xúc là khung hay bị bỏ. Người dùng hoàn thành tác vụ nhưng rời đi thấy tệ hơn thì concept vẫn có vấn đề. Nếu panel cảm xúc xấu thì concept xấu.
+  - Hôm nay chưa làm. Bạn làm một storyboard trong bài tập, cho concept sống sót.
+  > Panel cảm xúc trong storyboard của bạn sẽ kết thúc thế nào?
+- Ví dụ: Không cần (ví dụ ở slide kế tiếp).
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: PROCESS. Năm khung đánh số.
+
+---
+
+### IMAGE · story-emilia
+- Kicker: Ví dụ thực tế
+- Title: Theo chân\n*Emilia*
+- On-slide:
+  - 01
+  - Persona và bối cảnh
+  - Tên, tuổi, động lực, và mỗi khung diễn ra ở đâu.
+  - 02
+  - Nhãn giai đoạn
+  - Onboarding ở nhà, rồi mua sắm tại cửa hàng.
+  - 03
+  - Một câu cho mỗi khung
+  - Mỗi khung có một caption nói người dùng làm gì.
+  - 04
+  - Kết thúc bằng cảm xúc
+  - Cô ấy bước ra mà không gặp trở ngại nào, mỉm cười.
+  - Amazon Go · UX storyboard
+- Speaker notes:
+  - Ví dụ thứ hai: storyboard UX của Amazon Go, theo Emilia (24 tuổi, động cơ: mua đồ tạp hoá). Kịch bản 1: khách từ 21 tuổi tải ID chính phủ lên app.
+  - Bên trái ghi rõ persona và hai giai đoạn: Onboarding ở nhà, Shopping in store ở cửa hàng. Mỗi panel có một câu mô tả, đọc được mà không cần người thuyết minh.
+  - Kết thúc bằng cảm xúc: cô ấy rời cửa hàng không gặp rắc rối và mỉm cười.
+  - Đáng để hỏi lớp: panel nào cho thấy một điểm có thể gây friction? (cảm biến PIR, panel 5)
+  > Panel nào cho thấy một điểm có thể gây friction?
+- Ví dụ: có (Amazon Go)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: REAL. Ảnh storyboard Amazon Go kèm bốn ghi chú bên phải.
+
+---
+
+### SECTION DIVIDER · sec5
+- Num: 06
+- Kicker: Chuyển phần
 - Title: Concept\n*Validation*
-- On-slide: Before a prototype, check the logic holds.
+- Sub: Trước khi làm prototype, hãy kiểm tra logic có đứng vững không.
 - Speaker notes:
-  - Not user testing. Not a prototype. Not a stakeholder sign-off
-  - A structured check that a concept is grounded, legible and testable
-  - About 5 minutes: a walk through five quick checks. You run them on your own concepts in the assignment
-- 🎨 Visual hint: TYPOGRAPHIC. Section divider on paper-deeper. (Deck numbers this divider 05.)
+  - Concept Validation không phải user testing, không phải prototype, không phải stakeholder duyệt. Đó là cách kiểm tra có cấu trúc rằng concept có cơ sở, dễ đọc và test được.
+  - Ba thứ cần kiểm:
+  - Legibility: người lạ đọc được không
+  - Rationale: lý do đứng vững không
+  - Traceability: truy về một opportunity trên cây được không
+  - Hôm nay dạy ba cách nhanh để kiểm tra. Mỗi người dùng chúng trên sketch của mình trong bài tập.
+  > Concept của bạn đang dựa trên giả định nào chưa ai kiểm chứng?
+- Ví dụ: Không cần (slide chuyển phần).
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TYPOGRAPHIC. Số lớn 06, title, một dòng sub.
 
 ---
 
-### 31 · NUMBERED · Validation methods
-- Kicker: Five quick checks
-- Title: Validate small,\nbefore you build big
+### NUMBERED · validation-methods
+- Kicker: Ba cách kiểm tra nhanh
+- Title: Validate nhỏ,\n*trước khi build lớn*
 - On-slide:
-  - 01 30-second concept testing: does the concept explain itself? · 5 min
-  - 02 Concept comparison: which direction do people pick, and why? · 10 min
-  - 03 Storyboard walkthrough: does the flow match what people expect? · 10 min
-  - 04 Rationale test: does "this works because..." hold up? · 2 min
-  - 05 Assumption audit: what must be true, and what is riskiest? · 10 min
+  - 01
+  - Concept test 30 giây
+  - Concept có tự giải thích được không?
+  - 5 phút
+  - 02
+  - So sánh concept
+  - Mọi người chọn hướng nào, và vì sao?
+  - 10 phút
+  - 03
+  - Assumption audit
+  - Điều gì phải đúng, và điều gì rủi ro nhất?
+  - 10 phút
 - Speaker notes:
-  - Most designers skip validation because it feels slow. Each check takes 2–10 minutes
-  - The cost of skipping: two weeks on a prototype, then users don't get the concept
-  - Five checks, one slide each, same structure: What, When, Why, How
-  - How to choose: unclear concept → cold read; several directions → comparison; several steps → walkthrough; otherwise rationale and audit
-  - Spend about a minute on each in class. The practice is in the assignment
-- 🎨 Visual hint: TYPOGRAPHIC. Overview list with time on the right (built as `.ov` rows).
+  - Hầu hết designer bỏ qua validation vì nghĩ nó tốn thời gian. Thực ra mỗi cách dưới đây chỉ mất vài phút. Cái giá của việc bỏ qua: làm prototype hai tuần rồi mới biết người dùng không hiểu concept.
+  - Ba cách, mỗi cách một cặp slide, cùng cấu trúc: là gì, vì sao, khi nào, rồi cách làm.
+  - Cách chọn:
+  - Concept chưa rõ ràng thì cold read
+  - Có nhiều hướng chưa chọn được thì so sánh concept
+  - Còn lại thì assumption audit
+  > Bạn sẽ chọn cách kiểm tra nào cho concept của mình, và vì sao?
+- Ví dụ: Không cần (ví dụ ở từng cách).
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: CARDS. Ba card, mỗi card kèm thời lượng.
 
 ---
 
-### 32 · NUMBERED · Method 1 · Cold read
-- Kicker: Method 1
-- Title: 30-second cold read
+### NUMBERED · What is Cold read · val-coldread
+- Kicker: Cách 1 · 5 phút
+- Title: Đọc nhanh\n*30 giây*
 - On-slide:
-  - What: show a sketch for 30 seconds, hide it, then ask what it does and who it is for.
-  - When: after the concept sketch, before you add any detail.
-  - Why: if a stranger cannot read it, a user will not either. It exposes missing labels and an unclear value.
-  - How: show the sketch and say nothing · after 30 seconds, hide it · ask "What does this do? Who is it for?" · note every hesitation and fix those labels.
-  - 5 min
+  - LÀ GÌ
+  - Cho xem sketch 30 giây, giấu đi, rồi hỏi nó làm gì và dành cho ai.
+  - VÌ SAO
+  - Nếu một người lạ không đọc được, người dùng cũng sẽ không đọc được. Cách này lộ ra nhãn còn thiếu và value chưa rõ.
+  - KHI NÀO
+  - Sau khi có concept sketch, trước khi thêm bất kỳ chi tiết nào.
 - Speaker notes:
-  - Show the sketch, say nothing, hide it after 30 seconds, then ask the two questions
-  - Note every hesitation and fix those labels
-  - Example: a "Split bill" button. If viewers read it as a normal transfer, label and context are not enough
-  - Working alone? Leave the sketch overnight and read it as a stranger, or ask someone at home
-- 🎨 Visual hint: TYPOGRAPHIC. Three cards (What / When / Why) plus a four-step How strip and a time tag (`.mth` method layout).
+  - Cold read: cho xem bản phác 30 giây rồi giấu đi, hỏi nó làm gì và dành cho ai. Làm ngay sau khi phác concept, trước khi thêm chi tiết.
+  - Người lạ không đọc được thì người dùng cũng không. Cách này bắt được lỗi thiếu nhãn và giá trị chưa rõ.
+  - Ví dụ concept nút “Chia tiền” trong Momo. Nếu người xem nghĩ đó là nút chuyển tiền thường thì nhãn và ngữ cảnh chưa đủ.
+  - Học một mình, không có ai xem? Để bản phác sang hôm sau rồi đọc lại như người lạ, hoặc nhờ người nhà xem.
+  > Chỗ nào trên sketch của bạn người lạ có thể ngập ngừng?
+- Ví dụ: có (nút Chia tiền trong Momo)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TYPOGRAPHIC. Numbered, ba cột What / Why / When.
 
 ---
 
-### 33 · NUMBERED · Method 2 · Comparison
-- Kicker: Method 2
-- Title: Concept comparison
+### PROCESS · val-coldread-how
+- Kicker: Cách 1 · Cách làm
+- Title: Bốn bước\n*đọc nhanh*
 - On-slide:
-  - What: show two concepts side by side and ask which one the person would use, and why.
-  - When: you have two or more directions and cannot decide between them.
-  - Why: people judge a choice more easily than a single idea. The reasons matter more than the vote.
-  - How: sketch both concepts for the same task · ask "Which would you use for this?" · ask "Why? What is missing?" · tally the picks and write down the reasons.
-  - 10 min
+  - 01
+  - Đưa sketch ra và không nói gì.
+  - 02
+  - Sau 30 giây, giấu đi.
+  - 03
+  - Hỏi: “Cái này làm gì? Dành cho ai?”
+  - 04
+  - Ghi lại mọi chỗ họ ngập ngừng và sửa các nhãn đó.
 - Speaker notes:
-  - Sketch both concepts for the same task, then ask which they'd use and why
-  - Tally the picks, but write down the reasons
-  - Example: "show the fare before booking" versus "compare vehicle types". Ask 5 people which suits the morning commute
-  - Don't ask "do you like it?": people are polite and say yes
-- 🎨 Visual hint: TYPOGRAPHIC. `.mth` method layout, same as Method 1.
+  - Đây là phần thực hành của cách một. Bốn bước theo đúng thứ tự: đưa sketch ra mà không nói gì, giấu đi sau 30 giây, hỏi hai câu, ghi lại.
+  - Hai câu hỏi: “Cái này làm gì?” và “Dành cho ai?”. Đừng gợi ý, đừng giải thích.
+  - Chỗ người xem ngập ngừng chính là chỗ nhãn còn thiếu. Ghi lại và sửa các nhãn đó ngay. Cách sửa là thêm nhãn, không phải thêm lời giải thích.
+  > Chỗ nào trên sketch của bạn người lạ có thể ngập ngừng?
+- Ví dụ: Không cần (ví dụ ở slide trước).
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: PROCESS. Bốn bước đánh số.
 
 ---
 
-### 34 · NUMBERED · Method 3 · Walkthrough
-- Kicker: Method 3
-- Title: Storyboard walkthrough
+### NUMBERED · What is So sánh concept · val-compare
+- Kicker: Cách 2 · 10 phút
+- Title: So sánh\n*concept*
 - On-slide:
-  - What: walk someone through the storyboard panel by panel and ask what they expect to happen next.
-  - When: the concept spans several steps and the storyboard is drawn.
-  - Why: one screen can look good and still fail as a flow. A wrong expectation marks the broken step.
-  - How: cover every panel except the first · ask "What would you do here?" · reveal the next panel: "Is this what you expected?" · mark the panels where expectation breaks.
-  - 10 min
+  - LÀ GÌ
+  - Cho xem hai concept cạnh nhau và hỏi người đó sẽ dùng cái nào, vì sao.
+  - VÌ SAO
+  - Người ta chọn giữa các lựa chọn dễ hơn là đánh giá một ý tưởng đơn lẻ. Lý do quan trọng hơn số phiếu.
+  - KHI NÀO
+  - Bạn có hai hướng trở lên và chưa quyết được.
 - Speaker notes:
-  - Cover every panel except the first, ask what they would do, reveal the next
-  - Mark the panels where expectation breaks
-  - Example: flight booking where the last panel shows a baggage fee. "Wait, there's a fee now?" is the broken expectation
-  - You do this in the assignment, on the survivor, once its storyboard is drawn
-- 🎨 Visual hint: TYPOGRAPHIC. `.mth` method layout.
+  - Cho xem hai concept cạnh nhau, hỏi người xem sẽ dùng cái nào và vì sao. Dùng khi có từ hai hướng trở lên và chưa chọn được.
+  - Người ta chọn giữa các lựa chọn dễ hơn là đánh giá một ý tưởng đơn lẻ. Lý do quan trọng hơn số phiếu.
+  - Ví dụ Grab: hai hướng “hiện giá cước trước khi đặt” và “so sánh nhiều loại xe”. Hỏi 5 người chọn cái nào cho chuyến đi sáng đi làm.
+  - Đừng hỏi “bạn có thích không”. Người ta lịch sự nên hay nói có.
+  > Hai hướng nào bạn đang chưa chọn được?
+- Ví dụ: có (Grab, giá cước và loại xe)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TYPOGRAPHIC. Numbered, ba cột What / Why / When.
 
 ---
 
-### 35 · NUMBERED · Method 4 · Rationale
-- Kicker: Method 4
-- Title: Rationale test
+### PROCESS · val-compare-how
+- Kicker: Cách 2 · Cách làm
+- Title: Bốn bước\n*so sánh*
 - On-slide:
-  - What: say "This works because..." aloud in one sentence, without qualifying words.
-  - When: before you show the concept to anyone.
-  - Why: words like but, if and assuming hide assumptions. It costs nothing and takes two minutes.
-  - How: write the sentence · say it aloud without stopping · circle every but, if, as long as, assuming · each circled word becomes an assumption to test.
-  - 2 min
+  - 01
+  - Phác cả hai concept cho cùng một task.
+  - 02
+  - Hỏi: “Bạn sẽ dùng cái nào cho việc này?”
+  - 03
+  - Hỏi: “Vì sao? Còn thiếu gì?”
+  - 04
+  - Đếm lượt chọn và ghi lại lý do.
 - Speaker notes:
-  - Say it aloud, without stopping and without qualifying
-  - Watch for but, if, as long as, assuming. Each one hides an assumption
-  - Weak: "Clients will see the nudge, if they have notifications on." Strong: "It reaches the client on the day their decision window closes."
-  - The strong version still has assumptions, but they now sit outside the sentence where you can test them
-  - **Every assumption you hear is a learning objective for the prototype, not a reason to abandon the concept**
-- 🎨 Visual hint: TYPOGRAPHIC. `.mth` method layout.
+  - Đây là phần thực hành của cách hai. Hai concept phải cùng một task thì người xem mới so sánh được.
+  - Bốn bước: phác cả hai concept, hỏi chọn cái nào, hỏi vì sao và còn thiếu gì, đếm lượt chọn rồi ghi lại lý do.
+  - Đừng hỏi “bạn có thích không”. Hỏi họ chọn cái nào cho việc này, vì câu đó buộc họ đưa ra một lựa chọn thật.
+  - Lý do ghi lại giá trị hơn con số. Một lý do lặp lại ở nhiều người là tín hiệu rõ nhất.
+  > Hai hướng nào bạn đang chưa chọn được?
+- Ví dụ: Không cần (ví dụ ở slide trước).
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: PROCESS. Bốn bước đánh số.
 
 ---
 
-### 36 · DIAGRAM · Assumption audit
-- Kicker: Method 5
-- Title: Find the *riskiest*\nassumption
+### DIAGRAM · val-assumption
+- Kicker: Cách 3 · 10 phút
+- Title: Tìm assumption\n*rủi ro nhất*
 - On-slide:
-  - Generate: "This concept assumes users will / have / know / care about..."
-  - Tag: desirability, usability, feasibility, viability
-  - Rate: evidence 1–5, importance 1–5
-  - Riskiest: high importance, low evidence
-  - 2×2 chart: importance (low to high) against evidence (strong to weak), three plotted dots
+  - Mức quan trọng ↑ cao
+  - 1
+  - 2
+  - 3
+  - Bằng chứng: mạnh
+  - yếu
+  - Liệt kê
+  - “Concept này giả định người dùng sẽ / có / biết / quan tâm đến…”
+  - Gắn nhãn
+  - Desirability, usability, feasibility, viability
+  - Chấm điểm
+  - Bằng chứng 1–5, mức quan trọng 1–5
+  - Rủi ro nhất
+  - Quan trọng cao, bằng chứng thấp
 - Speaker notes:
-  - Go wide: even a simple idea hides 20–30 assumptions, most harmless
-  - Take them from stakeholders too: ask engineering and the business before you draw, because feasibility and viability are answered there
-  - Write each so you need it to be true ("clients will remember a password"), specific enough to test
-  - Tag the type so you don't miss a category. Usable is not the same as desirable
-  - Worked row: "freelancers will connect a proposal at send time" scores evidence 2, importance 5, so the nudge never starts. That is the riskiest
-  - The prototype tests the riskiest assumption first
-- 🎨 Visual hint: SCHEMATIC. 2×2 of importance vs evidence with the riskiest quadrant highlighted, the four-step Generate / Tag / Rate / Riskiest list beside it.
+  - Cách thứ ba tốn nhiều thời gian nhất nhưng giá trị nhất: tìm điều phải đúng thì concept mới chạy được.
+  - Bước 1, liệt kê. Ý tưởng đơn giản cũng ẩn 20–30 giả định, phần lớn vô hại. Viết theo mẫu “Concept này giả định người dùng sẽ / có / biết / quan tâm đến…”.
+  - Viết dạng bạn cần nó đúng (“khách sẽ nhớ mật khẩu”), đủ cụ thể để test. Tránh dạng phủ định mơ hồ.
+  - Bước 2, gắn nhãn để không sót nhóm nào:
+  - Desirability: họ có muốn không
+  - Usability: họ có dùng được không
+  - Feasibility: mình có làm được không
+  - Viability: mô hình kinh doanh có đứng được không
+  - Bước 3, chấm bằng chứng 1–5 và mức quan trọng 1–5. Rủi ro nhất là ô quan trọng cao, bằng chứng thấp.
+  - Ví dụ freelancer: “freelancer sẽ kết nối proposal lúc gửi” có bằng chứng 2, quan trọng 5. Sai giả định này thì nút nhắc không bao giờ chạy, nên đây là giả định rủi ro nhất.
+  - Prototype và test sau buổi này sẽ thử bác bỏ giả định đó trước.
+  > Giả định nào của bạn có mức quan trọng cao mà bằng chứng thấp?
+- Ví dụ: có (freelancer kết nối proposal)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: SCHEMATIC. Ma trận mức quan trọng so với bằng chứng, ba bước bên cạnh.
 
 ---
 
-### 37 · SECTION DIVIDER · Part 06
-- Kicker: Part 06
+### SECTION DIVIDER · sec6
+- Num: 07
+- Kicker: Chuyển phần
 - Title: *Prioritisation*
-- On-slide: Not all concepts deserve the same investment. Choose deliberately.
+- Sub: Không phải concept nào cũng đáng đầu tư như nhau. Hãy chọn có chủ đích.
 - Speaker notes:
-  - Without structure, teams converge on the idea the most senior person liked, the one pitched most confidently, or the first one written down
-  - None of those is a good reason to build something
-  - 5 minutes: the matrix, a modelled example, and setting the exercise you do at home
-- 🎨 Visual hint: TYPOGRAPHIC. Section divider on paper-deeper. (Deck numbers this divider 06.)
+  - Không có cấu trúc, team sẽ chọn ý tưởng mà người cấp cao thích, ý tưởng được pitch tự tin nhất, hoặc ý tưởng ghi đầu tiên. Không lý do nào trong đó đủ để xây một sản phẩm.
+  - Prioritisation tách việc chọn concept khỏi sở thích cá nhân, và cho bạn một lý do bảo vệ được cho thứ mình phát triển tiếp.
+  - Phần này có ma trận effort-impact, một ví dụ mẫu, rồi giao bài tập về nhà.
+  > Team bạn thường chọn ý tưởng theo tiêu chí nào?
+- Ví dụ: Không cần (slide chuyển phần).
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TYPOGRAPHIC. Số lớn 07, title, một dòng sub.
 
 ---
 
-### 38 · DIAGRAM · Effort–Impact matrix
-- Kicker: The matrix and a modelled example
-- Title: Effort against\n*impact*
+### DIAGRAM · matrix
+- Kicker: Ma trận và một ví dụ mẫu
+- Title: Effort so với\n*impact*
 - On-slide:
-  - Q1 Quick wins: high impact, low effort
-  - Q2 Strategic bets: high impact, high effort
-  - Q3 Fill-ins: low impact, low effort
-  - Q4 Traps: low impact, high effort
+  - Cao
+  - Impact
+  - Thấp
+  - Impact cao · Effort thấp
+  - Quick wins
+  - Impact cao · Effort cao
+  - Strategic bets
+  - Impact thấp · Effort thấp
+  - Fill-ins
+  - Impact thấp · Effort cao
+  - Traps
+  - Thấp
+  - Effort
+  - Cao
 - Speaker notes:
-  - Impact: value to the user. Effort: cost to build and validate
-  - Quick wins first; strategic bets need validation before commitment; traps drop or defer
-  - Example: "show the fare before booking" is a quick win; "an all-in-one payments super app" is a strategic bet; "redesign the driver logo" is a fill-in; "build our own map" is a trap
-  - Effort and impact are relative, not absolute. One team's Q1 is another's Q2
-  - It's a conversation tool, not an objective ranking
-  - **Model it live (2 min):** place three solutions from the freelancer tree on the matrix, narrating why. Students do their own as step 1 of the assignment
-- 🎨 Visual hint: SCHEMATIC. 2×2 matrix with the four quadrants labelled.
+  - Hai trục. Impact là giá trị cho người dùng: giải quyết vấn đề cốt lõi hay vấn đề ngoại vi. Effort là chi phí xây và validate.
+  - Bốn góc:
+  - Quick wins (impact cao, effort thấp): làm trước
+  - Strategic bets (impact cao, effort cao): đáng đầu tư nhưng cần validate trước khi cam kết
+  - Fill-ins (impact thấp, effort thấp): để sau, trừ khi test rất nhanh
+  - Traps (impact thấp, effort cao): bỏ hoặc hoãn
+  - Ví dụ Grab: “hiện giá cước trước khi đặt” là quick win. “Siêu app thanh toán” là strategic bet. “Tự thiết kế lại logo tài xế” là fill-in. “Tự xây bản đồ riêng” là trap.
+  - Effort và impact mang tính tương đối: quick win của team này có thể là strategic bet của team khác. Ma trận là công cụ để trò chuyện, không phải bảng xếp hạng khách quan. Mọi vị trí đều là đoán, nó cho biết nên phát triển cái nào trước, không cho biết cái nào đúng.
+  - Làm việc nhóm thì thêm dot voting: mỗi người 3 chấm, vote im lặng trước, thảo luận sau, để người nói to nhất không thắng mặc định.
+  - Học viên làm cây của mình ở bước 1 bài tập.
+  > Solution nào của bạn là quick win?
+- Ví dụ: có (Grab)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: SCHEMATIC. Ma trận 2×2, bốn góc có nhãn Quick wins, Strategic bets, Fill-ins, Traps.
 
 ---
 
-### 39 · SECTION DIVIDER · Part 07
-- Kicker: Part 07
-- Title: AI-assisted\n*workflow*
-- On-slide: Use AI to widen and connect your work. You still decide.
-- Speaker notes:
-  - Three minutes. Where AI helps this phase, and where it hurts
-  - Not only chat prompts: workflows that read your artifacts and cross-reference them
-  - Detail is in the lesson (Part 7). Optional add-on in the assignment
-- 🎨 Visual hint: TYPOGRAPHIC. Section divider on paper-deeper, 120px number, accent on "workflow".
-
----
-
-### 40 · COMPARE · AI in this phase
-- Kicker: AI-assisted workflow
-- Title: Human first,\n*AI second*
+### IMAGE · matrix-anh
+- Kicker: Ví dụ thực tế
+- Title: Impact effort\n*matrix thật*
 - On-slide:
-  - AI first: the average idea, no source. You anchor on idea #1.
-  - Human first: you generate. AI challenges and links. Every output cites an artifact. You decide.
+  - [IMG: Impact effort matrix trên Miro: trục dọc effort, trục ngang impact, mỗi góc chia thêm ba hàng P1 đến P3]
+  - Impact effort matrix · Anh Truong
 - Speaker notes:
-  - AI-assisted brainstorming tends to give narrower sets of ideas: it returns the most likely answers
-  - So generate alone first, then ask the tool "what assumption do all 8 share?"
-  - Everything AI produces is a hypothesis until it traces to research
-  - To widen output, change the input: different personas or constraints, more than one tool
-  - **You decide. AI widens, links, checks and drafts**
-- 🎨 Visual hint: TYPOGRAPHIC. Two-column compare, "AI first" in neutral, "Human first" in sienna.
+  - Slide trước là ma trận mẫu. Đây là một ma trận thật, với rất nhiều solution.
+  - Cách đọc: trục dọc là effort, càng lên cao càng tốn công. Trục ngang là impact, càng sang phải càng có tác động. Mỗi góc lại chia thành ba hàng P1 đến P3 để xếp thứ tự trong cùng góc.
+  - Chú ý ba chỗ:
+  - Góc dưới phải là effort thấp, impact cao. Đây là nơi dày nhất, và là chỗ nên bắt đầu.
+  - Góc trên trái là effort cao, impact thấp. Những ý như drone hay thuê thêm người nằm ở đây, nên bỏ.
+  - Sticky có hai màu, cam và hồng. Hỏi học viên màu nào là gì khi dạy.
+  > Nếu chỉ làm được ba solution trong tuần này, bạn lấy ba ô nào ở góc dưới phải?
+- Ví dụ: có (bài tập của Anh Truong)
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: REAL. Ảnh fullscreen ma trận trên board, caption có tên học viên.
 
 ---
 
-### 41 · DIAGRAM · The artifact chain
-- Kicker: AI-assisted workflow
-- Title: Every output is\nthe *next input*
+### MILESTONE · act1
+- Kicker: Activity 1 · 15 phút
+- Title: Vẽ\n*cây của bạn.*
 - On-slide:
-  - Six steps: insight (I3), outcome (O2), opportunity (OP1), solution (S2.1), assumption (A4), prototype test (T1)
-  - Under each: Goal, Map, Ideate, Audit, Test
-  - No parent, no solution.
-  - Give every item an ID that points back to its source.
+  - Dùng problem statement của bạn làm outcome.
+  - Vòng 01 · 5 phút
+  - Opportunities
+  - Viết ít nhất 5 nhu cầu của người dùng. Chưa viết solution.
+  - Vòng 02 · 6 phút
+  - Solutions
+  - Thêm 2–3 solution dưới 3 opportunity tốt nhất.
+  - Vòng 03 · 4 phút
+  - Đọc cây
+  - Tìm nhánh đầy nhất và nhánh trống nhất. Chia sẻ hướng đi của bạn.
+  - Start timer · 15:00
 - Speaker notes:
-  - One idea only: the output of this step is the input of the next
-  - Point along the chain, left to right: insight, outcome, opportunity, solution, assumption, prototype test
-  - Every item has an ID and a source, for example I3 → O2 → S2.1 → A4
-  - Rule: no parent, no solution. A solution that cannot link to an earlier artifact is floating
-  - Give AI the artifacts and make it cite IDs. No citation means a guess
-- 🎨 Visual hint: SCHEMATIC. Six numbered nodes in a chain, each with an ID tag and a verb label beneath, the rule as a pull-out line.
+  - Dùng problem statement của bạn làm outcome, hoặc kịch bản freelancer gửi proposal trên slide thực hành nếu chưa có.
+  - Ba vòng:
+  - Vòng 1: viết ít nhất 5 opportunity. Chưa nghĩ solution, chưa đánh giá
+  - Vòng 2: thêm 2–3 solution dưới 3 opportunity tốt nhất
+  - Vòng 3: đọc cây, tìm nhánh đầy nhất và nhánh trống nhất
+  > Nhánh nào trên cây của bạn đầy nhất, nhánh nào trống nhất?
+- Ví dụ: Không cần.
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: MILESTONE. Ba vòng, nút Start timer 15:00.
 
 ---
 
-### 42 · PROCESS · AI workflow
-- Kicker: AI-assisted workflow
-- Title: A repeatable\nloop, *you review*
+### MILESTONE · act2
+- Kicker: Activity 2 · 13 phút
+- Title: Đi rộng với\n*Crazy 8s.*
 - On-slide:
-  - 01 Trigger
-  - 02 Pull context
-  - 03 Generate
-  - 04 Link
-  - 05 Human review
-  - 06 Hand-off pack
+  - Chọn một opportunity từ cây, viết thành câu HMW và dùng hướng đi của flow làm điểm neo.
+  - Vòng 01 · 3 phút
+  - Gấp, chọn và viết HMW
+  - Gấp tờ A4 thành 8 ô.
+  - Chọn một opportunity từ cây của bạn.
+  - Viết một câu HMW làm đề bài cho tám ô.
+  - Vòng 02 · 8 phút
+  - Phác 8 ý tưởng
+  - Mỗi ô một ý tưởng, ghi nhãn từng ô.
+  - Không tẩy xoá, không chỉnh chu.
+  - Hướng tới tám cách tiếp cận, không phải tám biến thể.
+  - Vòng 03 · 2 phút
+  - Khoanh tròn hai ý hay nhất
+  - Khoanh tròn hai ô đáng phát triển.
+  - Chia sẻ một ô với lớp.
+  - Start timer · 13:00
+  - Không đánh giá khi đang tạo ý tưởng
 - Speaker notes:
-  - How to use AI beyond chat: a loop you can repeat
-  - Trigger (a new insight) → pull context from research, whiteboard and design file (for example through MCP) → generate proposals → link them to artifacts → you review → pack the hand-off for the prototype
-  - Point at step 5, human review: this is where you decide
-  - Examples: a new insight proposes tree changes; an orphan check flags unlinked solutions
-  - Optional add-on is in the assignment
-- 🎨 Visual hint: SCHEMATIC. Six-step process track, step 05 active.
+  - Chọn một opportunity từ cây, viết nó thành một câu HMW, rồi dùng câu đó làm đề bài cho tám ô.
+  - Ba vòng:
+  - Vòng 1: gấp A4 thành 8 ô, chọn opportunity, viết một câu HMW ở đầu tờ giấy
+  - Vòng 2: vẽ 8 ý tưởng cho câu HMW đó, mỗi ô một ý, có nhãn, không tẩy xoá
+  - Vòng 3: khoanh hai ý hay nhất và chia sẻ một ô với lớp
+  - Câu nào đã chứa solution thì viết lại.
+  - Điền hết 8 ô trước khi nghĩ ô nào hay.
+  - Bẫy: tám biến thể của một ý tưởng. Nhắm tám hướng khác nhau, trong đó có một hướng đi ngược lẽ thường.
+  - Give me 3 ideas that break it.” Ví dụ tám ý đều là app thì giả định chung là “solution phải là app”.
+  > Ô nào trong tám ô làm bạn bất ngờ?
+- Ví dụ: Không cần.
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: MILESTONE. Ba vòng, nút Start timer 13:00.
 
 ---
 
-### 43 · DIAGRAM · AI step example
-- Kicker: AI-assisted workflow · Example
-- Title: Ask what all\n*eight* share
+### MILESTONE · act3
+- Kicker: Activity 3 · 8 phút
+- Title: Làm một ý tưởng\n*hiện hình.*
 - On-slide:
-  - Input: your eight Crazy 8s panels
-  - Prompt: "What assumption do all 8 share? Give me 3 ideas that break it."
-  - Output: shared assumption and 3 challengers
-  - You check: does each new idea trace to an opportunity on your tree?
+  - Dùng solution mạnh nhất trên cây, hoặc ô Crazy 8s hay nhất.
+  - Vòng 01 · 8 phút
+  - Phác khoảnh khắc then chốt
+  - Vẽ một màn hình hoặc một tương tác.
+  - Ghi nhãn mọi thành phần. Đừng chỉnh chu.
+  - Hoàn tất: “Cái này chạy được vì…”
+  - Tiếp theo · Activity 4
+  - Giữ lại bản sketch
+  - Bạn sẽ audit nó ở Activity 4.
+  - Nếu sketch làm ý tưởng chết, nghĩa là quy trình đang hoạt động đúng.
+  - Start timer · 8:00
+  - Không đánh giá khi đang tạo ý tưởng
 - Speaker notes:
-  - One concrete step of the workflow: Crazy 8s output in, one prompt, shared assumption and three challengers back
-  - Repeat: generate on your own first, then ask the AI
-  - Your checkpoint: does each new idea trace to an opportunity on the tree? If not, it is floating
-  - **You decide. AI only challenges and suggests**
-- 🎨 Visual hint: SCHEMATIC. Four-box left-to-right strip: Input → Prompt → Output, with a "You check" callout under it.
+  - Dùng solution mạnh nhất trên cây, hoặc ô Crazy 8s hay nhất của bạn.
+  - Vẽ một màn hình hoặc một tương tác. Ghi nhãn mọi thành phần, nhãn chứ không phải bóng bẩy. Cuối cùng hoàn thành câu “Cái này chạy được vì…”.
+  - Đôi khi phác thảo giết chết một ý tưởng. Hệ thống đang làm đúng việc của nó, vì chết ở bản phác rẻ hơn nhiều so với chết ở prototype.
+  - Giữ lại bản sketch. Bạn sẽ dùng nó với các cách validation và trong bài tập về nhà.
+  > Bản sketch của bạn có làm ý tưởng chết không, và vì sao?
+- Ví dụ: Không cần.
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: MILESTONE. Một vòng, nút Start timer 8:00; dòng “Tiếp theo · Activity 4” [to confirm: lesson không còn Activity 4].
 
 ---
 
-### 44 · PRACTICE · Your assignment
-- Kicker: Assignment
-- Title: Two concepts, pressure-tested
+### PRACTICE · assignment
+- Kicker: Bài tập về nhà
+- Title: Phác ra.\n*Test thử.*
 - On-slide:
-  - Explore
-  - 01 Prioritise your tree on the matrix, pick two
-  - 02 Run Crazy 8s on your chosen opportunity
-  - 03 Sketch both concepts with "This works because..." (second contradicts the first)
-  - Decide
-  - 04 Assumption audit and 30-second test on each
-  - 05 Share both with your PO or a peer, note the response
-  - 06 Pick the survivor and storyboard it (Trigger, Action, Outcome)
+  - Lấy concept mạnh nhất từ cây của bạn.
+  - Bước 01 · Ưu tiên
+  - Chọn một
+  - Đặt các solution lên ma trận và chọn concept mạnh nhất.
+  - Bước 02 · Công cụ tuỳ chọn
+  - Phát triển bản sketch
+  - Vẽ tay, dựng trong Figma hoặc dùng AI. Ghi nhãn và hoàn tất câu “Cái này chạy được vì…”
+  - Bước 03 · Người thật
+  - Test thử
+  - Cho team hoặc người dùng thật xem. Ghi lại điều họ hiểu và chỗ họ ngập ngừng.
 - Speaker notes:
-  - Budget about 2.5 hours in total
-  - Step 1 is the prioritisation we modelled in class: place every solution from your tree, pick two
-  - The second concept must contradict an assumption in the first, not vary it
-  - Storyboard only the survivor, so the effort goes to the concept that earned it. Then run the storyboard walkthrough on it
-  - No PO? Use a peer or mentor. Note whether the response is confusion, curiosity or a challenge to an assumption
-  - Next lesson starts from the survivor. Message me if you get stuck
-- 🎨 Visual hint: TYPOGRAPHIC. Practice layout, two cards (Explore, then Decide).
+  - Bài tập về nhà là concept sketch. Bạn dùng kỹ thuật nào để phát triển nó cũng được, kể cả AI.
+  - Bước 1, ưu tiên: đặt các solution của cây lên ma trận effort-impact, chọn concept mạnh nhất.
+  - Bước 2, phát triển bản sketch: vẽ tay, Figma, hoặc nhờ AI tạo bản nháp rồi chỉnh lại. Nhãn và câu “Cái này chạy được vì…” vẫn phải do bạn viết.
+  - Bước 3, test với người thật: team nội bộ hoặc người dùng thật, dùng một cách validation đã học. Ghi lại họ hiểu gì, chỗ nào ngập ngừng, bạn sẽ đổi gì.
+  - Tài liệu bài học có thêm ba công cụ để dùng ở bước này: Opportunity Trace, cách đọc phản hồi của stakeholder, và bốn điều kiện để biết concept đã sẵn sàng làm prototype.
+  - Buổi sau bắt đầu từ concept đã được test. Nhắn mình nếu bị kẹt.
+  > Bạn sẽ test concept với ai trong tuần này?
+- Ví dụ: Không cần.
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TWO CARDS [to confirm: deck hiện có ba bước, khác quy tắc hai card].
 
 ---
 
-### 45 · END · Thank you
-- Kicker: Thank you
-- Title: See you *next time*
-- On-slide: Winnie Nguyen · nguyenphuctuongvan@gmail.com
-- Speaker notes:
-  - Next lesson: turn the surviving concept into a prototype people can click
-  - Reach out between lessons if the assignment blocks you
-- 🎨 Visual hint: End layout, paper-deeper, 220px italic title.
-
----
-
-### 46 · DIAGRAM · Appendix · Google Design Sprint
-- Kicker: Appendix · Optional, not presented
-- Title: The bigger system\nCrazy 8s sits *inside*
+### END · thanks
+- Kicker: Takeaway
+- Title: Solution nào không dẫn về\n*opportunity* thì chỉ là assumption
 - On-slide:
-  - Mon: map the problem, pick a target
-  - Tue: sketch competing solutions
-  - Wed: decide and storyboard
-  - Thu: build a realistic prototype
-  - Fri: test with real users
+  - Winnie Nguyen
+  - nguyenphuctuongvan@gmail.com
 - Speaker notes:
-  - Share on request or in the follow-up message, not in the session
-  - A 5-day process that compresses months of decisions into a week
-  - Resources: the book *Sprint* by Jake Knapp, and the Google Design Sprint Kit
-- 🎨 Visual hint: SCHEMATIC. Five-day process track.
+  - None.
+- Ví dụ: Không cần.
+- Câu hỏi hay gặp: None.
+- 🎨 Visual hint: TYPOGRAPHIC. Một câu takeaway lớn, accent ở “opportunity”; tên và email bên dưới.
 
 ---
 
-## Sync notes (lesson ↔ outline ↔ built deck)
+## Sync notes
 
-- **Standalone lesson:** no session numbers and no recap slide.
-- **This outline mirrors the built deck** (`slides/Develop Solutions and Ideate.html`, 46 slides), slide for slide. The older `Develop Solutions & Ideate.html` is a previous version.
-- **Three class activities:** Activity 1 (Tree and Flow, 23 min), Activity 2 (Crazy 8s, 12 min), Activity 3 (concept sketch, 8 min). Storyboarding, validation and prioritisation are taught in class and practised in the assignment.
-- **Layout names:** activity slides are PRACTICE (`.practice--act`), not MILESTONE, because that is how the deck is built; there are no `Num:` values. The What / When / Why method slides are built as the supplementary `.mth` layout and listed here as NUMBERED.
-- **Deck notes fixed (2026-10-05):** slide 24's "Activity 4" reference, the "two activities" and old timing in the speaker notes (slides 1, 2, 13, 18, 21, 24, 30, 31, 37, 38), and the slide 30 and 37 data labels now match this outline.
-- **Delivery modes added (2026-10-10):** Core and Extend paths, cut-line tags and the Full / Core 60 / Mini 45 modes live in the lesson ("Delivery modes"). In this outline they appear as the Delivery modes list under Slide structure and as speaker-note bullets on slides 12, 17 and 24. **The built deck HTML is not updated:** the activity slides still show only the full rounds and timers (23, 12 and 8 min). Add Core badges there if you want them on screen.
-- **Content added from a delivered session (2026-10-10):** "to be defined" opportunities and the no-friction rule (lesson Part 1, slide 08), Crazy 8s at team scale (Part 2, slide 16), concept versus solution (Part 3, slide 20), storyboard time horizon (Part 4, slide 26) and stakeholder-sourced assumptions (Part 5, slide 36). All five are speaker-note bullets, so the slide count stays at 46. **The built deck HTML is not updated.**
-- **Open check:** slide 22 shows a mentee's concept sketch. Confirm permission to show it.
-- **Deliberate differences from the lesson (outline is what is presented, lesson is the full reference):** dot voting, sketching entry points, "sketching two concepts", "how to use a sketch", the strong-vs-weak tables, the opportunity trace, stakeholder reading and the "when to move forward" checks stay in the lesson only. The assignment is the same in both files (storyboard the survivor only). Disney example is optional.
-- **Timing check:** 6 + 33 + 15 + 13 + 5 + 5 + 5 + 3 + 5 = 90 min. Activities: 23 + 12 + 8 = 43 min. Teaching: 36 min (including 3 min AI-assisted workflow).
+- **Nguồn:** artifact `e73a5bd7-e797-4c0f-bd8c-02a4933957e1`, version `1795328764-7dd0`, đọc ngày 2026-11-22. Slide id, thứ tự và speaker notes lấy nguyên từ deck.
+- **Speaker notes:** deck viết notes theo đoạn văn nói; ở đây chuyển mỗi đoạn thành một bullet, mỗi "Câu hỏi cho lớp" thành một dòng `>`. Các câu hướng dẫn người trình bày ("Đọc to…", "Chỉ vào…", "Nhắc…", "Bấm giờ") được lược theo quy tắc notes. Deck chưa đổi.
+- **Title:** nhiều title trong deck dài hơn sáu từ hoặc là một câu (ví dụ slide 3, 23, 54). Giữ nguyên theo deck; `notes-audit.py` sẽ báo các slide này.
+- **Part 7 AI-Assisted Workflow:** không còn slide trong deck. Nội dung ở lesson, mục Take-home, đánh dấu `[to confirm]`.
+- **Slide 46 và 49:** ví dụ giả định "freelancer sẽ kết nối proposal lúc gửi" và ghi chú hai màu sticky trong ma trận là dữ liệu minh hoạ `[to confirm]` với bài tập gốc.
