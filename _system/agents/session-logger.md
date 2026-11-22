@@ -33,6 +33,7 @@ Return exactly these sections to the main session:
 - **Plan vs delivered:** covered, not covered, final-session flag
 - **Winnie's promises** and **open Winnie items** carried over from the previous recap
 - **Candidates:** testimonials (or "none") and class ideas, described generically
+- **Homework images:** which `mentees/<slug>/homework/<lesson-slug>/` folders are empty for this session and the previous two (read-only check)
 - **Needs a decision:** two matching meetings, no transcript yet, lesson barely taught
 
 ## Boundaries

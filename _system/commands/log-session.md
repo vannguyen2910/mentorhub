@@ -83,6 +83,8 @@ If step 3 found feedback about Winnie's teaching, apply the testimonial capture 
 
 When the user sends homework images or files, copy them to `mentees/<slug>/homework/<lesson-slug>/` (create the folder if missing) with a descriptive name and no mentee name, for example `design-process.webp`, `evaluate-current-experience.webp`. Note if a file carries a person's name, since it cannot be reused as an example without masking. Rebuild the site afterwards.
 
+**Homework image check (every run, even when the user sent nothing).** List `mentees/<slug>/homework/<lesson-slug>/` for the lesson of this session and of the previous two sessions. An empty or missing folder means no images were received, which is not the same as a missing upload: the mentee may not have submitted homework. Say which folders are empty and ask the user once whether images exist somewhere (chat, Notion, the Zoom meeting chat) or none were submitted. If none were submitted, record that in the recap and the Notion tracker and do not ask again. Do not mark the homework as done on the Notion page without images or the user's word. After copying, open the built mentee page (`docs/mentees/<slug>.html`) and confirm every `<img src>` resolves to a file under `docs/assets/`.
+
 ## 11. Report
 
 The build prints a "Mentee health check". Pull out the lines for this mentee (rerun `python3 _system/scripts/build-home.py` and filter by name if the first build's output was cut) and say what is still open (missing playback, slides, dates, baseline). Then report:
