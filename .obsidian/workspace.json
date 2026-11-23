@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "showcase/testimonials.md",
+                "file": "mentees/joy-huynh/plan/Coaching Plan - Joy Huynh.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "testimonials"
+              "title": "Coaching Plan - Joy Huynh"
             }
           }
         ]
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "showcase/testimonials.md",
+                "file": "mentees/joy-huynh/plan/Coaching Plan - Joy Huynh.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
