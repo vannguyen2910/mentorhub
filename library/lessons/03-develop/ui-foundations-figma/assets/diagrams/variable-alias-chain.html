@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Component dùng semantic, semantic trỏ về primitive</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper:   #f5f5f5;
+      --color-ink:     #2d3142;
+      --color-muted:   #4f5d75;
+      --color-accent:  #bf4520;
+      --font-sans:     'Geist', system-ui, sans-serif;
+      --font-serif:    'Instrument Serif', 'Noto Serif', serif;
+      --font-mono:     'Geist Mono', ui-monospace, monospace;
+    }
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+    .frame { max-width: 1280px; width: 100%; min-width: 0; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--color-ink);
+      margin-bottom: 1.5rem;
+    }
+    svg { width: 100%; min-width: 1280px; display: block; }
+    @media print {
+      .diagram-container { overflow-x: visible; }
+      svg { min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Variables · Diagram Design</p>
+    <h1>Component dùng semantic, semantic trỏ về primitive</h1>
+    <div class="diagram-container">
+      <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="variable-alias-chain-title variable-alias-chain-desc">
+        <title id="variable-alias-chain-title">Component dùng semantic, semantic trỏ về primitive</title>
+        <desc id="variable-alias-chain-desc">Button và Link dùng biến semantic color/action/fill; biến này trỏ tới blue-500 ở mode Light và blue-300 ở mode Dark; trỏ thẳng từ component tới primitive là cách nên tránh.</desc>
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+          <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#bf4520"/></marker>
+        </defs>
+        <rect width="100%" height="100%" fill="#f5f5f5"/>
+<rect x="40" y="176" width="260" height="360" rx="8" fill="none" stroke="#bfc0c0" stroke-width="1"/><rect x="52" y="166" width="71" height="14" rx="2" fill="#f5f5f5"/><text x="58" y="176" fill="#5a6580" font-size="8" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" letter-spacing="0.14em">COMPONENTS</text>
+<rect x="440" y="176" width="360" height="360" rx="8" fill="none" stroke="#bfc0c0" stroke-width="1"/><rect x="452" y="166" width="124" height="14" rx="2" fill="#f5f5f5"/><text x="458" y="176" fill="#5a6580" font-size="8" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" letter-spacing="0.14em">SEMANTIC COLLECTION</text>
+<rect x="920" y="176" width="320" height="360" rx="8" fill="none" stroke="#bfc0c0" stroke-width="1"/><rect x="932" y="166" width="130" height="14" rx="2" fill="#f5f5f5"/><text x="938" y="176" fill="#5a6580" font-size="8" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" letter-spacing="0.14em">PRIMITIVE COLLECTION</text>
+<path d="M280 264 H372 Q380 264 380 272 V320 Q380 328 388 328 H480" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M280 448 H372 Q380 448 380 440 V368 Q380 360 388 360 H480" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M760 328 H852 Q860 328 860 320 V272 Q860 264 868 264 H940" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M760 360 H852 Q860 360 860 368 V440 Q860 448 868 448 H940" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M170 232 V156 Q170 148 178 148 H1072 Q1080 148 1080 156 V232" fill="none" stroke="#bf4520" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow-accent)"/>
+<rect x="878.5" y="240" width="51" height="16" rx="2" fill="#f5f5f5"/><text x="904" y="252" fill="#5a6580" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">LIGHT</text>
+<rect x="882.5" y="424" width="43" height="16" rx="2" fill="#f5f5f5"/><text x="904" y="436" fill="#5a6580" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">DARK</text>
+<rect x="583.0" y="124" width="82" height="16" rx="2" fill="#f5f5f5"/><text x="624" y="136" fill="#bf4520" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">TRỰC TIẾP</text>
+<rect x="60" y="232" width="220" height="64" rx="6" fill="#f5f5f5"/><rect x="60" y="232" width="220" height="64" rx="6" fill="rgba(45,49,66,0.04)" stroke="#2d3142" stroke-width="1"/><text x="170.0" y="262.0" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle" >Button</text><text x="170.0" y="280.0" fill="#5a6580" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" >fill</text>
+<rect x="60" y="416" width="220" height="64" rx="6" fill="#f5f5f5"/><rect x="60" y="416" width="220" height="64" rx="6" fill="rgba(45,49,66,0.04)" stroke="#2d3142" stroke-width="1"/><text x="170.0" y="446.0" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle" >Link</text><text x="170.0" y="464.0" fill="#5a6580" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" >text color</text>
+<rect x="480" y="296" width="280" height="96" rx="6" fill="#f5f5f5"/><rect x="480" y="296" width="280" height="96" rx="6" fill="rgba(45,49,66,0.04)" stroke="#2d3142" stroke-width="1"/><text x="620.0" y="342.0" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle" >color/action/fill</text><text x="620.0" y="360.0" fill="#5a6580" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" >mode: Light, Dark</text>
+<rect x="940" y="232" width="280" height="64" rx="6" fill="#f5f5f5"/><rect x="940" y="232" width="280" height="64" rx="6" fill="rgba(45,49,66,0.04)" stroke="#2d3142" stroke-width="1"/><text x="1000" y="262.0" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="start" >blue-500</text><text x="1000" y="280.0" fill="#5a6580" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >#2E5AA8</text>
+<rect x="956" y="252" width="24" height="24" rx="3" fill="#2e5aa8" stroke="#2d3142" stroke-width="1"/>
+<rect x="940" y="416" width="280" height="64" rx="6" fill="#f5f5f5"/><rect x="940" y="416" width="280" height="64" rx="6" fill="rgba(45,49,66,0.04)" stroke="#2d3142" stroke-width="1"/><text x="1000" y="446.0" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="start" >blue-300</text><text x="1000" y="464.0" fill="#5a6580" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >#739FDF</text>
+<rect x="956" y="436" width="24" height="24" rx="3" fill="#739fdf" stroke="#2d3142" stroke-width="1"/>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

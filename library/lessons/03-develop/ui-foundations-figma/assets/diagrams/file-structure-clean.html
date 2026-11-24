@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cấu trúc một file Figma gọn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper:   #f5f5f5;
+      --color-ink:     #2d3142;
+      --color-muted:   #4f5d75;
+      --color-accent:  #bf4520;
+      --font-sans:     'Geist', system-ui, sans-serif;
+      --font-serif:    'Instrument Serif', 'Noto Serif', serif;
+      --font-mono:     'Geist Mono', ui-monospace, monospace;
+    }
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+    .frame { max-width: 1280px; width: 100%; min-width: 0; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--color-ink);
+      margin-bottom: 1.5rem;
+    }
+    svg { width: 100%; min-width: 1280px; display: block; }
+    @media print {
+      .diagram-container { overflow-x: visible; }
+      svg { min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Tổ chức file · Diagram Design</p>
+    <h1>Cấu trúc một file Figma gọn</h1>
+    <div class="diagram-container">
+      <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="file-structure-clean-title file-structure-clean-desc">
+        <title id="file-structure-clean-title">Cấu trúc một file Figma gọn</title>
+        <desc id="file-structure-clean-desc">Một file Figma gồm năm page (Cover, Components, Screens, Handoff, _Archive), trong page Screens có section Booking chứa hai frame đặt tên theo quy ước Booking/Mobile và Booking/Desktop.</desc>
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+          <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#bf4520"/></marker>
+        </defs>
+        <rect width="100%" height="100%" fill="#f5f5f5"/>
+<path d="M560 168 V192 Q560 200 552 200 H152 Q144 200 144 208 V248" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M600 168 V216 Q600 224 592 224 H400 Q392 224 392 232 V248" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M640 168 V248" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M680 168 V216 Q680 224 688 224 H880 Q888 224 888 232 V248" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M720 168 V192 Q720 200 728 200 H1128 Q1136 200 1136 208 V248" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M640 328 V408" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M608 488 V520 Q608 528 600 528 H528 Q520 528 520 536 V568" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M672 488 V520 Q672 528 680 528 H752 Q760 528 760 536 V568" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="520" y="88" width="240" height="80" rx="6" fill="#f5f5f5"/><rect x="520" y="88" width="240" height="80" rx="6" fill="rgba(45,49,66,0.04)" stroke="#2d3142" stroke-width="1"/><text x="640.0" y="126.0" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle" >File</text><text x="640.0" y="144.0" fill="#5a6580" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" >tên-dự-án</text>
+<rect x="40" y="248" width="208" height="80" rx="6" fill="#f5f5f5"/><rect x="40" y="248" width="208" height="80" rx="6" fill="rgba(45,49,66,0.04)" stroke="#2d3142" stroke-width="1"/><text x="144.0" y="286.0" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle" >Cover</text><text x="144.0" y="304.0" fill="#5a6580" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" >page · tên, trạng thái</text>
+<rect x="288" y="248" width="208" height="80" rx="6" fill="#f5f5f5"/><rect x="288" y="248" width="208" height="80" rx="6" fill="rgba(45,49,66,0.04)" stroke="#2d3142" stroke-width="1"/><text x="392.0" y="286.0" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle" >Components</text><text x="392.0" y="304.0" fill="#5a6580" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" >page · component sets</text>
+<rect x="536" y="248" width="208" height="80" rx="6" fill="#f5f5f5"/><rect x="536" y="248" width="208" height="80" rx="6" fill="rgba(191,69,32,0.08)" stroke="#bf4520" stroke-width="1"/><text x="640.0" y="286.0" fill="#bf4520" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle" >Screens</text><text x="640.0" y="304.0" fill="#bf4520" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" >page · bản đang làm</text>
+<rect x="784" y="248" width="208" height="80" rx="6" fill="#f5f5f5"/><rect x="784" y="248" width="208" height="80" rx="6" fill="rgba(45,49,66,0.04)" stroke="#2d3142" stroke-width="1"/><text x="888.0" y="286.0" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle" >Handoff</text><text x="888.0" y="304.0" fill="#5a6580" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" >page · bản đã chốt</text>
+<rect x="1032" y="248" width="208" height="80" rx="6" fill="#f5f5f5"/><rect x="1032" y="248" width="208" height="80" rx="6" fill="rgba(45,49,66,0.04)" stroke="#2d3142" stroke-width="1"/><text x="1136.0" y="286.0" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle" >_Archive</text><text x="1136.0" y="304.0" fill="#5a6580" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" >page · bản cũ</text>
+<rect x="536" y="408" width="208" height="80" rx="6" fill="#f5f5f5"/><rect x="536" y="408" width="208" height="80" rx="6" fill="rgba(45,49,66,0.04)" stroke="#2d3142" stroke-width="1"/><text x="640.0" y="446.0" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle" >Booking</text><text x="640.0" y="464.0" fill="#5a6580" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" >section</text>
+<rect x="416" y="568" width="208" height="80" rx="6" fill="#f5f5f5"/><rect x="416" y="568" width="208" height="80" rx="6" fill="rgba(45,49,66,0.04)" stroke="#2d3142" stroke-width="1"/><text x="520.0" y="606.0" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle" >Booking/Mobile</text><text x="520.0" y="624.0" fill="#5a6580" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" >frame · 390 × 844</text>
+<rect x="656" y="568" width="208" height="80" rx="6" fill="#f5f5f5"/><rect x="656" y="568" width="208" height="80" rx="6" fill="rgba(45,49,66,0.04)" stroke="#2d3142" stroke-width="1"/><text x="760.0" y="606.0" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle" >Booking/Desktop</text><text x="760.0" y="624.0" fill="#5a6580" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" >frame · 1280 × 800</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>
