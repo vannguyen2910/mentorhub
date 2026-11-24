@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="robots" content="noindex"/>
-<meta name="description" content=""/>
+<meta name="description" content="Dựng concept đã chọn thành file Figma chạy ở hai kích thước"/>
 <title>UI Foundations: Building in Figma — Training Hub</title>
 <link rel="stylesheet" href="../assets/css/tokens.css"/>
 <link rel="stylesheet" href="../assets/css/components.css"/>
@@ -28,72 +28,552 @@
   <a class="tp-back" href="../lessons.html">← All lessons</a>
   <header class="tp-head">
     <h1 class="page-title">UI Foundations: Building in Figma</h1>
-    
-    
-    <div class="tp-info" data-var-panel data-var-id="0"><dl class="tp-meta" style="--tp-cols: repeat(3, minmax(0, 1fr)) minmax(0, 1.8fr)"><div><dt>Stage</dt><dd>Develop</dd></div><div><dt>Level</dt><dd>Beginner</dd></div><div><dt>Duration</dt><dd>90 min</dd></div><div><dt>Source file</dt><dd><code>ui-foundations-figma-brief.md</code></dd></div></dl></div>
+    <p class="page-desc">Dựng concept đã chọn thành file Figma chạy ở hai kích thước</p>
+    <div class="used"><span>Taught in</span><a class="used__chip" href="../programs/ui-ux-fundamentals.html">UI/UX Design Fundamentals · session 06b</a></div>
+    <div class="tp-info" data-var-panel data-var-id="0"><div class="draft-banner">Draft: content exists but is not finalised for delivery.</div><dl class="tp-meta" style="--tp-cols: repeat(4, minmax(0, 1fr)) minmax(0, 1.8fr)"><div><dt>Stage</dt><dd>Develop</dd></div><div><dt>Level</dt><dd>Beginner</dd></div><div><dt>Duration</dt><dd>90 min</dd></div><div><dt>Date</dt><dd>24 Nov 2026</dd></div><div><dt>Source file</dt><dd><code>ui-foundations-figma-lesson.md</code></dd></div><div class="tp-meta__tags"><dt>Topics</dt><dd><span>figma</span><span>design-systems</span><span>visual-design</span><span>private-training</span><span>beginner</span></dd></div></dl></div><div class="tp-info" data-var-panel data-var-id="1" hidden><dl class="tp-meta" style="--tp-cols: repeat(3, minmax(0, 1fr)) minmax(0, 1.8fr)"><div><dt>Stage</dt><dd>Develop</dd></div><div><dt>Level</dt><dd>Beginner</dd></div><div><dt>Duration</dt><dd>90 min</dd></div><div><dt>Source file</dt><dd><code>ui-foundations-figma-brief.md</code></dd></div></dl></div>
   </header>
-  <div class="tabs tabs--pill tp-tabs"><div class="tabs__list" role="tablist"><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="lesson" aria-selected="false">Lesson</button><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="slides" aria-selected="false">Slides</button><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="homework" aria-selected="false">Homework</button></div></div>
-  <section class="tp-panel" data-tab-panel data-tab-id="lesson" role="tabpanel" hidden><div data-var-panel data-var-id="0">
+  <div class="tabs tabs--pill tp-tabs"><div class="tabs__list" role="tablist"><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="lesson" aria-selected="false">Lesson</button><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="slides" aria-selected="false">Slides (1)</button><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="homework" aria-selected="false">Homework</button></div></div>
+  <section class="tp-panel" data-tab-panel data-tab-id="lesson" role="tabpanel" hidden><div class="tabs tabs--pill var-switch"><div class="tabs__list" role="tablist" aria-label="Lesson version"><button type="button" role="tab" class="tabs__tab" data-var-btn data-var-id="0" aria-selected="false">Beginner</button><button type="button" role="tab" class="tabs__tab" data-var-btn data-var-id="1" aria-selected="false">Beginner</button></div></div><div data-var-panel data-var-id="0">
   <div class="tp-layout">
-    <aside class="tp-toc" aria-label="On this page"><p class="tp-toc__label">On this page</p><a href="#v0-purpose">Purpose</a><a href="#v0-structure">Structure</a><a href="#v0-learning-objectives">Learning objectives</a><a href="#v0-key-decisions">Key decisions</a><a href="#v0-sources">Sources</a><a href="#v0-to-confirm">[to confirm]</a></aside>
-    <article class="tp-body"><h2 id="v0-purpose">Purpose</h2>
-<p>Sau buổi này, học viên dựng được một component set chạy ở ít nhất hai kích thước màn hình, từ concept đã chọn ở buổi UI Fundamentals, bằng auto layout và variables, trong một file đã được tổ chức rõ ràng.</p>
-<h2 id="v0-structure">Structure</h2>
+    <aside class="tp-toc" aria-label="On this page"><p class="tp-toc__label">On this page</p><a href="#v0-overview">Overview</a><a href="#v0-learning-objectives">Learning Objectives</a><a href="#v0-success-check">Success Check</a><a href="#v0-materials-needed">Materials Needed</a><a href="#v0-pre-class-preparation">Pre-Class Preparation</a><a href="#v0-session-plan">Session Plan</a><a href="#v0-core-content">Core Content</a><a href="#v0-file-mẫu-xấu">File mẫu xấu</a><a href="#v0-activities">Activities</a><a href="#v0-ai-in-practice">AI in Practice</a><a href="#v0-assessment">Assessment</a><a href="#v0-limitations">Limitations</a><a href="#v0-references">References</a><a href="#v0-further-resources">Further Resources</a></aside>
+    <article class="tp-body"><h2 id="v0-overview">Overview</h2>
+<p>Một file Figma chạy được không bắt đầu từ màn hình đẹp. Nó bắt đầu từ ba thứ mà người khác nhìn vào là hiểu: màu và khoảng cách đến từ đâu, layout co giãn theo luật nào, và phần tử lặp lại được dựng một lần hay chép nhiều lần.</p>
+<p>Buổi này là buổi dựng. Học viên đã có concept, decision sheet và token set từ buổi UI Fundamentals, nên không dạy lại vì sao chọn giá trị nào. Buổi chỉ chuyển các giá trị đó thành variables, dựng màn hình bằng auto layout, biến phần tử lặp lại thành component, và cho cùng một component chạy ở hai kích thước màn hình bằng mode.</p>
+<p>Mỗi nhiệm vụ mở bằng 4 đến 5 phút sửa lỗi trên một file mẫu "xấu", rồi học viên làm trên concept của học viên. File mẫu chứa sẵn các lỗi người mới hay gặp, nên lỗi được thấy trước khi được giải thích.</p>
+<p><strong>Hình dạng buổi.</strong> Mở đầu 10 phút kiểm file, bốn nhiệm vụ (variables, auto layout, component và variants, breakpoints và modes), phần kết 6 phút gồm 3 phút dự phòng. Học viên làm ngay từ đầu, không có phần demo trước; người hướng dẫn chỉ ra chỗ sai và sửa cùng học viên khi đang làm.</p>
+<p>Buổi này thuần kỹ thuật và không dùng AI.</p>
+<hr />
+<h2 id="v0-learning-objectives">Learning Objectives</h2>
+<p>Sau buổi này, học viên có thể:</p>
 <ol>
-<li>Mở đầu, 10 phút: xem file học viên đã dọn theo guide gửi trước buổi (pages, tên layer, cấu trúc) và chốt concept sẽ dựng (concept đã chọn ở buổi UI Fundamentals).</li>
-<li>Nhiệm vụ 1, Variables, 22 phút: học viên lấy thang spacing, type scale và role màu từ token set của buổi UI Fundamentals, rồi tạo collection, đặt tên theo đường dẫn, dùng alias giữa primitive và semantic.</li>
-<li>Nhiệm vụ 2, Auto layout, 18 phút: dựng lại một màn hình bằng auto layout, dùng Hug, Fill, Fixed, min và max, gắn padding và gap vào variables.</li>
-<li>Nhiệm vụ 3, Component và variants, 20 phút: biến hai đến ba phần tử lặp lại (ví dụ nút, thẻ, thanh điều hướng) thành component, thêm variant property và component property.</li>
-<li>Nhiệm vụ 4, Breakpoints, 14 phút: điều chỉnh màn hình và component cho một breakpoint thứ hai, kiểm tra component co giãn đúng.</li>
+<li><strong>Kiểm tra</strong> file của học viên theo guide: pages, tên layer và cấu trúc đủ rõ để người khác tìm được đường.</li>
+<li><strong>Tạo</strong> hai collection variables (primitive và semantic) từ token set của học viên và gắn vào layer, thay cho màu và số gõ tay.</li>
+<li><strong>Dựng</strong> layout linh hoạt bằng auto layout, dùng đúng Hug, Fill, Fixed, min và max, với spacing, màu và cỡ chữ lấy từ variables.</li>
+<li><strong>Tạo</strong> component và variants từ concept của học viên, dùng đúng loại property (variant, boolean, text, instance swap).</li>
+<li><strong>Điều chỉnh</strong> layout và component cho ít nhất hai kích thước màn hình bằng một mode của variables.</li>
+<li><strong>Giải thích</strong> quan hệ giữa main component, instance và override, và biết khi nào sửa bản gốc thay vì sửa instance.</li>
+</ol>
+<hr />
+<h2 id="v0-success-check">Success Check</h2>
+<p>File có pages, tên layer và cấu trúc rõ. Màu và spacing trong file lấy từ variables, không còn giá trị gõ tay ở phần đã dựng. Một component set chạy được ở ít nhất hai kích thước màn hình.</p>
+<hr />
+<h2 id="v0-materials-needed">Materials Needed</h2>
+<ul>
+<li>Figma gói Pro của học viên (cần cho nhiều mode ở Nhiệm vụ 4, xem mục Limitations).</li>
+<li>File của học viên, đã dọn theo guide ở mục Pre-Class Preparation.</li>
+<li>Ba thứ từ buổi UI Fundamentals: <code>chosen-concept.png</code>, decision sheet, token set.</li>
+<li>File mẫu "xấu" trong Figma, học viên nhân bản về tài khoản của học viên. <code>[to confirm]</code> Link và quyền chia sẻ (xem, nhân bản); file hiện nằm ở bản nháp của người hướng dẫn.</li>
+<li>Sáu sơ đồ trong <code>assets/diagrams/</code>, ảnh <code>assets/bad-file-sample-screen.png</code> và tám ảnh chụp giao diện Figma của người hướng dẫn trong <code>assets/screens/</code> (panel Variables, Styles, Text styles, menu thêm style, panel Auto layout, component set Button, Main và Instance, property của TextField).</li>
+</ul>
+<hr />
+<h2 id="v0-pre-class-preparation">Pre-Class Preparation</h2>
+<p>Học viên dọn file theo guide dưới đây trước buổi, khoảng 20 đến 30 phút. Việc dọn file không làm trong buổi; 10 phút đầu buổi chỉ dùng để kiểm kết quả.</p>
+<h3 id="v0-guide-dọn-file">Guide dọn file</h3>
+<ol>
+<li>Tạo file mới, đặt tên theo mẫu <code>Tên-dự-án_UI-Foundations</code>.</li>
+<li>Tạo các page: <code>Cover</code>, <code>Components</code>, <code>Screens</code>, <code>Handoff</code>, <code>_Archive</code>. Page <code>Handoff</code> có thể để trống cho đến khi có bản chốt.</li>
+<li>Đưa <code>chosen-concept.png</code> vào page <code>Screens</code>, làm ảnh tham chiếu đặt cạnh nơi sẽ dựng màn hình.</li>
+<li>Đặt tên layer theo vai trò, không theo hình dạng: <code>card</code>, <code>title</code>, <code>cta</code>, không phải <code>Frame 12</code> hay <code>Rectangle 3</code>. Frame của màn hình đặt tên theo mẫu <code>Tên-màn/Mobile</code>.</li>
+<li>Chuyển mọi bản nháp, ảnh thử và frame cũ sang page <code>_Archive</code>.</li>
+<li>Có bảng token set (spacing, cỡ chữ, vai trò màu) ở dạng đọc được, để sao chép giá trị khi vào Nhiệm vụ 1.</li>
+<li>Mở file mẫu "xấu", nhân bản về tài khoản của học viên và kiểm tra mở được.</li>
+<li>Kiểm tra gói Figma của tài khoản đang dùng: số mode cho phép mỗi collection.</li>
+</ol>
+<hr />
+<h2 id="v0-session-plan">Session Plan</h2>
+<table>
+<thead>
+<tr>
+<th>Thời gian</th>
+<th>Block</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0:00 đến 0:10</td>
+<td>Mở đầu, 10 phút</td>
+<td>Kiểm file đã dọn, chốt concept sẽ dựng</td>
+</tr>
+<tr>
+<td>0:10 đến 0:25</td>
+<td>Nhiệm vụ 1, Variables, 15 phút</td>
+<td>4 phút sửa file mẫu, 11 phút dựng token set</td>
+</tr>
+<tr>
+<td>0:25 đến 0:46</td>
+<td>Nhiệm vụ 2, Auto layout, 21 phút</td>
+<td>5 phút sửa file mẫu, 16 phút dựng màn hình</td>
+</tr>
+<tr>
+<td>0:46 đến 1:10</td>
+<td>Nhiệm vụ 3, Component và variants, 24 phút</td>
+<td>Biến hai đến ba phần tử lặp lại thành component</td>
+</tr>
+<tr>
+<td>1:10 đến 1:24</td>
+<td>Nhiệm vụ 4, Breakpoints và modes, 14 phút</td>
+<td>Một mode mới, một breakpoint thứ hai</td>
+</tr>
+<tr>
+<td>1:24 đến 1:30</td>
+<td>Kết, 6 phút</td>
+<td>Rà success check, ghi việc còn dở thành homework</td>
+</tr>
+</tbody>
+</table>
+<p>Tổng 90 phút. Buffer 3 phút nằm trong phần Kết. <code>[to confirm]</code> Deck có 42 slide và phần mở rộng ở mục 6 (cùng phần 6, Handoff) chưa được chia thời lượng: 90 phút đã kín với bốn nhiệm vụ. Cần quyết định rút bớt phần làm hoặc kéo dài buổi. Nếu buổi chạy quá giờ, Nhiệm vụ 3 rút còn hai component; Nhiệm vụ 4 không cắt.</p>
+<hr />
+<h2 id="v0-core-content">Core Content</h2>
+<h3 id="v0-1-mở-đầu-kiểm-file">1. Mở đầu: kiểm file</h3>
+<p><strong>Ví dụ trước.</strong> Một designer mở file của đồng nghiệp để dựng tiếp. Trang đầu có ba màn hình tên <code>Frame 1</code>, <code>Frame 1 copy</code> và <code>Frame 1 final 2</code>, kèm một ghi chú "NHÁP, đừng xoá". Không ai biết bản nào là bản cuối, nên việc đầu tiên là hỏi lại người làm. Đó là một file không tự giải thích được.</p>
+<p><strong>Phép thử.</strong> Một người lạ mở file và, trong 30 giây, tìm được ba thứ: màn hình đang làm, nơi chứa component, và bản đã chốt.</p>
+<p>Cấu trúc nhắm tới có năm page, mỗi page một việc: <code>Cover</code>, <code>Components</code>, <code>Screens</code>, <code>Handoff</code>, <code>_Archive</code>. Trong <code>Screens</code>, các frame gom theo section và đặt tên theo quy ước <code>Tên-màn/Thiết-bị</code>. Sơ đồ: <a href="../assets/diagrams/file-structure-clean.html">file-structure-clean.html</a>.</p>
+<p>Lỗi thường gặp (quan sát từ forum Figma và blog, không phải tài liệu chính thức [8]):</p>
+<ul>
+<li>Layer giữ tên mặc định (<code>Frame 123</code>, <code>Rectangle 47</code>), nên layers panel là một dãy tên vô nghĩa.</li>
+<li>Một page chứa tất cả, lẫn nháp và bản cuối.</li>
+<li>Không có page hoặc dấu hiệu cho bản đã chốt, nên người nhận bàn giao không biết bản nào đúng.</li>
+</ul>
+<p>Tổ chức file là khoảng trống của hầu hết giáo trình Figma công khai [8], vì vậy phần này được giữ ở đầu buổi và trong guide gửi trước.</p>
+<h3 id="v0-2-variables">2. Variables</h3>
+<p><strong>Ví dụ trước.</strong> Trên màn hình của file mẫu có ba nút cam. Nhìn bằng mắt thì cùng một màu, nhưng mã màu là <code>#E8590C</code>, <code>#E8590D</code> và <code>#e75a0c</code>, tức ba giá trị gõ tay. Nếu thương hiệu đổi sang một màu cam khác, ba chỗ phải sửa riêng, và đến chỗ thứ tư đã bị bỏ sót.</p>
+<p><strong>Variables là gì.</strong> Variable là một giá trị có tên (màu, số, chuỗi, boolean) dùng lại ở nhiều nơi. Đổi giá trị ở một chỗ thì mọi layer gắn với nó đổi theo. Variables nằm trong các collection; mỗi collection có một hoặc nhiều mode [1].</p>
+<p><strong>Hai collection, hai lớp.</strong></p>
+<ul>
+<li><strong>Primitive</strong> giữ giá trị thô và tên theo giá trị: <code>blue-500</code>, <code>blue-300</code>, <code>space-16</code>.</li>
+<li><strong>Semantic</strong> giữ tên theo vai trò và trỏ về primitive bằng alias: <code>color/action/fill</code> trỏ về <code>blue-500</code>.</li>
+<li>Layer và component chỉ dùng semantic. Khi đổi theme hoặc thương hiệu, chỉ semantic được trỏ lại.</li>
+</ul>
+<p>Sơ đồ: <a href="../assets/diagrams/variable-alias-chain.html">variable-alias-chain.html</a>. Trong sơ đồ, collection semantic có hai mode (Light, Dark), mỗi mode trỏ về một primitive; đường nét đứt màu cam là lỗi trỏ thẳng từ component vào primitive.</p>
+<p><strong>Đặt tên theo vai trò, không theo màu.</strong> <code>color/action/fill</code> vẫn đúng khi màu đổi từ xanh sang cam, còn <code>blue-main</code> thì sai ngay lúc đổi. Tên dạng đường dẫn (<code>color/action/fill</code>) cũng làm nhóm biến tự gom trong panel.</p>
+<p><strong>Phạm vi buổi này.</strong> Hai collection, ba nhóm (spacing, vai trò màu, cỡ chữ). Giá trị lấy từ token set của buổi UI Fundamentals, nên không dạy lại thang 8pt hay type scale. Modes chưa dạy ở đây, để dành cho Nhiệm vụ 4. Quy tắc đặt tên đầy đủ theo atomic (<code>a/m/o</code>) thuộc buổi Design System.</p>
+<p>Lỗi thường gặp (forum Figma và blog [8]):</p>
+<ul>
+<li>Đã có variable nhưng vẫn dán mã màu trực tiếp, vì tạo xong bảng màu rồi quên gắn vào layer.</li>
+<li>Dùng primitive thẳng trong component, bỏ qua lớp semantic.</li>
+<li>Đặt tên theo màu (<code>Blue</code>, <code>Main color</code>).</li>
+<li>Tạo quá nhiều collection khi chưa cần; hai collection (primitive và semantic) đủ để bắt đầu.</li>
+</ul>
+<p>Figma có công cụ Check designs để tìm màu gõ tay và gắn lại variable [7].</p>
+<h3 id="v0-3-auto-layout">3. Auto layout</h3>
+<p><strong>Ví dụ trước.</strong> Ở file mẫu có hàng "Nhắc tôi trước 30 phút", gồm một khung cha và một khung con. Cha để Hug, con để Fill. Kết quả là chữ bị cắt ở "Nhắc tôi trước 3": cha chờ con quyết định chiều rộng, còn con chờ cha. Đây là một cấu hình mâu thuẫn, và triệu chứng là chữ bị cắt chứ không phải một thông báo lỗi.</p>
+<p><strong>Ba cách một khung quyết định kích thước</strong> [3]:</p>
+<table>
+<thead>
+<tr>
+<th>Chế độ</th>
+<th>Ý nghĩa</th>
+<th>Khi dùng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fixed</td>
+<td>Số cố định</td>
+<td>Khoảng cách cố định, icon, ảnh có tỉ lệ</td>
+</tr>
+<tr>
+<td>Hug</td>
+<td>Ôm theo nội dung bên trong</td>
+<td>Nút, chip, nhãn: cỡ do nội dung quyết định</td>
+</tr>
+<tr>
+<td>Fill</td>
+<td>Lấp đầy phần còn lại của khung cha</td>
+<td>Khối nội dung co giãn theo màn hình</td>
+</tr>
+</tbody>
+</table>
+<p>Sơ đồ: <a href="../assets/diagrams/hug-fill-fixed.html">hug-fill-fixed.html</a>.</p>
+<p>Ba điều dễ nhầm:</p>
+<ul>
+<li>Fill chỉ có khi khung cha là auto layout và layer con không ở chế độ Ignore auto layout (trước đây gọi là absolute position) [3].</li>
+<li>Gõ một con số vào ô width, hoặc kéo tay một layer cho vừa khít, đều làm layer đó thành Fixed [3].</li>
+<li>Một trục chỉ nên có một bên quyết định kích thước: cha Hug với con Fill là mâu thuẫn. Cách sửa: cha Fixed hoặc Fill, hoặc con Hug.</li>
+</ul>
+<p><strong>Min và max.</strong> Một con Fill thường cần giới hạn: không co hẹp đến mức chữ bị cắt, không giãn quá rộng. Figma cho thêm min width và max width ở ô Width (và tương tự cho height) [3]. Sơ đồ: <a href="../assets/diagrams/min-max-width.html">min-max-width.html</a>, trong đó một con Fill (min 160, max 400) chạm min ở khung cha 192, lấp đầy ở khung cha 320 và chạm max ở khung cha 560.</p>
+<p>Trong phiên bản auto layout mới, padding cũng đặt kích thước tối thiểu cho khung: padding 30 mỗi bên thì khung không hẹp hơn 60, và max width không ghi đè điều này [3b].</p>
+<p><strong>Padding và gap lấy từ variables.</strong> Padding và gap (khoảng cách giữa các con) là hai con số đầu tiên nên gắn vào variables spacing đã tạo ở Nhiệm vụ 1. Khi đó đổi thang spacing thì cả màn hình đổi theo.</p>
+<p><strong>Hai phiên bản auto layout.</strong> Từ tháng 7/2026, bản "updated" là mặc định cho frame mới; frame cũ có thể chuyển qua lại đến tháng 1/2027, và component không tự nâng cấp [3b]. <code>[to confirm]</code> Hug, Fill, Fixed, min và max có chạy giống nhau ở hai bản trong frame thường hay không (trang help chỉ nói rõ cho Figma Sites). Kiểm trong app trước buổi dạy và ghi lại kết quả.</p>
+<p>Lỗi thường gặp (forum Figma và blog [8]):</p>
+<ul>
+<li>Cha Hug, con Fill (đã nêu ở trên).</li>
+<li>Dùng group thay frame để bố cục: group không có auto layout và không co giãn.</li>
+<li>Kích thước Fixed khắp nơi, không có min và max.</li>
+<li>Đặt tay vị trí (x, y) cho các phần tử trong một khung, rồi thêm một dòng chữ dài hơn thì mọi thứ chồng lên nhau.</li>
+</ul>
+<h3 id="v0-4-component-và-variants">4. Component và variants</h3>
+<p><strong>Ví dụ trước.</strong> Ở file mẫu có bốn nút: <code>Button</code>, <code>Button 2</code>, <code>Button copy</code>, <code>Button final</code>. Bo góc lần lượt 8, 10, 12 và 9, padding mỗi nút một khác, và còn một component <code>Button</code> không ai dùng cùng một bản đã detach. Đổi bo góc của "nút chính" nghĩa là sửa bốn chỗ và đoán xem chỗ nào còn sót.</p>
+<p><strong>Component</strong> là một bản gốc (main component), các bản dùng ở khắp file là instance. Sửa bản gốc thì mọi instance đổi theo; sửa riêng một instance gọi là override. Một component set gom nhiều biến thể của cùng một component, mỗi biến thể là một variant [4].</p>
+<p><strong>Bốn loại property dạy trong buổi</strong> (Figma có năm loại, thêm Slot) [4]:</p>
+<table>
+<thead>
+<tr>
+<th>Loại</th>
+<th>Điều khiển</th>
+<th>Ví dụ trên nút</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variant</td>
+<td>Chọn một trong các biến thể</td>
+<td><code>Size = S, M, L</code></td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>Ẩn hoặc hiện một layer</td>
+<td><code>Has icon = on, off</code></td>
+</tr>
+<tr>
+<td>Text</td>
+<td>Nội dung chữ</td>
+<td><code>Label</code></td>
+</tr>
+<tr>
+<td>Instance swap</td>
+<td>Đổi một component lồng bên trong</td>
+<td><code>Icon</code></td>
+</tr>
+</tbody>
+</table>
+<p>Sơ đồ: <a href="../assets/diagrams/component-set-properties.html">component-set-properties.html</a>.</p>
+<p><strong>Thứ tự nên làm.</strong> Quyết định property trước (Size, Has icon, Label, Icon), rồi mới tạo các variant. Thêm property sau khi đã có nhiều variant thường phải làm lại.</p>
+<p><strong>Phạm vi buổi này.</strong> Hai đến ba phần tử lặp lại của concept (ví dụ nút, thẻ, thanh điều hướng), mỗi phần tử một component. Nhiều hơn một vài component và quy tắc đặt tên theo atomic thuộc buổi Design System.</p>
+<p>Lỗi thường gặp (forum Figma và blog [8]):</p>
+<ul>
+<li>Detach instance để sửa nhanh: instance không còn nhận cập nhật từ bản gốc.</li>
+<li>Sửa tay từng instance (override) cho nội dung đổi thường xuyên, thay vì làm thành text property.</li>
+<li>Định nghĩa property sau khi đã tạo variant.</li>
+<li>Đặt tên variant là Yes và No: có nguồn cho biết Figma tự đổi thành boolean và việc gắn variable vào instance không chạy. <code>[to confirm]</code> Thử trong app trước khi nêu như một lỗi chắc chắn.</li>
+<li>Component dùng giá trị gõ tay thay vì variables semantic, nên đổi theme không đổi component.</li>
+</ul>
+<h3 id="v0-5-breakpoints-và-modes">5. Breakpoints và modes</h3>
+<p><strong>Ví dụ trước.</strong> Một designer có màn hình mobile hoàn chỉnh và được yêu cầu thêm bản desktop. Cách quen tay là nhân bản frame mobile, kéo rộng ra và sửa từng chỗ. Hai tuần sau, màu nút đổi ở mobile mà desktop vẫn cũ, vì hai frame không liên quan gì với nhau ngoài việc từng giống nhau.</p>
+<p><strong>Figma không có breakpoint tự động.</strong> Không có media query trong chế độ thiết kế. Một breakpoint là một frame với kích thước riêng, cộng một mode của variables khi giá trị cần đổi (spacing, cỡ chữ, padding của màn hình). Các component dùng chung và các variables semantic giữ hai frame luôn khớp nhau.</p>
+<p><strong>Ba nhóm kích thước.</strong> Buổi dùng cách chia của Material Design 3 [5]: Compact dưới 600dp, Medium từ 600 đến 839dp, Expanded từ 840 đến 1199dp. Trong Figma, đơn vị tính theo px.</p>
+<p><strong>Cách làm.</strong></p>
+<ol>
+<li>Tạo collection <code>Breakpoint</code> với ba mode: Compact, Medium, Expanded. Gói Professional cho tối đa 10 mode mỗi collection [2].</li>
+<li>Tạo vài variable kiểu số cho thứ cần đổi theo kích thước, ví dụ <code>screen/padding</code> và <code>type/body/size</code>, mỗi mode một giá trị.</li>
+<li>Gắn variables vào layer, rồi đặt mode cho từng frame: frame Compact dùng mode Compact, frame Expanded dùng mode Expanded.</li>
+<li>Kiểm tra component co giãn đúng: các thẻ xếp lại thành một, hai hoặc ba cột nhờ auto layout với Fill và min width, chứ không phải nhờ mode.</li>
+</ol>
+<p>Sơ đồ: <a href="../assets/diagrams/breakpoints-modes.html">breakpoints-modes.html</a>. <code>[to confirm]</code> Việc xếp lại số cột bằng auto layout dạng wrap với Fill và min width có chạy đúng như sơ đồ trong bản auto layout mới hay không; thử trong app.</p>
+<p>Lỗi thường gặp (forum Figma và blog [8]):</p>
+<ul>
+<li>Nhân bản frame rồi sửa từng bản, nên hai bản lệch nhau.</li>
+<li>Tìm nút "breakpoint" trong Figma và không thấy.</li>
+<li>Con Fill không có min width: thu hẹp màn hình thì chữ hoặc nút bị bóp quá mức.</li>
+<li>Mode áp theo từng frame, nên một layer lồng bên trong có thể giữ mode khác; kiểm tra mode ở frame ngoài cùng.</li>
+</ul>
+<p><code>[to confirm]</code> Alias giữa collection có chọn được mode không khi collection primitive có nhiều mode: nguồn cộng đồng cũ nói không. Buổi này dùng mẫu semantic nhiều mode trỏ về primitive một mode, mẫu này không phụ thuộc câu hỏi trên.</p>
+<hr />
+<h3 id="v0-6-nội-dung-mở-rộng-theo-từng-phần">6. Nội dung mở rộng theo từng phần</h3>
+<p>Deck gồm 48 slide, tất cả đều là slide chính. Phần này ghi các nội dung được thêm vào ngoài bốn nhiệm vụ gốc, gom theo phần của buổi. Thời lượng cho các nội dung này chưa được chia lại (xem Session Plan).</p>
+<p><strong>Phần 1, File check</strong></p>
+<ul>
+<li>Đặt tên cho ba loại thứ: layer theo vai trò (<code>card</code>, <code>title</code>, <code>cta</code>), variable theo vai trò có đường dẫn (<code>color/action/fill</code>), component nhóm trước trạng thái sau (<code>Button/Primary/Hover</code>). Carbon dùng <code>text-primary</code>, <code>button-primary-active</code>; Atlassian dùng <code>color.background.danger.bold.hovered</code>. Material 3 và Primer chưa mở được trang gốc.</li>
+</ul>
+<p><strong>Phần 2, Variables</strong></p>
+<ul>
+<li>Sáu loại variable: color, number, string, boolean, timing, easing. Tối đa 5.000 variable mỗi collection, publish được; giới hạn publish theo gói chưa xác nhận. Scope giới hạn nơi variable hiện ra.</li>
+<li>Styles so với variables: styles gom nhiều thuộc tính và không alias; variables có alias và mode, và gắn được vào text style và color style.</li>
+</ul>
+<p><strong>Phần 3, Auto layout</strong></p>
+<ul>
+<li>Wrap cho danh sách có số phần tử thay đổi; gap tự động Between, Around, Evenly.</li>
+<li>Ignore auto layout (trước đây gọi là absolute position) cho phần tử nằm ngoài flow, như badge ở góc.</li>
+<li>Constraints so với auto layout: constraint neo vào cạnh khung cha; auto layout sắp xếp theo luật. <code>[to confirm]</code> Constraint của con trong auto layout chỉ có tác dụng khi con bật Ignore auto layout.</li>
+<li>Layout guide (tên mới của layout grid từ 5/2025): grid, columns, rows; baseline bằng row guide kiểu Top. <code>[to confirm]</code> Cài đặt baseline.</li>
+<li>Ví dụ dựng mẫu: settings row. Ví dụ là bản nháp do chương trình đề xuất, chưa có nguồn công bố.</li>
+</ul>
+<p><strong>Phần 4, Components</strong></p>
+<ul>
+<li>Main component là bản gốc; instance nối với bản gốc. Override là thay đổi chỉ ở một instance, phần đã override không đổi theo bản gốc; Reset overrides đưa về bản gốc và giữ liên kết; detach cắt liên kết. Go to main component để mở bản gốc. <code>[to confirm]</code> Tên lệnh và vị trí menu trong giao diện hiện tại; override đôi khi mất sau khi publish hoặc đổi variant của component cha (nguồn forum).</li>
+<li>Nested instance (Expose properties from, Nested instances), Slot (loại property thứ năm, có trên mọi gói, Cmd hoặc Ctrl + Shift + S), preferred instances.</li>
+<li>Ví dụ dựng mẫu: button set (Style, Size, State). Bản nháp do chương trình đề xuất.</li>
+<li>Ba phím tắt: Shift A (thêm auto layout), Option K hoặc Ctrl Alt K (tạo component), Cmd D hoặc Ctrl D (nhân bản variant). Phím Detach chưa xác nhận nên không dạy.</li>
+</ul>
+<p><strong>Phần 5, Breakpoints</strong></p>
+<ul>
+<li>Ví dụ dựng mẫu: pricing card ở hai kích thước. Số cột đổi nhờ auto layout với Fill và min width, không nhờ mode. Bản nháp do chương trình đề xuất.</li>
+</ul>
+<p><strong>Phần 6, Handoff</strong></p>
+<ul>
+<li>Dev Mode: gói Starter không có; Professional, Organization, Enterprise có; annotation cần Full seat; code snippet và variable hiện trong Dev Mode. Từ tháng 7/2026 code khớp flexbox hơn (Between với một con căn đầu, gap không âm). <code>[to confirm]</code> Gói Professional có đặt được Ready for dev hay không (hai trang help mâu thuẫn).</li>
+<li>Checklist trước khi bàn giao: sáu điều tổng hợp từ best practices của Figma và lỗi của file mẫu; không phải checklist chính thức.</li>
+<li>Accessibility theo WCAG 2.2: tương phản 4,5:1 cho chữ thường, 3:1 cho chữ lớn (từ 18pt hoặc 14pt đậm); mục tiêu chạm tối thiểu 24 × 24 (AA), 44 × 44 (AAA).</li>
+<li>Prototype không nằm trong buổi này vì đã có lesson riêng.</li>
+</ul>
+<p><strong>Ảnh chụp giao diện.</strong> Deck có sáu slide ảnh chụp từ một file design system mẫu của người hướng dẫn: panel Variables (collection, group, alias), Styles (text style, menu thêm style gồm Animation và Layout guide), panel Auto layout (Flow, Resizing, Gap, Padding), Main và Instance, ma trận button set, và property của TextField (variant, boolean, instance lồng). Ảnh xác nhận tên panel là Variables và tên Layout guide trong menu Styles; ảnh chưa cho thấy menu Resizing (min và max), Ignore auto layout, Go to main component và Dev Mode.</p>
+<p><strong>Kiểm tra nhanh.</strong> Bốn câu cuối buổi (variables, auto layout, component, breakpoint). Bộ 40 câu đầy đủ, mỗi câu có đáp án và lỗi hiểu nhầm, là đề xuất của chương trình và nằm trong <code>learning/research.md</code>.</p>
+<hr />
+<h2 id="v0-file-mẫu-xấu">File mẫu xấu</h2>
+<p>File mẫu chứa 8 dấu hiệu dưới đây. Mỗi dấu hiệu được bắt ở một block của buổi.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Dấu hiệu</th>
+<th>Bắt ở</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Tên layer mặc định (<code>Frame 1</code>, <code>Rectangle 3</code>)</td>
+<td>Mở đầu</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Một page lẫn nháp và bản cuối</td>
+<td>Mở đầu</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mã màu gõ tay, ba sắc cam và nhiều xám gần giống nhau</td>
+<td>Nhiệm vụ 1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Group dùng làm bố cục, phần tử đặt tay bằng x, y</td>
+<td>Nhiệm vụ 2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Cha Hug và con Fill (chữ bị cắt)</td>
+<td>Nhiệm vụ 2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Kích thước Fixed khắp nơi, không có min và max</td>
+<td>Nhiệm vụ 2</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Nút copy (<code>Button</code>, <code>Button 2</code>, <code>Button copy</code>, <code>Button final</code>) thay cho variant</td>
+<td>Nhiệm vụ 3</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Instance đã detach và component gốc không ai dùng</td>
+<td>Nhiệm vụ 3</td>
+</tr>
+</tbody>
+</table>
+<p>Ảnh chụp màn hình chính của file mẫu: <code>assets/bad-file-sample-screen.png</code>.</p>
+<hr />
+<h2 id="v0-activities">Activities</h2>
+<p>Học viên làm ngay từ đầu trên file của học viên, không có phần demo trước. Người hướng dẫn chỉ ra chỗ sai và sửa cùng học viên khi đang làm.</p>
+<h3 id="v0-mở-đầu-kiểm-file-10-phút">Mở đầu: kiểm file (10 phút)</h3>
+<p><strong>Setup.</strong> File của học viên đã dọn theo guide; chia sẻ màn hình.</p>
+<p><strong>Task.</strong></p>
+<ol>
+<li>Học viên mở file và tự trả lời ba câu của phép thử: đâu là màn hình đang làm, đâu là nơi chứa component, đâu là bản đã chốt.</li>
+<li>Người hướng dẫn quét layers panel và page list, ghi ra các chỗ chưa rõ.</li>
+<li>Chốt concept sẽ dựng: mở <code>chosen-concept.png</code> cạnh token set.</li>
+</ol>
+<p><strong>Watch-fors.</strong></p>
+<ul>
+<li>Concept là ảnh thô, chưa có chữ thật: dựng với nội dung giữ chỗ và ghi lại.</li>
+<li>Học viên chưa dọn file: dọn nhanh các lỗi lớn nhất và ghi phần còn lại thành homework, không dành quá 10 phút.</li>
+</ul>
+<h3 id="v0-nhiệm-vụ-1-variables-15-phút">Nhiệm vụ 1: Variables (15 phút)</h3>
+<p><strong>Setup.</strong> File mẫu đang mở ở một tab; token set của học viên ở dạng bảng.</p>
+<p><strong>Task.</strong></p>
+<ol>
+<li>(4 phút) Trên file mẫu, tìm ba nút cam gần giống nhau. Tạo một variable và gắn cho một nút để thấy khác biệt giữa giá trị gõ tay và variable.</li>
+<li>(11 phút) Trên file của học viên, tạo collection primitive (giá trị thô của token set) và collection semantic (tên theo vai trò, alias về primitive) cho ba nhóm: spacing, vai trò màu, cỡ chữ.</li>
+</ol>
+<p><strong>Watch-fors.</strong></p>
+<ul>
+<li>Đặt tên theo màu thay cho vai trò.</li>
+<li>Gắn component vào primitive, bỏ qua semantic.</li>
+<li>Tạo quá nhiều collection.</li>
+<li>Variable chỉ có tên mà chưa gắn vào layer nào.</li>
+</ul>
+<h3 id="v0-nhiệm-vụ-2-auto-layout-21-phút">Nhiệm vụ 2: Auto layout (21 phút)</h3>
+<p><strong>Setup.</strong> Hai tab: file mẫu và file của học viên; variables đã có từ Nhiệm vụ 1.</p>
+<p><strong>Task.</strong></p>
+<ol>
+<li>(5 phút) Trên file mẫu, sửa hàng "Nhắc tôi trước 30 phút" (cha Hug, con Fill) và đổi một group thành frame auto layout.</li>
+<li>(16 phút) Trên file của học viên, dựng màn hình concept bằng auto layout: Hug cho nút và chip, Fill cho khối nội dung, min và max cho con Fill cần giới hạn. Gắn padding và gap vào variables spacing.</li>
+</ol>
+<p><strong>Watch-fors.</strong></p>
+<ul>
+<li>Cha Hug với con Fill.</li>
+<li>Gõ số vào width làm layer thành Fixed.</li>
+<li>Phần tử vẫn đặt tay bằng x, y.</li>
+<li>Con Fill không có min width.</li>
+</ul>
+<h3 id="v0-nhiệm-vụ-3-component-và-variants-24-phút">Nhiệm vụ 3: Component và variants (24 phút)</h3>
+<p><strong>Setup.</strong> Màn hình đã dựng ở Nhiệm vụ 2 làm nguồn cho component.</p>
+<p><strong>Task.</strong></p>
+<ol>
+<li>Chọn hai đến ba phần tử lặp lại (ví dụ nút, thẻ, thanh điều hướng).</li>
+<li>Quyết định property trước: Size, Has icon, Label, Icon.</li>
+<li>Tạo component, thêm variants và component property (variant, boolean, text, instance swap); thay các bản cũ bằng instance.</li>
+<li>Trên file mẫu, thay bốn nút copy bằng instance của một component duy nhất.</li>
+</ol>
+<p><strong>Watch-fors.</strong></p>
+<ul>
+<li>Detach instance để sửa nhanh.</li>
+<li>Tạo property sau khi đã tạo variant.</li>
+<li>Sửa tay nội dung từng instance thay vì dùng text property.</li>
+<li>Component dùng giá trị gõ tay thay vì variables.</li>
+</ul>
+<h3 id="v0-nhiệm-vụ-4-breakpoints-và-modes-14-phút">Nhiệm vụ 4: Breakpoints và modes (14 phút)</h3>
+<p><strong>Setup.</strong> Màn hình và component đã dựng ở Nhiệm vụ 2 và 3.</p>
+<p><strong>Task.</strong></p>
+<ol>
+<li>Tạo collection <code>Breakpoint</code> với ba mode: Compact, Medium, Expanded.</li>
+<li>Tạo hai đến ba variable số (ví dụ <code>screen/padding</code>, <code>type/body/size</code>) với giá trị riêng cho từng mode.</li>
+<li>Nhân bản màn hình thành frame thứ hai, đặt mode khác, điều chỉnh để component co giãn đúng.</li>
+<li>Kiểm tra component ở cả hai kích thước.</li>
+</ol>
+<p><strong>Watch-fors.</strong></p>
+<ul>
+<li>Quên đặt mode cho frame, nên giá trị không đổi.</li>
+<li>Con Fill thiếu min width.</li>
+<li>Sửa hai frame riêng thay vì sửa component và variables.</li>
+<li>Gói Figma không đủ mode: dùng hai mode thay cho ba.</li>
+</ul>
+<h3 id="v0-kết-6-phút">Kết (6 phút)</h3>
+<p><strong>Task.</strong></p>
+<ol>
+<li>Rà success check cùng học viên: pages và tên layer, variables thay giá trị gõ tay, component set ở hai kích thước.</li>
+<li>Ghi phần còn dở thành homework.</li>
+<li>Nhắc buổi sau (Design System) dùng lại variables và component của buổi này.</li>
+</ol>
+<hr />
+<h2 id="v0-ai-in-practice">AI in Practice</h2>
+<p>Buổi này thuần kỹ thuật và không dùng AI. Lý do: mục tiêu là học viên tự nắm cách Figma xử lý variables, auto layout, component và mode, và phán đoán đúng sai trên file thật. Mục AI in Practice bắt buộc theo quy tắc LP-4 được giữ ở đây dưới dạng ghi chú này, không có prompt thực hành. <code>[to confirm]</code> Nếu sau này muốn có phần AI, một hướng hợp lý là dùng sau buổi để rà tên layer và tìm giá trị gõ tay; chưa thử với lớp thật.</p>
+<hr />
+<h2 id="v0-assessment">Assessment</h2>
+<h3 id="v0-quick-knowledge-check">Quick knowledge check</h3>
+<ol>
+<li>Ba màu cam gần giống nhau trong một file khác nhau thế nào so với ba layer cùng gắn một variable?</li>
+<li>Vì sao component nên dùng variable semantic thay vì primitive?</li>
+<li>Cha Hug và con Fill trên cùng một trục gây ra triệu chứng gì, và có hai cách sửa nào?</li>
+<li>Khi nào một con Fill cần min width và max width?</li>
+<li>Figma không có breakpoint tự động. Một breakpoint trong Figma gồm những gì?</li>
+</ol>
+<h3 id="v0-reflection-prompt-homework">Reflection prompt (homework)</h3>
+<blockquote>
+<p><em>"Mở file của bạn và liệt kê ba chỗ còn giá trị gõ tay, tên layer mặc định hoặc kích thước Fixed không cần thiết. Với mỗi chỗ, ghi cách sửa và buổi nào trong khoá sẽ dùng đến nó."</em></p>
+</blockquote>
+<p>Homework gồm hai việc: hoàn thiện phần còn dở của bốn nhiệm vụ trong file, và viết phần reflection ở trên.</p>
+<hr />
+<h2 id="v0-limitations">Limitations</h2>
+<ul>
+<li>Phần lớn lỗi thường gặp đến từ forum Figma, blog và bài đăng cộng đồng; số nguồn cho mỗi lỗi chỉ để so sánh tương đối, và một số thread cũ có thể đã lỗi thời [8].</li>
+<li>Phần nhu cầu việc làm dựa trên 12 mô tả công việc đọc trực tiếp (7 Việt Nam, 5 quốc tế), mẫu nhỏ và thiên lệch chọn mẫu, chỉ dùng để chọn trọng tâm. Không nêu tỉ lệ phần trăm nào trong lesson.</li>
+<li>Cặp cha Hug và con Fill bị cắt chữ được quan sát khi dựng file mẫu bằng API, chưa thử bằng thao tác tay trong giao diện.</li>
+<li>Trang help của Figma không ghi ngày cập nhật; nhãn giao diện và giới hạn gói cần kiểm trong app trước khi dạy.</li>
+<li>Thứ tự variables trước auto layout và phương pháp "làm ngay, không demo" là lựa chọn dạy của người hướng dẫn, chưa có nghiên cứu hay lớp thật kiểm chứng.</li>
+<li>Giới hạn của gói Starter với variables và modes chưa xác nhận: bảng so sánh gói để trống ở dòng variable modes, còn trang "Guide to variables" nói variables dùng được trên mọi gói. Buổi này giả định học viên dùng gói Pro.</li>
+</ul>
+<hr />
+<h2 id="v0-references">References</h2>
+<ol>
+<li>Figma Help. "Guide to variables in Figma." https://help.figma.com/hc/en-us/articles/15339657135383-Guide-to-variables-in-Figma (truy cập 2026-11-24). Collection, mode, alias.</li>
+<li>Figma. "Schema 2025: design systems recap." 2025-10-28. https://www.figma.com/blog/schema-2025-design-systems-recap/. Professional tối đa 10 mode mỗi collection, Organization 20.</li>
+<li>Figma Help. "Guide to auto layout." https://help.figma.com/hc/articles/360040451373. Hug, Fill, Fixed, min và max; Fill chỉ có với con của auto layout.<ul>
+<li>3b. Figma Help. Bài về phiên bản auto layout mới. https://help.figma.com/hc/articles/42031586813719. Bản "updated" mặc định từ 2026-07; padding đặt kích thước tối thiểu.</li>
+</ul>
+</li>
+<li>Figma Help. "Variants" và component properties. https://help.figma.com/hc/en-us/articles/5579474826519-Variants. Năm loại property; simplified instances bị bỏ từ 2026-03-23.</li>
+<li>Google. Material Design 3, Window size classes (breakpoints). https://m3.material.io/foundations/layout/applying-layout. Compact dưới 600dp, Medium 600 đến 839dp, Expanded 840 đến 1199dp.</li>
+<li>Figma Help. Bảng so sánh gói. https://help.figma.com/hc/en-us/articles/360040328273. Dùng để xác định giới hạn gói.</li>
+<li>Figma Help. "Check designs in Figma." https://help.figma.com/hc/en-us/articles/39592284074263-Check-designs-in-Figma. Tìm màu gõ tay và gắn lại variable.</li>
+<li>Tổng hợp nội bộ: <code>learning/research.md</code> (2026-11-24). Gồm 39 lỗi từ forum Figma và blog, 12 mô tả công việc, 12 giáo trình so sánh; nguồn thứ cấp và ý kiến, không phải tài liệu chính thức.</li>
+</ol>
+<hr />
+<h2 id="v0-further-resources">Further Resources</h2>
+<ul>
+<li>Frontend Masters, "Figma for Developers v2" (Steve Kinney): khung gần nhất với thứ tự của buổi (layout, variables, component, responsive bằng modes); 4 giờ 12 phút, có demo và bài tập.</li>
+<li>Tài liệu Design Tokens Community Group, Format Module 2025.10, cho phần mở rộng về token.</li>
+<li>Buổi Design System: quy tắc đặt tên theo atomic và tài liệu hoá hệ thống.</li>
+</ul>
+<hr />
+<p><em>Created by Winnie Nguyen · Private training · Last updated November 2026</em></p></article>
+  </div>
+</div><div data-var-panel data-var-id="1" hidden>
+  <div class="tp-layout">
+    <aside class="tp-toc" aria-label="On this page"><p class="tp-toc__label">On this page</p><a href="#v1-purpose">Purpose</a><a href="#v1-structure">Structure</a><a href="#v1-learning-objectives">Learning objectives</a><a href="#v1-key-decisions">Key decisions</a><a href="#v1-sources">Sources</a><a href="#v1-to-confirm">[to confirm]</a></aside>
+    <article class="tp-body"><h2 id="v1-purpose">Purpose</h2>
+<p>Sau buổi này, học viên dựng được một component set chạy ở ít nhất hai kích thước màn hình, từ concept đã chọn ở buổi UI Fundamentals, bằng variables và auto layout, trong một file đã được tổ chức rõ ràng.</p>
+<h2 id="v1-structure">Structure</h2>
+<p>Thứ tự: variables, auto layout, component, breakpoints. Mỗi nhiệm vụ mở bằng một lỗi thật trên file mẫu "xấu" (xem Key decisions), rồi học viên làm trên concept của mình.</p>
+<ol>
+<li>Mở đầu, 10 phút: xem file học viên đã dọn theo guide gửi trước buổi (pages, tên layer, cấu trúc) và chốt concept sẽ dựng. Đầu vào có sẵn từ buổi UI Fundamentals: <code>chosen-concept.png</code>, decision sheet và token set.</li>
+<li>Nhiệm vụ 1, Variables, 15 phút: 4 phút tìm lỗi trên file mẫu (ba sắc cam gần giống nhau, nhiều xám gần giống nhau, tất cả gõ tay) và thay một nhóm bằng variable. Sau đó, 11 phút học viên đưa token set của mình vào file: hai collection (primitive và semantic), ba nhóm (spacing, vai trò màu, cỡ chữ), đặt tên theo vai trò, alias từ semantic về primitive. Chưa dạy modes.</li>
+<li>Nhiệm vụ 2, Auto layout, 21 phút: 5 phút sửa trên file mẫu (hàng cha Hug và con Fill bị cắt chữ, group dùng làm bố cục, kích thước Fixed khắp nơi). Sau đó, 16 phút học viên dựng màn hình concept của mình bằng auto layout với Hug, Fill, Fixed, min và max, gắn padding và gap vào variables.</li>
+<li>Nhiệm vụ 3, Component và variants, 24 phút: biến hai đến ba phần tử lặp lại (ví dụ nút, thẻ, thanh điều hướng) thành component, thêm variant property và component property. Lỗi để chỉ ra: nút copy (Button, Button 2, Button final), detach instance, định nghĩa property sau khi đã tạo variant, tên variant Yes và No.</li>
+<li>Nhiệm vụ 4, Breakpoints và modes, 14 phút: thêm một collection có mode (Compact, Medium, Expanded), điều chỉnh màn hình và component cho một breakpoint thứ hai, kiểm tra component co giãn đúng. Đây là phần chính, không cắt.</li>
 <li>Kết, 6 phút (gồm 3 phút dự phòng): rà success check, ghi lại việc còn dở thành homework.</li>
 </ol>
-<p>Tổng 90 phút. Nếu buổi chạy quá giờ, Nhiệm vụ 4 rút còn một component và một màn hình.</p>
-<p>Cách dạy: học viên làm ngay từ đầu trên file của mình, không có phần demo trước. Winnie chỉ ra chỗ sai và sửa cùng học viên ngay lúc làm.</p>
-<h2 id="v0-learning-objectives">Learning objectives</h2>
+<p>Tổng 90 phút, buffer 3 phút trong phần Kết. Nếu buổi chạy quá giờ, Nhiệm vụ 3 rút còn hai component.</p>
+<p>Cách dạy: học viên làm ngay từ đầu, không có phần demo trước. Winnie chỉ ra chỗ sai và sửa cùng học viên ngay lúc làm. Mỗi nhiệm vụ có sáu sơ đồ khái niệm hỗ trợ (đã vẽ, xem Sources).</p>
+<h2 id="v1-learning-objectives">Learning objectives</h2>
 <ol>
 <li>Kiểm tra được file của mình theo guide: pages, tên layer và cấu trúc đủ rõ để người khác tìm đường (kiểm ở phần mở đầu, việc dọn file làm trước buổi).</li>
-<li>Dựng được layout linh hoạt bằng auto layout, với spacing, màu và cỡ chữ lấy từ variables.</li>
+<li>Tạo được hai collection variables (primitive và semantic) từ token set của mình và gắn vào layer, thay cho màu và số gõ tay.</li>
+<li>Dựng được layout linh hoạt bằng auto layout, dùng đúng Hug, Fill, Fixed, min và max, với spacing, màu và cỡ chữ lấy từ variables.</li>
 <li>Tạo được component và variants từ concept của mình, dùng đúng loại property (variant, boolean, text, instance swap).</li>
-<li>Điều chỉnh được layout và component cho ít nhất hai kích thước màn hình.</li>
+<li>Điều chỉnh được layout và component cho ít nhất hai kích thước màn hình bằng một mode của variables.</li>
 </ol>
-<p>Success check: file có pages, tên layer và cấu trúc rõ; một component set chạy được ở ít nhất hai kích thước màn hình.</p>
-<h2 id="v0-key-decisions">Key decisions</h2>
+<p>Success check: file có pages, tên layer và cấu trúc rõ; màu và spacing trong file lấy từ variables; một component set chạy được ở ít nhất hai kích thước màn hình.</p>
+<h2 id="v1-key-decisions">Key decisions</h2>
 <ul>
-<li>Thứ tự: học sau UI Fundamentals (cập nhật 2026-11-15). Màn hình để dựng là concept học viên đã chọn ở UI Fundamentals, kèm decision sheet và token set của buổi đó. Học viên chưa có màn hình sau bài Information Architecture, nên concept này là màn hình đầu tiên của họ.</li>
+<li>Thứ tự: học sau UI Fundamentals. Màn hình để dựng là concept học viên đã chọn ở buổi đó, kèm decision sheet và token set. Học viên chưa có màn hình sau bài Information Architecture, nên concept này là màn hình đầu tiên của họ.</li>
 <li>Ví dụ chạy: concept đã chọn ở UI Fundamentals, không dùng case mẫu.</li>
-<li>AI: không có trong buổi này (theo coaching plan, đây là buổi thuần kỹ thuật).</li>
-<li>Cắt: nhiệm vụ dọn file không làm trong buổi, chuyển thành guide gửi trước và 10 phút kiểm ở đầu buổi. Objective "tổ chức file" vẫn được kiểm bằng success check.</li>
-<li>Nền tảng (grid, 8pt, typography, color) giữ ngắn, chỉ đủ để dựng variables, nằm trong Nhiệm vụ 1. Học viên chọn giá trị từ file của mình rồi mới đặt tên.</li>
-<li>Đã dạy ở buổi UI Fundamentals (học trước buổi này): phán đoán visual (5 layer) và lý do chọn từng giá trị. Nhiệm vụ 1 bắt đầu từ token set học viên đã rút ra ở buổi đó, nên không dạy lại thang 8pt và type scale, chỉ chuyển giá trị thành variables.</li>
+<li>AI: không có trong buổi này (theo coaching plan, đây là buổi thuần kỹ thuật). Mục AI in Practice của lesson vẫn bắt buộc theo LP-4, nên cần quyết định cách viết (xem câu hỏi mở 3).</li>
+<li>Variables đứng trước auto layout (chốt 2026-11-24): Nhiệm vụ 2 gắn padding và gap vào variables nên cần variables có trước. Thu còn 15 phút và chưa dạy modes. Modes chuyển sang Nhiệm vụ 4 vì chỉ cần cho breakpoint. Phương án không chọn: auto layout và component trước, variables làm bước refactor sau. Chưa thử với học viên thật.</li>
+<li>Nhiệm vụ 4 là phần chính (chốt 2026-11-24). Giáo trình và JD ít nhắc breakpoint, nhưng Winnie giữ vì nó là chỗ modes có tác dụng thấy được.</li>
+<li>Gói Figma của học viên là Pro (chốt 2026-11-24): có đủ mode (tối đa 10 mỗi collection theo blog Figma 2025-10-28).</li>
+<li>File mẫu "xấu" (chốt dùng 2026-11-24, cách xếp vào buổi là câu hỏi mở 1): đã dựng, có đủ 8 dấu hiệu (tên layer mặc định, hex cứng, detached instance, nút copy thay cho variant, group làm bố cục, cha Hug và con Fill, kích thước Fixed khắp nơi, một page lẫn nháp và bản cuối). File nằm trong Figma của Winnie (xem [to confirm] về quyền chia sẻ).</li>
+<li>Cắt: nhiệm vụ dọn file không làm trong buổi, chuyển thành guide gửi trước và 10 phút kiểm ở đầu buổi. Objective "tổ chức file" vẫn được kiểm bằng success check. Prototype, Dev Mode, handoff, plugin và tính năng AI trong Figma không dạy ở buổi này.</li>
+<li>Nền tảng (grid, 8pt, typography, color) giữ ngắn, chỉ đủ để dựng variables. Học viên đã chọn giá trị ở buổi UI Fundamentals rồi mới đặt tên.</li>
+<li>Đã dạy ở buổi UI Fundamentals: phán đoán visual (5 layer) và lý do chọn từng giá trị. Nhiệm vụ 1 bắt đầu từ token set học viên đã rút ra ở buổi đó, nên không dạy lại thang 8pt và type scale, chỉ chuyển giá trị thành variables.</li>
 <li>Hoãn sang buổi Design System: quy tắc đặt tên đầy đủ theo atomic (<code>a/m/o</code>), tài liệu hoá hệ thống, nhiều hơn một vài component.</li>
-<li>Lesson viết generic, không nhắc tên học viên hay chi tiết nhận dạng.</li>
-<li>Nguồn gốc ý tưởng: coaching plan của một học viên private, ghi <code>source: adapted-from-private-session</code> khi viết front matter của lesson.</li>
-<li>Câu hỏi mở cho Winnie:<ol>
-<li>Guide gửi trước buổi (dọn file) có nằm trong phạm vi lesson này không, hay làm riêng như một tài liệu.</li>
-<li>Ranh giới với buổi Design System: dừng ở variables cộng một vài component, hay thêm quy tắc đặt tên <code>a/m/o</code>.</li>
-<li>Có chọn thêm một ví dụ lỗi thường gặp cho mỗi nhiệm vụ không (spacing lẻ, màu gõ tay, layer "Frame 123", component không co giãn).</li>
+<li>Lesson viết generic, không nhắc tên học viên hay chi tiết nhận dạng. Ghi <code>source: adapted-from-private-session</code> ở front matter của lesson.</li>
+<li>Đã chốt 2026-11-24 (Winnie duyệt brief):<ol>
+<li>File mẫu xấu: mỗi nhiệm vụ 1 và 2 mở bằng 4 đến 5 phút sửa lỗi trên file mẫu, rồi làm trên concept của học viên.</li>
+<li>Guide dọn file gửi trước buổi nằm trong lesson (mục Pre-Class Preparation), không làm riêng.</li>
+<li>AI in Practice: buổi không dùng AI. Lesson giữ mục này dưới dạng ghi chú nêu rõ điều đó, không có prompt (khác quy tắc LP-4, cần Winnie xác nhận).</li>
+<li>Programme line: <code>ui-ux-fundamentals:06b</code>, nằm giữa UI Fundamentals (06) và Design System (07).</li>
+<li>Auto layout: dạy theo bản "updated", Hug, Fill, Fixed, min và max theo tài liệu Figma; chỗ chưa kiểm ghi <code>[to confirm]</code> trong lesson.</li>
 </ol>
 </li>
 </ul>
-<h2 id="v0-sources">Sources</h2>
-<p>Chi tiết ở <code>learning/research.md</code>. Nguồn chính thức dùng được để nêu như sự thật:</p>
+<h2 id="v1-sources">Sources</h2>
+<p>Chi tiết ở <code>learning/research.md</code> (mục A đến J). Nguồn chính thức dùng được để nêu như sự thật:</p>
 <ul>
-<li>Figma Help: variables và collections, modes, auto layout, component properties.</li>
-<li>Material Design 3, Breakpoints: compact dưới 600dp, medium 600 đến 839dp, expanded 840 đến 1199dp.</li>
+<li>Figma Help: variables và collections, modes, auto layout (bản "updated" mặc định cho frame mới từ 2026-07), component properties (năm loại, gồm Slot), bảng so sánh gói.</li>
+<li>Figma blog, Schema 2025 (2025-10-28): Professional tối đa 10 mode mỗi collection, Organization 20.</li>
+<li>Material Design 3, Breakpoints (window size classes): Compact dưới 600dp, Medium 600 đến 839dp, Expanded 840 đến 1199dp.</li>
 <li>W3C WCAG 2.2, Understanding 1.4.3: 4.5:1 cho chữ thường, 3:1 cho chữ lớn.</li>
 <li>Design Tokens Community Group, Format Module 2025.10.</li>
 </ul>
-<p>Nguồn blog chỉ làm gợi ý: tách primitive và semantic, thang 8pt, cách tổ chức file.</p>
-<h2 id="v0-to-confirm">[to confirm]</h2>
+<p>Dùng làm gợi ý, nói rõ là mẫu nhỏ hoặc ý kiến: 12 mô tả công việc junior (auto layout 4 trên 12, variables 3 trên 12, component và design system 9 trên 12, breakpoint 0 trên 12; mẫu nhỏ, thiên lệch chọn mẫu, không phải thống kê); 39 lỗi từ forum Figma, help và blog (số nguồn đếm tay); 12 giáo trình so sánh (khung gần nhất là Figma for Developers v2 của Frontend Masters). Nguồn blog chỉ làm gợi ý: tách primitive và semantic, thang 8pt, cách tổ chức file.</p>
+<p>Hình ảnh trong lesson: sáu sơ đồ tự vẽ ở <code>assets/diagrams/</code> (Hug, Fill, Fixed; min và max; chuỗi alias primitive đến semantic; component set và property; cấu trúc file gọn; breakpoint là mode) và ảnh chụp <code>assets/bad-file-sample-screen.png</code> của file mẫu xấu. Chưa có ảnh chụp giao diện Figma (panel Variables, Auto layout settings, dropdown Width, Properties); cần Winnie chụp hoặc thay bằng slide thao tác trực tiếp.</p>
+<h2 id="v1-to-confirm">[to confirm]</h2>
 <ul>
-<li>Alias giữa collection có chọn được mode không (nguồn cộng đồng cũ nói không); thử trong Figma trước khi dạy.</li>
-<li>Gói Figma của học viên cho phép bao nhiêu mode.</li>
-<li>Chưa có nguồn cho tỷ lệ designer dùng auto layout hay variables; không nêu con số nào.</li>
-<li>"Nền tảng ngắn rồi dựng variables" là phương pháp của Winnie, không có nghiên cứu đi kèm.</li>
+<li>Alias giữa collection có chọn được mode không khi collection primitive có nhiều mode (nguồn cộng đồng cũ nói không); thử trong Figma trước khi dạy. Sơ đồ alias hiện dùng mode ở semantic trỏ về primitive một mode, mẫu này không phụ thuộc câu hỏi trên.</li>
+<li>Hug, Fill, Fixed, min và max có chạy giống nhau ở auto layout bản "updated" và bản cũ trong frame thường không (help chỉ nói rõ cho Figma Sites). Kiểm trong app trước khi dạy.</li>
+<li>Cặp cha Hug và con Fill bị cắt chữ: quan sát qua API, chưa thử bằng thao tác tay.</li>
+<li>Tên chính xác của panel Variables và đường mở trong giao diện hiện tại (không trang help nào ghi rõ).</li>
+<li>Quyền chia sẻ file mẫu xấu: học viên cần quyền xem và nhân bản (Duplicate). File đang nằm ở bản nháp trong team cá nhân của Winnie, gói Starter (tối đa 3 file trong một folder).</li>
+<li>Số mode thực tế trong gói Pro của học viên (blog Figma ghi 10 mỗi collection).</li>
+<li>Chưa có nguồn cho tỷ lệ designer dùng auto layout hay variables; không nêu con số nào trong lesson.</li>
+<li>"Nền tảng ngắn rồi dựng variables" và "làm ngay, không demo" là phương pháp của Winnie, không có nghiên cứu đi kèm.</li>
 </ul></article>
   </div>
-</div></section><section class="tp-panel" data-tab-panel data-tab-id="slides" role="tabpanel" hidden><div class="tp-slides tp-slides--empty"><strong>No slides yet</strong><span>Add a deck (.html) or .pdf to this lesson's <code>slides/</code> folder, or a <code>slides:</code> link in the lesson front matter.</span></div></section><section class="tp-panel" data-tab-panel data-tab-id="homework" role="tabpanel" hidden><div class="tp-slides tp-slides--empty"><strong>No mentee homework yet</strong><span>Drop files in <code>mentees/&lt;name&gt;/homework/ui-foundations-figma/</code> and they show up here.</span></div></section>
-  
+</div></section><section class="tp-panel" data-tab-panel data-tab-id="slides" role="tabpanel" hidden><h3 class="tp-hw__group" style="margin-top:var(--space-10)">Other formats</h3><div class="file-grid"><a class="file-card" href="https://claude.ai/artifact/LGLDrbqwhnSiXAHq955s1F" target="_blank" rel="noopener"><span class="file-card__ext">LINK</span><strong>Beginner</strong><span>claude.ai/artifact/LGLDrbqwhnSiXAHq955s1F ↗</span></a></div></section><section class="tp-panel" data-tab-panel data-tab-id="homework" role="tabpanel" hidden><div class="tp-slides tp-slides--empty"><strong>No mentee homework yet</strong><span>Drop files in <code>mentees/&lt;name&gt;/homework/ui-foundations-figma/</code> and they show up here.</span></div></section>
+  <section class="tp-related"><h2>Related lessons</h2><div class="tp-related__grid"><div class="tp-related__card"><span>Previous lesson</span><strong>UI Fundamentals. Output: chosen-concept.png, decision sheet và token set.</strong></div><div class="tp-related__card"><span>Next lesson</span><strong>Design System. Dùng lại variables và component của buổi này, thêm quy tắc đặt tên theo atomic.</strong></div></div></section>
 </div>
 <script>
 (function () {

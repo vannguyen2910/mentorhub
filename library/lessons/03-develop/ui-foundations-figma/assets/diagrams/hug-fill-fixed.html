@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hug, Fill và Fixed: ba cách con theo cha</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper:   #f5f5f5;
+      --color-ink:     #2d3142;
+      --color-muted:   #4f5d75;
+      --color-accent:  #bf4520;
+      --font-sans:     'Geist', system-ui, sans-serif;
+      --font-serif:    'Instrument Serif', 'Noto Serif', serif;
+      --font-mono:     'Geist Mono', ui-monospace, monospace;
+    }
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+    .frame { max-width: 1280px; width: 100%; min-width: 0; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--color-ink);
+      margin-bottom: 1.5rem;
+    }
+    svg { width: 100%; min-width: 1280px; display: block; }
+    @media print {
+      .diagram-container { overflow-x: visible; }
+      svg { min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Auto layout · Diagram Design</p>
+    <h1>Hug, Fill và Fixed: ba cách con theo cha</h1>
+    <div class="diagram-container">
+      <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="hug-fill-fixed-title hug-fill-fixed-desc">
+        <title id="hug-fill-fixed-title">Hug, Fill và Fixed: ba cách con theo cha</title>
+        <desc id="hug-fill-fixed-desc">Bốn cặp khung cha và con cho thấy Fixed giữ số cố định, Hug ôm theo nội dung, Fill lấp đầy cha, và cha Hug cùng con Fill xung đột nên chữ bị cắt.</desc>
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+          <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#bf4520"/></marker>
+        </defs>
+        <rect width="100%" height="100%" fill="#f5f5f5"/>
+<rect x="40" y="168" width="264" height="360" rx="8" fill="none" stroke="#bfc0c0" stroke-width="1"/>
+<text x="60" y="208" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="start" >Fixed</text>
+<text x="60" y="228" fill="#5a6580" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >width: 120</text>
+<rect x="60" y="264" width="224" height="160" rx="6" fill="#f5f5f5"/>
+<rect x="60" y="264" width="224" height="160" rx="6" fill="none" stroke="#4f5d75" stroke-width="1.5" stroke-dasharray="5,4"/>
+<rect x="72" y="254" width="47" height="14" rx="2" fill="#f5f5f5"/><text x="78" y="264" fill="#5a6580" font-size="8" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" letter-spacing="0.14em">PARENT</text>
+<rect x="76" y="280" width="120" height="64" rx="6" fill="#f5f5f5"/><rect x="76" y="280" width="120" height="64" rx="6" fill="rgba(45,49,66,0.04)" stroke="#2d3142" stroke-width="1"/>
+<text x="136.0" y="318" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle" >Nút</text>
+<text x="60" y="464" fill="#4f5d75" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >cha: Fixed 224</text>
+<text x="60" y="488" fill="#4f5d75" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >con: Fixed 120</text>
+<rect x="352" y="168" width="264" height="360" rx="8" fill="none" stroke="#bfc0c0" stroke-width="1"/>
+<text x="372" y="208" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="start" >Hug</text>
+<text x="372" y="228" fill="#5a6580" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >width: auto</text>
+<rect x="372" y="264" width="152" height="96" rx="6" fill="#f5f5f5"/>
+<rect x="372" y="264" width="152" height="96" rx="6" fill="none" stroke="#4f5d75" stroke-width="1.5" stroke-dasharray="5,4"/>
+<rect x="384" y="254" width="47" height="14" rx="2" fill="#f5f5f5"/><text x="390" y="264" fill="#5a6580" font-size="8" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" letter-spacing="0.14em">PARENT</text>
+<rect x="388" y="280" width="120" height="64" rx="6" fill="#f5f5f5"/><rect x="388" y="280" width="120" height="64" rx="6" fill="rgba(45,49,66,0.04)" stroke="#2d3142" stroke-width="1"/>
+<text x="448.0" y="318" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle" >Nút</text>
+<text x="372" y="464" fill="#4f5d75" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >cha: Hug</text>
+<text x="372" y="488" fill="#4f5d75" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >con: Fixed 120</text>
+<rect x="664" y="168" width="264" height="360" rx="8" fill="none" stroke="#bfc0c0" stroke-width="1"/>
+<text x="684" y="208" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="start" >Fill</text>
+<text x="684" y="228" fill="#5a6580" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >width: 100%</text>
+<rect x="684" y="264" width="224" height="160" rx="6" fill="#f5f5f5"/>
+<rect x="684" y="264" width="224" height="160" rx="6" fill="none" stroke="#4f5d75" stroke-width="1.5" stroke-dasharray="5,4"/>
+<rect x="696" y="254" width="47" height="14" rx="2" fill="#f5f5f5"/><text x="702" y="264" fill="#5a6580" font-size="8" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" letter-spacing="0.14em">PARENT</text>
+<rect x="700" y="280" width="192" height="64" rx="6" fill="#f5f5f5"/><rect x="700" y="280" width="192" height="64" rx="6" fill="rgba(45,49,66,0.04)" stroke="#2d3142" stroke-width="1"/>
+<text x="796.0" y="318" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle" >Nút</text>
+<text x="684" y="464" fill="#4f5d75" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >cha: Fixed 224</text>
+<text x="684" y="488" fill="#4f5d75" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >con: Fill</text>
+<rect x="976" y="168" width="264" height="360" rx="8" fill="none" stroke="#bfc0c0" stroke-width="1"/>
+<text x="996" y="208" fill="#bf4520" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="start" >Hug + Fill</text>
+<text x="996" y="228" fill="#bf4520" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >auto ↔ 100%</text>
+<rect x="996" y="264" width="152" height="96" rx="6" fill="#f5f5f5"/>
+<rect x="996" y="264" width="152" height="96" rx="6" fill="none" stroke="#bf4520" stroke-width="1.5" stroke-dasharray="5,4"/>
+<rect x="1008" y="254" width="47" height="14" rx="2" fill="#f5f5f5"/><text x="1014" y="264" fill="#bf4520" font-size="8" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" letter-spacing="0.14em">PARENT</text>
+<rect x="1012" y="280" width="120" height="64" rx="6" fill="#f5f5f5"/><rect x="1012" y="280" width="120" height="64" rx="6" fill="rgba(191,69,32,0.08)" stroke="#bf4520" stroke-width="1"/>
+<clipPath id="hf-clip"><rect x="1020" y="280" width="104" height="64"/></clipPath>
+<g clip-path="url(#hf-clip)"><text x="1020" y="318" fill="#bf4520" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="start" >Nhắc tôi trước 30 phút</text></g>
+<text x="996" y="464" fill="#bf4520" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >cha: Hug</text>
+<text x="996" y="488" fill="#bf4520" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >con: Fill</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

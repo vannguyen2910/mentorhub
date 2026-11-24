@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Min và max width giới hạn một con Fill</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper:   #f5f5f5;
+      --color-ink:     #2d3142;
+      --color-muted:   #4f5d75;
+      --color-accent:  #bf4520;
+      --font-sans:     'Geist', system-ui, sans-serif;
+      --font-serif:    'Instrument Serif', 'Noto Serif', serif;
+      --font-mono:     'Geist Mono', ui-monospace, monospace;
+    }
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+    .frame { max-width: 1280px; width: 100%; min-width: 0; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--color-ink);
+      margin-bottom: 1.5rem;
+    }
+    svg { width: 100%; min-width: 1280px; display: block; }
+    @media print {
+      .diagram-container { overflow-x: visible; }
+      svg { min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Auto layout · Diagram Design</p>
+    <h1>Min và max width giới hạn một con Fill</h1>
+    <div class="diagram-container">
+      <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="min-max-width-title min-max-width-desc">
+        <title id="min-max-width-title">Min và max width giới hạn một con Fill</title>
+        <desc id="min-max-width-desc">Ba khung cha rộng 192, 320 và 560 pixel chứa cùng một con Fill có min 160 và max 400: con chạm min, lấp đầy cha, rồi chạm max.</desc>
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+          <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#bf4520"/></marker>
+        </defs>
+        <rect width="100%" height="100%" fill="#f5f5f5"/>
+<text x="240" y="152" fill="#4f5d75" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >con: Fill · min 160 · max 400</text>
+<text x="40" y="256" fill="#4f5d75" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >cha: Fixed 192</text>
+<rect x="240" y="200" width="192" height="96" rx="6" fill="#f5f5f5"/>
+<rect x="240" y="200" width="192" height="96" rx="6" fill="none" stroke="#4f5d75" stroke-width="1.5" stroke-dasharray="5,4"/>
+<rect x="252" y="190" width="47" height="14" rx="2" fill="#f5f5f5"/><text x="258" y="200" fill="#5a6580" font-size="8" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" letter-spacing="0.14em">PARENT</text>
+<rect x="256" y="216" width="160" height="64" rx="6" fill="#f5f5f5"/><rect x="256" y="216" width="160" height="64" rx="6" fill="rgba(191,69,32,0.08)" stroke="#bf4520" stroke-width="1"/>
+<text x="336.0" y="254" fill="#bf4520" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle" >Nút</text>
+<text x="464" y="246" fill="#bf4520" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="start" >Chạm min</text>
+<text x="464" y="266" fill="#bf4520" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >con = 160</text>
+<text x="40" y="384" fill="#4f5d75" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >cha: Fixed 320</text>
+<rect x="240" y="328" width="320" height="96" rx="6" fill="#f5f5f5"/>
+<rect x="240" y="328" width="320" height="96" rx="6" fill="none" stroke="#4f5d75" stroke-width="1.5" stroke-dasharray="5,4"/>
+<rect x="252" y="318" width="47" height="14" rx="2" fill="#f5f5f5"/><text x="258" y="328" fill="#5a6580" font-size="8" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" letter-spacing="0.14em">PARENT</text>
+<rect x="256" y="344" width="288" height="64" rx="6" fill="#f5f5f5"/><rect x="256" y="344" width="288" height="64" rx="6" fill="rgba(45,49,66,0.04)" stroke="#2d3142" stroke-width="1"/>
+<text x="400.0" y="382" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle" >Nút</text>
+<text x="592" y="374" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="start" >Fill</text>
+<text x="592" y="394" fill="#5a6580" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >con = 288</text>
+<text x="40" y="512" fill="#4f5d75" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >cha: Fixed 560</text>
+<rect x="240" y="456" width="560" height="96" rx="6" fill="#f5f5f5"/>
+<rect x="240" y="456" width="560" height="96" rx="6" fill="none" stroke="#4f5d75" stroke-width="1.5" stroke-dasharray="5,4"/>
+<rect x="252" y="446" width="47" height="14" rx="2" fill="#f5f5f5"/><text x="258" y="456" fill="#5a6580" font-size="8" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" letter-spacing="0.14em">PARENT</text>
+<rect x="256" y="472" width="400" height="64" rx="6" fill="#f5f5f5"/><rect x="256" y="472" width="400" height="64" rx="6" fill="rgba(191,69,32,0.08)" stroke="#bf4520" stroke-width="1"/>
+<text x="456.0" y="510" fill="#bf4520" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle" >Nút</text>
+<text x="832" y="502" fill="#bf4520" font-size="16" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="start" >Chạm max</text>
+<text x="832" y="522" fill="#bf4520" font-size="12" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="start" >con = 400</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>
