@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="noindex"/>
+<meta name="description" content="Nối màn hình thành flow, rồi để người khác bấm thử"/>
+<title>Hand-Built Prototype — Training Hub</title>
+<link rel="stylesheet" href="../assets/css/tokens.css"/>
+<link rel="stylesheet" href="../assets/css/components.css"/>
+<link rel="stylesheet" href="../assets/css/site.css"/>
+<link rel="stylesheet" href="../assets/css/card-list.css"/>
+<link rel="stylesheet" href="../assets/css/text-page.css"/>
+<link rel="stylesheet" href="../assets/css/home.css"/>
+<link rel="stylesheet" href="../assets/css/minimal.css"/>
+
+</head>
+<body class="tp-white">
+<nav>
+  <a class="nav-logo" href="../index.html"><img src="../assets/images/logo-nav.svg" alt="Winnie Nguyen — Training Hub"/></a>
+  <div class="nav-links">
+    <a href="../lessons.html" data-text="Lesson Library" class=active>Lesson Library</a>
+    <a href="../private-training.html" data-text="Private Training">Private Training</a>
+    <a href="../programs.html" data-text="Programs">Programs</a>
+  </div>
+</nav>
+<div class="tp">
+  <a class="tp-back" href="../lessons.html">← All lessons</a>
+  <header class="tp-head">
+    <h1 class="page-title">Hand-Built Prototype</h1>
+    <p class="page-desc">Nối màn hình thành flow, rồi để người khác bấm thử</p>
+    
+    <div class="tp-info" data-var-panel data-var-id="0"><div class="draft-banner">Draft: content exists but is not finalised for delivery.</div><dl class="tp-meta" style="--tp-cols: repeat(4, minmax(0, 1fr)) minmax(0, 1.8fr)"><div><dt>Stage</dt><dd>Deliver</dd></div><div><dt>Level</dt><dd>Junior</dd></div><div><dt>Duration</dt><dd>90 min</dd></div><div><dt>Date</dt><dd>25 Nov 2026</dd></div><div><dt>Source file</dt><dd><code>hand-built-prototype-lesson.md</code></dd></div><div class="tp-meta__tags"><dt>Topics</dt><dd><span>prototype</span><span>figma</span><span>interaction</span><span>smart-animate</span><span>interactive-components</span><span>user-testing</span></dd></div></dl></div><div class="tp-info" data-var-panel data-var-id="1" hidden><div class="draft-banner">Draft: content exists but is not finalised for delivery.</div><dl class="tp-meta" style="--tp-cols: repeat(2, minmax(0, 1fr)) minmax(0, 1.8fr)"><div><dt>Stage</dt><dd>Deliver</dd></div><div><dt>Duration</dt><dd>khoảng 2 giờ, làm ở nhà</dd></div><div><dt>Source file</dt><dd><code>hand-built-prototype-practice.md</code></dd></div></dl></div>
+  </header>
+  <div class="tabs tabs--pill tp-tabs"><div class="tabs__list" role="tablist"><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="lesson" aria-selected="false">Lesson</button><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="slides" aria-selected="false">Slides</button><button type="button" role="tab" class="tabs__tab" data-tab-btn data-tab-id="homework" aria-selected="false">Homework</button></div></div>
+  <section class="tp-panel" data-tab-panel data-tab-id="lesson" role="tabpanel" hidden><div class="tabs tabs--pill var-switch"><div class="tabs__list" role="tablist" aria-label="Lesson version"><button type="button" role="tab" class="tabs__tab" data-var-btn data-var-id="0" aria-selected="false">Hand-Built Prototype</button><button type="button" role="tab" class="tabs__tab" data-var-btn data-var-id="1" aria-selected="false">Hand-Built Prototype: Practice</button></div></div><div data-var-panel data-var-id="0">
+  <div class="tp-layout">
+    <aside class="tp-toc" aria-label="On this page"><p class="tp-toc__label">On this page</p><a href="#v0-overview">Overview</a><a href="#v0-learning-objectives">Learning Objectives</a><a href="#v0-success-check">Success Check</a><a href="#v0-materials-needed">Materials Needed</a><a href="#v0-pre-class-preparation">Pre-Class Preparation</a><a href="#v0-session-plan">Session Plan</a><a href="#v0-core-content">Core Content</a><a href="#v0-practice-dataset">Practice Dataset</a><a href="#v0-ai-in-practice">AI in Practice</a><a href="#v0-assessment">Assessment</a><a href="#v0-further-resources">Further Resources</a></aside>
+    <article class="tp-body"><h2 id="v0-overview">Overview</h2>
+<p>Một prototype không phải là màn hình đẹp được nối lại với nhau. Nó là một câu hỏi: người dùng có đi được từ đầu đến cuối không, và họ làm gì khi đi lạc. Bạn trả lời câu hỏi đó bằng cách bấm thử.</p>
+<p>Buổi này dạy cách dựng prototype bằng tay trong Figma. Bạn tự chọn trigger, action và transition cho từng kết nối. Bạn tự đặt starting point, dựng overlay, đặt tên layer để Smart Animate hoạt động, và tự nối các variant của một component. Không có bước nào do công cụ tự sinh ra. Làm bằng tay buộc bạn hiểu từng kết nối đang làm gì, và khi có lỗi bạn biết tìm ở đâu.</p>
+<p>Bạn đã có kiến thức về component và design system từ các bài trước. Buổi này dùng chúng để nối các màn lại với nhau. Đầu ra là một flow bấm được, và bạn có thể đưa nó cho một người khác thử trong vài phút.</p>
+<p>Ba điều được đem vào buổi này:</p>
+<ul>
+<li>Vẽ flow trước khi nối. Flow đúng thì nối mới có ích.</li>
+<li>Chọn mức fidelity theo câu hỏi bạn muốn trả lời. Không phải lúc nào cũng cần prototype đầy đủ.</li>
+<li>Tự kiểm tra prototype trước khi đưa cho người khác. Phần lớn lỗi test là lỗi của prototype, không phải của người dùng.</li>
+</ul>
+<hr />
+<h2 id="v0-learning-objectives">Learning Objectives</h2>
+<p>Sau buổi này, bạn sẽ có thể:</p>
+<ol>
+<li><strong>Vẽ</strong> một user flow cho một task trước khi nối bất kỳ kết nối nào trong Figma.</li>
+<li><strong>Chọn</strong> trigger, action và transition phù hợp với từng hành động của người dùng.</li>
+<li><strong>Thiết lập</strong> starting point và flow để prototype chạy được từ đầu đến cuối, kèm một overlay.</li>
+<li><strong>Đặt tên</strong> layer có chủ đích để Smart Animate chuyển động đúng giữa hai frame.</li>
+<li><strong>Dựng</strong> các state của một component bằng variant và interactive component, thay vì nhân bản frame.</li>
+<li><strong>Tự kiểm tra</strong> prototype để tìm dead end, state còn thiếu và điều hướng bị lỗi trước khi test.</li>
+</ol>
+<hr />
+<h2 id="v0-success-check">Success Check</h2>
+<ul>
+<li>Bạn có thể chỉ vào một connection và nói trigger, action và transition của nó, cùng lý do chọn từng thứ.</li>
+<li>Khi bấm từ starting point đến màn cuối, bạn không gặp dead end và không cần giải thích thêm.</li>
+<li>Hai frame có chuyển động Smart Animate đều có cùng tên layer ở cùng vị trí trong hierarchy.</li>
+<li>Component có các state được nối bằng variant, không phải bằng frame rời rạc.</li>
+<li>Câu hỏi test của bạn tách được lỗi thiết kế với lỗi prototype: bạn có thể nói lỗi nào là của màn, lỗi nào là do thiếu kết nối.</li>
+</ul>
+<hr />
+<h2 id="v0-materials-needed">Materials Needed</h2>
+<ul>
+<li>Figma, với quyền tạo file và chế độ Prototype.</li>
+<li>Một task đã chọn từ bài Design System, hoặc task "đặt lịch hẹn" trong Practice Dataset bên dưới.</li>
+<li>Ba đến năm màn của flow, vẽ bằng khung và thanh xám. Chưa cần chữ thật.</li>
+<li>Một bạn học để test nhanh trong buổi (có thể là người ngồi cạnh).</li>
+</ul>
+<hr />
+<h2 id="v0-pre-class-preparation">Pre-Class Preparation</h2>
+<ul>
+<li>Đọc lại component của bài Design System. Bạn sẽ dùng chúng cho variant.</li>
+<li>Chọn task. Task nên có ít nhất ba bước và một chỗ có thể sai (ví dụ: nhập thông tin sai, chọn giờ đã kín).</li>
+</ul>
+<hr />
+<h2 id="v0-session-plan">Session Plan</h2>
+<table>
+<thead>
+<tr>
+<th>Phút</th>
+<th>Phần</th>
+<th>Việc làm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–5</td>
+<td>Open</td>
+<td>Xem một prototype lỗi và tìm lỗi</td>
+</tr>
+<tr>
+<td>5–40</td>
+<td>Theory (3 phần)</td>
+<td>Flow trước kết nối, kết nối, Smart Animate và state</td>
+</tr>
+<tr>
+<td>40–45</td>
+<td>Bridge</td>
+<td>Nghỉ, kiểm tra nhanh, giới thiệu task</td>
+</tr>
+<tr>
+<td>45–80</td>
+<td>Practice</td>
+<td>Vẽ flow, nối, dựng state, test nhanh</td>
+</tr>
+<tr>
+<td>80–88</td>
+<td>Close</td>
+<td>Tổng kết, bài tập về nhà, hỏi đáp</td>
+</tr>
+<tr>
+<td>88–90</td>
+<td>Dự phòng</td>
+<td>Dùng nếu thực hành bị chậm</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="v0-core-content">Core Content</h2>
+<h3 id="v0-open-lỗi-nằm-ở-đâu">Open · Lỗi nằm ở đâu?</h3>
+<p>Bạn được xem một prototype có ba vấn đề: một màn không có kết nối đi tiếp, một flow không có starting point, và một nút chỉ chạy được khi bấm lần thứ hai.</p>
+<p>Thử tự bấm qua prototype này và ghi lại chỗ bạn thấy khựng. Chỗ khựng thường là chỗ có lỗi.</p>
+<p>Ví dụ minh họa (bản nháp): người test dừng lại mấy chục giây ở màn không có lối đi tiếp, rồi bỏ cuộc. Nếu chỉ nhìn vào Figma, bạn sẽ không thấy lỗi, vì mọi màn đều có vẻ đúng.</p>
+<hr />
+<h3 id="v0-part-1-vẽ-flow-trước-nối-sau">Part 1 · Vẽ flow trước, nối sau</h3>
+<p><strong>Hand-built prototype</strong> là prototype bạn dựng bằng tay trong Figma: tự tạo frame, tự nối kết nối, tự chọn cách chuyển màn. Khác với prototype do công cụ sinh ra, mỗi kết nối đều có lý do của bạn đằng sau.</p>
+<p>Thứ tự làm việc nên là:</p>
+<ol>
+<li>Vẽ user flow của task trên giấy hoặc sơ đồ. Liệt kê từng bước người dùng làm.</li>
+<li>Dựng từng màn tương ứng với bước đó.</li>
+<li>Nối các màn theo flow.</li>
+<li>Bấm thử từ đầu đến cuối và sửa chỗ lỗi.</li>
+<li>Đưa cho một người khác thử.</li>
+</ol>
+<p>Ví dụ: một task đặt lịch hẹn có năm bước (chọn dịch vụ, chọn giờ, nhập thông tin, xác nhận, nhận mã). Nếu bạn nối trước khi vẽ flow, rất dễ bỏ sót bước "giờ đã kín" và chỉ phát hiện khi người khác bấm vào.</p>
+<p><strong>Chọn mức fidelity theo câu hỏi.</strong> Low fidelity (khung và thanh xám) đủ để kiểm tra cấu trúc và thứ tự các bước. High fidelity (có animation, state, overlay) nên đến sau, khi cấu trúc đã đứng vững. Dựng high fidelity quá sớm có nghĩa là bạn đánh bóng một giải pháp chưa được kiểm chứng.</p>
+<p>Khi nào dùng hand-built prototype? Khi câu hỏi cần trả lời là "người dùng có đi qua được flow không?" hoặc "họ có hiểu bước tiếp theo không?". Khi câu hỏi là "chuyển động có tạo cảm giác tốt không?" thì bạn cần chi tiết hơn.</p>
+<p><strong>Check (30 giây).</strong> Bạn sẽ vẽ flow trước hay nối trước? Vì sao?</p>
+<hr />
+<h3 id="v0-part-2-trigger-action-transition-và-starting-point">Part 2 · Trigger, action, transition và starting point</h3>
+<p>Mỗi kết nối trong Figma có ba phần:</p>
+<ul>
+<li><strong>Trigger</strong> là hành động của người dùng: click, hover, drag, bấm phím.</li>
+<li><strong>Action</strong> là điều xảy ra: đi đến một frame, mở overlay, đóng overlay, quay lại.</li>
+<li><strong>Transition</strong> là cách màn chuyển: Instant (đổi ngay), Dissolve (mờ dần), Smart Animate (chuyển động theo layer), các kiểu trượt.</li>
+</ul>
+<p>Ví dụ: nút "Xác nhận" có trigger là click, action là đi đến màn "Đã đặt lịch", transition là Instant. Nếu đổi transition sang Smart Animate, bạn cần thêm điều kiện ở Part 3.</p>
+<p><strong>Starting point</strong> là điểm bắt đầu của một flow. Mỗi flow cần một starting point trên một frame cấp cao nhất. Một frame có thể thuộc nhiều flow, nhưng chỉ có một starting point. Khi thiếu starting point, một số công cụ test báo lỗi hoặc không chạy được prototype. Đặt tên cho starting point để dễ tìm khi file có nhiều flow.</p>
+<p><strong>Overlay</strong> hiện nội dung trên màn hiện tại mà không rời khỏi màn đó. Dùng overlay cho menu, hộp thoại xác nhận, tooltip và bottom sheet. Dùng action đi đến frame khi người dùng thật sự chuyển sang một màn mới. Trong Figma, Open Overlay giúp giảm thao tác lặp khi bạn nối nhiều overlay giống nhau.</p>
+<p><strong>Hotspot hint</strong> là gợi ý vùng có thể bấm, Figma tự hiện khi bạn di chuột. Người test có thể không thấy gợi ý này, nên đừng để nó quyết định việc họ có tìm được nút hay không.</p>
+<p><strong>Check (30 giây).</strong> Một nút mở một hộp xác nhận, bạn chọn action nào?</p>
+<hr />
+<h3 id="v0-part-3-smart-animate-và-state">Part 3 · Smart Animate và state</h3>
+<p><strong>Smart Animate</strong> chuyển động giữa hai frame bằng cách khớp các layer có cùng tên và cùng vị trí trong hierarchy. Nó không đọc nội dung màn hình. Vì vậy:</p>
+<ul>
+<li>Giữ tên layer giống nhau giữa hai frame bạn muốn chuyển động.</li>
+<li>Nhân bản frame thay vì dựng lại từ đầu. Cách này giữ tên nhất quán.</li>
+<li>Giữ mọi layer ở cả hai frame, kể cả layer không hiện ở frame kia. Để ẩn một layer, đặt opacity về 0% thay vì tắt visibility.</li>
+<li>Mở tab Prototype và kiểm tra viền tím: Figma tô các layer nó sẽ khớp. Layer không được tô là layer nó không khớp.</li>
+</ul>
+<p>Smart Animate không chuyển động được việc thay đổi nội dung text hay đổi hẳn một vật thể. Khi có nhiều thay đổi cùng lúc, chuyển động có thể bị giật. Đừng dùng Smart Animate cho mọi thứ. Hãy để nó làm chuyển động chính và dùng transition đơn giản cho phần còn lại.</p>
+<p><strong>Variant và interactive component.</strong> Để dựng các state của một component, như Default, Hover, Pressed và Disabled, bạn đặt chúng trong cùng một component set. Sau đó nối các variant bằng kết nối. Với checkbox, bạn chỉ cần hai variant và hai kết nối, thay vì một frame cho mỗi state.</p>
+<p>Có ba điều cần nhớ:</p>
+<ul>
+<li>Chỉ nối được các variant trong cùng một component set.</li>
+<li>Tên variant có thể khác nhau (Default, Hover), nhưng layer bên trong các variant phải có tên nhất quán.</li>
+<li>Figma có thể giữ state của component giữa các frame. Nếu state bị kéo sang màn khác, bật Reset component state.</li>
+</ul>
+<p><strong>Check (30 giây).</strong> Hai frame của một nút có tên layer "Label" và "Text" ở hai bên. Smart Animate sẽ làm gì?</p>
+<hr />
+<h3 id="v0-bridge-nghỉ-và-giới-thiệu-task">Bridge · Nghỉ và giới thiệu task</h3>
+<p>Nghỉ 2 phút. Sau đó kiểm tra nhanh ba câu: starting point là gì, Smart Animate khớp layer theo tiêu chí nào, và khi nào dùng overlay thay vì một màn mới. Cuối cùng, giới thiệu task thực hành và các bước.</p>
+<p><strong>Cheat sheet:</strong> trigger, action, transition, starting point, overlay, tên layer khớp, variant, Reset component state, viền tím trong tab Prototype.</p>
+<hr />
+<h3 id="v0-practice-dựng-flow-và-test-nhanh-35-phút">Practice · Dựng flow và test nhanh (35 phút)</h3>
+<p>Thực hành trên một task. Mỗi bước có thời gian, và bạn làm liền một mạch. Các bước chi tiết nằm trong file practice.</p>
+<ol>
+<li><strong>Vẽ flow (5 phút).</strong> Liệt kê các bước của task và vẽ thành sơ đồ đơn giản.</li>
+<li><strong>Nối flow (12 phút).</strong> Dựng ba đến năm màn, nối kết nối với trigger và transition, đặt starting point, thêm một overlay.</li>
+<li><strong>Dựng state (8 phút).</strong> Tạo một component có ít nhất hai variant và nối chúng bằng interactive component.</li>
+<li><strong>Test nhanh (10 phút).</strong> Bạn đưa prototype cho một bạn học. Họ làm task, bạn chỉ quan sát và ghi lại chỗ họ khựng. Không giải thích.</li>
+</ol>
+<p><strong>Facilitator watch-fors:</strong></p>
+<ul>
+<li>Học viên nối trước khi vẽ flow, và phát hiện thiếu bước khi đã nối xong.</li>
+<li>Tên layer khác nhau giữa hai frame, rồi họ tưởng Smart Animate lỗi.</li>
+<li>Dùng frame riêng cho từng state thay vì variant.</li>
+<li>Người test hỏi "bước tiếp theo là gì?" và học viên giải thích thay vì quan sát.</li>
+</ul>
+<hr />
+<h3 id="v0-close-một-prototype-trả-lời-một-câu-hỏi">Close · Một prototype trả lời một câu hỏi</h3>
+<p>Prototype tốt trả lời một câu hỏi cụ thể. Trước khi bấm thử, hãy viết câu hỏi đó ra. Câu hỏi quyết định mức fidelity, flow nào cần dựng, và câu hỏi test nào sẽ được đặt.</p>
+<p>Bài tập về nhà nằm ở file practice. Bạn nộp một flow hoàn chỉnh kèm câu hỏi test và kết quả một lần test.</p>
+<hr />
+<h2 id="v0-practice-dataset">Practice Dataset</h2>
+<p>Nếu bạn không có task của riêng, dùng task sau:</p>
+<p><strong>Đặt lịch hẹn.</strong> Người dùng chọn dịch vụ, chọn ngày và giờ, nhập tên và số điện thoại, xác nhận, rồi nhận mã đặt lịch. Có ba lỗi thường gặp: giờ đã kín, số điện thoại sai định dạng, và người dùng muốn đổi giờ sau khi đã xác nhận.</p>
+<hr />
+<h2 id="v0-ai-in-practice">AI in Practice</h2>
+<h3 id="v0-try-this-with-ai">🤖 Try this with AI</h3>
+<blockquote>
+<p>Đưa cho công cụ AI một task và yêu cầu nó liệt kê các bước của flow kèm các chỗ có thể lỗi:
+<em>"Liệt kê các bước của task [tên task]. Với mỗi bước, nêu một trường hợp lỗi người dùng có thể gặp."</em></p>
+</blockquote>
+<h3 id="v0-critical-thinking-prompt">🧠 Critical thinking prompt</h3>
+<ul>
+<li>Các bước AI liệt kê có đủ để dựng flow không?</li>
+<li>Có bước nào AI bỏ qua mà bạn biết người dùng thật sẽ gặp?</li>
+<li>Bạn sẽ đưa những trường hợp lỗi nào vào prototype và bỏ những trường hợp nào?</li>
+</ul>
+<h3 id="v0-prompt-engineering-tip">✍️ Prompt engineering tip</h3>
+<p>Yêu cầu công cụ AI liệt kê các bước theo thứ tự người dùng làm, không theo thứ tự màn hình. Cách này khớp với cách bạn vẽ flow.</p>
+<h3 id="v0-ethics-consideration">⚖️ Ethics consideration</h3>
+<p>Prototype test với người thật cần thông tin rõ ràng về việc họ đang thử gì và dữ liệu nào được ghi lại. Đừng để prototype giả làm một dịch vụ thật khi người test có thể cung cấp thông tin cá nhân.</p>
+<hr />
+<h2 id="v0-assessment">Assessment</h2>
+<h3 id="v0-quick-knowledge-check">Quick knowledge check</h3>
+<ol>
+<li>Trigger, action và transition khác nhau thế nào?</li>
+<li>Khi nào bạn chọn overlay thay vì một màn mới?</li>
+<li>Vì sao hai frame của Smart Animate cần cùng tên layer ở cùng vị trí trong hierarchy?</li>
+</ol>
+<h3 id="v0-reflection-prompt-homework">Reflection prompt (homework)</h3>
+<blockquote>
+<p><em>"Điểm nào trong flow của bạn khiến người test khựng lại lâu nhất? Là lỗi thiết kế, lỗi prototype, hay bạn chưa biết người dùng cần gì ở bước đó?"</em></p>
+</blockquote>
+<hr />
+<h2 id="v0-further-resources">Further Resources</h2>
+<ul>
+<li><a href="https://help.figma.com/hc/en-us/articles/360040314193-Guide-to-prototyping-in-Figma" target="_blank" rel="noopener">Figma Help: Guide to prototyping in Figma</a></li>
+<li><a href="https://help.figma.com/hc/en-us/articles/360040035834" target="_blank" rel="noopener">Figma Help: Prototype triggers</a></li>
+<li><a href="https://help.figma.com/hc/en-us/articles/360040318013-Present-designs-and-prototypes" target="_blank" rel="noopener">Figma Help: Present designs and prototypes</a></li>
+<li><a href="https://help.figma.com/hc/en-us/articles/39747190144023-Components-collection-Interactive-components-fundamentals" target="_blank" rel="noopener">Figma Help: Interactive components fundamentals</a></li>
+<li><a href="https://www.figma.com/best-practices/five-ways-to-improve-your-prototyping-workflow/" target="_blank" rel="noopener">Figma Best Practices: five ways to improve your prototyping workflow</a></li>
+<li><a href="https://maze.co/blog/test-figma-prototypes/" target="_blank" rel="noopener">Maze: how to test Figma prototypes</a></li>
+<li><a href="https://www.lyssna.com/blog/figma-prototype-testing/" target="_blank" rel="noopener">Lyssna: Figma prototype testing</a></li>
+</ul>
+<hr />
+<p><em>Created by Winnie Nguyen · Standalone · Last updated November 2026</em></p></article>
+  </div>
+</div><div data-var-panel data-var-id="1" hidden>
+  <div class="tp-layout">
+    <aside class="tp-toc" aria-label="On this page"><p class="tp-toc__label">On this page</p><a href="#v1-goal">Goal</a><a href="#v1-before-you-start">Before you start</a><a href="#v1-steps">Steps</a><a href="#v1-output">Output</a><a href="#v1-self-check">Self-check</a><a href="#v1-if-you-get-stuck">If you get stuck</a></aside>
+    <article class="tp-body"><h2 id="v1-goal">Goal</h2>
+<p>Bạn dựng một flow bấm được trong Figma cho một task, từ starting point đến màn cuối, có ít nhất một overlay và một component có variant. Sau đó bạn đưa flow cho một người khác thử và ghi lại họ đã khựng ở đâu. Đầu ra là đầu vào để bạn test thật ở buổi sau.</p>
+<h2 id="v1-before-you-start">Before you start</h2>
+<ul>
+<li>Một task đã chọn, có ít nhất ba bước. Nếu chưa có, dùng task "đặt lịch hẹn" trong Practice Dataset của bài học.</li>
+<li>Flow hoặc sơ đồ các bước của task, vẽ trên giấy hoặc bất kỳ công cụ nào.</li>
+<li>Một bạn học để test, hoặc một người bạn sẵn sàng ngồi thử.</li>
+<li>Component từ bài Design System. Nếu chưa có, tự dựng một component có hai state.</li>
+</ul>
+<h2 id="v1-steps">Steps</h2>
+<h3 id="v1-step-1-vẽ-flow-20-phút-you">Step 1 · Vẽ flow · 20 phút · YOU</h3>
+<ul>
+<li>Liệt kê từng bước người dùng làm, theo thứ tự họ làm, không theo thứ tự màn hình.</li>
+<li>Đánh dấu các chỗ có thể sai: nhập sai, chọn giờ đã kín, bấm nhầm.</li>
+<li>Viết một câu hỏi test duy nhất: bạn muốn biết điều gì khi người dùng đi qua flow này?</li>
+</ul>
+<h3 id="v1-step-2-dựng-và-nối-các-màn-60-phút-you">Step 2 · Dựng và nối các màn · 60 phút · YOU</h3>
+<ul>
+<li>Dựng ba đến năm màn ở mức low fidelity. Dùng khung và thanh xám, chưa cần chữ thật.</li>
+<li>Đặt starting point trên màn đầu tiên và đặt tên cho nó.</li>
+<li>Nối các màn theo flow. Với mỗi kết nối, ghi lại trigger, action và transition, và tự hỏi vì sao bạn chọn từng thứ.</li>
+<li>Thêm một overlay cho một hành động cần giữ người dùng ở màn hiện tại (ví dụ: hộp xác nhận).</li>
+<li>Thêm một đường lỗi và một trạng thái trống.</li>
+</ul>
+<h3 id="v1-step-3-dựng-component-và-smart-animate-20-phút-you">Step 3 · Dựng component và Smart Animate · 20 phút · YOU</h3>
+<ul>
+<li>Tạo một component có ít nhất hai variant (ví dụ: Default và Pressed, hoặc chọn và không chọn).</li>
+<li>Nối các variant bằng interactive component. Chỉ nối các variant trong cùng một component set.</li>
+<li>Nếu có chuyển động Smart Animate, nhân bản frame và kiểm tra viền tím trong tab Prototype. Layer nào không có viền thì tên hoặc vị trí trong hierarchy đã khác.</li>
+</ul>
+<h3 id="v1-step-4-tự-kiểm-tra-và-test-40-phút-you">Step 4 · Tự kiểm tra và test · 40 phút · YOU</h3>
+<ul>
+<li>Tự bấm qua toàn bộ flow từ starting point. Ghi lại mọi dead end.</li>
+<li>Sửa các dead end và thiếu state trước khi đưa cho người khác.</li>
+<li>Đưa prototype cho một người thử làm task. Chỉ quan sát và ghi lại chỗ họ dừng hoặc hỏi. Không giải thích.</li>
+<li>Sau khi họ làm xong, hỏi một câu mở: bạn kỳ vọng điều gì xảy ra ở chỗ bạn dừng lại?</li>
+</ul>
+<h3 id="v1-step-5-viết-ghi-chú-test-10-phút-you">Step 5 · Viết ghi chú test · 10 phút · YOU</h3>
+<ul>
+<li>Với mỗi chỗ người test khựng, ghi là lỗi thiết kế, lỗi prototype, hay chưa đủ thông tin để kết luận.</li>
+</ul>
+<h2 id="v1-output">Output</h2>
+<ul>
+<li>Link Figma của flow, với starting point đã đặt tên.</li>
+<li>Một trang trong file ghi câu hỏi test và flow bạn muốn kiểm tra.</li>
+<li>Một trang ghi chú test: chỗ người test dừng, câu họ trả lời, và phân loại lỗi.</li>
+</ul>
+<h2 id="v1-self-check">Self-check</h2>
+<ul>
+<li>☐ Flow có starting point, và đi từ đầu đến cuối không có dead end.</li>
+<li>☐ Có ít nhất một overlay, và có lý do cho việc dùng overlay thay vì màn mới.</li>
+<li>☐ Có ít nhất một đường lỗi hoặc trạng thái trống.</li>
+<li>☐ Component có ít nhất hai variant, nối bằng interactive component.</li>
+<li>☐ Layer trong các frame chuyển động có cùng tên và cùng vị trí trong hierarchy.</li>
+<li>☐ Câu hỏi test được viết trước khi test, không viết sau.</li>
+<li>☐ Ghi chú test phân loại được từng lỗi là lỗi thiết kế hay lỗi prototype.</li>
+</ul>
+<h2 id="v1-if-you-get-stuck">If you get stuck</h2>
+<ul>
+<li><strong>Smart Animate không chuyển động.</strong> Mở tab Prototype và xem layer nào có viền tím. Layer không có viền là layer có tên hoặc vị trí khác. Nhân bản frame thay vì dựng lại.</li>
+<li><strong>Không biết dùng overlay hay màn mới.</strong> Nếu người dùng không rời khỏi màn hiện tại, dùng overlay.</li>
+<li><strong>Không có bạn để test.</strong> Nhờ một người khác trong nhóm. Nếu không có ai, tự làm nhưng ghi rõ trong ghi chú là bạn tự test và kết quả có thể thiên lệch.</li>
+<li><strong>Prototype bị lag.</strong> Giảm số ảnh và bỏ bớt transition phức tạp. Thử mở ở cửa sổ ẩn danh.</li>
+</ul></article>
+  </div>
+</div></section><section class="tp-panel" data-tab-panel data-tab-id="slides" role="tabpanel" hidden><div class="tp-slides tp-slides--empty"><strong>No slides yet</strong><span>Add a deck (.html) or .pdf to this lesson's <code>slides/</code> folder, or a <code>slides:</code> link in the lesson front matter.</span></div></section><section class="tp-panel" data-tab-panel data-tab-id="homework" role="tabpanel" hidden><div class="tp-slides tp-slides--empty"><strong>No mentee homework yet</strong><span>Drop files in <code>mentees/&lt;name&gt;/homework/hand-built-prototype/</code> and they show up here.</span></div></section>
+  <section class="tp-related"><h2>Related lessons</h2><div class="tp-related__grid"><div class="tp-related__card"><span>Previous lesson</span><strong>Design System. Output: tokens, components and rules for the chosen concept.</strong></div><div class="tp-related__card"><span>Next lesson</span><strong>[to confirm]</strong></div></div></section>
+</div>
+<script>
+(function () {
+  function group(btnSel, panelSel, attr, onShow) {
+    var btns = [].slice.call(document.querySelectorAll(btnSel)), panels = [].slice.call(document.querySelectorAll(panelSel));
+    function show(id) {
+      btns.forEach(function (b) { var on = b.getAttribute(attr) === id; b.setAttribute('aria-selected', on); b.classList.toggle('tabs__tab--active', on && b.classList.contains('tabs__tab')); });
+      panels.forEach(function (p) { p.hidden = p.getAttribute(attr) !== id; });
+      if (onShow) onShow(id);
+    }
+    btns.forEach(function (b) { b.addEventListener('click', function () { show(b.getAttribute(attr)); }); });
+    return show;
+  }
+  var firstTab = (document.querySelector('[data-tab-btn]') || {getAttribute: function () {}}).getAttribute('data-tab-id');
+  var showTab = group('[data-tab-btn]', '[data-tab-panel]', 'data-tab-id', function (id) { history.replaceState(null, '', id === firstTab ? location.pathname : '#' + id); });
+  var showVar = group('[data-var-btn]', '[data-var-panel]', 'data-var-id');
+  var h = (location.hash || '').replace('#', '');
+  showTab(h && document.querySelector('[data-tab-btn][data-tab-id="' + h + '"]') ? h : firstTab);
+  if (document.querySelector('[data-var-btn]')) showVar('0');
+  var decks = [].slice.call(document.querySelectorAll('[data-deck-btn]'));
+  decks.forEach(function (b) { b.addEventListener('click', function () {
+    var f = document.getElementById('deck-frame'); f.src = b.dataset.src; document.getElementById('deck-open').href = b.dataset.src;
+    decks.forEach(function (x) { x.classList.toggle('deck-item--active', x === b); x.setAttribute('aria-pressed', x === b); });
+  }); });
+})();
+</script>
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Winnie Nguyen · Senior Product Designer</p>
+    <div class="footer-links">
+      <a href="mailto:nguyenphuctuongvan@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/winnienguyen2910" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+<script>(function(){if(location.protocol.indexOf('http')!==0)return;var u='../assets/build-stamp.txt',last=null;function c(){fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.text():null}).then(function(t){if(t===null)return;if(last!==null&&t!==last)location.reload();last=t}).catch(function(){})}c();setInterval(c,1500)})();</script>
+</body>
+</html>

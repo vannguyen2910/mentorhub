@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starting point và flow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper:   #f5f5f5;
+      --color-ink:     #2d3142;
+      --color-muted:   #4f5d75;
+      --color-accent:  #bf4520;
+      --font-sans:     'Geist', system-ui, sans-serif;
+      --font-serif:    'Instrument Serif', 'Noto Serif', serif;
+      --font-mono:     'Geist Mono', ui-monospace, monospace;
+    }
+    body { font-family: var(--font-sans); background: var(--color-paper); color: var(--color-ink);
+      min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 1200px; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.5rem; }
+    h1 { font-family: var(--font-serif); font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem); font-weight: 400;
+      letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 960px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Flowchart · Hand-Built Prototype</p>
+    <h1>Starting point và flow</h1>
+    <div class="diagram-container">
+      <svg viewBox="0 0 960 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="hbp-starting-point-flow-title hbp-starting-point-flow-desc">
+        <title id="hbp-starting-point-flow-title">Starting point và flow</title>
+        <desc id="hbp-starting-point-flow-desc">Flow đặt lịch có starting point ở đầu, và một nhánh Giờ đã kín không có kết nối đi tiếp.</desc>
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+          <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#bf4520"/></marker>
+        </defs>
+        <rect width="100%" height="100%" fill="#f5f5f5"/>
+
+        <!-- Arrows first, so connections sit behind nodes -->
+        <path d="M480 120 V190" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M480 246 V278" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M570 318 H640" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M480 358 V400" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M740 346 V400" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M740 456 V510" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <!-- Missing connection: dashed stub that ends without an arrow -->
+        <path d="M480 456 V500" fill="none" stroke="#bf4520" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+        <!-- Labels with masks, placed beside their lines -->
+        <rect x="588" y="292" width="34" height="16" fill="#f5f5f5"/>
+        <text x="605" y="304" text-anchor="middle" font-family="'Geist Mono', monospace" font-size="12" fill="#4f5d75">CÓ</text>
+        <rect x="488" y="368" width="56" height="18" fill="#f5f5f5"/>
+        <text x="516" y="381" text-anchor="middle" font-family="'Geist Mono', monospace" font-size="12" fill="#4f5d75">KHÔNG</text>
+
+        <!-- Start: oval, the starting point -->
+        <rect x="380" y="64" width="200" height="56" rx="20" fill="#f5f5f5" stroke="#2d3142" stroke-width="1.2"/>
+        <text x="480" y="88" text-anchor="middle" font-family="'Geist', sans-serif" font-size="14" font-weight="600" fill="#2d3142">Bắt đầu: Đặt lịch</text>
+        <text x="480" y="106" text-anchor="middle" font-family="'Geist Mono', monospace" font-size="12" fill="#5a6580">starting point</text>
+
+        <!-- Step -->
+        <rect x="380" y="190" width="200" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1.2"/>
+        <text x="480" y="223" text-anchor="middle" font-family="'Geist', sans-serif" font-size="14" font-weight="600" fill="#2d3142">Chọn giờ</text>
+
+        <!-- Decision: diamond -->
+        <path d="M480 278 L570 318 L480 358 L390 318 Z" fill="#ffffff" stroke="#2d3142" stroke-width="1.2"/>
+        <text x="480" y="323" text-anchor="middle" font-family="'Geist', sans-serif" font-size="13" font-weight="600" fill="#2d3142">Giờ còn trống?</text>
+
+        <!-- Step -->
+        <rect x="640" y="290" width="200" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1.2"/>
+        <text x="740" y="323" text-anchor="middle" font-family="'Geist', sans-serif" font-size="14" font-weight="600" fill="#2d3142">Nhập thông tin</text>
+
+        <!-- Focal: the dead end, the lesson of the diagram -->
+        <rect x="380" y="400" width="200" height="56" rx="6" fill="rgba(191,69,32,0.08)" stroke="#bf4520" stroke-width="1.6"/>
+        <text x="480" y="426" text-anchor="middle" font-family="'Geist', sans-serif" font-size="14" font-weight="600" fill="#2d3142">Giờ đã kín</text>
+        <text x="480" y="444" text-anchor="middle" font-family="'Geist Mono', monospace" font-size="12" fill="#bf4520">chưa nối đi tiếp</text>
+        <text x="480" y="520" text-anchor="middle" font-family="'Geist Mono', monospace" font-size="12" fill="#4f5d75">Không có kết nối: người dùng dừng ở đây</text>
+
+        <!-- Step -->
+        <rect x="640" y="400" width="200" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1.2"/>
+        <text x="740" y="433" text-anchor="middle" font-family="'Geist', sans-serif" font-size="14" font-weight="600" fill="#2d3142">Xác nhận</text>
+
+        <!-- End: oval -->
+        <rect x="640" y="510" width="200" height="56" rx="20" fill="#f5f5f5" stroke="#2d3142" stroke-width="1.2"/>
+        <text x="740" y="543" text-anchor="middle" font-family="'Geist', sans-serif" font-size="14" font-weight="600" fill="#2d3142">Đã đặt lịch</text>
+
+        <!-- Legend strip -->
+        <text x="40" y="612" font-family="'Geist Mono', monospace" font-size="12" fill="#5a6580">Oval: bắt đầu hoặc kết thúc · Hình chữ nhật: bước · Kim cương: quyết định · Nét đứt: kết nối còn thiếu</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

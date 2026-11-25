@@ -30,7 +30,7 @@ New lessons are written in **Vietnamese**. Existing lessons written in English s
 
 ### A2. Ground the content
 
-Teach what is in the user's own material first. Where the lesson needs a claim, a statistic or a method that is not in their files, find a source (use web search) and record it with author, year and sample size. Do not state a number without a source. Separate what a source found from what the author infers. Where something is Winnie's own teaching method, mark it as such and do not invent supporting research.
+Teach what is in the user's own material first. Where the lesson needs a claim, a statistic or a method that is not in their files, run the `teaching:topic-research` skill (or `topic-research` in the teaching plugin). It searches, checks each claim against its source, and writes `learning/research.md` in the lesson folder with a verification status per claim and the learning values. Record each source with author, year and sample size where the source gives them. Do not state a number without a source. Separate what a source found from what the author infers. Where something is Winnie's own teaching method, mark it as such and do not invent supporting research.
 
 ### A3. Write the brief
 
@@ -98,6 +98,8 @@ Run the `review-mentoring` skill's checks on the pair, or apply its checklist in
 When Winnie corrects a Vietnamese line, add the before and after to `vi-voice.md` so the fix applies next time (that rule is in CLAUDE.md).
 
 ### B5. Deck
+
+Visuals for the outline's DIAGRAM, COMPARE and IMAGE slides come first. Run the `teaching:slide-visuals` skill (or `slide-visuals` in the teaching plugin) on the outline: it draws schematic diagrams through diagram-design, asks for a Figma link for real screens, asks permission before any outside image, saves them in the lesson's `assets/`, links each one from its slide, and logs every source in `assets/SOURCES.md`.
 
 A deck is a separate step. Do not generate deck HTML in this command. State exactly what is needed: the outline path, the slide count, and the nearest existing deck folder to copy support files from (`deck-stage.js`, `image-slot.js` and `support.js` live in each lesson's own `slides/` folder, with the design tokens in `slides/_ds/`; a few older lessons have a `tokens.css` there instead; there is no shared theme folder). The built deck, once it exists, goes directly in `slides/` as an `.html` file (not `_archive/`, not nested), per CLAUDE.md.
 
