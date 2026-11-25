@@ -46,28 +46,38 @@ By the end of this session, students will be able to:
 <!-- Class lessons are theory first, then practice (mentoring-rules.md, Rule LP-3).
      Design backwards: write the Practice block first, then keep only the theory its activities use. -->
 
-### [00:00] Open (3–5 min)
+### [00:00] Open
+
+**Time:** 3–5 min
 
 <!-- Ground rules, hook, warm-up question or provocation. -->
 
 ---
 
-### [00:XX] Theory block (≤ 40 min)
+### [00:XX] Theory block
+
+**Time:** ≤ 40 min
 
 <!-- All concepts and the worked example. No activity inside this block.
      3 to 4 parts; end each part with a 30-second check asked aloud (not an exercise). -->
 
-#### Part 1 — [Title] (X min)
+#### Part 1 — [Title]
+
+**Time:** X min
 
 **Check (30 seconds).** ...
 
-#### Part 2 — [Title] (X min)
+#### Part 2 — [Title]
+
+**Time:** X min
 
 **Check (30 seconds).** ...
 
 ---
 
-### [00:XX] Bridge (5 min)
+### [00:XX] Bridge
+
+**Time:** 5 min
 
 1. **Break (2 min).**
 2. **Quick knowledge check (2 min).** Three questions aloud from the Assessment.
@@ -77,7 +87,9 @@ By the end of this session, students will be able to:
 
 ---
 
-### [00:XX] Practice block (30–35 min)
+### [00:XX] Practice block
+
+**Time:** 30–35 min
 
 <!-- Activities run back to back on the student's own case. Practice stays unbroken. -->
 
@@ -92,7 +104,9 @@ By the end of this session, students will be able to:
 
 ---
 
-### [00:XX] Close (5–8 min)
+### [00:XX] Close
+
+**Time:** 5–8 min
 
 <!-- Debrief, key points to land, closing thought, homework, Q&A. -->
 

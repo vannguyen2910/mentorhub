@@ -86,6 +86,7 @@ Follow the structure the existing lessons use (Overview, Learning Objectives, Su
 - **Manual before AI:** the learner does the thinking before AI helps. AI assists, the learner decides.
 - **AI in Practice** section is mandatory (LP-4): a try-this prompt, a critical-thinking prompt, a prompt tip, an ethics note.
 - Timings sum to the stated duration, with the buffer written down.
+- **No minutes in headings.** Lesson, phase, practice-step and template headings carry no duration, such as "(8 phút)" or "· 20 phút ·". Write the time on its own line under the heading (`**Time:** 8 phút`), or in the Session Plan table. Slides carry no minutes except a MILESTONE number (vi-voice rule 3).
 - Anything uncertain stays marked `[to confirm]`; do not smooth it over.
 
 ### B3. Write the slide outline (`<slug>-slide-outline.md`) in the same response

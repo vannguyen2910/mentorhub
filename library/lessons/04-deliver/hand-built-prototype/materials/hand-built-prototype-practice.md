@@ -20,13 +20,17 @@ Bạn dựng một flow bấm được trong Figma cho một task, từ starting
 
 ## Steps
 
-### Step 1 · Vẽ flow · 20 phút · YOU
+### Step 1 · Vẽ flow · YOU
+
+**Time:** 20 phút
 
 - Liệt kê từng bước người dùng làm, theo thứ tự họ làm, không theo thứ tự màn hình.
 - Đánh dấu các chỗ có thể sai: nhập sai, chọn giờ đã kín, bấm nhầm.
 - Viết một câu hỏi test duy nhất: bạn muốn biết điều gì khi người dùng đi qua flow này?
 
-### Step 2 · Dựng và nối các màn · 60 phút · YOU
+### Step 2 · Dựng và nối các màn · YOU
+
+**Time:** 60 phút
 
 - Dựng ba đến năm màn ở mức low fidelity. Dùng khung và thanh xám, chưa cần chữ thật.
 - Đặt starting point trên màn đầu tiên và đặt tên cho nó.
@@ -34,20 +38,26 @@ Bạn dựng một flow bấm được trong Figma cho một task, từ starting
 - Thêm một overlay cho một hành động cần giữ người dùng ở màn hiện tại (ví dụ: hộp xác nhận).
 - Thêm một đường lỗi và một trạng thái trống.
 
-### Step 3 · Dựng component và Smart Animate · 20 phút · YOU
+### Step 3 · Dựng component và Smart Animate · YOU
+
+**Time:** 20 phút
 
 - Tạo một component có ít nhất hai variant (ví dụ: Default và Pressed, hoặc chọn và không chọn).
 - Nối các variant bằng interactive component. Chỉ nối các variant trong cùng một component set.
 - Nếu có chuyển động Smart Animate, nhân bản frame và kiểm tra viền tím trong tab Prototype. Layer nào không có viền thì tên hoặc vị trí trong hierarchy đã khác.
 
-### Step 4 · Tự kiểm tra và test · 40 phút · YOU
+### Step 4 · Tự kiểm tra và test · YOU
+
+**Time:** 40 phút
 
 - Tự bấm qua toàn bộ flow từ starting point. Ghi lại mọi dead end.
 - Sửa các dead end và thiếu state trước khi đưa cho người khác.
 - Đưa prototype cho một người thử làm task. Chỉ quan sát và ghi lại chỗ họ dừng hoặc hỏi. Không giải thích.
 - Sau khi họ làm xong, hỏi một câu mở: bạn kỳ vọng điều gì xảy ra ở chỗ bạn dừng lại?
 
-### Step 5 · Viết ghi chú test · 10 phút · YOU
+### Step 5 · Viết ghi chú test · YOU
+
+**Time:** 10 phút
 
 - Với mỗi chỗ người test khựng, ghi là lỗi thiết kế, lỗi prototype, hay chưa đủ thông tin để kết luận.
 
