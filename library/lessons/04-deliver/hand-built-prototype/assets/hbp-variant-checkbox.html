@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variant thay cho frame rời</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper:   #f5f5f5;
+      --color-ink:     #2d3142;
+      --color-muted:   #4f5d75;
+      --color-accent:  #bf4520;
+      --font-sans:     'Geist', system-ui, sans-serif;
+      --font-serif:    'Instrument Serif', 'Noto Serif', serif;
+      --font-mono:     'Geist Mono', ui-monospace, monospace;
+    }
+    body { font-family: var(--font-sans); background: var(--color-paper); color: var(--color-ink);
+      min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 1200px; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.5rem; }
+    h1 { font-family: var(--font-serif); font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem); font-weight: 400;
+      letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 960px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">State machine · Hand-Built Prototype</p>
+    <h1>Checkbox: hai variant, hai kết nối</h1>
+    <div class="diagram-container">
+      <svg viewBox="0 0 960 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="hbp-variant-checkbox-title hbp-variant-checkbox-desc">
+        <title id="hbp-variant-checkbox-title">Checkbox: hai variant, hai kết nối</title>
+        <desc id="hbp-variant-checkbox-desc">Checkbox có hai variant Không chọn và Đã chọn, nối với nhau bằng hai kết nối CLICK, cùng một trạng thái Hover và một trạng thái Vô hiệu hóa.</desc>
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+        </defs>
+        <rect width="100%" height="100%" fill="#f5f5f5"/>
+
+        <!-- Arrows first -->
+        <path d="M166 292 H240" fill="none" stroke="#2d3142" stroke-width="1.2"/>
+        <path d="M440 280 H560" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M560 304 H440" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M290 260 V232 H390 V260" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M340 324 V400" fill="none" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+
+        <!-- Labels beside their lines -->
+        <rect x="470" y="256" width="60" height="16" fill="#f5f5f5"/>
+        <text x="500" y="268" text-anchor="middle" font-family="'Geist Mono', monospace" font-size="12" fill="#4f5d75">CLICK</text>
+        <rect x="462" y="312" width="76" height="16" fill="#f5f5f5"/>
+        <text x="500" y="324" text-anchor="middle" font-family="'Geist Mono', monospace" font-size="12" fill="#4f5d75">CLICK LẠI</text>
+        <rect x="312" y="208" width="56" height="16" fill="#f5f5f5"/>
+        <text x="340" y="220" text-anchor="middle" font-family="'Geist Mono', monospace" font-size="12" fill="#4f5d75">HOVER</text>
+        <rect x="350" y="350" width="84" height="16" fill="#f5f5f5"/>
+        <text x="392" y="362" text-anchor="middle" font-family="'Geist Mono', monospace" font-size="12" fill="#4f5d75">DISABLED</text>
+
+        <!-- Start dot -->
+        <circle cx="160" cy="292" r="6" fill="#2d3142"/>
+
+        <!-- Variant 1 -->
+        <rect x="240" y="260" width="200" height="64" rx="8" fill="#ffffff" stroke="#2d3142" stroke-width="1.2"/>
+        <text x="340" y="290" text-anchor="middle" font-family="'Geist', sans-serif" font-size="15" font-weight="600" fill="#2d3142">Không chọn</text>
+        <text x="340" y="310" text-anchor="middle" font-family="'Geist Mono', monospace" font-size="12" fill="#5a6580">checked = false</text>
+
+        <!-- Variant 2, focal -->
+        <rect x="560" y="260" width="200" height="64" rx="8" fill="rgba(191,69,32,0.08)" stroke="#bf4520" stroke-width="1.6"/>
+        <text x="660" y="290" text-anchor="middle" font-family="'Geist', sans-serif" font-size="15" font-weight="600" fill="#2d3142">Đã chọn</text>
+        <text x="660" y="310" text-anchor="middle" font-family="'Geist Mono', monospace" font-size="12" fill="#bf4520">checked = true</text>
+
+        <!-- Disabled variant -->
+        <rect x="240" y="400" width="200" height="56" rx="8" fill="rgba(45,49,66,0.02)" stroke="#2d3142" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="340" y="428" text-anchor="middle" font-family="'Geist', sans-serif" font-size="15" font-weight="600" fill="#2d3142">Vô hiệu hóa</text>
+        <text x="340" y="446" text-anchor="middle" font-family="'Geist Mono', monospace" font-size="12" fill="#5a6580">disabled = true</text>
+
+        <!-- Legend -->
+        <text x="40" y="500" font-family="'Geist Mono', monospace" font-size="12" fill="#5a6580">Hai variant trong một component set · hai kết nối CLICK · Hover và Disabled là state của cùng component · Bật Reset component state nếu state bị kéo sang màn khác</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

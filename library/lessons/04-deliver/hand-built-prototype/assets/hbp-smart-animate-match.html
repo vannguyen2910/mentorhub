@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiểm tra khớp layer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper:   #f5f5f5;
+      --color-ink:     #2d3142;
+      --color-muted:   #4f5d75;
+      --color-accent:  #bf4520;
+      --font-sans:     'Geist', system-ui, sans-serif;
+      --font-serif:    'Instrument Serif', 'Noto Serif', serif;
+      --font-mono:     'Geist Mono', ui-monospace, monospace;
+    }
+    body { font-family: var(--font-sans); background: var(--color-paper); color: var(--color-ink);
+      min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 1200px; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.5rem; }
+    h1 { font-family: var(--font-serif); font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem); font-weight: 400;
+      letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 960px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Architecture · Hand-Built Prototype</p>
+    <h1>Kiểm tra khớp layer trước khi chuyển động</h1>
+    <div class="diagram-container">
+      <svg viewBox="0 0 960 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="hbp-smart-animate-match-title hbp-smart-animate-match-desc">
+        <title id="hbp-smart-animate-match-title">Kiểm tra khớp layer</title>
+        <desc id="hbp-smart-animate-match-desc">Hai frame Smart Animate: layer Button khớp và được tô sáng, layer Label đổi tên thành Text nên không khớp.</desc>
+        <rect width="100%" height="100%" fill="#f5f5f5"/>
+
+        <!-- Frames -->
+        <rect x="40" y="100" width="380" height="300" rx="8" fill="none" stroke="rgba(45,49,66,0.35)" stroke-width="1.2"/>
+        <rect x="56" y="88" width="150" height="20" fill="#f5f5f5"/>
+        <text x="64" y="103" font-family="'Geist Mono', monospace" font-size="12" fill="#4f5d75">FRAME A · TRƯỚC</text>
+        <rect x="540" y="100" width="380" height="300" rx="8" fill="none" stroke="rgba(45,49,66,0.35)" stroke-width="1.2"/>
+        <rect x="556" y="88" width="150" height="20" fill="#f5f5f5"/>
+        <text x="564" y="103" font-family="'Geist Mono', monospace" font-size="12" fill="#4f5d75">FRAME B · SAU</text>
+
+        <!-- Arrow between frames (drawn before the layers) -->
+        <path d="M420 250 H540" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+        </defs>
+        <rect x="424" y="222" width="112" height="16" fill="#f5f5f5"/>
+        <text x="480" y="234" text-anchor="middle" font-family="'Geist Mono', monospace" font-size="12" fill="#4f5d75">SMART ANIMATE</text>
+
+        <!-- Frame A layers -->
+        <rect x="140" y="200" width="180" height="56" rx="6" fill="#ffffff" stroke="#bf4520" stroke-width="1.6" stroke-dasharray="4,3"/>
+        <rect x="186" y="218" width="88" height="20" rx="3" fill="rgba(45,49,66,0.25)"/>
+        <text x="230" y="276" text-anchor="middle" font-family="'Geist Mono', monospace" font-size="12" fill="#bf4520">Button/bg · khớp</text>
+        <circle cx="350" cy="228" r="14" fill="none" stroke="#4f5d75" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+        <text x="350" y="262" text-anchor="middle" font-family="'Geist Mono', monospace" font-size="12" fill="#5a6580">Icon · opacity 0%</text>
+
+        <!-- Frame B layers -->
+        <rect x="640" y="200" width="180" height="56" rx="6" fill="#ffffff" stroke="#bf4520" stroke-width="1.6" stroke-dasharray="4,3"/>
+        <rect x="686" y="218" width="88" height="20" rx="3" fill="rgba(45,49,66,0.25)"/>
+        <text x="730" y="276" text-anchor="middle" font-family="'Geist Mono', monospace" font-size="12" fill="#bf4520">Button/bg · khớp</text>
+        <circle cx="850" cy="228" r="14" fill="rgba(45,49,66,0.10)" stroke="#2d3142" stroke-width="1"/>
+        <text x="850" y="262" text-anchor="middle" font-family="'Geist Mono', monospace" font-size="12" fill="#5a6580">Icon · hiện</text>
+        <text x="730" y="344" text-anchor="middle" font-family="'Geist Mono', monospace" font-size="12" fill="#4f5d75">Layer tên Text: không khớp</text>
+        <rect x="686" y="218" width="88" height="20" rx="3" fill="none" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="2,2" transform="translate(0,0)"/>
+
+        <!-- Legend -->
+        <line x1="40" y1="450" x2="80" y2="450" stroke="#bf4520" stroke-width="1.6" stroke-dasharray="4,3"/>
+        <text x="92" y="454" font-family="'Geist', sans-serif" font-size="14" fill="#2d3142">Khớp: cùng tên và cùng vị trí trong hierarchy</text>
+        <line x1="40" y1="480" x2="80" y2="480" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="2,2"/>
+        <text x="92" y="484" font-family="'Geist', sans-serif" font-size="14" fill="#2d3142">Không khớp: khác tên hoặc khác vị trí</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>
