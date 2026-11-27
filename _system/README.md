@@ -7,7 +7,7 @@ Everything that runs the workspace rather than the teaching content.
 | `rules/` | Mentoring, workflow, automation and slide-deck rules |
 | `templates/` | Blank starter files. Copy, never edit. |
 | `rules/slide-deck-rules.md` | Canonical slide deck design rules (moved from `Themes/slide-design/RULES.md`). Deck assets (`tokens.css`, `deck-stage.js`) live in each lesson's `slides/` folder |
-| `commands/` | Slash commands (`/lead`, `/prep`, `/log-session`, `/nudge`, `/build-lesson`, `/closeout`, `/new-mentee`). `.claude/commands` is a symlink to this folder so Claude Code can read them |
+| `commands/` | Slash commands (`/lead`, `/prep`, `/log-session`, `/nudge`, `/closeout`, `/new-mentee`). `.claude/commands` is a symlink to this folder so Claude Code can read them. Building a lesson is `/teaching:build-lesson` from the `winnie-skills` repo |
 | `skills/` | Project skills. `diagram-design` (MIT, from `cathrynlavery/diagram-design`, v2.6.110) builds user flows, process maps and other diagrams as HTML/SVG/PNG; its `/doctor`, `/export-diagram`, `/import-*` and `/profile` commands live in `commands/`. `.claude/skills` is a symlink to this folder. To update, copy `skills/diagram-design/` and `commands/` again from the upstream repo |
 | `scripts/` | `new-lesson.sh`, `sync-lesson.py`, `watch.sh` (run from the repo root) |
 

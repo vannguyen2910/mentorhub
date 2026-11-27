@@ -1,6 +1,6 @@
 # Learning Loop áp dụng vào AI Design Workflow
 
-*Ghi chú riêng tư, 2026-10-28. Khung và cách dùng nằm ở skill `_system/skills/learning-loop/`. Chưa sửa lesson nào; các đề xuất chờ Winnie quyết.*
+*Ghi chú riêng tư, 2026-10-28. Khung và cách dùng nằm ở skill `teaching:learning-loop` (repo `winnie-skills`). Chưa sửa lesson nào; các đề xuất chờ Winnie quyết.*
 
 ## 1. Đối chiếu với khoá
 
