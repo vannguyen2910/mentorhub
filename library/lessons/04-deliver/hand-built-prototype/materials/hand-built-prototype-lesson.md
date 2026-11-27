@@ -165,7 +165,9 @@ Nghỉ 2 phút. Sau đó kiểm tra nhanh ba câu: starting point là gì, Smart
 
 ---
 
-### Practice · Dựng flow và test nhanh (35 phút)
+### Practice · Dựng flow và test nhanh
+
+**Time:** 35 phút
 
 Thực hành trên một task. Mỗi bước có thời gian, và bạn làm liền một mạch. Các bước chi tiết nằm trong file practice.
 

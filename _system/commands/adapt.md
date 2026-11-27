@@ -5,7 +5,7 @@ argument-hint: <mentee> [session number | candidate text]
 
 Adapt private-session ideas for class use: $ARGUMENTS
 
-This command is the step between `/log-session` or `/closeout` (which only list WF-2 candidates) and `/build-lesson` (which builds). It reads, de-identifies, proposes where each idea belongs, and drafts briefs. It never edits `*-lesson.md`, `*-slide-outline.md` or a deck, never creates a lesson folder, never runs the site build, and never sends anything. Today's date comes from the system.
+This command is the step between `/log-session` or `/closeout` (which only list WF-2 candidates) and `/teaching:build-lesson` (which builds). It reads, de-identifies, proposes where each idea belongs, and drafts briefs. It never edits `*-lesson.md`, `*-slide-outline.md` or a deck, never creates a lesson folder, never runs the site build, and never sends anything. Today's date comes from the system.
 
 **Vietnamese:** write the output in Vietnamese per `_system/rules/vi-voice.md`: body in Vietnamese, headings and professional terms in English, file names and front matter keys in English. Follow with `vietnamese-copy-polish` as a check only (diacritics, sentence length, filler, dashes).
 
@@ -58,4 +58,4 @@ For each idea marked as update, block or guide, write a short brief in the WF-5 
 
 ## 6. Report
 
-A short table: idea, placement, type of change, alternative. Then what waits on the user: approve, edit or drop each brief, then run `/build-lesson` for the approved ones. If nothing qualified, say so in one line.
+A short table: idea, placement, type of change, alternative. Then what waits on the user: approve, edit or drop each brief, then run `/teaching:build-lesson` for the approved ones. If nothing qualified, say so in one line.

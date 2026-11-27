@@ -28,11 +28,15 @@ draft: true                # true = work in progress | false = ready to publish
 <!-- Mỗi bước một khối, có thời lượng và ai làm: YOU (bạn tự làm), AI (AI soạn nháp, bạn kiểm tra).
      Tổng thời lượng cộng lại không vượt 90 phút; ghi rõ phần dự phòng. -->
 
-### Step 1 · [Tên bước] · [N] phút · YOU
+### Step 1 · [Tên bước] · YOU
+
+**Time:** [N] phút
 
 - ...
 
-### Step 2 · [Tên bước] · [N] phút · AI soạn nháp, bạn kiểm tra
+### Step 2 · [Tên bước] · AI soạn nháp, bạn kiểm tra
+
+**Time:** [N] phút
 
 - **AI soạn nháp:** ...
 - **Bạn kiểm tra:** ...
