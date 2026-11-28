@@ -45,3 +45,6 @@ programs/assessment-tool/
 
 # Instructor-only answer keys (never publish)
 **/_instructor-only-*
+
+# Obsidian per-machine layout (open tabs, panes)
+.obsidian/workspace.json

@@ -5,16 +5,16 @@
 **Decision this activity informs:** which single structural change would remove the most friction from one core task, and is that friction in the user's path (User Flow) or behind the screen (Process Map)?
 
 ## The idea in one paragraph
-A diagram looks finished long before it is true. AI makes this worse: it draws a clean, plausible flow from a one-line description, and the mentee can no longer tell what is real. So the AI never draws first. The mentee collects the facts, the AI turns them into a **table** (the review copy), the mentee verifies the table against the real product, the AI analyses the verified table, and only then does the AI turn the approved table into diagram code. The table is the source of truth. The diagram is a view of it.
+A diagram looks finished long before it is true. AI makes this worse: it draws a clean, plausible flow from a one-line description, and the mentee can no longer tell what is real. So the AI never draws first. The mentee collects the facts, the AI turns them into an **md file** (the review copy), the mentee verifies the md file against the real product, the AI analyses the verified md file, and only then does the AI turn the approved md file into diagram code. The md file is the source of truth. The diagram is a view of it.
 
 ## Two branches, one spine
 | | Branch A — User Flow | Branch B — Process Map |
 |---|---|---|
 | Perspective | One user's path | Whole operation, front-stage and back-stage |
 | Facts the mentee collects (step 2) | Own walkthrough notes: every screen, tap, state | Walkthrough notes **plus** back-stage facts: who or what acts, handoffs, waits. Each fact tagged with its source (team member, doc, engineering) |
-| Extra table columns (step 3) | — | Lane (actor), Handoff (yes/no), Wait (known / unknown) |
+| Extra md file columns (step 3) | — | Lane (actor), Handoff (yes/no), Wait (known / unknown) |
 | What the AI does at step 5 | Finds friction against the job; proposes at least three different structures for the worst step | Places steps in lanes, marks handoffs and waits, lists **questions to ask the team** instead of guessing |
-| Order | First | Second. Reuse the verified table from A and add back-stage facts only. |
+| Order | First | Second. Reuse the verified md file from A and add back-stage facts only. |
 
 If the task has one actor, run A only. If friction cannot be explained by screens, add B.
 
@@ -28,8 +28,8 @@ user-flow-[task]/
 |---|---|---|
 | `## Frame` (task, entry/end, job, constraints, method, current belief) | 1 | You |
 | `sources/` (notes with IDs N01…, back-stage facts B01…) | 2 | You |
-| `## Table (AI draft)` | 3 | AI. **Never edit.** |
-| `## Table (verified)` | 4 | You: a copy you correct |
+| `## md file (AI draft)` | 3 | AI. **Never edit.** |
+| `## md file (verified)` | 4 | You: a copy you correct |
 | `## Analysis (AI)` | 5 | AI |
 | `## Fix + decision` | 6 | You |
 | `## Diagram code (AI)` | 7 | AI |
@@ -40,9 +40,9 @@ Same two safety rules as every flow: the AI returns only its own section, and th
 ## If a gate fails
 | Gate | After step | Supports stage check | If the answer is no |
 |---|---|---|---|
-| A: does the table match the real product? | 4 | (local to this activity) | Go back to step 2 and walk the product again; then rerun step 3 |
+| A: does the md file match the real product? | 4 | (local to this activity) | Go back to step 2 and walk the product again; then rerun step 3 |
 | B: is the fix defensible? | 6 | 3a, 3b, 3c | Go back to step 5 and ask for alternatives again; check unknowns with the team first |
-| C: does the diagram match the table? | 8 | 3b, and 3d when it goes to handoff | Go back to step 7 (code differs from the table) or step 4 (table was wrong) |
+| C: does the diagram match the md file? | 8 | 3b, and 3d when it goes to handoff | Go back to step 7 (code differs from the md file) or step 4 (md file was wrong) |
 
 Stage checks are in `../../learning/method.md` Part 3, §2.
 
@@ -73,33 +73,33 @@ Stage checks are in `../../learning/method.md` Part 3, §2.
 **Output:** files in `sources/`
 
 ## Step 3 — Structure (AI)
-**Goal:** Turn the raw notes into a table that can be checked line by line.
-**Give the AI:** `## Frame` and the notes in `sources/` (and the verified table from a previous run, for branch B).
+**Goal:** Turn the raw notes into an md file that can be checked line by line.
+**Give the AI:** `## Frame` and the notes in `sources/` (and the verified md file from a previous run, for branch B).
 **Instruction essentials:**
-> Using only the notes below, build a step table for this task. Columns: ID, Shape (pill, rectangle, diamond, note; add parallelogram and a Lane column for system or team steps), Label (short, from the notes), Next (the ID it leads to; for a diamond, one row per branch with a label such as Yes / No), Evidence (note IDs), Status (stated, inferred, or unknown). Every step must cite at least one note ID. If you add a step the notes imply but do not state, mark it "inferred". If you do not know what happens, write "unknown"; do not fill the gap. After the table, list: (1) diamonds with fewer than two outgoing branches, (2) paths that never reach an end, (3) states with no coverage in the notes (empty, error, loading, success). Do not suggest improvements yet. Return only the table and the three lists.
+> Using only the notes below, build an md file for this task. Columns: ID, Shape (pill, rectangle, diamond, note; add parallelogram and a Lane column for system or team steps), Label (short, from the notes), Next (the ID it leads to; for a diamond, one row per branch with a label such as Yes / No), Evidence (note IDs), Status (stated, inferred, or unknown). Every step must cite at least one note ID. If you add a step the notes imply but do not state, mark it "inferred". If you do not know what happens, write "unknown"; do not fill the gap. After the md file, list: (1) diamonds with fewer than two outgoing branches, (2) paths that never reach an end, (3) states with no coverage in the notes (empty, error, loading, success). Do not suggest improvements yet. Return only the md file and the three lists.
 
 **Check:** Does every row cite a note? Are "inferred" rows few and clearly marked?
-**Failure sign:** A beautiful complete table with no "unknown" or "inferred" rows. Real notes always leave gaps.
-**Output:** `## Table (AI draft)`
+**Failure sign:** A beautiful complete md file with no "unknown" or "inferred" rows. Real notes always leave gaps.
+**Output:** `## md file (AI draft)`
 
 ## Step 4 — Verify against the product (YOU) · Gate A
-**Goal:** Make the table true. Copy the AI draft into `## Table (verified)` and correct the copy.
-**Do:** Walk the product again, following the table row by row. Fix wrong labels, remove invented steps, resolve every "inferred" and "unknown" (walk it, or ask someone) or leave it visibly unknown. Count the AI's errors: wrong, invented, missing.
+**Goal:** Make the md file true. Copy the AI draft into `## md file (verified)` and correct the copy.
+**Do:** Walk the product again, following the md file row by row. Fix wrong labels, remove invented steps, resolve every "inferred" and "unknown" (walk it, or ask someone) or leave it visibly unknown. Count the AI's errors: wrong, invented, missing.
 **Gate A questions:**
-- Could another person follow this table and reach the same screens?
+- Could another person follow this md file and reach the same screens?
 - Is every "inferred" row either confirmed or removed?
 - Does every diamond have two labelled branches, and every path an end?
 
 **Failure sign:** You corrected nothing. (Either the AI was perfect, which is rare, or you did not walk the product.)
-**Output:** `## Table (verified)`
+**Output:** `## md file (verified)`
 
 ## Step 5 — Analyse (AI)
 **Goal:** Find where the structure causes friction, and widen the options before you choose.
-**Give the AI:** `## Frame` and `## Table (verified)`. Nothing else.
+**Give the AI:** `## Frame` and `## md file (verified)`. Nothing else.
 **Instruction essentials:**
-> *Branch A — User Flow.* Using only the verified table and the job in the frame: (1) for each step, say whether it helps the user progress toward the job or is friction, with the row ID as evidence and a one-line reason; mark guesses as "inferred". (2) Pick the three highest-friction steps. For the worst one, propose three genuinely different ways to restructure it (for example: remove it, move it earlier or later, merge it with another step, let the system do it). For each: what changes, what it costs, and what it might break. (3) List missing states. (4) Argue against your own conclusion: the strongest reason these steps might exist for a good reason, and what evidence would change your mind. Do not recommend one option. Return only your section.
+> *Branch A — User Flow.* Using only the verified md file and the job in the frame: (1) for each step, say whether it helps the user progress toward the job or is friction, with the row ID as evidence and a one-line reason; mark guesses as "inferred". (2) Pick the three highest-friction steps. For the worst one, propose three genuinely different ways to restructure it (for example: remove it, move it earlier or later, merge it with another step, let the system do it). For each: what changes, what it costs, and what it might break. (3) List missing states. (4) Argue against your own conclusion: the strongest reason these steps might exist for a good reason, and what evidence would change your mind. Do not recommend one option. Return only your section.
 >
-> *Branch B — Process Map.* Using only the verified table and the back-stage facts: (1) place each step in a lane; do not move or rename steps. (2) Mark every handoff and what is passed. (3) Mark every wait, with the fact ID that supports it or "unknown". (4) List the questions to ask the team to close every "unknown", as questions, not guesses. (5) Name the steps the user feels as a delay or error but cannot see the cause of. (6) Argue against your own conclusion, as in branch A. Return only your section.
+> *Branch B — Process Map.* Using only the verified md file and the back-stage facts: (1) place each step in a lane; do not move or rename steps. (2) Mark every handoff and what is passed. (3) Mark every wait, with the fact ID that supports it or "unknown". (4) List the questions to ask the team to close every "unknown", as questions, not guesses. (5) Name the steps the user feels as a delay or error but cannot see the cause of. (6) Argue against your own conclusion, as in branch A. Return only your section.
 
 **Check:** Does every claim point to a row or fact ID? Are the three options really different (not one idea in three wordings)?
 **Failure sign:** Confident recommendations about systems the notes never described; options that all keep the same step.
@@ -107,28 +107,28 @@ Stage checks are in `../../learning/method.md` Part 3, §2.
 
 ## Step 6 — Decide the fix (YOU) · Gate B
 **Goal:** Choose one structural change, and know what it rests on.
-**Do:** Read the analysis against your verified table. Choose one step to change and one option (or your own). Write: why this step exists today, what would change structurally, what you would test to validate it. Check the AI's "removable" steps with engineering or whoever owns them. A step can be removable on paper and required in the system.
+**Do:** Read the analysis against your verified md file. Choose one step to change and one option (or your own). Write: why this step exists today, what would change structurally, what you would test to validate it. Check the AI's "removable" steps with engineering or whoever owns them. A step can be removable on paper and required in the system.
 **Gate B questions:**
 - Were at least three genuinely different options considered, and is the reason for the choice recorded? (3a)
-- Does the fix trace to the job and to evidence in the table, not to the AI's opinion? (3b)
+- Does the fix trace to the job and to evidence in the md file, not to the AI's opinion? (3b)
 - Does it pass your principles, or is the conflict recorded as a trade-off? (3c)
 
 **Failure sign:** You picked the AI's first option; "unknown" items were never resolved; no test named.
 **Output:** `## Fix + decision`
 
-## Step 7 — Turn the table into diagram code (AI)
-**Goal:** Draw quickly from a table you already trust.
-**Give the AI:** `## Table (verified)` (and, if you want the "after" view, the table plus the decision).
+## Step 7 — Turn the md file into diagram code (AI)
+**Goal:** Draw quickly from an md file you already trust.
+**Give the AI:** `## md file (verified)` (and, if you want the "after" view, the md file plus the decision).
 **Instruction essentials:**
-> Convert the verified table into Mermaid flowchart code. Use exactly the steps and branches in the table: do not add, remove, rename or reorder anything. Shapes: pill `([text])`, rectangle `[text]`, diamond `{text}`, parallelogram `[/text/]`. Label every branch from a diamond. For a process map, use one `subgraph` per lane. Mark "unknown" rows with a dashed arrow. Return only the code in one block.
+> Convert the verified md file into Mermaid flowchart code. Use exactly the steps and branches in the md file: do not add, remove, rename or reorder anything. Shapes: pill `([text])`, rectangle `[text]`, diamond `{text}`, parallelogram `[/text/]`. Label every branch from a diamond. For a process map, use one `subgraph` per lane. Mark "unknown" rows with a dashed arrow. Return only the code in one block.
 
-**Check:** Count nodes and arrows in the code against the table.
+**Check:** Count nodes and arrows in the code against the md file.
 **Failure sign:** An extra "helpful" node, a merged step, a branch with no label.
 **Output:** `## Diagram code (AI)`
 
 ## Step 8 — Draw, compare, state the limits (YOU) · Gate C
 **Goal:** Put the diagram where the team will use it, and say what it cannot tell them.
-**Do:** Paste the code into a diagram tool (or redraw in FigJam or Miro) and tidy the layout. Compare the picture to `## Table (verified)`. Highlight in red the steps that exist because of an IA, system or organisational constraint. Write `## Final diagram + limits`.
+**Do:** Paste the code into a diagram tool (or redraw in FigJam or Miro) and tidy the layout. Compare the picture to `## md file (verified)`. Highlight in red the steps that exist because of an IA, system or organisational constraint. Write `## Final diagram + limits`.
 **Gate C questions:**
 - Does the diagram contain exactly the verified steps?
 - Is every unresolved "unknown" visible on the diagram?
@@ -140,12 +140,12 @@ Stage checks are in `../../learning/method.md` Part 3, §2.
 ---
 
 ## Limits to say out loud
-The map shows how the task works **today, as far as you and your sources know**. It does not show why users drop off, how long steps really take, or whether the fix will work. Those need real users and real data. The AI knows only what you gave it; whatever the table marks "unknown" is still unknown on the diagram.
+The map shows how the task works **today, as far as you and your sources know**. It does not show why users drop off, how long steps really take, or whether the fix will work. Those need real users and real data. The AI knows only what you gave it; whatever the md file marks "unknown" is still unknown on the diagram.
 
 ## To test before teaching
 1. Run branch A on one real product. Time each step. Step 2 will take longest, and it must not be skipped.
-2. Measure the table errors at step 4 (wrong, invented, missing). If the AI invents more than a few rows, tighten the step 3 instruction.
+2. Measure the md file errors at step 4 (wrong, invented, missing). If the AI invents more than a few rows, tighten the step 3 instruction.
 3. Run branch B on a task with a manual back-stage step. Does the AI list questions instead of guessing the owner? If it guesses, tighten step 5.
-4. Check that Mermaid output matches the table in node count. If not, the "do not add or remove" instruction is too weak.
+4. Check that Mermaid output matches the md file in node count. If not, the "do not add or remove" instruction is too weak.
 5. Check whether the step 5 counter-argument is a real argument or a token sentence.
 6. Check whether the three options are really different.

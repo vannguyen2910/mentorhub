@@ -383,7 +383,7 @@ def prog_tag(p):
 ASSETS = OUT / "assets"
 IMG_EXT = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg"}
 # materials/*.md that are NOT lesson plans
-NOT_LESSON = re.compile(r"(slide-outline|brainstorm|build-prompt|stub|^readme|^index|^learnings)", re.I)
+NOT_LESSON = re.compile(r"(slide-outline|brainstorm|build-prompt|stub|-brief$|^readme|^index|^learnings)", re.I)
 
 
 NON_TOPIC = {"assets", "learning", "materials", "slides"}  # helper folders, never a lesson
@@ -466,7 +466,8 @@ def load_variant(f, folder):
         if inline:
             meta = {"duration": inline.get("duration", ""), "level": inline.get("audience", "").lower(),
                     "tags": [t.strip() for t in inline.get("methods", "").split("·") if t.strip()], "subtitle": "",
-                    "programs": [t.strip() for t in inline.get("programs", "").split(",") if t.strip()]}
+                    "programs": [t.strip() for t in inline.get("programs", "").split(",") if t.strip()],
+                    "slides": inline.get("slides", "")}
             meta["_methods"] = inline.get("methods", "")
     if str(meta.get("type", "lesson")).lower() in ("brainstorm", "reference"):
         return None
@@ -828,6 +829,13 @@ def render_lesson_body(variant, folder_slug, idx, by_stem):
             return f'<a class="tp-dead" title="Source file link: {esc(href)}"'
         if re.match(r"^https?:", href):
             return f'<a href="{m.group(1)}" target="_blank" rel="noopener"'
+        if href.endswith(".html"):  # a local page the lesson links to: copy it next to the site, like an image
+            # Only a file that resolves directly inside this lesson's folder; no name search, which could pick an unrelated page.
+            local = (variant["path"].parent / unquote(html.unescape(href))).resolve()
+            if local.is_file() and variant["path"].parents[1] in local.parents:
+                new = copy_lesson_image(variant, folder_slug, href)
+                if new:
+                    return f'<a href="{new}" target="_blank" rel="noopener"'
         return m.group(0)
 
     body_html = re.sub(r'<a href="([^"]+)"', link, body_html)

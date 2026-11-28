@@ -8,4 +8,4 @@ Third worked example of the activity flow standard (`../../learning/method.md` P
 | activity flow diagram | `../../assets/diagrams/user-flow-process-map-activity-flow.html` (plain HTML, 16:9, one-slide size; open in a browser) |
 | lesson summary | Section 6 of `information-architecture-lesson.md` |
 
-Pattern: A Investigate for the current-state map (the AI works from facts the mentee collected) with a B Generate step for structural alternatives. 8 steps · 3 gates (A table matches the product, B fix is defensible, C diagram matches the table). One workflow, two branches: **A User Flow** and **B Process Map**. Run A first, then B on top of the verified table.
+Pattern: A Investigate for the current-state map (the AI works from facts the mentee collected) with a B Generate step for structural alternatives. 8 steps · 3 gates (A the md file matches the product, B fix is defensible, C diagram matches the md file). One workflow, two branches: **A User Flow** and **B Process Map**. Run A first, then B on top of the verified md file.
