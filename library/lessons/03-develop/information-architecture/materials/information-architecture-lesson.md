@@ -3,413 +3,353 @@
 **Type:** Lesson
 **Duration:** 120–135 minutes
 **Audience:** Intermediate
-**Methods:** Card Sorting · Sitemaps · Tree Testing · User Flows · Process Map · AI Workflow for Flows
+**Methods:** Card Sorting · Sitemaps · User Flows · Process Map · AI Workflow for Flows
 **Programs:** ui-ux-fundamentals:04, junior-to-mid-level:05
+**Slides:** https://claude.ai/artifact/2GcoGVH1bSg29CUWZ1NcY6
 
 ---
 
-> **Sync note 2026-10-23 (reverse-sync từ deck):** deck đã dạy (`Information Architecture (VIE).dc.html`, 47 slide, trên Claude Design) khác lesson này khá nhiều. Theo Deck edit rule, deck thắng; cấu trúc dưới đây lấy từ deck. Bản trước khi sync: `_archive/information-architecture-lesson-pre-deck-sync-2026-10-23.md`. Phần Key Concepts và Practice Activity bên dưới là bản cũ, chưa viết lại; những chỗ lệch được liệt kê ở "Coverage gaps".
-
-## Session Structure (theo deck)
-
-| # | Phần | Slide | Thời gian |
-|---|---|---|---|
-| 0 | Mở bài: nối từ buổi trước, câu hỏi năm cách, lộ trình | 1 đến 4 | khoảng 4 đến 5 phút `[to confirm]` |
-| 1 | Inherited vs Evidence-Based, sitemap | 5 đến 9 | 7 phút |
-| 1b | Build 1: vẽ sitemap inherited | 10 | 10 phút |
-| 2 | Card Sorting | 11 đến 15 | 7 phút |
-| 2b | Build 2: viết bộ thẻ, pilot | 16 | 9 phút |
-| 3 | Tree Testing | 17 đến 21 | 7 phút |
-| 3b | Build 3: đặt cược một đáp án, viết task và kill threshold | 22 | 8 phút |
-| 4 | User Flows | 23 đến 30 | 8 phút (nâng từ 6 phút của deck) |
-| 4b | Hoạt động 1: vẽ user flow | 31 | 20 phút |
-| 5 | Process Map | 32 đến 39 | 9 phút (nâng từ 6 phút của deck) |
-| 5b | Hoạt động 2: vẽ process map | 40 | 15 phút |
-| 6 | Defend Your IA: hồ sơ quyết định và phản biện | 41 đến 43 | 6 phút |
-| 6b | Bảo vệ: pitch cho người mất nhiều nhất | 44 | 10 phút |
-| 7 | AI trong thực tế | 45 | `[to confirm]` |
-| 8 | Bài tập và kết thúc | 46, 47 | `[to confirm]` |
-
-Tổng theo deck, sau khi nâng Phần 4 lên 8 phút và Phần 5 lên 9 phút: 44 phút nội dung các Phần và 72 phút activity, cộng mở bài và đóng buổi, khoảng 121 đến 126 phút. Buffer so với khung 120 đến 135 phút của lesson cũ: từ khoảng -6 phút (nếu buổi chỉ có 120 phút) đến 14 phút (nếu 135 phút) `[to confirm]` khung giờ thật của buổi. Deck vẫn ghi Phần 4 và Phần 5 là 6 phút (slide 4, 23 và 32; notes slide 4 trong outline đã cập nhật) nên cần sửa deck cho khớp. `[to confirm]` giả định phút của các Phần không gồm activity. Output của buổi: `ia-decision-record.md` và một lần pitch cho chủ sở hữu mục.
-
-## Coverage gaps (lesson cũ so với deck)
-
-- **Tree Testing** (slide 17 đến 22): lesson cũ không có phần này.
-- **Defend Your IA** và `ia-decision-record.md` (slide 41 đến 44): lesson cũ không có.
-- **Inherited vs Evidence-Based**, sitemap, card sorting: lesson cũ có nhưng ngắn hơn deck; deck thêm ba định dạng sort, cách viết thẻ, cách đọc kết quả.
-- **Hoạt động**: lesson cũ có 2 activity; deck có 3 bản Build, 2 Hoạt động và 1 Bảo vệ.
-- **AI trong thực tế** (slide 45): lesson cũ có "AI Workflow for User Flows and Process Maps"; deck dùng AI để thử thách ý tưởng, không tạo dữ liệu nghiên cứu. `[to confirm]` giữ hay thay phần cũ.
-- **Số buổi**: deck ghi "Buổi 5", lesson cũ ghi session 04 và 05 trong hai chương trình. `[to confirm]`.
-
----
+<!-- **Sync note 2026-11-28 (reverse-sync từ deck Slides mới):** deck mới (https://claude.ai/artifact/2GcoGVH1bSg29CUWZ1NcY6, 44 slide) được dựng lại theo skill slide-deck từ deck Claude Design 42 slide, nên khác cả lesson này lẫn outline cũ. Theo Deck edit rule, deck thắng; cấu trúc dưới đây lấy từ deck mới. Bản trước khi sync: `_archive/information-architecture-lesson-pre-deck-sync-2026-11-28.md` (và bản 2026-10-23). Key Concepts, Practice Activity và Assignment đã viết lại theo deck mới (2026-11-28, tiếng Việt, gửi trực tiếp cho học viên); "Coverage gaps" bên dưới ghi những gì lesson cũ có mà deck không còn. Cấu trúc buổi và coverage gaps: `_review/lesson-structure-and-gaps-2026-11-28.md`. -->
 
 ## Key Concepts
 
 ### What is Information Architecture?
-IA is the discipline of deciding how content is organised, labelled, and connected so that users can find what they need without thinking too hard. It determines what lives where, what things are called, and how navigation is structured. Most designers inherit an IA from whoever designed before them — and rarely question it.
+
+IA (Information Architecture) là cách tổ chức, đặt tên và sắp xếp nội dung để người dùng tìm được thứ họ cần. IA quyết định ba thứ: cái gì nằm ở đâu, tên gọi là gì, và đi tới đó bằng cách nào.
+
+Ví dụ, một app ngân hàng có các mục Cards, Loans, Savings vì mỗi mục do một team sản phẩm giữ. Khách hàng chỉ hỏi một câu: tiền của tôi đang ở đâu?
+
+Người làm IA thường là UX hoặc Product designer, hoặc IA specialist, cùng PM và content. Họ vẽ sitemap, chạy card sort và tree test, rồi đề xuất cấu trúc. Người quyết định thường là PO, owner của từng mục, hoặc một hệ thống cũ từ nhiều năm trước. Designer đề xuất, owner là người quyết định cuối. Vì vậy một cấu trúc mới cần đủ bằng chứng để thuyết phục owner, không chỉ đẹp trên giấy.
 
 ---
 
 ### Inherited IA vs Evidence-Based IA
 
-The most important distinction in this lesson. Most product structures were built by product owners, engineers, or business stakeholders who organised things the way the *business* thinks — by feature, team, or product line. Users don't organise information that way.
+Đây là điểm phân biệt quan trọng nhất của bài. Hầu hết designer nhận một IA có sẵn rồi dùng luôn, không hỏi lại. Cấu trúc đó thường do PO, engineer hoặc stakeholder dựng theo cách *doanh nghiệp* nghĩ: theo tính năng, theo team, theo dòng sản phẩm. Người dùng không tổ chức thông tin theo cách đó.
+
+Ví dụ, cùng một nội dung nhưng chia theo hai cách:
+
+- Inherited: Support, Orders, Account. Ba mục này là ba team.
+- Evidence-Based: Đơn của tôi, Sự cố với đơn, Thanh toán. Ba mục này là ba việc khách muốn làm.
 
 | | Inherited IA | Evidence-Based IA |
 |---|---|---|
-| **Source** | POs, stakeholders, briefs, legacy systems | User research, card sorting, tree testing |
-| **Organising logic** | Business structure, feature ownership, system architecture | Users' mental models, language, and task sequences |
-| **What it solves** | Internal alignment, delivery scope | User findability, navigation confidence |
-| **Risk** | "It makes sense to us" bias | Requires time and method discipline |
+| **Nguồn** | PO, stakeholder, hệ thống cũ | Card sort, tree test, dữ liệu search và support |
+| **Logic** | Theo team, theo quyền sở hữu tính năng, theo hệ thống | Theo mental model và task của user |
+| **Rủi ro** | “Nghe hợp lý với bên mình” | Cần thời gian và phương pháp |
 
-A navigation that mirrors the org chart is almost always inherited IA. A navigation built from card sorting and tested with tree testing is evidence-based.
+Inherited không phải lúc nào cũng sai, chỉ là chưa được kiểm chứng. Evidence-Based cũng không phải ý kiến của designer, nên bảng có cột nguồn. Có một cách nhận ra nhanh: nếu một mục chỉ có lý khi bạn nói ra ai sở hữu nó, thì đó là cấu trúc inherited.
+
+---
+
+### Sitemap
+
+**What it is**
+Sitemap là sơ đồ mọi màn hình và mục mà user đang chạm vào hôm nay, xếp lồng nhau từ cha đến con, đúng như sản phẩm thật. Sitemap không phải wireframe: nó cho thấy *cái gì tồn tại và nối với nhau thế nào*, không cho thấy trông ra sao.
+
+**Why use it**
+- Chưa kiểm kê nội dung thì không viết được bộ thẻ cho card sort.
+- Sitemap phơi ra dấu hiệu “sơ đồ tổ chức” (org-chart tell) ngay trên bảng, trước khi bạn có bằng chứng từ user để phản biện.
+
+**When to use it**
+- Làm trước card sorting, khi bạn chưa có ý kiến về cách sửa. Nếu đã có ý kiến, bạn sẽ vẽ sitemap thiên lệch.
+- Khi bắt đầu một đợt redesign, hoặc khi vào một sản phẩm mới và cần cùng team nhìn một bức tranh hiện trạng.
+
+**How to use it**
+Vẽ từ sản phẩm đang chạy, không vẽ từ trí nhớ. Chụp màn hình, đi qua từng màn hình và ghi màn hình cha của nó. Cuối cùng ghi owner cho từng mục cấp 1. Mục nào chỉ giải thích được bằng tên team là dấu hiệu inherited.
+
+Các thẻ của card sort lấy thẳng từ sitemap này. Sau card sort, bạn dựng thêm sitemap thứ hai quanh việc của user, gọi là sitemap evidence-based.
+
+**Ví dụ: Food delivery**
+Sitemap của một app giao đồ ăn có năm mục cấp 1: Home, Search, Offers (Growth), Orders (Operations) và Account (Customer Service). Orders có Current, Order detail và Track. Account có Help Centre và Order issues.
+
+Một khách lo vì đơn trễ có hai chỗ để tìm: Track trong Orders, hoặc Order issues trong Account. Hai chỗ đó do hai team giữ. Khách đang lo, còn cấu trúc lại đẩy việc tìm câu trả lời sang nhiều team khác nhau. Đây là bước kiểm kê, không phải phán xét, nên không đổ lỗi cho team nào.
+
+**Ví dụ: Travel Buddy**
+Một sitemap do AI dựng từ kết quả card sort: bảy nhóm dưới một app (Onboarding, Dashboard, Discover, Plan / Trip, Connect, Journal / Memories, Profile & Settings). Hai nhóm đầu là lối vào và điểm quay về. Năm nhóm sau là content pillar. Đường cam đánh dấu giả thuyết rủi ro nhất: user có thể gộp Discover và Plan / Trip thành một nhóm.
 
 ---
 
 ### Card Sorting
 
 **What it is**
-A method for learning how users mentally group and label content. Users are given cards representing content items and asked to arrange them into groups that feel natural to them.
+Card sorting là phương pháp để biết user nhóm và đặt tên nội dung theo cách nào. User sắp xếp các thẻ (hoặc sticky note) thành nhóm, rồi tự đặt tên cho nhóm.
+
+**Why use it**
+Card sort phơi bày mental model của user, thay cho cấu trúc theo team hay hệ thống cũ. Mental model là hình dung sẵn trong đầu user về việc mọi thứ nên nằm ở đâu và gọi là gì. Ví dụ, khách tìm “hoàn tiền” trong Orders, trong khi team đặt nó dưới Help. Người dùng không đọc sitemap của bạn, họ dùng hình dung của chính họ. Card sort cũng cho bạn bằng chứng để bảo vệ quyết định cấu trúc trước stakeholder.
 
 **When to use it**
-- Before building or redesigning navigation — when you don't yet know how content should be grouped
-- When users complain they can't find things, but you're not sure which categories or labels are wrong
-- When you've inherited a navigation structure and want to know if it matches how users actually think
+- Cấu trúc mới hoặc đang bị nghi ngờ.
+- Nhãn khó hiểu, hoặc nội dung nhiều và khó nhóm.
+- Trước khi thống nhất sitemap.
 
-**Why to use it**
-Most navigation structures reflect internal business logic, not user logic. Card sorting reveals the gap. It gives you evidence to defend structural decisions to stakeholders — not just intuition.
+**Ba định dạng**
 
-**How to use it**
-Two formats depending on your question:
+| Định dạng | Cách làm | Dùng khi |
+|---|---|---|
+| **Open** | User tự tạo nhóm và đặt tên | Bạn không tin cấu trúc hiện có. Lộ ra mental model bằng chính lời của họ |
+| **Closed** | User sort vào các nhóm bạn đã đặt sẵn | Bạn cần test nhãn. Đây là bài test nhãn, không phải test cấu trúc |
+| **Hybrid** | Nhóm của bạn, cộng chỗ để user tự thêm | Bạn muốn tìm chỗ còn thiếu, hợp khi phần lớn cây vẫn ổn |
 
-- **Open card sort** — users create their own categories and name them. Use this when you don't yet have a navigation structure. Best for discovery. Reveals the user's mental model directly.
-- **Closed card sort** — users sort cards into categories you've already defined. Use this to validate an existing structure. Reveals whether your labels match users' expectations.
+Hãy chọn định dạng theo câu hỏi bạn cần trả lời: bạn đang cần biết nhóm, hay cần biết nhãn? Ví dụ, một app giao đồ ăn có ba nhóm Orders, Help, Account. Nếu team chưa chắc khách nhóm thế nào thì chạy open. Nếu team chỉ muốn biết tên gọi có dễ hiểu không thì chạy closed. Với dự án nhỏ, bạn có thể bắt đầu bằng open sort 5 người rồi quyết định bước tiếp theo.
 
-Run with 15–20 participants for reliable patterns. For a quick in-session test, even 3–5 people surfaces structural assumptions worth questioning. Look for clustering agreement, not perfect consensus — divergence is data too.
+**Đọc kết quả: agreement và divergence**
+Giả sử 15 người sort thẻ “đồ ăn của tôi bị trễ”: chín người xếp vào nhóm “Nó đang ở đâu”, bốn người vào “Hỗ trợ”, hai người vào “Đơn hàng”. Đây là số minh họa.
 
-Tools: FigJam, Miro (physical sticky notes), Optimal Workshop, or Maze for async runs.
+- **Agreement** là chỗ nhiều người cùng xếp một nhóm. Chín người đồng ý cho bạn một nhóm rõ, kèm tên nhóm họ đặt.
+- **Divergence** là chỗ một thẻ bị rải ra nhiều nhóm. Đây cũng là dữ liệu: khách muốn tìm thẻ đó từ nhiều chỗ, không phải khách sort sai.
 
----
+Agreement cho bạn biết các nhóm. Divergence cho bạn biết vấn đề nằm ở đâu.
 
-### Sitemaps
+Khi báo kết quả, hãy nói cỡ mẫu ngay câu đầu. Năm người là pilot. Với open sort, khoảng 15 người mới đáng tin.
 
-**What it is**
-A structural diagram showing the hierarchy and relationship between all pages or screens in a product. A sitemap is not a wireframe — it shows *what exists and how it connects*, not what anything looks like.
+**Ví dụ: Travel Buddy**
+Một card sort do AI dựng từ Solution Pool, gồm năm nhóm: Discover (6 thẻ), Plan / Trip (7), Connect (5), Journal / Memories (5) và Settings / Account (3). Mỗi thẻ là một solution mang ID (D1, P3, C2…) nên truy ngược được nguồn. Đường cam là giả thuyết cần test. Đây là bản nháp của team, chưa phải kết quả của user. Open sort với user thật mới cho biết họ nhóm thế nào.
 
-**When to use it**
-- At the start of a redesign, to document the current structure before changing anything
-- After card sorting, to redesign the structure based on user evidence
-- When onboarding onto a new product — to build a shared understanding of the current state
-
-**Why to use it**
-Without a sitemap, structural problems stay invisible. You can't redesign what you haven't made explicit. A sitemap also makes it possible to have an honest conversation with stakeholders about whether the current structure serves users — or the business.
-
-**How to use it**
-Draw two versions when doing IA work:
-
-- **Inherited sitemap** — drawn from the current live product. Documents reality as it is. Start here. Take screenshots, map every screen, and draw the hierarchy.
-- **Evidence-based sitemap** — rebuilt from card sorting results and JTBD insights. Organises content around user tasks, not business categories. This is the goal.
-
-Every box in the sitemap should be nameable and have a clear parent. If you can't define what belongs in a section without referring to the team that built it — that's an IA problem.
+**Ví dụ: ReferPlus 2019**
+Một bài card sort làm trực tiếp trên whiteboard cho một sản phẩm có hai nhóm user là recruiter và headhunter. Đầu ra là cấu trúc navigation và sitemap. Phương pháp tốt, nhưng người tham gia là team nội bộ nên kết quả chỉ phản ánh giả định của team. Để gọi nó là evidence-based, cần chạy lại cùng bài sort với recruiter và headhunter thật, rồi tree test.
 
 ---
-
 
 ### User Flows
 
 **What it is**
-A diagram of the steps one user takes to complete one specific task — from entry point to final outcome. A user flow is not a wireframe. It maps the *screens, actions, and decisions* along a task path, from the user's point of view.
+User flow là sơ đồ các bước một user đi qua để xong một task cụ thể, từ điểm vào đến kết quả. User flow không phải wireframe. Nó vẽ *màn hình, hành động và quyết định* trên đường đi của task, nhìn từ phía user. Ví dụ, flow “Đặt và xác nhận một slot” không vẽ mười màn hình, chỉ vẽ sáu bước và hai điểm quyết định.
 
-**Goal**
-Design and check the path of a task before drawing any screen. Find friction (steps the user should not have to take) and missing states (error, empty, loading, success) while they are still cheap to fix.
-
-**Scope**
-- **In:** one user, one task, one entry point. Only what the user sees, does, and decides.
-- **Out:** what the system does behind the scenes, other actors (admin, support team, payment provider), and internal handoffs. Those belong to the Process Map (next section).
-
-**Why user flows matter in the design process**
-Most design problems live in the flow, not in individual screens. A screen can look polished and still sit in the wrong place in a broken flow.
-
-Without a user flow:
-- You design screens before knowing what should come before or after them
-- Edge cases (error states, empty states, permission gates) get discovered in development — not design
-- Stakeholders debate screen-level details without ever agreeing on the task structure
-
-**How to use it**
-
-1. **Name the task** — be specific. Not "checkout" but "book and confirm a slot as a returning user."
-2. **Define the entry point and end point** — draw the Start and End pills before anything else. Where does the task begin: direct link, navigation tap, search result, notification?
-3. **Map the happy path first** — the ideal sequence when everything works.
-4. **Add branches for errors and edge cases** — the slot is taken, the user is not logged in, the content has not loaded. Each branch needs a destination — never leave a line unresolved.
-5. **Add notes where friction shows up** — a step that feels long, a screen the user did not expect, a place where users hesitate.
-6. **Review for completeness** — every diamond has at least two labelled outgoing arrows. Every path ends somewhere. No orphaned shapes.
-
-**The 5 shapes that carry all the meaning**
-
-A user flow is built from five shapes. Using them consistently makes the flow readable to anyone on the team without explanation.
-
-| Shape | What it represents | Example |
-|---|---|---|
-| **Pill / rounded rectangle** | Start and end points | "User opens the app", "Booking confirmed" |
-| **Rectangle** | A screen or a user action | Views the slot list, taps "Pay", fills a field |
-| **Diamond** | Decision point | "Is the slot still available?", "Did payment succeed?" |
-| **Arrow** | Direction of the flow | Label every branch: Yes / No, Success / Error |
-| **Note** | Context that does not fit a shape | "Error message shown here", "Friction: 3 taps to reach this" |
-
-If a step needs a sixth shape, it is probably a system step or a handoff — that is Process Map territory.
+**Why use it**
+Xác định đường đi của task trước khi vẽ màn hình. Tìm friction (bước user không đáng phải làm) và state còn thiếu (error, empty, loading, success) khi sửa còn rẻ. Phần lớn vấn đề thiết kế nằm ở flow, không nằm ở màn hình: một màn hình có thể rất đẹp mà vẫn nằm sai chỗ trong một flow hỏng.
 
 **When to use it**
-- Before wireframing — to settle the structure of a task before designing any screen
-- When reviewing an existing product — to document what a user currently has to do
-- When identifying friction — where users drop off, get confused, or take the wrong path
-- When handing a screen-level design to engineering — it shows *when* and *under what conditions* each screen appears
+- Trước khi wireframe, để thống nhất cấu trúc của task trước khi thiết kế màn hình.
+- Khi rà soát sản phẩm cũ, để ghi lại những gì user thật sự phải làm.
+- Khi tìm chỗ user bỏ đi hoặc bị lạc.
+- Khi bàn giao cho engineering, vì flow cho thấy mỗi màn hình xuất hiện khi nào và trong điều kiện nào.
 
-**What a well-drawn flow reveals**
-- Decision points that ask users to do work the system could do automatically
-- Flows that are longer than necessary because content is in the wrong place in the IA
-- Missing states: what happens at empty state, error state, loading state?
+**Scope**
+- **Trong phạm vi:** một user, một task, một điểm vào; màn hình, hành động, quyết định; những gì user nhìn thấy.
+- **Ngoài phạm vi:** các actor khác (admin, support, payment provider), việc hệ thống làm phía sau, bàn giao nội bộ. Những phần này thuộc Process Map.
 
-**How JTBD shapes user flows**
-Jobs-to-Be-Done gives you the lens for evaluating a flow. For each step, ask: does this step help the user progress toward their job — or is it friction the system is adding for its own reasons?
+Khi không có user flow, bạn trả ba cái giá: thiết kế màn hình mà không biết trước và sau nó là gì; state lỗi và edge case chỉ lộ ra khi dev; và stakeholder cãi chi tiết màn hình khi chưa thống nhất cấu trúc của task.
 
-If the functional job is "confirm my booking before I lose the slot," every step that delays confirmation is a structural problem. JTBD makes those problems visible — and defensible to stakeholders.
+**How to draw it**
 
-| JTBD Insight | Flow Implication |
+1. **Đặt khung.** Đặt tên task cụ thể, không phải “checkout” mà là “đặt và xác nhận một slot, user đã dùng app trước đó”. Vẽ pill Start và End trước mọi thứ khác.
+2. **Vẽ flow.** Vẽ happy path trước, tức chuỗi bước lý tưởng khi mọi thứ suôn sẻ. Rồi thêm nhánh lỗi và edge case (slot đã bị lấy, chưa đăng nhập, empty state). Mỗi nhánh đều phải có đích, không để mũi tên treo. Cuối cùng ghi chú chỗ có friction và ghi rõ nó tốn gì.
+3. **Kiểm tra.** Mỗi diamond có hai mũi tên ra, đều có nhãn. Không để hình nào bị bỏ lẻ.
+
+**Năm hình mang toàn bộ ý nghĩa**
+
+| Hình | Ý nghĩa | Ví dụ |
+|---|---|---|
+| **Pill** | Điểm bắt đầu và kết thúc | “User mở app”, “Đã xác nhận đặt chỗ” |
+| **Rectangle** | Một màn hình hoặc hành động của user | Xem danh sách slot, bấm “Pay” |
+| **Diamond** | Điểm quyết định, có đúng hai mũi tên ra | “Slot còn trống không?”, “Thanh toán thành công?” |
+| **Arrow** | Hướng đi của flow, gắn nhãn cho nhánh | Yes / No, Success / Error |
+| **Note** | Ngữ cảnh không nhét vừa một hình | “Friction: phải bấm 3 lần mới tới đây” |
+
+Dùng hình nhất quán thì cả team đọc được flow mà không cần giải thích. Nếu bạn cần hình thứ sáu, đó thường là một bước của hệ thống, tức là chuyện của Process Map.
+
+**Ví dụ: Đặt và xác nhận một slot**
+Start → xem danh sách slot → chọn slot → ◇ Slot còn trống? (No → quay lại danh sách slot) → xem lại đặt chỗ → thanh toán → ◇ Thanh toán OK? (No → lỗi, thử lại hoặc đổi phương thức) → đã xác nhận → End.
+
+Ở bước cuối, màn hình xác nhận hiện “pending”, không phải “confirmed”. Flow chỉ cho thấy những gì user thấy, nên không giải thích được vì sao lại hiện “pending”. Câu trả lời nằm ở phần Process Map.
+
+**Ba điều một flow cho bạn thấy**
+- Điểm quyết định bắt user làm việc mà hệ thống có thể tự xử lý.
+- Flow dài hơn mức cần thiết vì nội dung nằm sai chỗ trong IA.
+- Thiếu state: empty, error, loading, success.
+
+Một task cốt lõi mà dài hơn bảy bước thì nhiều khả năng lỗi nằm ở IA, không phải ở thiết kế màn hình.
+
+**Đánh giá từng bước bằng JTBD**
+JTBD (Jobs-to-Be-Done) cho bạn một cách đọc flow: với mỗi bước, hãy hỏi bước này giúp user tiến gần job của họ, hay chỉ là friction do hệ thống tự tạo ra. Ví dụ, với job “tôi muốn biết đơn có tới kịp trước 7 giờ không”, hệ quả cho flow là hiển thị giờ dự kiến ngay ở màn hình đầu tiên, không bắt user bấm vào từng đơn.
+
+| JTBD insight | Hệ quả cho flow |
 |---|---|
-| Users' primary job is confirming quickly before the slot expires | Reduce steps between intent and confirmation — no upsell screens in the critical path |
-| Users feel anxious about irreversible decisions | Add a review step before final commit; make "go back" always visible |
-| Users want to look competent when sharing work | Surface "share" at task-completion moments, not buried in settings |
+| User cần xác nhận nhanh trước khi mất slot | Không đặt màn hình upsell trên đường đi chính |
+| User lo lắng về những hành động không thể hoàn tác | Thêm bước review trước khi xác nhận cuối cùng |
+| User muốn trông chuyên nghiệp khi chia sẻ sản phẩm của mình | Đặt “share” ngay lúc hoàn thành task, đừng giấu trong settings |
 
-**Running example — "Book and confirm a slot" (user flow)**
-Start → views slot list → selects a slot → ◇ Slot still available? (No → sees alternatives → back to slot list) → reviews details → taps "Pay" → ◇ Payment successful? (No → error message → retry) → sees "Booking confirmed" → End. Note on the last step: *"Confirmation says 'pending', not 'confirmed'."*
-
-The flow shows what the user sees. It cannot explain *why* the confirmation says "pending." That question moves to the next section.
+Mỗi cặp nhu cầu của user và hệ quả cho flow là một quyết định thiết kế.
 
 ---
 
 ### Process Map
 
 **What it is**
-A diagram of how work moves between the different actors — the user, the system, the internal team, and third parties — to deliver one outcome. Where a user flow follows one person's path, a process map shows the whole operation behind it, including what the user never sees.
+Process map là sơ đồ cho thấy công việc chuyển qua lại giữa các actor (user, hệ thống, team nội bộ và bên thứ ba) từ trigger cho đến khi ra kết quả. User flow đi theo đường của một người. Process map cho thấy toàn bộ vận hành phía sau, kể cả phần user không bao giờ nhìn thấy.
 
-**Goal**
-Make handoffs, dependencies, and bottlenecks visible. Find the steps that exist because of how the organisation or system is built, not because the user needs them. Give design, engineering, and operations one shared picture of how the task really runs.
+Ví dụ, khách bấm “Hoàn tiền” và thấy “Đang xử lý” suốt ba ngày. User flow chỉ có ba bước. Process map có bốn lane: User, System, Support, Finance, và đơn nằm chờ ở lane Finance. Màn hình không sai. Quy trình mới sai.
 
-**Scope**
-- **In:** multiple actors, front-stage (what the user sees) and back-stage (what happens behind it), end to end from trigger to outcome.
-- **Out:** screen-level detail and layout. A process map says *who does what and in which order*, not what the screen looks like.
-- Think of it as zooming out from the User Flow of the same task.
-
-**How to use it**
-
-1. **Start from the user flow** — take the task you already mapped. Its steps become the front-stage layer.
-2. **List the actors** — user, system, internal team (support, ops, admin), third parties (payment provider, email service). Each actor gets one horizontal swimlane.
-3. **Place every step in the lane of whoever is responsible for it** — including the steps the user never sees.
-4. **Mark the handoffs** — every arrow that crosses from one lane to another is a handoff. Label what is passed (data, approval, notification).
-5. **Look for waiting, repeating, and orphaned steps** — a step with no owner, a manual check, or a loop between lanes is where delays and errors hide.
-6. **Compare against the user flow** — which steps does the user see, and which do they only feel as a delay or an error message?
-
-**The shapes and tools**
-
-| Shape / tool | What it represents | Example |
-|---|---|---|
-| **Swimlane** | One actor per horizontal lane | User · System · Ops team · Payment provider |
-| **Rectangle** | An action by the actor in that lane | Ops team reviews the booking |
-| **Diamond** | Decision point | "Booking above the auto-approval limit?" |
-| **Parallelogram** | Automatic system step (input / output) | Locks the slot, sends confirmation email, validates the card |
-| **Handoff arrow** | Work crossing from one lane to another | System → Ops team: "approval needed" |
-
-```
-┌──────────────────────────────────────────────────────────────┐
-│  USER      │  Selects slot → Taps "Pay"        … sees "pending"│
-├──────────────────────────────────────────────────────────────┤
-│  SYSTEM    │  ▱ Locks slot → ▱ Requests payment → ▱ Sends email│
-├──────────────────────────────────────────────────────────────┤
-│  OPS TEAM  │            ◇ Needs approval? → Reviews manually  │
-├──────────────────────────────────────────────────────────────┤
-│  3RD PARTY │            Gateway processes → Returns result    │
-└──────────────────────────────────────────────────────────────┘
-```
+**Why use it**
+Nhìn rõ chỗ bàn giao (handoff), chỗ phụ thuộc lẫn nhau và chỗ nghẽn (bottleneck). Từ đó tìm ra những bước chỉ có vì cách tổ chức hoặc hệ thống được dựng, chứ user không hề cần.
 
 **When to use it**
-- The task involves more than one actor — checkout with a payment provider, onboarding where the system sends emails, admin features where a second user type acts on something the first one started
-- The user flow looks fine but users still hit delays, errors, or confusion that screens cannot explain
-- Before handing work to engineering — to show the back-stage logic behind each screen
-- When aligning design, engineering, and operations on who owns which step
+- Task có hơn một actor: checkout qua payment provider, onboarding có email hệ thống, tính năng admin.
+- User flow trông ổn nhưng user vẫn bị trễ hoặc bối rối, và màn hình không giải thích được.
+- Trước khi bàn giao cho engineering, để cho thấy logic back-stage phía sau mỗi màn hình.
+- Khi cần thống nhất giữa design, engineering và operations về việc ai chịu trách nhiệm bước nào.
 
-**What a well-drawn process map reveals**
-- Handoffs with no clear owner or no visible status for the user
-- Manual steps hiding behind an automated-looking screen
-- Waiting time the user experiences but the interface never explains
-- Steps that exist only because of how teams or systems are organised
+**Scope**
+- **Trong phạm vi:** nhiều actor; front-stage và back-stage; từ đầu đến cuối, từ trigger đến kết quả.
+- **Ngoài phạm vi:** layout và chi tiết màn hình; cảm xúc và quyết định của một user. Hai thứ này vẫn thuộc user flow.
 
-**Running example — "Book and confirm a slot" (process map)**
-Same task, four lanes. The system locks the slot and requests payment (parallelogram). The payment provider returns the result. Then the system hands the booking to the Ops team for manual approval — a handoff the user never sees. Approval can take hours. Meanwhile the user's screen says "pending."
+Cùng task, cùng flow, chỉ là khung nhìn rộng hơn. Nếu map bắt đầu bàn về màn hình, bạn đang lẫn với flow.
 
-What the user flow could not show: the "pending" is not a screen problem. It is a manual handoff. The structural fix is in the process (auto-approve below a limit, show approval status), not in the layout.
+**How to build it**
+
+1. **Bắt đầu từ user flow.** Các bước của nó trở thành lớp front-stage.
+2. **Liệt kê các actor.** User, hệ thống, team nội bộ, bên thứ ba. Mỗi actor một swimlane.
+3. **Đặt mỗi bước vào lane của người sở hữu**, kể cả những bước user không bao giờ thấy.
+4. **Đánh dấu các handoff.** Mỗi mũi tên băng qua một lane là một handoff. Ghi rõ thứ được chuyển đi.
+5. **Tìm các bước chờ, lặp và mồ côi**, tức bất cứ chỗ nào công việc bị kẹt hoặc lặp vòng.
+6. **So với user flow.** Bước nào user chỉ cảm nhận được dưới dạng độ trễ? Đây là điểm đáng giá nhất của cả phương pháp.
+
+Mỗi mũi tên băng qua lane là một nguy cơ trễ.
+
+**Các hình của process map**
+Process map dùng lại năm hình của user flow, thêm hai thứ mới: hình bình hành và mũi tên handoff.
+
+| Hình | Ý nghĩa | Ví dụ |
+|---|---|---|
+| **Swimlane** | Mỗi lane một actor | User, System, Ops team, Payment provider |
+| **Rectangle** | Một hành động của actor đó | “Ops team review đặt chỗ” |
+| **Diamond** | Điểm quyết định | “Vượt hạn mức tự động duyệt?” |
+| **Parallelogram** | Bước tự động của hệ thống | Khóa slot, gửi email, kiểm tra thẻ |
+| **Handoff arrow** | Công việc băng qua các lane | System → Ops team: “cần duyệt” |
+
+**Ví dụ: Đặt và giao đồ ăn**
+Bạn đặt món, thanh toán xong, rồi nhận tin “món đã hết”. User flow chỉ thấy ba bước. Process map của cùng task có bốn lane: Khách, App, Nhà hàng, Shipper. Handoff từ App sang Nhà hàng là chỗ quyết định: nhà hàng là bên duy nhất biết món còn hay hết. Trong lúc lane Nhà hàng kiểm tra đơn, lane Khách yên lặng, và đó là lúc khách chỉ thấy “đang xử lý”.
+
+Cách sửa nằm ở quy trình, không nằm ở màn hình: đồng bộ tồn kho với app, hoặc báo hết món trước khi thanh toán.
+
+**Quay lại câu hỏi “pending”**
+Ở ví dụ đặt slot, màn hình hiện “pending” vì đơn vượt hạn mức tự duyệt và đang chờ Ops team. Màn hình không có lỗi, quy trình phía sau mới là nguyên nhân. Cách sửa là tự động duyệt dưới một hạn mức và hiển thị trạng thái duyệt cho user.
 
 **User Flow vs Process Map**
 
 | | User Flow | Process Map |
 |---|---|---|
-| **Perspective** | One user | The whole organisation |
-| **Question it answers** | "What does the user go through?" | "Who does what, and where does work wait?" |
-| **Actors** | The user | User, system, internal team, third parties |
-| **Visibility** | Front-stage only | Front-stage and back-stage |
-| **Shapes** | Pill, Rectangle, Diamond, Arrow, Note | + Swimlane, Parallelogram, Handoff arrow |
-| **Best for** | Designing and checking a task path | Finding bottlenecks and aligning teams |
-| **Order** | Draw first | Draw second, zoomed out from the flow |
+| **Góc nhìn** | Một user | Cả tổ chức |
+| **Câu hỏi** | User trải qua những gì? | Ai làm gì, và công việc chờ ở đâu? |
+| **Hiển thị** | Chỉ front-stage | Front-stage và back-stage |
+| **Hình dùng** | Pill, Rectangle, Diamond, Arrow, Note | Thêm Swimlane, Parallelogram, Handoff arrow |
+| **Thứ tự** | Vẽ trước | Vẽ sau, thu nhỏ khung |
+
+Hãy dừng ở user flow khi task chỉ có một actor và friction nằm trong các màn hình. Thêm process map khi friction không giải thích được bằng màn hình.
 
 ---
 
-### AI Workflow for User Flows and Process Maps
+### AI cho flow
 
 **What it is**
-A repeatable way to use AI to build, check, and sharpen a user flow or process map — without letting AI invent the product. It is a workflow, not a prompt: eight steps, alternating between you and AI, with three checkpoints.
-
-**Goal**
-Use AI for what it does well (structuring notes, spotting gaps, widening options, writing diagram code) and keep for yourself what it cannot do (knowing what the product really does, deciding what to change).
-
-**Scope**
-- **In:** current-state maps of one task, as far as you and your sources know. A structural fix proposed from the map.
-- **Out:** inventing a flow from a one-line description; knowing the system's real constraints; knowing why users behave as they do. Those need the product, the team, and real users.
+Đây là một quy trình làm việc với file để dùng AI vẽ user flow hoặc process map mà không để AI bịa ra sản phẩm. Nó không phải một prompt. Đầu vào là các file dự án bạn đã có, đầu ra là một file md bạn kiểm tra và chỉnh trước khi vẽ.
 
 **Why not just one prompt?**
-Ask AI to "draw the user flow for booking a slot" and it returns a clean, plausible diagram in seconds. It is also made up. Nothing in it is tied to your product, and a polished diagram is the hardest kind to doubt. The fix is not a better prompt. It is a process where AI only works from facts you collected, and where every AI output goes through you before the next step.
+Nếu bạn hỏi AI “vẽ user flow cho việc đổi khung giờ giao”, nó trả về một flow gọn và hợp lý trong vài giây, với sáu bước. Sản phẩm thật có bảy bước, vì còn bước xác nhận cut-off. Sơ đồ đó không gắn với sản phẩm của bạn, và sơ đồ càng đẹp thì càng khó nghi ngờ. Cách sửa nằm ở đầu vào bạn đưa cho AI và đầu ra bạn kiểm tra trước khi vẽ.
 
-**The principles behind the workflow**
-1. **Facts first, AI second.** You walk the product and collect notes. AI works only from those notes.
-2. **The table is the source of truth; the diagram is a view of it.** AI writes a step table first. You verify it. Only then does AI turn it into diagram code.
-3. **Unknown is a valid answer.** Every row is marked stated, inferred, or unknown. A gap shown is better than a gap filled with a guess.
-4. **Every claim points to evidence.** Each step cites a note ID. Each AI observation cites a row.
-5. **Alternate you and AI.** No two AI steps in a row. Each AI output is reviewed by you before it is used.
-6. **Keep the AI draft.** Your corrections go in a separate copy. The gap between them is your measure of how far to trust AI on this kind of task.
-7. **Widen before you choose.** AI proposes at least three genuinely different ways to fix the worst step, and argues against its own conclusion. You decide.
+**Bạn nghĩ trước, AI đến sau**
+Nhóm nghiên cứu của Wharton (Meincke, Nave và Terwiesch, *Nature Human Behaviour*, 2025) làm năm thí nghiệm brainstorming với một công cụ AI chat. AI nâng mức sáng tạo của từng ý, nhưng nhóm có AI cho tập ý hẹp hơn nhóm không có AI. Trong một bài, ý của nhóm dùng AI trùng nhau tới 94%, còn nhóm không dùng AI thì không có ý nào trùng. Đây là nhiệm vụ brainstorming đơn giản, nên hãy xem nó là một tín hiệu, chưa phải bằng chứng cho thiết kế sản phẩm thật.
 
-**The workflow**
+Từ đó có thể suy luận rằng nếu hỏi AI trước, câu trả lời của nó thành ý số một và bạn bám theo. Vì vậy:
 
-| # | Step | Who | What happens | Output |
-|---|---|---|---|---|
-| 1 | Frame | You | Task, entry and end, the job (from JTBD), constraints, method (User Flow / Process Map), and what you believe the flow is today | `Frame` |
-| 2 | Capture the facts | You | Walk the product and take notes (one per step, with a failure state). For a Process Map, add back-stage facts from the team, each tagged with its source | Notes with IDs |
-| 3 | Structure | AI | Turns the notes into a step table: shape, label, next step, evidence, status (stated / inferred / unknown). Lists gaps. No suggestions yet | `Table (AI draft)` |
-| 4 | Verify · **Checkpoint A** | You | Walk the product again against the table. Fix a copy, never the AI draft. Resolve or keep visible every "inferred" and "unknown" | `Table (verified)` |
-| 5 | Analyse | AI | User Flow: friction vs the job, three different ways to restructure the worst step, then argues against itself. Process Map: lanes, handoffs, waits, and questions for the team | `Analysis` |
-| 6 | Decide the fix · **Checkpoint B** | You | Choose one structural change; say why the step exists today and what you would test. Check "removable" steps with whoever owns them | `Fix + decision` |
-| 7 | Diagram code | AI | Converts the verified table to diagram code (Mermaid). Same steps, no additions | `Diagram code` |
-| 8 | Draw and state limits · **Checkpoint C** | You | Render it, compare to the table, mark constraint-driven steps in red, write what the map cannot tell you | `Final diagram + limits` |
+1. **Bạn viết ý của mình trước.** Cây, nhóm thẻ hoặc flow nháp. Rồi mới mở AI.
+2. **AI mở rộng và phản biện.** Đổi đầu vào (thêm một ràng buộc khác, hỏi “điều ngược lại là gì?”) thay vì xin thêm các ý cùng loại.
+3. **Mọi thứ AI đưa ra là hypothesis.** Chưa gắn được vào một dòng có nguồn thì chưa đưa vào map.
 
-**The three checkpoints**
-- **A (after step 4)** — Could someone else follow this table and reach the same screens? Is every "inferred" row confirmed or removed? If no → walk the product again.
-- **B (after step 6)** — Were at least three different options considered? Does the fix trace to the job and to evidence in the table? If no → ask for alternatives again, and resolve unknowns with the team.
-- **C (after step 8)** — Does the diagram contain exactly the verified steps? Is every unknown visible? If no → fix the code or the table.
+**Quy trình: bạn và AI thay phiên nhau**
 
-**Two branches, one spine**
+| # | Bước | Ai làm | Kết quả |
+|---|---|---|---|
+| 1 | Chỉ AI vào các file dự án đã chốt: Solution Pool, Opportunities và các file liên quan đến solution bạn đã chọn | Bạn | Đầu vào |
+| 2 | Tạo một file md cho process map | AI | File md (bản nháp của AI) |
+| 3 | Chỉnh trực tiếp trên file md. Đây là bước quan trọng nhất | Bạn | File md đã chỉnh |
+| 4 | Vẽ diagram HTML từ file md đã chỉnh | Agent | Diagram HTML |
 
-| | User Flow branch | Process Map branch |
+File md là nguồn sự thật. Diagram chỉ là một cách nhìn vào file.
+
+**Đưa gì, nhận lại gì**
+- **Đầu vào:** các file bạn đã có từ những buổi trước, không phải một mô tả một dòng. Yêu cầu chỉ có một: tạo file md cho process map.
+- **Đầu ra đầu tiên:** file md, chưa phải sơ đồ. File gồm các bước theo lane, handoff và những chỗ chưa biết. Bạn sửa trên file md, không sửa trên diagram.
+
+**Một dòng trong file md trông thế nào**
+Mỗi dòng ghi ID, lane, label, bước tiếp theo, nguồn và status (stated, inferred hoặc unknown). Ví dụ minh họa lấy theo một sản phẩm du lịch:
+
+| ID | Lane | Label | Next | Nguồn | Status |
+|---|---|---|---|---|---|
+| S01 | Traveler | Mở app | S02 | Solution đã chốt | stated |
+| S02 | Travel Buddy | Hiện tip ngay, không cần tài khoản | S03 | Solution đã chốt | stated |
+| S03 | Traveler | Muốn lưu tip hoặc nhắn tin? | S04 / S05 | Opportunities | stated |
+| S06 | Travel Buddy | Kiểm duyệt tip trước khi hiện | ? | — | unknown |
+
+Dòng S06 là unknown vì các file không nói ai kiểm duyệt tip. AI không được đoán, và đây là câu hỏi bạn mang đi hỏi team. Một file md không có dòng unknown nào là dấu hiệu đáng ngờ. Dòng unknown giữ nguyên cho đến khi bạn tìm được câu trả lời.
+
+**Một nguồn, nhiều view**
+File md là nguồn dữ liệu duy nhất. User flow và process map là các cách nhìn do agent vẽ thành HTML từ file md. Cách này hữu ích khi cùng một flow cần hiển thị theo nhiều cách, ví dụ user flow cho prototype và process map cho team phía sau.
+
+- **Đổi nội dung:** sửa một hàng trong file md rồi chạy lại. User flow và process map cùng đổi theo.
+- **Đổi cách hiển thị:** yêu cầu agent đổi thứ tự lane, gộp hoặc tách giai đoạn, hoặc chuyển từ user flow sang process map. File md giữ nguyên.
+- **Quy tắc cho agent:** không sửa HTML trực tiếp. Lần chạy sau sẽ mất thay đổi đó, và diagram không còn khớp file md. Mỗi bước trên diagram phải có một hàng trong file md.
+
+**Ba điểm dừng kiểm tra**
+Mỗi điểm dừng là một câu hỏi có đáp án có hoặc không.
+
+| Điểm | Khi nào | Câu hỏi kiểm tra |
 |---|---|---|
-| **Facts you collect** | Your own walkthrough notes | Walkthrough notes + back-stage facts with a source for each |
-| **What AI adds at step 5** | Friction analysis and restructuring options | Lanes, handoffs, waits, and a list of questions to ask the team |
-| **Order** | First | Second, reusing the verified table |
-
-If the task has one actor, run the User Flow branch only. If friction cannot be explained by the screens, add the Process Map branch.
-
-**The shape of the key instructions**
-Every AI step in the workflow carries the same few lines. Use them as a checklist when you write your own:
-- Use **only** the notes / table below
-- Cite the **ID** for every claim
-- Mark guesses as **inferred**; say **unknown** instead of filling a gap
-- **Do not add, remove, or rename** steps
-- Argue against your own conclusion: *what is the strongest reason this step exists, and what would change your mind?*
-- Return **only your section**, in the stated format
-
-**Starter instruction for step 3 (Structure)**
-> *"Using only the notes below, build a step table for this task. Columns: ID, Shape (pill, rectangle, diamond, note), Label, Next (for a diamond, one row per branch with a label), Evidence (note IDs), Status (stated / inferred / unknown). Every step must cite at least one note. If you do not know what happens, write 'unknown' — do not fill the gap. Then list: diamonds with fewer than two branches, paths that never reach an end, and states with no coverage in the notes (empty, error, loading, success). No suggestions yet."*
+| **A** | Sau khi AI tạo file md | Mỗi dòng có ghi nguồn từ file dự án không? Mọi dòng unknown còn hiển thị không? Dòng không có nguồn chỉ là hypothesis |
+| **B** | Sau khi bạn chỉnh | Người khác đọc file md có hiểu đúng flow không? Lane và handoff đã đúng chưa? |
+| **C** | Sau khi vẽ | Diagram có đúng các bước trong file md không? Có bước nào agent tự thêm không? |
 
 **Watch out for**
-- AI does not know your system's real constraints. It may suggest removing a step that is technically required. Check with whoever owns it.
-- A clean diagram with no "unknown" rows is a warning sign. Real notes always leave gaps.
-- Mermaid output looks authoritative. Always count nodes against the table.
+- AI không biết ràng buộc thật của hệ thống. Nó có thể đề xuất bỏ một bước mà hệ thống bắt buộc phải có. Hãy hỏi người sở hữu trước.
+- Một sơ đồ sạch và không có dòng unknown nào là dấu hiệu đáng ngờ, vì dữ liệu thật luôn có chỗ còn thiếu.
+- Kết quả của AI trông rất đáng tin. Hãy đếm số bước trên diagram và đối chiếu với file md.
 
-**What this cannot tell you:** why users drop off, how long steps really take, or whether the fix works. That needs real users.
-
-> Full step cards and instructions: `programs/ai-design-workflow/examples/user-flow-process-map/step-cards.md`
->
-> One-slide view of the whole workflow (HTML): `programs/ai-design-workflow/assets/diagrams/user-flow-process-map-activity-flow.html`
+**What this cannot tell you:** vì sao user bỏ đi, các bước thật sự mất bao lâu, hay cách sửa có hiệu quả không. Muốn biết những điều đó, bạn cần làm việc với user thật.
 
 ---
 
 ## Tools & Materials
 
-- One of your own projects (bring a working product or prototype to the session)
-- FigJam or Miro — for drawing the user flow and the process map
-- Screenshots of the relevant screens in the flow
-- JTBD Map from Session 2 (used to choose which task to map)
+- Solution bạn đã chọn trong các buổi trước, kèm các file dự án: Solution Pool, Opportunities và các file liên quan.
+- FigJam hoặc Miro để vẽ user flow và process map.
+- Ảnh chụp màn hình của các màn hình có trong flow.
+- JTBD map từ buổi trước, để chọn task cần vẽ.
 
 ---
 
-## Practice Activity 1 — Map the Current User Flow · 20 min
+## Practice Activity — Vẽ user flow hoặc process map · 30 min
 
-Pick one real project you're working on. Choose one core task — the most important thing a user needs to do in this product. Map the flow exactly as it exists today: not how it should work, but how it actually works right now.
-
-**Steps:**
-
-1. **Choose your task** — pick one core user job from your JTBD Map. Make it specific: not "browse products" but "find and save a product for later." This is the scope of your flow.
-
-2. **Define your entry point and end point** — draw a Start pill and an End pill before anything else.
-
-3. **Walk through the flow step by step** — open your product (or prototype) and complete the task yourself, narrating every step aloud. Write each step on a sticky note as you go. Include every tap, every screen load, every decision.
-
-4. **Assign shapes to each step:**
-   - Rectangles for screens and user actions
-   - Diamonds for decision points (login check, empty state, error condition)
-   - Arrows with labels on every branch
-
-5. **Add the error paths** — for each diamond, follow both the Yes and No branches. Where does the user go if something fails? If you don't know — that's a gap in the design.
-
-6. **Add notes** — mark where the flow felt long, surprising, or unclear.
-
-7. **Count the decision points** — how many times does a user have to make a choice before completing the task? Note which exist because of IA decisions (content is in the wrong place) vs interaction design decisions (the flow is poorly sequenced).
-
-**Debrief prompts:**
-- Which steps surprised you — ones you didn't realise existed until you walked through it?
-- Which decision points could the system resolve automatically, removing a step entirely?
-- Where does the flow break down if the user takes a wrong turn?
-
----
-
-## Practice Activity 2 — Add the Back-stage Layer · 15 min
-
-Take the same task and the same flow. Zoom out.
+Bạn vẽ một user flow hoặc một process map cho Solution của mình, từ điểm vào đến kết quả.
 
 **Steps:**
 
-1. **List the actors** — who or what takes part in this task besides the user? System, internal team, third party.
-2. **Create one swimlane per actor** and move your user flow steps into the User lane.
-3. **Add the back-stage steps** — for each user step, ask: what happens behind the scenes? Who or what does it? Place it in that actor's lane (parallelogram for automatic system steps).
-4. **Mark every handoff** — each arrow that crosses a lane. Label what is passed.
-5. **Circle the waits** — where does the user wait while someone or something else works?
+1. **Chọn một trong hai** theo câu hỏi bạn cần trả lời, không theo thói quen.
+   - **User flow** nếu bạn cần biết user trải qua những gì.
+   - **Process map** nếu bạn cần biết ai làm gì phía sau màn hình.
+2. **Chọn task.** Lấy một task cốt lõi từ JTBD map, đặt tên cụ thể: không phải “mua hàng” mà là “tìm và lưu một sản phẩm để xem lại”.
+3. **Vẽ từ điểm vào đến kết quả.**
+   - User flow: Start và End trước, happy path, rồi một nhánh lỗi cho mỗi diamond.
+   - Process map: bắt đầu từ user flow của task đó, mỗi actor một swimlane, thêm các bước back-stage và đánh dấu mọi handoff.
+4. **Ghi rõ chỗ có friction.** Đánh dấu bước dài, bước gây bất ngờ, hoặc bước user chỉ cảm nhận như độ trễ.
+
+Bạn có thể dùng AI ở bước này, theo quy trình ở phần AI cho flow.
 
 **Debrief prompts:**
-- Which back-stage step has the biggest effect on what the user experiences?
-- Which handoff has no clear owner or no visible status for the user?
-- Which problem from Activity 1 turned out to be a process problem, not a screen problem?
+- Bước nào làm bạn bất ngờ, tức bước bạn không nhận ra là có cho đến khi vẽ?
+- Điểm quyết định nào hệ thống có thể tự xử lý, để bỏ hẳn một bước?
+- Vấn đề nào hóa ra là vấn đề của quy trình, không phải của màn hình?
 
 ---
 
 ## Assignment (before next session)
 
-**Build the current-state map and identify one structural fix.** Choose the method that fits your project.
+Hoàn thành **một** user flow hoặc **một** process map cho Solution bạn đã chọn hôm nay. Chọn cái phù hợp với câu hỏi đang cần trả lời.
 
-1. **Choose your method:**
-   - **User Flow** — if your task is mostly in the user's hands (one actor, screen-level friction)
-   - **Process Map** — if your task depends on the system, a team, or a third party (multiple actors, handoffs, waiting)
-   - Either way, state in one sentence why you chose it.
-2. **Complete the map** for your chosen task in FigJam or Miro, using the correct shapes. For a Process Map, annotate every step with **U** (user), **S** (system), **T** (internal team), or **3P** (third party).
-3. **Highlight in red** every step that exists because of an IA, system, or organisational constraint — not because it serves the user.
-4. **Pick the single highest-friction step** and write a short rationale: why does this step exist, what would need to change structurally to remove it, and what would you test to validate the change?
+- **User flow:** chọn một task cốt lõi của Solution. Vẽ từ điểm vào đến kết quả, có nhánh lỗi. Ghi chú chỗ có friction.
+- **Process map:** bắt đầu từ user flow của task đó. Mỗi actor một swimlane, đánh dấu handoff. Tìm bước mà user chỉ cảm nhận như độ trễ.
 
-**🤖 AI in Practice — use the workflow:**
-Run steps 1-4 of the AI workflow on your task (frame, capture facts, AI builds the table, you verify it). Bring the AI draft table, your verified table, and the number of rows AI got wrong, invented, or missed. If you have time, continue to step 5 and choose your fix with it.
+Bạn có thể dùng AI theo quy trình ở phần AI cho flow. Hãy nhớ file md là nguồn chuẩn, và diagram luôn được vẽ lại từ file md. Mang kết quả sang buổi sau.
 
 ---
 

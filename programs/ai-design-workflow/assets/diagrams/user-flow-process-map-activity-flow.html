@@ -42,16 +42,16 @@ body{font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;col
 <div class="kicker">AI DESIGN WORKFLOW · INFORMATION ARCHITECTURE</div>
 <div class="title">From raw notes to a map you can trust</div>
 <div class="legend"><span><i class="sw you"></i>You</span><span><i class="sw ai"></i>AI</span><span><i class="sw file"></i>Working file</span><span><i class="sw gt"></i>Checkpoint</span></div>
-<div class="branch"><div><b>A · User Flow</b> — runs first</div><div><b>B · Process Map</b> — runs second, reuses the verified table</div></div>
+<div class="branch"><div><b>A · User Flow</b> — runs first</div><div><b>B · Process Map</b> — runs second, reuses the verified md file</div></div>
 <div class="lane" style="top:250px;height:225px"><div class="lb">YOU</div></div>
 <div class="lane" style="top:475px;height:225px;border-bottom:2px solid var(--ink)"><div class="lb">AI</div></div>
 <div class="node you" style="left:210px;top:275px;width:152px;height:170px;"><span class="num">1</span><b>Frame</b><span class="d">Task · job · constraints · your belief</span></div>
 <div class="node you" style="left:410px;top:275px;width:152px;height:170px;"><span class="num">2</span><b>Capture the facts</b><span class="d">Walk the product. One note per step</span></div>
-<div class="node ai" style="left:610px;top:505px;width:152px;height:170px;"><span class="num">3</span><b>Structure</b><span class="d">Notes → table. Mark inferred · unknown</span></div>
-<div class="node you" style="left:810px;top:275px;width:152px;height:170px;"><span class="num">4</span><b>Verify</b><span class="d">Walk it again. Fix a copy of the table</span></div>
+<div class="node ai" style="left:610px;top:505px;width:152px;height:170px;"><span class="num">3</span><b>Structure</b><span class="d">Notes → md file. Mark inferred · unknown</span></div>
+<div class="node you" style="left:810px;top:275px;width:152px;height:170px;"><span class="num">4</span><b>Verify</b><span class="d">Walk it again. Fix a copy of the md file</span></div>
 <div class="node ai" style="left:1010px;top:505px;width:152px;height:170px;"><span class="num">5</span><b>Analyse</b><span class="d">Friction · 3 options · argues back</span></div>
 <div class="node you" style="left:1210px;top:275px;width:152px;height:170px;"><span class="num">6</span><b>Decide the fix</b><span class="d">One structural change + a test</span></div>
-<div class="node ai" style="left:1410px;top:505px;width:152px;height:170px;"><span class="num">7</span><b>Diagram code</b><span class="d">Verified table → Mermaid. Nothing added</span></div>
+<div class="node ai" style="left:1410px;top:505px;width:152px;height:170px;"><span class="num">7</span><b>Diagram code</b><span class="d">Verified md file → Mermaid. Nothing added</span></div>
 <div class="node you" style="left:1610px;top:275px;width:152px;height:170px;"><span class="num">8</span><b>Draw and state limits</b><span class="d">Render · compare · state the limits</span></div>
 <i class="ln" style="left:362px;top:358px;width:38px;height:4px"></i>
 <i class="ah" style="left:396px;top:351px"></i>
@@ -85,16 +85,16 @@ body{font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;col
 <div class="gate" style="left:1788px;top:334px">C</div>
 <div class="chip" style="left:210px;top:735px;width:152px;height:74px;">Frame</div>
 <div class="chip" style="left:410px;top:735px;width:152px;height:74px;">Notes<br>(sources/)</div>
-<div class="chip" style="left:610px;top:735px;width:152px;height:74px;">Table<br>(AI draft)</div>
-<div class="chip" style="left:810px;top:735px;width:152px;height:74px;">Table<br>(verified)</div>
+<div class="chip" style="left:610px;top:735px;width:152px;height:74px;">md file<br>(AI draft)</div>
+<div class="chip" style="left:810px;top:735px;width:152px;height:74px;">md file<br>(verified)</div>
 <div class="chip" style="left:1010px;top:735px;width:152px;height:74px;">Analysis<br>(AI)</div>
 <div class="chip" style="left:1210px;top:735px;width:152px;height:74px;">Fix +<br>decision</div>
 <div class="chip" style="left:1410px;top:735px;width:152px;height:74px;">Diagram<br>code (AI)</div>
 <div class="chip" style="left:1610px;top:735px;width:152px;height:74px;">Final diagram<br>+ limits</div>
 <div class="rowlabel" style="top:742px">WORKING FILE</div>
 <div class="rowlabel" style="top:900px">CHECK-POINTS</div>
-<div class="gcard" style="left:210px"><div class="gate small">A</div><div><span class="gw">Checkpoint A · after step 4</span><p>Does the table match the real product? Is every inferred row confirmed or removed?</p><em>No → back to step 2</em></div></div><div class="gcard" style="left:737px"><div class="gate small">B</div><div><span class="gw">Checkpoint B · after step 6</span><p>Were 3 different options considered? Does the fix trace to the job and the evidence?</p><em>No → back to step 5</em></div></div><div class="gcard" style="left:1264px"><div class="gate small">C</div><div><span class="gw">Checkpoint C · after step 8</span><p>Does the diagram hold exactly the verified steps? Is every unknown still visible?</p><em>No → back to step 7 (or 4)</em></div></div>
-<div class="foot"><span>The table is the source of truth.</span> The diagram is only a view of it. AI works from facts you collected, and every AI output passes through you.</div>
+<div class="gcard" style="left:210px"><div class="gate small">A</div><div><span class="gw">Checkpoint A · after step 4</span><p>Does the md file match the real product? Is every inferred row confirmed or removed?</p><em>No → back to step 2</em></div></div><div class="gcard" style="left:737px"><div class="gate small">B</div><div><span class="gw">Checkpoint B · after step 6</span><p>Were 3 different options considered? Does the fix trace to the job and the evidence?</p><em>No → back to step 5</em></div></div><div class="gcard" style="left:1264px"><div class="gate small">C</div><div><span class="gw">Checkpoint C · after step 8</span><p>Does the diagram hold exactly the verified steps? Is every unknown still visible?</p><em>No → back to step 7 (or 4)</em></div></div>
+<div class="foot"><span>The md file is the source of truth.</span> The diagram is only a view of it. AI works from facts you collected, and every AI output passes through you.</div>
 </div>
 <script>
 function fit(){var s=Math.min(innerWidth/1920,innerHeight/1080),st=document.getElementById('stage');
